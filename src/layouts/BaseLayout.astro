@@ -4,7 +4,6 @@ import Seo from '../components/Seo.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import MobileCta from '../components/MobileCta.astro';
 import type { Crumb } from '../lib/schema';
 import { site } from '../data/company';
 
@@ -16,10 +15,9 @@ interface Props {
   ogType?: 'website' | 'article';
   schema?: string;
   crumbs?: Crumb[];
-  showMobileCta?: boolean;
 }
 
-const { title, description, path, noindex = false, ogType = 'website', schema, crumbs, showMobileCta = true } = Astro.props;
+const { title, description, path, noindex = false, ogType = 'website', schema, crumbs } = Astro.props;
 ---
 
 <!doctype html>
@@ -49,6 +47,5 @@ const { title, description, path, noindex = false, ogType = 'website', schema, c
       <slot />
     </main>
     <SiteFooter />
-    {showMobileCta && <MobileCta />}
   </body>
 </html>

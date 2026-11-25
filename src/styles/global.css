@@ -449,8 +449,7 @@ caption {
 @media print {
   .site-header,
   .site-footer,
-  .cta-band,
-  .mobile-cta {
+  .cta-band {
     display: none !important;
   }
 }
