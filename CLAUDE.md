@@ -38,7 +38,8 @@ Contents:
 - `yearly-rebuild.yml` rebuilds on 1 January and 22 August so the footer year and "years in business" update. Never hard-code a year or an age.
 - Talk to the owner in Banglish. Write all site copy in British English.
 - Ask the owner before adding any claim, price or feature that is not already confirmed in `src/data/company.ts` or in this file.
-- Rework one page at a time, in this order: hoodie, private label, low MOQ, startups, cut and sew, sample, Bangladesh, how-to guide, then the hub and utility pages.
+- Product pages are built in batches of five, each pushed to staging for the owner to check before the next batch starts. Batch 1 (hoodie, joggers, pants, shorts, woven shirts) is done. Then: jacket, activewear, leggings, tracksuit, streetwear. Then: dress, skirt, loungewear, kids and baby, uniform and workwear. Then: underwear, women's clothing, polo shirt, tank and long sleeve, and one more agreed with the owner.
+- Only cut-and-sew products are added without asking. Socks, sweaters (flat knit), denim washing and swimwear need owner confirmation first.
 
 ## 2. Business facts and privacy (hard rules)
 
@@ -111,7 +112,11 @@ Keyword map (keep it in sync with frontmatter and `pages.ts`):
 |---|---|---|---|
 | `/` (hub) | commercial | custom clothing manufacturer | apparel manufacturers, garments manufacturer, fashion manufacturer |
 | `/t-shirt-manufacturer/` | commercial | t-shirt manufacturer | custom t-shirt manufacturer, polo shirt manufacturer, private label t-shirts, oversized t-shirts, heavyweight t-shirts |
-| `/hoodie-manufacturer/` | commercial | hoodie manufacturer | custom hoodie manufacturer, private label hoodies, sweatshirt manufacturer, zip hoodie manufacturer, heavyweight hoodie manufacturer |
+| `/hoodie-manufacturer/` | commercial | hoodie manufacturer | custom hoodie manufacturer, private label hoodies, sweatshirt manufacturer, zip hoodie manufacturer, heavyweight hoodies |
+| `/joggers-manufacturer/` | commercial | joggers manufacturer | sweatpants manufacturer, custom joggers, private label joggers, fleece joggers |
+| `/pants-trousers-manufacturer/` | commercial | pants manufacturer | trousers manufacturer, cargo pants manufacturer, chino manufacturer, custom pants |
+| `/shorts-manufacturer/` | commercial | shorts manufacturer | custom shorts manufacturer, sweat shorts, athletic shorts, private label shorts |
+| `/shirt-manufacturer/` | commercial | shirt manufacturer | woven shirt manufacturer, custom shirt manufacturer, button-up shirts, private label shirts |
 | `/private-label-clothing-manufacturer/` | commercial | private label clothing manufacturer | private label clothing manufacturing, private label apparel manufacturer, OEM clothing manufacturer, custom label clothing, white label clothing |
 | `/low-moq-clothing-manufacturers/` | commercial | low MOQ clothing manufacturer | low MOQ clothing manufacturing, small batch clothing manufacturer, low minimum order clothing, minimum order quantity clothing, clothing manufacturer small quantities |
 | `/clothing-manufacturers-for-startups/` | commercial | clothing manufacturer for startups | clothing manufacturer for small brands, start a clothing brand manufacturer, first clothing order, clothing manufacturer for new brands |
@@ -235,7 +240,14 @@ Layout and shared parts
 - Footer: badge logo, groups as `<details>` (closed on mobile below 48rem, open on desktop), "Part of SDF Corprt." line, WhatsApp link, auto year.
 - No mobile sticky CTA bar. No theme toggle.
 
-Product or service page pattern (copy `src/pages/t-shirt-manufacturer.astro`)
+Product pages use `src/components/ProductPage.astro`
+- SEO fields, specs and FAQ go in `src/content/landing/<slug>.md` (frontmatter only). Set `linkText` to a short anchor that contains the primary keyword, such as "Joggers manufacturer details". The home page and the products hub use it.
+- The rest of the copy goes in a typed file `src/data/products/<slug>.ts` (`ProductContent` in `types.ts`): styles, two to four content blocks (table, checklist or prose), prices or a "how it is priced" note, steps, quality, what to send for a quote, first order.
+- The page file `src/pages/<slug>.astro` only imports the data file and renders `<ProductPage>`. Add the slug to `dedicated` in `src/pages/[...slug].astro`.
+- The hero uses a labelled garment sketch from `src/lib/garments.ts` (`garment-<key>` infographic). Add a sketch for a new garment, check it as a PNG with `rsvg-convert`, and keep every label explained in the page text.
+- Price tokens are generated from `company.priceIndex`: `{{joggersFrom}}`, `{{joggersBulk}}`, `{{pulloverHoodieFrom}}` and so on. Products without a price row get a `noPrice` note instead of a number.
+
+Product or service page section order (the T-shirt page is hand-built, the others use `ProductPage`)
 1. Hero: eyebrow, H1, answer paragraph, two CTAs, infographic.
 2. Facts at a glance: spec table (MOQ with its split, sample and bulk days, fabrics, weights, printing, port) plus a supporting infographic.
 3. Styles or options as cards, linking to related spokes where relevant.
@@ -347,7 +359,7 @@ Accessibility (WCAG 2.1 AA)
 | | `page-audit` | FRE ≥ 60, marketing and AI-filler words, British spelling, leftover text and unfilled tokens, dead or generic links, empty FAQ answers, keyword placement and density, supporting keywords, cannibalization across all pages, long sentences, repeated phrases, alt text, inbound links and anchors |
 | CI | Lighthouse CI (`lighthouserc.json`) | Scores, CLS and LCP on key pages, median of 3 runs |
 
-`page-audit` hard-fails pages in its `STRICT` set and prints warnings for the rest. Cannibalization errors fail for every page. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`.
+`page-audit` hard-fails pages in its `STRICT` set and prints warnings for the rest. Cannibalization errors fail for every page. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`, `/hoodie-manufacturer/`, `/joggers-manufacturer/`, `/pants-trousers-manufacturer/`, `/shorts-manufacturer/`, `/shirt-manufacturer/`.
 
 What no script can check, so a person must: facts are true, product nouns match the page, the page answers the buyer better than the top results, and it reads like a person wrote it.
 

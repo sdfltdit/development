@@ -9,7 +9,15 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const STRICT = new Set(['/', '/t-shirt-manufacturer/']);
+const STRICT = new Set([
+  '/',
+  '/t-shirt-manufacturer/',
+  '/hoodie-manufacturer/',
+  '/joggers-manufacturer/',
+  '/pants-trousers-manufacturer/',
+  '/shorts-manufacturer/',
+  '/shirt-manufacturer/',
+]);
 const HUB = '/';
 const DIST = 'dist';
 const MIN_FRE = 60;
@@ -41,7 +49,7 @@ const decode = (s) =>
 const strip = (s) => decode(s.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 const lower = (s) => s.toLowerCase();
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const kwRegex = (k) => new RegExp(`(?<![a-z])${esc(lower(k)).replace(/t-shirt/g, 't-?shirt').replace(/ /g, '[\\s-]+')}s?(?![a-z])`, 'g');
+const kwRegex = (k) => new RegExp(`(?<![a-z-])${esc(lower(k)).replace(/t-shirt/g, 't-?shirt').replace(/ /g, '[\\s-]+')}s?(?![a-z])`, 'g');
 
 function syllables(word) {
   let w = lower(word).replace(/[^a-z]/g, '');

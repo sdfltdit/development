@@ -65,7 +65,7 @@ const schema = standardPage({
                   <h3 class="card__title">{item.data.navLabel}</h3>
                   <p class="card__text">{fill(item.data.cardSummary)}</p>
                   <a class="card__link" href={`/${item.id}/`}>
-                    {item.data.navLabel}: details and terms
+                    {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
                   </a>
                 </li>
               ))}

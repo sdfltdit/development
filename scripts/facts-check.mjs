@@ -21,7 +21,7 @@ function files(dir, exts) {
   });
 }
 
-const targets = [...files('src/content', ['.md']), ...files('src/pages', ['.astro']), 'src/data/pages.ts', ...files('src/components', ['.astro'])];
+const targets = [...files('src/content', ['.md']), ...files('src/data/products', ['.ts']), ...files('src/pages', ['.astro']), 'src/data/pages.ts', ...files('src/components', ['.astro'])];
 const errors = [];
 for (const file of targets) {
   const lines = readFileSync(file, 'utf8').split('\n');

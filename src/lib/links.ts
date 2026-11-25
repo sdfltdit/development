@@ -11,11 +11,11 @@ export interface LinkCard {
 const staticCards: Record<string, { title: string; summary: string }> = {
   '/pricing/': { title: 'FOB price index', summary: 'Dated per-piece prices at two quantity tiers, and what moves them.' },
   '/work-process/': { title: 'Production process', summary: 'Seven steps from quote to shipment, with timings and the payment schedule.' },
-  '/verify-us/': { title: 'Verify SDF Clothing', summary: 'Official domain, phone, email and the only account we ask you to pay.' },
+  '/verify-us/': { title: 'Verify SDF Clothing', summary: 'How to check you are dealing with us, and the only account we ask you to pay.' },
   '/certifications/': { title: 'Compliance and audits', summary: 'How buyer audits, documents and third-party inspection work with us.' },
   '/get-a-quote/': { title: 'Get a quote', summary: 'Send product, quantity and target price for a written quote.' },
   '/about/': { title: 'About SDF Clothing', summary: 'Who runs the factory, who we make for and what we do not do.' },
-  '/contact/': { title: 'Contact', summary: 'Phone, WhatsApp, email and our office address in Dhaka.' },
+  '/contact/': { title: 'Contact', summary: 'Send a message through our form or WhatsApp, and find our factory in Dhaka.' },
   '/products/': { title: 'All products', summary: 'Every product we make, with fabric weights and terms.' },
   '/all-services/': { title: 'All services', summary: 'Sampling, cut and sew, printing and embroidery in one place.' },
 };

@@ -4,9 +4,11 @@
  * Changing a fact in company.ts updates the images on the next build.
  */
 import { capabilities, shipping as shippingData, terms } from '../data/company';
+import { garments, type GarmentKey, type GarmentSketch } from './garments';
 
 export type Theme = 'dark';
-export type InfographicName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse' | 'tshirt' | 'gsm';
+type BaseName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse' | 'tshirt' | 'gsm';
+export type InfographicName = BaseName | `garment-${GarmentKey}`;
 
 interface Palette {
   bg1: string;
@@ -357,13 +359,44 @@ function gsm(p: Palette): string {
   return frame(690, 390, 'T-shirt fabric weight guide in GSM', GSM_BANDS.map((b) => `${b.name} ${b.range} for ${b.use.join(' ').replace(',', '')}`).join('. '), p, body);
 }
 
-const builders: Record<InfographicName, (p: Palette) => string> = { hero, process, quality, shipping, inhouse, tshirt, gsm };
+function garment(g: GarmentSketch, p: Palette): string {
+  const callouts = g.callouts
+    .map((c) =>
+      [
+        `<line x1="${c.side === 'left' ? c.tx + 8 : c.tx - 8}" y1="${c.ty - 6}" x2="${c.px}" y2="${c.py}" stroke="${p.muted}" stroke-width="1.5"/>`,
+        `<circle cx="${c.px}" cy="${c.py}" r="5" fill="${p.accent}"/>`,
+        text(c.tx, c.ty, c.label, 18, p.text, 600, c.side === 'left' ? 'end' : 'start'),
+      ].join(''),
+    )
+    .join('');
+  const body = [
+    text(30, 40, g.title, 26, p.text, 700),
+    `<path d="${g.outline}" fill="${p.card}" stroke="${p.garment}" stroke-width="3" stroke-linejoin="round"/>`,
+    ...g.details.map((d) => `<path d="${d}" fill="none" stroke="${p.garment}" stroke-width="2" stroke-linejoin="round"/>`),
+    ...(g.dashed ?? []).map((d) => `<path d="${d}" fill="none" stroke="${p.accent}" stroke-width="2" stroke-dasharray="6 5"/>`),
+    callouts,
+  ].join('');
+  return frame(640, 440, g.title, `Labelled ${g.noun} showing ${g.callouts.map((c) => c.label.toLowerCase()).join(', ')}.`, p, body);
+}
+
+const garmentKeys = Object.keys(garments) as GarmentKey[];
+
+const builders = {
+  hero,
+  process,
+  quality,
+  shipping,
+  inhouse,
+  tshirt,
+  gsm,
+  ...Object.fromEntries(garmentKeys.map((key) => [`garment-${key}`, (p: Palette) => garment(garments[key], p)])),
+} as Record<InfographicName, (p: Palette) => string>;
 
 export function renderInfographic(name: InfographicName, theme: Theme): string {
   return builders[name](palettes[theme]);
 }
 
-export const infographicMeta: Record<InfographicName, { width: number; height: number; alt: () => string }> = {
+const baseMeta: Record<BaseName, { width: number; height: number; alt: () => string }> = {
   hero: {
     width: 640,
     height: 480,
@@ -402,5 +435,15 @@ export const infographicMeta: Record<InfographicName, { width: number; height: n
       `Shipping map: goods leave the Dhaka factory ${terms.incoterm} ${terms.port} for ${shippingData.regions.map((r) => r.name).join(', ')}`,
   },
 };
+
+export const infographicMeta = {
+  ...baseMeta,
+  ...Object.fromEntries(
+    garmentKeys.map((key) => [
+      `garment-${key}`,
+      { width: 640, height: 440, alt: () => `Flat sketch of ${garments[key].noun === 'shirt' ? 'a woven shirt' : garments[key].noun === 'hoodie' ? 'a hoodie' : garments[key].noun} labelled with ${garments[key].callouts.slice(0, 4).map((c) => c.label.toLowerCase()).join(', ')} and more` },
+    ]),
+  ),
+} as Record<InfographicName, { width: number; height: number; alt: () => string }>;
 
 export const infographicNames = Object.keys(builders) as InfographicName[];

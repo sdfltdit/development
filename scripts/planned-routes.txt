@@ -93,7 +93,6 @@
 /insights/why-color-looks-different-on-cotton-vs-polyester/
 /insights/yarn/
 /jacket-manufacturer/
-/joggers-manufacturer/
 /journal/
 /journal/annual-growth-2025/
 /journal/european-mill-partnership-2025/
@@ -112,7 +111,6 @@
 /oem-clothing-manufacturer/
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
-/pants-trousers-manufacturer/
 /pattern-making-service/
 /plus-size-clothing-manufacturer/
 /polo-shirt-manufacturer/
@@ -124,8 +122,6 @@
 /quality-inspection-service/
 /recycled-clothing-manufacturer/
 /school-uniform-manufacturer/
-/shirt-manufacturer/
-/shorts-manufacturer/
 /skirts-manufacturer/
 /socks-manufacturer/
 /sports-bra-manufacturer/

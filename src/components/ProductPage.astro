@@ -1,0 +1,336 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Infographic from './Infographic.astro';
+import PriceTable from './PriceTable.astro';
+import FaqList from './FaqList.astro';
+import RelatedLinks from './RelatedLinks.astro';
+import CtaBand from './CtaBand.astro';
+import { company, fill } from '../data/company';
+import type { ProductContent } from '../data/products/types';
+import { linkCards } from '../lib/links';
+import { breadcrumbList, faqPage, founder, graph, organization, service, webPage, website, type Crumb } from '../lib/schema';
+
+interface Props {
+  content: ProductContent;
+}
+
+const { content: c } = Astro.props;
+const entry = await getEntry('landing', c.slug);
+if (!entry) throw new Error(`Missing landing entry: ${c.slug}`);
+const data = entry.data;
+const path = `/${c.slug}/`;
+
+const title = fill(data.title);
+const description = fill(data.description);
+const h1 = fill(data.h1);
+const lead = fill(data.answer);
+const specs = data.specs.map((row) => ({ label: fill(row.label), value: fill(row.value) }));
+const faqs = data.faq.map((item) => ({ q: fill(item.q), a: fill(item.a) }));
+const related = await linkCards(data.related);
+const published = data.published.toISOString().slice(0, 10);
+const updated = data.updated.toISOString().slice(0, 10);
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Products', path: '/products/' },
+  { name: data.navLabel, path },
+];
+const priceAnchor = c.prices ? 'price-heading' : 'cost-heading';
+
+const schema = graph([
+  organization(),
+  founder(),
+  website(),
+  webPage({ path, title, description, datePublished: published, dateModified: updated, hasBreadcrumb: true, reviewed: true }),
+  breadcrumbList(crumbs),
+  service({ path, name: h1, description, serviceType: data.serviceType, audience: c.audience }),
+  faqPage(path, faqs),
+]);
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema} crumbs={crumbs}>
+  <section class="hero">
+    <div class="hero__inner container">
+      <div class="hero__copy">
+        <p class="eyebrow">{data.eyebrow}</p>
+        <h1 class="hero__title">{h1}</h1>
+        <p class="hero__lead">{lead}</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="/get-a-quote/">{c.quoteCta}</a>
+          {c.priceCta && <a class="button button--secondary" href={`#${priceAnchor}`}>{c.priceCta}</a>}
+        </div>
+        <p class="hero__alt">Want to see the production floor? <a href="/booking/">Book a factory visit in Dhaka</a>.</p>
+      </div>
+      <div class="hero__visual">
+        <Infographic name={`garment-${c.garment}`} eager />
+      </div>
+    </div>
+  </section>
+
+  <section class="section glance" aria-labelledby="glance-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">At a glance</p>
+        <h2 id="glance-heading">{fill(c.glanceHeading)}</h2>
+        <p class="section__lead">{fill(c.glanceLead)}</p>
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="glance-heading" tabindex="0">
+        <table class="glance__table">
+          <caption class="visually-hidden">{fill(data.specsCaption ?? `${data.navLabel} facts`)}</caption>
+          <tbody>
+            {
+              specs.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.value}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="styles-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What we make</p>
+        <h2 id="styles-heading">{fill(c.stylesHeading)}</h2>
+        <p class="section__lead">{fill(c.stylesLead)}</p>
+      </div>
+      <ul class="cards">
+        {
+          c.styles.map((item) => (
+            <li class="card">
+              <h3 class="card__title">{fill(item.title)}</h3>
+              <p class="card__text">{fill(item.text)}</p>
+              {item.href && (
+                <a class="card__link" href={item.href}>
+                  {item.cta}
+                </a>
+              )}
+            </li>
+          ))
+        }
+        {
+          c.stylesAside && (
+            <li class="card card--muted">
+              <h3 class="card__title">{c.stylesAside.title}</h3>
+              <p class="card__text">{fill(c.stylesAside.text)}</p>
+              {c.stylesAside.href && (
+                <a class="card__link" href={c.stylesAside.href}>
+                  {c.stylesAside.cta}
+                </a>
+              )}
+            </li>
+          )
+        }
+      </ul>
+    </div>
+  </section>
+
+  {
+    c.blocks.map((block, index) => {
+      const alt = index % 2 === 1 ? 'section section--alt' : 'section';
+      const headingId = `${block.id}-heading`;
+      if (block.kind === 'table') {
+        return (
+          <section class={alt} aria-labelledby={headingId}>
+            <div class="container">
+              <div class="section__head">
+                <p class="eyebrow">{block.eyebrow}</p>
+                <h2 id={headingId}>{fill(block.heading)}</h2>
+                <p class="section__lead">{fill(block.lead)}</p>
+              </div>
+              <div class="table-wrap" role="region" aria-labelledby={headingId} tabindex="0">
+                <table class="table--stack">
+                  <caption class="visually-hidden">{block.caption}</caption>
+                  <thead>
+                    <tr>
+                      {block.columns.map((col) => (
+                        <th scope="col">{col}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {block.rows.map((row) => (
+                      <tr>
+                        <th scope="row">{fill(row[0])}</th>
+                        {row.slice(1).map((cell, i) => (
+                          <td data-label={block.columns[i + 1]}>{fill(cell)}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {block.more && <p class="section__more" set:html={fill(block.more)} />}
+            </div>
+          </section>
+        );
+      }
+      if (block.kind === 'checklist') {
+        return (
+          <section class={alt} aria-labelledby={headingId}>
+            <div class="container split">
+              <div class="section__head">
+                <p class="eyebrow">{block.eyebrow}</p>
+                <h2 id={headingId}>{fill(block.heading)}</h2>
+                <p class="section__lead">{fill(block.lead)}</p>
+                {block.note && <p set:html={fill(block.note)} />}
+              </div>
+              <ul class="checklist">
+                {block.items.map((item) => (
+                  <li>
+                    <strong>{fill(item.label)}:</strong> <span set:html={fill(item.text)} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+      }
+      return (
+        <section class={alt} aria-labelledby={headingId}>
+          <div class="container split">
+            <div class="section__head">
+              <p class="eyebrow">{block.eyebrow}</p>
+              <h2 id={headingId}>{fill(block.heading)}</h2>
+            </div>
+            <div class="prose">
+              {block.paragraphs.map((para) => (
+                <p set:html={fill(para)} />
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    })
+  }
+
+  {
+    c.prices && (
+      <section class="section section--alt" aria-labelledby="price-heading">
+        <div class="container">
+          <div class="section__head">
+            <p class="eyebrow">Prices</p>
+            <h2 id="price-heading">{fill(c.prices.heading)}</h2>
+            <p class="section__lead">{fill(c.prices.lead)}</p>
+          </div>
+          <PriceTable only={c.prices.rows} caption={c.prices.caption} />
+          <p class="section__more">
+            <a href="/pricing/">What moves the price, and how to get an exact quote</a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    c.noPrice && (
+      <section class="section section--alt" aria-labelledby="cost-heading">
+        <div class="container split">
+          <div class="section__head">
+            <p class="eyebrow">Price</p>
+            <h2 id="cost-heading">{fill(c.noPrice.heading)}</h2>
+          </div>
+          <div class="prose">
+            {c.noPrice.paragraphs.map((para) => (
+              <p set:html={fill(para)} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-heading">{fill(c.processHeading)}</h2>
+        <p class="section__lead">{fill(c.processLead)}</p>
+      </div>
+      <ol class="steps">
+        {
+          c.steps.map((step) => (
+            <li class="steps__item">
+              <h3 class="steps__title">{fill(step.title)}</h3>
+              <p class="steps__text">{fill(step.text)}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="quality-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Quality</p>
+        <h2 id="quality-heading">{fill(c.quality.heading)}</h2>
+        <p class="section__lead">{fill(c.quality.lead)}</p>
+      </div>
+      <ul class="checklist">
+        {
+          c.quality.items.map((item) => (
+            <li>
+              <strong>{fill(item.label)}:</strong> {fill(item.text)}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="quote-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Get a quote</p>
+        <h2 id="quote-heading">{fill(c.quote.heading)}</h2>
+        <p class="section__lead">{fill(c.quote.lead)}</p>
+      </div>
+      <ul class="checklist">
+        {c.quote.items.map((item) => <li set:html={fill(item)} />)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="first-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">First order</p>
+        <h2 id="first-heading">{fill(c.first.heading)}</h2>
+      </div>
+      <div class="prose">
+        {c.first.paragraphs.map((para) => <p set:html={fill(para)} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <FaqList items={faqs} heading={fill(c.faqHeading)} />
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <RelatedLinks links={related} heading="Keep reading" />
+    </div>
+  </section>
+
+  <section class="section maintained" aria-labelledby="maintained-heading">
+    <div class="container prose">
+      <h2 id="maintained-heading" class="maintained__heading">About this page</h2>
+      <p>
+        Our merchandising team at {company.legalName} wrote this page.
+        <a href="/about/">{company.founder.name}</a>, {company.founder.jobTitle}, reviewed it. Prices, terms and capabilities come from our own records. If
+        anything here differs from your written quote, the quote wins.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

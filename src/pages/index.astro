@@ -312,7 +312,7 @@ const schema = graph([
               <h3 class="card__title">{p.data.navLabel}</h3>
               <p class="card__text">{fill(p.data.cardSummary)}</p>
               <a class="card__link" href={`/${p.id}/`}>
-                {p.data.navLabel} specifications
+                {p.data.linkText ?? `${p.data.navLabel} specifications`}
               </a>
             </li>
           ))

@@ -18,6 +18,7 @@ const landing = defineCollection({
     kind: z.enum(['product', 'service', 'model', 'guide']),
     hub: z.enum(['products', 'services', 'how-we-work']),
     navLabel: z.string().min(3).max(32),
+    linkText: z.string().min(10).max(48).optional(),
     cardSummary: z.string().min(60).max(180),
     title: z.string().min(30).max(90),
     description: z.string().min(100).max(220),

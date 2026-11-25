@@ -180,6 +180,20 @@ export const tokens: Record<string, string> = {
   city: company.address.locality,
 };
 
+const priceKey = (product: string): string =>
+  product
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/g, '')
+    .split(' ')
+    .filter(Boolean)
+    .map((word, i) => (i === 0 ? word : word[0].toUpperCase() + word.slice(1)))
+    .join('');
+
+for (const row of priceIndex.rows) {
+  tokens[`${priceKey(row.product)}From`] = `$${row.fobMoq}`;
+  tokens[`${priceKey(row.product)}Bulk`] = `$${row.fobBulk}`;
+}
+
 export function fill(text: string): string {
   return text.replace(/\{\{(\w+)\}\}/g, (match, key: string) => {
     const value = tokens[key];

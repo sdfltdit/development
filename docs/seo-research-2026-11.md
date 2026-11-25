@@ -52,3 +52,14 @@ Reviewed from search results only (examples): wonnda.com, alibaba.com seller blo
 8. Stale dates and copyright years that disagree with the page.
 9. Information shown only inside images, so search engines and screen readers miss it (Visionise timeline chart).
 10. Two URLs for the same topic (Bomme private label), typos, too many pop-up CTAs.
+
+## Batch 1 product pages (hoodie, joggers, pants, shorts, woven shirts)
+
+Searches: joggers and sweatpants manufacturer, pants and trousers manufacturer, shorts manufacturer, woven shirt manufacturer (about 60 results reviewed). Read in full: modaknits.com (sweatpants), makersrow.com (shorts list, shirt list), thestudio.com (cargo pants), ecojersey.com (activewear joggers), plus the hoodie pages from the first round (Bryden, The Studio, Modaknits, Siatex).
+
+Findings used:
+- Buyers of joggers worry about waistband roll, baggy knees, set colour mismatch and reorder drift. None of the pages read publish a price.
+- Shorts pages list types and fabrics but give no inseam guidance. We added inseam and liner choices.
+- Shirt lists admit they give no guidance on collars, cuffs, interlining or fabric. We added collar, cuff, placket, fusing and pattern-matching detail.
+- Cargo and trouser pages leave out waistband, closure, sizing system and testing. We added a sizing-system table and a "how trousers are priced" note.
+- Copy-paste errors seen again: hoodie text on a joggers page (Eco Jersey), empty FAQ answers (The Studio).
