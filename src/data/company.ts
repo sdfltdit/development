@@ -115,7 +115,7 @@ export const priceIndex = {
   ] satisfies PriceRow[],
 } as const;
 
-export const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent('Hello SDF Clothing, I found you on sdfltd.com.')}`;
+export const whatsappUrl = `https://wa.me/${company.whatsapp}`;
 
 export const contactTopics = ['New product enquiry', 'Existing order', 'Factory visit', 'Partnership or supplier', 'Other'] as const;
 

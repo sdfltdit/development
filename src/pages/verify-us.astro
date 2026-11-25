@@ -77,7 +77,18 @@ const schema = standardPage({
               official.map((row) => (
                 <tr>
                   <th scope="row">{row.label}</th>
-                  <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
+                  <td>
+                    {row.href?.startsWith('http') ? (
+                      <a href={row.href} target="_blank" rel="noopener noreferrer">
+                        {row.value}
+                        <span class="visually-hidden"> (opens in a new tab)</span>
+                      </a>
+                    ) : row.href ? (
+                      <a href={row.href}>{row.value}</a>
+                    ) : (
+                      row.value
+                    )}
+                  </td>
                 </tr>
               ))
             }

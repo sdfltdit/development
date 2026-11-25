@@ -11,7 +11,7 @@ const crumbs: Crumb[] = [
   { name: 'Home', path: '/' },
   { name: 'Contact', path: '/contact/' },
 ];
-const mapsLink = `https://www.google.com/maps/search/?api=1&query=${company.geo.latitude},${company.geo.longitude}`;
+const mapsLink = `https://maps.google.com/?q=${company.geo.latitude},${company.geo.longitude}`;
 
 const schema = standardPage({
   path: meta.path,
@@ -48,7 +48,7 @@ const schema = standardPage({
           <li class="card">
             <h3 class="card__title">WhatsApp</h3>
             <p class="card__text">Quick questions during {company.hours}.</p>
-            <a class="card__link" href={whatsappUrl} rel="noopener">Chat with us on WhatsApp</a>
+            <a class="card__link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a>
           </li>
           <li class="card">
             <h3 class="card__title">Factory visit</h3>
@@ -70,7 +70,7 @@ const schema = standardPage({
           {company.address.locality} {company.address.postalCode}<br />
           {company.address.countryName}
         </address>
-        <p><a href={mapsLink} rel="noopener">Open in Google Maps</a></p>
+        <p><a href={mapsLink} target="_blank" rel="noopener noreferrer">Open in Google Maps<span class="visually-hidden"> (opens in a new tab)</span></a></p>
       </div>
       <div class="prose">
         <h3>Visiting us</h3>
