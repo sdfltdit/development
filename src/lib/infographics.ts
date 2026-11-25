@@ -373,17 +373,17 @@ export const infographicMeta: Record<InfographicName, { width: number; height: n
     width: 720,
     height: 120 + 96 * 6 + 70,
     alt: () =>
-      `Seven-step order timeline: tech pack and quote within ${terms.quoteHours} hours, sample development in ${terms.sampleDays} days, pre-production sample sign-off, bulk production in ${terms.bulkDays} days, AQL ${terms.aql} inspection and ${terms.incoterm} ${terms.port} shipment`,
+      `Order timeline in seven steps, from tech pack and quote to a sample in ${terms.sampleDays} days, bulk in ${terms.bulkDays} days and shipment`,
   },
   quality: {
     width: 720,
     height: 170 + 82 * 5 + 64,
-    alt: () => `Six quality checks: lab dip approval, bulk fabric testing, pre-production sample, inline checks, final AQL ${terms.aql} inspection and buyer inspection`,
+    alt: () => `Six quality checks, from lab dip and fabric testing to inline checks and a final AQL ${terms.aql} inspection`,
   },
   inhouse: {
     width: 720,
     height: inhouseHeight(),
-    alt: () => `Production steps done in our own factory: ${capabilities.inHouse.join(', ').toLowerCase()}`,
+    alt: () => `Production steps done in our own factory, from pattern making and cutting to sewing, printing, embroidery and packing`,
   },
   tshirt: {
     width: 640,
@@ -393,7 +393,7 @@ export const infographicMeta: Record<InfographicName, { width: number; height: n
   gsm: {
     width: 690,
     height: 390,
-    alt: () => `T-shirt fabric weight guide, from lightweight to heavyweight T-shirts: ${GSM_BANDS.map((b) => `${b.name.toLowerCase()} ${b.range}`).join(', ')}`,
+    alt: () => `Fabric weight scale for T-shirts, from ${GSM_BANDS[0].range} lightweight jersey to ${GSM_BANDS[GSM_BANDS.length - 1].range} heavy cotton`,
   },
   shipping: {
     width: 720,

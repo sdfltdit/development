@@ -12,9 +12,8 @@ secondaryKeywords:
   - custom t-shirt manufacturer
   - polo shirt manufacturer
   - private label t-shirts
-  - oversized t-shirt manufacturer
+  - oversized t-shirts
   - heavyweight t-shirts
-  - low MOQ t-shirts
 intent: commercial
 answer: SDF Clothing is a custom T-shirt manufacturer for fashion brands worldwide. We cut, sew, print and pack T-shirts and polo shirts in our own factory in Dhaka. You choose the fabric, the fit and the print, and you can order from {{moq}} {{moqUnit}}.
 facts: [moq, sample, bulk, aql]
@@ -49,7 +48,7 @@ faq:
     a: A basic cotton T-shirt starts at {{teeFrom}} per piece at {{moq}} pieces and {{teeBulk}} at {{bulkQty}} pieces, FOB {{port}}, with a one-colour print or no print. Heavier fabric, more print colours, custom labels and special packing raise the price. Freight and import duty are paid on top.
   - q: What is the minimum order for custom T-shirts?
     a: Our minimum is {{moq}} {{moqUnit}}. One style is one pattern in one fabric. We confirm how that quantity splits across colours and sizes on your written quote.
-  - q: What GSM should I choose for my T-shirts?
+  - q: What GSM suits everyday tees and heavyweight T-shirts?
     a: Around 160–180 GSM suits everyday tees and merch. Heavyweight T-shirts at 200–240 GSM feel thicker and hold their shape. Oversized T-shirts for streetwear usually use 240 GSM or more. If you are unsure, we can send swatches in two or three weights.
   - q: Which printing method is best for T-shirts?
     a: Screen printing suits bold designs with a few colours and gives the lowest price in bulk. DTF suits full-colour artwork and works on cotton and polyester. Sublimation works on light polyester fabric. Embroidery suits small logos, especially on polo shirts.

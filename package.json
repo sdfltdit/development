@@ -11,7 +11,7 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/postbuild.mjs && node scripts/staging.mjs",
     "check": "astro check && tsc -p src/worker/tsconfig.json && node scripts/keyword-check.mjs && node scripts/facts-check.mjs",
-    "verify": "node scripts/seo-check.mjs && node scripts/redirect-check.mjs",
+    "verify": "node scripts/seo-check.mjs && node scripts/redirect-check.mjs && node scripts/page-audit.mjs",
     "verify:launch": "node scripts/seo-check.mjs && LAUNCH=1 node scripts/redirect-check.mjs",
     "ci": "npm run check && npm run build && npm run verify",
     "preview": "npm run build && wrangler dev",
