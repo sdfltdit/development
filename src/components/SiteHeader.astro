@@ -8,7 +8,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
 <header class="site-header">
   <div class="site-header__inner container">
     <a class="site-header__brand" href="/" aria-label="SDF Clothing home">
-      <span class="site-header__mark"><img src="/logo.svg" alt="" width="46" height="40" decoding="async" fetchpriority="high" /></span>
+      <img class="site-header__mark" src="/logo-dark.svg" alt="" width="55" height="48" decoding="async" fetchpriority="high" />
       <span class="site-header__name">SDF Clothing</span>
     </a>
 
@@ -152,17 +152,9 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
   }
 
   .site-header__mark {
-    display: grid;
-    place-items: center;
-    padding: 0.125rem 0.25rem;
-    border-radius: var(--radius-md);
-    background: #ffffff;
-  }
-
-  .site-header__mark img {
     display: block;
-    width: 2.875rem;
-    height: 2.5rem;
+    width: 3.4375rem;
+    height: 3rem;
   }
 
   .site-nav__toggle {

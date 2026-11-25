@@ -74,8 +74,8 @@ export const terms = {
     { share: 40, when: 'when bulk production starts' },
     { share: 30, when: 'on completion, before shipment' },
   ],
-  paymentMethods: ['Bank transfer (SWIFT/T/T)', 'Wise', 'WorldRemit', 'Xoom'],
-  paymentMethod: 'Bank transfer (SWIFT/T/T), Wise, WorldRemit or Xoom, always to the company bank account named on our proforma invoice',
+  paymentMethods: ['LC (letter of credit)', 'T/T bank transfer', 'Wise', 'WorldRemit', 'Xoom', 'etc.'],
+  paymentMethod: 'LC (letter of credit) or T/T bank transfer, as well as Wise, WorldRemit, Xoom, etc. Payment always goes to the company bank account named on our proforma invoice',
   replyHours: 24,
 } as const;
 

@@ -19,7 +19,7 @@ export const GET: APIRoute = async () => {
     `- Written quote: within ${terms.quoteHours} hours`,
     `- Final inspection: AQL ${terms.aql}`,
     `- Shipping terms: ${terms.incoterm} ${terms.port}`,
-    `- Payment: ${paymentSummary()}, by ${terms.paymentMethod.charAt(0).toLowerCase()}${terms.paymentMethod.slice(1)}`,
+    `- Payment: ${paymentSummary()}. Methods: ${terms.paymentMethod}`,
     `- Sample fee: ${terms.sampleFeePolicy}`,
     `- In-house: ${capabilities.inHouse.join(', ')}`,
     `- Fabrics: ${capabilities.fabrics}`,
