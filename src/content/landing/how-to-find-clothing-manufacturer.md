@@ -10,7 +10,6 @@ eyebrow: Buyer's guide
 primaryKeyword: how to find a clothing manufacturer
 secondaryKeywords:
   - apparel manufacturers by country
-  - apparel manufacturers
   - how to choose apparel manufacturers
   - types of apparel manufacturers
   - where to find clothing manufacturers

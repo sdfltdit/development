@@ -23,8 +23,11 @@ const BANNED = [
   'state-of-the-art', 'cutting-edge', 'one-stop', 'hassle-free', 'second to none', 'trusted by', 'number one', '#1', 'amazing', 'excellent',
   'exceptional', 'unbeatable', 'we are the best', 'look no further', 'dream', 'elevate your', 'take your brand to the next level',
   'delve', 'seamless', 'seamlessly', 'robust', 'tailored solutions', 'fast-paced', "in today's", 'unlock', "it's worth noting", 'in conclusion',
-  'game-changer', 'game changer', 'revolutionize', 'leverage',
+  'game-changer', 'game changer', 'revolutionize', 'leverage', 'premier', 'renowned', 'top-notch', 'unparalleled', 'trusted partner',
+  'trusted supplier', 'go-to', 'your search ends', 'ends here', 'we pride ourselves', 'passion',
 ];
+const US_SPELLING = /\b(colors?|colorways?|programs?|organiz\w+|centers?|fibers?|customiz\w+|labeling|labeled|meters?|favorite|gray|catalog|analyze[ds]?|licensed?)\b/i;
+const LEFTOVERS = [/\{\{[^}]*\}\}/, /\blorem\b/i, /\bTODO\b/, /\bTBD\b/, /\bplaceholder\b/i, /\bundefined\b/, /\bNaN\b/, /\[object Object\]/];
 
 const decode = (s) =>
   s
@@ -113,6 +116,7 @@ function parsePage(file) {
     alts: [...html.matchAll(/<img [^>]*alt="([^"]*)"/g)].map((m) => decode(m[1])),
     faqQuestions: [...html.matchAll(/"@type":"Question","name":"([^"]+)"/g)].map((m) => m[1]),
     noindex: /name="robots" content="noindex/.test(html),
+    emptyAnswers: [...main.matchAll(/<details[^>]*>([\s\S]*?)<\/details>/g)].filter((m) => strip(m[1].replace(/<summary[\s\S]*?<\/summary>/, '')).length < 20).length,
   };
 }
 
@@ -135,8 +139,7 @@ for (const [path, k] of registry) {
   }
 }
 for (const [key, owners] of secondaryOwners) {
-  const spokes = owners.filter((o) => o !== HUB);
-  if (spokes.length > 1) warnings.push(`secondary keyword "${key}" is shared by ${spokes.join(' and ')}. Give it to one page.`);
+  if (owners.length > 1) errors.push(`supporting keyword "${key}" is claimed by ${owners.join(' and ')}. Give it to one page (cannibalization).`);
 }
 
 const inbound = new Map();
@@ -153,6 +156,16 @@ for (const p of pages) {
   const fre = fleschReadingEase(p.prose);
   if (STRICT.has(p.route)) scores.push(`${p.route} FRE ${fre.toFixed(1)}`);
   if (fre < MIN_FRE) report(p.route, `Flesch Reading Ease ${fre.toFixed(1)} is below ${MIN_FRE}`);
+
+  for (const re of LEFTOVERS) if (re.test(p.body) || re.test(p.title) || re.test(p.description)) report(p.route, `leftover text matches ${re}`);
+  for (const a of p.anchors) {
+    if (a.href === '#' || a.href.startsWith('javascript:')) report(p.route, `dead link "${a.text}" → ${a.href}`);
+    if (!a.text) report(p.route, `link to ${a.href} has no text`);
+    if (/^(click here|read more|learn more|more|here)$/i.test(a.text)) report(p.route, `generic link text "${a.text}" → ${a.href}`);
+  }
+  const us = p.body.match(US_SPELLING);
+  if (us) report(p.route, `American spelling "${us[0]}". The site uses British English.`);
+  if (p.emptyAnswers) report(p.route, `${p.emptyAnswers} FAQ question(s) with no answer`);
 
   const text = lower(p.body);
   for (const phrase of BANNED) {

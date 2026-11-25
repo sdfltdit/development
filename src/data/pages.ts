@@ -29,8 +29,6 @@ const registry: PageMeta[] = [
       'apparel manufacturers',
       'garments manufacturer',
       'fashion manufacturer',
-      'low MOQ clothing manufacturing',
-      'private label clothing manufacturing',
     ],
     updated: '2026-11-26',
     inLlms: true,

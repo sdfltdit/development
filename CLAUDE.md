@@ -1,6 +1,6 @@
 # SDF Clothing website: project rules and page playbook
 
-This file holds every rule agreed while building the home page (`/`) and the T-shirt page (`/t-shirt-manufacturer/`).
+This file holds every rule agreed while building the home page (`/`) and the T-shirt page (`/t-shirt-manufacturer/`), checked against official Google and Bing guidance and 39 competitor and guide pages (see `docs/seo-research-2026-11.md`).
 Read it fully before creating or reworking any page. When a rule here conflicts with an old page, the rule wins and the old page gets fixed.
 
 Contents:
@@ -9,17 +9,20 @@ Contents:
 3. Keyword strategy and cannibalization
 4. Research before writing
 5. On-page SEO checklist
-6. Writing: human tone and readability
-7. Content quality, E-E-A-T and AI-friendliness
-8. Page structure and components
-9. Structured data
-10. Design, responsive and accessibility
-11. Performance
-12. Security, forms and privacy
-13. Technical SEO, URLs and redirects
-14. Automated checks
-15. Finishing a page
-16. Open items waiting for the owner
+6. Writing: human tone, readability and proofreading
+7. Content quality, E-E-A-T and AI search
+8. What never goes on the site (spam and trust risks)
+9. Page structure and components
+10. Structured data
+11. Images and infographics
+12. Design, responsive and accessibility
+13. Performance
+14. Security, forms and privacy
+15. Technical SEO, crawling, URLs and redirects
+16. Launch and monitoring
+17. Automated checks
+18. Finishing a page
+19. Open items waiting for the owner
 
 ---
 
@@ -31,15 +34,17 @@ Contents:
 - Never touch the owner's other GitHub repos or Cloudflare projects. The live site repo "cloth" stays as it is until launch.
 - Staging is hidden from search and AI bots by `scripts/staging.mjs`, which writes a bot-blocking `robots.txt` when `CF_PAGES=1`.
   Do not add a `noindex` header to staging. SEO testing tools must still be able to read it.
-- Commits only after `npm run check`, `npm run build` and `npm run verify` pass locally. CI (`.github/workflows/ci.yml`) runs the same plus Lighthouse.
+- Commit only after `npm run check`, `npm run build` and `npm run verify` pass locally. CI (`.github/workflows/ci.yml`) runs the same plus Lighthouse (median of 3 runs).
 - `yearly-rebuild.yml` rebuilds on 1 January and 22 August so the footer year and "years in business" update. Never hard-code a year or an age.
-- Talk to the owner in Banglish. Write all site copy in English.
+- Talk to the owner in Banglish. Write all site copy in British English.
 - Ask the owner before adding any claim, price or feature that is not already confirmed in `src/data/company.ts` or in this file.
+- Rework one page at a time, in this order: hoodie, private label, low MOQ, startups, cut and sew, sample, Bangladesh, how-to guide, then the hub and utility pages.
 
 ## 2. Business facts and privacy (hard rules)
 
 Single source of truth: `src/data/company.ts`. Copy uses `{{tokens}}` in Markdown or `fill()` and the exported values in `.astro` files.
-`facts-check` fails the build on hard-coded facts such as "300 pieces".
+`facts-check` fails the build on hard-coded facts such as "300 pieces". `page-audit` fails on any unfilled `{{token}}`.
+One number, one source: the hero, glance table, FAQ, meta description and schema must never disagree. Competitors lose trust exactly here.
 
 Names and identity
 - Company name: "SDF Clothing". Never "SDF Clothing Ltd" or "SDF Ltd".
@@ -47,12 +52,12 @@ Names and identity
 - Founder name and job title come from `company.founder`.
 
 Never publish
-- Email addresses or phone numbers, in visible text or in links. Contact is the `/contact/` form and WhatsApp only.
+- Email addresses or phone numbers, in visible text, links or schema. Contact is the `/contact/` form and WhatsApp only.
 - WhatsApp link is exactly `https://wa.me/8801819172080`, with no text parameter. Use `whatsappUrl` from `company.ts`.
-- Certificates or certification names, company registration (RJSC), TIN, trade association names or member numbers.
+- Certificates or certification names, company registration (RJSC), TIN, trade association names or member numbers. The `/certifications/` page explains our compliance approach without naming any.
 - Live video call offers.
 - Partners or subcontractors. All cutting, sewing, printing (screen, DTF, sublimation) and embroidery is in-house.
-- Invented names, testimonials, reviews, client logos, numbers or case studies.
+- Invented names, testimonials, reviews, client logos, numbers, counters or case studies.
 - Stock photos presented as our factory, team or products.
 - "Facts last checked", "prices checked on" or similar date notes next to tables. Dates live in schema and the "About this page" block only.
 
@@ -75,56 +80,63 @@ Prices
 | Shorts | $7.00 | $4.30 |
 | Woven shirt | $10.00 | $6.50 |
 
+- Prices never go in a `<title>`. They change, and Google warns against it.
+- Every page that mentions the MOQ also says how it splits (per style, across colours and sizes). Buyers on competitor sites complain when this is unclear.
+
 Markets and terms
 - Target buyers worldwide. Bangladesh is where the factory is, never a target market. Use `shipping.regions` (North America, UK and Europe, Australia and NZ, Middle East, Asia and beyond).
+- The `/clothing-manufacturer-bangladesh/` page is allowed because overseas buyers search for Bangladesh as a sourcing country. It is written for them, not for local buyers.
 - Payment methods come from `terms.paymentMethods`: LC, T/T, Wise, WorldRemit, Xoom, etc.
 - We work in any fabric (`capabilities.fabrics`), knit and woven. T-shirt weight range is `{{tshirtGsm}}` GSM.
 
 ## 3. Keyword strategy and cannibalization
 
-One page, one search intent, one primary keyword.
+One page, one search intent, one primary keyword, one URL.
 
 - `keyword-check` fails if two pages share a primary keyword.
-- `page-audit` fails if a page's supporting keyword equals another page's primary keyword, and warns when two spoke pages share a supporting keyword.
+- `page-audit` fails if a supporting keyword equals another page's primary keyword, or if two pages (the home page included) claim the same supporting keyword.
 - Before choosing keywords, read the map below. A new keyword goes to the page whose intent fits best. Other pages link to it instead of targeting it.
+- Mentioning another page's keyword in passing is fine and natural. Targeting it (in a heading, title, FAQ question or repeated) is not.
 
 Keyword types to cover on each page, where they fit naturally:
 - Primary (head term) and 3 to 5 supporting variants (custom, private label, style or fabric variants).
-- LSI and semantic terms: fabrics, GSM, fits, printing methods, trims, stages.
+- Related terms buyers use: fabrics, GSM, fits, printing methods, trims, sample stages, AQL, FOB.
 - Question keywords as H2s or FAQ questions ("What GSM…", "How long…", "Do you…").
 - Commercial and transactional terms in context: price, MOQ, sample, quote, order.
-- Long-tail and voice phrasing in FAQ questions, written the way a buyer asks.
+- Long-tail phrasing in FAQ questions, written the way a buyer asks. Do not create pages for each variation (see section 8).
 
-Keyword map (keep it updated):
+Keyword map (keep it in sync with frontmatter and `pages.ts`):
 
 | Page | Intent | Primary keyword | Supporting keywords |
 |---|---|---|---|
-| `/` (hub) | commercial | custom clothing manufacturer | apparel manufacturers, garments manufacturer, fashion manufacturer, low MOQ clothing manufacturing, private label clothing manufacturing |
+| `/` (hub) | commercial | custom clothing manufacturer | apparel manufacturers, garments manufacturer, fashion manufacturer |
 | `/t-shirt-manufacturer/` | commercial | t-shirt manufacturer | custom t-shirt manufacturer, polo shirt manufacturer, private label t-shirts, oversized t-shirts, heavyweight t-shirts |
 | `/hoodie-manufacturer/` | commercial | hoodie manufacturer | custom hoodie manufacturer, private label hoodies, sweatshirt manufacturer, zip hoodie manufacturer, heavyweight hoodie manufacturer |
-| `/private-label-clothing-manufacturer/` | commercial | private label clothing manufacturer | private label apparel manufacturer, OEM clothing manufacturer, custom label clothing, white label clothing |
-| `/low-moq-clothing-manufacturers/` | commercial | low MOQ clothing manufacturer | small batch clothing manufacturer, low minimum order clothing, minimum order quantity clothing |
-| `/clothing-manufacturers-for-startups/` | commercial | clothing manufacturer for startups | clothing manufacturer for small brands, first clothing order, clothing manufacturer for new brands |
-| `/clothing-manufacturer-bangladesh/` | commercial | clothing manufacturer in Bangladesh | garment manufacturer Bangladesh, apparel manufacturer Bangladesh, Bangladesh clothing factory |
-| `/cut-and-sew-service/` | commercial | cut and sew manufacturer | cut and sew clothing, full package production, CMT clothing manufacturer |
-| `/sample-service/` | commercial | clothing sample maker | clothing sample service, garment sample cost, proto sample clothing |
-| `/how-to-find-clothing-manufacturer/` | informational | how to find a clothing manufacturer | questions to ask a clothing manufacturer, types of apparel manufacturers |
+| `/private-label-clothing-manufacturer/` | commercial | private label clothing manufacturer | private label clothing manufacturing, private label apparel manufacturer, OEM clothing manufacturer, custom label clothing, white label clothing |
+| `/low-moq-clothing-manufacturers/` | commercial | low MOQ clothing manufacturer | low MOQ clothing manufacturing, small batch clothing manufacturer, low minimum order clothing, minimum order quantity clothing, clothing manufacturer small quantities |
+| `/clothing-manufacturers-for-startups/` | commercial | clothing manufacturer for startups | clothing manufacturer for small brands, start a clothing brand manufacturer, first clothing order, clothing manufacturer for new brands |
+| `/clothing-manufacturer-bangladesh/` | commercial | clothing manufacturer in Bangladesh | garment manufacturer Bangladesh, apparel manufacturer Bangladesh, Bangladesh clothing factory, manufacturing clothes in Bangladesh, Bangladesh vs China clothing |
+| `/cut-and-sew-service/` | commercial | cut and sew manufacturer | cut and sew clothing manufacturer, cut and sew clothing, full package production, CMT clothing manufacturer |
+| `/sample-service/` | commercial | clothing sample maker | clothing sample service, garment sample cost, proto sample clothing, pre-production sample |
+| `/how-to-find-clothing-manufacturer/` | informational | how to find a clothing manufacturer | apparel manufacturers by country, how to choose apparel manufacturers, types of apparel manufacturers, where to find clothing manufacturers, questions to ask a clothing manufacturer |
+| `/products/`, `/all-services/`, `/work-process/` | navigational | custom clothing products, clothing manufacturing services, clothing production process | none |
 | Utility pages | navigational | brand phrases ("SDF Clothing prices", "verify SDF Clothing", "contact SDF Clothing") | none |
 
 Hub and spoke linking
-- The home page mentions each topic briefly and links to its spoke page. Detail lives only on the spoke.
-- The home page's two shared supporting terms (low MOQ, private label) appear briefly with a link to the spoke that owns them.
+- The home page covers every topic briefly and links to the spoke that owns it. Detail lives only on the spoke.
 - Every spoke links back to `/` and to 3 to 8 related spokes (`related` frontmatter), using the target page's keyword as anchor text where it reads naturally.
-- When a spoke grows, check the home page and sibling pages do not drift into covering the same topic in depth.
+- When a spoke grows, check that the home page and sibling pages do not drift into covering the same topic in depth.
 
 ## 4. Research before writing
 
-1. Search the primary keyword and its main variants. Read the top 5 to 10 ranking pages, including factory sites, guides and People Also Ask.
-2. List the questions buyers ask, the specs competitors show and the gaps they leave. Fill the gaps with facts we can prove.
-3. Never copy competitor wording or structure. Never name competitors on the page.
-4. Collect sources for citations (official or trade bodies, never competitors) in the `citations` frontmatter.
-5. Write down any fact not yet in `company.ts` and ask the owner before using it.
-6. Check for duplicate copies of our content elsewhere (old `*.pages.dev` projects) and tell the owner.
+1. Search the primary keyword and its main variants. Read at least 10 ranking pages in full: factory sites, directories, buyer guides and People Also Ask.
+2. Note what the best pages do well (numbers, process steps, comparison tables, buyer-risk sections, "what to send for a quote") and where they fail (no prices, conflicting numbers, empty FAQs, fluff).
+3. List the questions buyers ask. Answer each with a fact we can stand behind.
+4. Never copy competitor wording or structure. Never name competitors on the page.
+5. Collect sources for citations (official or trade bodies, never competitors) in the `citations` frontmatter.
+6. Write down any fact not yet in `company.ts` and ask the owner before using it.
+7. Check for duplicate copies of our content elsewhere (old `*.pages.dev` projects) and tell the owner.
+8. Add a short note of what was found to `docs/` so the next page starts from it.
 
 ## 5. On-page SEO checklist
 
@@ -132,37 +144,43 @@ Hub and spoke linking
 
 | Element | Rule |
 |---|---|
-| Title (auto) | 50–60 characters. Primary keyword first. Ends with "\| SDF Clothing". Unique on the site. |
-| Meta description (auto) | 150–160 characters. Primary keyword in the first sentence. Says who it is for and one concrete fact (MOQ, sample days). Ends with the brand or a fact. No "Bangladesh" as a market. |
-| H1 (auto) | Exactly one. Contains the primary keyword. Worded differently from the title. |
-| First 100 words (auto) | The answer paragraph (`answer`, 160–520 characters) names the primary keyword and says plainly what we make, for whom, MOQ and timing. Written to be quoted as a featured snippet or by an AI answer. |
+| Title (auto) | 50–60 characters so it is not cut off (Google has no hard limit, but truncates). Primary keyword first. Ends with "\| SDF Clothing". Unique, not boilerplate. No prices or dates. |
+| Meta description (auto) | 150–160 characters (same reason). Unique. Primary keyword in the first sentence. Says who it is for and one or two concrete facts (MOQ, sample days). No keyword lists. |
+| H1 (auto) | Exactly one, the most prominent text on the page. Contains the primary keyword. Same topic as the title, worded differently. |
+| First 100 words (auto) | The answer paragraph (`answer`, 160–520 characters) names the primary keyword and says plainly what we make, for whom, MOQ and timing. |
 | Headings (auto) | H2 → H3 order, no skipped levels. Primary keyword in at least one H2. Supporting keywords in H2s, H3s or FAQ questions. Many H2s phrased as the buyer's question. |
 | Primary density (auto) | 0.8–2.0% of visible words in `<main>`. Never forced. |
 | Supporting keywords (auto) | Each 2+ times and in at least one heading, FAQ question or internal link text. |
-| URL | Lowercase, hyphens, contains the primary keyword or its core noun. Never change a live URL without a 301. |
+| URL | Lowercase, hyphens, contains the primary keyword or its core noun. One URL per topic. Never change a live URL without a 301. |
 | Canonical, robots, OG, Twitter (auto) | Set by `BaseLayout` and `Seo.astro` from `Astro.url`. Never hand-write them. |
-| Images (auto) | Width and height set. Alt describes the image in under 140 characters, with at most one target keyword and only when it is the honest description. Decorative images use `alt=""`. |
-| Internal links (auto) | At least 3 pages link to a finished page, and at least one uses its primary or a supporting keyword as anchor text. Card links use descriptive text, never "click here" or "learn more". |
-| External links | Only trusted sources. `rehypeExternalLinks` adds `target="_blank"`, `rel="noopener noreferrer"` and "(opens in a new tab)" in Markdown. Do the same by hand in `.astro`. |
+| Internal links (auto) | At least 3 pages link to a finished page, and one uses its primary or a supporting keyword as anchor text. Anchor text says where the link goes. No "click here", "read more" or "learn more". No links to `#`. Do not chain links side by side or over-link. |
+| External links | Only to sources that help the reader. `rehypeExternalLinks` adds `target="_blank"`, `rel="noopener noreferrer"` and "(opens in a new tab)" in Markdown. Do the same by hand in `.astro`. Use `nofollow` only for sources we do not trust. |
 | Breadcrumbs | Every page except home, visible and in schema. |
-| CTA | Every page ends with `CtaBand` (quote form and WhatsApp). |
-| Dates | `published` and `updated` in frontmatter or `pages.ts`. Update `updated` whenever content changes. |
+| CTA | A quote CTA in the hero, one mid-page where it fits, and `CtaBand` at the end. No pop-ups, modals or newsletter prompts. |
+| Dates | `published` and `updated` in frontmatter or `pages.ts`. Change `updated` only when the content changes in substance. Google treats date-bumping without real changes as a warning sign. |
 
-## 6. Writing: human tone and readability
+## 6. Writing: human tone, readability and proofreading
 
 Readability
-- Flesch Reading Ease 60 or higher on every page, measured on prose only (p, li, td, summary). Aim for 65–80. `page-audit` checks this.
-- Sentences under 30 words. Most between 10 and 20. Paragraphs 2–4 lines.
-- Prefer short common words: "use" not "utilize", "help" not "facilitate", "about" not "approximately".
-- No semicolons anywhere in visible copy (`seo-check` fails on them).
+- Flesch Reading Ease 60 or higher on every page, measured on prose only (p, li, td, summary, dd). Aim for 65–80. `page-audit` checks this.
+- Sentences under 30 words (`page-audit`). Most between 10 and 20. Paragraphs 2–4 lines.
+- Prefer short common words: "use" not "utilise", "help" not "facilitate", "about" not "approximately".
+- No semicolons anywhere in visible copy (`seo-check`).
 
 Human tone
-- Write like a factory manager answering a buyer's email: plain, specific, friendly, first person plural ("we") to the buyer ("you").
+- Write like a factory manager answering a buyer's email: plain, specific, friendly, "we" for SDF Clothing and "you" for the buyer.
 - Active voice. Concrete numbers from `company.ts` instead of adjectives.
-- No marketing or self-praise: world-class, leading, premium quality, high-quality, best price, one-stop, hassle-free, cutting-edge, amazing, excellent, trusted by, look no further, take your brand to the next level. `page-audit` blocks these. State the fact instead ("AQL 2.5 final inspection", not "top quality").
-- Avoid AI-sounding filler (`page-audit` blocks most of these): "In today's fast-paced world", "delve", "unlock", "seamless", "robust", "tailored solutions", "whether you're X or Y", "it's worth noting", "in conclusion". Do not open sections with rhetorical questions or end them with summaries of what was just said.
-- Vary sentence openings and lengths. Do not repeat the same pattern ("We…", "We…", "We…") line after line.
-- Be honest about limits. The home page has a "What we do not do" style section. Spokes say plainly what we cannot do (for example blanks, no stock).
+- No marketing or self-praise. `page-audit` blocks words such as world-class, leading, premier, premium quality, high-quality, best price, one-stop, hassle-free, cutting-edge, amazing, excellent, unparalleled, trusted by, trusted partner, passion, we pride ourselves, look no further. State the fact instead ("AQL 2.5 final inspection", not "top quality").
+- No AI-sounding filler. `page-audit` blocks delve, seamless, robust, unlock, leverage, game-changer, tailored solutions, "in today's", "it's worth noting", "in conclusion". Do not open sections with rhetorical questions or end them by restating what was just said.
+- Vary sentence openings and lengths. Do not start line after line with "We".
+- Be honest about limits. Say plainly what we do not do (no blanks, no stock, no partners).
+
+Proofreading
+- British English everywhere (colour, programme, fibre, labelling, organise, centre). `page-audit` fails on American spellings in visible text.
+- Product nouns must match the page. A copy-paste slip such as "each hoodie" on the polo section is the most common error on competitor sites. Read every FAQ answer against the page topic.
+- No leftover text: TODO, TBD, lorem, placeholder, undefined, NaN or `{{token}}` (`page-audit`).
+- No empty FAQ answers (`page-audit`).
+- Read the finished page once aloud from top to bottom before committing.
 
 Duplicate content
 - No sentence and no 8-word phrase repeated within a page (`page-audit`), except target keywords.
@@ -170,19 +188,45 @@ Duplicate content
 - FAQ questions must not repeat across pages. A shared question goes on the page that owns the topic.
 - Target keywords may repeat as often as reads naturally within the density limit.
 
-## 7. Content quality, E-E-A-T and AI-friendliness
+## 7. Content quality, E-E-A-T and AI search
 
-- Every page must offer something the buyer cannot get from a generic page: real specs, real prices at 300 and 5,000 pieces, real timings, real limits.
-- Show experience through process detail (what we check at each stage, what goes wrong and how we prevent it), not claims.
-- "About this page" block on every product and service page: who reviewed it (founder from `company.founder`, linked to `/about/`), where facts come from, and how to report an error. Schema `WebPage` gets `reviewed: true`.
-- Use tables for specs, fabrics, printing methods and prices. Use numbered lists for steps. Both are easy for search engines and AI tools to quote.
+What makes a page better than the competitors we studied
+- Real numbers they hide: prices at 300 and 5,000 pieces, MOQ split, sample days, bulk days, AQL level, FOB port.
+- Process detail that shows experience: what we check at each stage, what goes wrong and how we prevent it.
+- A buyer-risk section where it fits (reorder colour drift, prints that crack, risky first orders, small orders ignored) answered with what we actually do.
+- A "What to send for a quote" list so buyers know how to start.
+- Comparison tables where a buyer must choose: GSM bands, printing methods, CMT vs full package, sample types.
+- Honest limits.
+
+E-E-A-T
+- "About this page" block on every product, service and guide page: who reviewed it (founder from `company.founder`, linked to `/about/`), where the facts come from, and how to report an error. Schema `WebPage` gets `reviewed: true`.
+- Guide pages (`kind: guide`) also show a visible byline and a table of contents when they have 6 or more H2s, and cite official or trade sources.
+- Every page is fact-checked against `company.ts` and reviewed before it is published.
 - The `answer` paragraph and the first sentence of each FAQ answer give a direct yes, no or number first, then the detail.
 - Keep entity facts identical everywhere (name, founded year, MOQ, sample days, location). `company.ts` makes this automatic.
-- `llms.txt` (`src/pages/llms.txt.ts`) lists key pages. Set `inLlms` and `llmsLabel` for new hand-built pages.
-- Neutral comparisons only (factory-direct vs other options), never naming other companies.
-- Length guide: pillar or hub pages about 2,000+ words, spoke pages 700–1,500 words. Never pad to hit a number.
 
-## 8. Page structure and components
+AI search (Google AI Overviews and AI Mode, ChatGPT search, Copilot, Perplexity)
+- Google's own guidance: AI search is still SEO. Pages must be indexable and eligible for a snippet. No special markup, llms.txt, chunking or rewriting for AI is needed.
+- Unique, first-hand, non-commodity content wins. Ask "could a generic AI write this page without our records?" If yes, the page needs more substance.
+- Clear headings, short paragraphs, tables and lists make answers easy to quote.
+- `llms.txt` (`src/pages/llms.txt.ts`) stays for non-Google tools. Set `inLlms` and `llmsLabel` for new hand-built pages. Google ignores it.
+- Never hide instructions for AI systems in a page. Bing treats this as prompt injection abuse.
+
+Length
+- Google has no preferred word count. Cover the topic fully and stop. As a guide from the pages that rank: product and service pages usually land at 900–1,600 words of main content, guides at 1,800–2,500. Never pad to reach a number.
+
+## 8. What never goes on the site (spam and trust risks)
+
+- No location or doorway pages ("T-shirt manufacturer for Canada", "hoodies for London") and no long lists of countries or cities. Two competitors we studied do this, and Google's spam policy names it.
+- No pages mass-produced for keyword variations or AI fan-out queries. A higher page count does not make a site better.
+- No keyword stuffing in copy, headings, alt text or link text.
+- No hidden text. Accordions, tabs and screen-reader-only text are fine.
+- No superlatives without proof, no fake counters ("2,500+ brands"), no client logos without permission.
+- No paid or swapped links, no artificial mentions.
+- No pop-ups, countdown banners or stale offers.
+- No two URLs for the same topic.
+
+## 9. Page structure and components
 
 Layout and shared parts
 - Every page uses `BaseLayout`, which includes `SiteHeader`, `SiteFooter`, `Seo`, skip link and scripts. Header and footer change in one place and update every page.
@@ -193,13 +237,21 @@ Layout and shared parts
 
 Product or service page pattern (copy `src/pages/t-shirt-manufacturer.astro`)
 1. Hero: eyebrow, H1, answer paragraph, two CTAs, infographic.
-2. Facts at a glance: spec table plus a supporting infographic.
+2. Facts at a glance: spec table (MOQ with its split, sample and bulk days, fabrics, weights, printing, port) plus a supporting infographic.
 3. Styles or options as cards, linking to related spokes where relevant.
 4. Fabric, printing or option tables.
 5. A section for each supporting keyword that needs one (for example the polo section).
-6. Prices with `<PriceTable only={[...]}>`.
-7. Order steps, quality checklist, first-order guidance.
-8. FAQ (5–9 questions, `FaqList`), `RelatedLinks`, "About this page", `CtaBand`.
+6. Buyer risks and how we handle them, where the topic has them.
+7. Prices with `<PriceTable only={[...]}>`.
+8. Order steps, quality checklist, what to send for a quote, first-order guidance.
+9. FAQ (5–9 questions, `FaqList`), `RelatedLinks`, "About this page", `CtaBand`.
+
+Guide page pattern (`kind: guide`)
+1. H1 and a short direct answer.
+2. Byline, table of contents.
+3. Steps, comparison tables and checklists.
+4. A neutral section on when SDF Clothing is and is not a fit, with one link to the relevant spoke.
+5. FAQ, sources, "About this page", `CtaBand`.
 
 Dedicated pages
 - A page with its own layout keeps its SEO fields and FAQ in `src/content/landing/<slug>.md` (frontmatter only) and reads them with `getEntry('landing', '<slug>')`.
@@ -208,23 +260,33 @@ Dedicated pages
 
 Frontmatter fields (validated by Zod in `src/content.config.ts`): kind, hub, navLabel, cardSummary, title, description, h1, eyebrow, primaryKeyword, secondaryKeywords, intent, answer, facts, specs, specsCaption, showPrices, serviceType, citations, faq, related, published, updated.
 
-## 9. Structured data
+## 10. Structured data
 
-Built in `src/lib/schema.ts`. Never paste JSON-LD by hand.
+Built in `src/lib/schema.ts`. Never paste JSON-LD by hand. Validate new types with the Rich Results Test and the Schema.org validator.
 - Every page: `WebPage` (with dates, `reviewed` where reviewed) and `BreadcrumbList` (except home).
-- `Organization` with `parentOrganization` (SDF Corprt), `areaServed: Worldwide`, logo `logo.png` 600×526, founder. No certification or association data.
+- Full `Organization` on the home page and `/about/` only (`fullOrganization: true`). Other pages reference it by `@id`. It carries `parentOrganization` (SDF Corprt), `areaServed: Worldwide`, logo `logo.png` 600×526 (works on white), founder. No certification, association, phone or email data.
 - Home: `Organization`, `WebSite`.
-- Product and service pages: `Service` with `serviceType` and `audience`, plus `Person` for the founder.
-- FAQ sections: `FAQPage`. Google stopped showing FAQ rich results on 7 May 2026, but the markup stays valid and helps AI tools.
-- Only mark up content that is visible on the page. No `Review` or `AggregateRating` until real reviews exist.
+- Product and service pages: `Service` with `serviceType`, `provider` and `audience`.
+- Guide pages: `Article` with author, publisher, dates.
+- FAQ sections: `FAQPage`. Google stopped showing FAQ rich results on 7 May 2026, but the markup stays valid and other tools read it.
+- Only mark up content that is visible on the page. No `Review` or `AggregateRating` until real reviews exist. Schema is never a ranking shortcut.
 
-## 10. Design, responsive and accessibility
+## 11. Images and infographics
+
+- Use `<img>` (or Astro `<Image />`), never CSS backgrounds, for meaningful images. Width and height always set.
+- Alt text describes the image in context in under 140 characters (`page-audit`). At most one target keyword, only when it is the honest description. Decorative images use `alt=""`.
+- File names are short and descriptive (`heavyweight-tshirt-neck-rib.webp`, not `IMG_0023.jpg`).
+- Place images next to the text they illustrate. Reuse the same URL for the same image.
+- Every fact shown inside an infographic must also appear as text or in a table on the same page. Search engines and screen readers cannot read figures inside images.
+- Infographics come from `src/lib/infographics.ts`, built from `company.ts`, dark palette only, served at `/images/infographics/<name>-dark.svg`. A new one needs width, height and alt in `infographicMeta`.
+- Real factory photos only, when the owner supplies them. Compress to WebP or AVIF, keep the original in the repo.
+
+## 12. Design, responsive and accessibility
 
 Theme
 - Black only (`#000`) with thin red accents. Tokens in `src/styles/global.css`: `--color-accent` #ff3333 for red text, `--color-accent-strong` #cc0000 for buttons and borders, `--color-accent-strong-hover` #e00000, white focus ring. `color-scheme: dark`, theme colour `#000000`.
 - Use CSS variables for every colour, space and font size. BEM class names. No inline styles except computed values.
 - Logo: `logo-badge.svg` (white circle, red ring) in header, footer, favicons, app icons and OG image. `logo.png` is for schema only.
-- Infographics come from `src/lib/infographics.ts`, built from `company.ts`, dark palette only, served at `/images/infographics/<name>-dark.svg`. A new infographic needs width, height and a descriptive alt in `infographicMeta`.
 
 Responsive
 - Mobile first. Check 320, 375, 414, 768, 1024, 1280, 1440 and 1920px wide. No horizontal scroll at any width (`body` uses `overflow-x: clip`).
@@ -238,16 +300,16 @@ Accessibility (WCAG 2.1 AA)
 - Icon-only buttons have `aria-label`. Tables have a caption (visually hidden is fine).
 - Lighthouse accessibility 100.
 
-## 11. Performance
+## 13. Performance
 
-- Target Lighthouse 100 on mobile for performance, accessibility, best practices and SEO. CI fails below 90 (performance) and 95 (others) on the median of 3 runs.
-- CLS 0, LCP under 2.5s, no blocking scripts.
+- Target Lighthouse 100 on mobile for performance, accessibility, best practices and SEO. CI fails below 90 (performance) and 95 (others).
+- Core Web Vitals: LCP under 2.5s, INP under 200ms, CLS 0 (CI fails above 0.01).
 - Static HTML by default. Add client JavaScript only when a feature needs it, and keep it small and inline-hashed or bundled.
 - Above-the-fold image: `loading="eager"` and `fetchpriority="high"`. Everything else lazy.
 - Self-hosted fonts in `public/fonts` with `font-display: swap`, preloaded where critical.
 - Passive listeners for scroll and touch events.
 
-## 12. Security, forms and privacy
+## 14. Security, forms and privacy
 
 - Headers in `public/_headers`: HSTS, CSP, X-Frame-Options DENY, nosniff, Referrer-Policy, Permissions-Policy.
 - CSP uses hashes. `scripts/postbuild.mjs` hashes every inline script and style. Any new inline script must survive this, so never add `unsafe-inline`.
@@ -255,16 +317,26 @@ Accessibility (WCAG 2.1 AA)
 - Forms post to the worker (`/api/*`). The worker validates every field, checks Cloudflare Turnstile and rate-limits per IP. Keep server-side validation and spam protection on any new form.
 - No secrets in front-end code. Keys live in Cloudflare environment variables.
 - Forms show a notice on how data is used, linking to `/privacy/`.
+- The site sets no tracking cookies (stated on `/cookies/`), so there is no cookie banner. Adding GA4, Meta Pixel, Hotjar or similar needs owner approval, a consent banner and updates to `/cookies/`, `/privacy/` and the CSP first.
 
-## 13. Technical SEO, URLs and redirects
+## 15. Technical SEO, crawling, URLs and redirects
 
 - `sitemap.xml`, `robots.txt`, `manifest.webmanifest` and `llms.txt` are generated from `src/data/pages.ts` and the collection. A page is included automatically once registered.
-- `scripts/indexnow.mjs` pings search engines after production deploys.
+- Production `robots.txt` allows all crawlers except Bytespider and blocks `/api/`. Search and AI answer crawlers (Googlebot, Bingbot, OAI-SearchBot, Claude-SearchBot, PerplexityBot) must stay allowed. Whether to allow AI training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) is an owner decision.
+- Never block a page with robots.txt to keep it out of search. Use `noindex`.
+- `scripts/indexnow.mjs` pings Bing and other IndexNow engines after production deploys. Google does not use IndexNow.
 - Old site URLs: every URL in `scripts/legacy-urls.txt` must 301 to the best new page through `public/_redirects`. `redirect-check` fails otherwise. Pages planned for later go in `scripts/planned-routes.txt`.
 - Custom 404 page with navigation. HTTPS only, one host (no `www` duplicate) at launch.
 - English only for now. Add `hreflang` only if a translated version is created.
 
-## 14. Automated checks
+## 16. Launch and monitoring
+
+- Verify the domain in Google Search Console and Bing Webmaster Tools, submit `sitemap.xml` to both.
+- Watch the Search Console performance and generative AI reports and the Bing AI Performance report (Copilot citations) monthly.
+- Check Core Web Vitals in Search Console after launch.
+- Re-run the research in `docs/` once a year or after a major Google or Bing guideline change, and update this file.
+
+## 17. Automated checks
 
 | Command | Script | What it checks |
 |---|---|---|
@@ -272,26 +344,31 @@ Accessibility (WCAG 2.1 AA)
 | `npm run build` | `astro build`, `postbuild`, `staging` | Build, CSP hashes, staging robots |
 | `npm run verify` | `seo-check` | Title and description length, H1, headings, canonical, schema, images, links, orphans, sitemap, no email, phone, semicolon, association name or partner wording |
 | | `redirect-check` | Every legacy URL redirects to a real page |
-| | `page-audit` | FRE ≥ 60, marketing words, keyword placement and density, supporting keywords, cannibalization, long sentences, repeated phrases, alt text, inbound links and anchors |
-| CI | Lighthouse CI (`lighthouserc.json`) | Scores, CLS and LCP on key pages |
+| | `page-audit` | FRE ≥ 60, marketing and AI-filler words, British spelling, leftover text and unfilled tokens, dead or generic links, empty FAQ answers, keyword placement and density, supporting keywords, cannibalization across all pages, long sentences, repeated phrases, alt text, inbound links and anchors |
+| CI | Lighthouse CI (`lighthouserc.json`) | Scores, CLS and LCP on key pages, median of 3 runs |
 
-`page-audit` hard-fails only pages in its `STRICT` set and prints warnings for the rest. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`.
+`page-audit` hard-fails pages in its `STRICT` set and prints warnings for the rest. Cannibalization errors fail for every page. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`.
 
-## 15. Finishing a page
+What no script can check, so a person must: facts are true, product nouns match the page, the page answers the buyer better than the top results, and it reads like a person wrote it.
 
-1. All facts confirmed and in `company.ts`. Unconfirmed claims removed or asked about.
-2. Keyword map row added or updated in section 3. `primaryKeyword` and `secondaryKeywords` set in frontmatter or `pages.ts`.
+## 18. Finishing a page
+
+1. Research note saved in `docs/`. All facts confirmed and in `company.ts`. Unconfirmed claims removed or asked about.
+2. Keyword map row updated in section 3. `primaryKeyword` and `secondaryKeywords` set in frontmatter or `pages.ts`.
 3. Page linked from `nav.ts`, its hub page, the home page where relevant and at least 3 pages in total, one with keyword anchor text.
 4. `npm run check && npm run build && npm run verify` pass.
-5. Route added to `STRICT` in `scripts/page-audit.mjs`, then run `npm run verify` again.
+5. Route added to `STRICT` in `scripts/page-audit.mjs`, then `npm run verify` again.
 6. Lighthouse on mobile: 100 in all four categories. Check the page at 320px and 1440px with the menu open and tables visible.
-7. `updated` date set. Commit with a clear message, push, and confirm both CI and Cloudflare Pages are green.
-8. Report to the owner in Banglish: keywords targeted, FRE score, what changed, and any facts that still need confirmation.
+7. Read the page aloud once. Check every FAQ answer matches the page topic.
+8. `updated` date set. Commit with a clear message, push, and confirm both CI and Cloudflare Pages are green.
+9. Report to the owner in Banglish: keywords targeted, FRE score, what changed, and any facts that still need confirmation.
 
-## 16. Open items waiting for the owner
+## 19. Open items waiting for the owner
 
 - Confirm the spelling "SDF Corprt".
 - LC terms for the payment section.
-- Real factory photos and real customer testimonials (none are used until supplied).
+- Real factory photos and real customer testimonials or case studies (none are used until supplied).
 - T-shirt page claims to confirm: tipping stripes, branded buttons, racer-back and slub fabric, strike-off approval, wash test, reorders skipping the proto sample.
 - Delete old duplicate projects that show our content (`dhaka-bd.pages.dev`, `the-hug.pages.dev`).
+- Decide whether AI training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) may crawl the live site.
+- Decide whether analytics (GA4 or similar) is wanted, which needs a consent banner.
