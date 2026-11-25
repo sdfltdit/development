@@ -98,6 +98,6 @@ A private preview runs on Cloudflare as a separate Worker, `sdfltd-staging`, on 
 4. Every push now updates the preview at `https://sdfltd-staging.<your-subdomain>.workers.dev`.
 5. Put that address in `env.staging.vars.ALLOWED_ORIGIN` in `wrangler.jsonc` so the forms work on the preview.
 
-The staging build adds `X-Robots-Tag: noindex, nofollow` to every response and a robots.txt that blocks all crawlers, so Google never indexes the preview. For a password, add Cloudflare Access (Zero Trust → Access → Applications) to the workers.dev address.
+On Cloudflare Pages the build writes a robots.txt that blocks search engines and AI crawlers (Googlebot, Bingbot, GPTBot and others) but allows every other tool, so SEO checkers and Lighthouse can test the preview while search engines stay out. For a password, add Cloudflare Access (Zero Trust → Access → Applications) to the workers.dev address.
 
 At launch: delete the `sdfltd-staging` Worker, then deploy the main Worker with `npm run deploy` and attach sdfltd.com under the Worker's Domains & Routes.
