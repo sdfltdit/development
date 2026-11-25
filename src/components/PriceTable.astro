@@ -1,0 +1,54 @@
+---
+import { priceIndex, terms } from '../data/company';
+
+interface Props {
+  caption?: string;
+}
+
+const { caption = `Starting ${terms.incoterm} prices per piece in ${priceIndex.currency}` } = Astro.props;
+---
+
+<div class="price-table">
+  <div class="table-wrap" role="region" aria-label="Price table" tabindex="0">
+    <table class="table--stack">
+      <caption class="visually-hidden">{caption}</caption>
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Fabric</th>
+          <th scope="col">GSM</th>
+          <th scope="col">{terms.moq} pieces</th>
+          <th scope="col">{priceIndex.bulkQty} pieces</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          priceIndex.rows.map((row) => (
+            <tr>
+              <th scope="row">{row.product}</th>
+              <td data-label="Fabric">{row.fabric}</td>
+              <td data-label="GSM">{row.gsm}</td>
+              <td data-label={`${terms.moq} pieces`}>${row.fobMoq}</td>
+              <td data-label={`${priceIndex.bulkQty} pieces`}>${row.fobBulk}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="price-table__note">
+    Prices are {priceIndex.basis}. Your exact price is fixed in writing on your quote.
+  </p>
+</div>
+
+<style>
+  .price-table {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .price-table__note {
+    color: var(--color-muted);
+    font-size: var(--text-xs);
+  }
+</style>

@@ -1,0 +1,74 @@
+---
+interface Props {
+  heading?: string;
+  links: { title: string; href: string; summary: string }[];
+}
+
+const { heading = 'Related pages', links } = Astro.props;
+---
+
+<section class="related" aria-labelledby="related-heading">
+  <h2 id="related-heading" class="related__heading">{heading}</h2>
+  <ul class="related__list">
+    {
+      links.map((link) => (
+        <li class="related__item">
+          <a class="related__link" href={link.href}>
+            <span class="related__title">{link.title}</span>
+            <span class="related__summary">{link.summary}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .related {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .related__list {
+    display: grid;
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .related__link {
+    display: grid;
+    gap: var(--space-2);
+    height: 100%;
+    padding: var(--space-5);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .related__link:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text);
+  }
+
+  .related__title {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  .related__summary {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+
+  @media (min-width: 48rem) {
+    .related__list {
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+import ProsePage from '../components/ProsePage.astro';
+import { company } from '../data/company';
+---
+
+<ProsePage
+  path="/editorial-policy/"
+  crumbLabel="Editorial policy"
+  eyebrow="How we write"
+  heading="Editorial policy"
+  lead={`This SDF Clothing editorial policy explains who writes the pages on ${company.officialDomain}, where our facts come from, how we use AI tools and how we keep everything up to date.`}
+>
+  <h2>Who writes our pages</h2>
+  <p>
+    Pages are written and maintained by the merchandising team at {company.legalName} in {company.address.locality}, the same people who quote, sample and run
+    production orders. Technical topics such as fabrics, sampling and inspection are checked by staff who handle them on the production floor. Pages are
+    reviewed before publication by {company.founder.name}, {company.founder.jobTitle}, who founded the company in {company.foundingYear}.
+  </p>
+
+  <h2>Where our facts come from</h2>
+  <ul>
+    <li>
+      <strong>Our own terms and prices</strong>, such as minimum order, lead times, payment schedule and the price index, come from company records. They are
+      kept in one place, so every page shows the same figure.
+    </li>
+    <li>
+      <strong>Industry figures</strong>, such as export statistics and trade rules, come from official or primary sources, including Bangladesh's Export
+      Promotion Bureau, Eurostat and the US Office of Textiles and Apparel, and name the source and date.
+    </li>
+    <li><strong>Regulations and duty rates</strong> change often. We explain the principle and ask you to confirm the current rate with your customs broker.</li>
+  </ul>
+
+  <h2>How we use AI tools</h2>
+  <p>
+    We use AI tools to help research, draft and structure pages. Facts are never taken from an AI tool: every figure comes from our company records or a cited
+    source, and a member of our team reviews each page before it is published.
+  </p>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>We do not publish reviews, testimonials or case studies without the customer's permission.</li>
+    <li>We do not change a page's date unless its content has been meaningfully updated.</li>
+    <li>We do not publish claims we cannot back up on request.</li>
+  </ul>
+
+  <h2>How often we review content</h2>
+  <p>
+    Prices and terms are reviewed at least every three months. Product and service pages are reviewed every six months, and guides every twelve months, or
+    sooner when rules or data change. Each page shows the date it was last updated.
+  </p>
+
+  <h2>Report an error</h2>
+  <p>
+    If you find something wrong or out of date, tell us through our <a href={company.contactPath}>contact form</a> with the page address. We correct confirmed errors
+    and update the date on the page.
+  </p>
+</ProsePage>

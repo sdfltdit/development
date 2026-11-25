@@ -1,0 +1,56 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "sdfltd",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-11-25",
+  "upload_source_maps": true,
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*", "/journal/gots-7-recertification-2026*"]
+  },
+  "vars": {
+    "QUOTE_TO": "contact@sdfltd.com",
+    "QUOTE_FROM": "SDF Clothing Website <website@sdfltd.com>",
+    "ALLOWED_ORIGIN": "https://sdfltd.com"
+  },
+  "ratelimits": [
+    {
+      "name": "QUOTE_LIMITER",
+      "namespace_id": "4801",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "env": {
+    "staging": {
+      "name": "sdfltd-staging",
+      "workers_dev": true,
+      "preview_urls": false,
+      "vars": {
+        "QUOTE_TO": "contact@sdfltd.com",
+        "QUOTE_FROM": "SDF Clothing Website <website@sdfltd.com>",
+        "ALLOWED_ORIGIN": "https://sdfltd-staging.workers.dev"
+      },
+      "ratelimits": [
+        {
+          "name": "QUOTE_LIMITER",
+          "namespace_id": "4802",
+          "simple": {
+            "limit": 5,
+            "period": 60
+          }
+        }
+      ]
+    }
+  }
+}

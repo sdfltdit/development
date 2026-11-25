@@ -1,0 +1,20 @@
+---
+import HubPage from '../components/HubPage.astro';
+---
+
+<HubPage
+  path="/all-services/"
+  hub="services"
+  crumbLabel="Services"
+  eyebrow="Services"
+  heading="Clothing manufacturing services under one roof"
+  lead="Our clothing manufacturing services cover every step from your idea to a packed carton. That means samples, patterns, cutting, sewing, printing, embroidery, finishing and checks. One team does it all in our own factory."
+  groups={[{ heading: 'Services', kinds: ['service'] }]}
+>
+  <h2>How the services fit together</h2>
+  <p>
+    Most brands use the services in order. First comes a <a href="/sample-service/">proto and pre-production sample</a>. Then we move to
+    <a href="/cut-and-sew-service/">cut-and-sew production</a>, with printing and a final check done in-house. Our
+    <a href="/work-process/">production process page</a> shows the time and payment for each step.
+  </p>
+</HubPage>

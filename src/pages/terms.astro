@@ -1,0 +1,60 @@
+---
+import ProsePage from '../components/ProsePage.astro';
+import { company } from '../data/company';
+---
+
+<ProsePage
+  path="/terms/"
+  crumbLabel="Terms of use"
+  eyebrow="Legal"
+  heading="Website terms of use"
+  lead={`These SDF Clothing terms of use apply when you visit ${company.officialDomain}. By using the site you accept them. They do not cover orders, which are governed by the quote and proforma invoice for each order.`}
+>
+  <h2>About us</h2>
+  <p>
+    The site is operated by {company.legalName}, {company.address.street}, {company.address.locality} {company.address.postalCode},
+    {company.address.countryName}. Contact us through our <a href={company.contactPath}>contact form</a>.
+  </p>
+
+  <h2>Prices, lead times and other information</h2>
+  <p>
+    Prices, minimum order quantities, lead times and specifications on this site are indicative and dated. They are not an offer. A binding price and terms
+    exist only in a written quote and proforma invoice issued by {company.legalName}.
+  </p>
+
+  <h2>Orders</h2>
+  <p>
+    Each order is governed by the written quote, the proforma invoice and any order agreement signed for it. If anything on this site conflicts with those
+    documents, the documents apply.
+  </p>
+
+  <h2>Tools and guides</h2>
+  <p>
+    Calculators and guides on this site are provided to help you plan. They give estimates, not professional, legal, customs or tax advice. Check duty rates
+    and regulations with a qualified adviser before you rely on them.
+  </p>
+
+  <h2>Our content</h2>
+  <p>
+    The text, design and data on this site belong to {company.legalName}. You may quote short extracts with a link to the source page. The price index may be
+    reused under the Creative Commons Attribution 4.0 licence, with credit to {company.brandName} and a link to the price page.
+  </p>
+
+  <h2>Links to other sites</h2>
+  <p>We link to other websites for reference. We are not responsible for their content or privacy practices.</p>
+
+  <h2>Impersonation</h2>
+  <p>
+    Our only website is {company.officialDomain}. We are not responsible for websites, emails or messages that copy our name or content. Please report them through our
+    <a href={company.contactPath}>contact form</a> and read how to <a href="/verify-us/">verify us</a>.
+  </p>
+
+  <h2>Liability</h2>
+  <p>
+    We work to keep this site accurate and available, but we cannot guarantee it is always error-free or online. Nothing in these terms limits liability that
+    cannot be limited by law.
+  </p>
+
+  <h2>Law</h2>
+  <p>These terms are governed by the laws of Bangladesh, and the courts of Dhaka have jurisdiction, unless the law of your country requires otherwise.</p>
+</ProsePage>

@@ -1,0 +1,78 @@
+---
+interface Props {
+  items: { q: string; a: string }[];
+  heading: string;
+  id?: string;
+}
+
+const { items, heading, id = 'faq' } = Astro.props;
+---
+
+<section class="faq" aria-labelledby={`${id}-heading`}>
+  <h2 id={`${id}-heading`} class="faq__heading">{heading}</h2>
+  <div class="faq__list">
+    {
+      items.map((item) => (
+        <details class="faq__item">
+          <summary class="faq__question">
+            <h3 class="faq__q">{item.q}</h3>
+          </summary>
+          <p class="faq__answer">{item.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .faq {
+    display: grid;
+    gap: var(--space-5);
+    max-width: var(--container-narrow);
+  }
+
+  .faq__list {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .faq__item {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: var(--touch);
+    padding: var(--space-4) 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq__question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq__question::after {
+    content: '+';
+    flex: none;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .faq__item[open] .faq__question::after {
+    content: '−';
+  }
+
+  .faq__q {
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .faq__answer {
+    padding-bottom: var(--space-5);
+    color: var(--color-text);
+  }
+</style>

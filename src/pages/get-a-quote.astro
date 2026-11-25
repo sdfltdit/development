@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { company, terms, whatsappUrl } from '../data/company';
+import { pageMeta } from '../data/pages';
+import { standardPage, type Crumb } from '../lib/schema';
+
+const meta = pageMeta('/get-a-quote/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Get a quote', path: '/get-a-quote/' },
+];
+
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  type: 'ContactPage',
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs} showMobileCta={false}>
+  <PageHeader
+    eyebrow="Request a quote"
+    title="Get a clothing manufacturing quote"
+    lead={`Tell us what you want to make and you get a clothing manufacturing quote in writing within ${terms.quoteHours} hours: ${terms.incoterm} price per piece, sample fee, colour and size split and lead time, from the factory itself.`}
+  />
+
+  <section class="section quote-layout">
+    <div class="container quote-layout__inner">
+      <div class="quote-layout__form">
+        <h2 class="block-heading">Your request</h2>
+        <QuoteForm />
+      </div>
+      <aside class="quote-layout__aside" aria-labelledby="next-heading">
+        <h2 id="next-heading" class="block-heading">What happens next</h2>
+        <ol class="next-steps">
+          <li>A merchandiser reads your request and may ask one or two questions.</li>
+          <li>You receive a written quote within {terms.quoteHours} hours.</li>
+          <li>If it works for you, we send fabric options and a sample timeline.</li>
+          <li>You approve and pay for the sample. {terms.sampleFeePolicy}</li>
+        </ol>
+        <div class="notice">
+          <p>
+            <strong>Prefer to meet in person?</strong> <a href="/booking/">Book a visit to our factory in Dhaka</a>.
+          </p>
+        </div>
+        <div class="notice">
+          <p>
+            <strong>Prefer to talk?</strong> <a href={whatsappUrl} rel="noopener">Chat with us on WhatsApp</a> or
+            <a href={company.contactPath}>send a message</a>.
+          </p>
+        </div>
+        <p class="quote-layout__small">
+          Our minimum is {terms.moq} {terms.moqUnit}. See our <a href="/pricing/">price index</a> and <a href="/work-process/">production process</a> before you
+          send, and <a href="/verify-us/">verify our official contacts</a>.
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .quote-layout {
+    padding-top: 0;
+  }
+
+  .quote-layout__inner {
+    display: grid;
+    gap: var(--space-7);
+  }
+
+  .quote-layout__aside {
+    display: grid;
+    align-content: start;
+    gap: var(--space-5);
+  }
+
+  .next-steps {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .quote-layout__small {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+
+  @media (min-width: 64rem) {
+    .quote-layout__inner {
+      grid-template-columns: 1.6fr 1fr;
+    }
+
+    .quote-layout__aside {
+      position: sticky;
+      top: calc(var(--header-height) + var(--space-5));
+    }
+  }
+</style>

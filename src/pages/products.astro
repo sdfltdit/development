@@ -1,0 +1,24 @@
+---
+import HubPage from '../components/HubPage.astro';
+import { terms } from '../data/company';
+---
+
+<HubPage
+  path="/products/"
+  hub="products"
+  crumbLabel="Products"
+  eyebrow="What we make"
+  heading="Custom clothing products we manufacture"
+  lead={`These are the custom clothing products we make in our Dhaka factory for private label brands. Every product is cut and sewn to your fit and fabric from ${terms.moq} ${terms.moqUnit}, with screen printing and embroidery in-house.`}
+  groups={[
+    { heading: 'By product', kinds: ['product'] },
+    { heading: 'By way of working', kinds: ['model'] },
+  ]}
+>
+  <h2>Not listed here?</h2>
+  <p>
+    Polos, joggers, sweatshirts, long sleeves and kids' styles run on the same knit lines. Describe the product in your
+    <a href="/get-a-quote/">quote request</a> and we confirm whether it fits our production before you pay for a sample. Our
+    <a href="/pricing/">price index</a> gives a dated starting point for budgeting.
+  </p>
+</HubPage>

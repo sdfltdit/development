@@ -1,0 +1,42 @@
+---
+import ProsePage from '../components/ProsePage.astro';
+import { company } from '../data/company';
+---
+
+<ProsePage
+  path="/accessibility/"
+  crumbLabel="Accessibility"
+  eyebrow="Accessibility"
+  heading="Accessibility statement"
+  lead={`This SDF Clothing accessibility statement sets out how we build ${company.officialDomain} to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA, and how to tell us if something gets in your way.`}
+>
+  <h2>What you can expect</h2>
+  <ul>
+    <li>Every page can be used with a keyboard alone, with a visible focus outline.</li>
+    <li>A "Skip to main content" link is the first thing on every page.</li>
+    <li>Text meets a contrast ratio of at least 4.5:1, in both light and dark mode.</li>
+    <li>Headings follow a logical order, and each page has one main heading.</li>
+    <li>Form fields have visible labels, and errors are announced and explained in words.</li>
+    <li>Tables use header cells, and wide tables scroll inside their own area.</li>
+    <li>Animation is reduced when your device asks for reduced motion.</li>
+    <li>Pages work at 200% zoom and on screens from 320 pixels wide.</li>
+  </ul>
+
+  <h2>How we check</h2>
+  <p>
+    Every change to the site is checked automatically for accessibility errors before it goes live, and key pages are tested with a keyboard and a screen
+    reader.
+  </p>
+
+  <h2>Known limitations</h2>
+  <p>
+    Documents we send by email, such as quotes and inspection reports, may not always be fully accessible. Ask us and we will provide the information in another
+    format.
+  </p>
+
+  <h2>Tell us about a barrier</h2>
+  <p>
+    If something on this site is hard to use, use our <a href={company.contactPath}>contact form</a> with the page address and a short description. We aim
+    to reply within five working days and to fix confirmed issues as quickly as we can.
+  </p>
+</ProsePage>

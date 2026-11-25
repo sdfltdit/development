@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { company, terms, whatsappUrl } from '../data/company';
+import { pageMeta } from '../data/pages';
+import { faqPage, standardPage, type Crumb } from '../lib/schema';
+
+const meta = pageMeta('/verify-us/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'How we work', path: '/work-process/' },
+  { name: 'Verify us', path: '/verify-us/' },
+];
+
+const official = [
+  { label: 'Website', value: company.officialDomain, href: `https://${company.officialDomain}/` },
+  { label: 'Email', value: `We only email from addresses ending in @${company.officialDomain}` },
+  { label: 'Contact form', value: `${company.officialDomain}/contact/`, href: company.contactPath },
+  { label: 'WhatsApp', value: `Only through the WhatsApp link on ${company.officialDomain}`, href: whatsappUrl },
+  { label: 'Office', value: `${company.address.street}, ${company.address.locality} ${company.address.postalCode}, ${company.address.countryName}` },
+];
+
+const warnings = [
+  'A website that copies our name or content but is not on sdfltd.com',
+  `An email from a free webmail address or any domain other than @${company.officialDomain}`,
+  'A request to pay a personal account, or any account not in our company name',
+  'Bank details that differ from the ones on your proforma invoice, sent by email or chat',
+  'Pressure to pay quickly to "hold a price" or "secure a production slot"',
+];
+
+const faqs = [
+  {
+    q: 'I found another website using the SDF Clothing name. Is it yours?',
+    a: `Our only website is ${company.officialDomain}. If you find a copy elsewhere, do not send it money or files, and send us the address through our contact form so we can have it taken down.`,
+  },
+  {
+    q: 'How will you ask me to pay?',
+    a: `${terms.paymentMethod}. Whichever method you use, the money goes to our company bank account. We never ask you to pay a personal account or a new account sent by email.`,
+  },
+  {
+    q: 'Our bank details were changed by email. What should I do?',
+    a: `Do not pay. Contact your merchandiser through the contact form or the WhatsApp link on ${company.officialDomain} and confirm the details first. We do not change bank details by email.`,
+  },
+  {
+    q: 'Can I see the factory before I pay?',
+    a: 'Yes. Factory visits in Dhaka can be arranged by appointment, and a paid sample before bulk is standard with us.',
+  },
+];
+
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  extra: [faqPage(meta.path, faqs)],
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
+  <PageHeader
+    eyebrow="Buyer protection"
+    title="Verify SDF Clothing before you pay"
+    lead="Use this page to verify SDF Clothing before you send money or files. Fake supplier websites copy real factories, so here are our official channels, our registration details and the only way we ever ask to be paid."
+    updated={meta.updated}
+  />
+
+  <section class="section" aria-labelledby="official-heading">
+    <div class="container">
+      <h2 id="official-heading" class="block-heading">Our official channels</h2>
+      <div class="table-wrap" role="region" aria-labelledby="official-heading" tabindex="0">
+        <table>
+          <tbody>
+            {
+              official.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
+                </tr>
+              ))
+            }
+            {
+              company.showRegistration && (
+                <tr>
+                  <th scope="row">Company registration</th>
+                  <td>
+                    {company.legalName}, RJSC registration {company.registration.rjsc}
+                  </td>
+                </tr>
+              )
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="pay-heading">
+    <div class="container split">
+      <div class="section__head">
+        <h2 id="pay-heading">How we ask to be paid</h2>
+        <p class="section__lead">{terms.paymentMethod}.</p>
+        <p>
+          Payments follow the schedule on our <a href="/work-process/">process page</a>. Bank details never change by email. If they appear to, call us
+          before you pay.
+        </p>
+      </div>
+      <div>
+        <h3 class="block-heading">Warning signs of a fake supplier</h3>
+        <ul class="checklist checklist--no">
+          {warnings.map((w) => <li>{w}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="checks-heading">
+    <div class="container prose">
+      <h2 id="checks-heading">Four checks to make before your first payment</h2>
+      <ol>
+        <li><strong>Check the domain.</strong> Make sure the website address is exactly {company.officialDomain}.</li>
+        <li><strong>Use the channels on this page.</strong> Confirm your merchandiser's name and the quote reference through our contact form or WhatsApp link.</li>
+        <li><strong>See the factory.</strong> <a href="/booking/">Book a visit to our Dhaka factory</a>, or start with a paid sample.</li>
+        <li><strong>Match the bank details.</strong> The account must be in the name of {company.legalName} and match your proforma invoice.</li>
+      </ol>
+      <p>
+        If something does not look right, <a href={company.contactPath}>contact us through this website</a> before you pay. You can also read how we handle
+        <a href="/certifications/">compliance and buyer audits</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <FaqList items={faqs} heading="Verification questions" />
+    </div>
+  </section>
+
+  <CtaBand heading="Talk to the real factory" text={`Use the contact form or the quote form on ${company.officialDomain}. We reply from @${company.officialDomain} only.`} />
+</BaseLayout>

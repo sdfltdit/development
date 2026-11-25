@@ -1,0 +1,82 @@
+---
+import { terms } from '../data/company';
+
+export type FactKey = 'moq' | 'sample' | 'bulk' | 'quote' | 'aql' | 'incoterm';
+
+interface Props {
+  keys: FactKey[];
+  label?: string;
+}
+
+const { keys, label = 'Key production terms' } = Astro.props;
+
+const facts: Record<FactKey, { value: string; label: string; href: string }> = {
+  moq: { value: `${terms.moq}`, label: terms.moqUnit, href: '/low-moq-clothing-manufacturers/' },
+  sample: { value: `${terms.sampleDays} days`, label: 'proto sample', href: '/sample-service/' },
+  bulk: { value: `${terms.bulkDays} days`, label: 'bulk after sample approval', href: '/work-process/' },
+  quote: { value: `${terms.quoteHours} h`, label: 'written FOB quote', href: '/get-a-quote/' },
+  aql: { value: `AQL ${terms.aql}`, label: 'final inspection standard', href: '/certifications/' },
+  incoterm: { value: `${terms.incoterm} ${terms.port}`, label: 'shipping terms', href: '/work-process/' },
+};
+---
+
+<dl class="fact-strip" aria-label={label}>
+  {
+    keys.map((key) => (
+      <div class="fact-strip__item">
+        <dt class="fact-strip__label">{facts[key].label}</dt>
+        <dd class="fact-strip__value">
+          <a href={facts[key].href}>{facts[key].value}</a>
+        </dd>
+      </div>
+    ))
+  }
+</dl>
+
+<style>
+  .fact-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-line);
+  }
+
+  .fact-strip__item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-1);
+    padding: var(--space-4);
+    background: var(--color-surface);
+  }
+
+  .fact-strip__label {
+    color: var(--color-muted);
+    font-size: var(--text-xs);
+  }
+
+  .fact-strip__value {
+    margin: 0;
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .fact-strip__value a {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .fact-strip__value a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 48rem) {
+    .fact-strip {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  }
+</style>

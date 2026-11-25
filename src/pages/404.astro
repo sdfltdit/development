@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Page Not Found – SDF Clothing, Custom Clothing Manufacturer';
+const description =
+  'The page you were looking for has moved or no longer exists. Find our products, prices, production process and quote form from the links on this page.';
+
+const links = [
+  { label: 'Products we make', href: '/products/' },
+  { label: 'T-shirt manufacturing', href: '/t-shirt-manufacturer/' },
+  { label: 'Hoodie manufacturing', href: '/hoodie-manufacturer/' },
+  { label: 'Prices', href: '/pricing/' },
+  { label: 'Production process', href: '/work-process/' },
+  { label: 'Get a quote', href: '/get-a-quote/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/404/" noindex>
+  <section class="section">
+    <div class="container prose">
+      <p class="eyebrow">Error 404</p>
+      <h1>We could not find that page</h1>
+      <p>It may have moved when we rebuilt our website. These pages are the most useful places to continue:</p>
+      <ul>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <p><a class="button button--primary" href="/">Go to the home page</a></p>
+    </div>
+  </section>
+</BaseLayout>

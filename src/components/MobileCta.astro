@@ -1,0 +1,33 @@
+---
+import { whatsappUrl } from '../data/company';
+---
+
+<div class="mobile-cta">
+  <a class="button button--primary mobile-cta__quote" href="/get-a-quote/">Get a quote</a>
+  <a class="button mobile-cta__wa" href={whatsappUrl} rel="noopener">WhatsApp</a>
+</div>
+
+<style>
+  .mobile-cta {
+    position: sticky;
+    bottom: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4) calc(var(--space-2) + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--color-line);
+    background: var(--color-bg);
+  }
+
+  .mobile-cta__wa {
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+
+  @media (min-width: 64rem) {
+    .mobile-cta {
+      display: none;
+    }
+  }
+</style>

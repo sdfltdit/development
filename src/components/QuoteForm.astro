@@ -1,0 +1,141 @@
+---
+import { company, quoteProducts, terms } from '../data/company';
+
+interface Props {
+  idPrefix?: string;
+}
+
+const { idPrefix = 'quote' } = Astro.props;
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
+const id = (name: string) => `${idPrefix}-${name}`;
+
+const timelines = ['As soon as possible', 'Within 2 months', 'In 2 to 4 months', 'Later than 4 months', 'Just researching'];
+---
+
+<form class="lead-form" action="/api/quote" method="post" novalidate data-lead-form data-moq={terms.moq} data-contact={company.contactPath}>
+  <div class="lead-form__grid">
+    <div class="field">
+      <label class="field__label" for={id('name')}>Your name <span class="field__req">required</span></label>
+      <input class="field__input" id={id('name')} name="name" type="text" autocomplete="name" required minlength="2" maxlength="100" aria-describedby={id('name-error')} />
+      <p class="field__error" id={id('name-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('email')}>Work email <span class="field__req">required</span></label>
+      <input class="field__input" id={id('email')} name="email" type="email" autocomplete="email" required maxlength="160" aria-describedby={id('email-error')} />
+      <p class="field__error" id={id('email-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('company')}>Brand or company</label>
+      <input class="field__input" id={id('company')} name="company" type="text" autocomplete="organization" maxlength="120" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('website')}>Website or Instagram</label>
+      <input class="field__input" id={id('website')} name="website" type="text" autocomplete="url" maxlength="200" inputmode="url" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('country')}>Country <span class="field__req">required</span></label>
+      <input class="field__input" id={id('country')} name="country" type="text" autocomplete="country-name" required maxlength="80" aria-describedby={id('country-error')} />
+      <p class="field__error" id={id('country-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('product')}>Product <span class="field__req">required</span></label>
+      <select class="field__input" id={id('product')} name="product" required aria-describedby={id('product-error')}>
+        <option value="">Choose a product</option>
+        {quoteProducts.map((p) => <option value={p}>{p}</option>)}
+      </select>
+      <p class="field__error" id={id('product-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('quantity')}>Quantity per style <span class="field__req">required</span></label>
+      <input
+        class="field__input"
+        id={id('quantity')}
+        name="quantity"
+        type="number"
+        inputmode="numeric"
+        min="1"
+        max="1000000"
+        step="1"
+        required
+        aria-describedby={`${id('quantity-hint')} ${id('quantity-error')}`}
+      />
+      <p class="field__hint" id={id('quantity-hint')}>Our minimum is {terms.moq} {terms.moqUnit}.</p>
+      <p class="field__error" id={id('quantity-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('styles')}>Number of styles</label>
+      <input class="field__input" id={id('styles')} name="styles" type="number" inputmode="numeric" min="1" max="200" step="1" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('target')}>Target {terms.incoterm} price per piece</label>
+      <input class="field__input" id={id('target')} name="target" type="text" maxlength="40" placeholder="For example USD 4.00" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('timeline')}>When do you need the goods?</label>
+      <select class="field__input" id={id('timeline')} name="timeline">
+        {timelines.map((t) => <option value={t}>{t}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <fieldset class="field field--group">
+    <legend class="field__label">Do you have a tech pack?</legend>
+    <div class="field__options">
+      <label class="field__option"><input type="radio" name="techpack" value="Yes" /> Yes</label>
+      <label class="field__option"><input type="radio" name="techpack" value="No, I have reference photos" checked /> No, I have reference photos</label>
+      <label class="field__option"><input type="radio" name="techpack" value="I need help creating one" /> I need help creating one</label>
+    </div>
+  </fieldset>
+
+  <div class="field">
+    <label class="field__label" for={id('files')}>Link to your files</label>
+    <input class="field__input" id={id('files')} name="files" type="url" maxlength="300" inputmode="url" placeholder="Google Drive, Dropbox or WeTransfer link" aria-describedby={id('files-error')} />
+    <p class="field__error" id={id('files-error')} aria-live="polite"></p>
+  </div>
+
+  <div class="field">
+    <label class="field__label" for={id('message')}>Tell us about the product <span class="field__req">required</span></label>
+    <textarea class="field__input field__textarea" id={id('message')} name="message" required minlength="20" maxlength="4000" rows="6" aria-describedby={id('message-error')}></textarea>
+    <p class="field__error" id={id('message-error')} aria-live="polite"></p>
+  </div>
+
+  <div class="lead-form__trap" aria-hidden="true">
+    <label for={id('fax')}>Leave this field empty</label>
+    <input id={id('fax')} name="fax" type="text" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="field">
+    <label class="field__option">
+      <input type="checkbox" name="consent" value="yes" required aria-describedby={id('consent-error')} />
+      <span>I agree that SDF Clothing may use these details to reply to my request, as described in the <a href="/privacy/">privacy policy</a>.</span>
+    </label>
+    <p class="field__error" id={id('consent-error')} aria-live="polite"></p>
+  </div>
+
+  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} data-size="flexible"></div>}
+
+  <div class="lead-form__submit">
+    <button class="button button--primary" type="submit" data-submit>
+      <span class="lead-form__spinner" aria-hidden="true"></span>
+      <span data-submit-label>Send my request</span>
+    </button>
+    <p class="lead-form__note">We reply within {terms.quoteHours} hours, from an @{company.officialDomain} address.</p>
+  </div>
+
+  <p class="lead-form__status" role="status" aria-live="polite" data-status></p>
+</form>
+
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<script>
+  import '../scripts/lead-form';
+</script>

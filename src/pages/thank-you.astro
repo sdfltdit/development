@@ -1,0 +1,38 @@
+---
+import ProsePage from '../components/ProsePage.astro';
+import { company, terms } from '../data/company';
+---
+
+<ProsePage
+  path="/thank-you/"
+  crumbLabel="Thank you"
+  eyebrow="Request received"
+  heading="Thank you, your request has reached us"
+  lead={`A merchandiser will read it and reply within ${terms.quoteHours} hours, with a written quote, a confirmed visit date or a short question. We have also sent a confirmation to your email address.`}
+>
+  <h2>What happens next</h2>
+  <h3>If you asked for a quote</h3>
+  <ol>
+    <li>We review your product, quantity and target price.</li>
+    <li>You receive a written {terms.incoterm} quote with sample fee and lead time.</li>
+    <li>If it suits you, we send fabric options and a sample timeline.</li>
+  </ol>
+  <h3>If you asked to visit</h3>
+  <ol>
+    <li>We check availability for your preferred dates.</li>
+    <li>You receive a confirmed date, time and directions by email.</li>
+    <li>A merchandiser meets you at our office on the day.</li>
+  </ol>
+
+  <h2>How to recognise our reply</h2>
+  <p>
+    Our reply comes from an address ending in <strong>@{company.officialDomain}</strong>. We will never ask you to pay a personal account. If anything looks
+    unusual, check our <a href="/verify-us/">verify page</a> or <a href={company.contactPath}>contact us</a> through this website.
+  </p>
+
+  <h2>While you wait</h2>
+  <p>
+    Read how our <a href="/work-process/">production process</a> works, check our <a href="/pricing/">price index</a>, or see what a
+    <a href="/sample-service/">sample</a> involves.
+  </p>
+</ProsePage>

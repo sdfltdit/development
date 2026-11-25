@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from './PageHeader.astro';
+import { pageMeta } from '../data/pages';
+import { standardPage, type Crumb } from '../lib/schema';
+
+interface Props {
+  path: string;
+  crumbLabel: string;
+  eyebrow: string;
+  heading: string;
+  lead: string;
+}
+
+const { path, crumbLabel, eyebrow, heading, lead } = Astro.props;
+const meta = pageMeta(path);
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: crumbLabel, path },
+];
+const schema = standardPage({
+  path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={path} schema={schema} crumbs={crumbs} noindex={meta.noindex}>
+  <PageHeader eyebrow={eyebrow} title={heading} lead={lead} updated={meta.updated} />
+  <section class="section prose-page">
+    <div class="container prose">
+      <slot />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose-page {
+    padding-top: 0;
+  }
+</style>

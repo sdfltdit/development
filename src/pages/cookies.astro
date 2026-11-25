@@ -1,0 +1,55 @@
+---
+import ProsePage from '../components/ProsePage.astro';
+import { company } from '../data/company';
+---
+
+<ProsePage
+  path="/cookies/"
+  crumbLabel="Cookies"
+  eyebrow="Legal"
+  heading="Cookie policy"
+  lead={`The SDF Clothing cookie policy is short because ${company.officialDomain} uses no advertising or tracking cookies. Here is everything the site stores in your browser, and why.`}
+>
+  <h2>What the site stores</h2>
+  <div class="table-wrap" role="region" aria-label="Browser storage used by this site" tabindex="0">
+    <table class="table--stack">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Purpose</th>
+          <th scope="col">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">cf_clearance</th>
+          <td data-label="Type">Cookie (Cloudflare)</td>
+          <td data-label="Purpose">Set only if Cloudflare's security check runs, to confirm you passed it</td>
+          <td data-label="Duration">Up to 30 minutes, or as set by Cloudflare</td>
+        </tr>
+        <tr>
+          <th scope="row">Turnstile</th>
+          <td data-label="Type">Session storage and cookies (Cloudflare)</td>
+          <td data-label="Purpose">Set only on pages with the quote form, to tell people from bots</td>
+          <td data-label="Duration">Session</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Why there is no cookie banner</h2>
+  <p>
+    Everything listed above is strictly necessary for the site to work securely, or it remembers a choice you made yourself. Our analytics, Cloudflare Web
+    Analytics, uses no cookies. Because we use no optional cookies, there is nothing to consent to.
+  </p>
+
+  <h2>If this changes</h2>
+  <p>
+    If we ever add optional cookies, for example for advertising or detailed analytics, we will ask for your consent first and update this page. See our
+    <a href="/privacy/">privacy policy</a> for how we handle personal information.
+  </p>
+
+  <h2>Clearing storage</h2>
+  <p>You can clear cookies at any time in your browser settings. The site will keep working as normal.</p>
+</ProsePage>

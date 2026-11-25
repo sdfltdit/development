@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PriceTable from '../components/PriceTable.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { company, priceIndex, terms } from '../data/company';
+import { pageMeta } from '../data/pages';
+import { absolute, faqPage, ids, standardPage, type Crumb } from '../lib/schema';
+
+const meta = pageMeta('/pricing/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'How we work', path: '/work-process/' },
+  { name: 'Prices', path: '/pricing/' },
+];
+
+const drivers = [
+  { factor: 'Fabric', effect: 'Usually the largest cost. Weight (GSM), fibre, combed versus carded yarn and dye colour all change it.' },
+  { factor: 'Quantity', effect: `Fixed costs such as pattern grading, marker making and line setup are shared over the order, so ${terms.moq} pieces cost more each than 1,000.` },
+  { factor: 'Decoration', effect: 'Each print colour needs its own screen. Embroidery is priced by stitch count. Large or multi-placement artwork adds cost.' },
+  { factor: 'Construction', effect: 'Extra panels, pockets, zips, side splits or special seams add sewing time.' },
+  { factor: 'Trims and labels', effect: 'Woven labels, custom tags, zips and drawcords are priced to your spec.' },
+  { factor: 'Packing', effect: 'Individual poly bags are standard. Folded with tissue, boxed or barcoded packing costs more.' },
+];
+
+const faqs = [
+  {
+    q: 'Are these prices final?',
+    a: 'No, they are indicative and dated. Your price is fixed in writing on your quote and proforma invoice before you pay for sampling.',
+  },
+  {
+    q: 'What does FOB include?',
+    a: `FOB ${terms.port} includes making the goods, packing them in export cartons and delivering them cleared for export onto your nominated vessel. Freight, insurance, import duty and delivery are paid by you through your forwarder.`,
+  },
+  {
+    q: 'Why are hoodie prices not listed?',
+    a: 'Hoodie prices vary widely with fleece weight, zips, pockets and embroidery, so a single range would mislead you. Send your spec and you get a written price within the quote window.',
+  },
+  {
+    q: 'In which currencies can you quote?',
+    a: `We quote in ${terms.currencies.join(', ')}.`,
+  },
+  {
+    q: 'How often is this price index updated?',
+    a: 'We review it at least every three months and whenever fabric costs move noticeably. The date of the last check is shown under the table.',
+  },
+];
+
+const dataset = {
+  '@type': 'Dataset',
+  '@id': `${absolute('/pricing/')}#dataset`,
+  name: `${company.brandName} FOB clothing price index`,
+  description: `Indicative FOB ${terms.port} prices per piece for custom clothing made by ${company.brandName} in Dhaka, Bangladesh, at ${terms.moq} and ${priceIndex.bulkQty} pieces.`,
+  url: absolute('/pricing/'),
+  creator: { '@id': ids.organization },
+  publisher: { '@id': ids.organization },
+  dateModified: priceIndex.checkedAt,
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  spatialCoverage: { '@type': 'Place', name: 'Dhaka, Bangladesh' },
+  variableMeasured: [
+    { '@type': 'PropertyValue', name: `FOB price per piece at ${terms.moq} pieces`, unitText: priceIndex.currency },
+    { '@type': 'PropertyValue', name: `FOB price per piece at ${priceIndex.bulkQty} pieces`, unitText: priceIndex.currency },
+  ],
+};
+
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  extra: [dataset, faqPage(meta.path, faqs)],
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
+  <PageHeader
+    eyebrow="Price index"
+    title="SDF Clothing prices: what custom clothing costs"
+    lead={`These are SDF Clothing prices per piece, ${terms.incoterm} ${terms.port}, for standard products made in our Dhaka factory. They are indicative and dated, so you can check a budget before you ask for a quote. Your exact price is fixed in writing before you pay for a sample.`}
+    updated={meta.updated}
+  />
+
+  <section class="section" aria-labelledby="index-heading">
+    <div class="container">
+      <h2 id="index-heading" class="block-heading">FOB price index</h2>
+      <PriceTable />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="drivers-heading">
+    <div class="container">
+      <div class="section__head">
+        <h2 id="drivers-heading">What moves the price</h2>
+        <p class="section__lead">Six things decide your price per piece. Knowing them helps you brief us and compare quotes fairly.</p>
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="drivers-heading" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Factor</th>
+              <th scope="col">How it affects the price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              drivers.map((d) => (
+                <tr>
+                  <th scope="row">{d.factor}</th>
+                  <td>{d.effect}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="landed-heading">
+    <div class="container prose">
+      <h2 id="landed-heading">From factory price to landed cost</h2>
+      <p>The factory price is only part of what each piece costs you. To plan your margin, add:</p>
+      <ul>
+        <li><strong>Sample fee</strong>: {terms.sampleFeePolicy}</li>
+        <li><strong>Freight</strong> from {terms.port}, by sea or air</li>
+        <li><strong>Import duty and taxes</strong> in your country, based on the product code and fibre content</li>
+        <li><strong>Customs brokerage and delivery</strong> to your warehouse</li>
+      </ul>
+      <p>
+        Duty rates change, especially for the United States, so confirm the current rate with your customs broker before you place the order. Our
+        <a href="/clothing-manufacturer-bangladesh/">guide to manufacturing in Bangladesh</a> explains which markets currently offer reduced duty.
+      </p>
+      <h2>How to get an exact price</h2>
+      <p>
+        Send a reference photo or tech pack, fabric and weight, decoration, quantity per style and your target price through the
+        <a href="/get-a-quote/">quote form</a>. You get a written quote within {terms.quoteHours} hours. See how prices relate to our
+        <a href="/low-moq-clothing-manufacturers/">minimum order</a> and to <a href="/t-shirt-manufacturer/">T-shirt specifications</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <FaqList items={faqs} heading="Pricing questions" />
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

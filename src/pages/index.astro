@@ -1,0 +1,664 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PriceTable from '../components/PriceTable.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Infographic from '../components/Infographic.astro';
+import { capabilities, company, fill, paymentSummary, shipping, terms, yearsInBusiness } from '../data/company';
+import { pageMeta } from '../data/pages';
+import { entities, faqPage, founder, graph, offerCatalog, organization, service, webPage, website } from '../lib/schema';
+
+const meta = pageMeta('/');
+const products = (await getCollection('landing', (e) => e.data.kind === 'product')).sort((a, b) => a.data.navLabel.localeCompare(b.data.navLabel));
+const years = yearsInBusiness();
+
+const audiences = [
+  {
+    title: 'Startup fashion brands',
+    text: 'Brands placing a first order. Bulk is paid for only after you approve a sample.',
+    href: '/clothing-manufacturers-for-startups/',
+    cta: 'How a first order works',
+  },
+  {
+    title: 'Growing apparel brands',
+    text: 'Brands moving from print-on-demand or a small workshop to factory production, with their own fabric, fit and colour.',
+    href: '/t-shirt-manufacturer/',
+    cta: 'See T-shirt specifications',
+  },
+  {
+    title: 'Retail and merch programmes',
+    text: 'Programmes that need the same quality on every reorder, cartons packed to warehouse rules and an inspection report with each shipment.',
+    href: '/work-process/',
+    cta: 'See the production process',
+  },
+];
+
+const steps = [
+  { title: 'Send your tech pack', text: 'No tech pack yet? A photo or sketch works too.' },
+  { title: 'Fabric and lab dip', text: 'We send fabric swatches and dye a lab dip to match your Pantone colour.' },
+  { title: 'Sample development', text: `We make your pattern and a proto sample in ${terms.sampleDays} days once you confirm the fabric.` },
+  { title: 'Pre-production sample', text: 'Made in the real bulk fabric with your labels. You sign it off.' },
+  { title: 'Bulk production', text: `Takes ${terms.bulkDays} days after your sign-off.` },
+  { title: 'AQL inspection', text: 'You get the inspection report before anything ships.' },
+  { title: 'FOB shipment', text: `We hand the goods to your forwarder at ${terms.port}.` },
+];
+
+const glance: { label: string; value: string }[] = [
+  { label: 'Company', value: `${company.legalName}, founded in ${company.foundingYear}` },
+  { label: 'Location', value: `${company.address.street}, ${company.address.locality}, ${company.address.countryName}` },
+  { label: 'Factory type', value: 'Garments manufacturer and apparel manufacturer with our own production lines. Not a trading company.' },
+  { label: 'Services', value: 'Private label clothing manufacturing, low MOQ clothing manufacturing and full fashion manufacturing, from sample to shipment' },
+  ...(company.showRegistration ? [{ label: 'Registration', value: `RJSC ${company.registration.rjsc}` }] : []),
+  { label: 'Products', value: 'T-shirts, hoodies, sweatshirts, joggers, polos and other custom garments' },
+  { label: 'Fabrics', value: capabilities.fabrics },
+  { label: 'Made in-house', value: 'Every step, from pattern making to printing, embroidery and packing. No subcontractors.' },
+  { label: 'Minimum order', value: `${terms.moq} ${terms.moqUnit}` },
+  { label: 'Proto sample', value: `${terms.sampleDays} days` },
+  { label: 'Bulk production', value: `${terms.bulkDays} days after you approve the sample` },
+  { label: 'Quality control', value: `Checks during sewing and a final AQL ${terms.aql} inspection` },
+  { label: 'Shipping', value: `${terms.incoterm} ${terms.port}, to any country` },
+  { label: 'Payment', value: `${paymentSummary()}` },
+  { label: 'Payment methods', value: terms.paymentMethods.join(', ') },
+];
+
+const comparison = [
+  { label: 'Who makes your goods', us: 'The factory, on its own lines', agent: 'Factories the agent works with', market: 'Depends on the seller' },
+  { label: 'Minimum order', us: 'Set by the factory, in writing', agent: 'Set by the factory they use', market: 'Often low, mostly for stock styles' },
+  { label: 'Prices', us: 'Quoted by the factory', agent: 'Factory price plus the agent fee', market: 'Listed per item, mostly ready-made' },
+  { label: 'Samples', us: 'Made by the team that makes your bulk', agent: 'Made by the factory the agent picks', market: 'Stock samples. Custom samples vary' },
+  { label: 'Quality control', us: 'Done by the factory. You can send an inspector', agent: 'Done by the agent or the factory', market: 'Usually arranged by you' },
+  { label: 'Who you talk to', us: 'A merchandiser at the factory', agent: 'The agent, who passes messages on', market: 'The seller, on the platform' },
+];
+
+const chooseChecks = [
+  { title: 'Product fit', text: 'They already make your kind of garment on their own lines.' },
+  { title: 'Minimum order', text: 'The minimum per style, colour and size fits your launch, in writing.' },
+  { title: 'Real factory', text: 'A named company, a street address and a factory you can visit.' },
+  { title: 'Written terms', text: 'Price, sample fee, lead time and payment schedule on one quote.' },
+  { title: 'Sampling', text: 'A paid proto sample and a pre-production sample before bulk.' },
+  { title: 'Quality control', text: 'A stated inspection standard and a written report.' },
+];
+
+const notFor = [
+  'Orders below our minimum per style',
+  'Ready stock or blank wholesale',
+  'Print-on-demand or single pieces',
+];
+
+const faqs = [
+  {
+    q: 'What is a custom clothing manufacturer?',
+    a: "It's a factory that makes clothes to your design, with your fit, fabric and labels. It doesn't sell ready-made stock. SDF Clothing is a custom clothing manufacturer with its own factory in Dhaka.",
+  },
+  {
+    q: 'Are apparel manufacturers, garment manufacturers and clothing manufacturers the same?',
+    a: 'Yes, mostly. Americans tend to say apparel manufacturer. In South Asia people say garments manufacturer. Clothing manufacturer works everywhere. All three mean a factory that turns fabric into finished clothes.',
+  },
+  {
+    q: 'What types of custom clothing manufacturers are there?',
+    a: 'There are five common types. Cut-and-sew factories make clothes from fabric. Full-package makers also buy the fabric and trims for you. CMT factories sew fabric you send them. Trading companies pass your order to a factory. Print-on-demand services print on blank stock. SDF Clothing is a cut-and-sew factory that also offers full package.',
+  },
+  {
+    q: 'What does a fashion manufacturer do?',
+    a: 'A fashion manufacturer is the factory that produces a brand collection. The brand designs and sells the clothes, and the manufacturer makes them to the brand spec.',
+  },
+  {
+    q: 'Is SDF Clothing a garments factory or a buying house?',
+    a: 'A garments factory. Your order is made in our own factory and is not passed to another one. A buying house takes orders and places them with other factories.',
+  },
+  {
+    q: 'What does low MOQ clothing manufacturing mean?',
+    a: 'MOQ stands for minimum order quantity. Low MOQ clothing manufacturing means a factory accepts small runs, usually a few hundred pieces per style instead of thousands.',
+  },
+  {
+    q: 'What is private label clothing manufacturing?',
+    a: 'It means a factory makes clothes that are sold under your brand, not the factory brand. You own the design and the brand name.',
+  },
+];
+
+const schema = graph([
+  {
+    ...organization(true),
+    hasOfferCatalog: offerCatalog('Clothing manufacturing services', [
+      { name: 'Low MOQ clothing manufacturing', path: '/low-moq-clothing-manufacturers/' },
+      { name: 'Private label clothing manufacturing', path: '/private-label-clothing-manufacturer/' },
+      { name: 'T-shirt manufacturing', path: '/t-shirt-manufacturer/' },
+      { name: 'Hoodie and sweatshirt manufacturing', path: '/hoodie-manufacturer/' },
+      { name: 'Cut-and-sew garment manufacturing', path: '/cut-and-sew-service/' },
+      { name: 'Garment sample development', path: '/sample-service/' },
+    ]),
+  },
+  founder(),
+  website(),
+  webPage({
+    path: '/',
+    title: meta.title,
+    description: meta.description,
+    dateModified: meta.updated,
+    hasBreadcrumb: false,
+    reviewed: true,
+    mentions: [
+      { name: 'Clothing industry', sameAs: entities.clothingIndustry },
+      { name: 'Private label', sameAs: entities.privateLabel },
+      { name: 'Knitting', sameAs: entities.knitting },
+      { name: 'Textile industry in Bangladesh', sameAs: entities.bangladeshTextiles },
+      { name: 'Dhaka', sameAs: entities.dhaka },
+      { name: 'Bangladesh', sameAs: entities.bangladesh },
+      { name: 'Port of Chittagong', sameAs: entities.chittagongPort },
+      { name: 'Incoterms', sameAs: entities.incoterms },
+    ],
+  }),
+  service({
+    path: '/',
+    name: 'Custom clothing manufacturing',
+    description: meta.description,
+    serviceType: 'Custom clothing manufacturing',
+    audience: 'Fashion brands, apparel startups and private label retailers',
+  }),
+  faqPage('/', faqs),
+]);
+---
+
+<BaseLayout title={meta.title} description={meta.description} path="/" schema={schema}>
+  <section class="hero">
+    <div class="hero__inner container">
+      <div class="hero__copy">
+        <p class="eyebrow">Making clothes since {company.foundingYear}, shipping worldwide</p>
+        <h1 class="hero__title">Custom clothing manufacturer for growing brands</h1>
+        <p class="hero__lead">
+          SDF Clothing is a custom clothing manufacturer for fashion brands around the world. We make T-shirts, hoodies and other clothes in our own
+          garment factory in Dhaka, with low MOQ clothing manufacturing from {terms.moq}
+          {terms.moqUnit}. Starting prices are listed on this page.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="/get-a-quote/">Get a quote in {terms.quoteHours} hours</a>
+          <a class="button button--secondary" href="/pricing/">See our prices</a>
+        </div>
+        <p class="hero__alt">Prefer to see the factory first? <a href="/booking/">Book a visit to our garment factory in Dhaka</a>.</p>
+      </div>
+      <div class="hero__visual">
+        <Infographic name="hero" eager />
+      </div>
+    </div>
+  </section>
+
+  <section class="section glance" aria-labelledby="glance-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">At a glance</p>
+        <h2 id="glance-heading">SDF Clothing at a glance</h2>
+        <p class="section__lead">These are the things buyers usually ask a custom clothing manufacturer first.</p>
+        <p class="glance__links">
+          Want to know more? Read <a href="/about/">who runs the factory</a>, how we handle <a href="/certifications/">buyer audits</a>, or
+          <a href="/contact/">send us a message</a>.
+        </p>
+        <Infographic name="inhouse" />
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="glance-heading" tabindex="0">
+        <table class="glance__table">
+          <caption class="visually-hidden">Key facts about SDF Clothing</caption>
+          <tbody>
+            {
+              glance.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.value}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-heading">How custom clothing manufacturing works with us</h2>
+        <p class="section__lead">
+          This is how an order with a custom clothing manufacturer runs at our factory. You send your tech pack, we develop the sample, and then we make your
+          bulk. There are seven steps in all.
+        </p>
+      </div>
+      <div class="split split--media">
+        <Infographic name="process" />
+        <ol class="steps steps--stack">
+        {
+          steps.map((step) => (
+            <li class="steps__item">
+              <h3 class="steps__title">{step.title}</h3>
+              <p class="steps__text">{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+      </div>
+      <p class="section__more"><a href="/work-process/">Read the full production process and payment schedule</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="audience-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Who we work with</p>
+        <h2 id="audience-heading">An apparel manufacturer for fashion brands at every stage</h2>
+        <p class="section__lead">
+          We've made clothes for brands for {years} years. You deal with the factory direct, with no agent or buying house in between. One
+          merchandiser handles your order from quote to shipment.
+        </p>
+      </div>
+      <ul class="cards">
+        {
+          audiences.map((item) => (
+            <li class="card">
+              <h3 class="card__title">{item.title}</h3>
+              <p class="card__text">{item.text}</p>
+              <a class="card__link" href={item.href}>
+                {item.cta}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-label="Low MOQ and private label clothing manufacturing">
+    <div class="container split">
+      <article class="feature">
+        <p class="eyebrow">Small runs</p>
+        <h2>Low MOQ clothing manufacturing</h2>
+        <p class="section__lead">
+          Our minimum is {terms.moq}
+          {terms.moqUnit}. Small orders run on the same lines and get the same checks as big ones.
+        </p>
+        <ul class="feature__list">
+          <li>One style is one pattern in one fabric</li>
+          <li>We confirm your colour and size split in writing</li>
+        </ul>
+        <a class="card__link" href="/low-moq-clothing-manufacturers/">How low MOQ clothing manufacturing works</a>
+      </article>
+      <article class="feature">
+        <p class="eyebrow">Your brand</p>
+        <h2>Private label clothing manufacturing</h2>
+        <p class="section__lead">Your design, your fit and your fabric, finished with your own labels, tags and packaging. Our name never goes on the clothes.</p>
+        <ul class="feature__list">
+          <li>Woven or printed neck labels, plus care labels for your market</li>
+          <li>Swing tags, poly bags and barcode stickers to your spec</li>
+          <li>We never share your files, and we'll sign an NDA first if you like</li>
+        </ul>
+        <a class="card__link" href="/private-label-clothing-manufacturer/">What private label clothing manufacturing includes</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="products-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What we make</p>
+        <h2 id="products-heading">Custom garments we manufacture</h2>
+        <p class="section__lead">
+          As a custom clothing manufacturer, we cut and sew every piece to your measurements, in knit or woven fabric. Each product page lists fabrics, weights, fits and print options, so you
+          can write a clear brief.
+        </p>
+      </div>
+      <ul class="cards">
+        {
+          products.map((p) => (
+            <li class="card">
+              <h3 class="card__title">{p.data.navLabel}</h3>
+              <p class="card__text">{fill(p.data.cardSummary)}</p>
+              <a class="card__link" href={`/${p.id}/`}>
+                {p.data.navLabel} specifications
+              </a>
+            </li>
+          ))
+        }
+        <li class="card card--muted">
+          <h3 class="card__title">Making something else?</h3>
+          <p class="card__text">Polos, joggers, sweatshirts, kids' styles and more. Tell us what you have in mind and we'll confirm it on your quote.</p>
+          <a class="card__link" href="/products/">All products</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="fashion-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">For designers and emerging labels</p>
+        <h2 id="fashion-heading">Fashion manufacturing, from design to delivery</h2>
+        <p class="section__lead">
+          Here is who does what when you work with us.
+        </p>
+        <p>
+          New to working with a factory? Our <a href="/clothing-manufacturers-for-startups/">fashion manufacturing guide for startup brands</a> walks
+          through a first order step by step.
+        </p>
+      </div>
+      <div class="roles">
+        <div class="roles__col">
+          <h3 class="block-heading">What stays with you</h3>
+          <ul class="checklist">
+            <li>Design, fit and colour decisions</li>
+            <li>Your brand name, labels and packaging artwork</li>
+            <li>Ownership of every design and pattern</li>
+            <li>Sales, pricing and marketing</li>
+          </ul>
+        </div>
+        <div class="roles__col">
+          <h3 class="block-heading">What we handle</h3>
+          <ul class="checklist">
+            <li>Patterns, grading and the written spec</li>
+            <li>Fabric and trim sourcing</li>
+            <li>Production, from cutting to packing</li>
+            <li>Export documents for your forwarder</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="quality-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Quality control</p>
+        <h2 id="quality-heading">Bulk that matches the sample you approved</h2>
+        <p class="section__lead">
+          A common problem with any garments manufacturer is bulk that doesn't match the sample. These are the checks we run on every order to prevent
+          that.
+        </p>
+      </div>
+      <Infographic name="quality" />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="compare-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Compare</p>
+        <h2 id="compare-heading">Factory direct, trading company or marketplace?</h2>
+        <p class="section__lead">
+          Most brands buy custom clothing in one of three ways. Each one suits a different kind of brand. SDF Clothing is a factory direct supplier.
+        </p>
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="compare-heading" tabindex="0">
+        <table class="table--stack">
+          <caption class="visually-hidden">Factory direct, trading company and online marketplace compared</caption>
+          <thead>
+            <tr>
+              <th scope="col">What to check</th>
+              <th scope="col">Factory direct</th>
+              <th scope="col">Trading company or agent</th>
+              <th scope="col">Online marketplace</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              comparison.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td data-label="Factory direct">{row.us}</td>
+                  <td data-label="Trading company or agent">{row.agent}</td>
+                  <td data-label="Online marketplace">{row.market}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="choose-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Buyer checklist</p>
+        <h2 id="choose-heading">How to choose between apparel manufacturers</h2>
+        <p class="section__lead">
+          Whoever is on your list, us included, check these six things before you pay for a sample. They help you tell a real factory from a reseller.
+        </p>
+        <p>
+          Read the full <a href="/how-to-find-clothing-manufacturer/">guide to finding a clothing manufacturer</a>, including how
+          <a href="/how-to-find-clothing-manufacturer/#apparel-manufacturers-by-country">apparel manufacturers compare by country</a>.
+        </p>
+      </div>
+      <ol class="choose">
+        {
+          chooseChecks.map((check) => (
+            <li class="choose__item">
+              <strong>{check.title}:</strong> {check.text}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="price-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Prices</p>
+        <h2 id="price-heading">Clothing manufacturing prices per piece</h2>
+        <p class="section__lead">These are starting prices per piece. Use them to check your budget before you ask for a quote.</p>
+      </div>
+      <PriceTable />
+      <p class="section__more"><a href="/pricing/">What moves the price, and how to get an exact quote</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="bd-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Made in Bangladesh, sold worldwide</p>
+        <h2 id="bd-heading">Why global brands use a garments manufacturer in Bangladesh</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Bangladesh is one of the biggest clothing exporters in the world. Its ready-made garments (RMG) industry is best known for cotton knitwear like
+          T-shirts, hoodies and sweatshirts. Garment exports hit US$38.70 billion in the July 2025 to June 2026 fiscal year. That figure comes from the Export
+          Promotion Bureau, as <a href="https://www.tbsnews.net/node/1482556" rel="noopener">reported by The Business Standard in July 2026</a>.
+        </p>
+        <p>
+          For a brand, that means fabric mills close by, large sewing teams and low prices on basics.
+        </p>
+        <p>
+          Our <a href="/clothing-manufacturer-bangladesh/">guide to choosing a garments manufacturer in Bangladesh</a> compares it with China, Vietnam and India. It also
+          covers duty and the trade changes coming up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="markets-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Where we ship</p>
+        <h2 id="markets-heading">Custom clothing shipped worldwide</h2>
+        <p class="section__lead">
+          We ship to any country. Labels are made to the rules of the market you sell in. Import duty depends on your country and product, so check the current rate with your customs broker.
+        </p>
+      </div>
+      <div class="split split--media">
+        <Infographic name="shipping" />
+        <ul class="cards cards--stack">
+        {
+          shipping.regions.map((m) => (
+            <li class="card">
+              <h3 class="card__title">{m.name}</h3>
+              <p class="card__text">{m.note}</p>
+            </li>
+          ))
+        }
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="trust-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Check us first</p>
+        <h2 id="trust-heading">Verify us before you pay anything</h2>
+        <p class="section__lead">
+          Fake factory websites copy real ones. Here are our official details.
+        </p>
+        <p><a class="button button--secondary" href="/verify-us/">How to verify SDF Clothing</a></p>
+      </div>
+      <ul class="checklist">
+        <li>Our only website is <strong>{company.officialDomain}</strong></li>
+        <li>We email only from <strong>@{company.officialDomain}</strong></li>
+        {company.showRegistration && <li>Registered company, RJSC {company.registration.rjsc}</li>}
+        <li><a href="/booking/">Factory visits in Dhaka</a> by appointment</li>
+        <li>Payment only to the company bank account on our proforma invoice</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="notfor-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Limits</p>
+        <h2 id="notfor-heading">When we are not the right factory for you</h2>
+        <p class="section__lead">If your project is one of these, we can't take it on. Saying so early saves us both time.</p>
+      </div>
+      <ul class="checklist checklist--no">
+        {notFor.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <FaqList items={faqs} heading="Common questions from brands" />
+    </div>
+  </section>
+
+  <section class="section maintained" aria-labelledby="maintained-heading">
+    <div class="container prose">
+      <h2 id="maintained-heading" class="maintained__heading">About this page</h2>
+      <p>
+        Our merchandising team at {company.legalName} in {company.address.locality} wrote this page.
+        <a href="/about/">{company.founder.name}</a>, {company.founder.jobTitle}, reviewed it. Prices, terms and capabilities come from our own records.
+        Industry figures name their source. If anything here differs from your
+        written quote, the quote wins. Our <a href="/editorial-policy/">editorial policy</a> explains how we write and update our pages.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: var(--space-7) var(--space-8);
+    border-bottom: 1px solid var(--color-line);
+    background: var(--color-bg);
+  }
+
+  .hero__inner {
+    display: grid;
+    gap: var(--space-7);
+  }
+
+  .hero__copy {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .hero__title {
+    max-width: 18ch;
+  }
+
+  .hero__lead {
+    max-width: 42rem;
+    font-size: var(--text-lg);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .hero__alt {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+
+  .glance__links {
+    color: var(--color-muted);
+  }
+
+  .glance .section__head {
+    align-content: start;
+  }
+
+  .glance__table th {
+    width: 38%;
+  }
+
+  .choose {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .choose__item::marker {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .maintained {
+    padding-top: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+  }
+
+  .maintained__heading {
+    font-size: var(--text-lg);
+  }
+
+  .roles {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 48rem) {
+    .roles {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .feature {
+    display: grid;
+    align-content: start;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .feature__list {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .feature__list li::marker {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 64rem) {
+    .hero__inner {
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+    }
+  }
+</style>

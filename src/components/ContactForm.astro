@@ -1,0 +1,71 @@
+---
+import { company, contactTopics } from '../data/company';
+
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
+const id = (name: string) => `contact-${name}`;
+---
+
+<form class="lead-form" action="/api/contact" method="post" novalidate data-lead-form data-contact={company.contactPath}>
+  <div class="lead-form__grid">
+    <div class="field">
+      <label class="field__label" for={id('name')}>Your name <span class="field__req">required</span></label>
+      <input class="field__input" id={id('name')} name="name" type="text" autocomplete="name" required minlength="2" maxlength="100" aria-describedby={id('name-error')} />
+      <p class="field__error" id={id('name-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('email')}>Your email <span class="field__req">required</span></label>
+      <input class="field__input" id={id('email')} name="email" type="email" autocomplete="email" required maxlength="160" aria-describedby={id('email-error')} />
+      <p class="field__error" id={id('email-error')} aria-live="polite"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('company')}>Brand or company</label>
+      <input class="field__input" id={id('company')} name="company" type="text" autocomplete="organization" maxlength="120" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for={id('topic')}>What is it about? <span class="field__req">required</span></label>
+      <select class="field__input" id={id('topic')} name="topic" required>
+        {contactTopics.map((t) => <option value={t}>{t}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="field__label" for={id('message')}>Your message <span class="field__req">required</span></label>
+    <textarea class="field__input field__textarea" id={id('message')} name="message" required minlength="20" maxlength="4000" rows="6" aria-describedby={id('message-error')}></textarea>
+    <p class="field__error" id={id('message-error')} aria-live="polite"></p>
+  </div>
+
+  <div class="lead-form__trap" aria-hidden="true">
+    <label for={id('fax')}>Leave this field empty</label>
+    <input id={id('fax')} name="fax" type="text" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="field">
+    <label class="field__option">
+      <input type="checkbox" name="consent" value="yes" required aria-describedby={id('consent-error')} />
+      <span>I agree that SDF Clothing may use these details to reply to my message, as described in the <a href="/privacy/">privacy policy</a>.</span>
+    </label>
+    <p class="field__error" id={id('consent-error')} aria-live="polite"></p>
+  </div>
+
+  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} data-size="flexible"></div>}
+
+  <div class="lead-form__submit">
+    <button class="button button--primary" type="submit" data-submit>
+      <span class="lead-form__spinner" aria-hidden="true"></span>
+      <span data-submit-label>Send message</span>
+    </button>
+    <p class="lead-form__note">We reply from an @{company.officialDomain} address.</p>
+  </div>
+
+  <p class="lead-form__status" role="status" aria-live="polite" data-status></p>
+</form>
+
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<script>
+  import '../scripts/lead-form';
+</script>
