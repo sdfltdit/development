@@ -3,9 +3,11 @@ import { priceIndex, terms } from '../data/company';
 
 interface Props {
   caption?: string;
+  only?: string[];
 }
 
-const { caption = `Starting ${terms.incoterm} prices per piece in ${priceIndex.currency}` } = Astro.props;
+const { caption = `Starting ${terms.incoterm} prices per piece in ${priceIndex.currency}`, only } = Astro.props;
+const rows = only ? priceIndex.rows.filter((row) => only.includes(row.product)) : priceIndex.rows;
 ---
 
 <div class="price-table">
@@ -23,7 +25,7 @@ const { caption = `Starting ${terms.incoterm} prices per piece in ${priceIndex.c
       </thead>
       <tbody>
         {
-          priceIndex.rows.map((row) => (
+          rows.map((row) => (
             <tr>
               <th scope="row">{row.product}</th>
               <td data-label="Fabric">{row.fabric}</td>

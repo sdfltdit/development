@@ -82,7 +82,7 @@ export const terms = {
 export const capabilities = {
   inHouse: ['Pattern making and grading', 'Cutting', 'Sewing', 'Screen printing', 'DTF printing', 'Sublimation printing', 'Embroidery', 'Finishing and packing', 'Quality inspection'],
   fabrics: 'All fabric types, knit and woven, from cotton jersey, fleece and French terry to polyester, blends and recycled fabrics',
-  tshirtGsm: '140–220',
+  tshirtGsm: '140–260',
   fleeceGsm: '240–420',
 } as const;
 
@@ -174,6 +174,9 @@ export const tokens: Record<string, string> = {
   replyHours: String(terms.replyHours),
   tshirtGsm: capabilities.tshirtGsm,
   fleeceGsm: capabilities.fleeceGsm,
+  teeFrom: `$${priceIndex.rows[0].fobMoq}`,
+  teeBulk: `$${priceIndex.rows[0].fobBulk}`,
+  bulkQty: priceIndex.bulkQty,
   city: company.address.locality,
 };
 

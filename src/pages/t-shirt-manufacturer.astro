@@ -1,0 +1,373 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Infographic from '../components/Infographic.astro';
+import PriceTable from '../components/PriceTable.astro';
+import FaqList from '../components/FaqList.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { company, fill, terms } from '../data/company';
+import { linkCards } from '../lib/links';
+import { breadcrumbList, faqPage, founder, graph, organization, service, webPage, website, type Crumb } from '../lib/schema';
+
+const entry = await getEntry('landing', 't-shirt-manufacturer');
+if (!entry) throw new Error('Missing landing entry: t-shirt-manufacturer');
+const data = entry.data;
+const path = '/t-shirt-manufacturer/';
+
+const title = fill(data.title);
+const description = fill(data.description);
+const h1 = fill(data.h1);
+const lead = fill(data.answer);
+const specs = data.specs.map((row) => ({ label: fill(row.label), value: fill(row.value) }));
+const faqs = data.faq.map((item) => ({ q: fill(item.q), a: fill(item.a) }));
+const related = await linkCards(data.related);
+const published = data.published.toISOString().slice(0, 10);
+const updated = data.updated.toISOString().slice(0, 10);
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Products', path: '/products/' },
+  { name: data.navLabel, path },
+];
+
+const styles = [
+  {
+    title: 'Crew neck T-shirts',
+    text: 'The everyday basic, with a 1×1 rib collar, shoulder tape and a double-needle hem. Most brands start at 160–200 GSM.',
+  },
+  {
+    title: 'Oversized and boxy T-shirts',
+    text: 'Dropped shoulders, a wider body and a shorter length, cut from your size chart. Usually 220–260 GSM so the shape holds.',
+  },
+  {
+    title: 'Long sleeve T-shirts',
+    text: 'Rib cuffs or a clean hem, plain or with sleeve prints. A good way to carry a summer design into colder months.',
+  },
+  {
+    title: 'Polo shirts',
+    text: 'Piqué or jersey polos with a knitted or self-fabric collar, a button placket and an embroidered logo.',
+    href: '#polo-heading',
+    cta: 'Polo shirt manufacturer details',
+  },
+  {
+    title: "Kids' T-shirts",
+    text: "Sized by age, in soft cotton jersey, with care labels made for children's wear in your market.",
+  },
+  {
+    title: 'Tank tops and V-necks',
+    text: 'Classic or racer-back tanks and V-neck tees, in cotton jersey, slub or any fabric you choose.',
+  },
+];
+
+const fabrics = [
+  { choice: 'Combed cotton', means: 'Short fibres are combed out, so the yarn is smoother and softer.', use: 'Retail tees and sharp prints' },
+  { choice: 'Ring-spun or open-end yarn', means: 'Ring-spun yarn is finer and stronger. Open-end yarn costs less and feels rougher.', use: 'Ring-spun for brands, open-end for promo tees' },
+  { choice: 'Cotton-poly blend (CVC)', means: 'Cotton-rich blends shrink less and hold their colour after washing.', use: 'Uniforms, workwear and merch' },
+  { choice: 'Polyester and performance', means: 'Light, quick-drying fabric that takes sublimation print.', use: 'Sportswear and running tees' },
+  { choice: 'Organic and recycled', means: 'Certified organic cotton or recycled fibre, at a higher fabric cost.', use: 'Sustainable product lines' },
+  { choice: '1×1 or 2×2 rib collar', means: 'A 1×1 rib is fine and flat. A 2×2 rib is chunkier and stretches more.', use: '1×1 for classic tees, 2×2 for heavyweight T-shirts' },
+];
+
+const methods = [
+  { method: 'Screen print', best: 'Bold designs with a few spot colours and exact Pantone matches', fabric: 'Cotton and cotton blends', note: 'Lowest price per piece in bulk. Each colour needs its own screen.' },
+  { method: 'DTF', best: 'Full-colour artwork, gradients and fine detail', fabric: 'Cotton, polyester and blends', note: 'No screens, so colour count does not change the price much.' },
+  { method: 'Sublimation', best: 'All-over prints and photo artwork', fabric: 'White or light polyester', note: 'The ink becomes part of the fabric. It does not work on cotton.' },
+  { method: 'Embroidery', best: 'Small logos and polo shirts', fabric: 'Most fabrics', note: 'Priced by stitch count, so smaller logos cost less.' },
+];
+
+const steps = [
+  { title: 'Send your design', text: `A tech pack, or a photo with your size chart. A written quote follows within ${terms.quoteHours} hours.` },
+  { title: 'Fabric and colour', text: 'Swatches in the weights you are weighing up, and a lab dip dyed to your colour.' },
+  { title: 'Proto sample and strike-off', text: `A fit sample and a test print, ready in ${terms.sampleDays} days.` },
+  { title: 'Wash test', text: 'We wash the sample and the bulk fabric to check shrinkage, twist and the print.' },
+  { title: 'Pre-production sample', text: 'Made on the production line in bulk fabric, with your labels.' },
+  { title: 'Bulk and inspection', text: `${terms.bulkDays} days of production, then a final AQL ${terms.aql} inspection.` },
+  { title: 'Packing and shipment', text: `Folded, bagged and packed to your carton rules, then shipped ${terms.incoterm} ${terms.port}.` },
+];
+
+const teeRows = ['Basic T-shirt', 'Heavyweight or oversized T-shirt', 'Long sleeve T-shirt', "Kids' T-shirt", 'Tank top', 'Polo shirt'];
+
+const schema = graph([
+  organization(),
+  founder(),
+  website(),
+  webPage({ path, title, description, datePublished: published, dateModified: updated, hasBreadcrumb: true, reviewed: true }),
+  breadcrumbList(crumbs),
+  service({ path, name: h1, description, serviceType: data.serviceType, audience: 'Fashion brands, merch programmes and private label retailers' }),
+  faqPage(path, faqs),
+]);
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema} crumbs={crumbs}>
+  <section class="hero">
+    <div class="hero__inner container">
+      <div class="hero__copy">
+        <p class="eyebrow">{data.eyebrow}</p>
+        <h1 class="hero__title">{h1}</h1>
+        <p class="hero__lead">{lead}</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="/get-a-quote/">Get a T-shirt quote</a>
+          <a class="button button--secondary" href="#price-heading">See T-shirt prices</a>
+        </div>
+        <p class="hero__alt">Want to see the production floor? <a href="/booking/">Book a factory visit in Dhaka</a>.</p>
+      </div>
+      <div class="hero__visual">
+        <Infographic name="tshirt" eager />
+      </div>
+    </div>
+  </section>
+
+  <section class="section glance" aria-labelledby="glance-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">At a glance</p>
+        <h2 id="glance-heading">T-shirt manufacturing at a glance</h2>
+        <p class="section__lead">The facts buyers ask a T-shirt manufacturer about first, from weight and fit to printing and price.</p>
+        <Infographic name="gsm" />
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="glance-heading" tabindex="0">
+        <table class="glance__table">
+          <caption class="visually-hidden">{fill(data.specsCaption ?? 'T-shirt facts')}</caption>
+          <tbody>
+            {
+              specs.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.value}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="styles-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What we make</p>
+        <h2 id="styles-heading">Styles we make as a custom T-shirt manufacturer</h2>
+        <p class="section__lead">
+          We cut every style from your own pattern or size chart. These are the shapes brands ask for most.
+        </p>
+      </div>
+      <ul class="cards">
+        {
+          styles.map((item) => (
+            <li class="card">
+              <h3 class="card__title">{item.title}</h3>
+              <p class="card__text">{item.text}</p>
+              {item.href && (
+                <a class="card__link" href={item.href}>
+                  {item.cta}
+                </a>
+              )}
+            </li>
+          ))
+        }
+        <li class="card card--muted">
+          <h3 class="card__title">Crewneck sweatshirts?</h3>
+          <p class="card__text">Fleece sweatshirts and hoodies have their own page, with weights, fits and prices.</p>
+          <a class="card__link" href="/hoodie-manufacturer/">Hoodies and sweatshirts</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="fabric-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Fabric</p>
+        <h2 id="fabric-heading">How to choose T-shirt fabric</h2>
+        <p class="section__lead">
+          Fabric sets most of the price and most of the feel. Weight is only one part. Ask any T-shirt manufacturer about the yarn, the blend and the collar
+          rib as well.
+        </p>
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="fabric-heading" tabindex="0">
+        <table class="table--stack">
+          <caption class="visually-hidden">T-shirt fabric choices compared</caption>
+          <thead>
+            <tr>
+              <th scope="col">Choice</th>
+              <th scope="col">What it means</th>
+              <th scope="col">Good for</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              fabrics.map((row) => (
+                <tr>
+                  <th scope="row">{row.choice}</th>
+                  <td data-label="What it means">{row.means}</td>
+                  <td data-label="Good for">{row.use}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="polo-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Polo shirts</p>
+        <h2 id="polo-heading">Polo shirt manufacturer for brands and teams</h2>
+        <p class="section__lead">
+          A polo shirt has more parts than a T-shirt, so small details decide how it looks. As a polo shirt manufacturer, we confirm these choices with you
+          before sampling.
+        </p>
+        <p>The minimum, sample time and bulk time are the same as for T-shirts.</p>
+      </div>
+      <ul class="checklist">
+        <li><strong>Fabric:</strong> cotton piqué, cotton-poly piqué, jersey or interlock</li>
+        <li><strong>Collar:</strong> flat-knit rib or self-fabric, with optional tipping stripes</li>
+        <li><strong>Placket:</strong> two or three buttons, matched to the body colour or branded with your logo</li>
+        <li><strong>Sleeves and hem:</strong> rib cuffs or hemmed sleeves, side vents and a straight or dropped back hem</li>
+        <li><strong>Branding:</strong> an embroidered chest logo, a printed back and your own neck label</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="print-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Printing</p>
+        <h2 id="print-heading">T-shirt printing and branding</h2>
+        <p class="section__lead">
+          All four methods run in our own factory, so print and sewing are checked together. The right one depends on your design, fabric and quantity.
+        </p>
+      </div>
+      <div class="table-wrap" role="region" aria-labelledby="print-heading" tabindex="0">
+        <table class="table--stack">
+          <caption class="visually-hidden">T-shirt printing methods compared</caption>
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">Best for</th>
+              <th scope="col">Fabric</th>
+              <th scope="col">Good to know</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              methods.map((row) => (
+                <tr>
+                  <th scope="row">{row.method}</th>
+                  <td data-label="Best for">{row.best}</td>
+                  <td data-label="Fabric">{row.fabric}</td>
+                  <td data-label="Good to know">{row.note}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="section__more">
+        Your branding goes on too. See <a href="/private-label-clothing-manufacturer/">what private label T-shirts include</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="price-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Prices</p>
+        <h2 id="price-heading">T-shirt prices per piece</h2>
+        <p class="section__lead">These are starting prices for each T-shirt style at our minimum and at a larger run. Use them to set your budget.</p>
+      </div>
+      <PriceTable only={teeRows} caption="Starting FOB T-shirt and polo shirt prices per piece in USD" />
+      <p class="section__more"><a href="/pricing/">What moves the price, and how to get an exact quote</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-heading">How a T-shirt order works</h2>
+        <p class="section__lead">
+          Seven steps from your design to a packed carton. The wash test is the step that stops most T-shirt problems before they reach your customers.
+        </p>
+      </div>
+      <ol class="steps">
+        {
+          steps.map((step) => (
+            <li class="steps__item">
+              <h3 class="steps__title">{step.title}</h3>
+              <p class="steps__text">{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="quality-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">Quality</p>
+        <h2 id="quality-heading">T-shirt quality checks</h2>
+        <p class="section__lead">
+          Most T-shirt complaints come from four things: shrinkage, twisted side seams, wavy collars and cracked prints. A good T-shirt manufacturer tests for
+          each one before bulk, and so do we.
+        </p>
+      </div>
+      <ul class="checklist">
+        <li><strong>Shrinkage:</strong> tested on the bulk fabric before cutting, with the limit agreed in writing</li>
+        <li><strong>Twist:</strong> side seams checked after washing, so they stay at the side</li>
+        <li><strong>Collar:</strong> stretch and recovery checked, so the neck does not go wavy</li>
+        <li><strong>Print:</strong> washed and checked for cracking and fading against the approved strike-off</li>
+        <li><strong>Size:</strong> every size measured against your chart and the agreed tolerance</li>
+        <li><strong>Final check:</strong> AQL {terms.aql} inspection before anything ships</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="first-heading">
+    <div class="container split">
+      <div class="section__head">
+        <p class="eyebrow">First order</p>
+        <h2 id="first-heading">Working with a T-shirt manufacturer for the first time</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Many brands start with one or two colours in their core sizes, then reorder the colours that sell. The pattern and the approved sample stay on
+          file, so a reorder skips the proto stage.
+        </p>
+        <p>
+          Not sure about quantities? Read how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or see the
+          <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <FaqList items={faqs} heading="T-shirt manufacturing questions" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <RelatedLinks links={related} heading="Keep reading" />
+    </div>
+  </section>
+
+  <section class="section maintained" aria-labelledby="maintained-heading">
+    <div class="container prose">
+      <h2 id="maintained-heading" class="maintained__heading">About this page</h2>
+      <p>
+        Our merchandising team at {company.legalName} wrote this page.
+        <a href="/about/">{company.founder.name}</a>, {company.founder.jobTitle}, reviewed it. Prices, terms and capabilities come from our own records. If
+        anything here differs from your written quote, the quote wins.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

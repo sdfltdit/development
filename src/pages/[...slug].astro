@@ -11,7 +11,9 @@ import { linkCards } from '../lib/links';
 import { article, breadcrumbList, faqPage, founder, graph, organization, service, webPage, website, type Crumb } from '../lib/schema';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('landing');
+  /** Landing entries with their own dedicated page in src/pages. */
+  const dedicated = new Set(['t-shirt-manufacturer']);
+  const entries = (await getCollection('landing')).filter((entry) => !dedicated.has(entry.id));
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 

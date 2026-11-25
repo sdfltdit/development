@@ -6,7 +6,7 @@
 import { capabilities, shipping as shippingData, terms } from '../data/company';
 
 export type Theme = 'dark';
-export type InfographicName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse';
+export type InfographicName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse' | 'tshirt' | 'gsm';
 
 interface Palette {
   bg1: string;
@@ -299,7 +299,65 @@ function inhouse(p: Palette): string {
   return frame(720, inhouseHeight(), 'Production steps done in-house at SDF Clothing', capabilities.inHouse.join(', '), p, body);
 }
 
-const builders: Record<InfographicName, (p: Palette) => string> = { hero, process, quality, shipping, inhouse };
+const TSHIRT_CALLOUTS: { label: string; tx: number; ty: number; px: number; py: number; side: 'left' | 'right' }[] = [
+  { label: 'Neck label', tx: 205, ty: 96, px: 300, py: 110, side: 'left' },
+  { label: 'Shoulder tape', tx: 205, ty: 160, px: 244, py: 122, side: 'left' },
+  { label: 'Double-needle hem', tx: 205, ty: 404, px: 234, py: 400, side: 'left' },
+  { label: '1×1 rib collar', tx: 480, ty: 96, px: 360, py: 108, side: 'right' },
+  { label: 'Print area', tx: 480, ty: 220, px: 362, py: 215, side: 'right' },
+  { label: 'Side seam', tx: 480, ty: 330, px: 408, py: 330, side: 'right' },
+];
+
+function tshirt(p: Palette): string {
+  const shirt = 'M272 100 Q320 132 368 100 L420 118 L470 180 L442 212 L408 188 L408 410 L232 410 L232 188 L198 212 L170 180 L220 118 Z';
+  const callouts = TSHIRT_CALLOUTS.map((c) =>
+    [
+      `<line x1="${c.side === 'left' ? c.tx + 8 : c.tx - 8}" y1="${c.ty - 6}" x2="${c.px}" y2="${c.py}" stroke="${p.muted}" stroke-width="1.5"/>`,
+      `<circle cx="${c.px}" cy="${c.py}" r="5" fill="${p.accent}"/>`,
+      text(c.tx, c.ty, c.label, 18, p.text, 600, c.side === 'left' ? 'end' : 'start'),
+    ].join(''),
+  ).join('');
+  const body = [
+    text(30, 48, 'Parts of a custom T-shirt', 26, p.text, 700),
+    `<path d="${shirt}" fill="${p.card}" stroke="${p.garment}" stroke-width="3" stroke-linejoin="round"/>`,
+    `<path d="M272 100 Q320 132 368 100" fill="none" stroke="${p.accent}" stroke-width="8" stroke-linecap="round"/>`,
+    `<rect x="300" y="108" width="40" height="14" rx="2" fill="${p.garment}"/>`,
+    `<rect x="280" y="168" width="82" height="96" rx="4" fill="none" stroke="${p.accent}" stroke-width="2" stroke-dasharray="7 6"/>`,
+    `<line x1="234" y1="394" x2="406" y2="394" stroke="${p.muted}" stroke-width="1.5" stroke-dasharray="5 5"/>`,
+    `<line x1="234" y1="400" x2="406" y2="400" stroke="${p.muted}" stroke-width="1.5" stroke-dasharray="5 5"/>`,
+    `<line x1="244" y1="122" x2="396" y2="122" stroke="${p.muted}" stroke-width="1.5" stroke-dasharray="3 5"/>`,
+    callouts,
+  ].join('');
+  return frame(640, 470, 'Parts of a custom T-shirt', `Labelled T-shirt showing ${TSHIRT_CALLOUTS.map((c) => c.label.toLowerCase()).join(', ')}.`, p, body);
+}
+
+const GSM_BANDS = [
+  { name: 'Lightweight', range: '140–160 GSM', use: ['Summer tees,', 'layering'] },
+  { name: 'Midweight', range: '160–200 GSM', use: ['Everyday', 'basics, merch'] },
+  { name: 'Heavyweight', range: '200–240 GSM', use: ['Structured,', 'premium feel'] },
+  { name: 'Extra heavy', range: '240–260 GSM', use: ['Oversized,', 'streetwear'] },
+];
+
+function gsm(p: Palette): string {
+  const colW = 155;
+  const gap = 12;
+  const base = 250;
+  const cols = GSM_BANDS.map((band, i) => {
+    const x = 30 + i * (colW + gap);
+    const h = 50 + i * 34;
+    const fill = i === GSM_BANDS.length - 1 ? p.accent : i === 2 ? p.accentDeep : i === 1 ? p.slate : p.line;
+    return [
+      `<rect x="${x}" y="${base - h}" width="${colW}" height="${h}" rx="10" fill="${fill}"/>`,
+      text(x, base + 34, band.name, 19, p.text, 700),
+      text(x, base + 60, band.range, 17, p.accent === fill ? p.text : p.muted, 600),
+      ...band.use.map((line, li) => text(x, base + 88 + li * 22, line, 16, p.muted, 400)),
+    ].join('');
+  }).join('');
+  const body = [text(30, 48, 'T-shirt fabric weight guide', 26, p.text, 700), text(30, 78, 'Heavier fabric feels thicker and holds its shape', 17, p.muted, 400), cols].join('');
+  return frame(690, 390, 'T-shirt fabric weight guide in GSM', GSM_BANDS.map((b) => `${b.name} ${b.range} for ${b.use.join(' ').replace(',', '')}`).join('. '), p, body);
+}
+
+const builders: Record<InfographicName, (p: Palette) => string> = { hero, process, quality, shipping, inhouse, tshirt, gsm };
 
 export function renderInfographic(name: InfographicName, theme: Theme): string {
   return builders[name](palettes[theme]);
@@ -326,6 +384,16 @@ export const infographicMeta: Record<InfographicName, { width: number; height: n
     width: 720,
     height: inhouseHeight(),
     alt: () => `Production steps done in our own factory: ${capabilities.inHouse.join(', ').toLowerCase()}`,
+  },
+  tshirt: {
+    width: 640,
+    height: 470,
+    alt: () => `T-shirt manufacturing details: ${TSHIRT_CALLOUTS.map((c) => c.label.toLowerCase()).join(', ')}`,
+  },
+  gsm: {
+    width: 690,
+    height: 390,
+    alt: () => `T-shirt fabric weight guide, from lightweight to heavyweight T-shirts: ${GSM_BANDS.map((b) => `${b.name.toLowerCase()} ${b.range}`).join(', ')}`,
   },
   shipping: {
     width: 720,
