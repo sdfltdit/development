@@ -1,6 +1,5 @@
 # URLs to be rebuilt in later phases. Each must be built (or redirected) before launch.
 # The redirect check passes while a URL is listed here, and fails at launch (LAUNCH=1) until the list is empty.
-/activewear-manufacturer/
 /agreement/
 /alibaba-verified-badge-vs-factory-audit-vs-no-verification/
 /bamboo-clothing-manufacturer/
@@ -92,7 +91,6 @@
 /insights/wholesale-manufacturing-partnership/
 /insights/why-color-looks-different-on-cotton-vs-polyester/
 /insights/yarn/
-/jacket-manufacturer/
 /journal/
 /journal/annual-growth-2025/
 /journal/european-mill-partnership-2025/
@@ -101,7 +99,6 @@
 /knitting-service/
 /knitwear-factory/
 /lab-dip-service/
-/leggings-manufacturer/
 /linen-clothing-manufacturer/
 /loungewear-manufacturer/
 /manufacturing-platform-alternative/
@@ -125,7 +122,6 @@
 /skirts-manufacturer/
 /socks-manufacturer/
 /sports-bra-manufacturer/
-/streetwear-manufacturer/
 /sustainability/
 /sustainable-clothing-manufacturer/
 /sweater-manufacturer/

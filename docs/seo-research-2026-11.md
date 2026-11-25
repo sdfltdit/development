@@ -63,3 +63,14 @@ Findings used:
 - Shirt lists admit they give no guidance on collars, cuffs, interlining or fabric. We added collar, cuff, placket, fusing and pattern-matching detail.
 - Cargo and trouser pages leave out waistband, closure, sizing system and testing. We added a sizing-system table and a "how trousers are priced" note.
 - Copy-paste errors seen again: hoodie text on a joggers page (Eco Jersey), empty FAQ answers (The Studio).
+
+## Batch 2 product pages (jacket, activewear, leggings, tracksuit, streetwear)
+
+Searches: jacket manufacturer (bomber, coach, windbreaker), activewear manufacturer, leggings manufacturer (squat-proof), tracksuit manufacturer, streetwear manufacturer (about 85 results reviewed). Read in full: zegaapparel.com (leggings guide), thestudio.com (jackets), brydenapparel.com (activewear), modaknits.com (custom tracksuit guide), thygesenapparel.com (streetwear manufacturer list).
+
+Findings used:
+- Leggings guides give conflicting spandex and GSM figures for squat-proof fabric. We give approximate blends and a weight range, and say we stretch-test and squat-test the proto rather than promise a number.
+- The jacket page read lists types but leaves out lining, cuffs and zips, and its FAQ answers are empty. We added shell, lining, trim and branding detail and an honest line on padded and waterproof jackets.
+- Activewear pages promote bonded seams and certificates. We only list what we do in-house: flatlock and cover-stitch, mesh panels, sublimation, DTF, stretch screen print.
+- Tracksuit buyers worry most about top and pants not matching. We built the page around one fabric lot, one lab dip and stripe alignment.
+- Streetwear lists value washes and fades. We do not do these in-house, so the page says so and focuses on fit, weight and print.
