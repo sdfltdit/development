@@ -110,7 +110,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-body);
   font-feature-settings: 'cv11', 'ss01';
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img,

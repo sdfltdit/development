@@ -8,7 +8,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
 <header class="site-header">
   <div class="site-header__inner container">
     <a class="site-header__brand" href="/" aria-label="SDF Clothing home">
-      <img class="site-header__mark" src="/logo-dark.svg" alt="" width="55" height="48" decoding="async" fetchpriority="high" />
+      <img class="site-header__mark" src="/logo-badge.svg" alt="" width="48" height="48" decoding="async" fetchpriority="high" />
       <span class="site-header__name">SDF Clothing</span>
     </a>
 
@@ -129,7 +129,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     backdrop-filter: blur(10px);
   }
 
-  :global(html.nav-open) {
+  :global(html.nav-open body) {
     overflow: hidden;
   }
 
@@ -153,8 +153,9 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
 
   .site-header__mark {
     display: block;
-    width: 3.4375rem;
-    height: 3rem;
+    width: clamp(2.5rem, 2.2rem + 1vw, 3rem);
+    height: auto;
+    aspect-ratio: 1;
   }
 
   .site-nav__toggle {
@@ -232,7 +233,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
   .site-nav__panel {
     position: absolute;
     inset: 100% 0 auto 0;
-    height: calc(100dvh - var(--header-height));
+    height: calc(100dvh - var(--header-height) - 2px);
     overflow-y: auto;
     overscroll-behavior: contain;
     padding: var(--space-4) var(--space-5) var(--space-6);

@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="site-footer__inner container">
     <div class="site-footer__brand">
-      <img class="site-footer__logo" src="/logo-dark.svg" alt="SDF Clothing logo" width="110" height="96" loading="lazy" decoding="async" />
+      <img class="site-footer__logo" src="/logo-badge.svg" alt="SDF Clothing logo" width="96" height="96" loading="lazy" decoding="async" />
       <p class="site-footer__name">{company.legalName}</p>
       <address class="site-footer__address">
         {company.address.street}<br />
@@ -98,8 +98,9 @@ const year = new Date().getFullYear();
 
   .site-footer__logo {
     display: block;
-    width: 6.875rem;
-    height: 6rem;
+    width: clamp(4.5rem, 4rem + 2vw, 6rem);
+    height: auto;
+    aspect-ratio: 1;
   }
 
   .site-footer__name {
