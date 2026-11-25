@@ -22,6 +22,8 @@ const BANNED = [
   'high-quality', 'high quality', 'top quality', 'top-quality', 'best quality', 'best price', 'best prices', 'unmatched', 'superior quality',
   'state-of-the-art', 'cutting-edge', 'one-stop', 'hassle-free', 'second to none', 'trusted by', 'number one', '#1', 'amazing', 'excellent',
   'exceptional', 'unbeatable', 'we are the best', 'look no further', 'dream', 'elevate your', 'take your brand to the next level',
+  'delve', 'seamless', 'seamlessly', 'robust', 'tailored solutions', 'fast-paced', "in today's", 'unlock', "it's worth noting", 'in conclusion',
+  'game-changer', 'game changer', 'revolutionize', 'leverage',
 ];
 
 const decode = (s) =>
