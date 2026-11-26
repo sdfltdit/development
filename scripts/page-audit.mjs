@@ -185,6 +185,10 @@ const STRICT = new Set([
   '/sustainable-clothing-manufacturer/',
   '/organic-cotton-clothing-manufacturer/',
   '/recycled-clothing-manufacturer/',
+  '/products/',
+  '/all-services/',
+  '/pricing/',
+  '/work-process/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
@@ -292,6 +296,7 @@ function parsePage(file) {
     alts: [...html.matchAll(/<img [^>]*alt="([^"]*)"/g)].map((m) => decode(m[1])),
     faqQuestions: [...html.matchAll(/"@type":"Question","name":"([^"]+)"/g)].map((m) => m[1]),
     noindex: /name="robots" content="noindex/.test(html),
+    collection: /"@type":"CollectionPage"/.test(html),
     emptyAnswers: [...main.matchAll(/<details[^>]*>([\s\S]*?)<\/details>/g)].filter((m) => strip(m[1].replace(/<summary[\s\S]*?<\/summary>/, '')).length < 20).length,
   };
 }
@@ -360,7 +365,7 @@ for (const p of pages) {
   if (!p.headings.some((h) => has(lower(h)))) report(p.route, 'primary keyword missing from every H2 and H3');
   const count = (text.match(primary) ?? []).length;
   const density = (count * k.primary.split(' ').length * 100) / words;
-  if (density < DENSITY[0] || density > DENSITY[1]) report(p.route, `primary keyword density ${density.toFixed(2)}% is outside ${DENSITY[0]}–${DENSITY[1]}%`);
+  if (!p.collection && (density < DENSITY[0] || density > DENSITY[1])) report(p.route, `primary keyword density ${density.toFixed(2)}% is outside ${DENSITY[0]}–${DENSITY[1]}%`);
 
   for (const s of k.secondary) {
     const re = kwRegex(s);

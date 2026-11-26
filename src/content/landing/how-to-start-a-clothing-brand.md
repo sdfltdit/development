@@ -103,7 +103,7 @@ Choose a name that is easy to say and spell. Check that the domain and social ha
 
 The right first collection size for most new brands is three to six styles. Pick a few core pieces your customer needs, such as a tee, a hoodie and joggers, in two or three colours.
 
-A small range keeps costs down, makes sampling faster and shows you clearly what sells. If your designs carry artwork, our guide to [clothing printing methods](/insights/printing-methods-compared/) helps you pick the right one.
+A small range keeps costs down, makes sampling faster and shows you clearly what sells. Browse our [custom clothing products](/products/) for ideas on where to start. If your designs carry artwork, our guide to [clothing printing methods](/insights/printing-methods-compared/) helps you pick the right one.
 
 ## Step 6. Turn designs into tech packs
 

@@ -1025,3 +1025,42 @@ caption {
   font-size: var(--text-base);
   white-space: pre-wrap;
 }
+
+.hub-nav {
+  padding-block: 0 var(--space-5);
+}
+
+.hub-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hub-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.hub-nav__link:hover,
+.hub-nav__link:focus-visible {
+  border-color: var(--color-accent-strong);
+}
+
+.hub-nav__count {
+  margin-left: var(--space-1);
+  color: var(--color-muted);
+}
+
+.section[id] {
+  scroll-margin-top: var(--space-6);
+}

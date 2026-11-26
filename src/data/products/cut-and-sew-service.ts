@@ -130,7 +130,7 @@ export const cutAndSewService: ProductContent = {
     heading: 'Starting cut and sew production',
     paragraphs: [
       'Each style starts at {{moq}} {{moqUnit}}. Styles that share a fabric, such as a hoodie and joggers in the same fleece, keep fabric costs down.',
-      'Our <a href="/work-process/">clothing production process</a> page shows each step with its payment, and our <a href="/sample-service/">clothing sample maker</a> page explains sampling.',
+      'Our <a href="/work-process/">clothing production process</a> page shows each step with its payment. For everything else we do, see our <a href="/all-services/">clothing manufacturing services</a>.',
     ],
   },
   faqHeading: 'Cut and sew questions',

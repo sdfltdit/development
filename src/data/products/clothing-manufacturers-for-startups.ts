@@ -127,7 +127,7 @@ export const clothingManufacturersForStartups: ProductContent = {
     heading: 'Before you place a first order',
     paragraphs: [
       'Before your first factory order, check that we are who we say we are on our <a href="/verify-us/">verify page</a>, and visit the factory if you can. Any clothing manufacturer for startups should welcome both.',
-      'Our guide on <a href="/how-to-start-a-clothing-brand/">how to start a clothing brand</a> covers the steps before you talk to a factory, from niche to launch.',
+      'Our guide on <a href="/how-to-start-a-clothing-brand/">how to start a clothing brand</a> covers the steps before you talk to a factory. To see what you could make, browse our <a href="/products/">custom clothing products</a>.',
     ],
   },
   faqHeading: 'First order questions',

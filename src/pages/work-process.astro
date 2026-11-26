@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'When do I pay?',
-    a: `In three stages, one after the other: ${paymentSummary()}. You never pay for bulk before you have approved a sample.`,
+    a: `Direct payments come in three stages, one after the other. The split is ${paymentSummary()}. Orders paid by LC are covered by the credit instead. You never pay for bulk before you have approved a sample.`,
   },
   {
     q: 'What does FOB mean for me?',
@@ -100,7 +100,7 @@ const schema = standardPage({
 
   <section class="section" aria-labelledby="steps-heading">
     <div class="container">
-      <h2 id="steps-heading" class="visually-hidden">The seven steps</h2>
+      <h2 id="steps-heading" class="visually-hidden">The clothing production process in seven steps</h2>
       <ol class="process">
         {
           steps.map((step, index) => (
@@ -132,7 +132,7 @@ const schema = standardPage({
   <section class="section section--alt" aria-labelledby="payment-heading">
     <div class="container split">
       <div class="section__head">
-        <h2 id="payment-heading">Payment schedule</h2>
+        <h2 id="payment-heading">Payment schedule for the clothing production process</h2>
         <p class="section__lead">Three stages, each tied to something you can see. You never pay for bulk before approving a sample.</p>
         <p>{terms.paymentScope}. {sampleFeePolicy}.</p>
         <p>{terms.paymentMethod}. If anyone asks you to pay a different account, stop and check our <a href="/verify-us/">verify page</a>.</p>

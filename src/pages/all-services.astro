@@ -1,5 +1,30 @@
 ---
 import HubPage from '../components/HubPage.astro';
+import { serviceGroups } from '../data/catalogue';
+import { terms } from '../data/company';
+
+const faqs = [
+  {
+    q: 'Can I use one service on its own?',
+    a: 'Our services are offered on the garments we make. Printing, embroidery or a tech pack, for example, are done as part of an order we produce, not on blanks sent in.',
+  },
+  {
+    q: 'Do you subcontract any of these services?',
+    a: 'No. Pattern making, cutting, sewing, printing, embroidery and inspection all happen in our own factory in Dhaka.',
+  },
+  {
+    q: 'How are services priced?',
+    a: 'Most are part of the garment price on your quote. Development work such as sampling is covered by the deposit that starts your order.',
+  },
+  {
+    q: 'Which service should I start with?',
+    a: 'Usually sampling. If you have no tech pack yet, we build one with you from a photo or sketch while making the first sample.',
+  },
+  {
+    q: 'Can I send my own fabric?',
+    a: 'Yes. With our cut and sew service you can choose full package, where we buy the fabric, or CMT, where you supply it.',
+  },
+];
 ---
 
 <HubPage
@@ -8,13 +33,19 @@ import HubPage from '../components/HubPage.astro';
   crumbLabel="Services"
   eyebrow="Services"
   heading="Clothing manufacturing services under one roof"
-  lead="Our clothing manufacturing services cover every step from your idea to a packed carton. That means samples, patterns, cutting, sewing, printing, embroidery, finishing and checks. One team does it all in our own factory."
-  groups={[{ heading: 'Services', kinds: ['service'] }]}
+  lead="Our clothing manufacturing services cover every step from your idea to a packed carton. That means tech packs, patterns, samples, cutting, sewing, printing, embroidery, dyeing, washing, labels and checks. One team does it all in our own factory."
+  groups={serviceGroups}
+  faqs={faqs}
+  faqHeading="Questions about our services"
 >
-  <h2>How the services fit together</h2>
+  <h2>How our clothing manufacturing services fit together</h2>
   <p>
-    Most brands use the services in order. First comes a <a href="/sample-service/">proto and pre-production sample</a>. Then we move to
-    <a href="/cut-and-sew-service/">cut-and-sew production</a>, with printing and a final check done in-house. Our
-    <a href="/work-process/">production process page</a> shows the time and payment for each step.
+    Most brands use the services in order. First come the <a href="/tech-pack-service/">tech pack</a> and a
+    <a href="/sample-service/">proto and pre-production sample</a>. Then we move to <a href="/cut-and-sew-service/">cut and sew production</a>, with printing,
+    embroidery and a final check done in-house.
+  </p>
+  <p>
+    Our <a href="/work-process/">clothing production process</a> page shows the time and payment for each step. A proto sample reaches your door in
+    {terms.sampleDays} days, and bulk takes {terms.bulkDays} days after you approve it.
   </p>
 </HubPage>

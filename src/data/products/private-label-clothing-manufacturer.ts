@@ -20,7 +20,7 @@ export const privateLabelClothingManufacturer: ProductContent = {
   ],
   stylesAside: {
     title: 'Not sure where to start?',
-    text: 'Our guide explains how private label clothing works, from brand ownership to margins.',
+    text: 'Our guide explains how private label clothing works, from brand ownership to margins. You can also browse every product we make.',
     href: '/private-label-clothing-guide/',
     cta: 'How private label clothing works',
   },

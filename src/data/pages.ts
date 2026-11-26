@@ -40,7 +40,7 @@ const registry: PageMeta[] = [
     description:
       'Who runs SDF Clothing, how our Dhaka factory works, who we make clothing for and what we do not do. Our address and safe ways to reach us in one place.',
     primaryKeyword: 'about SDF Clothing',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'About',
   },
@@ -48,9 +48,9 @@ const registry: PageMeta[] = [
     path: '/work-process/',
     title: 'Clothing Production Process, Step by Step | SDF Clothing',
     description:
-      'From tech pack to shipment in seven steps: quote, fabric, sample, approval, bulk, inspection and FOB shipping. Timelines, payment schedule and your sign-offs.',
+      'Our clothing production process in seven steps: quote, fabric, sample, approval, bulk, inspection and FOB shipping, with timings, payments and your sign-offs.',
     primaryKeyword: 'clothing production process',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'Production process and payment schedule',
   },
@@ -58,9 +58,9 @@ const registry: PageMeta[] = [
     path: '/pricing/',
     title: 'Clothing Manufacturing Prices – FOB Index | SDF Clothing',
     description:
-      'Dated FOB prices per piece for custom clothing made in our Dhaka factory, at {{moq}} and 5,000 pieces. See what moves the price and how to get an exact quote.',
-    primaryKeyword: 'SDF Clothing prices',
-    updated: '2026-11-25',
+      'Clothing manufacturing prices per piece, FOB {{port}}, at {{moq}} and {{bulkQty}} pieces for tees, hoodies, joggers and more, with what moves the price and why.',
+    primaryKeyword: 'clothing manufacturing prices',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'FOB price index',
   },
@@ -86,11 +86,11 @@ const registry: PageMeta[] = [
   },
   {
     path: '/products/',
-    title: 'Custom T-Shirts, Hoodies and Apparel We Make | SDF Clothing',
+    title: 'Custom Clothing Products We Manufacture | SDF Clothing',
     description:
-      'Browse the custom clothing we make for private label brands worldwide, with fabrics, MOQ and sample times for each product. Then get a quote. SDF Clothing.',
+      'Custom clothing products we make for brands worldwide: tees, hoodies, outerwear, activewear, uniforms, bags and more, grouped by type, from {{moq}} pieces each.',
     primaryKeyword: 'custom clothing products',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'Products',
   },
@@ -98,9 +98,9 @@ const registry: PageMeta[] = [
     path: '/all-services/',
     title: 'Clothing Manufacturing Services, One Roof | SDF Clothing',
     description:
-      'Cut-and-sew production, sampling, pattern making, printing and embroidery, all under one roof. See what each service includes and how long it takes to finish.',
+      'Clothing manufacturing services under one roof: tech packs, patterns, samples, cut and sew, printing, embroidery, dyeing, washing, labels and quality checks.',
     primaryKeyword: 'clothing manufacturing services',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'Services',
   },
@@ -110,7 +110,7 @@ const registry: PageMeta[] = [
     description:
       'Tell us the product, quantity and target price. You get a written FOB quote with sample cost and lead time within {{quoteHours}} hours, from the factory, not an agent.',
     primaryKeyword: 'clothing manufacturing quote',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     inLlms: true,
     llmsLabel: 'Request a quote',
   },
@@ -302,7 +302,7 @@ const registry: PageMeta[] = [
     description:
       'Your request has reached our merchandising team. Here is what happens next, when to expect our reply and how to recognise genuine messages from SDF Clothing.',
     primaryKeyword: 'quote request received',
-    updated: '2026-11-25',
+    updated: '2026-11-27',
     noindex: true,
   },
 ];

@@ -17,7 +17,7 @@ const crumbs: Crumb[] = [
 
 const drivers = [
   { factor: 'Fabric', effect: 'Usually the largest cost. Weight (GSM), fibre, combed versus carded yarn and dye colour all change it.' },
-  { factor: 'Quantity', effect: `Fixed costs such as pattern grading, marker making and line setup are shared over the order, so ${terms.moq} pieces cost more each than 1,000.` },
+  { factor: 'Quantity', effect: `Fixed costs such as pattern grading, marker making and line setup are shared over the order, so ${terms.moq} pieces cost more each than ${priceIndex.bulkQty}.` },
   { factor: 'Decoration', effect: 'Each print colour needs its own screen. Embroidery is priced by stitch count. Large or multi-placement artwork adds cost.' },
   { factor: 'Construction', effect: 'Extra panels, pockets, zips, side splits or special seams add sewing time.' },
   { factor: 'Trims and labels', effect: 'Woven labels, custom tags, zips and drawcords are priced to your spec.' },
@@ -78,14 +78,14 @@ const schema = standardPage({
 <BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
   <PageHeader
     eyebrow="Price index"
-    title="SDF Clothing prices: what custom clothing costs"
-    lead={`These are SDF Clothing prices per piece, ${terms.incoterm} ${terms.port}, for standard products made in our Dhaka factory. They are indicative and dated, so you can check a budget before you ask for a quote. Your exact price is fixed in writing before you pay for a sample.`}
+    title="Clothing manufacturing prices: what custom clothing costs"
+    lead={`These are our clothing manufacturing prices per piece, ${terms.incoterm} ${terms.port}, for standard products made in our Dhaka factory. They are indicative and dated, so you can check a budget before you ask for a quote. Your exact price is fixed in writing before you pay for a sample.`}
     updated={meta.updated}
   />
 
   <section class="section" aria-labelledby="index-heading">
     <div class="container">
-      <h2 id="index-heading" class="block-heading">FOB price index</h2>
+      <h2 id="index-heading" class="block-heading">Clothing manufacturing prices by product</h2>
       <PriceTable />
     </div>
   </section>

@@ -6,12 +6,10 @@ import FactStrip from './FactStrip.astro';
 import CtaBand from './CtaBand.astro';
 import { fill } from '../data/company';
 import { pageMeta } from '../data/pages';
-import { itemList, standardPage, type Crumb } from '../lib/schema';
+import { faqPage, itemList, standardPage, type Crumb } from '../lib/schema';
 
-interface Group {
-  heading: string;
-  kinds: ('product' | 'service' | 'model' | 'guide')[];
-}
+import FaqList from './FaqList.astro';
+import type { CatalogueGroup } from '../data/catalogue';
 
 interface Props {
   path: string;
@@ -19,17 +17,24 @@ interface Props {
   eyebrow: string;
   heading: string;
   lead: string;
-  groups: Group[];
+  groups: CatalogueGroup[];
   hub: 'products' | 'services';
+  faqs?: { q: string; a: string }[];
+  faqHeading?: string;
 }
 
-const { path, crumbLabel, eyebrow, heading, lead, groups, hub } = Astro.props;
+const { path, crumbLabel, eyebrow, heading, lead, groups, hub, faqs = [], faqHeading = 'Questions' } = Astro.props;
 const meta = pageMeta(path);
-const entries = (await getCollection('landing')).sort((a, b) => a.data.navLabel.localeCompare(b.data.navLabel));
-const sections = groups.map((group) => ({
-  heading: group.heading,
-  items: entries.filter((e) => group.kinds.includes(e.data.kind) && e.data.hub === hub),
-}));
+const entries = (await getCollection('landing')).filter((e) => e.data.hub === hub && e.data.kind !== 'guide');
+const bySlug = new Map(entries.map((e) => [e.id, e]));
+const grouped = groups.flatMap((g) => g.slugs);
+const missing = entries.filter((e) => !grouped.includes(e.id)).map((e) => e.id);
+const unknown = grouped.filter((slug) => !bySlug.has(slug));
+const twice = grouped.filter((slug, i) => grouped.indexOf(slug) !== i);
+if (missing.length || unknown.length || twice.length) {
+  throw new Error(`Hub ${path}: missing ${missing.join(', ') || 'none'}; unknown ${unknown.join(', ') || 'none'}; listed twice ${twice.join(', ') || 'none'}. Fix src/data/catalogue.ts.`);
+}
+const sections = groups.map((group) => ({ ...group, items: group.slugs.map((slug) => bySlug.get(slug)!) }));
 const crumbs: Crumb[] = [
   { name: 'Home', path: '/' },
   { name: crumbLabel, path },
@@ -43,7 +48,7 @@ const schema = standardPage({
   dateModified: meta.updated,
   crumbs,
   type: 'CollectionPage',
-  extra: [itemList(path, listed)],
+  extra: [itemList(path, listed), ...(faqs.length ? [faqPage(path, faqs)] : [])],
 });
 ---
 
@@ -53,26 +58,43 @@ const schema = standardPage({
   </PageHeader>
 
   {
-    sections
-      .filter((s) => s.items.length > 0)
-      .map((section, index) => (
-        <section class:list={['section', { 'section--alt': index % 2 === 1 }]} aria-label={section.heading}>
-          <div class="container">
-            <h2 class="block-heading">{section.heading}</h2>
-            <ul class="cards">
-              {section.items.map((item) => (
-                <li class="card">
-                  <h3 class="card__title">{item.data.navLabel}</h3>
-                  <p class="card__text">{fill(item.data.cardSummary)}</p>
-                  <a class="card__link" href={`/${item.id}/`}>
-                    {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
-                  </a>
-                </li>
-              ))}
-            </ul>
+    sections.length > 3 && (
+      <nav class="hub-nav container" aria-label="Jump to a group">
+        <ul class="hub-nav__list">
+          {sections.map((section) => (
+            <li>
+              <a class="hub-nav__link" href={`#${section.id}`}>
+                {section.heading} <span class="hub-nav__count">({section.items.length})</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
+
+  {
+    sections.map((section, index) => (
+      <section class:list={['section', { 'section--alt': index % 2 === 1 }]} id={section.id} aria-labelledby={`${section.id}-heading`}>
+        <div class="container">
+          <div class="section__head">
+            <h2 id={`${section.id}-heading`}>{section.heading}</h2>
+            <p class="section__lead">{section.lead}</p>
           </div>
-        </section>
-      ))
+          <ul class="cards">
+            {section.items.map((item) => (
+              <li class="card">
+                <h3 class="card__title">{item.data.navLabel}</h3>
+                <p class="card__text">{fill(item.data.cardSummary)}</p>
+                <a class="card__link" href={`/${item.id}/`}>
+                  {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))
   }
 
   <section class="section">
@@ -80,6 +102,16 @@ const schema = standardPage({
       <slot />
     </div>
   </section>
+
+  {
+    faqs.length > 0 && (
+      <section class="section section--alt">
+        <div class="container">
+          <FaqList items={faqs} heading={faqHeading} />
+        </div>
+      </section>
+    )
+  }
 
   <CtaBand />
 </BaseLayout>

@@ -15,7 +15,6 @@
 /insights/cpsia-compliance-guide/
 /insights/digital-product-passport-textile/
 /insights/embroidery-problems-explained/
-/insights/ethical-manufacturing-verification/
 /insights/eu-clothing-regulations-2026/
 /insights/fabric-cutting-explained/
 /insights/fiber-blend-hs-classification-explained/
