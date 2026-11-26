@@ -123,3 +123,42 @@ export const serviceGroups: CatalogueGroup[] = [
     slugs: ['quality-inspection-service'],
   },
 ];
+
+export const guideGroups: CatalogueGroup[] = [
+  {
+    id: 'starting',
+    heading: 'Starting and growing a brand',
+    lead: 'From the first idea to steady reorders.',
+    slugs: ['how-to-start-a-clothing-brand', 'clothing-brand-startup-costs', 'how-to-scale-a-clothing-brand', 'private-label-clothing-guide', 'print-on-demand-vs-private-label', 'insights/moq-meaning-clothing'],
+  },
+  {
+    id: 'factories',
+    heading: 'Finding and working with a factory',
+    lead: 'How to choose a supplier and work with them well.',
+    slugs: ['how-to-find-clothing-manufacturer', 'direct-factory-vs-trading-company-vs-buying-agent', 'overseas-vs-local-clothing-manufacturer', 'insights/how-to-negotiate-with-clothing-manufacturers', 'insights/avoiding-clothing-manufacturer-scams', 'insights/oem-vs-odm-vs-cmt', 'guides/how-clothing-manufacturers-work'],
+  },
+  {
+    id: 'countries',
+    heading: 'Sourcing countries',
+    lead: 'Bangladesh and how it compares with other sourcing countries.',
+    slugs: ['clothing-manufacturer-bangladesh', 'bangladesh-vs-china-clothing-manufacturing', 'bangladesh-vs-vietnam-clothing-manufacturing', 'bangladesh-vs-india-clothing-manufacturing', 'bangladesh-vs-pakistan-clothing-manufacturing'],
+  },
+  {
+    id: 'development',
+    heading: 'Design, fit and colour',
+    lead: 'Tech packs, samples, sizing and colour approval.',
+    slugs: ['how-to-create-a-tech-pack', 'digital-3d-sample-vs-physical-sample', 'insights/garment-grading-explained', 'insights/international-size-chart-guide', 'insights/pattern-fit-problems-explained', 'insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers', 'insights/lab-dip-explained'],
+  },
+  {
+    id: 'quality',
+    heading: 'Fabric, decoration and quality',
+    lead: 'What makes a garment last, and how faults are caught.',
+    slugs: ['insights/fabric-types-glossary', 'insights/fabric-gsm-explained', 'insights/knitting-defects-explained', 'insights/shade-variation-explained', 'insights/stitch-quality-spi-explained', 'insights/printing-methods-compared', 'insights/embroidery-problems-explained', 'insights/garment-finishing-explained', 'insights/aql-inspection-explained', 'in-house-qc-vs-third-party-inspection-vs-no-inspection'],
+  },
+  {
+    id: 'costs',
+    heading: 'Costs, payment and shipping',
+    lead: 'Pricing an order, paying for it and getting it home.',
+    slugs: ['insights/manufacturing-costs', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
+  },
+];

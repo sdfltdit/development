@@ -104,4 +104,7 @@ For a closer look, read our guides to [Bangladesh vs China clothing manufacturin
 
 ## About SDF Clothing
 
+Still weighing up a factory nearer home? Read our guide to [overseas vs local clothing manufacturer](/overseas-vs-local-clothing-manufacturer/) options first.
+
+
 We are a garment factory in Bangladesh, based in Baridhara DOHS, Dhaka, and running since {{founded}}. We make T-shirts, hoodies, sweatshirts and other cut-and-sew clothing in any fabric for private label brands from {{moq}} {{moqUnit}}. All printing and embroidery happens in-house, and every order gets a final AQL {{aql}} inspection. We publish our prices, terms and official contacts so you can check us before you send a single payment.

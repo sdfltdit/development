@@ -2,7 +2,7 @@
 kind: guide
 hub: how-we-work
 navLabel: Bangladesh vs Vietnam
-cardSummary: Bangladesh and Vietnam compared for clothing production on product strengths, fabric routes, cost, minimums and trade agreements.
+cardSummary: Where Bangladesh beats Vietnam and where Vietnam leads, from sportswear and fabric routes to cost and trade agreements.
 title: "Bangladesh vs Vietnam Clothing Manufacturing | SDF Clothing"
 description: "Bangladesh vs Vietnam clothing manufacturing compared: product strengths, Vietnam garment factories, fabric routes, trade deals and how to choose the right fit."
 h1: Bangladesh vs Vietnam clothing manufacturing compared

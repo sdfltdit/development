@@ -136,6 +136,9 @@ Send these questions to ask a clothing manufacturer to everyone on your shortlis
 
 How to choose apparel manufacturers comes down to comparing like with like. Put each quote into the same table: price per piece at your quantity, sample fee, minimum per style, lead time, payment schedule, inspection standard and shipping terms. Then add freight and import duty to compare **landed cost**, not factory price. The cheapest factory price often hides missing labels, packing or inspection.
 
+
+Not sure whether to stay close to home? Our guide to [overseas vs local clothing manufacturer](/overseas-vs-local-clothing-manufacturer/) choices compares cost, speed and control.
+
 ## Where SDF Clothing fits
 
 We are a cut-and-sew, full-package private label factory in Dhaka for knit and woven clothing, from {{moq}} {{moqUnit}}. You get a written quote within {{quoteHours}} hours and a proto sample in {{sampleDays}} days. See our [custom clothing products](/products/) for what we make. If your product or quantity is not a good fit for our lines, we will say so at the start. You can check us the same way you would check anyone on your list, starting with our verify page. That is how to find a clothing manufacturer you can rely on.

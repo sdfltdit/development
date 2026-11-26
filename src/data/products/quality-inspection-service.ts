@@ -127,7 +127,7 @@ export const qualityInspectionService: ProductContent = {
     heading: 'Inspection on a first order',
     paragraphs: [
       'On a first order, many brands ask for photos of first pieces as well as the final report. We send both, so you see the quality early.',
-      'Want the colour side covered too? See our <a href="/lab-dip-service/">lab dip service</a> page.',
+      'Want the colour side covered too? See our <a href="/lab-dip-service/">lab dip service</a> page. Our guides on <a href="/insights/knitting-defects-explained/">knitted fabric defects</a> and <a href="/insights/garment-finishing-explained/">garment finishing</a> explain what we look for.',
     ],
   },
   faqHeading: 'Quality inspection questions',

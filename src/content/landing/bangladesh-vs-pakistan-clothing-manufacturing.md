@@ -2,7 +2,7 @@
 kind: guide
 hub: how-we-work
 navLabel: Bangladesh vs Pakistan
-cardSummary: Bangladesh and Pakistan compared for clothing production on product strengths, cotton and denim, home textiles, cost and EU trade access.
+cardSummary: "Two cotton-based industries side by side: knitwear, denim, home textiles, cost and the future of EU trade access."
 title: "Bangladesh vs Pakistan Clothing Manufacturing | SDF Clothing"
 description: "Bangladesh vs Pakistan clothing manufacturing compared: product strengths, Pakistan denim and home textiles, EU GSP Plus, Bangladesh trade access and full cost."
 h1: Bangladesh vs Pakistan clothing manufacturing compared

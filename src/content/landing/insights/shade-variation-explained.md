@@ -52,6 +52,7 @@ related:
   - /insights/aql-inspection-explained/
   - /corduroy-clothing-manufacturer/
   - /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
+  - /insights/knitting-defects-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -2,7 +2,7 @@
 kind: guide
 hub: how-we-work
 navLabel: Bangladesh vs China
-cardSummary: Bangladesh and China compared for clothing production on product strengths, fabric supply, minimums, lead times, trade access and total cost.
+cardSummary: How Bangladesh and China differ on product strengths, fabric supply, minimums, lead times, trade access and total landed cost.
 title: "Bangladesh vs China Clothing Manufacturing | SDF Clothing"
 description: "Bangladesh vs China clothing manufacturing compared: product strengths, fabric supply, minimums, lead times, trade access and how to compare total landed cost."
 h1: Bangladesh vs China clothing manufacturing, an honest comparison

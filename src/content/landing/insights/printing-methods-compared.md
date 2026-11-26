@@ -54,6 +54,7 @@ related:
   - /merch-manufacturer/
   - /insights/fabric-gsm-explained/
   - /print-on-demand-vs-private-label/
+  - /insights/embroidery-problems-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

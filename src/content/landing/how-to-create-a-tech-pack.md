@@ -173,6 +173,9 @@ A tech pack template saves time, but it does not make the content right. What ma
 
 Whatever you use, keep one master file per style and never edit a file that is already with the factory without changing the version date.
 
+
+When the first sample arrives, our guide to [garment fit problems](/insights/pattern-fit-problems-explained/) helps you turn what you see into clear comments.
+
 ## Where SDF Clothing fits
 
 Some brands have a clear brief but no time to build the file. Our [tech pack service](/tech-pack-service/) turns a sketch or sample into a pack and sews the proto sample from it in {{sampleDays}} days. Bulk starts at {{moq}} {{moqUnit}}. If you already have a tech pack, send it and we will point out anything missing and quote within {{quoteHours}} hours.

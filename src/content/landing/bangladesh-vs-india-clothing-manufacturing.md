@@ -2,7 +2,7 @@
 kind: guide
 hub: how-we-work
 navLabel: Bangladesh vs India
-cardSummary: Bangladesh and India compared for clothing production on product strengths, cotton supply, handwork, cost, minimums and new trade deals.
+cardSummary: Knitwear scale against cotton, prints and handwork, plus what the new UK and EU trade deals with India change.
 title: "Bangladesh vs India Clothing Manufacturing | SDF Clothing"
 description: "Bangladesh vs India clothing manufacturing compared: product strengths, India garment factories, cotton and handwork, new UK and EU trade deals and total cost."
 h1: Bangladesh vs India clothing manufacturing compared

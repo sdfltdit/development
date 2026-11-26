@@ -127,7 +127,7 @@ export const patternMakingService: ProductContent = {
     heading: 'Starting with pattern making',
     paragraphs: [
       'Many new brands send a garment they like plus notes on what to change. Copying and adjusting a known fit is faster than starting from a blank page.',
-      'Ready to move to production? See our <a href="/cut-and-sew-service/">cut and sew manufacturer</a> page.',
+      'Ready to move to production? See our <a href="/cut-and-sew-service/">cut and sew manufacturer</a> page. To read a sample before you comment, see our guide to <a href="/insights/pattern-fit-problems-explained/">garment fit problems</a>.',
     ],
   },
   faqHeading: 'Pattern making questions',

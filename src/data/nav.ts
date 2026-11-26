@@ -45,6 +45,7 @@ export const primaryNav: NavGroup[] = [
       { label: 'Production process', href: '/work-process/' },
       { label: 'Prices', href: '/pricing/' },
       { label: 'Free tools', href: '/tools/' },
+      { label: 'Guides', href: '/insights/' },
       { label: 'Compliance and audits', href: '/certifications/' },
       { label: 'Verify us', href: '/verify-us/' },
     ],

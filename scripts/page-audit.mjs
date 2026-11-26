@@ -190,6 +190,12 @@ const STRICT = new Set([
   '/pricing/',
   '/work-process/',
   '/tools/hs-code/',
+  '/insights/',
+  '/insights/embroidery-problems-explained/',
+  '/insights/knitting-defects-explained/',
+  '/insights/pattern-fit-problems-explained/',
+  '/insights/garment-finishing-explained/',
+  '/overseas-vs-local-clothing-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

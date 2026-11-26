@@ -18,14 +18,14 @@ interface Props {
   heading: string;
   lead: string;
   groups: CatalogueGroup[];
-  hub: 'products' | 'services';
+  hub: 'products' | 'services' | 'guides';
   faqs?: { q: string; a: string }[];
   faqHeading?: string;
 }
 
 const { path, crumbLabel, eyebrow, heading, lead, groups, hub, faqs = [], faqHeading = 'Questions' } = Astro.props;
 const meta = pageMeta(path);
-const entries = (await getCollection('landing')).filter((e) => e.data.hub === hub && e.data.kind !== 'guide');
+const entries = (await getCollection('landing')).filter((e) => (hub === 'guides' ? e.data.kind === 'guide' : e.data.hub === hub && e.data.kind !== 'guide'));
 const bySlug = new Map(entries.map((e) => [e.id, e]));
 const grouped = groups.flatMap((g) => g.slugs);
 const missing = entries.filter((e) => !grouped.includes(e.id)).map((e) => e.id);

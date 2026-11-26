@@ -19,6 +19,8 @@ Garment dyeing and washing move to service pages (`/dyeing-service/`, `/washing-
 
 Services built (11): embroidery, printing, dyeing, washing, pattern making, tech pack, lab dip, quality inspection, fabric sourcing, trims sourcing, garment labels. Next: guides on the old `/insights/` and guide URLs, then free tools on `/tools/`.
 
+Guides added 27 November 2026: embroidery problems, knitted fabric defects, garment fit problems, garment finishing, overseas vs local, plus the /insights/ guides hub.
+
 Products added 27 November 2026: silk and satin clothing, bathrobes, sustainable, organic cotton and recycled clothing.
 
 Free tools built (11 plus hub): GSM converter, AQL calculator, lead time calculator, garment cost calculator, fabric shrinkage calculator, MOQ calculator, colour converter, delta E calculator, care label generator, manufacturer email generator, HS code finder. The EU readiness checker URL is 410 Gone.

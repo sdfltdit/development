@@ -158,6 +158,9 @@ Read the photos and the defect list, not just the result. A pass with the same m
 
 To decide who should run these checks, read our guide to [in-house QC vs third-party inspection](/in-house-qc-vs-third-party-inspection-vs-no-inspection/).
 
+
+Many faults an inspector finds start earlier in production. Our guides to [knitted fabric defects](/insights/knitting-defects-explained/) and [garment finishing](/insights/garment-finishing-explained/) show where they come from.
+
 ## Where SDF Clothing fits
 
 Every order we produce gets a final random AQL inspection at {{aql}} by our own quality team, plus fabric checks and inline inspection. Our [garment quality inspection](/quality-inspection-service/) page shows each stage. You are also welcome to send your own inspector before shipment. Orders start at {{moq}} {{moqUnit}}, and bulk takes {{bulkDays}} days after sample approval.

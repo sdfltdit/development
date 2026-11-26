@@ -276,6 +276,16 @@ const registry: PageMeta[] = [
     llmsLabel: 'HS code finder',
   },
   {
+    path: '/insights/',
+    title: 'Clothing Manufacturing Guides for Brands | SDF Clothing',
+    description:
+      'Clothing manufacturing guides for brands: starting a label, finding a factory, tech packs, fit, fabric, quality checks, costs, payment terms and shipping.',
+    primaryKeyword: 'clothing manufacturing guides',
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Guides',
+  },
+  {
     path: '/privacy/',
     title: 'Privacy Policy – How We Handle Your Data | SDF Clothing',
     description:
