@@ -9,7 +9,7 @@ import { pageMeta } from '../data/pages';
 import { faqPage, itemList, standardPage, type Crumb } from '../lib/schema';
 
 import FaqList from './FaqList.astro';
-import type { CatalogueGroup } from '../data/catalogue';
+import type { CatalogueGroup, CataloguePart } from '../data/catalogue';
 
 interface Props {
   path: string;
@@ -18,12 +18,13 @@ interface Props {
   heading: string;
   lead: string;
   groups: CatalogueGroup[];
+  parts?: CataloguePart[];
   hub: 'products' | 'services' | 'guides';
   faqs?: { q: string; a: string }[];
   faqHeading?: string;
 }
 
-const { path, crumbLabel, eyebrow, heading, lead, groups, hub, faqs = [], faqHeading = 'Questions' } = Astro.props;
+const { path, crumbLabel, eyebrow, heading, lead, groups, parts = [], hub, faqs = [], faqHeading = 'Questions' } = Astro.props;
 const meta = pageMeta(path);
 const entries = (await getCollection('landing')).filter((e) => (hub === 'guides' ? e.data.kind === 'guide' : e.data.hub === hub && e.data.kind !== 'guide'));
 const bySlug = new Map(entries.map((e) => [e.id, e]));
@@ -35,6 +36,12 @@ if (missing.length || unknown.length || twice.length) {
   throw new Error(`Hub ${path}: missing ${missing.join(', ') || 'none'}; unknown ${unknown.join(', ') || 'none'}; listed twice ${twice.join(', ') || 'none'}. Fix src/data/catalogue.ts.`);
 }
 const sections = groups.map((group) => ({ ...group, items: group.slugs.map((slug) => bySlug.get(slug)!) }));
+const partSections = parts.map((part) => {
+  const inPart = sections.filter((s) => s.part === part.id);
+  return { ...part, groups: inPart, count: inPart.reduce((n, s) => n + s.items.length, 0) };
+});
+const orphanGroups = parts.length ? sections.filter((s) => !parts.some((p) => p.id === s.part)).map((s) => s.id) : [];
+if (orphanGroups.length) throw new Error(`Hub ${path}: groups with no part: ${orphanGroups.join(', ')}. Fix src/data/catalogue.ts.`);
 const crumbs: Crumb[] = [
   { name: 'Home', path: '/' },
   { name: crumbLabel, path },
@@ -58,43 +65,85 @@ const schema = standardPage({
   </PageHeader>
 
   {
-    sections.length > 3 && (
-      <nav class="hub-nav container" aria-label="Jump to a group">
-        <ul class="hub-nav__list">
-          {sections.map((section) => (
-            <li>
-              <a class="hub-nav__link" href={`#${section.id}`}>
-                {section.heading} <span class="hub-nav__count">({section.items.length})</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    )
-  }
-
-  {
-    sections.map((section, index) => (
-      <section class:list={['section', { 'section--alt': index % 2 === 1 }]} id={section.id} aria-labelledby={`${section.id}-heading`}>
-        <div class="container">
-          <div class="section__head">
-            <h2 id={`${section.id}-heading`}>{section.heading}</h2>
-            <p class="section__lead">{section.lead}</p>
-          </div>
-          <ul class="cards">
-            {section.items.map((item) => (
-              <li class="card">
-                <h3 class="card__title">{item.data.navLabel}</h3>
-                <p class="card__text">{fill(item.data.cardSummary)}</p>
-                <a class="card__link" href={`/${item.id}/`}>
-                  {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
+    parts.length > 0 ? (
+      <>
+        <nav class="hub-nav container" aria-label="Jump to a part">
+          <ul class="hub-nav__list">
+            {partSections.map((part) => (
+              <li>
+                <a class="hub-nav__link" href={`#${part.id}`}>
+                  {part.heading} <span class="hub-nav__count">({part.count})</span>
                 </a>
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-    ))
+        </nav>
+        {partSections.map((part, index) => (
+          <section class:list={['section hub-part', { 'section--alt': index % 2 === 1 }]} id={part.id} aria-labelledby={`${part.id}-heading`}>
+            <div class="container">
+              <div class="section__head">
+                <h2 id={`${part.id}-heading`}>{part.heading}</h2>
+                <p class="section__lead">{part.lead}</p>
+              </div>
+              {part.groups.map((group) => (
+                <div class="hub-part__group" id={group.id}>
+                  <h3 class="hub-part__heading">{group.heading}</h3>
+                  <p class="hub-part__lead">{group.lead}</p>
+                  <ul class="cards">
+                    {group.items.map((item) => (
+                      <li class="card">
+                        <h4 class="card__title">{item.data.navLabel}</h4>
+                        <p class="card__text">{fill(item.data.cardSummary)}</p>
+                        <a class="card__link" href={`/${item.id}/`}>
+                          {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </>
+    ) : (
+      <>
+        {sections.length > 3 && (
+          <nav class="hub-nav container" aria-label="Jump to a group">
+            <ul class="hub-nav__list">
+              {sections.map((section) => (
+                <li>
+                  <a class="hub-nav__link" href={`#${section.id}`}>
+                    {section.heading} <span class="hub-nav__count">({section.items.length})</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+        {sections.map((section, index) => (
+          <section class:list={['section', { 'section--alt': index % 2 === 1 }]} id={section.id} aria-labelledby={`${section.id}-heading`}>
+            <div class="container">
+              <div class="section__head">
+                <h2 id={`${section.id}-heading`}>{section.heading}</h2>
+                <p class="section__lead">{section.lead}</p>
+              </div>
+              <ul class="cards">
+                {section.items.map((item) => (
+                  <li class="card">
+                    <h3 class="card__title">{item.data.navLabel}</h3>
+                    <p class="card__text">{fill(item.data.cardSummary)}</p>
+                    <a class="card__link" href={`/${item.id}/`}>
+                      {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        ))}
+      </>
+    )
   }
 
   <section class="section">
@@ -115,3 +164,26 @@ const schema = standardPage({
 
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .hub-part__group {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-7);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+  }
+
+  .hub-part__heading {
+    margin: 0;
+    font-size: var(--text-xl);
+  }
+
+  .hub-part__lead {
+    margin: 0 0 var(--space-2);
+    color: var(--color-text);
+  }
+
+  .hub-part {
+    scroll-margin-top: var(--header-height);
+  }
+</style>

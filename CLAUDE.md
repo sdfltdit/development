@@ -621,3 +621,9 @@ Never 301 to a loosely related page such as the home page, because search engine
 - `/nda/` rests only on the confirmed promise "we never share your files, and we sign your NDA first if you ask". Never claim we have our own NDA template.
 - 301s: `/confidentiality/` to `/nda/`, `/clothing-factory/` to `/about/`.
 
+## Main menu and products hub (27 November 2026)
+
+- Owner's menu: Products (dropdown: Knit garments, Woven garments, Accessories and home textiles, All products), Services, How it works, Pricing, About, Contact. No other dropdowns. No "Get a quote" button in the header, by the owner's choice: it lives in the CTA band above the footer and in page content. Data in `primaryNav` in `src/data/nav.ts`.
+- `/products/` is split into parts (`productParts` in `src/data/catalogue.ts`): knit, woven, accessories, and "ways of working, ranges and fabrics". Every group needs a `part`, or the build fails. A mixed product (dresses, uniforms, kids, jumpsuits) sits where its usual construction is, and its own page covers both.
+- Part headings are H2, group headings H3, card titles H4 on this hub only.
+

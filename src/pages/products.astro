@@ -1,6 +1,6 @@
 ---
 import HubPage from '../components/HubPage.astro';
-import { productGroups } from '../data/catalogue';
+import { productGroups, productParts } from '../data/catalogue';
 import { terms } from '../data/company';
 
 const faqs = [
@@ -33,8 +33,9 @@ const faqs = [
   crumbLabel="Products"
   eyebrow="What we make"
   heading="Custom clothing products we manufacture"
-  lead={`These are the custom clothing products we make in our Dhaka factory for brands worldwide, grouped by type. Every product is cut and sewn to your fit and fabric from ${terms.moq} ${terms.moqUnit}, with printing and embroidery in-house. Pick a group below to jump straight to it.`}
+  lead={`These are the custom clothing products we make in our Dhaka factory for brands worldwide, split into knit garments, woven garments and accessories. Every product is cut and sewn to your fit and fabric from ${terms.moq} ${terms.moqUnit}, with printing and embroidery in-house. Pick a part below to jump straight to it.`}
   groups={productGroups}
+  parts={productParts}
   faqs={faqs}
   faqHeading="Questions about our products"
 >

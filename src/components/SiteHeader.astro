@@ -21,29 +21,34 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
       <nav class="site-nav__panel" aria-label="Main">
         <ul class="site-nav__list">
           {
-            primaryNav.map((group) => (
+            primaryNav.map((item) => (
               <li class="site-nav__item">
-                <details class="site-nav__group" data-nav-group>
-                  <summary class:list={['site-nav__group-label', { 'is-active': group.links.some((l) => isActive(l.href)) }]}>
-                    {group.label}
-                  </summary>
-                  <ul class="site-nav__menu">
-                    {group.links.map((link) => (
-                      <li>
-                        <a class="site-nav__link" href={link.href} aria-current={current === link.href ? 'page' : undefined}>
-                          {link.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                {item.links ? (
+                  <details class="site-nav__group" data-nav-group>
+                    <summary class:list={['site-nav__group-label', { 'is-active': current.startsWith(item.href) }]}>{item.label}</summary>
+                    <ul class="site-nav__menu">
+                      {item.links.map((link) => (
+                        <li>
+                          <a class="site-nav__link" href={link.href} aria-current={current === link.href ? 'page' : undefined}>
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <a
+                    class:list={['site-nav__top-link', { 'is-active': isActive(item.href) }]}
+                    href={item.href}
+                    aria-current={current === item.href ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))
           }
         </ul>
-        <div class="site-nav__actions">
-          <a class="button button--primary site-nav__cta" href="/get-a-quote/">Get a quote</a>
-        </div>
       </nav>
     </details>
     <script is:inline>
@@ -108,6 +113,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     nav.addEventListener('toggle', lock);
     nav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
+        closeGroups();
         if (!desktop.matches) nav.open = false;
       });
     });
@@ -248,7 +254,8 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     list-style: none;
   }
 
-  .site-nav__group-label {
+  .site-nav__group-label,
+  .site-nav__top-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -275,7 +282,12 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     transform: rotate(-135deg) translateY(-2px);
   }
 
-  .site-nav__group-label.is-active {
+  .site-nav__top-link {
+    text-decoration: none;
+  }
+
+  .site-nav__group-label.is-active,
+  .site-nav__top-link.is-active {
     color: var(--color-accent);
   }
 
@@ -299,14 +311,6 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     background: var(--color-surface-alt);
     color: var(--color-ink);
     box-shadow: inset 2px 0 0 var(--color-accent-strong);
-  }
-
-  .site-nav__actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-3);
-    margin-top: var(--space-5);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -343,14 +347,16 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
       position: relative;
     }
 
-    .site-nav__group-label {
+    .site-nav__group-label,
+    .site-nav__top-link {
       padding: 0 var(--space-3);
       border: 0;
       border-radius: var(--radius-md);
       font-size: var(--text-sm);
     }
 
-    .site-nav__group-label:hover {
+    .site-nav__group-label:hover,
+    .site-nav__top-link:hover {
       background: var(--color-surface-alt);
     }
 
@@ -358,7 +364,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
       position: absolute;
       top: calc(100% + var(--space-2));
       left: 0;
-      min-width: 16rem;
+      min-width: 18rem;
       padding: var(--space-2);
       border: 1px solid var(--color-line);
       border-top: 2px solid var(--color-accent-strong);
@@ -368,10 +374,7 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
 
     .site-nav__link {
       font-size: var(--text-sm);
-    }
-
-    .site-nav__actions {
-      margin-top: 0;
+      white-space: nowrap;
     }
   }
 </style>

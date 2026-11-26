@@ -9,58 +9,28 @@ export interface NavGroup {
   links: NavLink[];
 }
 
-export const primaryNav: NavGroup[] = [
+export interface NavItem {
+  label: string;
+  href: string;
+  links?: NavLink[];
+}
+
+export const primaryNav: NavItem[] = [
   {
     label: 'Products',
     href: '/products/',
     links: [
+      { label: 'Knit garments', href: '/products/#knit' },
+      { label: 'Woven garments', href: '/products/#woven' },
+      { label: 'Accessories and home textiles', href: '/products/#accessories' },
       { label: 'All products', href: '/products/' },
-      { label: 'T-shirts', href: '/t-shirt-manufacturer/' },
-      { label: 'Hoodies and sweatshirts', href: '/hoodie-manufacturer/' },
-      { label: 'Joggers and sweatpants', href: '/joggers-manufacturer/' },
-      { label: 'Pants and trousers', href: '/pants-trousers-manufacturer/' },
-      { label: 'Shorts', href: '/shorts-manufacturer/' },
-      { label: 'Woven shirts', href: '/shirt-manufacturer/' },
-      { label: 'Jackets', href: '/jacket-manufacturer/' },
-      { label: 'Activewear', href: '/activewear-manufacturer/' },
-      { label: 'Dresses', href: '/dress-manufacturer/' },
-      { label: 'Denim and jeans', href: '/denim-manufacturer/' },
-      { label: 'Kids and baby', href: '/kids-baby-clothing-manufacturer/' },
-      { label: 'Uniforms', href: '/uniform-manufacturer/' },
     ],
   },
-  {
-    label: 'Services',
-    href: '/all-services/',
-    links: [
-      { label: 'All services', href: '/all-services/' },
-      { label: 'Cut-and-sew production', href: '/cut-and-sew-service/' },
-      { label: 'Sampling', href: '/sample-service/' },
-    ],
-  },
-  {
-    label: 'How we work',
-    href: '/work-process/',
-    links: [
-      { label: 'Production process', href: '/work-process/' },
-      { label: 'Prices', href: '/pricing/' },
-      { label: 'Free tools', href: '/tools/' },
-      { label: 'Guides', href: '/insights/' },
-      { label: 'Compliance and audits', href: '/certifications/' },
-      { label: 'Verify us', href: '/verify-us/' },
-    ],
-  },
-  {
-    label: 'About',
-    href: '/about/',
-    links: [
-      { label: 'About SDF Clothing', href: '/about/' },
-      { label: 'Manufacturing in Bangladesh', href: '/clothing-manufacturer-bangladesh/' },
-      { label: 'How to find a manufacturer', href: '/how-to-find-clothing-manufacturer/' },
-      { label: 'Book a factory visit', href: '/booking/' },
-      { label: 'Contact', href: '/contact/' },
-    ],
-  },
+  { label: 'Services', href: '/all-services/' },
+  { label: 'How it works', href: '/work-process/' },
+  { label: 'Pricing', href: '/pricing/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
 ];
 
 export const footerNav: NavGroup[] = [

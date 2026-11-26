@@ -8,86 +8,121 @@ export interface CatalogueGroup {
   heading: string;
   lead: string;
   slugs: string[];
+  part?: string;
 }
+
+export interface CataloguePart {
+  id: string;
+  heading: string;
+  lead: string;
+}
+
+/** Top-level split of the products hub, linked from the main menu. A mixed product sits where its usual construction is. */
+export const productParts: CataloguePart[] = [
+  { id: 'knit', heading: 'Knit garments', lead: 'Clothing cut from knitted fabric such as jersey, rib, fleece and interlock. It stretches and moves with the body.' },
+  { id: 'woven', heading: 'Woven garments', lead: 'Clothing cut from woven fabric such as poplin, twill, denim and canvas. It holds its shape and takes structure well.' },
+  { id: 'accessories', heading: 'Accessories and home textiles', lead: 'Small items that complete a range or a merch drop, plus textiles for the home and pets.' },
+  { id: 'more', heading: 'Ways of working, ranges and fabrics', lead: 'Start from how you want to work with us, who the range is for or the fabric you want.' },
+];
 
 export const productGroups: CatalogueGroup[] = [
   {
+    id: 'knit-tops',
+    part: 'knit',
+    heading: 'T-shirts, hoodies and joggers',
+    lead: 'Everyday jersey and fleece, from basics to streetwear.',
+    slugs: ['t-shirt-manufacturer', 'hoodie-manufacturer', 'sweater-manufacturer', 'joggers-manufacturer', 'fleece-jacket-manufacturer', 'streetwear-manufacturer', 'merch-manufacturer', 'bodysuit-manufacturer'],
+  },
+  {
+    id: 'activewear',
+    part: 'knit',
+    heading: 'Activewear and sportswear',
+    lead: 'Stretch, performance and swim garments.',
+    slugs: ['activewear-manufacturer', 'leggings-manufacturer', 'sports-bra-manufacturer', 'tracksuit-manufacturer', 'compression-wear-manufacturer', 'base-layer-manufacturer', 'running-apparel-manufacturer', 'golf-apparel-manufacturer', 'tennis-wear-manufacturer', 'cycling-jersey-manufacturer', 'swimwear-manufacturer', 'dancewear-manufacturer'],
+  },
+  {
+    id: 'teamwear',
+    part: 'knit',
+    heading: 'Teamwear and combat sports',
+    lead: 'Kits for clubs, schools, leagues and gyms.',
+    slugs: ['football-kit-manufacturer', 'basketball-uniform-manufacturer', 'baseball-uniform-manufacturer', 'rugby-shirt-manufacturer', 'cheerleading-uniform-manufacturer', 'esports-jersey-manufacturer', 'fightwear-manufacturer'],
+  },
+  {
+    id: 'underwear',
+    part: 'knit',
+    heading: 'Underwear, lounge and kids',
+    lead: 'Garments worn closest to the skin, for adults and children.',
+    slugs: ['underwear-manufacturer', 'lingerie-manufacturer', 'shapewear-manufacturer', 'loungewear-manufacturer', 'kids-baby-clothing-manufacturer'],
+  },
+  {
+    id: 'bottoms',
+    part: 'woven',
+    heading: 'Shirts, trousers and denim',
+    lead: 'Shirts and bottoms in poplin, twill, denim and canvas.',
+    slugs: ['shirt-manufacturer', 'pants-trousers-manufacturer', 'shorts-manufacturer', 'skirts-manufacturer', 'denim-manufacturer', 'overalls-manufacturer'],
+  },
+  {
+    id: 'outerwear',
+    part: 'woven',
+    heading: 'Jackets, coats and tailoring',
+    lead: 'Outerwear from light shells to padded and tailored pieces.',
+    slugs: ['jacket-manufacturer', 'coat-manufacturer', 'puffer-jacket-manufacturer', 'rain-jacket-manufacturer', 'softshell-jacket-manufacturer', 'varsity-jacket-manufacturer', 'ski-wear-manufacturer', 'blazer-manufacturer', 'suit-manufacturer'],
+  },
+  {
+    id: 'dresses',
+    part: 'woven',
+    heading: 'Dresses, robes and cultural wear',
+    lead: 'Dresses, occasion wear, bathrobes and traditional garments.',
+    slugs: ['dress-manufacturer', 'evening-dress-manufacturer', 'wedding-dress-manufacturer', 'jumpsuit-romper-manufacturer', 'bathrobe-manufacturer', 'kurta-manufacturer', 'salwar-kameez-manufacturer', 'thobe-manufacturer', 'hijab-manufacturer'],
+  },
+  {
+    id: 'workwear',
+    part: 'woven',
+    heading: 'Workwear and uniforms',
+    lead: 'Clothing for staff, schools, kitchens, clinics, sites and dojos.',
+    slugs: ['uniform-manufacturer', 'school-uniform-manufacturer', 'scrubs-manufacturer', 'chef-uniform-manufacturer', 'apron-manufacturer', 'lab-coat-manufacturer', 'coverall-manufacturer', 'hi-vis-workwear-manufacturer', 'security-uniform-manufacturer', 'hotel-uniform-manufacturer', 'martial-arts-uniform-manufacturer'],
+  },
+  {
+    id: 'accessories-items',
+    part: 'accessories',
+    heading: 'Accessories',
+    lead: 'Headwear, neckwear, socks, gloves and branding pieces.',
+    slugs: ['hat-manufacturer', 'socks-manufacturer', 'gloves-manufacturer', 'scarf-manufacturer', 'bandana-manufacturer', 'neck-gaiter-manufacturer', 'hair-accessories-manufacturer', 'tie-manufacturer', 'embroidered-patch-manufacturer', 'baby-bib-manufacturer'],
+  },
+  {
+    id: 'bags',
+    part: 'accessories',
+    heading: 'Bags and pouches',
+    lead: 'Fabric bags for retail, merch and packaging.',
+    slugs: ['tote-bag-manufacturer', 'drawstring-bag-manufacturer', 'cosmetic-pouch-manufacturer', 'dust-bag-manufacturer'],
+  },
+  {
+    id: 'home',
+    part: 'accessories',
+    heading: 'Home, sleep and pets',
+    lead: 'Textiles for the home, travel and four-legged customers.',
+    slugs: ['silk-pillowcase-manufacturer', 'sleep-mask-manufacturer', 'cushion-cover-manufacturer', 'tea-towel-manufacturer', 'table-linen-manufacturer', 'pet-clothing-manufacturer'],
+  },
+  {
     id: 'ways-of-working',
+    part: 'more',
     heading: 'Ways of working with us',
     lead: 'How an order is set up, whatever the product.',
     slugs: ['private-label-clothing-manufacturer', 'low-moq-clothing-manufacturers', 'clothing-manufacturers-for-startups', 'sustainable-clothing-manufacturer'],
   },
   {
-    id: 'tops',
-    heading: 'T-shirts, hoodies and tops',
-    lead: 'Knit and woven tops, from basics to streetwear.',
-    slugs: ['t-shirt-manufacturer', 'hoodie-manufacturer', 'sweater-manufacturer', 'shirt-manufacturer', 'streetwear-manufacturer', 'merch-manufacturer', 'menswear-manufacturer', 'bodysuit-manufacturer'],
-  },
-  {
-    id: 'bottoms',
-    heading: 'Trousers, shorts and skirts',
-    lead: 'Bottoms in fleece, denim, twill and jersey.',
-    slugs: ['joggers-manufacturer', 'pants-trousers-manufacturer', 'shorts-manufacturer', 'skirts-manufacturer', 'denim-manufacturer', 'overalls-manufacturer'],
-  },
-  {
-    id: 'outerwear',
-    heading: 'Jackets, coats and tailoring',
-    lead: 'Outerwear from light shells to padded and tailored pieces.',
-    slugs: ['jacket-manufacturer', 'coat-manufacturer', 'puffer-jacket-manufacturer', 'rain-jacket-manufacturer', 'fleece-jacket-manufacturer', 'softshell-jacket-manufacturer', 'varsity-jacket-manufacturer', 'blazer-manufacturer', 'suit-manufacturer'],
-  },
-  {
-    id: 'activewear',
-    heading: 'Activewear and sportswear',
-    lead: 'Stretch, performance and swim garments.',
-    slugs: ['activewear-manufacturer', 'leggings-manufacturer', 'sports-bra-manufacturer', 'tracksuit-manufacturer', 'compression-wear-manufacturer', 'base-layer-manufacturer', 'running-apparel-manufacturer', 'golf-apparel-manufacturer', 'tennis-wear-manufacturer', 'cycling-jersey-manufacturer', 'ski-wear-manufacturer', 'swimwear-manufacturer', 'dancewear-manufacturer'],
-  },
-  {
-    id: 'teamwear',
-    heading: 'Teamwear and combat sports',
-    lead: 'Kits for clubs, schools, leagues and gyms.',
-    slugs: ['football-kit-manufacturer', 'basketball-uniform-manufacturer', 'baseball-uniform-manufacturer', 'rugby-shirt-manufacturer', 'cheerleading-uniform-manufacturer', 'esports-jersey-manufacturer', 'martial-arts-uniform-manufacturer', 'fightwear-manufacturer'],
-  },
-  {
-    id: 'womenswear',
-    heading: 'Womenswear, occasion and inclusive',
-    lead: 'Dresses, occasion wear and ranges built around different bodies.',
-    slugs: ['clothing-manufacturers-for-women', 'dress-manufacturer', 'evening-dress-manufacturer', 'wedding-dress-manufacturer', 'jumpsuit-romper-manufacturer', 'maternity-clothing-manufacturer', 'plus-size-clothing-manufacturer', 'adaptive-clothing-manufacturer', 'shapewear-manufacturer'],
-  },
-  {
-    id: 'underwear',
-    heading: 'Underwear, sleep and kids',
-    lead: 'Garments worn closest to the skin, for adults and children.',
-    slugs: ['underwear-manufacturer', 'lingerie-manufacturer', 'loungewear-manufacturer', 'bathrobe-manufacturer', 'kids-baby-clothing-manufacturer', 'baby-bib-manufacturer'],
-  },
-  {
-    id: 'workwear',
-    heading: 'Workwear and uniforms',
-    lead: 'Clothing for staff, schools, kitchens, clinics and sites.',
-    slugs: ['uniform-manufacturer', 'school-uniform-manufacturer', 'scrubs-manufacturer', 'chef-uniform-manufacturer', 'apron-manufacturer', 'lab-coat-manufacturer', 'coverall-manufacturer', 'hi-vis-workwear-manufacturer', 'security-uniform-manufacturer', 'hotel-uniform-manufacturer'],
-  },
-  {
-    id: 'modest',
-    heading: 'Modest and cultural wear',
-    lead: 'Modest fashion and traditional garments for global markets.',
-    slugs: ['modest-fashion-manufacturer', 'hijab-manufacturer', 'kurta-manufacturer', 'salwar-kameez-manufacturer', 'thobe-manufacturer'],
+    id: 'ranges',
+    part: 'more',
+    heading: 'Ranges by customer',
+    lead: 'Collections built around who will wear them.',
+    slugs: ['clothing-manufacturers-for-women', 'menswear-manufacturer', 'plus-size-clothing-manufacturer', 'maternity-clothing-manufacturer', 'adaptive-clothing-manufacturer', 'modest-fashion-manufacturer'],
   },
   {
     id: 'fabrics',
+    part: 'more',
     heading: 'By fabric and finish',
     lead: 'Start from the material or the effect you want.',
     slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
-  },
-  {
-    id: 'accessories',
-    heading: 'Accessories and bags',
-    lead: 'Small items that complete a range or a merch drop.',
-    slugs: ['hat-manufacturer', 'socks-manufacturer', 'gloves-manufacturer', 'scarf-manufacturer', 'bandana-manufacturer', 'neck-gaiter-manufacturer', 'hair-accessories-manufacturer', 'tie-manufacturer', 'embroidered-patch-manufacturer', 'tote-bag-manufacturer', 'drawstring-bag-manufacturer', 'cosmetic-pouch-manufacturer', 'dust-bag-manufacturer'],
-  },
-  {
-    id: 'home',
-    heading: 'Home, sleep and pets',
-    lead: 'Textiles for the home, travel and four-legged customers.',
-    slugs: ['silk-pillowcase-manufacturer', 'sleep-mask-manufacturer', 'cushion-cover-manufacturer', 'tea-towel-manufacturer', 'table-linen-manufacturer', 'pet-clothing-manufacturer'],
   },
 ];
 
