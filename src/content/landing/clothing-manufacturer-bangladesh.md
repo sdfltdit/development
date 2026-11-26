@@ -44,6 +44,7 @@ related:
   - /work-process/
   - /pricing/
   - /insights/incoterms-explained/
+  - /insights/payment-terms-lc-vs-tt/
 published: 2026-11-25
 updated: 2026-11-25
 ---

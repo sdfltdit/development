@@ -255,3 +255,5 @@
 /full-package-production /cut-and-sew-service/ 301
 /fulfillment-service/ /all-services/ 301
 /fulfillment-service /all-services/ 301
+/insights/acceptable-delta-e-for-lab-dip/ /insights/lab-dip-explained/ 301
+/insights/acceptable-delta-e-for-lab-dip /insights/lab-dip-explained/ 301

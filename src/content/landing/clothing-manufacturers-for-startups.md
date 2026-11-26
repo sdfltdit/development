@@ -54,6 +54,8 @@ related:
   - /clothing-brand-startup-costs/
   - /pricing/
   - /pattern-making-service/
+  - /insights/payment-terms-lc-vs-tt/
+  - /insights/moq-meaning-clothing/
 published: 2026-11-25
 updated: 2026-11-25
 ---

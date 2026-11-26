@@ -132,6 +132,11 @@ const STRICT = new Set([
   '/insights/aql-inspection-explained/',
   '/insights/fabric-gsm-explained/',
   '/insights/incoterms-explained/',
+  '/insights/lab-dip-explained/',
+  '/insights/printing-methods-compared/',
+  '/insights/payment-terms-lc-vs-tt/',
+  '/insights/how-to-calculate-landed-cost/',
+  '/insights/moq-meaning-clothing/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

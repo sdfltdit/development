@@ -252,3 +252,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Startup cost guides online quote invented budgets. Ours uses only our own price tokens (price at MOQ and MOQ totals) and leaves freight, duty and launch costs as lines the buyer prices.
 - GSM: ISO 3801 sets the lab method for woven fabric. The guide gives a cutter-and-scale method and a GSM chart, with our own GSM ranges from tokens.
 - Tech pack guide targets the informational intent, and links to the tech pack service page that owns the commercial keywords (clothing tech pack, spec sheet, bill of materials).
+
+## Guide batch 2 (lab dip, printing methods, payment terms, landed cost, MOQ)
+
+- Lab dips: ISO 105-J03:2009 (confirmed 2025) is the colour-difference method behind CMC delta E. The guide gives common acceptance bands as practice, not as a rule, and merges the old delta E insight URL.
+- Payment terms: UCP 600 (ICC, in force since 2007) governs most letters of credit. The guide covers T/T, LC at sight, usance LC and documents against payment, plus bank-detail fraud checks. Our own schedule comes from the `{{payment}}` token.
+- Landed cost: HS chapters 61 (knitted) and 62 (not knitted) cover clothing. The worked example uses placeholders for freight, duty and fees, because those depend on the buyer's market.
+- Printing methods: informational comparison. Commercial print keywords stay with the printing service page.
+- MOQ: explains per order, per style, per colour and per fabric minimums. Commercial low-MOQ keywords stay with the low MOQ page.

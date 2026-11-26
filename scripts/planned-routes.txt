@@ -33,7 +33,6 @@
 /in-house-qc-vs-third-party-inspection-vs-no-inspection/
 /inclusive-sizing-guide/
 /insights/
-/insights/acceptable-delta-e-for-lab-dip/
 /insights/avoiding-clothing-manufacturer-scams/
 /insights/bangladesh-rmg-industry-data/
 /insights/circular-fashion-guide/
@@ -52,19 +51,14 @@
 /insights/garment-washing-explained/
 /insights/gots-certification-explained/
 /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
-/insights/how-to-calculate-landed-cost/
 /insights/how-to-negotiate-with-clothing-manufacturers/
 /insights/how-to-write-pantone-tcx-in-a-tech-pack/
 /insights/international-size-chart-guide/
 /insights/knitting-defects-explained/
-/insights/lab-dip-explained/
 /insights/manufacturing-costs/
-/insights/moq-meaning-clothing/
 /insights/oem-vs-odm-vs-cmt/
 /insights/pantone-tcx-vs-pms-vs-tpg-for-clothing/
 /insights/pattern-fit-problems-explained/
-/insights/payment-terms-lc-vs-tt/
-/insights/printing-methods-compared/
 /insights/sample-cost-explained/
 /insights/shade-variation-explained/
 /insights/shipment-delay-explained/

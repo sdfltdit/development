@@ -52,7 +52,7 @@ related:
   - /t-shirt-manufacturer/
   - /hoodie-manufacturer/
   - /pricing/
-  - /work-process/
+  - /insights/moq-meaning-clothing/
   - /clothing-brand-startup-costs/
   - /insights/incoterms-explained/
 published: 2026-11-25

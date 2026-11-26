@@ -49,6 +49,8 @@ related:
   - /insights/incoterms-explained/
   - /sample-service/
   - /pricing/
+  - /insights/how-to-calculate-landed-cost/
+  - /insights/moq-meaning-clothing/
 published: 2026-11-26
 updated: 2026-11-26
 ---
@@ -124,7 +126,7 @@ Landed cost per garment is what each piece really costs you once it arrives:
 1. Add up factory price, freight, insurance, duty, clearance and local delivery.
 2. Divide by the number of pieces.
 
-Compare landed cost per garment with your selling price, not the factory price. A margin that looks healthy at the factory can shrink once duty and freight are added.
+Compare landed cost per garment with your selling price, not the factory price. Our guide on [how to calculate landed cost](/insights/how-to-calculate-landed-cost/) has a worked example. A margin that looks healthy at the factory can shrink once duty and freight are added.
 
 ## Group 4: Launch costs
 
