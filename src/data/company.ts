@@ -95,6 +95,13 @@ export const terms = {
   replyHours: 24,
 } as const;
 
+/** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims and garment accessories. Never name it. */
+export const sisterCompany = {
+  fabricAbove: 5000,
+} as const;
+
+export const sisterCompanyPolicy = `For orders above ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces, our sister company can make the knit or woven fabric for you. It also makes trims and garment accessories for the clothing we produce`;
+
 export const sampleFeePolicy = `There is no separate sample fee. Your ${terms.payment[0].share}% deposit covers the sample, up to ${terms.sampleCorrections} free rounds of corrections and express courier to your door anywhere in the world`;
 
 export const capabilities = {
@@ -192,6 +199,8 @@ export const tokens: Record<string, string> = {
   lc: terms.lc.summary,
   sampleFee: `${sampleFeePolicy}.`,
   sampleCorrections: String(terms.sampleCorrections),
+  sisterFabricAbove: sisterCompany.fabricAbove.toLocaleString('en-GB'),
+  sisterCompany: `${sisterCompanyPolicy}.`,
   sampleCourier: terms.sampleCourier,
   paymentScope: `${terms.paymentScope}.`,
   replyHours: String(terms.replyHours),

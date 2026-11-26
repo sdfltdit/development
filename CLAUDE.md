@@ -62,6 +62,7 @@ Never publish
 - Certificates or certification names, company registration (RJSC), TIN, trade association names or member numbers. The `/certifications/` page explains our compliance approach without naming any.
 - Live video call offers.
 - Partners or subcontractors. All cutting, sewing, printing (screen, DTF, sublimation) and embroidery is in-house.
+  - One owner-confirmed exception (27 November 2026): our sister company makes knit and woven fabric for orders above 5,000 pieces, and trims and garment accessories. Never name it, never call it a partner or subcontractor, and use only the `sisterFabricAbove` and `sisterCompany` tokens (`sisterCompanyPolicy` in `company.ts`). Whether 5,000 counts per order or per style is still to confirm with the owner.
 - Invented names, testimonials, reviews, client logos, numbers, counters or case studies.
 - Stock photos presented as our factory, team or products.
 - "Facts last checked", "prices checked on" or similar date notes next to tables. Dates live in schema and the "About this page" block only.
@@ -626,4 +627,5 @@ Never 301 to a loosely related page such as the home page, because search engine
 - Owner's menu: Products (dropdown: Knit garments, Woven garments, Accessories and home textiles, All products), Services, How it works, Pricing, About, Contact. No other dropdowns. No "Get a quote" button in the header, by the owner's choice: it lives in the CTA band above the footer and in page content. Data in `primaryNav` in `src/data/nav.ts`.
 - `/products/` is split into parts (`productParts` in `src/data/catalogue.ts`): knit, woven, accessories, and "ways of working, ranges and fabrics". Every group needs a `part`, or the build fails. A mixed product (dresses, uniforms, kids, jumpsuits) sits where its usual construction is, and its own page covers both.
 - Part headings are H2, group headings H3, card titles H4 on this hub only.
+- Services menu and `/all-services/` follow the owner's six groups: Product development, Material sourcing, Garment manufacturing, Printing and embroidery, Quality and compliance, Global supply chain. Each group has an "Included" line (`activities`) and may add non-collection cards (`extras`). "Testing" is left out of the quality line because lab tests and certificates stay with the brand or importer.
 

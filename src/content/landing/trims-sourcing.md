@@ -29,6 +29,8 @@ specs:
     value: Flat and round drawcords, metal or rubber aglets, woven and knitted elastics
   - label: Branded trims
     value: Engraved buttons, branded pullers, printed elastics and custom aglets
+  - label: Own trims
+    value: Trims and garment accessories made by our sister company for the clothing we produce
   - label: Testing
     value: Pull, wash and rust tests before bulk
   - label: Sample time
@@ -55,6 +57,8 @@ faq:
     a: Yes. Send them with enough spares, and we test them with your fabric before bulk.
   - q: Are metal trims nickel-free?
     a: We can source nickel-free metal trims when you ask. The trim maker's report confirms it.
+  - q: Do you make trims yourselves?
+    a: Yes. Our sister company makes trims and garment accessories for the clothing we produce, which helps us match colours and keep timing under control.
 related:
   - /fabric-sourcing/
   - /garment-labels/
@@ -63,5 +67,5 @@ related:
   - /denim-manufacturer/
   - /tech-pack-service/
 published: 2026-11-26
-updated: 2026-11-26
+updated: 2026-11-27
 ---

@@ -114,7 +114,7 @@ const schema = standardPage({
               {sections.map((section) => (
                 <li>
                   <a class="hub-nav__link" href={`#${section.id}`}>
-                    {section.heading} <span class="hub-nav__count">({section.items.length})</span>
+                    {section.heading} <span class="hub-nav__count">({section.items.length + (section.extras?.length ?? 0)})</span>
                   </a>
                 </li>
               ))}
@@ -126,6 +126,11 @@ const schema = standardPage({
             <div class="container">
               <div class="section__head">
                 <h2 id={`${section.id}-heading`}>{section.heading}</h2>
+                {section.activities && (
+                  <p class="hub-activities">
+                    <span class="hub-activities__label">Included:</span> {section.activities}
+                  </p>
+                )}
                 <p class="section__lead">{section.lead}</p>
               </div>
               <ul class="cards">
@@ -135,6 +140,15 @@ const schema = standardPage({
                     <p class="card__text">{fill(item.data.cardSummary)}</p>
                     <a class="card__link" href={`/${item.id}/`}>
                       {item.data.linkText ?? `${item.data.navLabel}: details and terms`}
+                    </a>
+                  </li>
+                ))}
+                {(section.extras ?? []).map((extra) => (
+                  <li class="card">
+                    <h3 class="card__title">{extra.title}</h3>
+                    <p class="card__text">{extra.summary}</p>
+                    <a class="card__link" href={extra.href}>
+                      {extra.linkText}
                     </a>
                   </li>
                 ))}
@@ -181,6 +195,16 @@ const schema = standardPage({
   .hub-part__lead {
     margin: 0 0 var(--space-2);
     color: var(--color-text);
+  }
+
+  .hub-activities {
+    margin: 0;
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  .hub-activities__label {
+    color: var(--color-accent);
   }
 
   .hub-part {

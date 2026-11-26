@@ -3,12 +3,21 @@
  * Every product, model and service page must appear in exactly one group, or the build fails.
  */
 
+export interface CatalogueExtra {
+  href: string;
+  title: string;
+  summary: string;
+  linkText: string;
+}
+
 export interface CatalogueGroup {
   id: string;
   heading: string;
   lead: string;
   slugs: string[];
   part?: string;
+  activities?: string;
+  extras?: CatalogueExtra[];
 }
 
 export interface CataloguePart {
@@ -129,33 +138,67 @@ export const productGroups: CatalogueGroup[] = [
 export const serviceGroups: CatalogueGroup[] = [
   {
     id: 'development',
-    heading: 'Development',
-    lead: 'Turning an idea into an approved sample.',
+    heading: 'Product development',
+    activities: 'Design, pattern and sampling',
+    lead: 'Turning an idea or a photo into an approved sample.',
     slugs: ['tech-pack-service', 'pattern-making-service', 'sample-service', 'lab-dip-service'],
   },
   {
-    id: 'production',
-    heading: 'Production',
-    lead: 'Making the bulk order on our own lines.',
+    id: 'sourcing',
+    heading: 'Material sourcing',
+    activities: 'Fabric, trims and accessories',
+    lead: 'Fabric, trims and branding for the garments we make, with large orders supplied by our sister company.',
+    slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels'],
+  },
+  {
+    id: 'manufacturing',
+    heading: 'Garment manufacturing',
+    activities: 'Cutting, sewing and assembly',
+    lead: 'Your bulk order, made by our own sewing teams from first cut to final press.',
     slugs: ['cut-and-sew-service'],
   },
   {
     id: 'decoration',
-    heading: 'Decoration and finishing',
-    lead: 'Prints, embroidery, dyes and washes, done in-house.',
+    heading: 'Printing and embroidery',
+    activities: 'Screen and digital printing, embroidery, dyeing and washing',
+    lead: 'Decoration and finishing, done in-house.',
     slugs: ['printing-service', 'embroidery-service', 'dyeing-service', 'washing-service'],
   },
   {
-    id: 'sourcing',
-    heading: 'Sourcing and labels',
-    lead: 'Fabric, trims and branding for the garments we make.',
-    slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels'],
+    id: 'quality',
+    heading: 'Quality and compliance',
+    activities: 'Quality control, inspection and audits',
+    lead: 'Checks from fabric arrival to the final inspection, and support for your audits.',
+    slugs: ['quality-inspection-service'],
+    extras: [
+      {
+        href: '/certifications/',
+        title: 'Compliance and audits',
+        summary: 'How we share compliance documents and work with buyer audits and third-party inspectors.',
+        linkText: 'Clothing factory compliance details',
+      },
+    ],
   },
   {
-    id: 'quality',
-    heading: 'Quality',
-    lead: 'Checks from fabric arrival to the final audit.',
-    slugs: ['quality-inspection-service'],
+    id: 'supply-chain',
+    heading: 'Global supply chain',
+    activities: 'Merchandising, packaging and export',
+    lead: 'One merchandiser from quote to shipment, packing to your instructions and export to any country.',
+    slugs: [],
+    extras: [
+      {
+        href: '/work-process/',
+        title: 'Merchandising, packing and export',
+        summary: 'Each step from quote to shipment, with timing, payment, packing and shipping terms.',
+        linkText: 'Clothing production process details',
+      },
+      {
+        href: '/insights/payment-terms-lc-vs-tt/',
+        title: 'Export payment terms',
+        summary: 'How letter of credit and direct payments work for an export order.',
+        linkText: 'LC vs T/T payment terms explained',
+      },
+    ],
   },
 ];
 
