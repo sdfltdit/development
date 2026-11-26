@@ -152,4 +152,4 @@ Air freight is far faster but costs much more. Our guide to [Incoterms explained
 
 ## Where SDF Clothing fits
 
-Our proto samples take {{sampleDays}} days and bulk takes {{bulkDays}} days after sample approval. Every order gets a written quote within {{quoteHours}} hours. Our [production process](/work-process/) page shows each stage and the payment due at each step.
+Our proto samples take {{sampleDays}} days, and bulk follows in {{bulkDays}} days once you sign off the sample. Every order gets a written quote within {{quoteHours}} hours. Our [production process](/work-process/) page shows each stage and the payment due at each step.

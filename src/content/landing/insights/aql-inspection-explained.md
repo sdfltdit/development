@@ -12,7 +12,7 @@ secondaryKeywords:
   - AQL sampling table
   - AQL 2.5
   - acceptance quality limit
-  - critical major minor defects
+  - critical, major and minor defects
 intent: informational
 answer: "AQL inspection checks a random sample of finished garments instead of every piece. The order size sets how many pieces are pulled, and the acceptance quality limit sets how many defects are allowed before the lot fails. Clothing buyers usually allow zero critical defects, AQL 2.5 for major defects and AQL 4.0 for minor ones."
 facts: [moq, bulk, aql]
@@ -37,7 +37,7 @@ sources:
     publisher: ISO
     url: https://www.iso.org/standard/85464.html
 faq:
-  - q: What does AQL stand for?
+  - q: What does acceptance quality limit mean?
     a: AQL stands for acceptance quality limit. It is the worst average defect rate a buyer will accept across a series of lots, used to set how many defects are allowed in a sample.
   - q: What does AQL 2.5 mean in practice?
     a: AQL 2.5 means the sampling plan accepts a lot when defects in the sample stay within the limit set for 2.5. For a lot of 1,201 to 3,200 garments, that is up to 7 major defects in a sample of 125.

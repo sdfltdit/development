@@ -39,7 +39,7 @@ faq:
   - q: Why does the same colour look different on cotton vs polyester?
     a: Cotton and polyester take different dye types and reflect light in different ways. The same recipe never gives the same result, so each fabric needs its own lab dip.
   - q: How do I write a Pantone colour in a tech pack?
-    a: Write the full code with its suffix, such as 19-4052 TCX, next to the part it applies to. Add a swatch photo and say which fabric the colour is for.
+    a: Give the complete TCX reference beside each part it applies to. Add a swatch photo and say which fabric the colour is for.
   - q: Do I need to buy a Pantone book?
     a: It helps if colour is central to your brand. If not, send a physical sample of the colour you want, such as a garment, a fabric piece or a yarn.
   - q: What is a physical colour standard?

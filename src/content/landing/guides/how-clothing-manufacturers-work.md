@@ -41,9 +41,9 @@ faq:
   - q: What are the main garment factory departments?
     a: Merchandising, sampling and patterns, the fabric and trims store, cutting, sewing, finishing, quality and packing. Larger factories add printing, embroidery, washing and dyeing.
   - q: How does a production line work?
-    a: A garment is split into operations, such as setting a sleeve or sewing a hem. Each operator does one or a few operations, and pieces move along the line until the garment is complete.
+    a: Sewing is split into small tasks done by different people. Bundles of cut pieces pass from one station to the next until the garment is finished.
   - q: What is factory capacity?
-    a: Factory capacity is how many pieces a factory can make in a set time. It depends on the number of lines, operators and the minutes each style takes to sew.
+    a: It is the output a factory can reach per day or month. Lines, staff and the sewing minutes of each style all decide it.
   - q: How do clothing manufacturers price an order?
     a: Price is built from fabric, trims, labour minutes, decoration, overheads and margin, then adjusted for quantity. Fabric is usually the largest part.
   - q: Why do factories have minimum orders?
@@ -61,7 +61,7 @@ published: 2026-11-26
 updated: 2026-11-26
 ---
 
-## Why it helps to know how a factory works
+## Why it helps to know how clothing manufacturers work
 
 Most buyers only see emails, samples and cartons. Knowing how clothing manufacturers work behind the scenes helps you write better briefs, ask better questions and understand why some requests take longer than others.
 

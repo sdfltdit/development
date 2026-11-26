@@ -37,7 +37,7 @@ faq:
   - q: What is the difference between FOB vs CMT?
     a: An FOB price includes fabric, trims, labour and delivery to the port. A CMT price covers labour and trims only, because you supply the fabric. CMT looks cheaper but leaves fabric cost and risk with you.
   - q: What does CM only production mean?
-    a: CM only means cut and make. You supply both fabric and trims, and the factory charges only for cutting and sewing.
+    a: CM only means cut and make. The brand provides every material, and the price covers labour for cutting and sewing.
   - q: Who has design ownership in each model?
     a: With OEM, the design is yours. With ODM, it usually belongs to the factory, unless you agree otherwise in writing. Check this before you order.
   - q: Is OEM the same as private label?
@@ -59,7 +59,7 @@ updated: 2026-11-26
 
 When brands start talking to factories, they hear OEM, ODM, CMT, CM and FOB. These terms describe who supplies the design, who buys the fabric and what the price includes. Mixing them up can lead to quotes that cannot be compared.
 
-This guide explains OEM vs ODM vs CMT and the related terms in plain language.
+This guide explains each of these terms in plain language.
 
 ## OEM vs ODM vs CMT at a glance
 

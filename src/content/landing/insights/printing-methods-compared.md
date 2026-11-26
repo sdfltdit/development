@@ -39,7 +39,7 @@ faq:
   - q: Is DTG vs screen printing more durable?
     a: Screen printing usually lasts longer, because thick ink sits in and on the fabric. DTG prints fade faster, especially on dark garments with a white base.
   - q: What is the best printing method for t-shirts?
-    a: For most brand tees, screen printing is the best mix of cost, feel and durability. Use water-based or discharge ink for a soft hand.
+    a: Screen printing usually wins on cost, feel and wash life once you order a few hundred tees. Water-based or discharge ink gives a softer hand.
   - q: How can I test print durability?
     a: Wash a printed sample inside out several times, then stretch the print. Look for cracking, peeling and fading compared with an unwashed piece.
   - q: Why do screen prints cost more on small orders?

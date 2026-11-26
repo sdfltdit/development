@@ -35,7 +35,7 @@ serviceType: Guide to clothing manufacturing costs
 sources: []
 faq:
   - q: What is the cost breakdown of a garment?
-    a: A typical cost breakdown of a garment covers fabric, cutting and sewing, trims and labels, decoration, packing, checks, and the factory's overheads and margin. Fabric is usually the largest line.
+    a: A typical cost breakdown of a garment has eight lines, from fabric and sewing through to packing and profit. The table above lists them, with fabric as the biggest.
   - q: What is CM cost?
     a: CM cost is the charge for cutting and making a garment. It depends on how many sewing minutes the style needs, so a simple tee costs less to make than a lined jacket.
   - q: How is fabric cost per garment worked out?

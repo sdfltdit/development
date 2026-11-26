@@ -62,7 +62,7 @@ published: 2026-11-26
 updated: 2026-11-26
 ---
 
-## What customs clearance means
+## Customs clearance guide: the basics
 
 Every shipment of clothing must clear customs before it can enter your country. Customs checks what the goods are, where they were made and what they are worth. Then it charges duty and tax and releases the goods.
 
@@ -143,4 +143,4 @@ Most customs delays come from paperwork, not the goods. To avoid them:
 
 ## Where SDF Clothing fits
 
-We ship {{incoterm}} {{port}} and send draft invoices and packing lists for your broker to check before shipment. Bulk takes {{bulkDays}} days after sample approval, and orders start at {{moq}} {{moqUnit}}. Our [garment labels](/garment-labels/) service covers care, origin and fibre labels.
+Use this customs clearance guide as a checklist with your broker. We ship {{incoterm}} {{port}} and send draft invoices and packing lists for your broker to check before shipment. Bulk takes {{bulkDays}} days after sample approval, and orders start at {{moq}} {{moqUnit}}. Our [garment labels](/garment-labels/) service covers care, origin and fibre labels.

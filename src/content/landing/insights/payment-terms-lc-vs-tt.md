@@ -14,7 +14,7 @@ secondaryKeywords:
   - LC at sight
   - documents against payment
 intent: informational
-answer: "The two main payment terms for clothing orders are telegraphic transfer (T/T), a direct bank payment usually split into a deposit and balance, and a letter of credit (LC), where your bank promises to pay the factory once shipping documents match the credit. T/T is simpler and cheaper. An LC adds bank protection for larger orders, at a cost."
+answer: "The two main payment terms for clothing orders are telegraphic transfer (T/T) and a letter of credit (LC). T/T is a direct bank payment, usually split into stages. With an LC, your bank promises to pay the factory once shipping documents match the credit. T/T is simpler and cheaper. An LC adds bank protection for larger orders, at a cost."
 facts: [moq, sample, quote]
 specsCaption: Payment terms at a glance.
 specs:

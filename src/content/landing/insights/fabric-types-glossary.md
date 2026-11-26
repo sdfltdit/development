@@ -55,7 +55,7 @@ published: 2026-11-26
 updated: 2026-11-26
 ---
 
-## Why fabric words matter
+## Why a fabric types glossary helps
 
 Fabric is usually the largest part of a garment's cost, and it decides how the garment feels, fits and lasts. When you brief a factory, using the right fabric names saves time and avoids wrong samples.
 
@@ -132,7 +132,7 @@ When choosing fabric for clothing, work through these questions:
 4. **How will it be washed?** Check shrinkage and colour fastness on the test report.
 5. **What price do you need?** Fabric choice moves cost more than any other factor.
 
-Ask for swatches before sampling. Feeling the fabric is the quickest way to decide.
+Ask for swatches before sampling. Feeling the fabric is the quickest way to decide, and this fabric types glossary gives you the words to ask for it.
 
 ## Where SDF Clothing fits
 

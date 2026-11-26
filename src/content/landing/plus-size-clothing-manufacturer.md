@@ -67,6 +67,7 @@ related:
   - /private-label-clothing-manufacturer/
   - /adaptive-clothing-manufacturer/
   - /maternity-clothing-manufacturer/
+  - /insights/international-size-chart-guide/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -14,7 +14,7 @@ secondaryKeywords:
   - import duty on clothing
   - HS codes for clothing
 intent: informational
-answer: "Here is how to calculate landed cost: add the factory price, freight, insurance, import duty, customs and broker fees, and local delivery for the whole shipment, then divide by the number of pieces. The result is what each garment really costs you once it reaches your warehouse. Compare it with your selling price, not the factory price."
+answer: "Here is how to calculate landed cost. Add the factory price, freight, insurance, import duty, customs and broker fees and local delivery for the whole shipment. Then divide by the number of pieces. The result is what each garment really costs you once it reaches your warehouse. Compare it with your selling price, not the factory price."
 facts: [moq, quote, incoterm]
 specsCaption: The landed cost formula at a glance.
 specs:
@@ -65,11 +65,11 @@ published: 2026-11-26
 updated: 2026-11-26
 ---
 
-## Why landed cost matters
+## Why you need to know how to calculate landed cost
 
 A factory price is only part of what a garment costs you. By the time it reaches your warehouse, freight, duty and fees have been added. If you set your selling price from the factory price alone, your margin can disappear.
 
-Knowing how to calculate landed cost lets you price correctly, compare factories fairly and spot when a cheap quote is not cheap at all.
+Knowing your true cost per piece lets you price correctly, compare factories fairly and spot when a cheap quote is not cheap at all.
 
 ## The landed cost formula
 

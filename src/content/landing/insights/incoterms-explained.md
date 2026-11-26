@@ -14,7 +14,7 @@ secondaryKeywords:
   - FOB vs CIF
   - DDP shipping
 intent: informational
-answer: "Incoterms are eleven standard trade terms published by the International Chamber of Commerce. Each one says where the seller hands over the goods, who pays for each part of the journey and when risk passes to the buyer. Incoterms 2020 is still the current edition. Most clothing factories quote FOB, which covers everything up to loading at the port of export."
+answer: "Incoterms are eleven standard trade terms published by the International Chamber of Commerce. Each one says where the seller hands over the goods, which side pays for each stage and when risk passes to the buyer. Incoterms 2020 is still the current edition. Most clothing factories quote FOB, which covers everything up to loading at the port of export."
 facts: [moq, quote, incoterm]
 specsCaption: Incoterms at a glance.
 specs:
@@ -37,7 +37,7 @@ sources:
     publisher: International Chamber of Commerce
     url: https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/
   - title: "Incoterms rules history and FAQ"
-    publisher: International Chamber of Commerce
+    publisher: ICC
     url: https://www.iccwbo.org/incoterms_faq/
 faq:
   - q: Are Incoterms 2020 still current?
@@ -51,7 +51,7 @@ faq:
   - q: Do Incoterms say when I must pay?
     a: No. Incoterms cover delivery, costs and risk. Payment terms, such as a deposit and balance, go in the contract or proforma invoice.
   - q: Why do some experts say FOB is wrong for containers?
-    a: FOB passes risk when goods are on board the ship. Container cargo is usually handed to the carrier earlier at a terminal, so the ICC notes that FCA can fit container shipments better.
+    a: Often FCA is the better fit for containers, because the goods are handed over at a terminal before loading. With FCA, risk moves at that handover.
 related:
   - /clothing-brand-startup-costs/
   - /clothing-manufacturer-bangladesh/
@@ -60,7 +60,7 @@ related:
   - /quality-inspection-service/
   - /low-moq-clothing-manufacturers/
   - /insights/how-to-calculate-landed-cost/
-  - /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
+  - /insights/customs-clearance-guide/
 published: 2026-11-26
 updated: 2026-11-26
 ---
@@ -111,7 +111,7 @@ The rules split into two groups by transport mode.
 | CFR | Cost and Freight | On board, with freight paid to the destination port | When goods are on board at export |
 | CIF | Cost, Insurance and Freight | As CFR, plus minimum insurance | When goods are on board at export |
 
-A key point in the C rules (CPT, CIP, CFR, CIF): the seller pays freight to the destination, but risk passes to the buyer much earlier, at the start of the main journey.
+A key point in the C rules (CPT, CIP, CFR, CIF) is easy to miss. The seller pays freight to the destination, but risk passes to the buyer at the start of the main journey.
 
 ## FOB vs EXW
 

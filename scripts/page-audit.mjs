@@ -231,7 +231,7 @@ function keywordRegistry() {
     pages.set(path, { primary, secondary: [...sec.matchAll(/'([^']+)'/g)].map((m) => m[1]) });
   }
   const dir = 'src/content/landing';
-  for (const file of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+  for (const file of readdirSync(dir, { recursive: true, encoding: 'utf8' }).filter((f) => f.endsWith('.md'))) {
     const fm = readFileSync(join(dir, file), 'utf8').split('---')[1] ?? '';
     const primary = fm.match(/^primaryKeyword:\s*(.+)$/m)?.[1]?.replace(/^["']|["']$/g, '');
     const sec = fm.match(/^secondaryKeywords:\n((?:\s+- .+\n)+)/m)?.[1] ?? '';
@@ -370,7 +370,7 @@ for (const p of pages) {
   }
   const repeats = [...grams].filter(([g, n]) => n > 1 && !targets.some((t) => g.includes(lower(t))));
   if (repeats.length) report(p.route, `repeated phrase: "${repeats[0][0]}"${repeats.length > 1 ? ` and ${repeats.length - 1} more` : ''}`);
-  if (process.env.AUDIT_VERBOSE && repeats.length > 1) for (const r of repeats.slice(1)) console.log(`    also: "${r[0]}"`);
+  if (process.env.AUDIT_VERBOSE && repeats.length > 1) for (const r of repeats) console.log(`    ${p.route} repeat: "${r[0]}"`);
 
   const links = inbound.get(p.route) ?? [];
   const fromPages = new Set(links.map((l) => l.from));

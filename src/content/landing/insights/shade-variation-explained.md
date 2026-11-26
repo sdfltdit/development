@@ -62,7 +62,7 @@ Dyeing is chemistry, and chemistry is never perfectly repeatable. Two batches of
 
 That small difference is shade variation. Shoppers rarely notice it between two separate tees. They notice it at once when the sleeve of a hoodie is lighter than the body.
 
-The goal is not zero shade variation. It is keeping variation inside limits you agreed, and making sure it never shows inside one garment.
+The goal is not a perfect match. It is keeping variation inside limits you agreed, and making sure it never shows inside one garment.
 
 ## The four types of shading
 
@@ -97,7 +97,7 @@ Agree the shade band in writing before bulk dyeing. It turns a subjective debate
 
 ## Roll-to-roll shading and cutting
 
-Good cutting stops shade variation from showing on the garment.
+Good cutting stops colour differences from showing on the garment.
 
 - **Cut each garment from one roll.** All panels of a garment come from the same roll and, ideally, close together on it.
 - **Number every panel.** Bundle tickets keep panels from one lay together through sewing.
@@ -116,7 +116,7 @@ Shade sorting matters most for:
 
 ## Metamerism
 
-Metamerism is a special kind of shade variation. Two colours match in daylight but look different under shop light. It happens when different dyes are used, for example on a cotton body and a polyester zip tape.
+Metamerism is a special kind of colour mismatch. Two colours match in daylight but look different under shop light. It happens when different dyes are used, for example on a cotton body and a polyester zip tape.
 
 To control it, check colours under at least two light sources when approving lab dips and bulk. Our guide to [what is a lab dip](/insights/lab-dip-explained/) explains how.
 

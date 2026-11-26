@@ -14,7 +14,7 @@ secondaryKeywords:
   - payment terms negotiation
   - negotiation mistakes
 intent: informational
-answer: "Here is how to negotiate with clothing manufacturers: understand what drives the price, compare like-for-like quotes, and trade on levers the factory values, such as quantity, fabric choice, timing, payment terms and repeat orders. Pushing for a lower price on the same spec without giving anything back usually leads to cut corners in fabric, sewing or checks."
+answer: "Here is how to negotiate with clothing manufacturers. Understand what drives the price, compare like-for-like quotes and trade on levers the factory values, such as quantity, fabric, timing, payment terms and reorders. Pushing for a lower price on the same spec without giving anything back usually leads to cut corners in fabric, sewing or checks."
 facts: [moq, sample, quote]
 specsCaption: The main negotiation levers.
 specs:
@@ -59,15 +59,15 @@ published: 2026-11-26
 updated: 2026-11-26
 ---
 
-## Negotiation is about trade-offs
+## How to negotiate with clothing manufacturers: think in trade-offs
 
 Good negotiation with a factory is not a battle over one number. It is finding changes that save cost without hurting the product, and agreeing terms that work for both sides over many orders.
 
-This guide covers how to negotiate with clothing manufacturers in a way that gets you a fair price and keeps quality where you need it.
+This guide shows how to reach a fair price while keeping quality where you need it.
 
 ## Know what drives the price
 
-Before you negotiate, understand what you are paying for:
+Before you negotiate clothing prices, understand what you are paying for:
 
 | Cost part | Share of price | Room to move |
 | --- | --- | --- |

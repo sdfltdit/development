@@ -14,7 +14,7 @@ secondaryKeywords:
   - verify a manufacturer
   - red flags in quotes
 intent: informational
-answer: "The most common clothing manufacturer scams are fake factories that are really resellers, prices that rise after you pay, bulk that does not match the sample, and fraud emails asking you to pay a new bank account. You can avoid most of them by checking the company, paying only the account on the proforma invoice and tying the final payment to an inspection."
+answer: "The most common clothing manufacturer scams are fake factories that are really resellers and prices that rise after you pay. Others are bulk that does not match the sample, and fraud emails asking you to pay a new bank account. You can avoid most of them by checking the company, paying only the account on the proforma invoice and tying the final payment to an inspection."
 facts: [moq, sample, aql]
 specsCaption: The five checks that stop most scams.
 specs:
@@ -40,11 +40,11 @@ faq:
   - q: What is the most common payment fraud in sourcing?
     a: An email, often from a hacked or copied address, saying the supplier's bank details have changed. Always confirm new details by phone on a number you already have.
   - q: How can I verify a manufacturer before paying?
-    a: Check the company registration, the address, references from other buyers, and that the bank account name matches the company on the proforma invoice.
+    a: Check the company registration, the address, references from other buyers, and that the bank details belong to the same business that issued your invoice.
   - q: What are red flags in quotes?
     a: A price far below everyone else with no breakdown, no sample fee, no written lead time, or pressure to pay in full to "hold a slot".
   - q: What should I do if I paid a scammer?
-    a: Contact your bank at once to try to recall the payment, keep all emails and invoices, and report it to the police or your national fraud reporting service.
+    a: Call your bank straight away to try to recall the money, and keep every email and invoice as evidence. Then file a report with the authorities.
   - q: Are badges on B2B marketplaces proof of a real factory?
     a: No. Badges show what a platform checked, which varies. Make your own checks as well.
 related:

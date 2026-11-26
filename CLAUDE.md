@@ -240,7 +240,7 @@ Keyword map (keep it in sync with frontmatter and `pages.ts`):
 | `/sample-service/` | commercial | clothing sample maker | clothing sample service, garment sample cost, proto sample clothing, pre-production sample |
 | `/how-to-create-a-tech-pack/` | informational | how to create a tech pack | tech pack template, tech pack checklist, points of measure, tech pack mistakes |
 | `/clothing-brand-startup-costs/` | informational | clothing brand startup costs | cost to start a clothing line, first production run cost, landed cost per garment, launch budget worksheet |
-| `/insights/aql-inspection-explained/` | informational | AQL inspection | AQL sampling table, AQL 2.5, acceptance quality limit, critical major minor defects |
+| `/insights/aql-inspection-explained/` | informational | AQL inspection | AQL sampling table, AQL 2.5, acceptance quality limit, critical, major and minor defects |
 | `/insights/fabric-gsm-explained/` | informational | fabric GSM | GSM meaning, GSM chart, GSM vs oz, how to measure GSM |
 | `/insights/incoterms-explained/` | informational | Incoterms | Incoterms 2020, FOB vs EXW, FOB vs CIF, DDP shipping |
 | `/insights/lab-dip-explained/` | informational | what is a lab dip | lab dip process, lab dip vs strike-off, delta E tolerance, lab dip comments |

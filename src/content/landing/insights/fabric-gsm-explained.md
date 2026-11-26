@@ -63,7 +63,7 @@ updated: 2026-11-26
 
 ## What fabric GSM means
 
-Fabric GSM stands for grams per square metre. Take one square metre of fabric, weigh it, and that number in grams is its GSM. A 180 GSM jersey weighs 180 grams per square metre.
+Fabric GSM stands for grams per square metre. Take one square metre of fabric, weigh it, and that number in grams is its GSM. A 180 GSM jersey weighs 180 grams per square metre. That is the whole GSM meaning in one line.
 
 Buyers use fabric GSM to compare fabrics quickly. It tells you how heavy a garment will feel, how much it will drape and, roughly, how warm it will be.
 

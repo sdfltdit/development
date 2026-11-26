@@ -40,12 +40,12 @@ faq:
   - q: Is higher stitch density always better?
     a: No. Higher stitch density makes seams neater and stronger up to a point. Too many stitches can cut fibres, pucker fine fabric and slow production.
   - q: What does an SPI chart show?
-    a: An SPI chart lists the target stitches per inch for each seam or garment type. It goes in your tech pack so every line sews the same way.
+    a: An SPI chart lists the target count for each seam or garment type. It goes in your tech pack so every line sews the same way.
   - q: What are the main stitch types in clothing?
     a: Lockstitch for wovens and topstitching, overlock for knit seams, coverstitch for knit hems and flatlock for flat sportswear seams.
   - q: How is seam strength tested?
     a: Labs pull a seam until it breaks and record the force. In the factory, inspectors stretch seams by hand and check for open or broken stitches.
-  - q: Do stitches per inch count in an AQL inspection?
+  - q: Does SPI count in an AQL inspection?
     a: Yes, when you have set a target. Seams far below your SPI, skipped stitches and open seams are usually counted as major defects.
 related:
   - /insights/aql-inspection-explained/
@@ -65,7 +65,7 @@ Stitches per inch, shortened to SPI, is the number of stitches in one inch of se
 
 SPI tells you how dense a seam is. Denser seams are usually stronger and neater. Looser seams are faster to sew but can open, stretch out or look cheap.
 
-Stitches per inch is one of the easiest quality checks a buyer can make. All you need is a ruler.
+SPI is one of the easiest quality checks a buyer can make. All you need is a ruler.
 
 ## SPI chart by garment type
 
@@ -150,4 +150,4 @@ Our guide on [how to create a tech pack](/how-to-create-a-tech-pack/) shows wher
 
 ## Where SDF Clothing fits
 
-We set stitch type and stitches per inch for each seam on the sample, then check seams inline and at final inspection at AQL {{aql}}. Our [cut and sew manufacturer](/cut-and-sew-service/) page explains how production runs on our own lines. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.
+We set stitch type and SPI for each seam on the sample, then check seams inline and at final inspection at AQL {{aql}}. Our [cut and sew manufacturer](/cut-and-sew-service/) page explains how production runs on our own lines. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.
