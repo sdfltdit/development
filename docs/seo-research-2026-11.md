@@ -275,3 +275,12 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Print on demand guide says plainly that we do not offer print on demand or ship single orders.
 - Lead time guide uses only our tokens for our stages, and leaves freight transit to the buyer's forwarder.
 - Bug fixed in the same push: "{{moqUnit}} per style" rendered "pieces per style per style" on many pages.
+
+## Guide batch 5: country comparisons and negotiation (26 Nov 2026)
+
+- Bangladesh LDC graduation deferred to 24 Nov 2029. EU and UK phase benefits out after that.
+- New EU GSP Regulation (EU) 2026/1395 applies from 1 Jan 2027. Pakistan keeps GSP+ under transition to 31 Dec 2028 and must reapply.
+- EU-India FTA concluded 27 Jan 2026. Clothing tariffs go on entry into force (signing targeted Dec 2026, entry into force 2027).
+- UK-India CETA in force since 15 July 2026. UK duty on qualifying Indian clothing (about 12%) removed.
+- US tariffs: extra Section 301 duties by origin since July 2026, plus new proposals on 25 Nov 2026 not in force. No percentages published on site.
+- Keyword "Bangladesh vs China clothing" moved from /clothing-manufacturer-bangladesh/ to the new China guide. The Bangladesh page now links to all four comparison guides with keyword anchors.

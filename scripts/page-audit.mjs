@@ -147,6 +147,11 @@ const STRICT = new Set([
   '/guides/clothing-manufacturing-lead-time/',
   '/guides/how-clothing-manufacturers-work/',
   '/digital-3d-sample-vs-physical-sample/',
+  '/bangladesh-vs-china-clothing-manufacturing/',
+  '/bangladesh-vs-vietnam-clothing-manufacturing/',
+  '/bangladesh-vs-india-clothing-manufacturing/',
+  '/bangladesh-vs-pakistan-clothing-manufacturing/',
+  '/insights/how-to-negotiate-with-clothing-manufacturers/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

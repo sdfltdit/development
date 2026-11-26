@@ -2,11 +2,7 @@
 # The redirect check passes while a URL is listed here, and fails at launch (LAUNCH=1) until the list is empty.
 /agreement/
 /alibaba-verified-badge-vs-factory-audit-vs-no-verification/
-/bangladesh-vs-china-clothing-manufacturing/
 /bangladesh-vs-china-vs-vietnam-vs-india-vs-turkey-sourcing/
-/bangladesh-vs-india-clothing-manufacturing/
-/bangladesh-vs-pakistan-clothing-manufacturing/
-/bangladesh-vs-vietnam-clothing-manufacturing/
 /careers/
 /case-studies/
 /clothing-brand-launch-checklist/
@@ -46,7 +42,6 @@
 /insights/garment-washing-explained/
 /insights/gots-certification-explained/
 /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
-/insights/how-to-negotiate-with-clothing-manufacturers/
 /insights/how-to-write-pantone-tcx-in-a-tech-pack/
 /insights/knitting-defects-explained/
 /insights/manufacturing-costs/

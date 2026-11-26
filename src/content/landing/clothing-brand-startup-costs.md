@@ -50,7 +50,7 @@ related:
   - /sample-service/
   - /pricing/
   - /insights/how-to-calculate-landed-cost/
-  - /insights/moq-meaning-clothing/
+  - /insights/how-to-negotiate-with-clothing-manufacturers/
 published: 2026-11-26
 updated: 2026-11-26
 ---
