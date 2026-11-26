@@ -121,6 +121,12 @@ const STRICT = new Set([
   '/dyeing-service/',
   '/washing-service/',
   '/pattern-making-service/',
+  '/tech-pack-service/',
+  '/lab-dip-service/',
+  '/quality-inspection-service/',
+  '/fabric-sourcing/',
+  '/trims-sourcing/',
+  '/garment-labels/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

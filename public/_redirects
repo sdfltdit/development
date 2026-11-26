@@ -105,8 +105,8 @@
 /finishing-service /washing-service/ 301
 /fit-engineering-service/ /pattern-making-service/ 301
 /fit-engineering-service /pattern-making-service/ 301
-/garment-development-service/ /full-package-production/ 301
-/garment-development-service /full-package-production/ 301
+/garment-development-service/ /cut-and-sew-service/ 301
+/garment-development-service /cut-and-sew-service/ 301
 /garment-exporter/ /clothing-manufacturer-bangladesh/ 301
 /garment-exporter /clothing-manufacturer-bangladesh/ 301
 /garment-labels/buyer-guidelines/ /garment-labels/ 301
@@ -251,3 +251,7 @@
 /tencel-clothing-manufacturer /lyocell-clothing-manufacturer/ 301
 /printing/screen-printing/ /printing-service/ 301
 /printing/screen-printing /printing-service/ 301
+/full-package-production/ /cut-and-sew-service/ 301
+/full-package-production /cut-and-sew-service/ 301
+/fulfillment-service/ /all-services/ 301
+/fulfillment-service /all-services/ 301

@@ -237,3 +237,10 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Printing: screen vs DTF vs water-based vs discharge vs puff is the core buyer comparison. Sublimation detail stays on the sublimated clothing page.
 - Dyeing and washing: shade limits (standard plus light and dark), shrinkage set after washing, and recipes kept for reorders are the facts buyers ask for.
 - Pattern making: the home page already promises we never share files and will sign an NDA, so the pattern page repeats that promise. Patterns are only made for styles we will produce.
+
+## Service batch B (tech pack, lab dip, quality inspection, fabric, trims, labels)
+
+- All six are built on old site URLs. The old `/garment-labels/` sub-guides already 301 to the main page, which now covers types, placement and content.
+- Quality inspection: inspection is included in every order. Buyers may send their own inspector or an inspection company, whose fee is theirs. No third-party company is named.
+- Labels: the page describes what care labels usually carry and leaves final legal wording to the brand, because rules differ by market.
+- Fabric and trims: sourced only for garments we produce. Fibre and nickel-free claims rest on the maker's report.

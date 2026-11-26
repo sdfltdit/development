@@ -17,6 +17,6 @@ Small high-margin items first (owner research, 26 November 2026): bathrobe (wait
 Fabrics: silk and satin clothing (waits on the silk answer). Fleece fabric clothing is dropped because the fleece jacket, hoodie and joggers pages already cover it.
 Garment dyeing and washing move to service pages (`/dyeing-service/`, `/washing-service/`).
 
-Services next: embroidery, printing (with screen printing), dyeing, washing, pattern making, tech pack, lab dip, quality inspection, fabric sourcing, trims sourcing, garment labels. Then guides on the old `/insights/` and guide URLs, then free tools on `/tools/`.
+Services built (11): embroidery, printing, dyeing, washing, pattern making, tech pack, lab dip, quality inspection, fabric sourcing, trims sourcing, garment labels. Next: guides on the old `/insights/` and guide URLs, then free tools on `/tools/`.
 
 Before building each batch, search the primary keyword again and check that no built page already owns it.

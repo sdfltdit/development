@@ -21,13 +21,9 @@
 /digital-3d-sample-vs-physical-sample/
 /direct-factory-vs-trading-company-vs-buying-agent/
 /eu-epr-explained/
-/fabric-sourcing/
 /faq/
 /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
-/fulfillment-service/
 /full-package-fob-vs-cmt-vs-cm-only/
-/full-package-production/
-/garment-labels/
 /gots-vs-oeko-tex-vs-bsci-certification-comparison/
 /guides/clothing-manufacturing-lead-time/
 /guides/first-order-sourcing-questions/
@@ -87,7 +83,6 @@
 /journal/annual-growth-2025/
 /journal/european-mill-partnership-2025/
 /journal/sourcing-summit-2025/
-/lab-dip-service/
 /manufacturing-platform-alternative/
 /nda/
 /oeko-tex-certification-guide/
@@ -96,11 +91,9 @@
 /overseas-vs-local-clothing-manufacturer/
 /print-on-demand-vs-private-label/
 /private-label-clothing-guide/
-/quality-inspection-service/
 /recycled-clothing-manufacturer/
 /sustainability/
 /sustainable-clothing-manufacturer/
-/tech-pack-service/
 /tools/
 /tools/aql-calculator/
 /tools/color-converter/
@@ -118,5 +111,4 @@
 /tools/sample-timeline-estimator/
 /tools/shrinkage-calculator/
 /tools/wash-care-label-generator/
-/trims-sourcing/
 /visa-docs/
