@@ -6,11 +6,13 @@ Not built at the owner's request: leather and faux leather garments (old leather
 
 Kept on parent pages (no separate page): polo shirts, tank tops, long sleeves (T-shirt page), sweatshirts and zip hoodies (hoodie page), sweatpants (joggers), cargo pants and chinos (pants), yoga pants (leggings), pyjamas (loungewear), board shorts and rash guards (swimwear), puffer vests (puffer jacket), cardigans and beanies (sweater and hat pages).
 
-## Built (64)
+## Built (69)
 
-Batches 1–13: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket, varsity jacket, fleece jacket, softshell jacket, coat, football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform, esports jersey, cheerleading uniform, dancewear, martial arts uniform, fightwear, golf apparel, tennis wear, running apparel, compression wear, base layer, ski wear, chef uniform, apron, lab coat, coverall, hi-vis workwear, security uniform, hotel uniform, jumpsuit, maternity clothing. The T-shirt page is hand-built.
+Batches 1–14: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket, varsity jacket, fleece jacket, softshell jacket, coat, football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform, esports jersey, cheerleading uniform, dancewear, martial arts uniform, fightwear, golf apparel, tennis wear, running apparel, compression wear, base layer, ski wear, chef uniform, apron, lab coat, coverall, hi-vis workwear, security uniform, hotel uniform, jumpsuit, maternity clothing, silk pillowcase, sleep mask, embroidered patch, pet clothing, cushion cover. The T-shirt page is hand-built.
 
 ## Planned, in rough batch order
+
+Small high-margin items first (owner research, 26 November 2026): dust bag, tote bag, cosmetic pouch, drawstring bag, scarf, bandana, neck gaiter, hair accessories (scrunchies, bonnets, headbands), tie, baby bib and muslin swaddle, tea towel set, table linen, bathrobe (waits for the towel answer). Plain towels and bed linen have thin margins and stay off the list unless the owner asks.
 
 Womenswear and occasion: shapewear, evening dress, bridal wear, bodysuit and crop top.
 Menswear and tailoring: suit, menswear (hub-style like the women's page), overalls and dungarees.

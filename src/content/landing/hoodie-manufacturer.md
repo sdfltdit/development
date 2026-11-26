@@ -68,7 +68,7 @@ related:
   - /joggers-manufacturer/
   - /t-shirt-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /clothing-manufacturers-for-startups/
+  - /pet-clothing-manufacturer/
   - /merch-manufacturer/
   - /cotton-clothing-manufacturer/
   - /sweater-manufacturer/

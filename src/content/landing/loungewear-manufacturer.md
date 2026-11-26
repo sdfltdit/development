@@ -61,11 +61,11 @@ faq:
     a: Yes. Tops and bottoms share a fabric lot and a lab dip, and each set is packed by size so the pieces stay together.
 related:
   - /joggers-manufacturer/
-  - /shorts-manufacturer/
+  - /sleep-mask-manufacturer/
   - /dress-manufacturer/
   - /hoodie-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
+  - /silk-pillowcase-manufacturer/
   - /underwear-manufacturer/
   - /bamboo-clothing-manufacturer/
 published: 2026-11-26

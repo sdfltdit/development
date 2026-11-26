@@ -161,3 +161,12 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Hotel: department-by-department breakdown (front desk, housekeeping, spa, porters). "Hospitality uniforms" stays on the uniform page.
 - Jumpsuit: built on the old URL `/jumpsuit-romper-manufacturer/`. Fit risk is body rise, which competitors rarely explain.
 - Maternity: buyers and shoppers ask about over vs under-bump waists and nursing access (wrap, lift-up, zips, clips). Built on the old URL `/maternity-clothing-manufacturer/`.
+
+## Batch 14 (silk pillowcase, sleep mask, embroidered patch, pet clothing, cushion cover), 26 November 2026
+
+- Chosen for margin: little fabric per unit, high perceived value, value added by our own embroidery, print and gift packing, and less competition than core garments.
+- Silk pillowcases: retail listings sell on momme (19, 22, 25), mulberry grade and closure (envelope or hidden zip). Our page explains silk vs satin labelling and leaves hair and skin claims to the brand.
+- Sleep masks: silk masks hold the highest margins in the category. Contoured masks serve lash-extension buyers.
+- Patches: buyers choose type, border (merrow vs heat-cut) and backing (sew-on, iron-on, hook-and-loop). We do not offer woven patches until the owner confirms.
+- Pet clothing: sizing is chest girth, back length and neck girth, with chest the most important. Breed-specific blocks and harness holes are what buyers ask for. Built on the old URL `/pet-clothing-manufacturer/`.
+- Cushion covers: sizes differ by market (cm vs inches), and UK fire rules apply to home cushions, so the page tells buyers to arrange final tests.
