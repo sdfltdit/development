@@ -17,7 +17,10 @@ const read = (file) =>
 
 const legacy = read('scripts/legacy-urls.txt');
 const planned = new Set(read('scripts/planned-routes.txt'));
-const gone = new Set(['/journal/gots-7-recertification-2026/']);
+const gone = new Set([...readFileSync('src/data/gone.ts', 'utf8').matchAll(/^\s*'([^']+)',$/gm)].map((m) => m[1]));
+const workerFirst = JSON.parse(readFileSync('wrangler.jsonc', 'utf8').match(/"run_worker_first":\s*(\[[^\]]*\])/)[1]);
+const routedToWorker = (path) =>
+  workerFirst.some((p) => (p.endsWith('*') ? path.startsWith(p.slice(0, -1)) : path === p || path === `${p}/`));
 const redirects = new Map(
   read(join(DIST, '_redirects')).map((l) => {
     const [from, to, code] = l.split(/\s+/);
@@ -39,6 +42,13 @@ for (const url of legacy) {
   errors.push(`${url}: old URL is not built, redirected, gone or planned`);
 }
 
+for (const url of gone) {
+  if (!url.endsWith('/')) errors.push(`${url}: gone paths must end with a slash`);
+  if (!routedToWorker(url) || !routedToWorker(url.slice(0, -1))) errors.push(`${url}: gone but not listed in run_worker_first`);
+  if (redirects.has(url) || redirects.has(url.slice(0, -1))) errors.push(`${url}: is both gone and redirected`);
+  if (built(url)) errors.push(`${url}: is gone but a page is also built at that URL`);
+}
+
 for (const [from, { to, code }] of redirects) {
   if (code !== '301') errors.push(`${from}: redirect uses ${code}, expected 301`);
   if (to.endsWith('.xml')) continue;
@@ -58,6 +68,6 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `redirect-check: ${legacy.length} legacy URLs covered, ${redirects.size} redirects valid` +
+  `redirect-check: ${legacy.length} legacy URLs covered, ${redirects.size} redirects valid, ${gone.size} gone (410)` +
     (launch ? '.' : `, ${pendingCount} URL(s) planned for later phases.`),
 );

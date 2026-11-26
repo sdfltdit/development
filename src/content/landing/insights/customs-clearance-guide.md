@@ -57,6 +57,7 @@ related:
   - /guides/clothing-manufacturing-lead-time/
   - /work-process/
   - /garment-labels/
+  - /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
 published: 2026-11-26
 updated: 2026-11-26
 ---
@@ -86,7 +87,7 @@ A customs broker is a firm that handles import paperwork for you. A good customs
 - file the entry and pay duty on your behalf
 - answer questions from customs and arrange any checks
 
-Most freight forwarders offer customs brokerage, or can recommend a broker.
+Most freight forwarders offer customs brokerage, or can recommend a broker. Our guide to [freight forwarder vs factory shipping](/freight-forwarder-vs-factory-arranged-shipping-vs-diy/) compares the options.
 
 ## The commercial invoice for clothing
 

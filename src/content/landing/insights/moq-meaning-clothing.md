@@ -52,6 +52,7 @@ related:
   - /pricing/
   - /insights/how-to-calculate-landed-cost/
   - /insights/how-to-negotiate-with-clothing-manufacturers/
+  - /insights/manufacturing-costs/
 published: 2026-11-26
 updated: 2026-11-26
 ---

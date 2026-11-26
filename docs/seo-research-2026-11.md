@@ -290,3 +290,9 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - US: duty-free de minimis for commercial shipments suspended since 29 Aug 2025, made indefinite by CBP rules of 24 June 2026. Statutory repeal for commercial shipments from 1 July 2027.
 - EU: temporary €3 duty per item on low-value B2C consignments (up to €150) from 1 July 2026 until 1 July 2028 (Council Regulation (EU) 2026/382). B2B shipments follow normal rules.
 - Cannibalization avoided: POM stays with the tech pack guide, HS codes and import duty stay with the landed cost guide, OEM clothing manufacturer stays with private label, CMT clothing manufacturer and full package production stay with cut and sew, Pantone colour matching stays with lab dip service.
+
+## Guide batch 7 and the 410 policy (26 Nov 2026)
+
+- Owner asked whether a rebuild could drop redirects entirely. Decision: no. Old URLs keep their rankings and backlinks only through a 301 to a true equivalent. Where none exists, 410 Gone tells search engines to drop the URL quickly, which is cleaner than a 404 or a loose redirect.
+- Moved to 410: 25 foreign-country manufacturer URLs (Italy, France, UAE and others), certification guides (GOTS, OEKO-TEX, comparison, GOTS label) and all journal URLs.
+- Kept as 301: exact equivalents, such as product synonyms, merged guides, China and Pakistan manufacturer URLs to the comparison guides, and "for UK/USA/... brands" to the Bangladesh page.

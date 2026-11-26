@@ -157,6 +157,11 @@ const STRICT = new Set([
   '/insights/oem-vs-odm-vs-cmt/',
   '/insights/customs-clearance-guide/',
   '/insights/fabric-types-glossary/',
+  '/insights/manufacturing-costs/',
+  '/how-to-scale-a-clothing-brand/',
+  '/direct-factory-vs-trading-company-vs-buying-agent/',
+  '/in-house-qc-vs-third-party-inspection-vs-no-inspection/',
+  '/freight-forwarder-vs-factory-arranged-shipping-vs-diy/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

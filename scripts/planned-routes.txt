@@ -1,19 +1,13 @@
 # URLs to be rebuilt in later phases. Each must be built (or redirected) before launch.
 # The redirect check passes while a URL is listed here, and fails at launch (LAUNCH=1) until the list is empty.
 /agreement/
-/alibaba-verified-badge-vs-factory-audit-vs-no-verification/
 /careers/
 /case-studies/
 /clothing-factory/
 /confidentiality/
-/direct-factory-vs-trading-company-vs-buying-agent/
 /eu-epr-explained/
 /faq/
-/freight-forwarder-vs-factory-arranged-shipping-vs-diy/
-/gots-vs-oeko-tex-vs-bsci-certification-comparison/
 /guides/first-order-sourcing-questions/
-/how-to-scale-a-clothing-brand/
-/in-house-qc-vs-third-party-inspection-vs-no-inspection/
 /inclusive-sizing-guide/
 /insights/
 /insights/bangladesh-rmg-industry-data/
@@ -27,22 +21,14 @@
 /insights/fiber-blend-hs-classification-explained/
 /insights/garment-finishing-explained/
 /insights/garment-washing-explained/
-/insights/gots-certification-explained/
 /insights/knitting-defects-explained/
-/insights/manufacturing-costs/
 /insights/pattern-fit-problems-explained/
-/insights/shipment-delay-explained/
 /insights/sock-manufacturing-guide/
 /insights/sustainable-clothing-manufacturing/
 /insights/wholesale-manufacturing-partnership/
 /insights/yarn/
-/journal/
-/journal/annual-growth-2025/
-/journal/european-mill-partnership-2025/
-/journal/sourcing-summit-2025/
 /manufacturing-platform-alternative/
 /nda/
-/oeko-tex-certification-guide/
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
 /recycled-clothing-manufacturer/

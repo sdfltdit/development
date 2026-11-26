@@ -57,7 +57,7 @@ related:
   - /how-to-find-clothing-manufacturer/
   - /work-process/
   - /insights/stitch-quality-spi-explained/
-  - /insights/shade-variation-explained/
+  - /in-house-qc-vs-third-party-inspection-vs-no-inspection/
 published: 2026-11-26
 updated: 2026-11-26
 ---
@@ -154,6 +154,9 @@ The report ends with a pass or fail for each defect class.
 - **Pending.** Something needs the buyer's decision, such as a shade question or a missing document.
 
 Read the photos and the defect list, not just the result. A pass with the same major defect repeated many times still points to a problem worth fixing on the next order.
+
+
+To decide who should run these checks, read our guide to [in-house QC vs third-party inspection](/in-house-qc-vs-third-party-inspection-vs-no-inspection/).
 
 ## Where SDF Clothing fits
 

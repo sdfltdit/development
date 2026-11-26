@@ -11,5 +11,5 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["./**/*.ts", "../data/company.ts"]
+  "include": ["./**/*.ts", "../data/company.ts", "../data/gone.ts"]
 }

@@ -6,6 +6,7 @@
  */
 
 import { company, contactTopics, quoteProducts, terms, visitPurposes } from '../data/company';
+import { gonePaths } from '../data/gone';
 
 interface Env {
   ASSETS: Fetcher;
@@ -35,7 +36,7 @@ interface QuoteRequest {
 
 const MOQ = terms.moq;
 const PRODUCTS = new Set<string>(quoteProducts);
-const GONE = ['/journal/gots-7-recertification-2026'];
+const GONE = new Set<string>(gonePaths);
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 class InputError extends Error {}
@@ -399,11 +400,13 @@ export default {
         return respond(request, 500, { ok: false, message: `Something went wrong on our side. Please try again in a few minutes or message us on WhatsApp.` });
       }
     }
-    if (GONE.some((path) => url.pathname === path || url.pathname === `${path}/`)) {
-      return new Response('This page has been permanently removed.', {
-        status: 410,
-        headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Robots-Tag': 'noindex' },
-      });
+    const path = url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+    if (GONE.has(path)) {
+      const page = await env.ASSETS.fetch(new Request(new URL('/__gone__/', url), { method: 'GET' }));
+      const headers = new Headers(page.headers);
+      headers.set('X-Robots-Tag', 'noindex');
+      headers.delete('Content-Length');
+      return new Response(request.method === 'HEAD' ? null : page.body, { status: 410, headers });
     }
     if (url.pathname.startsWith('/api/')) {
       return new Response('Not found', { status: 404 });

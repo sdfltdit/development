@@ -50,7 +50,7 @@ related:
   - /sample-service/
   - /pricing/
   - /insights/how-to-calculate-landed-cost/
-  - /how-to-start-a-clothing-brand/
+  - /insights/manufacturing-costs/
 published: 2026-11-26
 updated: 2026-11-26
 ---
