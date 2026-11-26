@@ -68,7 +68,7 @@ related:
   - /shirt-manufacturer/
   - /menswear-manufacturer/
   - /linen-clothing-manufacturer/
-  - /scrubs-manufacturer/
+  - /corduroy-clothing-manufacturer/
   - /denim-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26

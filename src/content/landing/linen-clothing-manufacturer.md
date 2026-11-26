@@ -65,7 +65,7 @@ related:
   - /cotton-clothing-manufacturer/
   - /kurta-manufacturer/
   - /jumpsuit-romper-manufacturer/
-  - /cushion-cover-manufacturer/
+  - /hemp-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -64,7 +64,8 @@ related:
   - /kids-baby-clothing-manufacturer/
   - /t-shirt-manufacturer/
   - /cotton-clothing-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /modal-clothing-manufacturer/
+  - /hemp-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

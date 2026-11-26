@@ -159,8 +159,6 @@
 /leather-clothing-manufacturer /jacket-manufacturer/ 301
 /medical-uniform-manufacturer/ /scrubs-manufacturer/ 301
 /medical-uniform-manufacturer /scrubs-manufacturer/ 301
-/modal-clothing-manufacturer/ /tencel-clothing-manufacturer/ 301
-/modal-clothing-manufacturer /tencel-clothing-manufacturer/ 301
 /pet-clothing-manufacturer/dog-clothing-manufacturer-usa/ /pet-clothing-manufacturer/ 301
 /pet-clothing-manufacturer/dog-clothing-manufacturer-usa /pet-clothing-manufacturer/ 301
 /pet-clothing-manufacturer/dog-coat-manufacturer/ /pet-clothing-manufacturer/ 301
@@ -233,8 +231,6 @@
 /wholesale-polo-shirt-supplier /t-shirt-manufacturer/ 301
 /wholesale-t-shirt-supplier/ /t-shirt-manufacturer/ 301
 /wholesale-t-shirt-supplier /t-shirt-manufacturer/ 301
-/wool-clothing-manufacturer/ /products/ 301
-/wool-clothing-manufacturer /products/ 301
 /yarn-sourcing/ /fabric-sourcing/ 301
 /yarn-sourcing /fabric-sourcing/ 301
 /yoga-pants-manufacturer/ /leggings-manufacturer/ 301

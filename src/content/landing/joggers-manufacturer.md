@@ -67,7 +67,7 @@ related:
   - /shorts-manufacturer/
   - /pants-trousers-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
+  - /french-terry-clothing-manufacturer/
   - /merch-manufacturer/
   - /scrubs-manufacturer/
 published: 2026-11-26

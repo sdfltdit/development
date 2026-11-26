@@ -64,7 +64,7 @@ related:
   - /sleep-mask-manufacturer/
   - /dress-manufacturer/
   - /hoodie-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /modal-clothing-manufacturer/
   - /silk-pillowcase-manufacturer/
   - /underwear-manufacturer/
   - /bamboo-clothing-manufacturer/

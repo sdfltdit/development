@@ -66,7 +66,7 @@ related:
   - /shapewear-manufacturer/
   - /bamboo-clothing-manufacturer/
   - /sports-bra-manufacturer/
-  - /socks-manufacturer/
+  - /modal-clothing-manufacturer/
   - /lingerie-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26

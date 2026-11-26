@@ -63,7 +63,7 @@ related:
   - /school-uniform-manufacturer/
   - /clothing-manufacturers-for-women/
   - /streetwear-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /wool-clothing-manufacturer/
   - /scarf-manufacturer/
   - /gloves-manufacturer/
 published: 2026-11-26

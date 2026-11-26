@@ -211,3 +211,12 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Thobe: Gulf buyers judge white shade, opacity and collar. Thobes are sized by length (for example 52 to 62). Kandura (Emirati) has a collarless neck with a tassel.
 - Hijab: the main buyer worries are sheerness, slipping and fraying edges. Undercaps dyed to the same lab dip are a selling point.
 - Polyester: built on the old `/polyester-clothing-manufacturer/` URL. Recycled content and moisture-wicking rest on the mill's certificate or test report. The page explains why one shade looks different on polyester and cotton (disperse vs reactive dyes), the topic of an old insight URL.
+
+## Batch 20 (hemp, modal, French terry, corduroy, wool clothing)
+
+- Fabric pages win when they explain how the fabric behaves in production (shrinkage, pile direction, pilling, fine jersey sewing) and keep fibre claims honest. Most ranking fabric pages are fabric sellers or thin factory pages that make green claims without proof.
+- Hemp, modal and wool are built on old site URLs. Fibre content, organic, merino grade and traceability claims rest on the mill's report or certificate. The pages say we make no green claims ourselves.
+- Modal: it is a type of viscose usually made from beech wood. Micro modal is the finer version used for underwear. No brand-name fibres are named.
+- French terry: the page compares terry with brushed fleece and jersey, the question buyers ask most. "Sweatshirt manufacturer" stays with the hoodie page.
+- Corduroy: wale sizes (needlecord about 14 to 16 per inch, standard about 10 to 12, wide about 6 to 8) and one-way pile cutting are the key buyer facts.
+- Wool: "wool coats" stays with the coat page and "merino base layers" with the base layer page. The wool page links to both.

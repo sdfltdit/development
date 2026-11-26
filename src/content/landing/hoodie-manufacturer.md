@@ -67,7 +67,7 @@ faq:
 related:
   - /joggers-manufacturer/
   - /t-shirt-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /french-terry-clothing-manufacturer/
   - /pet-clothing-manufacturer/
   - /merch-manufacturer/
   - /cotton-clothing-manufacturer/
