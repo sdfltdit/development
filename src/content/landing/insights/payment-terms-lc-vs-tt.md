@@ -156,4 +156,4 @@ Terms change cost for both sides. A factory that waits longer to be paid carries
 
 ## Where SDF Clothing fits
 
-We are paid in three steps, one after the other: {{payment}}. You can also pay by {{lc}}. Our [standard LC terms](/work-process/#letter-of-credit) list the documents, dates and charges, and the method is agreed on your quote. Payment only ever goes to the company account on our proforma invoice. You can check us before paying, starting with our [verify page](/verify-us/).
+Direct payments such as T/T, Wise or Xoom come in three steps, one after the other. The split is {{payment}}. You can also pay by {{lc}}, which covers the whole order from sampling onwards. Our [standard LC terms](/work-process/#letter-of-credit) list the documents, dates and charges, and the method is agreed on your quote. Payment only ever goes to the company account on our proforma invoice. You can check us before paying, starting with our [verify page](/verify-us/).
