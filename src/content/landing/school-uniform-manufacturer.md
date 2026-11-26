@@ -64,10 +64,10 @@ related:
   - /kids-baby-clothing-manufacturer/
   - /tracksuit-manufacturer/
   - /skirts-manufacturer/
-  - /hoodie-manufacturer/
   - /blazer-manufacturer/
   - /sweater-manufacturer/
   - /varsity-jacket-manufacturer/
+  - /cheerleading-uniform-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

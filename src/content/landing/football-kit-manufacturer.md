@@ -62,6 +62,7 @@ related:
   - /tracksuit-manufacturer/
   - /basketball-uniform-manufacturer/
   - /rugby-shirt-manufacturer/
+  - /esports-jersey-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

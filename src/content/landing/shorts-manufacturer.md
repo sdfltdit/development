@@ -65,11 +65,11 @@ related:
   - /joggers-manufacturer/
   - /pants-trousers-manufacturer/
   - /hoodie-manufacturer/
-  - /t-shirt-manufacturer/
   - /swimwear-manufacturer/
   - /denim-manufacturer/
   - /basketball-uniform-manufacturer/
   - /football-kit-manufacturer/
+  - /fightwear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

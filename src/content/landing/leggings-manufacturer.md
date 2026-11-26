@@ -66,10 +66,10 @@ related:
   - /activewear-manufacturer/
   - /shorts-manufacturer/
   - /joggers-manufacturer/
-  - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
   - /sports-bra-manufacturer/
   - /cycling-jersey-manufacturer/
+  - /dancewear-manufacturer/
+  - /fightwear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

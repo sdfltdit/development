@@ -129,3 +129,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Rugby: heavyweight cotton lifestyle shirts (twill collar, rubber buttons) vs polyester match jerseys.
 - Baseball: full-button jerseys, double-knit pants, tackle twill vs sublimation, softball fits.
 - Site structure: the header menu and home page now show 12 core products only. /products/ lists everything.
+
+## Batch 10 (esports, cheer, dancewear, martial arts, fightwear)
+
+- Esports: sublimation is the norm because designs use dark bases, gradients and many sponsors. Fabric should be soft and matte for long sessions on camera. Fan jerseys in the player design are a common add-on.
+- Cheer: shell tops, bodyliners, pleated skirts, all-star crop tops, tackle twill and rhinestones. Squad sizing sessions before bulk.
+- Dancewear: nylon-spandex for ballet, cotton-spandex for class, covered leg elastic, front lining. Old /dance-wear-manufacturer/ now redirects here.
+- Martial arts: single, pearl, gold and double weave; federations set colour and fit rules, which the page mentions without naming any body.
+- Fightwear: MMA vs boxing vs Muay Thai shorts, rash guards with silicone grippers.
