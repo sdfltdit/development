@@ -111,6 +111,8 @@ export const capabilities = {
   inHouse: ['Pattern making and grading', 'Cutting', 'Sewing', 'Screen printing', 'DTF printing', 'Sublimation printing', 'Embroidery', 'Finishing and packing', 'Quality inspection'],
   fabrics: 'All fabric types, knit and woven, from cotton jersey, fleece and French terry to polyester, blends and recycled fabrics',
   tshirtGsm: '140–260',
+  workforce: '600+',
+  monthlyCapacity: 50000,
   fleeceGsm: '240–420',
 } as const;
 
@@ -150,6 +152,13 @@ export const contactTopics = ['New product enquiry', 'Existing order', 'Factory 
 export const quoteProducts = ['T-shirts', 'Hoodies or sweatshirts', 'Joggers or sweatpants', 'Polo shirts', 'Other garments'] as const;
 
 export const visitPurposes = ['First meeting and factory tour', 'Sample or fit review', 'Production check', 'Pre-shipment inspection', 'Other'] as const;
+
+/** Owner, 27 November 2026: main export markets. */
+export const exportMarkets = ['the European Union', 'the United States', 'Australia', 'Japan'] as const;
+
+export function mainMarkets(): string {
+  return `${exportMarkets.slice(0, -1).join(', ')} and ${exportMarkets[exportMarkets.length - 1]}`;
+}
 
 export const shipping = {
   scope: 'worldwide',
@@ -203,6 +212,9 @@ export const tokens: Record<string, string> = {
   sampleFee: `${sampleFeePolicy}.`,
   sampleCorrections: String(terms.sampleCorrections),
   sisterFabricAbove: sisterCompany.fabricAbove.toLocaleString('en-GB'),
+  workforce: capabilities.workforce,
+  monthlyCapacity: capabilities.monthlyCapacity.toLocaleString('en-GB'),
+  mainMarkets: mainMarkets(),
   designFrom: designTeamFrom.toLocaleString('en-GB'),
   sisterCompany: `${sisterCompanyPolicy}.`,
   sampleCourier: terms.sampleCourier,

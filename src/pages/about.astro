@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FactStrip from '../components/FactStrip.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { capabilities, company, designTeamFrom, shipping, sisterCompany, terms, yearsInBusiness } from '../data/company';
+import { capabilities, company, designTeamFrom, mainMarkets, shipping, sisterCompany, terms, yearsInBusiness } from '../data/company';
 import { productParts, serviceGroups } from '../data/catalogue';
 import { pageMeta } from '../data/pages';
 import { faqPage, standardPage, type Crumb } from '../lib/schema';
@@ -19,6 +19,7 @@ const large = (n: number) => n.toLocaleString('en-GB');
 
 const sections = [
   { id: 'who', label: 'Who we are' },
+  { id: 'mission', label: 'Mission and values' },
   { id: 'make', label: 'What we make' },
   { id: 'capabilities', label: 'Capabilities' },
   { id: 'operate', label: 'How we operate' },
@@ -31,6 +32,14 @@ const productLinks = productParts
   .map((part) => ({ href: `/products/#${part.id}`, title: part.heading, text: part.lead }));
 
 const serviceLinks = serviceGroups.map((group) => ({ href: `/all-services/#${group.id}`, title: group.heading, text: group.activities ?? group.lead }));
+
+const values = [
+  { title: 'Put it in writing', text: 'Price, minimum, lead time and payment are agreed on paper before any money moves.' },
+  { title: 'Make it ourselves', text: 'Cutting, sewing, printing and checks stay on our own floor, so we answer for every stage.' },
+  { title: 'Every order counts', text: `A first run of ${terms.moq} pieces gets the same pattern work, checks and reports as our largest orders.` },
+  { title: 'Show the work', text: 'Public prices, measurement reports, open factory visits and room for your own inspector.' },
+  { title: 'Fix it before it ships', text: 'Problems are cheaper on a sample than in a carton, so we look for them early and say so plainly.' },
+];
 
 const faqs = [
   {
@@ -99,6 +108,16 @@ const schema = standardPage({
           {company.founder.name} set up the business in {company.foundingYear} and still leads it today. His focus is brands that need lower minimums, clear
           terms and straight answers.
         </p>
+        <h3>Our story</h3>
+        <p>
+          {company.founder.name} opened the business in Dhaka in {company.foundingYear} with one aim: make clothing that matches the sample, and ship it when
+          promised. Over {years} years that simple rule has grown into a team of {capabilities.workforce} people and room for about
+          {large(capabilities.monthlyCapacity)} pieces a month.
+        </p>
+        <p>
+          Our main markets today are {mainMarkets()}, with buyers in many other countries too. Our focus today is growing brands that need factory standards
+          without huge minimums.
+        </p>
         <h3>Our group</h3>
         <p>
           Our sister company in the {company.parentCompany} group makes knit and woven fabric for orders above {large(sisterCompany.fabricAbove)} pieces per style.
@@ -108,7 +127,37 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section section--alt about-section" id="make" aria-labelledby="make-heading">
+  <section class="section section--alt about-section" id="mission" aria-labelledby="mission-heading">
+    <div class="container">
+      <div class="section__head">
+        <h2 id="mission-heading">Our mission, vision and values</h2>
+        <p class="section__lead">What we aim for, and the values behind how every order is quoted, made and shipped.</p>
+      </div>
+      <div class="about-pillars">
+        <div class="about-pillar">
+          <h3>Mission</h3>
+          <p>To give growing brands the factory, terms and care that big labels get, from {terms.moq} {terms.moqUnit}.</p>
+        </div>
+        <div class="about-pillar">
+          <h3>Vision</h3>
+          <p>To be the factory brands stay with as they grow, because every order is made, checked and shipped the way we said it would be.</p>
+        </div>
+      </div>
+      <h3 class="about-sub">Our values</h3>
+      <ul class="cards">
+        {
+          values.map((v) => (
+            <li class="card">
+              <h4 class="card__title">{v.title}</h4>
+              <p class="card__text">{v.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section about-section" id="make" aria-labelledby="make-heading">
     <div class="container">
       <div class="section__head">
         <h2 id="make-heading">What we manufacture</h2>
@@ -141,7 +190,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section about-section" id="capabilities" aria-labelledby="cap-heading">
+  <section class="section section--alt about-section" id="capabilities" aria-labelledby="cap-heading">
     <div class="container split">
       <div class="section__head">
         <h2 id="cap-heading">Our manufacturing capabilities</h2>
@@ -156,6 +205,8 @@ const schema = standardPage({
           <table class="table--stack">
             <caption>Capability figures</caption>
             <tbody>
+              <tr><th scope="row">Team</th><td data-label="Figure">{capabilities.workforce} people</td></tr>
+              <tr><th scope="row">Monthly capacity</th><td data-label="Figure">About {large(capabilities.monthlyCapacity)} pieces</td></tr>
               <tr><th scope="row">Minimum order</th><td data-label="Figure">{terms.moq} {terms.moqUnit}</td></tr>
               <tr><th scope="row">Proto sample</th><td data-label="Figure">{terms.sampleDays} days, door to door</td></tr>
               <tr><th scope="row">Bulk production</th><td data-label="Figure">{terms.bulkDays} days after sample approval</td></tr>
@@ -170,12 +221,13 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section section--alt about-section" id="operate" aria-labelledby="operate-heading">
+  <section class="section about-section" id="operate" aria-labelledby="operate-heading">
     <div class="container split">
       <div class="section__head">
         <h2 id="operate-heading">Where and how we operate</h2>
         <p class="section__lead">
-          Our office and factory are in {company.address.locality}, and we ship {terms.incoterm} {terms.port} to buyers in every region, or on the terms you choose.
+          Our office and factory are in {company.address.locality}. We ship {terms.incoterm} {terms.port}, or on the terms you choose, to buyers in every region
+          below.
         </p>
         <p>Working hours: {company.hours}.</p>
       </div>
@@ -198,7 +250,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section about-section" id="trust" aria-labelledby="trust-heading">
+  <section class="section section--alt about-section" id="trust" aria-labelledby="trust-heading">
     <div class="container prose">
       <h2 id="trust-heading">Why buyers trust us</h2>
       <ul>
@@ -217,7 +269,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section section--alt about-section" id="details" aria-labelledby="details-heading">
+  <section class="section about-section" id="details" aria-labelledby="details-heading">
     <div class="container prose">
       <h2 id="details-heading">Company details</h2>
       <ul>
@@ -238,7 +290,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
       <FaqList items={faqs} heading="Questions about our company" />
     </div>
@@ -275,6 +327,32 @@ const schema = standardPage({
     font-weight: 600;
   }
 
+  .about-pillars {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .about-pillar {
+    padding: var(--space-5);
+    border: 1px solid var(--color-line);
+    border-left: 2px solid var(--color-accent-strong);
+    border-radius: var(--radius-md);
+  }
+
+  .about-pillar h3 {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .about-pillar p {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: var(--text-lg);
+  }
+
   .about-steps {
     margin-top: var(--space-6);
   }
@@ -284,6 +362,10 @@ const schema = standardPage({
   }
 
   @media (min-width: 48rem) {
+    .about-pillars {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .about-services {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       column-gap: var(--space-6);
