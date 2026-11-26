@@ -30,7 +30,7 @@ specs:
   - label: Hardware
     value: Shank buttons, rivets and zips, plain or branded with your logo
   - label: Branding
-    value: Leather or jacron back patches, woven labels, pocket embroidery and printed pocket bags
+    value: Jacron, PU or woven back patches, woven labels, pocket embroidery and printed pocket bags
   - label: Sample time
     value: "{{sampleDays}} days, plus wash development when needed"
   - label: Bulk production

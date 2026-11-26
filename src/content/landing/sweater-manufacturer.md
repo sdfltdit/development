@@ -32,7 +32,7 @@ specs:
   - label: Construction
     value: Fully fashioned panels linked together, or cut-and-sew knit panels
   - label: Branding
-    value: Woven labels, embroidery, knit-in logos and leather or suede patches
+    value: Woven labels, embroidery, knit-in logos and PU or suede-effect patches
   - label: Sample time
     value: "{{sampleDays}} days"
   - label: Bulk production

@@ -67,7 +67,6 @@ related:
   - /rain-jacket-manufacturer/
   - /varsity-jacket-manufacturer/
   - /fleece-jacket-manufacturer/
-  - /leather-jacket-manufacturer/
   - /coat-manufacturer/
   - /softshell-jacket-manufacturer/
 published: 2026-11-26

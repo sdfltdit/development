@@ -66,7 +66,6 @@ related:
   - /puffer-jacket-manufacturer/
   - /hat-manufacturer/
   - /varsity-jacket-manufacturer/
-  - /leather-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

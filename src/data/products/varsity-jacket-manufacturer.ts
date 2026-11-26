@@ -11,8 +11,8 @@ export const varsity: ProductContent = {
   stylesHeading: 'What we make as a varsity jacket manufacturer',
   stylesLead: 'Every jacket is cut to your pattern and finished with your patches. These are the styles buyers order most.',
   styles: [
-    { title: 'Wool and leather letterman jackets', text: 'The classic: a melton wool body with leather sleeves and striped rib trims.' },
-    { title: 'All-wool varsity jackets', text: 'Contrast wool sleeves in place of leather, at a lower price.' },
+    { title: 'Classic letterman jackets', text: 'A melton wool body with PU sleeves and striped rib trims.' },
+    { title: 'All-wool varsity jackets', text: 'Contrast wool sleeves for a softer, matte look.' },
     { title: 'Satin varsity jackets', text: 'Shiny satin with a quilted lining, popular for teams and events.' },
     { title: 'Fleece and cotton varsity jackets', text: 'Softer, washable bodies for casual and merch ranges.', href: '/merch-manufacturer/', cta: 'Merch manufacturer details' },
     { title: 'Oversized and cropped varsity jackets', text: 'Streetwear fits with dropped shoulders or a short body.', href: '/streetwear-manufacturer/', cta: 'Streetwear manufacturer details' },
@@ -31,8 +31,7 @@ export const varsity: ProductContent = {
         ['Body', 'Melton wool blend', 'Classic look, warm, usually dry clean only.'],
         ['Body', 'Satin or nylon', 'Light and shiny, with a quilted lining for warmth.'],
         ['Body', 'Fleece or cotton twill', 'Soft, washable and lower cost.'],
-        ['Sleeves', 'Cowhide or lambskin', 'The traditional choice, highest cost.'],
-        ['Sleeves', 'PU faux leather', 'Leather look at a lower price.'],
+        ['Sleeves', 'PU faux leather', 'The classic shiny sleeve, easy to wipe clean.'],
         ['Sleeves', 'Contrast wool or body fabric', 'Simplest and most affordable.'],
       ],
     },
@@ -49,7 +48,7 @@ export const varsity: ProductContent = {
         ['Chain stitch', 'Script names and outlines', 'A vintage, hand-drawn look.'],
         ['Flat embroidery', 'Small logos and fine detail', 'Clean and long lasting.'],
         ['Felt appliqué', 'Large letters and back designs', 'Layered felt with stitched edges.'],
-        ['Leather badges', 'Premium details', 'Embossed or printed leather.'],
+        ['PU badges', 'Premium details', 'Embossed or printed PU.'],
       ],
       more: 'Patch positions are usually the left chest, sleeves and full back. We set each position per size so it looks right on every jacket.',
     },
@@ -62,7 +61,7 @@ export const varsity: ProductContent = {
       items: [
         { label: 'Rib trims', text: 'stripe count and colours knitted to your school or brand colours' },
         { label: 'Snaps', text: 'metal snaps, plain or engraved with your logo' },
-        { label: 'Pockets', text: 'welt pockets trimmed with leather or contrast fabric' },
+        { label: 'Pockets', text: 'welt pockets trimmed with PU or contrast fabric' },
         { label: 'Lining', text: 'quilted satin, with an inside pocket and name label if needed' },
         { label: 'Fit', text: 'classic, oversized or cropped' },
         { label: 'Personalisation', text: 'names, numbers and year patches per wearer' },
@@ -77,7 +76,7 @@ export const varsity: ProductContent = {
       items: [
         { label: 'Patches puckering', text: 'we stabilise the body behind each patch before sewing' },
         { label: 'Rib colours off', text: 'we match yarn colours to your references on a knitted sample' },
-        { label: 'Leather shade varying', text: 'we sort leather by shade before cutting sleeves' },
+        { label: 'Sleeve shade varying', text: 'we cut sleeves from one PU or wool lot' },
         { label: 'Snaps pulling out', text: 'we reinforce snap positions and pull-test them' },
         { label: 'Wrong names on jackets', text: 'we check every personalised patch against your list' },
         { label: 'Lining too tight', text: 'we add ease to the lining and check hang' },
@@ -87,7 +86,7 @@ export const varsity: ProductContent = {
   noPrice: {
     heading: 'How varsity jackets are priced',
     paragraphs: [
-      'We do not publish one varsity jacket price. Leather sleeves and the number of chenille patches move it most. An all-wool jacket with one chest patch costs far less than a wool and leather jacket with five patches.',
+      'We do not publish one varsity jacket price. Sleeve material and the number of chenille patches move it most. An all-wool jacket with one chest patch costs far less than a jacket with five patches and quilted satin lining.',
       'Send your design and we send a written quote within {{quoteHours}} hours, FOB {{port}}. See <a href="/pricing/">our price list</a> for the products we do publish.',
     ],
   },
@@ -104,9 +103,9 @@ export const varsity: ProductContent = {
   ],
   quality: {
     heading: 'Varsity jacket quality checks',
-    lead: 'As a varsity jacket manufacturer, we run these checks on every order, with extra care on patches and leather.',
+    lead: 'As a varsity jacket manufacturer, we run these checks on every order, with extra care on patches and sleeves.',
     items: [
-      { label: 'Materials', text: 'wool, leather and rib checked for shade' },
+      { label: 'Materials', text: 'wool, PU and rib checked for shade' },
       { label: 'Patches', text: 'size, colour and position checked on every jacket' },
       { label: 'Measurements', text: 'every size checked against your chart' },
       { label: 'Snaps', text: 'pull-tested and aligned' },
@@ -130,7 +129,7 @@ export const varsity: ProductContent = {
     heading: 'Starting a varsity range with us',
     paragraphs: [
       'Many brands start with one wool body and PU sleeve jacket in two colourways, with a chest chenille patch and a back embroidery. It keeps the classic look at a price that sells.',
-      'Need a leather version later? See our <a href="/leather-jacket-manufacturer/">leather jacket manufacturer</a> page for leather choices.',
+      'Want a longer, warmer piece too? See our <a href="/coat-manufacturer/">coat manufacturer</a> page for wool coats.',
     ],
   },
   faqHeading: 'Varsity jacket questions',

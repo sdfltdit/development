@@ -563,7 +563,7 @@ export const garments = {
     callouts: [
       { label: 'Rib collar', tx: 205, ty: 84, px: 284, py: 100, side: 'left' },
       { label: 'Chenille patch', tx: 150, ty: 230, px: 260, py: 176, side: 'left' },
-      { label: 'Leather sleeves', tx: 162, ty: 340, px: 190, py: 280, side: 'left' },
+      { label: 'Two-tone sleeves', tx: 162, ty: 340, px: 190, py: 280, side: 'left' },
       { label: 'Snap front', tx: 484, ty: 200, px: 330, py: 205, side: 'right' },
       { label: 'Welt pockets', tx: 484, ty: 320, px: 392, py: 316, side: 'right' },
       { label: 'Striped rib hem', tx: 484, ty: 396, px: 404, py: 380, side: 'right' },
@@ -612,21 +612,6 @@ export const garments = {
       { label: 'Double-breasted', tx: 484, ty: 200, px: 352, py: 220, side: 'right' },
       { label: 'Cuff straps', tx: 484, ty: 340, px: 456, py: 314, side: 'right' },
       { label: 'Gabardine', tx: 484, ty: 400, px: 410, py: 390, side: 'right' },
-    ],
-  },
-  leather: {
-    title: 'Parts of a custom biker jacket',
-    noun: 'biker jacket',
-    outline: 'M268 84 L372 84 L428 106 L476 300 L446 312 L412 212 L412 380 L228 380 L228 212 L194 312 L164 300 L212 106 Z',
-    details: ['M268 84 L246 140 L300 200 L320 160 L372 84', 'M372 84 L396 140 L340 200', 'M300 200 L360 380', 'M228 360 L412 360', 'M250 250 L290 236', 'M164 300 L170 284 L200 294 L194 312', 'M476 300 L470 284 L440 294 L446 312'],
-    dashed: ['M380 240 L404 232'],
-    callouts: [
-      { label: 'Notch collar', tx: 205, ty: 80, px: 262, py: 110, side: 'left' },
-      { label: 'Zip pocket', tx: 150, ty: 220, px: 254, py: 246, side: 'left' },
-      { label: 'Zipped cuffs', tx: 150, ty: 340, px: 182, py: 304, side: 'left' },
-      { label: 'Asymmetric zip', tx: 484, ty: 180, px: 330, py: 290, side: 'right' },
-      { label: 'Real leather', tx: 484, ty: 280, px: 396, py: 270, side: 'right' },
-      { label: 'Belted hem', tx: 484, ty: 380, px: 404, py: 368, side: 'right' },
     ],
   },
 } satisfies Record<string, GarmentSketch>;

@@ -61,7 +61,7 @@ export const denim: ProductContent = {
       items: [
         { label: 'Shank buttons', text: 'plain or embossed with your logo' },
         { label: 'Rivets', text: 'on pocket corners, plain or branded' },
-        { label: 'Back patch', text: 'leather, jacron or woven, sewn on the waistband' },
+        { label: 'Back patch', text: 'jacron, PU or woven, sewn on the waistband' },
         { label: 'Pocket stitching', text: 'your own back-pocket stitch design' },
         { label: 'Pocket bags', text: 'printed with your logo or pattern' },
         { label: 'Labels and tags', text: 'woven labels, care labels and hang tags' },

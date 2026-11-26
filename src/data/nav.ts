@@ -55,7 +55,6 @@ export const primaryNav: NavGroup[] = [
       { label: 'Fleece jackets', href: '/fleece-jacket-manufacturer/' },
       { label: 'Softshell jackets', href: '/softshell-jacket-manufacturer/' },
       { label: 'Coats', href: '/coat-manufacturer/' },
-      { label: 'Leather jackets', href: '/leather-jacket-manufacturer/' },
       { label: 'Private label manufacturing', href: '/private-label-clothing-manufacturer/' },
       { label: 'Low MOQ manufacturing', href: '/low-moq-clothing-manufacturers/' },
       { label: 'For startup brands', href: '/clothing-manufacturers-for-startups/' },
