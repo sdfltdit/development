@@ -48,7 +48,7 @@ faq:
   - q: What is the minimum order for custom uniforms?
     a: Our minimum is {{moq}} {{moqUnit}}. One style is one pattern in one fabric. Uniform programmes need wide size runs, so we agree the size split on your written quote.
   - q: Are you also a workwear manufacturer for trade and warehouse staff?
-    a: Yes. We make work shirts, trousers and jackets in poly-cotton twill, drill and canvas, with bartacked pockets and reflective tape. Certified high-visibility and flame-resistant garments are outside our range.
+    a: Yes. We make work shirts, trousers and jackets in poly-cotton twill, drill and canvas, with bartacked pockets and reflective tape. Certified hi-vis and flame-resistant garments are made with certified fabric and tape, and tested by a lab for your market.
   - q: Do you make corporate uniforms with embroidered logos?
     a: Yes. Corporate uniforms usually pair a shirt or polo with trousers, embroidered with your logo. We keep the logo file and thread colours on record for every reorder.
   - q: What do you make for hospitality uniforms?
@@ -61,13 +61,13 @@ faq:
     a: Our table shows starting prices for polo shirts, woven shirts and T-shirts at {{moq}} and {{bulkQty}} pieces, FOB {{port}}. Trousers, jackets and tunics are quoted from your spec.
 related:
   - /shirt-manufacturer/
-  - /t-shirt-manufacturer/
   - /pants-trousers-manufacturer/
   - /jacket-manufacturer/
-  - /private-label-clothing-manufacturer/
   - /school-uniform-manufacturer/
   - /scrubs-manufacturer/
   - /blazer-manufacturer/
+  - /hat-manufacturer/
+  - /rain-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

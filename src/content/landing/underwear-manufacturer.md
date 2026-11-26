@@ -54,20 +54,20 @@ faq:
   - q: Which fabric is best for custom underwear?
     a: Cotton-spandex is soft, breathable and costs less. Modal and micro-modal feel smoother and cooler and keep their shape after many washes. Polyester-spandex suits sports underwear.
   - q: Do you make women's bras?
-    a: On this page we make soft, unwired bralettes. Padded sports bras with pads or moulded cups are on our sports bra page. We do not make underwired bras.
+    a: Yes. Soft bralettes are covered here, padded sports bras have their own page, and wired and moulded bras are on our lingerie page.
   - q: Can I order private label underwear in multipacks?
     a: Yes. Private label underwear can be packed in single packs or multipacks, in boxes or sleeves you supply. Each pack carries your size and care details.
   - q: Do you work as a men's underwear manufacturer for basics brands?
-    a: Yes. Basics brands often pair underwear with tees and socks. We make the underwear and tees, and you source socks separately, as we do not knit socks.
+    a: Yes. Basics brands often pair underwear with tees and socks, and we make all three, so one order can cover the whole basics range.
 related:
   - /activewear-manufacturer/
   - /loungewear-manufacturer/
   - /t-shirt-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
-  - /sample-service/
   - /bamboo-clothing-manufacturer/
   - /sports-bra-manufacturer/
+  - /socks-manufacturer/
+  - /lingerie-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

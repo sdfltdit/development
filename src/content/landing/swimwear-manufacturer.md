@@ -56,7 +56,7 @@ faq:
   - q: Can private label swimwear carry our own labels and hygiene stickers?
     a: Yes. Private label swimwear leaves our factory with your printed labels, hang tags, hygiene liners and bags. Our name does not appear on it.
   - q: Do you make underwired swimwear?
-    a: No. We make soft-cup and removable-cup swimwear. Underwired tops need specialist work that we do not do.
+    a: Yes. Underwired bikini tops and one-pieces give more lift and support for larger cup sizes. We also make soft-cup and removable-cup styles.
 related:
   - /activewear-manufacturer/
   - /leggings-manufacturer/
@@ -64,6 +64,7 @@ related:
   - /sports-bra-manufacturer/
   - /clothing-manufacturers-for-women/
   - /private-label-clothing-manufacturer/
+  - /lingerie-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

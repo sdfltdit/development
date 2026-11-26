@@ -28,7 +28,7 @@ specs:
   - label: Details
     value: Contrast piping, notch or camp collars, button fronts, elastic or drawcord waists, in-seam pockets
   - label: Sizing
-    value: Adult sizes. Children's sleepwear has separate flammability rules, so ask us first
+    value: Adult and children's sizes. Children's sleepwear is made snug-fitting or in fabric that meets your market's flammability rule
   - label: Decoration
     value: Embroidery, screen print and DTF, all in our own factory
   - label: Packing
@@ -52,7 +52,7 @@ faq:
   - q: Which fabric is best for lounge sets?
     a: Modal and viscose feel soft and cool and drape well. Cotton jersey is easy to care for. French terry gives a cosy set for colder months. We send swatches so you can feel each one.
   - q: Do you work as a sleepwear manufacturer for children's pyjamas?
-    a: Ask us first. Children's sleepwear must meet separate flammability rules in the US and some other markets, which affects fabric and fit. We tell you plainly whether we can make your design.
+    a: Yes. Children's pyjamas must meet separate flammability rules in the US and some other markets. We cut them snug-fitting or use fabric that meets the rule, and your lab tests the finished pieces.
   - q: Can I order private label loungewear with my own labels?
     a: Yes. Private label loungewear leaves our factory with your neck label, care label, hang tag and packing. Sets can be folded and bagged together.
   - q: How much does a custom pyjama set cost?

@@ -24,15 +24,15 @@ export const blazer: ProductContent = {
       id: 'construction',
       eyebrow: 'Construction',
       heading: 'Fused or half-canvas: how tailored jackets are built',
-      lead: 'What is inside the front of a blazer decides how it holds its shape. We make both of these.',
+      lead: 'What is inside the front of a blazer decides how it holds its shape. We make all of these.',
       caption: 'Blazer construction compared',
       columns: ['Construction', 'How it is built', 'Good for'],
       rows: [
         ['Fused', 'Interlining glued to the front panels', 'School and corporate blazers, lower cost'],
         ['Half-canvas', 'Sewn canvas through chest and lapel, fused below', 'Fashion and premium corporate blazers'],
+        ['Full canvas', 'Floating canvas through the whole front', 'Premium fashion blazers'],
         ['Unstructured', 'Light interlining, little or no padding', 'Summer and casual blazers'],
       ],
-      more: 'We do not make full-canvas blazers, which need a lot of hand work.',
     },
     {
       kind: 'table',

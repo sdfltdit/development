@@ -53,8 +53,8 @@ faq:
     a: Yes. Creator merch can carry printed or woven neck labels, hem tabs and hang tags with your name. Our name does not appear on it.
   - q: How much does bulk merch cost?
     a: Our table shows starting prices for tees, hoodies and crewnecks at {{moq}} and {{bulkQty}} pieces, FOB {{port}}. Extra print positions and colours are added on your quote.
-  - q: Do you make hats, mugs or stickers?
-    a: No. We make clothing only. Hats, mugs and other accessories need different suppliers.
+  - q: Do you make hats and tote bags for merch?
+    a: Yes. Caps, beanies and tote bags can be made and branded alongside your apparel. Mugs, stickers and other non-textile items need a different supplier.
   - q: Can you ship merch straight to fans?
     a: No. We ship in bulk cartons {{incoterm}} {{port}}, to you or your fulfilment partner, who then sends orders to fans.
 related:
@@ -64,6 +64,7 @@ related:
   - /joggers-manufacturer/
   - /private-label-clothing-manufacturer/
   - /low-moq-clothing-manufacturers/
+  - /hat-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

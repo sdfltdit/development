@@ -49,8 +49,8 @@ faq:
     a: Yes. Padded sports bras can have removable pads in pockets or moulded cups sewn in. Removable pads are easier for customers to adjust, while moulded cups give a smoother shape.
   - q: How do you build a high support sports bra?
     a: High support comes from a firm fabric, a wide underband, wide or adjustable straps and either compression or moulded cups. A fitter tries the proto on and moves in it before we sign off the support level.
-  - q: Do you make underwired sports bras?
-    a: No. We make wire-free sports bras with pads or moulded cups. Wired bras need specialist work that we do not do.
+  - q: Do you make sports bras with underwire?
+    a: Yes, though most sports bras are wire-free. Underwire adds shaping for larger cup sizes and is sewn into a channel under each cup.
   - q: Can private label sports bras carry our own logos?
     a: Yes. Private label sports bras can carry a heat-transfer logo on the band, printed inside labels and your hang tags. Our name does not appear on them.
   - q: What are moulded cups made from?
@@ -64,6 +64,7 @@ related:
   - /underwear-manufacturer/
   - /plus-size-clothing-manufacturer/
   - /sample-service/
+  - /lingerie-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

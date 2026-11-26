@@ -58,7 +58,7 @@ faq:
   - q: What does a windbreaker manufacturer need from me?
     a: Send the shell fabric you want, or its weight and feel, plus your lining, hood and pocket choices. A windbreaker is light, so we confirm the fabric and seams on the proto before bulk.
   - q: Do you make waterproof or padded jackets?
-    a: Padded and down puffers have their own page, linked below. Fully waterproof, seam-sealed jackets are not something we make.
+    a: Yes. Padded and down puffers have their own page, linked below. Waterproof jackets with taped seams have their own page too.
   - q: Can I use my own zips and snaps?
     a: Yes. Send your branded trims, or tell us the type, size and colour and we source them for the proto.
 related:
@@ -66,10 +66,10 @@ related:
   - /hoodie-manufacturer/
   - /streetwear-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /sample-service/
   - /puffer-jacket-manufacturer/
   - /denim-manufacturer/
   - /blazer-manufacturer/
+  - /rain-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

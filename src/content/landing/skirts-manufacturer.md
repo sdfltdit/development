@@ -50,7 +50,7 @@ faq:
   - q: How much does a custom skirt cost?
     a: Skirts are priced from your spec. Length, fabric, pleats, lining and the zip all change the cost. Your written quote shows two prices, at our minimum and at {{bulkQty}} pieces.
   - q: How do you make pleated skirts hold their pleats?
-    a: Pleats are pressed and stitched at the waist on fabric that can hold a crease, such as poly blends or crisp cotton. Permanent heat-set pleating is not something we do in-house, so we choose the fabric and pressing to suit your design.
+    a: Pleats are stitched at the waist and set in fabric that holds a crease, such as poly blends. For sharp permanent pleats, we heat-set the pleated fabric before cutting.
   - q: Which fabric works best for midi skirts?
     a: Viscose and satin give a fluid, swishy midi skirt. Cotton twill and linen give a more structured A-line. We send swatches so you can see how each one drapes.
   - q: Can I order private label skirts with my own labels?

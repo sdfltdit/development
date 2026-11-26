@@ -60,7 +60,7 @@ faq:
   - q: Can you make a dress from a photo?
     a: Yes. Send front, back and side photos and the size you want to fit. We draft the pattern and send a proto sample for you to try.
   - q: Do you sew bridal and evening gowns?
-    a: No. Beaded, boned and bridal gowns need specialist workshops. This page covers day dresses, casual dresses and simple occasion dresses.
+    a: Yes. Boned bodices, beading and bridal gowns are made by our own team. They need extra fittings and hand work, so allow more time for sampling and expect a higher price than day dresses.
 related:
   - /skirts-manufacturer/
   - /shirt-manufacturer/

@@ -32,7 +32,7 @@ specs:
   - label: Details
     value: Embroidered panels and cuffs, belts, inner ties, pockets and matching scarves cut from the same fabric
   - label: Decoration
-    value: Machine embroidery in our own factory. We do not do hand beading or stone work
+    value: Machine embroidery, hand beading and stone work, all in our own factory
   - label: Sample time
     value: "{{sampleDays}} days"
   - label: Bulk production
@@ -56,7 +56,7 @@ faq:
   - q: Can I order my modest clothing in several lengths?
     a: Yes. Abayas and maxi dresses are often sold in two or three lengths per size. Each length is graded from your chart and counted in the size split.
   - q: Do you do hand beading and stone work?
-    a: No. We do machine embroidery in-house. Hand beading and stone work are not part of our in-house work, and we do not use outside partners.
+    a: Yes. Hand beading and stone work are done by our own team, usually on cuffs, necklines and front panels. They add time and cost, so we price them on your quote after the proto.
   - q: What does a modest clothing manufacturer need from me?
     a: Send your design, coverage rules, fabric choice and size chart with lengths. We confirm sleeve, neckline and hem details on the proto before bulk.
 related:

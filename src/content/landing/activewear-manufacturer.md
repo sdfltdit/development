@@ -64,10 +64,10 @@ related:
   - /shorts-manufacturer/
   - /joggers-manufacturer/
   - /tracksuit-manufacturer/
-  - /private-label-clothing-manufacturer/
   - /underwear-manufacturer/
   - /sports-bra-manufacturer/
   - /swimwear-manufacturer/
+  - /socks-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

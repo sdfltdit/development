@@ -100,7 +100,7 @@ export const kids: ProductContent = {
         { label: 'Tracking labels', text: 'we print the batch and production details you give us on the label and packing' },
         { label: 'Care and fibre labels', text: 'made to the rules of your market' },
         { label: 'Trim records', text: 'we keep the source of every snap, button and print ink for your files' },
-        { label: 'Sleepwear', text: 'children’s sleepwear has extra rules, so ask us before designing it' },
+        { label: 'Sleepwear', text: 'children’s sleepwear is cut snug-fitting or made in fabric that meets your market’s flammability rule' },
       ],
     },
   ],

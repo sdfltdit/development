@@ -59,7 +59,6 @@ faq:
   - q: Do you do garment dyeing and washes?
     a: No. Garment dyeing and washes such as acid wash are not part of our in-house work, and we do not use outside partners. We use fabric dyed to your lab dip instead.
 related:
-  - /t-shirt-manufacturer/
   - /hoodie-manufacturer/
   - /joggers-manufacturer/
   - /tracksuit-manufacturer/
@@ -67,6 +66,7 @@ related:
   - /merch-manufacturer/
   - /denim-manufacturer/
   - /puffer-jacket-manufacturer/
+  - /hat-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

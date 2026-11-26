@@ -50,7 +50,7 @@ faq:
   - q: What is the difference between a fused and a half-canvas blazer?
     a: A fused blazer has an interlining glued to the front, which keeps cost down and shape crisp. A half-canvas blazer has a sewn canvas through the chest and lapel, so the lapel rolls more naturally.
   - q: Do you make full-canvas blazers?
-    a: No. We make fused and half-canvas blazers. Full canvas needs a lot of hand work that we do not offer.
+    a: Yes. Full-canvas blazers have a floating canvas through the whole front. They take more hand work and cost more, so most school and corporate buyers choose fused or half-canvas.
   - q: Can private label blazers carry our own labels and buttons?
     a: Yes. Private label blazers can have your woven labels, lining print and branded buttons. Our name does not appear on them.
   - q: Do you make tailored jackets for women?

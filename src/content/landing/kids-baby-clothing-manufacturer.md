@@ -58,7 +58,7 @@ faq:
   - q: How much does a custom kids' T-shirt cost?
     a: A kids' cotton T-shirt starts at {{kidsTshirtFrom}} per piece at {{moq}} pieces and {{kidsTshirtBulk}} at {{bulkQty}} pieces, FOB {{port}}. Bodysuits, hoodies and the rest of the range are priced from your tech pack.
   - q: Do you make children's sleepwear?
-    a: Ask us first. Children's sleepwear has separate flammability rules in the US and some other markets, which limit fabric and fit. We tell you plainly whether we can make your design.
+    a: Yes. Children's sleepwear has separate flammability rules in the US and some other markets. We make it snug-fitting or in fabric that meets your market's rule, and your lab tests the finished pieces.
 related:
   - /t-shirt-manufacturer/
   - /hoodie-manufacturer/

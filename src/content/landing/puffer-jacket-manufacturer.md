@@ -54,7 +54,7 @@ faq:
   - q: Do you make puffer vests?
     a: Yes. Puffer vests use the same fill and quilting as our jackets, with bound armholes and a stand collar. They suit layering ranges and corporate gifts.
   - q: Are your puffer jackets waterproof?
-    a: No. Our puffers are water resistant only when the shell fabric has a water-repellent finish from the mill. Fully waterproof, seam-sealed jackets are not something we make.
+    a: They can be. A water-repellent shell keeps light rain out. For fully waterproof puffers, we use a waterproof shell and seal the seams with tape, which adds cost.
   - q: How are puffer jackets packed for shipping?
     a: Puffers are folded and packed in bags, then lightly compressed in cartons to save freight. They recover their loft once unpacked.
 related:
@@ -64,6 +64,7 @@ related:
   - /tracksuit-manufacturer/
   - /private-label-clothing-manufacturer/
   - /sample-service/
+  - /rain-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

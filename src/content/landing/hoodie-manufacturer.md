@@ -69,10 +69,10 @@ related:
   - /t-shirt-manufacturer/
   - /private-label-clothing-manufacturer/
   - /low-moq-clothing-manufacturers/
-  - /sample-service/
   - /clothing-manufacturers-for-startups/
   - /merch-manufacturer/
   - /cotton-clothing-manufacturer/
+  - /sweater-manufacturer/
 published: 2026-11-25
 updated: 2026-11-26
 ---
