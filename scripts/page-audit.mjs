@@ -173,6 +173,13 @@ const STRICT = new Set([
   '/tools/delta-e-calculator/',
   '/tools/wash-care-label-generator/',
   '/tools/manufacturer-email-generator/',
+  '/private-label-clothing-manufacturer/',
+  '/low-moq-clothing-manufacturers/',
+  '/clothing-manufacturers-for-startups/',
+  '/cut-and-sew-service/',
+  '/sample-service/',
+  '/clothing-manufacturer-bangladesh/',
+  '/how-to-find-clothing-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
