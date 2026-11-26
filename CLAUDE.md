@@ -62,7 +62,7 @@ Never publish
 - Certificates or certification names, company registration (RJSC), TIN, trade association names or member numbers. The `/certifications/` page explains our compliance approach without naming any.
 - Live video call offers.
 - Partners or subcontractors. All cutting, sewing, printing (screen, DTF, sublimation) and embroidery is in-house.
-  - One owner-confirmed exception (27 November 2026): our sister company makes knit and woven fabric for orders above 5,000 pieces, and trims and garment accessories. Never name it, never call it a partner or subcontractor, and use only the `sisterFabricAbove` and `sisterCompany` tokens (`sisterCompanyPolicy` in `company.ts`). Whether 5,000 counts per order or per style is still to confirm with the owner.
+  - One owner-confirmed exception (27 November 2026): our sister company makes knit and woven fabric for orders above 5,000 pieces per style, and trims and garment accessories. Never name it, never call it a partner or subcontractor, and use only the `sisterFabricAbove` and `sisterCompany` tokens (`sisterCompanyPolicy` in `company.ts`).
 - Invented names, testimonials, reviews, client logos, numbers, counters or case studies.
 - Stock photos presented as our factory, team or products.
 - "Facts last checked", "prices checked on" or similar date notes next to tables. Dates live in schema and the "About this page" block only.

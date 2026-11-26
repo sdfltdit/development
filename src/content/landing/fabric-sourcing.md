@@ -32,7 +32,7 @@ specs:
   - label: Claims
     value: Fibre, organic, recycled and performance claims rest on the mill's report or certificate
   - label: Own fabric
-    value: "Orders above {{sisterFabricAbove}} pieces can use knit or woven fabric made by our sister company"
+    value: "Orders above {{sisterFabricAbove}} pieces per style can use knit or woven fabric made by our sister company"
   - label: Sample time
     value: "{{sampleDays}} days for the proto sample"
   - label: Bulk production
@@ -58,7 +58,7 @@ faq:
   - q: How do you check fabric quality?
     a: Every roll is checked for shade, weight, width and faults on arrival, and shrinkage is tested before cutting.
   - q: Can you make the fabric yourselves?
-    a: "For orders above {{sisterFabricAbove}} pieces, yes. Our sister company knits or weaves the fabric to your brief, so weight, colour and timing stay under one group."
+    a: "For orders above {{sisterFabricAbove}} pieces per style, yes. Our sister company knits or weaves the fabric to your brief, so weight, colour and timing stay under one group."
 related:
   - /trims-sourcing/
   - /lab-dip-service/
