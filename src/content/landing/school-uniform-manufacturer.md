@@ -62,12 +62,12 @@ faq:
 related:
   - /uniform-manufacturer/
   - /kids-baby-clothing-manufacturer/
-  - /t-shirt-manufacturer/
   - /tracksuit-manufacturer/
   - /skirts-manufacturer/
   - /hoodie-manufacturer/
   - /blazer-manufacturer/
   - /sweater-manufacturer/
+  - /varsity-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

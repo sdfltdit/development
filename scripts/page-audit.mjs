@@ -47,6 +47,11 @@ const STRICT = new Set([
   '/hat-manufacturer/',
   '/lingerie-manufacturer/',
   '/rain-jacket-manufacturer/',
+  '/varsity-jacket-manufacturer/',
+  '/fleece-jacket-manufacturer/',
+  '/softshell-jacket-manufacturer/',
+  '/coat-manufacturer/',
+  '/leather-jacket-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

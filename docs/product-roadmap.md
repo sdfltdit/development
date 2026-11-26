@@ -4,13 +4,12 @@ Rules for every page on this list: one distinct search intent, a primary keyword
 
 Kept on parent pages (no separate page): polo shirts, tank tops, long sleeves (T-shirt page), sweatshirts and zip hoodies (hoodie page), sweatpants (joggers), cargo pants and chinos (pants), yoga pants (leggings), pyjamas (loungewear), board shorts and rash guards (swimwear), puffer vests (puffer jacket), cardigans and beanies (sweater and hat pages).
 
-## Built (35)
+## Built (40)
 
-Batches 1–7: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket. The T-shirt page is hand-built.
+Batches 1–8: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket, varsity jacket, fleece jacket, softshell jacket, coat, leather jacket. The T-shirt page is hand-built.
 
 ## Planned, in rough batch order
 
-Outerwear: varsity jacket, fleece jacket, softshell jacket, coat (overcoat, trench, parka), leather and faux leather jacket.
 Team and sport: football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform, esports jersey, cheerleading uniform, dancewear and leotards, martial arts uniform, fightwear (MMA shorts and rash guards), golf apparel, tennis wear, running apparel, compression wear, thermal base layers, ski wear.
 Workwear: chef uniform, apron, lab coat, coverall, hi-vis workwear, security uniform, hotel housekeeping and spa uniforms.
 Womenswear and occasion: jumpsuit, maternity and nursing wear, shapewear, evening dress, bridal wear, bodysuit and crop top.

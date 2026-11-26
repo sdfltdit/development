@@ -62,14 +62,14 @@ faq:
   - q: Can I use my own zips and snaps?
     a: Yes. Send your branded trims, or tell us the type, size and colour and we source them for the proto.
 related:
-  - /tracksuit-manufacturer/
-  - /hoodie-manufacturer/
-  - /streetwear-manufacturer/
-  - /private-label-clothing-manufacturer/
   - /puffer-jacket-manufacturer/
-  - /denim-manufacturer/
   - /blazer-manufacturer/
   - /rain-jacket-manufacturer/
+  - /varsity-jacket-manufacturer/
+  - /fleece-jacket-manufacturer/
+  - /leather-jacket-manufacturer/
+  - /coat-manufacturer/
+  - /softshell-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

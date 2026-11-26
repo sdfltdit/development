@@ -113,3 +113,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Puffer jacket: down vs synthetic fill, quilting vs baffles, down leakage. Fill power and down sourcing paperwork come from the down supplier. Seam-sealed waterproof puffers are stated as not made.
 - Blazer: fused vs half-canvas construction explained. Full canvas is stated as not offered.
 - Socks, sweaters and knitwear-factory URLs now redirect to /products/. The denim-jacket URL now points to the denim page.
+
+## Batch 8 (varsity, fleece, softshell, coat, leather jacket)
+
+- Varsity: buyers are streetwear brands, schools and teams. Key choices are body fabric (melton wool, satin, fleece), sleeves (leather, PU or contrast wool), striped rib and chenille patches. Wool and leather jackets are usually dry clean only.
+- Fleece: polar vs micro vs sherpa vs high-pile, anti-pill finish, quarter-zip for corporate wear. Recycled fleece claims rest on the mill's certificate.
+- Softshell: 2-layer bonded vs 3-layer with membrane. Softshells are water repellent, not waterproof, and the page points heavy-rain buyers to the rain jacket page.
+- Coat: melton, double-faced wool, gabardine. Fused vs canvassed fronts. The old /coat-manufacturer/ URL now has its own page again.
+- Leather: cowhide, lambskin, goatskin, suede and PU. Hide sorting by shade is the key quality step. Old leather and faux leather clothing URLs now redirect here.

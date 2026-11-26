@@ -63,8 +63,9 @@ related:
   - /hoodie-manufacturer/
   - /tracksuit-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /sample-service/
   - /rain-jacket-manufacturer/
+  - /coat-manufacturer/
+  - /fleece-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---
