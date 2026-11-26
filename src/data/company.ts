@@ -159,7 +159,7 @@ export const workplace = [
   { label: 'Medical care', text: 'a medical room for first aid and health checks during working hours' },
   { label: 'Daycare and childcare', text: 'childcare on site, so parents can work knowing their children are looked after' },
   { label: 'No overtime', text: 'production is planned within normal working hours, never by stretching shifts' },
-  { label: 'No child labour', text: 'we do not employ children, and ages are checked when people join' },
+  { label: 'No child labour', text: 'we do not employ children, and we collect a national ID card from every worker when they join' },
   { label: 'Festival bonuses', text: 'paid to every worker for the main festivals each year' },
 ] as const;
 
