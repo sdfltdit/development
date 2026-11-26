@@ -42,7 +42,7 @@ serviceType: Hair accessories manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom scrunchies?
-    a: Custom scrunchies start at {{moq}} {{moqUnit}} per style in one fabric. Colours share the total, as agreed on your quote.
+    a: Custom scrunchies start at {{moq}} {{moqUnit}} in one fabric. Colours share the total, as agreed on your quote.
   - q: Satin or silk scrunchies?
     a: Silk is a natural fibre and costs more. Polyester satin feels smooth at a lower price, and is labelled as polyester. Both glide over hair better than cotton.
   - q: Do you make satin bonnets?

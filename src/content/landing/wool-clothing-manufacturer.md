@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Wool clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Overshirts, shirt jackets, trousers, blazers, coats, sweaters, scarves and beanies
   - label: Wovens
@@ -42,7 +42,7 @@ serviceType: Wool clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom wool clothing?
-    a: Custom wool clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom wool clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Do you make merino wool clothing?
     a: Yes. Merino wool clothing covers fine knitwear, tees and lightweight tops. The mill's report confirms the merino content and fibre grade.
   - q: Is wool blend clothing as warm as pure wool?

@@ -42,7 +42,7 @@ serviceType: Rugby shirt manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom rugby shirts?
-    a: Rugby shirts start at {{moq}} {{moqUnit}} per design. Colours and sizes share the total, and match jerseys can carry different numbers inside one design.
+    a: Rugby shirts start at {{moq}} {{moqUnit}}, with each design counted as a style. Colours and sizes share the total, and match jerseys can carry different numbers inside one design.
   - q: What makes heavyweight rugby shirts different from polos?
     a: Heavyweight rugby shirts use a thick cotton jersey, a stiff twill collar, a taped placket and rubber buttons. A polo uses a lighter pique knit with a knitted collar.
   - q: Do you make rugby jerseys for matches?

@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Salwar kameez facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Three-piece suits, two-piece suits, straight trouser suits, churidar suits and kids' suits
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Salwar kameez manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom salwar kameez?
-    a: Custom salwar kameez start at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom salwar kameez start at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Is shalwar kameez the same as salwar kameez?
     a: Yes. Shalwar and salwar are two spellings of the same loose trousers. Brands use both on their sites, so we use both too.
   - q: Do you sell unstitched suits?

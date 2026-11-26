@@ -257,3 +257,5 @@
 /fulfillment-service /all-services/ 301
 /insights/acceptable-delta-e-for-lab-dip/ /insights/lab-dip-explained/ 301
 /insights/acceptable-delta-e-for-lab-dip /insights/lab-dip-explained/ 301
+/insights/sample-cost-explained/ /sample-service/ 301
+/insights/sample-cost-explained /sample-service/ 301

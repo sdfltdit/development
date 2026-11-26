@@ -42,7 +42,7 @@ serviceType: Hi-vis workwear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for hi-vis workwear?
-    a: Hi-vis workwear starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Hi-vis workwear starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What makes high visibility clothing different from bright clothing?
     a: High visibility clothing uses fluorescent fabric for daytime and reflective tape for night. A bright shirt alone is not hi-vis, because the colour and tape must meet tested levels.
   - q: Do you make hi-vis vests in mesh and solid fabric?

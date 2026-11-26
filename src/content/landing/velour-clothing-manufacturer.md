@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Velour clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Track tops, hoodies, joggers, flared pants, shorts, lounge sets, dresses and kids' sets
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Velour clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom velour clothing?
-    a: Custom velour clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom velour clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Do you make velour tracksuits as matching sets?
     a: Yes. Velour tracksuits are cut from one fabric lot, so the top and bottoms match in shade and pile.
   - q: Can you embroider velour hoodies?

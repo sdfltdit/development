@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Hotel uniform facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours, sizes and departments are split on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours, sizes and departments are split on your quote."
   - label: Products
     value: Suits, waistcoats, blouses and shirts, housekeeping tunics and dresses, spa tunics, porter jackets and trousers
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Hotel uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom hotel uniforms?
-    a: Custom hotel uniforms start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom hotel uniforms start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What fabric is best for housekeeping uniforms?
     a: Poly-cotton twill or stretch poly-cotton is the usual choice. It handles bending and lifting, survives hot washes and hides small marks in darker colours.
   - q: What do spa uniforms usually look like?

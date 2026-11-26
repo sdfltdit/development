@@ -15,12 +15,12 @@ secondaryKeywords:
   - fabric swatches
   - yarn sourcing
 intent: commercial
-answer: SDF Clothing runs a fabric sourcing service for every order we produce. We find knit and woven fabric to your brief from fabric mills, send swatches, test shrinkage and colour, and buy the approved fabric for your bulk order. Cutting and sewing happen in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}} per style, with the sample in {{sampleDays}} days.
+answer: SDF Clothing runs a fabric sourcing service for every order we produce. We find knit and woven fabric to your brief from fabric mills, send swatches, test shrinkage and colour, and buy the approved fabric for your bulk order. Cutting and sewing happen in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}, with the sample in {{sampleDays}} days.
 facts: [moq, sample, bulk, quote]
 specsCaption: Fabric sourcing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "Fabric is sourced for production with us, from {{moq}} {{moqUnit}} per style. Colours and sizes share the total."
+    value: "Fabric is sourced for production with us, from {{moq}} {{moqUnit}}. Colours and sizes share the total."
   - label: Knits
     value: Jersey, rib, interlock, pique, fleece, French terry, mesh and stretch knits
   - label: Wovens
@@ -42,7 +42,7 @@ serviceType: Fabric sourcing
 citations: []
 faq:
   - q: Do you sell fabric on its own?
-    a: No. We source fabric for clothing we produce for you, from {{moq}} {{moqUnit}} per style. We do not sell fabric by the metre.
+    a: No. We source fabric for clothing we produce for you, from {{moq}} {{moqUnit}}. We do not sell fabric by the metre.
   - q: How does custom fabric development work?
     a: You share the weight, feel, fibre and colour you want. We find the closest fabrics, adjust with the mill if needed, and send swatches to approve.
   - q: Which fabric mills do you work with?

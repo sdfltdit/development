@@ -42,7 +42,7 @@ serviceType: Sleep mask manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom sleep masks?
-    a: Custom sleep masks start at {{moq}} {{moqUnit}} per style. Colours share the total, as agreed on your quote.
+    a: Custom sleep masks start at {{moq}} {{moqUnit}}. Colours share the total, as agreed on your quote.
   - q: Do you make silk eye masks?
     a: Yes. Silk eye masks have mulberry silk on the face side, a soft filling and a silk-covered strap. The silk weight comes from the mill's report.
   - q: What are contoured sleep masks?

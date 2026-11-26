@@ -42,7 +42,7 @@ serviceType: Tennis wear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom tennis apparel?
-    a: Custom tennis apparel starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom tennis apparel starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Do tennis dresses come with built-in shorts?
     a: Yes. Most tennis dresses have separate ball shorts or attached inner shorts with a ball pocket. We can also add a built-in bra with removable pads.
   - q: How are tennis skirts made?

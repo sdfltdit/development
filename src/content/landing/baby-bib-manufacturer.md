@@ -42,7 +42,7 @@ serviceType: Baby bib manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom baby bibs?
-    a: Custom baby bibs start at {{moq}} {{moqUnit}} per style in one fabric. Colours and prints share the total, as agreed on your quote.
+    a: Custom baby bibs start at {{moq}} {{moqUnit}} in one fabric. Colours and prints share the total, as agreed on your quote.
   - q: How many layers should muslin swaddles have?
     a: Muslin swaddles usually have one or two layers so they stay light and breathable. Bibs and burp cloths use more layers, often three to six, so they soak up more.
   - q: What are bandana bibs?

@@ -128,4 +128,4 @@ Add a grade rule column next to each point of measure in your size chart, or giv
 
 ## Where SDF Clothing fits
 
-Our pattern makers grade your approved base size into your full size range and keep the digital patterns for reorders. See our [clothing pattern making service](/pattern-making-service/) for how it works. Orders start at {{moq}} {{moqUnit}} per style, with the proto sample in {{sampleDays}} days.
+Our pattern makers grade your approved base size into your full size range and keep the digital patterns for reorders. See our [clothing pattern making service](/pattern-making-service/) for how it works. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.

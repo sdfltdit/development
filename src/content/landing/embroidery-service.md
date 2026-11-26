@@ -15,12 +15,12 @@ secondaryKeywords:
   - embroidery digitising
   - embroidered logos
 intent: commercial
-answer: SDF Clothing runs a clothing embroidery service for brands worldwide. We digitise your artwork and stitch flat, 3D puff and appliqué embroidery on the clothing we make for you, in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}} per style. An embroidered proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
+answer: SDF Clothing runs a clothing embroidery service for brands worldwide. We digitise your artwork and stitch flat, 3D puff and appliqué embroidery on the clothing we make for you, in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. An embroidered proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
 facts: [moq, sample, bulk, quote]
 specsCaption: Embroidery service facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per garment style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Types
     value: Flat embroidery, 3D puff, appliqué, tonal, metallic thread and chenille-look loops
   - label: Placements
@@ -42,7 +42,7 @@ serviceType: Clothing embroidery
 citations: []
 faq:
   - q: What is the minimum order for custom embroidery?
-    a: Custom embroidery is part of a garment order, which starts at {{moq}} {{moqUnit}} per style. One logo can run across every colour and size in that order.
+    a: Custom embroidery is part of a garment order, which starts at {{moq}} {{moqUnit}}. One logo can run across every colour and size in that order.
   - q: What is 3D puff embroidery?
     a: 3D puff embroidery stitches over a foam layer, so the design stands up from the fabric. It works best on bold shapes and caps, not fine text.
   - q: Do you charge for embroidery digitising?

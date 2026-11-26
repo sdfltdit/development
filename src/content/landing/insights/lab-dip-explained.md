@@ -165,4 +165,4 @@ Reorders are where colour drifts. To keep it steady:
 
 ## Where SDF Clothing fits
 
-Every colour in an order we produce gets lab dips on the real fabric before bulk dyeing, checked in a light box. Our [lab dip service](/lab-dip-service/) page shows how approval works with us. Orders start at {{moq}} {{moqUnit}} per style, and the proto sample follows in {{sampleDays}} days.
+Every colour in an order we produce gets lab dips on the real fabric before bulk dyeing, checked in a light box. Our [lab dip service](/lab-dip-service/) page shows how approval works with us. Orders start at {{moq}} {{moqUnit}}, and the proto sample follows in {{sampleDays}} days.

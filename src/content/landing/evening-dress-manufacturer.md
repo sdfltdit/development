@@ -42,7 +42,7 @@ serviceType: Evening dress manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom evening dresses?
-    a: Custom evening dresses start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom evening dresses start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Which fabrics suit evening gowns?
     a: Satin and crepe give a smooth, fitted look. Chiffon and tulle float and add volume. Velvet suits winter ranges, and lace or sequin fabric adds texture.
   - q: Do you make prom dresses?

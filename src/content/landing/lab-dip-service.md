@@ -15,12 +15,12 @@ secondaryKeywords:
   - colour standard
   - shade matching
 intent: commercial
-answer: SDF Clothing runs a lab dip service as part of every order we produce. We dye small swatches of your actual fabric to match your Pantone or physical colour reference. Each option is checked under set light and sent for approval before bulk fabric is dyed. Orders start at {{moq}} {{moqUnit}} per style, with the sample in {{sampleDays}} days.
+answer: SDF Clothing runs a lab dip service as part of every order we produce. We dye small swatches of your actual fabric to match your Pantone or physical colour reference. Each option is checked under set light and sent for approval before bulk fabric is dyed. Orders start at {{moq}} {{moqUnit}}, with the sample in {{sampleDays}} days.
 facts: [moq, sample, bulk, quote]
 specsCaption: Lab dip facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "Lab dips are part of production with us, from {{moq}} {{moqUnit}} per style. Colours and sizes share the total."
+    value: "Lab dips are part of production with us, from {{moq}} {{moqUnit}}. Colours and sizes share the total."
   - label: References
     value: Pantone TCX or TPX codes, fabric swatches or a garment to match
   - label: Options

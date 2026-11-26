@@ -42,7 +42,7 @@ serviceType: Scarf manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom scarves?
-    a: Custom scarves start at {{moq}} {{moqUnit}} per design. Colourways share the total, as agreed on your quote.
+    a: Custom scarves start at {{moq}} {{moqUnit}}, with each design counted as a style. Colourways share the total, as agreed on your quote.
   - q: Do you make printed silk scarves?
     a: Yes. Printed silk scarves come in silk twill or silk satin, with edge-to-edge digital prints and rolled hems. Fibre content comes from the mill's report.
   - q: How are knitted scarves made?

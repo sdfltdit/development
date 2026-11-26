@@ -133,4 +133,4 @@ In a final AQL inspection, panels that differ inside one garment are usually a m
 
 ## Where SDF Clothing fits
 
-We check every fabric roll against your approved standard, cut each garment from one roll and sort by shade before packing. Our [garment dyeing service](/dyeing-service/) page shows how we set light and dark limits for garment-dyed orders. Orders start at {{moq}} {{moqUnit}} per style, and every order gets a final AQL {{aql}} inspection.
+We check every fabric roll against your approved standard, cut each garment from one roll and sort by shade before packing. Our [garment dyeing service](/dyeing-service/) page shows how we set light and dark limits for garment-dyed orders. Orders start at {{moq}} {{moqUnit}}, and every order gets a final AQL {{aql}} inspection.

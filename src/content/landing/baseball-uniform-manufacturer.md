@@ -42,7 +42,7 @@ serviceType: Baseball uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom baseball uniforms?
-    a: The minimum is {{moq}} {{moqUnit}} per design. Each jersey and pair of pants in that design can have its own name, number and size.
+    a: The minimum is {{moq}} {{moqUnit}}, with each design counted as a style. Each jersey and pair of pants in that design can have its own name, number and size.
   - q: Do you make full-button baseball jerseys?
     a: Yes. The full-button jersey is the traditional game style, and we add contrast piping, a drop-tail hem and twill lettering to suit your team.
   - q: What are baseball pants made from?

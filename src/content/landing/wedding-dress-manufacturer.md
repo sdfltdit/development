@@ -42,7 +42,7 @@ serviceType: Wedding dress manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom wedding dresses?
-    a: Custom wedding dresses start at {{moq}} {{moqUnit}} per style. Sizes and shades share the total, as agreed on your quote.
+    a: Custom wedding dresses start at {{moq}} {{moqUnit}}. Sizes and shades share the total, as agreed on your quote.
   - q: Which fabrics are used for bridal gowns?
     a: Satin, crepe and mikado give clean, structured shapes. Tulle and organza add volume, and lace adds texture. Most gowns combine two or three of these.
   - q: Do you make private label wedding dresses?

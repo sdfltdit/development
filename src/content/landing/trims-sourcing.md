@@ -15,12 +15,12 @@ secondaryKeywords:
   - custom trims
   - branded trims
 intent: commercial
-answer: SDF Clothing runs a trims sourcing service for every order we produce. We source zips, buttons, drawcords, elastics, snaps and branded trims, match them to your colours, test them, and sew them onto your garments in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}} per style. The proto sample takes {{sampleDays}} days.
+answer: SDF Clothing runs a trims sourcing service for every order we produce. We source zips, buttons, drawcords, elastics, snaps and branded trims, match them to your colours, test them, and sew them onto your garments in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. The proto sample takes {{sampleDays}} days.
 facts: [moq, sample, bulk, quote]
 specsCaption: Trims sourcing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "Trims are sourced for production with us, from {{moq}} {{moqUnit}} per style. Colours and sizes share the total."
+    value: "Trims are sourced for production with us, from {{moq}} {{moqUnit}}. Colours and sizes share the total."
   - label: Zips
     value: Nylon coil, metal, moulded plastic and water-resistant zips with custom pullers
   - label: Buttons and snaps
@@ -42,7 +42,7 @@ serviceType: Trims sourcing
 citations: []
 faq:
   - q: Do you sell garment trims on their own?
-    a: No. We source garment trims for clothing we produce for you, from {{moq}} {{moqUnit}} per style.
+    a: No. We source garment trims for clothing we produce for you, from {{moq}} {{moqUnit}}.
   - q: Can you match zips and buttons to my fabric colour?
     a: Yes. Zips and buttons are dyed or chosen to match your fabric or Pantone references, down to the puller.
   - q: What are custom trims?

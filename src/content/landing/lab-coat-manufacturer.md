@@ -42,7 +42,7 @@ serviceType: Lab coat manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom lab coats?
-    a: Custom lab coats start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom lab coats start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What fabric is best for white lab coats?
     a: Poly-cotton twill is the usual choice. It stays white longer, creases less and survives hot washes. Pure cotton breathes better but creases and shrinks more.
   - q: Do you make embroidered lab coats with names?

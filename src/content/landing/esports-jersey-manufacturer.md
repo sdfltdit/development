@@ -42,7 +42,7 @@ serviceType: Esports apparel manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom esports jerseys?
-    a: The minimum is {{moq}} {{moqUnit}} per design. Players and fans can share one design, and each jersey can carry its own gamertag and size.
+    a: The minimum is {{moq}} {{moqUnit}}, with each design counted as a style. Players and fans can share one design, and each jersey can carry its own gamertag and size.
   - q: Why are gaming jerseys sublimated?
     a: Gaming jerseys use dark colours, gradients and sharp angular graphics across the whole shirt. Sublimation dyes all of that into the fabric, so it never cracks and costs the same for any number of colours.
   - q: How are esports jerseys different from football shirts?

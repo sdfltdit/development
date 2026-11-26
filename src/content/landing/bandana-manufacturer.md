@@ -42,7 +42,7 @@ serviceType: Bandana manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom bandanas?
-    a: Custom bandanas start at {{moq}} {{moqUnit}} per design. Colourways share the total, as agreed on your quote.
+    a: Custom bandanas start at {{moq}} {{moqUnit}}, with each design counted as a style. Colourways share the total, as agreed on your quote.
   - q: Which fabric is best for printed bandanas?
     a: Cotton gives the classic soft look and suits screen printing. Polyester takes sublimation, so photos and gradients print sharply edge to edge.
   - q: Why choose cotton bandanas?

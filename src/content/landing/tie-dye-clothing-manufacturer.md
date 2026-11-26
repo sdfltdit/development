@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Tie-dye facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colourways and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colourways and sizes share the total, as agreed on your quote."
   - label: Products
     value: T-shirts, hoodies, sweatshirts, joggers, shorts, socks, bandanas and kids' sets
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Tie-dye clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom tie-dye?
-    a: Custom tie-dye starts at {{moq}} {{moqUnit}} per style. Colourways and sizes share the total, as agreed on your quote.
+    a: Custom tie-dye starts at {{moq}} {{moqUnit}}. Colourways and sizes share the total, as agreed on your quote.
   - q: Will every piece in a bulk tie-dye order look the same?
     a: No. Hand tie-dye makes every piece slightly different. We keep each piece within an approved range of colour and pattern, set on the sample.
   - q: Do tie-dye t-shirts bleed in the wash?

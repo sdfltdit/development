@@ -44,7 +44,7 @@ serviceType: Softshell jacket manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom softshell jackets?
-    a: Softshell jackets start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Softshell jackets start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What is a bonded softshell?
     a: A bonded softshell has a stretch woven outer fabric glued to a soft fleece inside, so it is one layer that feels like two. A membrane can sit between them for more wind and rain protection.
   - q: Is a softshell waterproof?

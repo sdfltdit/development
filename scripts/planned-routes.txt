@@ -17,16 +17,13 @@
 /clothing-manufacturer-for-uk-brands/
 /clothing-manufacturer-for-usa-brands/
 /confidentiality/
-/digital-3d-sample-vs-physical-sample/
 /direct-factory-vs-trading-company-vs-buying-agent/
 /eu-epr-explained/
 /faq/
 /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
 /full-package-fob-vs-cmt-vs-cm-only/
 /gots-vs-oeko-tex-vs-bsci-certification-comparison/
-/guides/clothing-manufacturing-lead-time/
 /guides/first-order-sourcing-questions/
-/guides/how-clothing-manufacturers-work/
 /how-to-scale-a-clothing-brand/
 /how-to-start-a-clothing-brand-in-the-uk/
 /how-to-start-a-clothing-brand/
@@ -56,7 +53,6 @@
 /insights/oem-vs-odm-vs-cmt/
 /insights/pantone-tcx-vs-pms-vs-tpg-for-clothing/
 /insights/pattern-fit-problems-explained/
-/insights/sample-cost-explained/
 /insights/shipment-delay-explained/
 /insights/sock-manufacturing-guide/
 /insights/sustainable-clothing-manufacturing/
@@ -73,8 +69,6 @@
 /oem-clothing-manufacturer/
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
-/print-on-demand-vs-private-label/
-/private-label-clothing-guide/
 /recycled-clothing-manufacturer/
 /sustainability/
 /sustainable-clothing-manufacturer/

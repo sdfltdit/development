@@ -44,7 +44,7 @@ serviceType: Sports bra manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom sports bras?
-    a: Our minimum is {{moq}} {{moqUnit}} per style in one fabric. Every colour and size of that style counts toward it, with the split agreed on your quote.
+    a: Our minimum is {{moq}} {{moqUnit}} in one fabric. Every colour and size of that style counts toward it, with the split agreed on your quote.
   - q: Do you make padded sports bras?
     a: Yes. Padded sports bras can have removable pads in pockets or moulded cups sewn in. Removable pads are easier for customers to adjust, while moulded cups give a smoother shape.
   - q: How do you build a high support sports bra?

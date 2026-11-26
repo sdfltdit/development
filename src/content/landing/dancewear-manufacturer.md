@@ -42,7 +42,7 @@ serviceType: Dancewear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom dancewear?
-    a: Custom dancewear starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom dancewear starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Are you a leotard manufacturer for dance brands?
     a: Yes. We make camisole, tank, long-sleeve and cross-back leotards, with front lining and covered leg elastic, for brands and studios to sell.
   - q: Which fabric is best for ballet wear?

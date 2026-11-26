@@ -42,7 +42,7 @@ serviceType: Martial arts uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom gis?
-    a: Custom gis start at {{moq}} {{moqUnit}} per design in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom gis start at {{moq}} {{moqUnit}}, with each design in one fabric counted as a style. Colours and sizes share the total, as agreed on your quote.
   - q: Are you a BJJ gi manufacturer for brands?
     a: Yes. We make BJJ gis with pearl weave jackets, ripstop pants, reinforced stress points and your own patches, for brands and academies to sell.
   - q: Which weave should a gi jacket use?

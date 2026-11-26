@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Polyester clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Sports tops, team kits, leggings, jackets, fleece, dresses, blouses and uniforms
   - label: Knits
@@ -44,7 +44,7 @@ serviceType: Polyester clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom polyester clothing?
-    a: Custom polyester clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom polyester clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Can you make recycled polyester clothing?
     a: Yes. The recycled content comes from the mill, which supplies the certificate for the fabric. We do not make the claim ourselves.
   - q: Is poly-cotton clothing better than pure polyester?

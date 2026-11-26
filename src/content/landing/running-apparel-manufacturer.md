@@ -42,7 +42,7 @@ serviceType: Running apparel manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom running gear?
-    a: Custom running gear starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom running gear starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What makes good running shorts?
     a: Good running shorts are light, with side splits or a split leg for stride, an inner brief or liner, and a zip pocket for keys or gels.
   - q: Are running singlets better than tees?

@@ -42,7 +42,7 @@ serviceType: Ski wear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom ski wear?
-    a: Custom ski wear starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom ski wear starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What waterproof rating should ski jackets have?
     a: Most ski jackets use fabric rated between 10,000 mm and 20,000 mm. Wetter resorts need the higher end. The rating comes from the mill's hydrostatic head test, and we use it for your label.
   - q: Do you make ski pants and bibs?

@@ -142,6 +142,11 @@ const STRICT = new Set([
   '/insights/international-size-chart-guide/',
   '/insights/stitch-quality-spi-explained/',
   '/insights/avoiding-clothing-manufacturer-scams/',
+  '/private-label-clothing-guide/',
+  '/print-on-demand-vs-private-label/',
+  '/guides/clothing-manufacturing-lead-time/',
+  '/guides/how-clothing-manufacturers-work/',
+  '/digital-3d-sample-vs-physical-sample/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

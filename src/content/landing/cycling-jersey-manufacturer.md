@@ -42,7 +42,7 @@ serviceType: Cycling apparel manufacturing
 citations: []
 faq:
   - q: What is the minimum order for a custom cycling kit?
-    a: The minimum is {{moq}} {{moqUnit}} per style. A jersey and bib shorts count as two styles. Sizes inside each style share the number.
+    a: The minimum is {{moq}} {{moqUnit}}. A jersey and bib shorts count as two styles. Sizes inside each style share the number.
   - q: What is the difference between race fit and club fit?
     a: Race fit is close to the body with shorter front panels and longer sleeves, for riding in a low position. Club fit is looser and more forgiving for social and longer rides.
   - q: Where do your chamois pads come from?

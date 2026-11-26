@@ -42,7 +42,7 @@ serviceType: Compression wear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom compression wear?
-    a: Custom compression wear starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom compression wear starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: How tight should compression shirts be?
     a: Compression shirts sit close to the skin without limiting breathing or movement. We set the fit from your size chart and fabric power, then check it on a fitter.
   - q: Do you make compression tights?

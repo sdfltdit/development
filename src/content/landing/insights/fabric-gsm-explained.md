@@ -150,4 +150,4 @@ If the garment will be garment-dyed or washed, agree whether GSM is measured bef
 
 ## Where SDF Clothing fits
 
-We check fabric GSM on every lot that arrives, and send swatches before sampling so you can feel the weight. Our [fabric sourcing service](/fabric-sourcing/) finds fabric at the GSM you need. Orders start at {{moq}} {{moqUnit}} per style, with a proto sample in {{sampleDays}} days.
+We check fabric GSM on every lot that arrives, and send swatches before sampling so you can feel the weight. Our [fabric sourcing service](/fabric-sourcing/) finds fabric at the GSM you need. Orders start at {{moq}} {{moqUnit}}, with a proto sample in {{sampleDays}} days.

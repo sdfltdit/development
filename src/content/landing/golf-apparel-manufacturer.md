@@ -42,7 +42,7 @@ serviceType: Golf apparel manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom golf apparel?
-    a: Custom golf apparel starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom golf apparel starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: How are golf polo shirts different from cotton polos?
     a: Golf polo shirts use stretch polyester or nylon knits that wick sweat, dry fast and move with the swing. A cotton pique polo is heavier and holds sweat, so it suits casual wear more than a round of golf.
   - q: Do your golf polos have UV protection?

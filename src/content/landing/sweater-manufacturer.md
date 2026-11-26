@@ -44,7 +44,7 @@ serviceType: Sweater and knitwear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom sweaters?
-    a: The minimum is {{moq}} {{moqUnit}} per design in one yarn. Colours and sizes of that design share the number, as agreed on your quote.
+    a: The minimum is {{moq}} {{moqUnit}}, with each design in one yarn counted as a style. Colours and sizes of that design share the number, as agreed on your quote.
   - q: What does gauge mean on a sweater?
     a: It describes how fine the knit is. A low gauge gives a chunky, warm knit. A high gauge gives a fine, smooth knit for layering and office wear.
   - q: Are you a knitwear manufacturer or a cut-and-sew factory?

@@ -42,7 +42,7 @@ serviceType: Coverall manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom coveralls?
-    a: Custom coveralls start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom coveralls start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What is the difference between boiler suits and coveralls?
     a: There is no real difference. Boiler suit is the common name in the UK, and coverall is common in North America and Australia.
   - q: What fabric is best for mechanic coveralls?

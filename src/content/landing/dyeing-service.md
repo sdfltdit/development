@@ -15,12 +15,12 @@ secondaryKeywords:
   - custom dyed clothing
   - overdyeing
 intent: commercial
-answer: SDF Clothing runs a garment dyeing service for streetwear, basics and lifestyle brands worldwide. We sew your garments in undyed fabric, then dye them to your lab dips in our own dye house in Dhaka. Orders start at {{moq}} {{moqUnit}} per style. A dyed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
+answer: SDF Clothing runs a garment dyeing service for streetwear, basics and lifestyle brands worldwide. We sew your garments in undyed fabric, then dye them to your lab dips in our own dye house in Dhaka. Orders start at {{moq}} {{moqUnit}}. A dyed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
 facts: [moq, sample, bulk, quote]
 specsCaption: Garment dyeing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per garment style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Methods
     value: Reactive garment dye, pigment dyeing, overdyeing and dip-dye
   - label: Fabrics
@@ -42,7 +42,7 @@ serviceType: Garment dyeing
 citations: []
 faq:
   - q: What is the minimum order for garment dyed clothing?
-    a: Garment dyed clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Garment dyed clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: How is garment dyeing different from fabric dyeing?
     a: Fabric dyeing colours the cloth before cutting. Garment dyeing colours the finished piece, so seams and thread fade softly and the hand feels broken in.
   - q: What is pigment dyeing?

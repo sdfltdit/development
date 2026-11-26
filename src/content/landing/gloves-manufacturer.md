@@ -42,7 +42,7 @@ serviceType: Gloves manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom gloves?
-    a: Custom gloves start at {{moq}} {{moqUnit}} per style in one yarn or fabric. Sizes and colours share the total, as agreed on your quote.
+    a: Custom gloves start at {{moq}} {{moqUnit}} in one yarn or fabric. Sizes and colours share the total, as agreed on your quote.
   - q: How are knitted gloves made?
     a: Knitted gloves are knitted as a whole glove on glove-knitting machines, then linked, cuffed and finished. Logos can be knitted in or embroidered after.
   - q: Do touchscreen gloves really work?

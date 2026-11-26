@@ -267,3 +267,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Stitches per inch: ISO 4915 (confirmed 2021) classifies stitch types. The SPI chart gives common ranges, not rules.
 - Scams: the FBI IC3 describes business email compromise as a scam aimed at businesses that pay foreign suppliers. The guide centres on confirming bank details by phone. The "avoid scams" FAQ on the how-to-find guide was reworded so it no longer targets this page's keyword.
 - Shade variation and grading: practical factory controls (shade bands, cutting by roll, break points, size sets). No external standard needed.
+
+## Guide batch 4 (private label, print on demand, lead time, factory, 3D samples)
+
+- All five are built on old site URLs (`/private-label-clothing-guide/`, `/print-on-demand-vs-private-label/`, `/guides/...`, `/digital-3d-sample-vs-physical-sample/`). The thin `/insights/sample-cost-explained/` URL 301s to the sample service page.
+- Private label vs white label sits on the guide as a supporting keyword. "White label clothing" stays with the private label manufacturer page.
+- Print on demand guide says plainly that we do not offer print on demand or ship single orders.
+- Lead time guide uses only our tokens for our stages, and leaves freight transit to the buyer's forwarder.
+- Bug fixed in the same push: "{{moqUnit}} per style" rendered "pieces per style per style" on many pages.

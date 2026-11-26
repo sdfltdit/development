@@ -42,7 +42,7 @@ serviceType: Coat manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom coats?
-    a: Coats start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Coats start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Are you an overcoat manufacturer for menswear brands?
     a: Yes. We make single and double-breasted overcoats in melton wool and wool blends, with fused or canvassed fronts and full lining.
   - q: Are you a trench coat manufacturer as well?

@@ -42,7 +42,7 @@ serviceType: Pet clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom dog clothes?
-    a: Custom dog clothes start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom dog clothes start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: How are dog hoodies sized?
     a: Dog hoodies are sized by back length, chest girth and neck girth. Chest girth matters most, because the garment must pass over the rib cage. We grade your size chart across all three.
   - q: Can dog jackets have a harness hole?

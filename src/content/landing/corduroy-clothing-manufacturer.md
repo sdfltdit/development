@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Corduroy facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Jackets, overshirts, trousers, shorts, skirts, dresses, overalls and caps
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Corduroy clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom corduroy clothing?
-    a: Custom corduroy clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom corduroy clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: What is wide wale corduroy?
     a: Wide wale corduroy has thick ridges, often 6 to 8 per inch. It gives a bold, vintage look and suits jackets and trousers.
   - q: Do you make corduroy jackets with sherpa lining?

@@ -15,12 +15,12 @@ secondaryKeywords:
   - garment quality control
   - pre-shipment inspection
 intent: commercial
-answer: SDF Clothing runs garment quality inspection on every order we produce. Our own quality team checks fabric on arrival and inspects pieces on the line. A final random inspection at AQL {{aql}} runs before cartons are sealed in our factory in Dhaka. Orders start at {{moq}} {{moqUnit}} per style. Bulk takes {{bulkDays}} days after sample approval.
+answer: SDF Clothing runs garment quality inspection on every order we produce. Our own quality team checks fabric on arrival and inspects pieces on the line. A final random inspection at AQL {{aql}} runs before cartons are sealed in our factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. Bulk takes {{bulkDays}} days after sample approval.
 facts: [moq, sample, bulk, aql]
 specsCaption: Quality inspection facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "Inspection is part of production with us, from {{moq}} {{moqUnit}} per style. Colours and sizes share the total."
+    value: "Inspection is part of production with us, from {{moq}} {{moqUnit}}. Colours and sizes share the total."
   - label: Fabric checks
     value: Shade, weight, width, faults and shrinkage on arrival
   - label: Inline inspection

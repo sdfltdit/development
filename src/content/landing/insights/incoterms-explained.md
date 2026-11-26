@@ -175,4 +175,4 @@ Whichever rule you choose, work out the landed cost per garment: factory price p
 
 ## Where SDF Clothing fits
 
-We quote {{incoterm}} {{port}}. We deliver your goods on board at the port and handle export clearance. You or your freight forwarder arrange sea freight, insurance and import. Our [price list](/pricing/) shows prices on that basis, and we send a written quote within {{quoteHours}} hours. Orders start at {{moq}} {{moqUnit}} per style.
+We quote {{incoterm}} {{port}}. We deliver your goods on board at the port and handle export clearance. You or your freight forwarder arrange sea freight, insurance and import. Our [price list](/pricing/) shows prices on that basis, and we send a written quote within {{quoteHours}} hours. Orders start at {{moq}} {{moqUnit}}.

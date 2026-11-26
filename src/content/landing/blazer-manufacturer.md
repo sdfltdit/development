@@ -44,7 +44,7 @@ serviceType: Blazer manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom blazers?
-    a: Blazers start at {{moq}} {{moqUnit}} per style in one fabric. Every size and colour of that blazer counts toward the total, as set out on your quote.
+    a: Blazers start at {{moq}} {{moqUnit}} in one fabric. Every size and colour of that blazer counts toward the total, as set out on your quote.
   - q: Do you make school blazers with crests?
     a: Yes. School blazers come in poly-viscose or wool blends with an embroidered pocket crest, contrast piping if you want it, and inside name labels.
   - q: What is the difference between a fused and a half-canvas blazer?

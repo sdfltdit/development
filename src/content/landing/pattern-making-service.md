@@ -15,12 +15,12 @@ secondaryKeywords:
   - digital clothing patterns
   - fit corrections
 intent: commercial
-answer: SDF Clothing runs a clothing pattern making service for brands that produce with us. Our pattern makers turn your tech pack, sketch or sample garment into a pattern, correct the fit and grade it into your sizes in our own factory in Dhaka. The proto sample is ready in {{sampleDays}} days. Bulk orders start at {{moq}} {{moqUnit}} per style.
+answer: SDF Clothing runs a clothing pattern making service for brands that produce with us. Our pattern makers turn your tech pack, sketch or sample garment into a pattern, correct the fit and grade it into your sizes in our own factory in Dhaka. The proto sample is ready in {{sampleDays}} days. Bulk orders start at {{moq}} {{moqUnit}}.
 facts: [moq, sample, bulk, quote]
 specsCaption: Pattern making facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "Patterns are made for production with us, from {{moq}} {{moqUnit}} per style. Colours and sizes share the total."
+    value: "Patterns are made for production with us, from {{moq}} {{moqUnit}}. Colours and sizes share the total."
   - label: Starting points
     value: Tech pack, flat sketch, photo or a sample garment to copy
   - label: Pattern types
@@ -42,7 +42,7 @@ serviceType: Clothing pattern making
 citations: []
 faq:
   - q: Do you make patterns without a production order?
-    a: No. Our pattern makers work on styles we will produce, from {{moq}} {{moqUnit}} per style. That keeps their time on your sample and bulk.
+    a: No. Our pattern makers work on styles we will produce, from {{moq}} {{moqUnit}}. That keeps their time on your sample and bulk.
   - q: What does a garment pattern maker need from me?
     a: A tech pack, a sketch with measurements, or a sample garment to copy. A size chart helps, but we can suggest one.
   - q: What is pattern grading?
@@ -65,6 +65,7 @@ related:
   - /clothing-manufacturers-for-startups/
   - /how-to-create-a-tech-pack/
   - /insights/garment-grading-explained/
+  - /digital-3d-sample-vs-physical-sample/
 published: 2026-11-26
 updated: 2026-11-26
 ---

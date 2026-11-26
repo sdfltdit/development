@@ -42,7 +42,7 @@ serviceType: Security uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom security uniforms?
-    a: Custom security uniforms start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom security uniforms start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What do security guard uniforms usually include?
     a: Most security guard uniforms include a shirt or polo, trousers, a jumper and a jacket, with matching badges. Event staff often wear a printed vest over their own clothes.
   - q: What fabric is best for security shirts?

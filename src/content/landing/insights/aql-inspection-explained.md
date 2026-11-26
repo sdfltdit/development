@@ -157,4 +157,4 @@ Read the photos and the defect list, not just the result. A pass with the same m
 
 ## Where SDF Clothing fits
 
-Every order we produce gets a final random AQL inspection at {{aql}} by our own quality team, plus fabric checks and inline inspection. Our [garment quality inspection](/quality-inspection-service/) page shows each stage. You are also welcome to send your own inspector before shipment. Orders start at {{moq}} {{moqUnit}} per style, and bulk takes {{bulkDays}} days after sample approval.
+Every order we produce gets a final random AQL inspection at {{aql}} by our own quality team, plus fabric checks and inline inspection. Our [garment quality inspection](/quality-inspection-service/) page shows each stage. You are also welcome to send your own inspector before shipment. Orders start at {{moq}} {{moqUnit}}, and bulk takes {{bulkDays}} days after sample approval.

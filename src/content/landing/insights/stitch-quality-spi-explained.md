@@ -149,4 +149,4 @@ Our guide on [how to create a tech pack](/how-to-create-a-tech-pack/) shows wher
 
 ## Where SDF Clothing fits
 
-We set stitch type and stitches per inch for each seam on the sample, then check seams inline and at final inspection at AQL {{aql}}. Our [cut and sew manufacturer](/cut-and-sew-service/) page explains how production runs on our own lines. Orders start at {{moq}} {{moqUnit}} per style, with the proto sample in {{sampleDays}} days.
+We set stitch type and stitches per inch for each seam on the sample, then check seams inline and at final inspection at AQL {{aql}}. Our [cut and sew manufacturer](/cut-and-sew-service/) page explains how production runs on our own lines. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.

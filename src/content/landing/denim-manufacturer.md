@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Denim facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style and wash. The size split is agreed on your quote."
+    value: "{{moq}} {{moqUnit}} and wash. The size split is agreed on your quote."
   - label: Products
     value: Five-pocket jeans, wide-leg and baggy jeans, carpenter jeans, denim jackets, shorts, skirts and overshirts
   - label: Fabric
@@ -44,7 +44,7 @@ serviceType: Denim and jeans manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom jeans?
-    a: The minimum is {{moq}} {{moqUnit}} per style in one wash. A second wash shade on the same style counts as a separate run. Sizes inside a run share the total.
+    a: The minimum is {{moq}} {{moqUnit}} in one wash. A second wash shade on the same style counts as a separate run. Sizes inside a run share the total.
   - q: Do you wash denim in-house?
     a: Yes. Our wash plant handles rinse, enzyme, stone, bleach and acid finishes. Your signed-off sample becomes the shade reference for the whole order.
   - q: Are you a jeans manufacturer for small brands?

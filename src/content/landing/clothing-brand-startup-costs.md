@@ -94,7 +94,7 @@ Here is what the minimum order costs per style at our published prices, FOB befo
 | Joggers | {{joggersFrom}} | {{joggersMoqTotal}} |
 | Shorts | {{shortsFrom}} | {{shortsMoqTotal}} |
 
-The minimum is {{moq}} {{moqUnit}} per style. Colours and sizes share that total, so one style can come in several colours.
+The minimum is {{moq}} {{moqUnit}}. Colours and sizes share that total, so one style can come in several colours.
 
 Our published prices include a one-colour print or no decoration and standard poly bag packing. Extra print colours, embroidery, woven labels and hang tags add to the price. Ask for a quote that lists each one.
 
@@ -171,4 +171,4 @@ Copy this launch budget worksheet and fill in your own numbers. Each line should
 
 ## Where SDF Clothing fits
 
-We make clothing for new and growing brands from {{moq}} {{moqUnit}} per style, with colours and sizes sharing that total. Our [price list](/pricing/) shows real prices at our minimum and at {{bulkQty}} {{moqUnit}}. If your launch is smaller than our minimum, we will say so at the start. See [clothing manufacturer for startups](/clothing-manufacturers-for-startups/) for how a first order works with us.
+We make clothing for new and growing brands from {{moq}} {{moqUnit}}, with colours and sizes sharing that total. Our [price list](/pricing/) shows real prices at our minimum and at {{bulkQty}} {{moqUnit}}. If your launch is smaller than our minimum, we will say so at the start. See [clothing manufacturer for startups](/clothing-manufacturers-for-startups/) for how a first order works with us.

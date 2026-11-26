@@ -42,7 +42,7 @@ serviceType: Neck gaiter manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom neck gaiters?
-    a: Custom neck gaiters start at {{moq}} {{moqUnit}} per style. Designs and colours share the total, as agreed on your quote.
+    a: Custom neck gaiters start at {{moq}} {{moqUnit}}. Designs and colours share the total, as agreed on your quote.
   - q: Why are sublimated neck gaiters so popular?
     a: Sublimation prints the whole tube edge to edge with no cracking, so the gaiter shows the design whether it is worn as a neck tube, headband or face cover.
   - q: Are neck warmers different from gaiters?

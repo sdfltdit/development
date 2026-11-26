@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Hijab facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours share the total, as agreed on your quote."
   - label: Products
     value: Rectangle hijabs, square hijabs, instant hijabs, undercaps, tube caps and sports hijabs
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Hijab manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom hijabs?
-    a: Custom hijabs start at {{moq}} {{moqUnit}} per style. Colours share the total, so one fabric in many shades works well.
+    a: Custom hijabs start at {{moq}} {{moqUnit}}. Colours share the total, so one fabric in many shades works well.
   - q: Which fabric is best for modal hijabs?
     a: Modal jersey is soft, drapes well and does not slip much. It suits everyday wear and sells well all year.
   - q: Are chiffon hijabs see-through?

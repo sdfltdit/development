@@ -42,7 +42,7 @@ serviceType: Bodysuit manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom bodysuits?
-    a: Custom bodysuits start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom bodysuits start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Which fabric is best for ribbed bodysuits?
     a: Cotton-spandex rib is soft, stretchy and holds its shape. Modal rib feels smoother and drapes more. Both need good recovery so the bodysuit does not sag.
   - q: Do you make crop tops?

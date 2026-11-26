@@ -42,7 +42,7 @@ serviceType: Drawstring bag manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom drawstring bags?
-    a: Custom drawstring bags start at {{moq}} {{moqUnit}} per style in one fabric. Colours share the total, as agreed on your quote.
+    a: Custom drawstring bags start at {{moq}} {{moqUnit}} in one fabric. Colours share the total, as agreed on your quote.
   - q: Are drawstring backpacks strong enough for sports kit?
     a: Yes, when the corners are reinforced. We add patches or eyelets where the cords meet the bag, which is where cheap bags tear first.
   - q: What is the difference between gym sacks and cinch bags?

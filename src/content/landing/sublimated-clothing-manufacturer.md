@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Sublimated clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Designs, names and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Designs, names and sizes share the total, as agreed on your quote."
   - label: Products
     value: Team shirts, shorts, training tops, leggings, swimwear, rash guards, dresses and neck gaiters
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Sublimated clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom sublimated clothing?
-    a: Custom sublimated clothing starts at {{moq}} {{moqUnit}} per style. Designs, names and sizes can vary within it, as agreed on your quote.
+    a: Custom sublimated clothing starts at {{moq}} {{moqUnit}}. Designs, names and sizes can vary within it, as agreed on your quote.
   - q: How does sublimation printing work?
     a: Sublimation printing turns dye into a gas with heat and pressure. The dye bonds into the polyester, so the print cannot crack or peel.
   - q: Can all-over print clothing be made in cotton?

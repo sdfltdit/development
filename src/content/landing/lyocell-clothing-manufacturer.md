@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Lyocell clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Shirts, shirt dresses, slip dresses, wide trousers, jumpsuits, tees and lounge sets
   - label: Wovens
@@ -42,7 +42,7 @@ serviceType: Lyocell clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom lyocell clothing?
-    a: Custom lyocell clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom lyocell clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Is lyocell fabric the same as Tencel?
     a: Tencel is a brand name for lyocell owned by a fibre company. You can only use that name when the mill supplies that branded fibre under licence and the brand owner approves your labels. Otherwise the label says lyocell.
   - q: What is a lyocell blend good for?

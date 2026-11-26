@@ -42,7 +42,7 @@ serviceType: Chef uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom chef uniforms?
-    a: Custom chef uniforms start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom chef uniforms start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What fabric is best for chef jackets?
     a: Poly-cotton twill is the most common choice. It is strong, holds its shape and survives hot washes. Pure cotton breathes better but creases more and fades faster.
   - q: Why are chef coats double-breasted?

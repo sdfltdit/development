@@ -42,7 +42,7 @@ serviceType: Base layer manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom base layers?
-    a: Custom base layers start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom base layers start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: Merino or synthetic thermal underwear?
     a: Merino thermal underwear is warm, soft and resists odour, but costs more and needs gentle washing. Synthetic thermals dry faster, last longer and cost less.
   - q: Do you make merino base layers?

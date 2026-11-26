@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Modal clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: T-shirts, tanks, underwear, bras, pyjamas, lounge sets, slip dresses and leggings
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Modal clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom modal clothing?
-    a: Custom modal clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom modal clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: What is micro modal?
     a: Micro modal is modal spun from much finer fibres. It feels lighter and silkier, so it suits underwear and close-fitting tops.
   - q: Is a modal blend better than pure modal?

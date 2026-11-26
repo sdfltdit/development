@@ -42,7 +42,7 @@ serviceType: Basketball uniform manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom basketball uniforms?
-    a: Our minimum is {{moq}} {{moqUnit}} per design. Jerseys and shorts in one design can carry different names, numbers and sizes.
+    a: Our minimum is {{moq}} {{moqUnit}}, with each design counted as a style. Jerseys and shorts in one design can carry different names, numbers and sizes.
   - q: Do you make reversible basketball jerseys?
     a: Yes. Reversible basketball jerseys have two layers in different colours, so one jersey works for home and away or practice teams. Numbers go on both sides.
   - q: Which fabric is best for basketball jerseys?

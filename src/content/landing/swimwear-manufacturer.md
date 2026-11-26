@@ -44,7 +44,7 @@ serviceType: Swimwear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom swimwear?
-    a: We start at {{moq}} {{moqUnit}} per style in one fabric. A bikini top and bottom sold apart are two styles. Colours and sizes in a style share the number.
+    a: We start at {{moq}} {{moqUnit}} in one fabric. A bikini top and bottom sold apart are two styles. Colours and sizes in a style share the number.
   - q: Are you a bikini manufacturer for new brands?
     a: Yes. We make triangle, bandeau, soft-cup balconette and sporty bikinis, with tops and bottoms sold as sets or apart. Many of our swim buyers are launching their first range.
   - q: Which fabric is best for swimwear?

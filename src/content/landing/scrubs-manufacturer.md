@@ -44,7 +44,7 @@ serviceType: Medical scrubs manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom scrubs?
-    a: The minimum is {{moq}} {{moqUnit}} per style. A scrub top and a scrub trouser count as two styles. Colours and sizes inside each style share the number, as set out on your quote.
+    a: The minimum is {{moq}} {{moqUnit}}. A scrub top and a scrub trouser count as two styles. Colours and sizes inside each style share the number, as set out on your quote.
   - q: Are you a medical scrubs manufacturer for new brands?
     a: Yes. We work with new medical apparel brands and established distributors. You bring the design or a sample you like, and we pattern, sample and produce it.
   - q: Which fabric is best for scrub tops?

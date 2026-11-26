@@ -42,7 +42,7 @@ serviceType: Maternity clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom maternity clothing?
-    a: Custom maternity clothing starts at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom maternity clothing starts at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: How is maternity wear sized?
     a: Most maternity wear uses pre-pregnancy sizes, with extra room at the bust, bump and hips. We build that room into your pattern and check it on a bump form.
   - q: How do nursing tops open for feeding?

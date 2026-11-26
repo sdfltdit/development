@@ -42,7 +42,7 @@ serviceType: Jumpsuit manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom jumpsuits?
-    a: Custom jumpsuits start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as agreed on your quote.
+    a: Custom jumpsuits start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as agreed on your quote.
   - q: What is the difference between playsuits and jumpsuits?
     a: Playsuits have short legs, while jumpsuits have full-length or cropped legs. Both are one piece from top to leg.
   - q: Are you a romper manufacturer too?

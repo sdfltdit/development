@@ -48,6 +48,8 @@ related:
   - /t-shirt-manufacturer/
   - /hoodie-manufacturer/
   - /pattern-making-service/
+  - /digital-3d-sample-vs-physical-sample/
+  - /guides/clothing-manufacturing-lead-time/
 published: 2026-11-25
 updated: 2026-11-25
 ---

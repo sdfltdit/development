@@ -42,7 +42,7 @@ serviceType: Fightwear manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom fight shorts?
-    a: Fight shorts start at {{moq}} {{moqUnit}} per design. Colours and sizes share the total, and each design can be sublimated in any colours.
+    a: Fight shorts start at {{moq}} {{moqUnit}}, with each design counted as a style. Colours and sizes share the total, and each design can be sublimated in any colours.
   - q: What makes good MMA shorts?
     a: Good MMA shorts have a side split or stretch gusset so kicks are not blocked, a Velcro and drawcord waist that stays shut, and reinforced seams that survive grappling.
   - q: How are boxing shorts different from Muay Thai shorts?

@@ -42,7 +42,7 @@ serviceType: Overalls manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom overalls?
-    a: Custom overalls start at {{moq}} {{moqUnit}} per style in one fabric. Washes and sizes share the total, as agreed on your quote.
+    a: Custom overalls start at {{moq}} {{moqUnit}} in one fabric. Washes and sizes share the total, as agreed on your quote.
   - q: Are dungarees and overalls the same?
     a: Yes. Dungarees is the common UK name and overalls is common in the US. Both mean trousers with a bib and shoulder straps.
   - q: Do you make denim overalls?

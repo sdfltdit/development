@@ -135,4 +135,4 @@ Children's clothing is usually sized by age or by height in centimetres. Height 
 
 ## Where SDF Clothing fits
 
-We grade your base size to your own size chart and print size labels to match it. Our [clothing pattern making service](/pattern-making-service/) explains how we build and grade size sets. Orders start at {{moq}} {{moqUnit}} per style, with the proto sample in {{sampleDays}} days.
+We grade your base size to your own size chart and print size labels to match it. Our [clothing pattern making service](/pattern-making-service/) explains how we build and grade size sets. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.

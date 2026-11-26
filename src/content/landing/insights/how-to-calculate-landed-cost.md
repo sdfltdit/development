@@ -165,4 +165,4 @@ Put the total next to your planned selling price. The gap is your gross margin b
 
 ## Where SDF Clothing fits
 
-We quote {{incoterm}} {{port}}, so you can add your own freight, duty and fees to get landed cost. Our [price list](/pricing/) shows our prices on that basis, and our guide to [clothing brand startup costs](/clothing-brand-startup-costs/) has a full launch budget worksheet. Orders start at {{moq}} {{moqUnit}} per style.
+We quote {{incoterm}} {{port}}, so you can add your own freight, duty and fees to get landed cost. Our [price list](/pricing/) shows our prices on that basis, and our guide to [clothing brand startup costs](/clothing-brand-startup-costs/) has a full launch budget worksheet. Orders start at {{moq}} {{moqUnit}}.

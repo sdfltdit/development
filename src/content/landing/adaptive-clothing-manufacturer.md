@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Adaptive clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Shirts, polos, trousers, jeans, dresses, tops, underwear and kids' clothing
   - label: Closures
@@ -42,7 +42,7 @@ serviceType: Adaptive clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom adaptive clothing?
-    a: Custom adaptive clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom adaptive clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: How is magnetic closure clothing made?
     a: Small magnets sit inside the placket behind each button position. The buttons stay for looks, and the shirt closes as the edges meet.
   - q: What is seated wear?

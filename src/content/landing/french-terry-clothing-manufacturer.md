@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: French terry facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: Crewneck sweatshirts, hoodies, joggers, shorts, lounge sets, dresses and kids' sets
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: French terry clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom French terry clothing?
-    a: Custom French terry clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom French terry clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: What is loopback terry?
     a: Loopback terry has small yarn loops on the inside and a flat face outside. The loops are left unbrushed, so the fabric breathes and stays light.
   - q: Is French terry fabric the same as fleece?

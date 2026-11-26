@@ -42,7 +42,7 @@ serviceType: Tie manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom ties?
-    a: Custom ties start at {{moq}} {{moqUnit}} per design. Lengths and styles in the same fabric share the total, as agreed on your quote.
+    a: Custom ties start at {{moq}} {{moqUnit}}, with each design counted as a style. Lengths and styles in the same fabric share the total, as agreed on your quote.
   - q: Woven or printed ties?
     a: Woven ties have the design built into the fabric, so they last longer and look traditional. Printed ties suit detailed logos, photos and many colours.
   - q: Do you make school ties?

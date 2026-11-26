@@ -42,7 +42,7 @@ serviceType: Tote bag manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom tote bags?
-    a: Custom tote bags start at {{moq}} {{moqUnit}} per style in one fabric. Colours share the total, as agreed on your quote.
+    a: Custom tote bags start at {{moq}} {{moqUnit}} in one fabric. Colours share the total, as agreed on your quote.
   - q: What weight should canvas tote bags be?
     a: Light cotton totes fold small and suit events. Mid-weight canvas is the usual retail choice. Heavy canvas holds its shape and suits brand and shop bags.
   - q: Cotton tote bags or canvas?

@@ -42,7 +42,7 @@ serviceType: Cosmetic pouch manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom pouches?
-    a: Custom pouches start at {{moq}} {{moqUnit}} per style in one fabric. Colours share the total, as agreed on your quote.
+    a: Custom pouches start at {{moq}} {{moqUnit}} in one fabric. Colours share the total, as agreed on your quote.
   - q: Which fabric is best for makeup bags?
     a: Coated or nylon fabric with a wipe-clean lining is the most practical, because make-up spills come off easily. Canvas and velvet look softer but stain more.
   - q: What are zipper pouches used for?

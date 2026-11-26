@@ -44,7 +44,7 @@ serviceType: Fleece jacket manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom fleece jackets?
-    a: Fleece jackets start at {{moq}} {{moqUnit}} per style in one fabric. Colours and sizes share the total, as set out on your quote.
+    a: Fleece jackets start at {{moq}} {{moqUnit}} in one fabric. Colours and sizes share the total, as set out on your quote.
   - q: What is the difference between polar fleece jackets and microfleece?
     a: Polar fleece jackets use a thicker, lofty fleece that traps more warmth. Microfleece is thinner and lighter, so it suits layering and active wear.
   - q: Do you make sherpa jackets?

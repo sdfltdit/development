@@ -53,6 +53,7 @@ related:
   - /t-shirt-manufacturer/
   - /merch-manufacturer/
   - /insights/fabric-gsm-explained/
+  - /print-on-demand-vs-private-label/
 published: 2026-11-26
 updated: 2026-11-26
 ---
@@ -159,4 +160,4 @@ Always wash-test a printed sample before you approve bulk.
 
 ## Where SDF Clothing fits
 
-We screen print, puff print, discharge print, DTF print and sublimate in our own factory, on garments we make for you. Our [clothing printing service](/printing-service/) page shows how a print order runs. Orders start at {{moq}} {{moqUnit}} per style, with a printed proto sample in {{sampleDays}} days.
+We screen print, puff print, discharge print, DTF print and sublimate in our own factory, on garments we make for you. Our [clothing printing service](/printing-service/) page shows how a print order runs. Orders start at {{moq}} {{moqUnit}}, with a printed proto sample in {{sampleDays}} days.

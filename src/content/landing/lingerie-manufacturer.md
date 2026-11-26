@@ -44,7 +44,7 @@ serviceType: Lingerie manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom bras?
-    a: Bras start at {{moq}} {{moqUnit}} per style in one fabric. Band and cup sizes inside that style share the total, which matters because bras have many more sizes than tops.
+    a: Bras start at {{moq}} {{moqUnit}} in one fabric. Band and cup sizes inside that style share the total, which matters because bras have many more sizes than tops.
   - q: Are you a bra manufacturer for fuller-bust sizes?
     a: Yes. We grade bras across band and cup sizes from your chart, including fuller-bust sizes. Larger cups often need wider wings, stronger straps and a firmer centre gore, which we set on the fit sample.
   - q: Do you make underwire bras?

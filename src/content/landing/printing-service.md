@@ -15,12 +15,12 @@ secondaryKeywords:
   - puff print
   - water-based ink
 intent: commercial
-answer: SDF Clothing runs a clothing printing service for brands worldwide. We screen print, puff print and DTF print on the tees, hoodies, sets and uniforms we make for you, in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}} per style. A printed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
+answer: SDF Clothing runs a clothing printing service for brands worldwide. We screen print, puff print and DTF print on the tees, hoodies, sets and uniforms we make for you, in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. A printed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
 facts: [moq, sample, bulk, quote]
 specsCaption: Printing service facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per garment style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Methods
     value: Screen print, puff print, discharge, high-density, DTF and heat transfer
   - label: Inks
@@ -42,7 +42,7 @@ serviceType: Clothing printing
 citations: []
 faq:
   - q: What is the minimum order for a clothing printing service?
-    a: Printing is part of a garment order, which starts at {{moq}} {{moqUnit}} per style. One design can run across every colour and size in that order.
+    a: Printing is part of a garment order, which starts at {{moq}} {{moqUnit}}. One design can run across every colour and size in that order.
   - q: Is screen printing or DTF printing better?
     a: Screen printing is best for solid logos in a few colours and large runs. DTF printing suits full-colour artwork and small details. We advise on the sample.
   - q: What is puff print?

@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Hemp clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote."
   - label: Products
     value: T-shirts, shirts, trousers, shorts, hoodies, dresses, hats and tote bags
   - label: Knits
@@ -42,7 +42,7 @@ serviceType: Hemp clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom hemp clothing?
-    a: Custom hemp clothing starts at {{moq}} {{moqUnit}} per style. Colours and sizes share the total, as agreed on your quote.
+    a: Custom hemp clothing starts at {{moq}} {{moqUnit}}. Colours and sizes share the total, as agreed on your quote.
   - q: Is a hemp cotton blend softer than pure hemp?
     a: Yes. A hemp cotton blend feels softer from the first wear. Pure hemp starts firmer and softens with each wash.
   - q: Does hemp fabric shrink?

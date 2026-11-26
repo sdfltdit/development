@@ -42,7 +42,7 @@ serviceType: Football kit manufacturing
 citations: []
 faq:
   - q: What is the minimum order for custom football shirts?
-    a: The minimum is {{moq}} {{moqUnit}} per design. Each shirt in that design can carry a different name, number and size, so one design can cover several teams in a club.
+    a: The minimum is {{moq}} {{moqUnit}}, with each design counted as a style. Each shirt in that design can carry a different name, number and size, so one design can cover several teams in a club.
   - q: What are sublimated football kits?
     a: Sublimated football kits have the design dyed into the polyester with heat, so colours, stripes and sponsor logos never crack or peel. Any number of colours costs the same.
   - q: Do you make soccer uniforms for academies with many age groups?

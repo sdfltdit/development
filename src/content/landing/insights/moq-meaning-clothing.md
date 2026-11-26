@@ -130,4 +130,4 @@ Your MOQ sets your first production cost. Multiply the minimum by the price per 
 
 ## Where SDF Clothing fits
 
-Our minimum is {{moq}} {{moqUnit}} per style, with colours and sizes sharing that total. That means one style can come in several colours within the same minimum. Our [low MOQ clothing manufacturer](/low-moq-clothing-manufacturers/) page explains how we keep minimums workable, and a proto sample takes {{sampleDays}} days.
+Our minimum is {{moq}} {{moqUnit}}, with colours and sizes sharing that total. That means one style can come in several colours within the same minimum. Our [low MOQ clothing manufacturer](/low-moq-clothing-manufacturers/) page explains how we keep minimums workable, and a proto sample takes {{sampleDays}} days.

@@ -15,12 +15,12 @@ secondaryKeywords:
   - acid wash
   - vintage wash
 intent: commercial
-answer: SDF Clothing runs a garment washing service for denim, streetwear and casualwear brands worldwide. We wash the jeans, jackets, tees and sweats we make for you in our own wash plant in Dhaka, to the standard you approve. Orders start at {{moq}} {{moqUnit}} per style. A washed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days.
+answer: SDF Clothing runs a garment washing service for denim, streetwear and casualwear brands worldwide. We wash the jeans, jackets, tees and sweats we make for you in our own wash plant in Dhaka, to the standard you approve. Orders start at {{moq}} {{moqUnit}}. A washed proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days.
 facts: [moq, sample, bulk, quote]
 specsCaption: Garment washing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} per garment style. Washes and sizes share the total, as agreed on your quote."
+    value: "{{moq}} {{moqUnit}}. Washes and sizes share the total, as agreed on your quote."
   - label: Washes
     value: Rinse, enzyme, stone, acid, bleach, snow and vintage washes
   - label: Effects
@@ -42,7 +42,7 @@ serviceType: Garment washing
 citations: []
 faq:
   - q: What is the minimum order for a garment washing service?
-    a: Washing is part of a garment order, which starts at {{moq}} {{moqUnit}} per style. Different washes and sizes share the total, as agreed on your quote.
+    a: Washing is part of a garment order, which starts at {{moq}} {{moqUnit}}. Different washes and sizes share the total, as agreed on your quote.
   - q: What is an enzyme wash?
     a: An enzyme wash softens fabric and fades colour gently using natural enzymes. It gives a clean, worn look with less damage than stones.
   - q: What is a stone wash?

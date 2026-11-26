@@ -149,4 +149,4 @@ Our guide to [payment terms for clothing orders](/insights/payment-terms-lc-vs-t
 
 ## Where SDF Clothing fits
 
-You should check us the same way. Our [verify page](/verify-us/) lists what you can check before your first payment. Payment only ever goes to the company account on our proforma invoice, and our bank details never change by email. Orders start at {{moq}} {{moqUnit}} per style, with a paid proto sample in {{sampleDays}} days and a final inspection at AQL {{aql}} before you pay the balance.
+You should check us the same way. Our [verify page](/verify-us/) lists what you can check before your first payment. Payment only ever goes to the company account on our proforma invoice, and our bank details never change by email. Orders start at {{moq}} {{moqUnit}}, with a paid proto sample in {{sampleDays}} days and a final inspection at AQL {{aql}} before you pay the balance.
