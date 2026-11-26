@@ -60,4 +60,9 @@ export const tools: ToolEntry[] = [
     name: 'Manufacturer email generator',
     summary: 'Write a clear first email to a clothing factory, ready to copy and send.',
   },
+  {
+    path: '/tools/hs-code/',
+    name: 'HS code finder',
+    summary: 'Find the four-digit HS heading for a garment from its construction, type and wearer.',
+  },
 ];

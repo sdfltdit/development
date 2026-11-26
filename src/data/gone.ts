@@ -13,6 +13,7 @@ export const gonePaths = [
   '/gots-vs-oeko-tex-vs-bsci-certification-comparison/',
   '/insights/gots-certification-explained/',
   '/insights/gots-label-guide/',
+  '/tools/eu-readiness-checker/',
   '/oeko-tex-certification-guide/',
   '/clothing-manufacturer-cambodia/',
   '/clothing-manufacturer-egypt/',

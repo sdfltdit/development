@@ -1,0 +1,181 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { garments } from '../../scripts/tools/hs';
+
+const faqs = [
+  {
+    q: 'Chapter 61 vs 62: what is the difference?',
+    a: 'Chapter 61 covers clothing made from knitted or crocheted fabric, such as jersey and fleece. Chapter 62 covers clothing that is not knitted, which mostly means woven fabric such as poplin, twill and denim.',
+  },
+  {
+    q: 'How do I know if my garment is knitted or woven?',
+    a: 'Knitted fabric is made of loops and stretches easily, like a T-shirt. Woven fabric has threads crossing at right angles and is firmer, like a shirt or jeans. Your fabric test report states it.',
+  },
+  {
+    q: 'Why does this clothing HS code finder stop at four digits?',
+    a: 'The first four digits come from the garment type and construction, which this tool can work out. The next two depend mainly on the fibre, and the digits after that are set by each country.',
+  },
+  {
+    q: 'What if a garment is unisex?',
+    a: "Garments that cannot be identified as men's or women's are classified under the women's or girls' heading. T-shirts, sweatshirts and some other headings are not split by gender at all.",
+  },
+  {
+    q: 'Will HS codes change in 2028?',
+    a: 'A new edition, HS 2028, starts on 1 January 2028. The headings here follow HS 2022, so check your national tariff for any change once the new edition applies.',
+  },
+  {
+    q: 'Can I rely on this result for customs?',
+    a: 'Use it as a starting point. Your customs broker or the customs authority makes the final decision, and some countries offer binding rulings if you need certainty.',
+  },
+];
+
+const ext = '(opens in a new tab)';
+---
+
+<ToolPage
+  path="/tools/hs-code/"
+  heading="HS code finder for clothing"
+  lead="This free HS code finder gives the four-digit HS heading for a garment from three answers: knitted or woven, the garment type and who it is for. It follows the HS 2022 headings for chapter 61 (knitted) and chapter 62 (woven) and shows the chapter notes that change the answer."
+  toolHeading="Find a clothing HS heading"
+  faqs={faqs}
+  related={[
+    { title: 'How to calculate landed cost', href: '/insights/how-to-calculate-landed-cost/', summary: 'How the HS code sets your duty, with a worked landed cost example.' },
+    { title: 'Customs clearance guide', href: '/insights/customs-clearance-guide/', summary: 'Documents, brokers and how to avoid delays at customs.' },
+    { title: 'Fabric types glossary', href: '/insights/fabric-types-glossary/', summary: 'Knit vs woven fabric, fibres and weaves explained.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="hs" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="hs-construction">Fabric construction</label>
+        <select class="field__input" id="hs-construction">
+          <option value="knit" selected>Knitted or crocheted (jersey, fleece, rib)</option>
+          <option value="woven">Woven or not knitted (poplin, twill, denim)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="hs-garment">Garment type</label>
+        <select class="field__input" id="hs-garment" aria-describedby="hs-garment-error">
+          {garments.map((g, i) => <option value={g.id} selected={i === 0}>{g.label}</option>)}
+        </select>
+        <p class="field__error" id="hs-garment-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="hs-wearer">Who it is for</label>
+        <select class="field__input" id="hs-wearer">
+          <option value="men" selected>Men or boys</option>
+          <option value="women">Women or girls</option>
+          <option value="unisex">Unisex or cannot tell</option>
+          <option value="baby">Babies, up to 86 cm tall</option>
+        </select>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Find heading</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>HS heading</dt><dd data-out="heading"></dd></div>
+        <div class="tool__figure"><dt>What the heading covers</dt><dd class="tool__text" data-out="description"></dd></div>
+      </dl>
+      <ul class="tool__notes" data-notes></ul>
+      <p class="tool__note">Next, the main fibre by weight sets the six-digit subheading. Check it in your national tariff.</p>
+    </div>
+  </form>
+
+  <h2>How the HS code finder works</h2>
+  <p>
+    The Harmonized System gives every product a code. For clothing, the first four digits depend on three things, so the HS code finder asks three
+    questions.
+  </p>
+  <ol>
+    <li><strong>Knitted or woven.</strong> This picks chapter 61 or chapter 62.</li>
+    <li><strong>Garment type.</strong> This picks the heading within the chapter.</li>
+    <li><strong>Who it is for.</strong> Many headings are split into men's and boys' or women's and girls', and babies have their own heading.</li>
+  </ol>
+
+  <h2>Chapter 61 vs 62: knitted or woven</h2>
+  <div class="table-wrap" role="region" aria-label="Chapter 61 and 62 headings" tabindex="0">
+    <table class="table--stack">
+      <caption>Common clothing headings in chapters 61 and 62</caption>
+      <thead>
+        <tr><th scope="col">Garment</th><th scope="col">Knitted (chapter 61)</th><th scope="col">Woven (chapter 62)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Garment">Coats and jackets, men's or women's</td><td data-label="Knitted">6101, 6102</td><td data-label="Woven">6201, 6202</td></tr>
+        <tr><td data-label="Garment">Suits, blazers, trousers, dresses, skirts, shorts</td><td data-label="Knitted">6103, 6104</td><td data-label="Woven">6203, 6204</td></tr>
+        <tr><td data-label="Garment">Shirts and blouses, men's or women's</td><td data-label="Knitted">6105, 6106</td><td data-label="Woven">6205, 6206</td></tr>
+        <tr><td data-label="Garment">Underwear, nightwear and bathrobes</td><td data-label="Knitted">6107, 6108</td><td data-label="Woven">6207, 6208</td></tr>
+        <tr><td data-label="Garment">T-shirts and tank tops</td><td data-label="Knitted">6109</td><td data-label="Woven">Not a woven heading</td></tr>
+        <tr><td data-label="Garment">Jumpers, hoodies and sweatshirts</td><td data-label="Knitted">6110</td><td data-label="Woven">Not a woven heading</td></tr>
+        <tr><td data-label="Garment">Babies' garments</td><td data-label="Knitted">6111</td><td data-label="Woven">6209</td></tr>
+        <tr><td data-label="Garment">Tracksuits, ski suits and swimwear</td><td data-label="Knitted">6112</td><td data-label="Woven">6211</td></tr>
+        <tr><td data-label="Garment">Other garments, such as jumpsuits</td><td data-label="Knitted">6114</td><td data-label="Woven">6211</td></tr>
+        <tr><td data-label="Garment">Bras and shapewear</td><td data-label="Knitted">6212</td><td data-label="Woven">6212</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Chapter notes that change a clothing HS code</h2>
+  <ul>
+    <li>A knitted top with a drawstring, ribbed waistband or other tightening at the hem is not a T-shirt for heading 6109.</li>
+    <li>Knitted shirts with pockets below the waist, a ribbed waistband or fewer than 10 stitches per centimetre fall outside 6105 and 6106.</li>
+    <li>Babies' garments are for children up to 86 cm tall, and they take the babies' heading first.</li>
+    <li>If a garment cannot be identified as men's or women's, it goes under the women's or girls' heading.</li>
+    <li>Bags, hats and home textiles such as tea towels sit in other chapters, so they are not covered here.</li>
+  </ul>
+
+  <h2>From four digits to a full code</h2>
+  <p>
+    The six-digit subheading depends mainly on the fibre with the largest share by weight, such as cotton or synthetic fibre. Countries then add their own
+    digits to set the duty rate. Look up the full code in your national tariff, or ask your customs broker, and see our guide on
+    <a href="/insights/how-to-calculate-landed-cost/">how to calculate landed cost</a> for what happens next.
+  </p>
+  <p>
+    Sources: heading texts and chapter notes come from the US Census Bureau Schedule B. See
+    <a href="https://www.census.gov/foreign-trade/schedules/b/2024/c61.pdf" target="_blank" rel="noopener noreferrer">chapter 61<span class="visually-hidden"> {ext}</span></a> and
+    <a href="https://www.census.gov/foreign-trade/schedules/b/2024/c62.pdf" target="_blank" rel="noopener noreferrer">chapter 62<span class="visually-hidden"> {ext}</span></a>.
+    The WCO covers the
+    <a href="https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition.aspx" target="_blank" rel="noopener noreferrer">HS 2028 edition<span class="visually-hidden"> {ext}</span></a>.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, setError } from '../../scripts/tools/common';
+  import { findHeading, type Construction, type Wearer } from '../../scripts/tools/hs';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="hs"]');
+
+  if (form) {
+    const construction = byId<HTMLSelectElement>(form, 'hs-construction');
+    const garment = byId<HTMLSelectElement>(form, 'hs-garment');
+    const wearer = byId<HTMLSelectElement>(form, 'hs-wearer');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const notes = form.querySelector<HTMLElement>('[data-notes]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+
+    const run = (): void => {
+      clearError(garment);
+      const found = findHeading(construction.value as Construction, garment.value, wearer.value as Wearer);
+      if (!result || !notes) return;
+      if ('error' in found) {
+        setError(garment, found.error);
+        result.hidden = true;
+        return;
+      }
+      out('heading')!.textContent = found.heading;
+      out('description')!.textContent = found.description;
+      notes.replaceChildren(
+        ...found.notes.map((n) => {
+          const li = document.createElement('li');
+          li.textContent = n;
+          return li;
+        }),
+      );
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

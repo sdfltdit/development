@@ -265,6 +265,17 @@ const registry: PageMeta[] = [
     llmsLabel: 'Manufacturer email generator',
   },
   {
+    path: '/tools/hs-code/',
+    title: 'HS Code Finder for Clothing: Knit or Woven | SDF Clothing',
+    description:
+      'Free HS code finder for clothing: get the four-digit HS heading from knitted or woven, garment type and wearer, with the chapter notes that can change it.',
+    primaryKeyword: 'HS code finder',
+    secondaryKeywords: ['clothing HS code', 'chapter 61 vs 62', 'HS 2028'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'HS code finder',
+  },
+  {
     path: '/privacy/',
     title: 'Privacy Policy – How We Handle Your Data | SDF Clothing',
     description:

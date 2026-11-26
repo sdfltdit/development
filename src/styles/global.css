@@ -1064,3 +1064,19 @@ caption {
 .section[id] {
   scroll-margin-top: var(--space-6);
 }
+
+.tool__figure .tool__text {
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.tool__notes {
+  margin: 0;
+  padding-left: var(--space-5);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.tool__notes:empty {
+  display: none;
+}

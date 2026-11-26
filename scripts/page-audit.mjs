@@ -189,6 +189,7 @@ const STRICT = new Set([
   '/all-services/',
   '/pricing/',
   '/work-process/',
+  '/tools/hs-code/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

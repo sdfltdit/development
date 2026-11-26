@@ -120,6 +120,8 @@ Moving goods from the port or airport to your warehouse.
 
 ## HS codes for clothing
 
+Our free [HS code finder](/tools/hs-code/) gives the four-digit heading for a garment in a few clicks.
+
 The Harmonized System, maintained by the WCO, the global body for customs, gives every type of product a code. Countries base their customs tariffs on it.
 
 For clothing, two chapters matter most:

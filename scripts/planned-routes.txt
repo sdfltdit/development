@@ -17,7 +17,6 @@
 /insights/embroidery-problems-explained/
 /insights/eu-clothing-regulations-2026/
 /insights/fabric-cutting-explained/
-/insights/fiber-blend-hs-classification-explained/
 /insights/garment-finishing-explained/
 /insights/garment-washing-explained/
 /insights/knitting-defects-explained/
@@ -28,6 +27,4 @@
 /manufacturing-platform-alternative/
 /nda/
 /overseas-vs-local-clothing-manufacturer/
-/tools/eu-readiness-checker/
-/tools/hs-code/
 /visa-docs/
