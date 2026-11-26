@@ -48,7 +48,7 @@ faq:
   - q: How much does linen shrink?
     a: Untreated linen often shrinks around 4 per cent on the first wash and can shrink more. We wash-test the bulk fabric and add the right allowance to the pattern before cutting.
   - q: What is pre-washed linen?
-    a: Pre-washed linen is washed at the fabric mill before it reaches us. It feels softer, creases in a relaxed way and shrinks far less once made up. We do not wash finished garments ourselves.
+    a: Pre-washed linen is washed at the fabric mill before it reaches us. It feels softer, creases in a relaxed way and shrinks far less once made up.
   - q: Should I choose pure linen or a linen blend?
     a: Pure linen is the most breathable and has the classic texture. A linen blend with cotton creases less and costs less. A linen-viscose blend drapes more softly for dresses.
   - q: Can I order private label linen clothing?

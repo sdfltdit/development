@@ -13,8 +13,6 @@
 /baby-clothing-manufacturer /kids-baby-clothing-manufacturer/ 301
 /bikini-manufacturer/ /swimwear-manufacturer/ 301
 /bikini-manufacturer /swimwear-manufacturer/ 301
-/blazer-manufacturer/ /products/ 301
-/blazer-manufacturer /products/ 301
 /board-shorts-manufacturer/ /shorts-manufacturer/ 301
 /board-shorts-manufacturer /shorts-manufacturer/ 301
 /bomber-jacket-manufacturer/ /jacket-manufacturer/ 301
@@ -91,8 +89,8 @@
 /cycling-apparel-manufacturer /activewear-manufacturer/ 301
 /dance-wear-manufacturer/ /activewear-manufacturer/ 301
 /dance-wear-manufacturer /activewear-manufacturer/ 301
-/denim-jacket-manufacturer/ /jacket-manufacturer/ 301
-/denim-jacket-manufacturer /jacket-manufacturer/ 301
+/denim-jacket-manufacturer/ /denim-manufacturer/ 301
+/denim-jacket-manufacturer /denim-manufacturer/ 301
 /dye-house-service/ /dyeing-service/ 301
 /dye-house-service /dyeing-service/ 301
 /ecommerce-clothing-manufacturer/ /clothing-manufacturers-for-startups/ 301
@@ -161,8 +159,8 @@
 /insights/yarn/types-and-spinning-methods /insights/yarn/ 301
 /jumpsuit-romper-manufacturer/ /dress-manufacturer/ 301
 /jumpsuit-romper-manufacturer /dress-manufacturer/ 301
-/knitwear-exporter/ /knitwear-factory/ 301
-/knitwear-exporter /knitwear-factory/ 301
+/knitwear-exporter/ /products/ 301
+/knitwear-exporter /products/ 301
 /leather-clothing-manufacturer/ /products/ 301
 /leather-clothing-manufacturer /products/ 301
 /maternity-clothing-manufacturer/ /inclusive-sizing-guide/ 301
@@ -261,3 +259,11 @@
 /sweatshirt-manufacturer /hoodie-manufacturer/ 301
 /workwear-manufacturer/ /uniform-manufacturer/ 301
 /workwear-manufacturer /uniform-manufacturer/ 301
+/socks-manufacturer/ /products/ 301
+/socks-manufacturer /products/ 301
+/sweater-manufacturer/ /products/ 301
+/sweater-manufacturer /products/ 301
+/knitwear-factory/ /products/ 301
+/knitwear-factory /products/ 301
+/knitting-service/ /products/ 301
+/knitting-service /products/ 301

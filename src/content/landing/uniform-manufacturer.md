@@ -65,9 +65,9 @@ related:
   - /pants-trousers-manufacturer/
   - /jacket-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /cut-and-sew-service/
   - /school-uniform-manufacturer/
   - /scrubs-manufacturer/
+  - /blazer-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

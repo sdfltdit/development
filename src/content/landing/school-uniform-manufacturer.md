@@ -56,7 +56,7 @@ faq:
   - q: When should we order for the new school year?
     a: Allow for sampling, {{bulkDays}} days of production and sea freight. Many uniform suppliers place bulk orders four to six months before term starts.
   - q: Do you make blazers?
-    a: Blazers are not listed on this page. Send your blazer spec and we confirm on the quote whether we can make it.
+    a: Yes. We make fused and half-canvas school blazers with embroidered crests. They have their own page, linked below.
   - q: Do you handle safety testing for children's uniforms?
     a: Testing rules depend on the country you sell in. We make to your spec and support your testing, while the lab tests and certificates are arranged by you or your importer.
 related:
@@ -66,6 +66,7 @@ related:
   - /tracksuit-manufacturer/
   - /skirts-manufacturer/
   - /hoodie-manufacturer/
+  - /blazer-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

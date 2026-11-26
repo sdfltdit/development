@@ -48,7 +48,7 @@ export const linen: ProductContent = {
         { label: 'Garment test', text: 'the finished sample is washed and measured again' },
         { label: 'Care label', text: 'wash instructions written to match the test' },
       ],
-      note: 'We do not wash finished garments in our factory. Softness and low shrinkage come from pre-washed fabric.',
+      note: 'For linen, softness and low shrinkage come mainly from pre-washed fabric.',
     },
     {
       kind: 'checklist',

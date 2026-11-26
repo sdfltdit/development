@@ -56,7 +56,7 @@ faq:
   - q: Can I order private label skirts with my own labels?
     a: Yes. Private label skirts leave our factory with your waistband or side-seam label, care label, hang tag and packing. Our name does not appear on them.
   - q: Do you make denim skirts?
-    a: We can sew skirts in denim fabric, but we do not wash or distress denim in-house. If you want a washed look, tell us first and we tell you plainly what we can offer.
+    a: Yes. We sew denim skirts and wash them in our own factory, from rinse to stone and acid washes. Our denim page covers fabric and wash choices.
   - q: Can a skirt match a top or dress in the same fabric?
     a: Yes. We cut both from one fabric lot, so the colour matches across the set.
 related:
@@ -66,6 +66,7 @@ related:
   - /private-label-clothing-manufacturer/
   - /cut-and-sew-service/
   - /low-moq-clothing-manufacturers/
+  - /denim-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -54,7 +54,7 @@ faq:
   - q: What fabric should I use for gym wear?
     a: Poly-spandex suits most gym wear. It stretches, dries fast and takes sublimation. Nylon-spandex feels softer and resists rubbing, so it suits sports bras and leggings. Mesh works for panels that need air.
   - q: Do you make sports bras?
-    a: Yes. Support comes from the fabric, the underband and the straps, so we agree all three with you and check the fit on the proto. Removable pads are an option.
+    a: Yes. Support comes from the fabric, the underband and the straps, so we agree all three with you and check the fit on the proto. Removable pads and moulded cups are both options, with more detail on our sports bra page.
   - q: Can I get all-over prints on my activewear?
     a: Yes. Sublimation gives all-over prints that do not crack or peel, on white or light polyester fabric. For dark or cotton-rich fabric we use screen print or DTF instead.
   - q: As a gym wear manufacturer, how do you stop seams rubbing?
@@ -65,8 +65,9 @@ related:
   - /joggers-manufacturer/
   - /tracksuit-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
   - /underwear-manufacturer/
+  - /sports-bra-manufacturer/
+  - /swimwear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

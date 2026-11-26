@@ -64,8 +64,9 @@ related:
   - /joggers-manufacturer/
   - /tracksuit-manufacturer/
   - /jacket-manufacturer/
-  - /private-label-clothing-manufacturer/
   - /merch-manufacturer/
+  - /denim-manufacturer/
+  - /puffer-jacket-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

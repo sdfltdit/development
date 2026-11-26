@@ -103,3 +103,13 @@ Findings used:
 - Linen: untreated linen often shrinks about 4% on the first wash (Parachute care guide). We use mill pre-washed linen, since we do not garment-wash.
 - Bamboo: FTC requires "rayon (or viscose) made from bamboo" labelling and says the fibre keeps no antimicrobial properties. The page links to FTC business guidance. This is the strongest trust angle against competitors who still claim "antibacterial bamboo".
 - Redirects: polo, sweatshirt and workwear legacy URLs now 301 to the pages that own those keywords, so no thin duplicate pages are built.
+
+## Batch 6 (denim, swimwear, sports bra, puffer jacket, blazer)
+
+Owner confirmed on 26 November 2026 that these are made in-house. Research notes:
+- Denim: buyers care most about fit, wash development and shade consistency between lots. Many competitors list MOQ per style but hide that each wash is a separate run, so our page says it plainly. Laser and hand distressing are not claimed.
+- Swimwear: key buyer worries are wet opacity, chlorine and salt resistance, lining and rubber swim elastic. Chlorine and UV claims are left to the mill's test report. Underwired tops are stated as not made (to confirm).
+- Sports bra: support levels (light, medium, high), removable pads vs moulded cups, and band and strap design. Wired bras are stated as not made.
+- Puffer jacket: down vs synthetic fill, quilting vs baffles, down leakage. Fill power and down sourcing paperwork come from the down supplier. Seam-sealed waterproof puffers are stated as not made.
+- Blazer: fused vs half-canvas construction explained. Full canvas is stated as not offered.
+- Socks, sweaters and knitwear-factory URLs now redirect to /products/. The denim-jacket URL now points to the denim page.
