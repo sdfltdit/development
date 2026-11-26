@@ -62,6 +62,8 @@ related:
   - /scarf-manufacturer/
   - /hotel-uniform-manufacturer/
   - /uniform-manufacturer/
+  - /suit-manufacturer/
+  - /menswear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

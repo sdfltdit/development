@@ -61,7 +61,7 @@ related:
   - /school-uniform-manufacturer/
   - /uniform-manufacturer/
   - /jacket-manufacturer/
-  - /clothing-manufacturers-for-women/
+  - /suit-manufacturer/
   - /pants-trousers-manufacturer/
   - /tie-manufacturer/
   - /coat-manufacturer/

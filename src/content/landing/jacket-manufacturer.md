@@ -69,6 +69,7 @@ related:
   - /fleece-jacket-manufacturer/
   - /coat-manufacturer/
   - /softshell-jacket-manufacturer/
+  - /menswear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

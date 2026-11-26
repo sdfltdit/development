@@ -66,7 +66,7 @@ related:
   - /joggers-manufacturer/
   - /shorts-manufacturer/
   - /shirt-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /menswear-manufacturer/
   - /linen-clothing-manufacturer/
   - /scrubs-manufacturer/
   - /denim-manufacturer/

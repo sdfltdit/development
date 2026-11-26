@@ -194,3 +194,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Gloves: knitted, fleece and touchscreen gloves. No leather and no safety gloves (protective equipment).
 - Shapewear: circular-knit styles need larger runs than cut-and-sew. Control set by fabric power, layers and panels. Not medical or post-surgery. "Seamless" is blocked by page-audit as filler, so pages say "circular-knit".
 - Evening dresses: buyers want boning, built-in cups, full lining and hand beading. Beading is knotted in small groups so a broken thread loses few beads.
+
+## Batch 18 (wedding dress, bodysuit, suit, menswear, overalls)
+
+- Wedding dress: buyers search "wedding dress manufacturer" and "bridal gown manufacturer". Top pages rarely explain inner structure (boning, cups, waist stay, bustle) or lace mirroring. Our page covers both, plus shade matching across whites and bridesmaid lots. Built on the old `/wedding-dress-manufacturer/` URL, redirect removed. No prices, because lace and beading swing cost widely.
+- Bodysuit: crop tops share intent with bodysuits in buyer searches, so they sit on one page. The main buyer complaints are short torsos and failing snaps, which drive the risk section.
+- Suit: construction detail (fused, half, full canvas) lives on the blazer page. The suit page links there and focuses on matching jacket and trousers from one fabric lot.
+- Menswear: hub-style page like the women's page. Style cards link to the spokes that own each product. Shows owner-approved prices for six core pieces.
+- Overalls: "dungarees" is the UK term and "shortalls" the summer variant. Hardware rust and short torsos are the common faults.

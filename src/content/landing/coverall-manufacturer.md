@@ -63,7 +63,7 @@ related:
   - /denim-manufacturer/
   - /puffer-jacket-manufacturer/
   - /hi-vis-workwear-manufacturer/
-  - /security-uniform-manufacturer/
+  - /overalls-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---
