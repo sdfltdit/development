@@ -47,7 +47,7 @@ related:
   - /clothing-manufacturers-for-startups/
   - /t-shirt-manufacturer/
   - /hoodie-manufacturer/
-  - /get-a-quote/
+  - /pattern-making-service/
 published: 2026-11-25
 updated: 2026-11-25
 ---

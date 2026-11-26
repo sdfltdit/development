@@ -116,6 +116,11 @@ const STRICT = new Set([
   '/tie-dye-clothing-manufacturer/',
   '/sublimated-clothing-manufacturer/',
   '/adaptive-clothing-manufacturer/',
+  '/embroidery-service/',
+  '/printing-service/',
+  '/dyeing-service/',
+  '/washing-service/',
+  '/pattern-making-service/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

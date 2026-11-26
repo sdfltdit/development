@@ -63,7 +63,7 @@ related:
   - /shorts-manufacturer/
   - /skirts-manufacturer/
   - /streetwear-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /washing-service/
   - /overalls-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26

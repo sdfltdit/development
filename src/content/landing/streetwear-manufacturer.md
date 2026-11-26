@@ -64,7 +64,7 @@ related:
   - /puffer-jacket-manufacturer/
   - /hat-manufacturer/
   - /varsity-jacket-manufacturer/
-  - /basketball-uniform-manufacturer/
+  - /printing-service/
   - /baseball-uniform-manufacturer/
   - /tie-dye-clothing-manufacturer/
 published: 2026-11-26

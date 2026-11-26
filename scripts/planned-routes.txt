@@ -20,8 +20,6 @@
 /confidentiality/
 /digital-3d-sample-vs-physical-sample/
 /direct-factory-vs-trading-company-vs-buying-agent/
-/dyeing-service/
-/embroidery-service/
 /eu-epr-explained/
 /fabric-sourcing/
 /faq/
@@ -96,10 +94,7 @@
 /oem-clothing-manufacturer/
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
-/pattern-making-service/
 /print-on-demand-vs-private-label/
-/printing-service/
-/printing/screen-printing/
 /private-label-clothing-guide/
 /quality-inspection-service/
 /recycled-clothing-manufacturer/
@@ -125,4 +120,3 @@
 /tools/wash-care-label-generator/
 /trims-sourcing/
 /visa-docs/
-/washing-service/

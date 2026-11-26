@@ -249,3 +249,5 @@
 /knitting-service /sweater-manufacturer/ 301
 /tencel-clothing-manufacturer/ /lyocell-clothing-manufacturer/ 301
 /tencel-clothing-manufacturer /lyocell-clothing-manufacturer/ 301
+/printing/screen-printing/ /printing-service/ 301
+/printing/screen-printing /printing-service/ 301

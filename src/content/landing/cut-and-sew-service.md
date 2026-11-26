@@ -47,7 +47,7 @@ related:
   - /hoodie-manufacturer/
   - /private-label-clothing-manufacturer/
   - /work-process/
-  - /certifications/
+  - /pattern-making-service/
 published: 2026-11-25
 updated: 2026-11-25
 ---

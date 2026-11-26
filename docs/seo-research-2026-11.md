@@ -229,3 +229,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Sublimated: polyester only, white or light base, print on flat panels to avoid white fold lines. Names and numbers cost nothing extra.
 - Adaptive: features follow the brand's own brief and wear testers. No medical claims. Magnetic plackets, side openings and seated cuts are the core searches.
 - Garment-dyed and vintage-wash product pages were not built, to avoid cannibalising the planned dyeing and washing service pages on old URLs.
+
+## Service batch A (embroidery, printing, dyeing, washing, pattern making)
+
+- Built on the old site's service URLs, so chained redirects (dye-house, finishing, fit-engineering, grading) now land on live pages.
+- Ranking service pages for these terms are mostly local print shops selling decoration on blanks. Our pages are clear that the service is part of a garment order we make, which is a different intent: brands looking for a factory that decorates in-house.
+- Printing: screen vs DTF vs water-based vs discharge vs puff is the core buyer comparison. Sublimation detail stays on the sublimated clothing page.
+- Dyeing and washing: shade limits (standard plus light and dark), shrinkage set after washing, and recipes kept for reorders are the facts buyers ask for.
+- Pattern making: the home page already promises we never share files and will sign an NDA, so the pattern page repeats that promise. Patterns are only made for styles we will produce.

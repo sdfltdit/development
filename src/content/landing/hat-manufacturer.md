@@ -62,7 +62,7 @@ related:
   - /streetwear-manufacturer/
   - /uniform-manufacturer/
   - /activewear-manufacturer/
-  - /sweater-manufacturer/
+  - /embroidery-service/
   - /scarf-manufacturer/
   - /baseball-uniform-manufacturer/
   - /embroidered-patch-manufacturer/
