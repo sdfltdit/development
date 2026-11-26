@@ -14,7 +14,7 @@ export const garmentDevelopmentService: ProductContent = {
     { title: 'A sketch', text: 'A hand drawing or flat sketch is enough to build a tech pack and pattern.' },
     { title: 'A tech pack', text: 'If you have one, we check it for gaps before the first sample.', href: '/tech-pack-service/', cta: 'Tech pack service details' },
     { title: 'An existing pattern', text: 'We check it, grade it to your sizes and make a proto from it.', href: '/pattern-making-service/', cta: 'Pattern making service details' },
-    { title: 'A design brief', text: 'For larger orders, our in-house design team can develop the garment design itself.' },
+    { title: 'A design brief', text: 'From {{designFrom}} pieces per style, our in-house design team can create the garment design itself.' },
   ],
   blocks: [
     {
@@ -39,14 +39,14 @@ export const garmentDevelopmentService: ProductContent = {
       id: 'design',
       eyebrow: 'Garment design',
       heading: 'Design support at every order size',
-      lead: 'Our in-house design team works on larger orders. At our minimum, the design is yours and our team makes it work in production.',
+      lead: 'Below {{designFrom}} pieces per style, the design is yours and our team makes it work in production. At that size and above, our designers can create it.',
       items: [
         { label: 'Fit', text: 'we suggest ease and proportions that suit the garment and your customer' },
         { label: 'Fabric', text: 'we suggest weights and blends that match the feel you describe' },
         { label: 'Trims', text: 'zips, buttons and cords chosen to suit the fabric and price' },
         { label: 'Construction', text: 'seams and finishes that wear well and sew cleanly in bulk' },
         { label: 'Cost', text: 'changes that keep the look while meeting your target price' },
-        { label: 'Larger orders', text: 'our designers can create the garment design from your brief' },
+        { label: 'From {{designFrom}} pieces', text: 'our designers can create the garment design from your brief' },
       ],
     },
     {

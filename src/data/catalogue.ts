@@ -1,4 +1,4 @@
-import { sisterCompany } from './company';
+import { designTeamFrom, sisterCompany } from './company';
 
 /**
  * How the /products/ and /all-services/ hubs group their pages.
@@ -144,7 +144,7 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Product development',
     activities: 'Design, pattern and sampling',
     lead: 'Turning an idea or a photo into an approved sample.',
-    about: 'Development is where a style is decided. You bring an idea, sketch or photo, and we work on it with you until there is a sample to wear and sign off. Our design team works on larger orders.',
+    about: `Development is where a style is decided. You bring an idea, sketch or photo, and we work on it with you until there is a sample to wear and sign off. Our design team works on orders from ${designTeamFrom.toLocaleString('en-GB')} pieces per style.`,
     slugs: ['garment-development-service', 'tech-pack-service', 'pattern-making-service', 'sample-service', 'lab-dip-service'],
   },
   {

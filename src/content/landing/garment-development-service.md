@@ -14,14 +14,14 @@ secondaryKeywords:
   - garment design
   - design support
 intent: commercial
-answer: SDF Clothing runs a garment development service in our own factory in Dhaka. Our team turns your idea, photo or sketch into a tech pack, a pattern, lab dips and a proto sample in {{sampleDays}} days. You get up to {{sampleCorrections}} free rounds of corrections before bulk. Our in-house design team works on larger orders, and orders start at {{moq}} {{moqUnit}}.
+answer: SDF Clothing runs a garment development service in our own factory in Dhaka. Our team turns your idea, photo or sketch into a tech pack, a pattern, lab dips and a proto sample in {{sampleDays}} days. You get up to {{sampleCorrections}} free rounds of corrections before bulk. Our in-house design team works on orders from {{designFrom}} pieces per style, and orders start at {{moq}} {{moqUnit}}.
 facts: [moq, sample, quote]
 specsCaption: What our garment development service covers.
 specs:
   - label: Starting point
     value: A photo, sketch, reference garment or tech pack
   - label: Garment design
-    value: Our in-house design team works on larger orders. At our minimum, you bring the design and we develop it
+    value: "Available from {{designFrom}} pieces per style. Below that, you bring the design and we develop it"
   - label: Tech pack
     value: Built with you from your sketch or photo, if you do not have one
   - label: Pattern
@@ -39,7 +39,7 @@ serviceType: Garment development
 citations: []
 faq:
   - q: Do you offer garment design?
-    a: Yes, for larger orders, through our in-house design team. For orders at our minimum, you bring the idea, sketch or photo and our development team turns it into a garment.
+    a: "Yes, for orders from {{designFrom}} pieces per style, through our in-house design team. For smaller orders, you bring the idea, sketch or photo and our development team turns it into a garment."
   - q: What is clothing product development?
     a: It is every step that turns an idea into a garment ready for bulk. That covers the tech pack, pattern, fabric and colour approval, and samples.
   - q: How long does garment development take?
@@ -49,7 +49,7 @@ faq:
   - q: What does development cost?
     a: Nothing on top of sampling. Your deposit starts development and covers the sample, the corrections and courier to your door.
   - q: What design support do you give at the minimum order?
-    a: Practical support on fit, fabric, trims and construction, so your design works in production. Creating the design itself is part of larger orders.
+    a: Practical support on fit, fabric, trims and construction, so your design works in production. Creating the design itself starts at {{designFrom}} pieces per style.
 related:
   - /tech-pack-service/
   - /pattern-making-service/

@@ -96,6 +96,9 @@ export const terms = {
 } as const;
 
 /** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims and garment accessories. Never name it. */
+/** Owner, 27 November 2026: the in-house design team works on orders of this many pieces per style or more. */
+export const designTeamFrom = 5000;
+
 export const sisterCompany = {
   fabricAbove: 5000, // pieces per style
 } as const;
@@ -200,6 +203,7 @@ export const tokens: Record<string, string> = {
   sampleFee: `${sampleFeePolicy}.`,
   sampleCorrections: String(terms.sampleCorrections),
   sisterFabricAbove: sisterCompany.fabricAbove.toLocaleString('en-GB'),
+  designFrom: designTeamFrom.toLocaleString('en-GB'),
   sisterCompany: `${sisterCompanyPolicy}.`,
   sampleCourier: terms.sampleCourier,
   paymentScope: `${terms.paymentScope}.`,

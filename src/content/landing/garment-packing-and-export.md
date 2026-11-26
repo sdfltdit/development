@@ -36,9 +36,7 @@ specs:
     value: One merchandiser from quote to shipment
 showPrices: false
 serviceType: Garment packing and export
-citations:
-  - https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/rex-registered-exporter-system_en
-  - https://www.gov.uk/guidance/how-to-claim-preferences-under-the-developing-countries-trading-scheme-dcts
+citations: []
 faq:
   - q: What packing is included in your price?
     a: Your labels and tags go on, each piece goes in its own polybag, and the order is packed in export cartons. Anything beyond that is quoted to your instructions.
@@ -49,7 +47,7 @@ faq:
   - q: Which export documents do you provide?
     a: Everything the factory side needs. That covers the commercial invoice, packing list, proof of origin, bill of lading or air waybill, and any other document your LC asks for.
   - q: Do I get a certificate of origin for duty savings?
-    a: We provide the proof of origin your market asks for, such as a statement on origin for the EU or an origin declaration for the UK. Your customs broker confirms the duty rate that applies.
+    a: We provide the certificate of origin or origin statement your importer asks for. Your customs broker confirms whether a lower duty rate applies.
   - q: Do you only ship FOB?
     a: "No. We quote {{incoterm}} {{port}} as standard, and ship on other terms or by air if you ask."
   - q: Who books the freight on an FOB order?
