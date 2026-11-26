@@ -131,8 +131,8 @@
 /gots-certified-clothing-manufacturer /organic-cotton-clothing-manufacturer/ 301
 /grading-service/ /pattern-making-service/ 301
 /grading-service /pattern-making-service/ 301
-/hi-vis-workwear-manufacturer/ /workwear-manufacturer/ 301
-/hi-vis-workwear-manufacturer /workwear-manufacturer/ 301
+/hi-vis-workwear-manufacturer/ /uniform-manufacturer/ 301
+/hi-vis-workwear-manufacturer /uniform-manufacturer/ 301
 /insights/AQL-inspection-explained/ /insights/aql-inspection-explained/ 301
 /insights/AQL-inspection-explained /insights/aql-inspection-explained/ 301
 /insights/CPSIA-compliance-guide/ /insights/cpsia-compliance-guide/ 301
@@ -167,8 +167,8 @@
 /leather-clothing-manufacturer /products/ 301
 /maternity-clothing-manufacturer/ /inclusive-sizing-guide/ 301
 /maternity-clothing-manufacturer /inclusive-sizing-guide/ 301
-/medical-uniform-manufacturer/ /uniform-manufacturer/ 301
-/medical-uniform-manufacturer /uniform-manufacturer/ 301
+/medical-uniform-manufacturer/ /scrubs-manufacturer/ 301
+/medical-uniform-manufacturer /scrubs-manufacturer/ 301
 /modal-clothing-manufacturer/ /tencel-clothing-manufacturer/ 301
 /modal-clothing-manufacturer /tencel-clothing-manufacturer/ 301
 /pet-clothing-manufacturer/ /products/ 301
@@ -243,8 +243,8 @@
 /wholesale-clothing-supplier /low-moq-clothing-manufacturers/ 301
 /wholesale-hoodie-supplier/ /hoodie-manufacturer/ 301
 /wholesale-hoodie-supplier /hoodie-manufacturer/ 301
-/wholesale-polo-shirt-supplier/ /polo-shirt-manufacturer/ 301
-/wholesale-polo-shirt-supplier /polo-shirt-manufacturer/ 301
+/wholesale-polo-shirt-supplier/ /t-shirt-manufacturer/ 301
+/wholesale-polo-shirt-supplier /t-shirt-manufacturer/ 301
 /wholesale-t-shirt-supplier/ /t-shirt-manufacturer/ 301
 /wholesale-t-shirt-supplier /t-shirt-manufacturer/ 301
 /wool-clothing-manufacturer/ /products/ 301
@@ -255,3 +255,9 @@
 /yoga-pants-manufacturer /leggings-manufacturer/ 301
 /yoga-wear-manufacturer/ /activewear-manufacturer/ 301
 /yoga-wear-manufacturer /activewear-manufacturer/ 301
+/polo-shirt-manufacturer/ /t-shirt-manufacturer/ 301
+/polo-shirt-manufacturer /t-shirt-manufacturer/ 301
+/sweatshirt-manufacturer/ /hoodie-manufacturer/ 301
+/sweatshirt-manufacturer /hoodie-manufacturer/ 301
+/workwear-manufacturer/ /uniform-manufacturer/ 301
+/workwear-manufacturer /uniform-manufacturer/ 301

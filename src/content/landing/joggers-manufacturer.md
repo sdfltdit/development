@@ -68,8 +68,8 @@ related:
   - /pants-trousers-manufacturer/
   - /private-label-clothing-manufacturer/
   - /low-moq-clothing-manufacturers/
-  - /sample-service/
   - /merch-manufacturer/
+  - /scrubs-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

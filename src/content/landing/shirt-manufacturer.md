@@ -66,9 +66,10 @@ related:
   - /t-shirt-manufacturer/
   - /pants-trousers-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /cut-and-sew-service/
   - /sample-service/
   - /low-moq-clothing-manufacturers/
+  - /linen-clothing-manufacturer/
+  - /cotton-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

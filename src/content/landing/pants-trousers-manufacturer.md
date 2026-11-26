@@ -66,9 +66,10 @@ related:
   - /joggers-manufacturer/
   - /shorts-manufacturer/
   - /shirt-manufacturer/
-  - /cut-and-sew-service/
   - /private-label-clothing-manufacturer/
   - /sample-service/
+  - /linen-clothing-manufacturer/
+  - /scrubs-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -66,6 +66,8 @@ related:
   - /jacket-manufacturer/
   - /private-label-clothing-manufacturer/
   - /cut-and-sew-service/
+  - /school-uniform-manufacturer/
+  - /scrubs-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -94,3 +94,12 @@ Findings used:
 - Modest fashion: abayas, kaftans, tunics, lengths per size and opacity. Machine embroidery only; hand beading and stone work are stated as not done.
 - Merch: competitors are mostly print on demand with no minimum. Our angle is cut and sew bulk merch with your own fit and labels, planned back from a tour or launch date. Merch is a new URL, not in the legacy list. The page asks buyers to own the rights to their artwork.
 - Correction (26 November 2026): cloth-2ou.pages.dev is the live sdfltd.com project, not a duplicate. dhaka-bd.pages.dev, the-hug.pages.dev and test-5rx.pages.dev no longer answer (robots.txt unreachable). Earlier fetches returned cached copies. Nothing needs deleting.
+
+## Batch 5 (school uniform, scrubs, cotton, linen, bamboo)
+
+- School uniform: buyers are mostly uniform suppliers and school groups. Their worries are shade continuity across years, a wide size range from infant to adult, crest quality and arriving before term. Typical published MOQs run from a few hundred to several thousand per style. The page uses owner-approved prices for polo, kids' tee, crewneck, joggers and shorts. Blazers are not claimed.
+- Scrubs: buyers are medical apparel brands and distributors. Key points: poly-cotton vs polyester-rayon-spandex stretch, pockets and pen slots, colour fastness through hard washing, fibre labels matching the mill spec. No antimicrobial or fluid-resistant claims. Old `/medical-uniform-manufacturer/` now redirects to scrubs.
+- Cotton: competitors explain combed vs carded and ring-spun vs open-end. Our angle is shrinkage control before cutting and honest organic wording.
+- Linen: untreated linen often shrinks about 4% on the first wash (Parachute care guide). We use mill pre-washed linen, since we do not garment-wash.
+- Bamboo: FTC requires "rayon (or viscose) made from bamboo" labelling and says the fibre keeps no antimicrobial properties. The page links to FTC business guidance. This is the strongest trust angle against competitors who still claim "antibacterial bamboo".
+- Redirects: polo, sweatshirt and workwear legacy URLs now 301 to the pages that own those keywords, so no thin duplicate pages are built.

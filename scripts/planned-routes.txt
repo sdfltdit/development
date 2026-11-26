@@ -2,7 +2,6 @@
 # The redirect check passes while a URL is listed here, and fails at launch (LAUNCH=1) until the list is empty.
 /agreement/
 /alibaba-verified-badge-vs-factory-audit-vs-no-verification/
-/bamboo-clothing-manufacturer/
 /bangladesh-vs-china-clothing-manufacturing/
 /bangladesh-vs-china-vs-vietnam-vs-india-vs-turkey-sourcing/
 /bangladesh-vs-india-clothing-manufacturing/
@@ -19,7 +18,6 @@
 /clothing-manufacturer-for-uk-brands/
 /clothing-manufacturer-for-usa-brands/
 /confidentiality/
-/cotton-clothing-manufacturer/
 /denim-manufacturer/
 /digital-3d-sample-vs-physical-sample/
 /direct-factory-vs-trading-company-vs-buying-agent/
@@ -96,7 +94,6 @@
 /knitting-service/
 /knitwear-factory/
 /lab-dip-service/
-/linen-clothing-manufacturer/
 /manufacturing-platform-alternative/
 /nda/
 /oeko-tex-certification-guide/
@@ -104,7 +101,6 @@
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
 /pattern-making-service/
-/polo-shirt-manufacturer/
 /polyester-clothing-manufacturer/
 /print-on-demand-vs-private-label/
 /printing-service/
@@ -112,13 +108,11 @@
 /private-label-clothing-guide/
 /quality-inspection-service/
 /recycled-clothing-manufacturer/
-/school-uniform-manufacturer/
 /socks-manufacturer/
 /sports-bra-manufacturer/
 /sustainability/
 /sustainable-clothing-manufacturer/
 /sweater-manufacturer/
-/sweatshirt-manufacturer/
 /swimwear-manufacturer/
 /tech-pack-service/
 /tencel-clothing-manufacturer/
@@ -142,4 +136,3 @@
 /trims-sourcing/
 /visa-docs/
 /washing-service/
-/workwear-manufacturer/

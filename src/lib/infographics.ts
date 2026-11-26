@@ -441,7 +441,7 @@ export const infographicMeta = {
   ...Object.fromEntries(
     garmentKeys.map((key) => [
       `garment-${key}`,
-      { width: 640, height: 440, alt: () => `Flat sketch of ${({ shirt: 'a woven shirt', hoodie: 'a hoodie', jacket: 'a bomber jacket', 'training top': 'a training top', 'track jacket': 'a track jacket', 'oversized tee': 'an oversized tee', dress: 'a dress', skirt: 'a skirt', 'pyjama top': 'a pyjama top', 'baby bodysuit': 'a baby bodysuit', 'work shirt': 'a work shirt', blouse: 'a blouse', 'graded pattern': 'a graded pattern', abaya: 'an abaya', 'merch tee': 'a merch tee' } as Record<string, string>)[garments[key].noun] ?? garments[key].noun} labelled with ${garments[key].callouts.slice(0, 4).map((c) => c.label.toLowerCase()).join(', ')} and more` },
+      { width: 640, height: 440, alt: () => `Flat sketch of ${({ shirt: 'a woven shirt', hoodie: 'a hoodie', jacket: 'a bomber jacket', 'training top': 'a training top', 'track jacket': 'a track jacket', 'oversized tee': 'an oversized tee', dress: 'a dress', skirt: 'a skirt', 'pyjama top': 'a pyjama top', 'baby bodysuit': 'a baby bodysuit', 'work shirt': 'a work shirt', blouse: 'a blouse', 'graded pattern': 'a graded pattern', abaya: 'an abaya', 'merch tee': 'a merch tee', 'school polo': 'a school polo', 'scrub top': 'a scrub top', 'cotton tee': 'a cotton tee', 'linen shirt': 'a linen shirt', 'bamboo viscose tee': 'a bamboo viscose tee' } as Record<string, string>)[garments[key].noun] ?? garments[key].noun} labelled with ${garments[key].callouts.slice(0, 4).map((c) => c.label.toLowerCase()).join(', ')} and more` },
     ]),
   ),
 } as Record<InfographicName, { width: number; height: number; alt: () => string }>;
