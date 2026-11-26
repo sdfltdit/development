@@ -56,6 +56,8 @@ related:
   - /insights/fabric-gsm-explained/
   - /how-to-find-clothing-manufacturer/
   - /work-process/
+  - /insights/stitch-quality-spi-explained/
+  - /insights/shade-variation-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

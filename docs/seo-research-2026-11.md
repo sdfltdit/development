@@ -260,3 +260,10 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Landed cost: HS chapters 61 (knitted) and 62 (not knitted) cover clothing. The worked example uses placeholders for freight, duty and fees, because those depend on the buyer's market.
 - Printing methods: informational comparison. Commercial print keywords stay with the printing service page.
 - MOQ: explains per order, per style, per colour and per fabric minimums. Commercial low-MOQ keywords stay with the low MOQ page.
+
+## Guide batch 3 (shade variation, grading, size charts, stitches per inch, scams)
+
+- Size charts: EN 13402 describes sizes by body measurements in centimetres (part 3 revised in 2017). Older ISO size designation standards were replaced by parts of ISO 8559. Conversions are shown as guides only.
+- Stitches per inch: ISO 4915 (confirmed 2021) classifies stitch types. The SPI chart gives common ranges, not rules.
+- Scams: the FBI IC3 describes business email compromise as a scam aimed at businesses that pay foreign suppliers. The guide centres on confirming bank details by phone. The "avoid scams" FAQ on the how-to-find guide was reworded so it no longer targets this page's keyword.
+- Shade variation and grading: practical factory controls (shade bands, cutting by roll, break points, size sets). No external standard needed.

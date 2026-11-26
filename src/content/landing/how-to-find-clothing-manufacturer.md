@@ -46,7 +46,7 @@ faq:
     a: Local factories are faster and easier to visit but usually cost more per piece. Overseas factories cost less on basics but need more planning for samples and freight. Compare the total landed cost, not the factory price alone.
   - q: What should I send a manufacturer to get a quote?
     a: A tech pack if you have one, otherwise reference photos, the fabric and weight, decoration, quantity per style, target price and the date you need the goods.
-  - q: How do I avoid clothing manufacturer scams?
+  - q: How do I check that a manufacturer is real?
     a: Check the company registration, visit or ask for recent photos of the factory floor, pay only the company bank account on the proforma invoice, and never accept bank detail changes by email without a phone call.
 related:
   - /clothing-manufacturers-for-startups/
@@ -55,6 +55,7 @@ related:
   - /verify-us/
   - /pricing/
   - /sample-service/
+  - /insights/avoiding-clothing-manufacturer-scams/
 published: 2026-11-25
 updated: 2026-11-25
 ---

@@ -56,6 +56,7 @@ related:
   - /insights/aql-inspection-explained/
   - /polyester-clothing-manufacturer/
   - /how-to-create-a-tech-pack/
+  - /insights/shade-variation-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

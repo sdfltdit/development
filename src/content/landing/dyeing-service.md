@@ -63,6 +63,7 @@ related:
   - /streetwear-manufacturer/
   - /corduroy-clothing-manufacturer/
   - /insights/lab-dip-explained/
+  - /insights/shade-variation-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -48,6 +48,7 @@ related:
   - /private-label-clothing-manufacturer/
   - /work-process/
   - /pattern-making-service/
+  - /insights/stitch-quality-spi-explained/
 published: 2026-11-25
 updated: 2026-11-25
 ---

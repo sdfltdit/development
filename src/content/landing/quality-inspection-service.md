@@ -62,6 +62,8 @@ related:
   - /insights/aql-inspection-explained/
   - /sample-service/
   - /garment-labels/
+  - /insights/shade-variation-explained/
+  - /insights/stitch-quality-spi-explained/
 published: 2026-11-26
 updated: 2026-11-26
 ---

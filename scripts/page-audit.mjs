@@ -137,6 +137,11 @@ const STRICT = new Set([
   '/insights/payment-terms-lc-vs-tt/',
   '/insights/how-to-calculate-landed-cost/',
   '/insights/moq-meaning-clothing/',
+  '/insights/shade-variation-explained/',
+  '/insights/garment-grading-explained/',
+  '/insights/international-size-chart-guide/',
+  '/insights/stitch-quality-spi-explained/',
+  '/insights/avoiding-clothing-manufacturer-scams/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
