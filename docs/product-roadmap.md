@@ -19,6 +19,8 @@ Garment dyeing and washing move to service pages (`/dyeing-service/`, `/washing-
 
 Services built (11): embroidery, printing, dyeing, washing, pattern making, tech pack, lab dip, quality inspection, fabric sourcing, trims sourcing, garment labels. Next: guides on the old `/insights/` and guide URLs, then free tools on `/tools/`.
 
+Products added 27 November 2026: silk and satin clothing, bathrobes, sustainable, organic cotton and recycled clothing.
+
 Free tools built (10 plus hub): GSM converter, AQL calculator, lead time calculator, garment cost calculator, fabric shrinkage calculator, MOQ calculator, colour converter, delta E calculator, care label generator, manufacturer email generator. Still planned: HS code finder and EU readiness checker.
 
 Guides built (35): seven batches covering tech packs, startup costs, AQL, GSM, Incoterms, lab dips, printing methods, payment terms, landed cost, MOQ, shade variation, grading, size charts, SPI, scams, private label, print on demand, lead time, how manufacturers work, 3D samples, Bangladesh vs China, Vietnam, India and Pakistan, negotiation, how to start a clothing brand, hex vs Pantone TCX, OEM vs ODM vs CMT, customs clearance, a fabric glossary, manufacturing costs, scaling, factory vs trading company, QC options and freight options.

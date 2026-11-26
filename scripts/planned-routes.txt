@@ -24,16 +24,11 @@
 /insights/knitting-defects-explained/
 /insights/pattern-fit-problems-explained/
 /insights/sock-manufacturing-guide/
-/insights/sustainable-clothing-manufacturing/
 /insights/wholesale-manufacturing-partnership/
 /insights/yarn/
 /manufacturing-platform-alternative/
 /nda/
-/organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
-/recycled-clothing-manufacturer/
-/sustainability/
-/sustainable-clothing-manufacturer/
 /tools/eu-readiness-checker/
 /tools/hs-code/
 /visa-docs/

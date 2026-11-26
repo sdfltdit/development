@@ -63,7 +63,7 @@ related:
   - /shirt-manufacturer/
   - /clothing-manufacturers-for-women/
   - /silk-pillowcase-manufacturer/
-  - /cushion-cover-manufacturer/
+  - /bathrobe-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

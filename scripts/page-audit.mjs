@@ -180,6 +180,11 @@ const STRICT = new Set([
   '/sample-service/',
   '/clothing-manufacturer-bangladesh/',
   '/how-to-find-clothing-manufacturer/',
+  '/silk-clothing-manufacturer/',
+  '/bathrobe-manufacturer/',
+  '/sustainable-clothing-manufacturer/',
+  '/organic-cotton-clothing-manufacturer/',
+  '/recycled-clothing-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

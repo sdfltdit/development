@@ -31,8 +31,8 @@
 /clothing-manufacturers / 301
 /corporate-uniform-manufacturer/ /uniform-manufacturer/ 301
 /corporate-uniform-manufacturer /uniform-manufacturer/ 301
-/csr/ /sustainability/ 301
-/csr /sustainability/ 301
+/csr/ /sustainable-clothing-manufacturer/ 301
+/csr /sustainable-clothing-manufacturer/ 301
 /cycling-apparel-manufacturer/ /cycling-jersey-manufacturer/ 301
 /cycling-apparel-manufacturer /cycling-jersey-manufacturer/ 301
 /dance-wear-manufacturer/ /dancewear-manufacturer/ 301
@@ -131,8 +131,6 @@
 /public-notice /verify-us/ 301
 /shopify-clothing-manufacturer/ /clothing-manufacturers-for-startups/ 301
 /shopify-clothing-manufacturer /clothing-manufacturers-for-startups/ 301
-/silk-clothing-manufacturer/ /products/ 301
-/silk-clothing-manufacturer /products/ 301
 /sleepwear-manufacturer/ /loungewear-manufacturer/ 301
 /sleepwear-manufacturer /loungewear-manufacturer/ 301
 /small-batch-activewear-manufacturer/ /activewear-manufacturer/ 301
@@ -153,8 +151,8 @@
 /sportswear-manufacturer /activewear-manufacturer/ 301
 /sustainable-clothing-manufacturers/ /sustainable-clothing-manufacturer/ 301
 /sustainable-clothing-manufacturers /sustainable-clothing-manufacturer/ 301
-/sustainable-fashion-manufacturing-guide/ /insights/sustainable-clothing-manufacturing/ 301
-/sustainable-fashion-manufacturing-guide /insights/sustainable-clothing-manufacturing/ 301
+/sustainable-fashion-manufacturing-guide/ /sustainable-clothing-manufacturer/ 301
+/sustainable-fashion-manufacturing-guide /sustainable-clothing-manufacturer/ 301
 /tank-top-manufacturer/ /t-shirt-manufacturer/ 301
 /tank-top-manufacturer /t-shirt-manufacturer/ 301
 /tech-pack-guide/ /how-to-create-a-tech-pack/ 301
@@ -253,3 +251,9 @@
 /tools/price-calculator /tools/garment-cost-calculator/ 301
 /tools/sample-decision-helper/ /digital-3d-sample-vs-physical-sample/ 301
 /tools/sample-decision-helper /digital-3d-sample-vs-physical-sample/ 301
+
+# Sustainable merges
+/sustainability/ /sustainable-clothing-manufacturer/ 301
+/sustainability /sustainable-clothing-manufacturer/ 301
+/insights/sustainable-clothing-manufacturing/ /sustainable-clothing-manufacturer/ 301
+/insights/sustainable-clothing-manufacturing /sustainable-clothing-manufacturer/ 301
