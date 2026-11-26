@@ -1,10 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
+import FactStrip from '../components/FactStrip.astro';
+import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { capabilities, company, terms, yearsInBusiness } from '../data/company';
+import { capabilities, company, designTeamFrom, shipping, sisterCompany, terms, yearsInBusiness } from '../data/company';
+import { productParts, serviceGroups } from '../data/catalogue';
 import { pageMeta } from '../data/pages';
-import { standardPage, type Crumb } from '../lib/schema';
+import { faqPage, standardPage, type Crumb } from '../lib/schema';
 
 const meta = pageMeta('/about/');
 const crumbs: Crumb[] = [
@@ -12,6 +15,37 @@ const crumbs: Crumb[] = [
   { name: 'About', path: '/about/' },
 ];
 const years = yearsInBusiness();
+const large = (n: number) => n.toLocaleString('en-GB');
+
+const sections = [
+  { id: 'who', label: 'Who we are' },
+  { id: 'make', label: 'What we make' },
+  { id: 'capabilities', label: 'Capabilities' },
+  { id: 'operate', label: 'How we operate' },
+  { id: 'trust', label: 'Why buyers trust us' },
+  { id: 'details', label: 'Company details' },
+];
+
+const productLinks = productParts
+  .filter((part) => part.id !== 'more')
+  .map((part) => ({ href: `/products/#${part.id}`, title: part.heading, text: part.lead }));
+
+const serviceLinks = serviceGroups.map((group) => ({ href: `/all-services/#${group.id}`, title: group.heading, text: group.activities ?? group.lead }));
+
+const faqs = [
+  {
+    q: 'Is SDF Clothing a factory or a trading company?',
+    a: 'A factory. We cut, sew, print, embroider, inspect and pack in our own premises in Dhaka, and our merchandisers work with you directly.',
+  },
+  {
+    q: 'Which company does SDF Clothing belong to?',
+    a: `${company.legalName} is part of ${company.parentCompany}. Our sister company makes fabric for large orders, plus trims and garment accessories.`,
+  },
+  {
+    q: 'Can I meet the team before ordering?',
+    a: 'Yes. Factory visits in Dhaka are by appointment, and a merchandiser walks you through the production floor and your samples.',
+  },
+];
 
 const schema = standardPage({
   path: meta.path,
@@ -21,6 +55,7 @@ const schema = standardPage({
   crumbs,
   type: 'AboutPage',
   fullOrganization: true,
+  extra: [faqPage(meta.path, faqs)],
 });
 ---
 
@@ -28,75 +63,230 @@ const schema = standardPage({
   <PageHeader
     eyebrow="About us"
     title="About SDF Clothing"
-    lead={`About SDF Clothing: we're a garment factory in Dhaka, Bangladesh, founded in ${company.foundingYear} and run by ${company.founder.name}. For ${years} years we've made T-shirts, hoodies and other clothes for brands. Today we focus on small and growing brands that want factory quality from ${terms.moq} ${terms.moqUnit}.`}
+    lead={`About SDF Clothing: we are a cut-and-sew clothing manufacturer in Dhaka, Bangladesh, making custom clothing for brands worldwide from ${terms.moq} ${terms.moqUnit}. ${company.founder.name} founded the business in ${company.foundingYear}, and for ${years} years everything has been made in our own factory.`}
     updated={meta.updated}
-  />
+  >
+    <FactStrip keys={['moq', 'sample', 'bulk', 'quote']} />
+  </PageHeader>
 
-  <section class="section" aria-labelledby="who-heading">
+  <nav class="hub-nav container" aria-label="On this page">
+    <ul class="hub-nav__list">
+      {
+        sections.map((s) => (
+          <li>
+            <a class="hub-nav__link" href={`#${s.id}`}>
+              {s.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <section class="section about-section" id="who" aria-labelledby="who-heading">
     <div class="container split">
       <div class="section__head">
         <h2 id="who-heading">About SDF Clothing: who we are</h2>
-        <p class="section__lead">{company.legalName} is a privately owned manufacturer with its office in {company.address.street}, Dhaka.</p>
+        <p class="section__lead">A privately owned garment factory, part of {company.parentCompany}, with its office in {company.address.street}, Dhaka.</p>
       </div>
       <div class="prose">
         <p>
-          We make cut-and-sew clothing under our customers' brands. Our merchandisers work directly with your team, in English, from the first quote to the
-          final shipment. There is no buying house or agent between you and the production floor.
+          We make clothing under our customers' brands, never our own. Our merchandisers work with your team in English, from the first quote to the final
+          shipment. There is no buying house or agent between you and the production floor.
         </p>
         <h3>{company.founder.name}, {company.founder.jobTitle}</h3>
         <p>
-          {company.founder.name}, our founder, set up the business in {company.foundingYear}. Today our focus is brands
-          that need lower minimums, clear terms and straight answers.
+          {company.founder.name} set up the business in {company.foundingYear} and still leads it today. His focus is brands that need lower minimums, clear
+          terms and straight answers.
+        </p>
+        <h3>Our group</h3>
+        <p>
+          Our sister company in the {company.parentCompany} group makes knit and woven fabric for orders above {large(sisterCompany.fabricAbove)} pieces per style.
+          It also makes trims and garment accessories for the clothing we produce.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" aria-labelledby="inhouse-heading">
-    <div class="container split">
+  <section class="section section--alt about-section" id="make" aria-labelledby="make-heading">
+    <div class="container">
       <div class="section__head">
-        <h2 id="inhouse-heading">Everything is made in our own factory</h2>
-        <p class="section__lead">We don't pass work to subcontractors. Every step of your order happens under one roof in Dhaka, with our own team.</p>
-        <p>Fabric: {capabilities.fabrics}.</p>
+        <h2 id="make-heading">What we manufacture</h2>
+        <p class="section__lead">Knit and woven clothing, accessories and home textiles, all cut and sewn to your pattern, fabric and labels.</p>
       </div>
-      <ul class="checklist">
-        {capabilities.inHouse.map((item) => <li>{item}</li>)}
+      <ul class="cards">
+        {
+          productLinks.map((link) => (
+            <li class="card">
+              <h3 class="card__title">{link.title}</h3>
+              <p class="card__text">{link.text}</p>
+              <a class="card__link" href={link.href}>
+                See our {link.title.toLowerCase()}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <h3 class="about-sub">Our services</h3>
+      <ul class="about-services">
+        {
+          serviceLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.title}</a>
+              <span>{link.text}</span>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="values-heading">
+  <section class="section about-section" id="capabilities" aria-labelledby="cap-heading">
+    <div class="container split">
+      <div class="section__head">
+        <h2 id="cap-heading">Our manufacturing capabilities</h2>
+        <p class="section__lead">We do not pass work to subcontractors. Every step of your order happens under one roof in Dhaka, with our own team.</p>
+        <p>Fabric: {capabilities.fabrics}.</p>
+      </div>
+      <div>
+        <ul class="checklist">
+          {capabilities.inHouse.map((item) => <li>{item}</li>)}
+        </ul>
+        <div class="table-wrap" role="region" aria-label="Capability figures" tabindex="0">
+          <table class="table--stack">
+            <caption>Capability figures</caption>
+            <tbody>
+              <tr><th scope="row">Minimum order</th><td data-label="Figure">{terms.moq} {terms.moqUnit}</td></tr>
+              <tr><th scope="row">Proto sample</th><td data-label="Figure">{terms.sampleDays} days, door to door</td></tr>
+              <tr><th scope="row">Bulk production</th><td data-label="Figure">{terms.bulkDays} days after sample approval</td></tr>
+              <tr><th scope="row">T-shirt fabric weight</th><td data-label="Figure">{capabilities.tshirtGsm} GSM</td></tr>
+              <tr><th scope="row">Fleece fabric weight</th><td data-label="Figure">{capabilities.fleeceGsm} GSM</td></tr>
+              <tr><th scope="row">In-house design team</th><td data-label="Figure">Orders from {large(designTeamFrom)} pieces per style</td></tr>
+              <tr><th scope="row">Final inspection</th><td data-label="Figure">AQL {terms.aql}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt about-section" id="operate" aria-labelledby="operate-heading">
+    <div class="container split">
+      <div class="section__head">
+        <h2 id="operate-heading">Where and how we operate</h2>
+        <p class="section__lead">
+          Our office and factory are in {company.address.locality}, and we ship {terms.incoterm} {terms.port} to buyers in every region, or on the terms you choose.
+        </p>
+        <p>Working hours: {company.hours}.</p>
+      </div>
+      <ul class="checklist checklist--notes">
+        {
+          shipping.regions.map((region) => (
+            <li>
+              <strong>{region.name}.</strong> {region.note}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="container prose about-steps">
+      <p>
+        Every order follows the same path: written quote, sample, approval, bulk, inspection and shipment. Our <a href="/work-process/">clothing production process</a>
+        page shows the timing and payment for each step, and our <a href="/garment-packing-and-export/">garment packing and export</a> page covers documents and
+        shipping.
+      </p>
+    </div>
+  </section>
+
+  <section class="section about-section" id="trust" aria-labelledby="trust-heading">
     <div class="container prose">
-      <h2 id="values-heading">How we work with buyers</h2>
+      <h2 id="trust-heading">Why buyers trust us</h2>
       <ul>
         <li><strong>Terms in writing.</strong> Price, minimum, lead time and payment schedule are on your quote before you pay anything.</li>
-        <li><strong>Prices in public.</strong> Our <a href="/pricing/">price index</a> is dated and updated, so you can check a budget first.</li>
-        <li><strong>Samples before bulk.</strong> You approve a proto and a pre-production sample before cutting.</li>
+        <li><strong>Prices in public.</strong> Our <a href="/pricing/">clothing manufacturing prices</a> are dated and updated, so you can check a budget first.</li>
+        <li><strong>Samples before bulk.</strong> You approve a proto and a pre-production sample before cutting, with up to {terms.sampleCorrections} free correction rounds.</li>
         <li><strong>Inspection you can check.</strong> Final AQL {terms.aql} report, and your own inspector is welcome.</li>
+        <li><strong>Open doors.</strong> Buyers can <a href="/booking/">book a garment factory visit</a> and see the floor for themselves.</li>
+        <li><strong>Your designs stay private.</strong> We sign a <a href="/nda/">clothing manufacturer NDA</a> before you share files, if you ask.</li>
         <li><strong>Saying no.</strong> If a project is not a good fit for our lines, we tell you at the start.</li>
       </ul>
-      <h2>Who we make for</h2>
       <p>
-        We make clothing for brands in any country, from founders placing a first order to established labels
-        launching a new capsule. Read how we work with <a href="/clothing-manufacturers-for-startups/">startup brands</a> and on
-        <a href="/private-label-clothing-manufacturer/">private label programmes</a>, or learn more about
-        <a href="/clothing-manufacturer-bangladesh/">manufacturing in Bangladesh</a>.
+        Read how we handle <a href="/certifications/">clothing factory compliance</a> and buyer audits, and how to <a href="/verify-us/">verify SDF Clothing</a> before
+        your first payment.
       </p>
-      <h2>Company details</h2>
+    </div>
+  </section>
+
+  <section class="section section--alt about-section" id="details" aria-labelledby="details-heading">
+    <div class="container prose">
+      <h2 id="details-heading">Company details</h2>
       <ul>
         <li><strong>Company name:</strong> {company.legalName}</li>
-        <li><strong>Parent company:</strong> {company.parentCompany}</li>
+        <li><strong>Group:</strong> {company.parentCompany}</li>
         <li><strong>Founded:</strong> {company.foundingYear}</li>
+        <li><strong>Founder:</strong> {company.founder.name}</li>
         <li><strong>Address:</strong> {company.address.street}, {company.address.locality} {company.address.postalCode}, {company.address.countryName}</li>
         {company.showRegistration && <li><strong>RJSC registration:</strong> {company.registration.rjsc}</li>}
         <li><strong>Official website:</strong> {company.officialDomain}</li>
       </ul>
       <p>
-        Before your first payment, please check our official details on the <a href="/verify-us/">verify page</a>. Our
-        <a href="/faq/">clothing manufacturer FAQ</a> covers samples and payment, and our <a href="/nda/">clothing manufacturer NDA</a> page explains how we keep designs private.
+        Who we make for: founders placing a first order and established labels launching a new capsule. See how we work with
+        <a href="/clothing-manufacturers-for-startups/">startup brands</a> and on <a href="/private-label-clothing-manufacturer/">private label programmes</a>, or
+        read our guide to <a href="/clothing-manufacturer-bangladesh/">manufacturing in Bangladesh</a>. Quick answers are in our
+        <a href="/faq/">clothing manufacturer FAQ</a>.
       </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <FaqList items={faqs} heading="Questions about our company" />
     </div>
   </section>
 
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .about-section {
+    scroll-margin-top: var(--header-height);
+  }
+
+  .about-sub {
+    margin: var(--space-7) 0 var(--space-3);
+  }
+
+  .about-services {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .about-services li {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .about-services a {
+    font-weight: 600;
+  }
+
+  .about-steps {
+    margin-top: var(--space-6);
+  }
+
+  .table-wrap {
+    margin-top: var(--space-5);
+  }
+
+  @media (min-width: 48rem) {
+    .about-services {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: var(--space-6);
+    }
+  }
+</style>

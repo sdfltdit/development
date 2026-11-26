@@ -85,7 +85,7 @@ export const techPackService: ProductContent = {
   noPrice: {
     heading: 'How tech packs are priced',
     paragraphs: [
-      'We do not list tech pack prices on this page. The style and the number of colourways and sizes move the price most. Tech pack and sample costs appear together on your quote.',
+      'We do not list tech pack prices on this page. The style and the number of colourways and sizes move the price most. Any tech pack cost appears on your quote, and the sample itself is covered by your deposit.',
       'Send your sketch or sample and we send a written quote within {{quoteHours}} hours. See our <a href="/sample-service/">clothing sample service</a> page for how samples work.',
     ],
   },

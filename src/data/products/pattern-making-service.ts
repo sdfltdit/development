@@ -84,7 +84,7 @@ export const patternMakingService: ProductContent = {
   noPrice: {
     heading: 'How pattern making is priced',
     paragraphs: [
-      'We do not list pattern making prices on this page. The style, the number of sizes and how many fit rounds it needs move the price most. Pattern and sample costs appear together on your quote.',
+      'We do not list pattern making prices on this page. The style, the number of sizes and how many fit rounds it needs move the price most. Any pattern cost appears on your quote, and the sample itself is covered by your deposit.',
       'Send your design and we send a written quote within {{quoteHours}} hours. See our <a href="/sample-service/">clothing sample service</a> page for how samples work.',
     ],
   },

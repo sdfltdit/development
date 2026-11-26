@@ -53,7 +53,7 @@ One number, one source: the hero, glance table, FAQ, meta description and schema
 
 Names and identity
 - Company name: "SDF Clothing". Never "SDF Clothing Ltd" or "SDF Ltd".
-- Parent company "SDF Corprt" appears only small, in the footer line and in schema `parentOrganization`. The spelling still needs owner confirmation.
+- Parent company "SDF Corprt" (spelling confirmed by the owner, 27 November 2026) appears in the footer line, on `/about/` and in schema `parentOrganization`.
 - Founder name and job title come from `company.founder`.
 
 Never publish
@@ -555,7 +555,6 @@ What no script can check, so a person must: facts are true, product nouns match 
 
 ## 19. Open items waiting for the owner
 
-- Confirm the spelling "SDF Corprt".
 - Real factory photos and real customer testimonials or case studies (none are used until supplied).
 - T-shirt page claims to confirm: tipping stripes, branded buttons, racer-back and slub fabric, strike-off approval, wash test, reorders skipping the proto sample.
 - Fabric claims: bamboo clothing is labelled "viscose made from bamboo" with no antibacterial or green claims (FTC). Organic or recycled claims rest on the mill's certificate, never on ours.
@@ -633,4 +632,5 @@ Never 301 to a loosely related page such as the home page, because search engine
 - `/garment-development-service/` reuses its old URL (redirect removed). Keyword "garment development service".
 - `/garment-packing-and-export/` keyword "garment packing and export". Proof of origin: EU GSP uses the REX statement on origin (Form A ended for the EU in 2021), the UK DCTS takes an origin declaration or Form A, other markets a certificate of origin. Always tell buyers their customs broker confirms the duty rate. The owner chose not to confirm REX registration, so the page only promises "the certificate of origin or origin statement your importer asks for" and never names REX or Form A.
 - Footer (27 November 2026): brand block (one-line description, address, message and WhatsApp links, official-domain notice), then four columns from `footerNav` (Products, Services, Company, Resources), then a base row with copyright and `legalNav`. Keep each column to six links or fewer, with short labels, so rows stay even.
+- About page (27 November 2026) answers the five buyer questions in order: who we are (overview, founder, group), what we make (product parts and service groups), capabilities (in-house steps and a figures table), where and how we operate (location, hours, regions, process), why buyers trust us, then company details and three company FAQs. Factory size, lines, machines, workforce, capacity, export countries, history milestones and a mission statement are not published until the owner supplies them.
 
