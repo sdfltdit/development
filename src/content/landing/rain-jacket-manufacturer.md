@@ -63,7 +63,7 @@ related:
   - /uniform-manufacturer/
   - /activewear-manufacturer/
   - /kids-baby-clothing-manufacturer/
-  - /sample-service/
+  - /hi-vis-workwear-manufacturer/
   - /softshell-jacket-manufacturer/
   - /ski-wear-manufacturer/
 published: 2026-11-26

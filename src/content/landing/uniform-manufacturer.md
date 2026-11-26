@@ -61,7 +61,7 @@ faq:
     a: Our table shows starting prices for polo shirts, woven shirts and T-shirts at {{moq}} and {{bulkQty}} pieces, FOB {{port}}. Trousers, jackets and tunics are quoted from your spec.
 related:
   - /lab-coat-manufacturer/
-  - /school-uniform-manufacturer/
+  - /security-uniform-manufacturer/
   - /scrubs-manufacturer/
   - /blazer-manufacturer/
   - /chef-uniform-manufacturer/

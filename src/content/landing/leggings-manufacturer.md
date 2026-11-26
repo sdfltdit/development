@@ -69,7 +69,7 @@ related:
   - /sports-bra-manufacturer/
   - /cycling-jersey-manufacturer/
   - /dancewear-manufacturer/
-  - /fightwear-manufacturer/
+  - /maternity-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

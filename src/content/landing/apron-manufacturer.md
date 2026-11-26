@@ -62,6 +62,7 @@ related:
   - /denim-manufacturer/
   - /cotton-clothing-manufacturer/
   - /private-label-clothing-manufacturer/
+  - /hotel-uniform-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

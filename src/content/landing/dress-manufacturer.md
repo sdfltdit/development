@@ -66,7 +66,7 @@ related:
   - /shirt-manufacturer/
   - /loungewear-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /sample-service/
+  - /jumpsuit-romper-manufacturer/
   - /clothing-manufacturers-for-women/
   - /plus-size-clothing-manufacturer/
   - /modest-fashion-manufacturer/

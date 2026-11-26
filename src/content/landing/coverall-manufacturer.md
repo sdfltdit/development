@@ -62,6 +62,8 @@ related:
   - /lab-coat-manufacturer/
   - /denim-manufacturer/
   - /puffer-jacket-manufacturer/
+  - /hi-vis-workwear-manufacturer/
+  - /security-uniform-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

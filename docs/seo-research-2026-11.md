@@ -153,3 +153,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Aprons: buyers compare bib, cross-back and waist styles and fabrics (twill, canvas, denim). Home brands need retail labels and packing.
 - Lab coats: poly-cotton twill, knee vs hip length, embroidered names. Protective lab coats are PPE, so the page says the buyer arranges garment testing.
 - Coveralls: poly-cotton twill with reflective tape is the common spec. Hi-vis and flame-resistant certification of the finished garment is arranged by the buyer. Asked the owner to confirm (CLAUDE.md section 19).
+
+## Batch 13 (hi-vis workwear, security, hotel, jumpsuit, maternity), 26 November 2026
+
+- Hi-vis: retail and distributor listings sell by class (1, 2, 3), fluorescent colour and tape width, and quote the standard on each item. Our page explains classes without naming standards and says the buyer arranges garment certification (open item in CLAUDE.md section 19).
+- Security: buyers want epaulettes, radio loops, badges and back text. Added a plain note that uniforms must not look like police uniforms, which many countries ban.
+- Hotel: department-by-department breakdown (front desk, housekeeping, spa, porters). "Hospitality uniforms" stays on the uniform page.
+- Jumpsuit: built on the old URL `/jumpsuit-romper-manufacturer/`. Fit risk is body rise, which competitors rarely explain.
+- Maternity: buyers and shoppers ask about over vs under-bump waists and nursing access (wrap, lift-up, zips, clips). Built on the old URL `/maternity-clothing-manufacturer/`.
