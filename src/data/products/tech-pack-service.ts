@@ -128,7 +128,7 @@ export const techPackService: ProductContent = {
     heading: 'Starting with a clothing tech pack',
     paragraphs: [
       'Many new brands start with one tech pack for a core tee or hoodie. Once the first pack is approved, later styles reuse the same size chart and labels.',
-      'Want to see how the pattern is made? See our <a href="/pattern-making-service/">clothing pattern making service</a> page.',
+      'Want to see how the pattern is made? See our <a href="/pattern-making-service/">clothing pattern making service</a> page. Both are steps in our <a href="/garment-development-service/">garment development service</a>.',
     ],
   },
   faqHeading: 'Tech pack questions',

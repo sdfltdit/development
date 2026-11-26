@@ -4,7 +4,7 @@ hub: services
 navLabel: Sampling
 cardSummary: Proto and pre-production samples delivered to your door in {{sampleDays}} days, with no separate fee and up to {{sampleCorrections}} free correction rounds.
 title: "Clothing Sample Maker – Samples in {{sampleDays}} Days | SDF Clothing"
-description: "Clothing sample maker for proto and pre-production samples in {{sampleDays}} days, with a written measurement report and the fee taken off your first bulk order."
+description: "Clothing sample maker for proto and pre-production samples in {{sampleDays}} days, with a written measurement report, free corrections and no separate sample fee to pay."
 h1: Clothing sample maker, from proto to pre-production
 eyebrow: Sample development
 primaryKeyword: clothing sample maker

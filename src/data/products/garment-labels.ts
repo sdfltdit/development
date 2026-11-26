@@ -128,7 +128,7 @@ export const garmentLabels: ProductContent = {
     heading: 'Starting with your own labels',
     paragraphs: [
       'Many new brands start with a woven neck label, a printed care label and a simple hang tag. These three pieces cover branding and the details shoppers need.',
-      'Want zips and buttons matched too? See our <a href="/trims-sourcing/">trims sourcing service</a> page.',
+      'Want zips and buttons matched too? See our <a href="/trims-sourcing/">trims sourcing service</a> page. Swing tags, polybags and cartons are covered by our <a href="/garment-packing-and-export/">garment packing and export</a> service.',
     ],
   },
   faqHeading: 'Garment label questions',

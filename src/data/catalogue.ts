@@ -1,3 +1,5 @@
+import { sisterCompany } from './company';
+
 /**
  * How the /products/ and /all-services/ hubs group their pages.
  * Every product, model and service page must appear in exactly one group, or the build fails.
@@ -17,6 +19,7 @@ export interface CatalogueGroup {
   slugs: string[];
   part?: string;
   activities?: string;
+  about?: string;
   extras?: CatalogueExtra[];
 }
 
@@ -141,13 +144,15 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Product development',
     activities: 'Design, pattern and sampling',
     lead: 'Turning an idea or a photo into an approved sample.',
-    slugs: ['tech-pack-service', 'pattern-making-service', 'sample-service', 'lab-dip-service'],
+    about: 'Development is where a style is decided. You bring an idea, sketch or photo, and we work on it with you until there is a sample to wear and sign off. Our design team works on larger orders.',
+    slugs: ['garment-development-service', 'tech-pack-service', 'pattern-making-service', 'sample-service', 'lab-dip-service'],
   },
   {
     id: 'sourcing',
     heading: 'Material sourcing',
     activities: 'Fabric, trims and accessories',
     lead: 'Fabric, trims and branding for the garments we make, with large orders supplied by our sister company.',
+    about: `We buy the fabric, trims and labels for your order and check them before cutting. For orders above ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the fabric itself.`,
     slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels'],
   },
   {
@@ -155,6 +160,7 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Garment manufacturing',
     activities: 'Cutting, sewing and assembly',
     lead: 'Your bulk order, made by our own sewing teams from first cut to final press.',
+    about: 'Cutting, sewing and finishing happen on our own lines, never at a subcontractor. Knit and woven garments are made from fabric rolls to your approved pattern and sample.',
     slugs: ['cut-and-sew-service'],
   },
   {
@@ -162,6 +168,7 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Printing and embroidery',
     activities: 'Screen and digital printing, embroidery, dyeing and washing',
     lead: 'Decoration and finishing, done in-house.',
+    about: 'Logos, prints, colours and washes are added in-house, so they are checked by the same team that sews the garment. Each method is approved on a strike-off or sample first.',
     slugs: ['printing-service', 'embroidery-service', 'dyeing-service', 'washing-service'],
   },
   {
@@ -169,6 +176,7 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Quality and compliance',
     activities: 'Quality control, inspection and audits',
     lead: 'Checks from fabric arrival to the final inspection, and support for your audits.',
+    about: 'Quality is checked when fabric arrives, on the line and on packed goods. You can send your own inspector, and we share compliance documents with buyers during development.',
     slugs: ['quality-inspection-service'],
     extras: [
       {
@@ -184,12 +192,13 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Global supply chain',
     activities: 'Merchandising, packaging and export',
     lead: 'One merchandiser from quote to shipment, packing to your instructions and export to any country.',
-    slugs: [],
+    about: 'One merchandiser follows your order from quote to shipment. We pack to your instructions, prepare the export documents and hand the goods to your forwarder.',
+    slugs: ['garment-packing-and-export'],
     extras: [
       {
         href: '/work-process/',
-        title: 'Merchandising, packing and export',
-        summary: 'Each step from quote to shipment, with timing, payment, packing and shipping terms.',
+        title: 'Production and shipping timeline',
+        summary: 'Each step from quote to shipment, with the timing and payment at every stage.',
         linkText: 'Clothing production process details',
       },
       {

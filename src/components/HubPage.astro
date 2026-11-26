@@ -132,6 +132,7 @@ const schema = standardPage({
                   </p>
                 )}
                 <p class="section__lead">{section.lead}</p>
+                {section.about && <p class="hub-about">{section.about}</p>}
               </div>
               <ul class="cards">
                 {section.items.map((item) => (
@@ -195,6 +196,11 @@ const schema = standardPage({
   .hub-part__lead {
     margin: 0 0 var(--space-2);
     color: var(--color-text);
+  }
+
+  .hub-about {
+    max-width: 65ch;
+    margin: 0;
   }
 
   .hub-activities {

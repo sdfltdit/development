@@ -209,6 +209,8 @@ const STRICT = new Set([
   '/verify-us/',
   '/faq/',
   '/nda/',
+  '/garment-development-service/',
+  '/garment-packing-and-export/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
