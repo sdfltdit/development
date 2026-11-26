@@ -31,7 +31,8 @@ Contents:
 - Stack: Astro 6, static output, TypeScript strict, `trailingSlash: 'always'`. Content collection `landing` in `src/content/landing/*.md`.
 - Repo: `github.com/sdfltdit/development`, branch `main`. Every push builds the staging preview on Cloudflare Pages (`development-3n2.pages.dev`).
   Production later runs on Cloudflare Workers (`wrangler.jsonc`, worker in `src/worker/index.ts` for `/api/*`).
-- Never touch the owner's other GitHub repos or Cloudflare projects. The live site repo "cloth" stays as it is until launch.
+- Never touch the owner's other GitHub repos or Cloudflare projects. The live site repo "cloth" stays as it is until launch. Its Pages project `cloth-2ou.pages.dev` is connected to `sdfltd.com`: it is the live site, not a duplicate. Never ask the owner to delete it.
+- Before reporting a duplicate copy of our content, check that it is live with a fresh request (its `robots.txt` must load). Fetch tools can return cached copies of deleted projects. Checked 26 November 2026: `dhaka-bd.pages.dev`, `the-hug.pages.dev` and `test-5rx.pages.dev` are already deleted.
 - Staging is hidden from search and AI bots by `scripts/staging.mjs`, which writes a bot-blocking `robots.txt` when `CF_PAGES=1`.
   Do not add a `noindex` header to staging. SEO testing tools must still be able to read it.
 - Commit only after `npm run check`, `npm run build` and `npm run verify` pass locally. CI (`.github/workflows/ci.yml`) runs the same plus Lighthouse (median of 3 runs).
@@ -396,7 +397,6 @@ What no script can check, so a person must: facts are true, product nouns match 
 - LC terms for the payment section.
 - Real factory photos and real customer testimonials or case studies (none are used until supplied).
 - T-shirt page claims to confirm: tipping stripes, branded buttons, racer-back and slub fabric, strike-off approval, wash test, reorders skipping the proto sample.
-- Delete old duplicate projects that show our content (`dhaka-bd.pages.dev`, `the-hug.pages.dev`, `cloth-2ou.pages.dev`, `test-5rx.pages.dev`).
 - Kids' pages: we leave lab testing and certificates to the brand or importer. Confirm this is how SDF Clothing works.
 - Decide whether AI training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) may crawl the live site.
 - Decide whether analytics (GA4 or similar) is wanted, which needs a consent banner.

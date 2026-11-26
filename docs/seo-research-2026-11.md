@@ -93,4 +93,4 @@ Findings used:
 - Plus size: the key buyer pain is straight grading from a small base size. The page explains a separate plus base size and the fit points (bust, upper arm, armhole, front length). Prices for extended sizes are shown separately on the quote.
 - Modest fashion: abayas, kaftans, tunics, lengths per size and opacity. Machine embroidery only; hand beading and stone work are stated as not done.
 - Merch: competitors are mostly print on demand with no minimum. Our angle is cut and sew bulk merch with your own fit and labels, planned back from a tour or launch date. Merch is a new URL, not in the legacy list. The page asks buyers to own the rights to their artwork.
-- Duplicate copies found earlier: test-5rx.pages.dev (modest page with unconfirmed claims), cloth-2ou.pages.dev. Owner should delete them.
+- Correction (26 November 2026): cloth-2ou.pages.dev is the live sdfltd.com project, not a duplicate. dhaka-bd.pages.dev, the-hug.pages.dev and test-5rx.pages.dev no longer answer (robots.txt unreachable). Earlier fetches returned cached copies. Nothing needs deleting.
