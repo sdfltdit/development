@@ -43,6 +43,7 @@ related:
   - /verify-us/
   - /work-process/
   - /pricing/
+  - /insights/incoterms-explained/
 published: 2026-11-25
 updated: 2026-11-25
 ---

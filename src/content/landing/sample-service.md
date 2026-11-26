@@ -43,7 +43,7 @@ faq:
     a: Yes. Send a reference garment or clear photos with your target measurements. We turn your comments on the first sample into a written spec for bulk.
 related:
   - /cut-and-sew-service/
-  - /work-process/
+  - /how-to-create-a-tech-pack/
   - /clothing-manufacturers-for-startups/
   - /t-shirt-manufacturer/
   - /hoodie-manufacturer/

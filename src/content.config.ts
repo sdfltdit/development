@@ -34,6 +34,7 @@ const landing = defineCollection({
     showPrices: z.boolean().default(false),
     serviceType: z.string().min(3),
     citations: z.array(z.url()).default([]),
+    sources: z.array(z.object({ title: z.string().min(5), publisher: z.string().min(2), url: z.url() })).default([]),
     faq: z.array(faq).min(4).max(10),
     related: z.array(z.string().regex(/^\/[a-z0-9/-]*\/$/)).min(3).max(8),
     published: z.coerce.date(),

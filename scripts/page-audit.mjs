@@ -127,6 +127,11 @@ const STRICT = new Set([
   '/fabric-sourcing/',
   '/trims-sourcing/',
   '/garment-labels/',
+  '/how-to-create-a-tech-pack/',
+  '/clothing-brand-startup-costs/',
+  '/insights/aql-inspection-explained/',
+  '/insights/fabric-gsm-explained/',
+  '/insights/incoterms-explained/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

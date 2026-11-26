@@ -244,3 +244,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Quality inspection: inspection is included in every order. Buyers may send their own inspector or an inspection company, whose fee is theirs. No third-party company is named.
 - Labels: the page describes what care labels usually carry and leaves final legal wording to the brand, because rules differ by market.
 - Fabric and trims: sourced only for garments we produce. Fibre and nickel-free claims rest on the maker's report.
+
+## Guide batch 1 (tech pack, startup costs, AQL, GSM, Incoterms)
+
+- ISO 2859-1 got a third edition in January 2026, replacing the 1999 edition and adding skip-lot sampling. Most AQL guides online still cite 1999. Our AQL guide names the 2026 edition and keeps the familiar single sampling table for level II.
+- Incoterms 2020 is still the edition in force. The ICC 2026 workplan starts work towards Incoterms 2030. Pages that sell "Incoterms 2025/2026" are wrong, and our guide says so.
+- Startup cost guides online quote invented budgets. Ours uses only our own price tokens (price at MOQ and MOQ totals) and leaves freight, duty and launch costs as lines the buyer prices.
+- GSM: ISO 3801 sets the lab method for woven fabric. The guide gives a cutter-and-scale method and a GSM chart, with our own GSM ranges from tokens.
+- Tech pack guide targets the informational intent, and links to the tech pack service page that owns the commercial keywords (clothing tech pack, spec sheet, bill of materials).

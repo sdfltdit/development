@@ -10,7 +10,6 @@
 /careers/
 /case-studies/
 /clothing-brand-launch-checklist/
-/clothing-brand-startup-costs/
 /clothing-factory/
 /clothing-manufacturer-for-australian-brands/
 /clothing-manufacturer-for-canadian-brands/
@@ -28,7 +27,6 @@
 /guides/clothing-manufacturing-lead-time/
 /guides/first-order-sourcing-questions/
 /guides/how-clothing-manufacturers-work/
-/how-to-create-a-tech-pack/
 /how-to-scale-a-clothing-brand/
 /how-to-start-a-clothing-brand-in-the-uk/
 /how-to-start-a-clothing-brand/
@@ -36,7 +34,6 @@
 /inclusive-sizing-guide/
 /insights/
 /insights/acceptable-delta-e-for-lab-dip/
-/insights/aql-inspection-explained/
 /insights/avoiding-clothing-manufacturer-scams/
 /insights/bangladesh-rmg-industry-data/
 /insights/circular-fashion-guide/
@@ -47,7 +44,6 @@
 /insights/ethical-manufacturing-verification/
 /insights/eu-clothing-regulations-2026/
 /insights/fabric-cutting-explained/
-/insights/fabric-gsm-explained/
 /insights/fabric-types-glossary/
 /insights/fiber-blend-hs-classification-explained/
 /insights/garment-finishing-explained/
@@ -59,7 +55,6 @@
 /insights/how-to-calculate-landed-cost/
 /insights/how-to-negotiate-with-clothing-manufacturers/
 /insights/how-to-write-pantone-tcx-in-a-tech-pack/
-/insights/incoterms-explained/
 /insights/international-size-chart-guide/
 /insights/knitting-defects-explained/
 /insights/lab-dip-explained/

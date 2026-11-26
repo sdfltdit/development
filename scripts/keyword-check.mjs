@@ -15,7 +15,7 @@ const registry = readFileSync('src/data/pages.ts', 'utf8');
 for (const match of registry.matchAll(/path:\s*'([^']+)'[\s\S]*?primaryKeyword:\s*'([^']+)'/g)) add(match[2], match[1]);
 
 const dir = 'src/content/landing';
-for (const file of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+for (const file of readdirSync(dir, { recursive: true, encoding: 'utf8' }).filter((f) => f.endsWith('.md'))) {
   const fm = readFileSync(join(dir, file), 'utf8').split('---')[1] ?? '';
   const keyword = fm.match(/^primaryKeyword:\s*(.+)$/m)?.[1];
   if (!keyword) {

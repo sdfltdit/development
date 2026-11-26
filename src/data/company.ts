@@ -192,6 +192,7 @@ const priceKey = (product: string): string =>
 for (const row of priceIndex.rows) {
   tokens[`${priceKey(row.product)}From`] = `$${row.fobMoq}`;
   tokens[`${priceKey(row.product)}Bulk`] = `$${row.fobBulk}`;
+  tokens[`${priceKey(row.product)}MoqTotal`] = `$${(Number(row.fobMoq) * terms.moq).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 export function fill(text: string): string {

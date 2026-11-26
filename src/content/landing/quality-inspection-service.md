@@ -59,7 +59,7 @@ related:
   - /lab-dip-service/
   - /fabric-sourcing/
   - /cut-and-sew-service/
-  - /work-process/
+  - /insights/aql-inspection-explained/
   - /sample-service/
   - /garment-labels/
 published: 2026-11-26

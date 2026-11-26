@@ -24,7 +24,9 @@ interface Props {
 const { entry } = Astro.props;
 const data = entry.data;
 const path = `/${entry.id}/`;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+const toc = data.kind === 'guide' ? headings.filter((h) => h.depth === 2) : [];
+const citationUrls = [...data.citations, ...data.sources.map((s) => s.url)];
 
 const hubs: Record<typeof data.hub, Crumb> = {
   products: { name: 'Products', path: '/products/' },
@@ -51,7 +53,7 @@ const schema = graph([
   webPage({ path, title, description, datePublished: published, dateModified: updated, hasBreadcrumb: true, reviewed: true }),
   breadcrumbList(crumbs),
   data.kind === 'guide'
-    ? article({ path, headline: h1, description, datePublished: published, dateModified: updated, citations: data.citations })
+    ? article({ path, headline: h1, description, datePublished: published, dateModified: updated, citations: citationUrls })
     : service({ path, name: h1, description, serviceType: data.serviceType }),
   faqPage(path, faqs),
 ]);
@@ -104,11 +106,47 @@ const schema = graph([
       )
     }
 
+    {
+      toc.length >= 6 && (
+        <nav class="landing__section container toc" aria-labelledby="toc-heading">
+          <h2 id="toc-heading" class="toc__heading">On this page</h2>
+          <ol class="toc__list">
+            {toc.map((h) => (
+              <li>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+
     <div class="landing__section container">
       <div class="prose">
         <Content />
       </div>
     </div>
+
+    {
+      data.sources.length > 0 && (
+        <section class="landing__section container" aria-labelledby="sources-heading">
+          <div class="prose">
+            <h2 id="sources-heading">Sources</h2>
+            <ul>
+              {data.sources.map((s) => (
+                <li>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer">
+                    {s.title}
+                    <span class="visually-hidden"> (opens in a new tab)</span>
+                  </a>
+                  , {s.publisher}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )
+    }
 
     <div class="landing__section container">
       <FaqList items={faqs} heading="Frequently asked questions" />
@@ -117,6 +155,21 @@ const schema = graph([
     <div class="landing__section container">
       <RelatedLinks links={related} heading="Keep reading" />
     </div>
+
+    {
+      data.kind === 'guide' && (
+        <section class="landing__section container" aria-labelledby="about-page-heading">
+          <div class="prose">
+            <h2 id="about-page-heading">About this page</h2>
+            <p>
+              Our merchandising team at {company.legalName} wrote this guide from our own production records and the sources listed above.{' '}
+              <a href="/about/">{company.founder.name}</a>, {company.founder.jobTitle}, reviewed it. If you spot an error, tell us through our{' '}
+              <a href="/contact/">contact page</a> and we will correct it.
+            </p>
+          </div>
+        </section>
+      )
+    }
   </article>
   <CtaBand />
 </BaseLayout>
@@ -154,5 +207,27 @@ const schema = graph([
     display: grid;
     gap: var(--space-4);
     padding-block: var(--space-6);
+  }
+
+  .toc {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .toc__heading {
+    font-size: var(--text-lg);
+  }
+
+  .toc__list {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+    padding-inline-start: var(--space-5);
+  }
+
+  .toc__list a {
+    display: inline-block;
+    min-height: 44px;
+    padding-block: var(--space-2);
   }
 </style>

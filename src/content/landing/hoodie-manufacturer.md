@@ -68,7 +68,7 @@ related:
   - /joggers-manufacturer/
   - /t-shirt-manufacturer/
   - /french-terry-clothing-manufacturer/
-  - /pet-clothing-manufacturer/
+  - /insights/fabric-gsm-explained/
   - /merch-manufacturer/
   - /cotton-clothing-manufacturer/
   - /sweater-manufacturer/
