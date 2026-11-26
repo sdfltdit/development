@@ -57,6 +57,7 @@ related:
   - /polyester-clothing-manufacturer/
   - /how-to-create-a-tech-pack/
   - /insights/shade-variation-explained/
+  - /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
 published: 2026-11-26
 updated: 2026-11-26
 ---

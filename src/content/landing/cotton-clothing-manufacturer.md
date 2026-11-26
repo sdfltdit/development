@@ -65,7 +65,7 @@ related:
   - /linen-clothing-manufacturer/
   - /bamboo-clothing-manufacturer/
   - /polyester-clothing-manufacturer/
-  - /french-terry-clothing-manufacturer/
+  - /insights/fabric-types-glossary/
 published: 2026-11-26
 updated: 2026-11-26
 ---

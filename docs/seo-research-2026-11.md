@@ -284,3 +284,9 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - UK-India CETA in force since 15 July 2026. UK duty on qualifying Indian clothing (about 12%) removed.
 - US tariffs: extra Section 301 duties by origin since July 2026, plus new proposals on 25 Nov 2026 not in force. No percentages published on site.
 - Keyword "Bangladesh vs China clothing" moved from /clothing-manufacturer-bangladesh/ to the new China guide. The Bangladesh page now links to all four comparison guides with keyword anchors.
+
+## Guide batch 6 (26 Nov 2026)
+
+- US: duty-free de minimis for commercial shipments suspended since 29 Aug 2025, made indefinite by CBP rules of 24 June 2026. Statutory repeal for commercial shipments from 1 July 2027.
+- EU: temporary €3 duty per item on low-value B2C consignments (up to €150) from 1 July 2026 until 1 July 2028 (Council Regulation (EU) 2026/382). B2B shipments follow normal rules.
+- Cannibalization avoided: POM stays with the tech pack guide, HS codes and import duty stay with the landed cost guide, OEM clothing manufacturer stays with private label, CMT clothing manufacturer and full package production stay with cut and sew, Pantone colour matching stays with lab dip service.

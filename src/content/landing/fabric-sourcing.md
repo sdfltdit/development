@@ -63,6 +63,7 @@ related:
   - /linen-clothing-manufacturer/
   - /quality-inspection-service/
   - /insights/fabric-gsm-explained/
+  - /insights/fabric-types-glossary/
 published: 2026-11-26
 updated: 2026-11-26
 ---

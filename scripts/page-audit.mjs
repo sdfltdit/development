@@ -152,6 +152,11 @@ const STRICT = new Set([
   '/bangladesh-vs-india-clothing-manufacturing/',
   '/bangladesh-vs-pakistan-clothing-manufacturing/',
   '/insights/how-to-negotiate-with-clothing-manufacturers/',
+  '/how-to-start-a-clothing-brand/',
+  '/insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/',
+  '/insights/oem-vs-odm-vs-cmt/',
+  '/insights/customs-clearance-guide/',
+  '/insights/fabric-types-glossary/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

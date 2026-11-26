@@ -19,6 +19,6 @@ Garment dyeing and washing move to service pages (`/dyeing-service/`, `/washing-
 
 Services built (11): embroidery, printing, dyeing, washing, pattern making, tech pack, lab dip, quality inspection, fabric sourcing, trims sourcing, garment labels. Next: guides on the old `/insights/` and guide URLs, then free tools on `/tools/`.
 
-Guides built (25): five batches covering tech packs, startup costs, AQL, GSM, Incoterms, lab dips, printing methods, payment terms, landed cost, MOQ, shade variation, grading, size charts, SPI, scams, private label, print on demand, lead time, how manufacturers work, 3D samples, Bangladesh vs China, Vietnam, India and Pakistan, and negotiation.
+Guides built (30): six batches covering tech packs, startup costs, AQL, GSM, Incoterms, lab dips, printing methods, payment terms, landed cost, MOQ, shade variation, grading, size charts, SPI, scams, private label, print on demand, lead time, how manufacturers work, 3D samples, Bangladesh vs China, Vietnam, India and Pakistan, negotiation, how to start a clothing brand, hex vs Pantone TCX, OEM vs ODM vs CMT, customs clearance and a fabric glossary.
 
 Before building each batch, search the primary keyword again and check that no built page already owns it.
