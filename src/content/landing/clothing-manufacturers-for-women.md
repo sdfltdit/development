@@ -65,7 +65,7 @@ related:
   - /leggings-manufacturer/
   - /plus-size-clothing-manufacturer/
   - /modest-fashion-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /evening-dress-manufacturer/
   - /jumpsuit-romper-manufacturer/
   - /maternity-clothing-manufacturer/
 published: 2026-11-26

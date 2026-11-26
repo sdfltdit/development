@@ -186,3 +186,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Hair accessories: satin and silk scrunchies and bonnets sell together, often as multipacks or with silk pillowcases.
 - Ties: woven jacquard (design in the weave) vs printed. Bias cut, interlining and slip stitch decide how a tie knots and hangs. Clip-on ties for young pupils.
 - Baby bibs and swaddles: US children's products need a tracking label and third-party testing. Our page says we sew the tracking label and the buyer arranges tests, in line with the open item on kids' testing.
+
+## Batch 17 (tea towel, table linen, gloves, shapewear, evening dress), 26 November 2026
+
+- Tea towels: gift and souvenir buyers choose cotton half panama or linen union, edge-to-edge prints, hanging loops and header cards. Oven glove heat ratings come from the wadding maker.
+- Table linen: hotels and restaurants care about commercial laundry and mitred corners. Polyester resists stains for busy restaurants.
+- Gloves: knitted, fleece and touchscreen gloves. No leather and no safety gloves (protective equipment).
+- Shapewear: circular-knit styles need larger runs than cut-and-sew. Control set by fabric power, layers and panels. Not medical or post-surgery. "Seamless" is blocked by page-audit as filler, so pages say "circular-knit".
+- Evening dresses: buyers want boning, built-in cups, full lining and hand beading. Beading is knotted in small groups so a broken thread loses few beads.

@@ -62,6 +62,8 @@ related:
   - /merch-manufacturer/
   - /hotel-uniform-manufacturer/
   - /private-label-clothing-manufacturer/
+  - /tea-towel-manufacturer/
+  - /table-linen-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

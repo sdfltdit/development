@@ -63,6 +63,7 @@ related:
   - /scrubs-manufacturer/
   - /hat-manufacturer/
   - /hotel-uniform-manufacturer/
+  - /table-linen-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

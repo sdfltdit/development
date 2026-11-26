@@ -59,7 +59,7 @@ related:
   - /chef-uniform-manufacturer/
   - /uniform-manufacturer/
   - /merch-manufacturer/
-  - /denim-manufacturer/
+  - /tea-towel-manufacturer/
   - /cotton-clothing-manufacturer/
   - /private-label-clothing-manufacturer/
   - /hotel-uniform-manufacturer/
