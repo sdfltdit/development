@@ -153,6 +153,16 @@ export const quoteProducts = ['T-shirts', 'Hoodies or sweatshirts', 'Joggers or 
 
 export const visitPurposes = ['First meeting and factory tour', 'Sample or fit review', 'Production check', 'Pre-shipment inspection', 'Other'] as const;
 
+/** Owner, 27 November 2026: workplace facilities and policies for our team. */
+export const workplace = [
+  { label: 'Canteen', text: 'a canteen on site, so every shift has somewhere to eat and rest' },
+  { label: 'Medical care', text: 'a medical room for first aid and health checks during working hours' },
+  { label: 'Daycare and childcare', text: 'childcare on site, so parents can work knowing their children are looked after' },
+  { label: 'No overtime', text: 'production is planned within normal working hours, never by stretching shifts' },
+  { label: 'No child labour', text: 'we do not employ children, and ages are checked when people join' },
+  { label: 'Festival bonuses', text: 'paid to every worker for the main festivals each year' },
+] as const;
+
 /** Owner, 27 November 2026: main export markets. */
 export const exportMarkets = ['the European Union', 'the United States', 'Australia', 'Japan'] as const;
 

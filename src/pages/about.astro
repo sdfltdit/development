@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FactStrip from '../components/FactStrip.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { capabilities, company, designTeamFrom, exportMarkets, mainMarkets, shipping, sisterCompany, terms, yearsInBusiness } from '../data/company';
+import { capabilities, company, designTeamFrom, exportMarkets, mainMarkets, shipping, sisterCompany, terms, workplace, yearsInBusiness } from '../data/company';
 import { productParts, serviceGroups } from '../data/catalogue';
 import { pageMeta } from '../data/pages';
 import { faqPage, standardPage, type Crumb } from '../lib/schema';
@@ -22,6 +22,7 @@ const sections = [
   { id: 'mission', label: 'Mission and values' },
   { id: 'make', label: 'What we make' },
   { id: 'capabilities', label: 'Capabilities' },
+  { id: 'people', label: 'Our people' },
   { id: 'operate', label: 'How we operate' },
   { id: 'trust', label: 'Why buyers trust us' },
   { id: 'details', label: 'Who we make for' },
@@ -234,7 +235,28 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section about-section" id="operate" aria-labelledby="operate-heading">
+  <section class="section about-section" id="people" aria-labelledby="people-heading">
+    <div class="container split">
+      <div class="section__head">
+        <h2 id="people-heading">Our factory and people</h2>
+        <p class="section__lead">
+          Every garment we ship is made by our own team of {capabilities.workforce} people. These are the basics each of them can count on.
+        </p>
+        <p>Buyers and their auditors can see all of this on a <a href="/booking/">garment factory visit</a>.</p>
+      </div>
+      <ul class="checklist checklist--notes">
+        {
+          workplace.map((item) => (
+            <li>
+              <strong>{item.label}.</strong> {item.text.charAt(0).toUpperCase() + item.text.slice(1)}.
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt about-section" id="operate" aria-labelledby="operate-heading">
     <div class="container split">
       <div class="section__head">
         <h2 id="operate-heading">Where and how we operate</h2>
@@ -263,7 +285,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section section--alt about-section" id="trust" aria-labelledby="trust-heading">
+  <section class="section about-section" id="trust" aria-labelledby="trust-heading">
     <div class="container prose">
       <h2 id="trust-heading">Why buyers trust us</h2>
       <ul>
@@ -282,7 +304,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section about-section" id="details" aria-labelledby="details-heading">
+  <section class="section section--alt about-section" id="details" aria-labelledby="details-heading">
     <div class="container prose">
       <h2 id="details-heading">Who we make for</h2>
       <p>
@@ -294,7 +316,7 @@ const schema = standardPage({
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
       <FaqList items={faqs} heading="Questions about our company" />
     </div>
