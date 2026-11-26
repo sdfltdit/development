@@ -196,11 +196,28 @@ const STRICT = new Set([
   '/insights/pattern-fit-problems-explained/',
   '/insights/garment-finishing-explained/',
   '/overseas-vs-local-clothing-manufacturer/',
+  '/about/',
+  '/accessibility/',
+  '/booking/',
+  '/certifications/',
+  '/contact/',
+  '/cookies/',
+  '/editorial-policy/',
+  '/get-a-quote/',
+  '/privacy/',
+  '/terms/',
+  '/verify-us/',
+  '/faq/',
+  '/nda/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
 const MIN_FRE = 60;
 const DENSITY = [0.8, 2.0];
+// Brand keywords ("SDF Clothing privacy policy") are navigational queries on short pages. Density is meaningless there,
+// so they must sit in the title, description, H1, first 100 words and a heading, and appear at most BRAND_MAX times.
+const BRAND = 'sdf clothing';
+const BRAND_MAX = 4;
 const MAX_SENTENCE_WORDS = 30;
 const MAX_ALT = 140;
 
@@ -372,7 +389,9 @@ for (const p of pages) {
   if (!p.headings.some((h) => has(lower(h)))) report(p.route, 'primary keyword missing from every H2 and H3');
   const count = (text.match(primary) ?? []).length;
   const density = (count * k.primary.split(' ').length * 100) / words;
-  if (!p.collection && (density < DENSITY[0] || density > DENSITY[1])) report(p.route, `primary keyword density ${density.toFixed(2)}% is outside ${DENSITY[0]}–${DENSITY[1]}%`);
+  const brand = k.primary.toLowerCase().includes(BRAND);
+  if (brand && count > BRAND_MAX) report(p.route, `brand keyword appears ${count} times (max ${BRAND_MAX})`);
+  if (!brand && !p.collection && (density < DENSITY[0] || density > DENSITY[1])) report(p.route, `primary keyword density ${density.toFixed(2)}% is outside ${DENSITY[0]}–${DENSITY[1]}%`);
 
   for (const s of k.secondary) {
     const re = kwRegex(s);

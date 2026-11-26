@@ -17,7 +17,7 @@ const crumbs: Crumb[] = [
 const faqs = [
   {
     q: 'Can I see your compliance documents?',
-    a: 'Yes. We share our compliance documents with buyers once an order is in development, so they go to the people who will rely on them.',
+    a: 'Yes. They go to buyers whose orders are under way, so they reach the people who will rely on them.',
   },
   {
     q: 'Can I send my own inspector?',
@@ -46,16 +46,19 @@ const schema = standardPage({
 <BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
   <PageHeader
     eyebrow="Compliance and audits"
-    title="How we handle compliance, audits and inspection"
-    lead="Clothing factory compliance and audits should protect the buyer, not fill a web page with logos. We share compliance documents with buyers during order development, welcome buyer audits, and invite you to send your own inspector before any shipment leaves Dhaka."
+    title="Clothing factory compliance, audits and inspection"
+    lead="Clothing factory compliance should protect the buyer, not fill a web page with logos. We share compliance documents with buyers during order development, welcome buyer audits, and invite you to send your own inspector before any shipment leaves Dhaka."
     updated={meta.updated}
   />
 
   <section class="section" aria-labelledby="approach-heading">
     <div class="container split">
       <div class="section__head">
-        <h2 id="approach-heading">Our approach</h2>
-        <p class="section__lead">Documents are only useful to the people who will rely on them, so we share them during development rather than publish them.</p>
+        <h2 id="approach-heading">Our approach to clothing factory compliance</h2>
+        <p class="section__lead">
+          Documents are only useful to the people who will rely on them, so we share them during development rather than publish them. Ask for what your
+          market needs and we tell you what we can provide.
+        </p>
       </div>
       <ul class="checklist">
         <li><strong>Compliance documents</strong> shared with buyers once an order is in development</li>

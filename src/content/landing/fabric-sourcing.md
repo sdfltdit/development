@@ -51,7 +51,7 @@ faq:
     a: Yes. We send fabric swatches for approval before the sample, so you can feel the fabric and check the colour.
   - q: Do you handle yarn sourcing too?
     a: Yes, for knitted fabric and knitwear. Yarn sourcing covers fibre, count and colour, matched to your brief before knitting.
-  - q: Can I supply my own fabric?
+  - q: Can I send fabric I already buy?
     a: Yes. Send it with its details and we test it before cutting. We advise if it is likely to shrink or fade.
   - q: How do you check fabric quality?
     a: Every roll is checked for shade, weight, width and faults on arrival, and shrinkage is tested before cutting.

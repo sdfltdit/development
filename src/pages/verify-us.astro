@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'How will you ask me to pay?',
-    a: `${terms.paymentMethod}. We never ask you to pay a personal account or a new account sent by email.`,
+    a: 'Only into the company account on our proforma invoice, by letter of credit, bank transfer or a service such as Wise. We never ask you to pay a personal account or a new account sent by email.',
   },
   {
     q: 'Our bank details were changed by email. What should I do?',
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: 'Can I see the factory before I pay?',
-    a: 'Yes. Factory visits in Dhaka can be arranged by appointment, and a paid sample before bulk is standard with us.',
+    a: 'Yes. Factory visits in Dhaka are by appointment, and sampling always comes before any payment for bulk.',
   },
 ];
 
@@ -129,16 +129,17 @@ const schema = standardPage({
 
   <section class="section" aria-labelledby="checks-heading">
     <div class="container prose">
-      <h2 id="checks-heading">Four checks to make before your first payment</h2>
+      <h2 id="checks-heading">Four checks to verify SDF Clothing before your first payment</h2>
       <ol>
         <li><strong>Check the domain.</strong> Make sure the website address is exactly {company.officialDomain}.</li>
         <li><strong>Use the channels on this page.</strong> Confirm your merchandiser's name and the quote reference through our contact form or WhatsApp link.</li>
-        <li><strong>See the factory.</strong> <a href="/booking/">Book a visit to our Dhaka factory</a>, or start with a paid sample.</li>
+        <li><strong>See the factory.</strong> <a href="/booking/">Book a garment factory visit</a>, or start with a sample.</li>
         <li><strong>Match the bank details.</strong> The account must be in the name of {company.legalName} and match your proforma invoice.</li>
       </ol>
       <p>
-        If something does not look right, <a href={company.contactPath}>contact us through this website</a> before you pay. You can also read how we handle
-        <a href="/certifications/">compliance and buyer audits</a>.
+        If something does not look right, <a href={company.contactPath}>contact SDF Clothing through this website</a> before you pay. You can also read how we handle
+        <a href="/certifications/">clothing factory compliance and buyer audits</a>. We sign a
+        <a href="/nda/">clothing manufacturer NDA</a> before you share designs, and our <a href="/faq/">clothing manufacturer FAQ</a> answers common questions.
       </p>
     </div>
   </section>

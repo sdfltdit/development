@@ -13,6 +13,15 @@ interface Props {
 }
 
 const { path, crumbLabel, eyebrow, heading, lead } = Astro.props;
+const policies = [
+  { href: '/privacy/', label: 'SDF Clothing privacy policy' },
+  { href: '/cookies/', label: 'SDF Clothing cookie policy' },
+  { href: '/terms/', label: 'SDF Clothing terms of use' },
+  { href: '/accessibility/', label: 'SDF Clothing accessibility statement' },
+  { href: '/editorial-policy/', label: 'SDF Clothing editorial policy' },
+];
+const others = policies.filter((p) => p.href !== path);
+const isPolicy = others.length < policies.length;
 const meta = pageMeta(path);
 const crumbs: Crumb[] = [
   { name: 'Home', path: '/' },
@@ -32,6 +41,20 @@ const schema = standardPage({
   <section class="section prose-page">
     <div class="container prose">
       <slot />
+      {
+        isPolicy && (
+          <nav class="policy-nav" aria-labelledby="policy-nav-heading">
+            <h2 id="policy-nav-heading">Our other policies</h2>
+            <ul>
+              {others.map((p) => (
+                <li>
+                  <a href={p.href}>{p.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
     </div>
   </section>
 </BaseLayout>

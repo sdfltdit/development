@@ -26,7 +26,7 @@ const schema = standardPage({
   <PageHeader
     eyebrow="Request a quote"
     title="Get a clothing manufacturing quote"
-    lead={`Tell us what you want to make and you get a clothing manufacturing quote in writing within ${terms.quoteHours} hours: ${terms.incoterm} price per piece, colour and size split and lead time, from the factory itself.`}
+    lead={`Tell us what you want to make and you get a clothing manufacturing quote in writing within ${terms.quoteHours} hours. It shows the ${terms.incoterm} price per piece, colour and size split and lead time, from the factory itself.`}
   />
 
   <section class="section quote-layout">
@@ -36,7 +36,7 @@ const schema = standardPage({
         <QuoteForm />
       </div>
       <aside class="quote-layout__aside" aria-labelledby="next-heading">
-        <h2 id="next-heading" class="block-heading">What happens next</h2>
+        <h2 id="next-heading" class="block-heading">After you ask for a clothing manufacturing quote</h2>
         <ol class="next-steps">
           <li>A merchandiser reads your request and may ask one or two questions.</li>
           <li>You receive a written quote within {terms.quoteHours} hours.</li>
@@ -45,20 +45,46 @@ const schema = standardPage({
         </ol>
         <div class="notice">
           <p>
-            <strong>Prefer to meet in person?</strong> <a href="/booking/">Book a visit to our factory in Dhaka</a>.
+            <strong>Prefer to meet in person?</strong> <a href="/booking/">Book a garment factory visit in Dhaka</a>.
           </p>
         </div>
         <div class="notice">
           <p>
             <strong>Prefer to talk?</strong> <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a> or
-            <a href={company.contactPath}>send a message</a>.
+            <a href={company.contactPath}>contact SDF Clothing</a> with a message.
           </p>
         </div>
         <p class="quote-layout__small">
-          Our minimum is {terms.moq} {terms.moqUnit}. See our <a href="/pricing/">price index</a> and <a href="/work-process/">production process</a> before you
-          send, and <a href="/verify-us/">verify our official contacts</a>.
+          Our minimum is {terms.moq} {terms.moqUnit}. See our <a href="/pricing/">clothing manufacturing prices</a> and <a href="/work-process/">clothing production process</a> before you
+          send, and <a href="/verify-us/">verify SDF Clothing</a> through our official contacts.
         </p>
       </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="include-heading">
+    <div class="container prose">
+      <h2 id="include-heading">What to put in your request</h2>
+      <p>The more you tell us, the closer the first price is to the final one. You do not need a tech pack to start.</p>
+      <div class="table-wrap" role="region" aria-label="What to include" tabindex="0">
+        <table class="table--stack">
+          <caption>What to include, and why it matters</caption>
+          <thead>
+            <tr><th scope="col">Detail</th><th scope="col">Why we ask</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Detail">Product and a photo or sketch</td><td data-label="Why we ask">Sets the pattern, sewing time and trims</td></tr>
+            <tr><td data-label="Detail">Fabric and weight</td><td data-label="Why we ask">Fabric is usually the largest part of the price</td></tr>
+            <tr><td data-label="Detail">Colours and print or embroidery</td><td data-label="Why we ask">Changes dye lots and decoration cost</td></tr>
+            <tr><td data-label="Detail">Sizes and quantity per style</td><td data-label="Why we ask">Sets the price tier and the colour and size split</td></tr>
+            <tr><td data-label="Detail">Target price and date</td><td data-label="Why we ask">Lets us suggest changes that meet both</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Not sure about fabric or weight? Describe the feel you want, or name a garment you like, and we suggest options. A rough request still gets a real price, which we refine once the details are agreed. Our free
+        <a href="/tools/manufacturer-email-generator/">manufacturer email generator</a> helps you put a brief together.
+      </p>
     </div>
   </section>
 </BaseLayout>

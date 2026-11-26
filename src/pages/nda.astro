@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { pageMeta } from '../data/pages';
+import { company, terms } from '../data/company';
+import { faqPage, standardPage, type Crumb } from '../lib/schema';
+
+const meta = pageMeta('/nda/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'NDA', path: '/nda/' },
+];
+
+const faqs = [
+  { q: 'Will you sign my non-disclosure agreement?', a: 'Yes. Send it before you share your files, and we sign it first. It should name both companies, the files it covers and how long it lasts.' },
+  { q: 'Do I need an NDA to get a quote?', a: 'No. A photo, sketch or rough description is enough to quote. Many brands sign an NDA only when they send full tech packs or artwork.' },
+  { q: 'Who sees my files inside the factory?', a: 'The people working on your order, such as your merchandiser, pattern makers and the production team. Files are not shown to other buyers.' },
+  { q: 'Can an NDA stop anyone copying a design?', a: 'It helps, because it sets out what the factory may not do. It does not replace trademarks or design rights, which protect your brand more widely.' },
+  { q: 'Do you keep my patterns after the order?', a: 'Yes, so reorders match the approved fit. They are kept for your orders only.' },
+];
+
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  extra: [faqPage(meta.path, faqs)],
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
+  <PageHeader
+    eyebrow="Confidentiality"
+    title="Clothing manufacturer NDA and how we protect your designs"
+    lead="We never share your files, and we sign a clothing manufacturer NDA before you send them if you ask. This page explains what a non-disclosure agreement covers, how to protect clothing designs and how your files are handled inside our factory."
+    updated={meta.updated}
+  />
+
+  <section class="section">
+    <div class="container prose">
+      <h2>What a clothing manufacturer NDA covers</h2>
+      <p>
+        A non-disclosure agreement, or NDA, is a short contract. The factory agrees to keep your designs and business details private and to use them only
+        for your order.
+      </p>
+      <div class="table-wrap" role="region" aria-label="What an NDA covers" tabindex="0">
+        <table class="table--stack">
+          <caption>Parts of a typical NDA</caption>
+          <thead>
+            <tr><th scope="col">Part</th><th scope="col">What it says</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Part">Parties</td><td data-label="What it says">Your company and the factory, with full legal names</td></tr>
+            <tr><td data-label="Part">Confidential information</td><td data-label="What it says">Tech packs, sketches, patterns, artwork, prices and plans</td></tr>
+            <tr><td data-label="Part">Use</td><td data-label="What it says">The factory may use them only to quote and make your order</td></tr>
+            <tr><td data-label="Part">Sharing</td><td data-label="What it says">No sharing with other buyers or third parties</td></tr>
+            <tr><td data-label="Part">Duration</td><td data-label="What it says">How long the duty lasts, often a few years</td></tr>
+            <tr><td data-label="Part">Return of files</td><td data-label="What it says">What happens to files if you stop working together</td></tr>
+            <tr><td data-label="Part">Law</td><td data-label="What it says">Which country's law applies to the agreement</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>How to protect clothing designs before you share them</h2>
+      <ol>
+        <li><strong>Start without the full file.</strong> A photo or rough sketch is enough for a first quote.</li>
+        <li><strong>Check the factory.</strong> Confirm its official channels and address before you send anything.</li>
+        <li><strong>Sign the NDA first.</strong> Send it with your quote request, and share tech packs once it is signed.</li>
+        <li><strong>Register what you can.</strong> Trademarks and, where they exist, design registrations give wider protection.</li>
+        <li><strong>Keep records.</strong> Date your files and keep copies of what you sent and when.</li>
+      </ol>
+
+      <h2>Design confidentiality inside our factory</h2>
+      <p>Design confidentiality is part of how we work on every order, whether or not you send an NDA.</p>
+      <ul>
+        <li>Your files are used only for your quote and order.</li>
+        <li>They are seen by the people working on your order, not by other buyers.</li>
+        <li>Patterns and approved samples are kept for your reorders only.</li>
+        <li>Everything is made in our own factory, so your designs are not passed to subcontractors.</li>
+      </ul>
+      <p>
+        You can check our official contacts on the <a href="/verify-us/">verify SDF Clothing</a> page, and see how we work in our
+        <a href="/work-process/">clothing production process</a>. When you are ready, ask for a <a href="/get-a-quote/">clothing manufacturing quote</a> or
+        <a href={company.contactPath}>contact SDF Clothing</a>. A merchandiser replies within {terms.replyHours} working hours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <FaqList items={faqs} heading="NDA questions" />
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

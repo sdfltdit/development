@@ -35,7 +35,7 @@ const schema = standardPage({
   <section class="section" aria-labelledby="who-heading">
     <div class="container split">
       <div class="section__head">
-        <h2 id="who-heading">Who we are</h2>
+        <h2 id="who-heading">About SDF Clothing: who we are</h2>
         <p class="section__lead">{company.legalName} is a privately owned manufacturer with its office in {company.address.street}, Dhaka.</p>
       </div>
       <div class="prose">
@@ -91,7 +91,10 @@ const schema = standardPage({
         {company.showRegistration && <li><strong>RJSC registration:</strong> {company.registration.rjsc}</li>}
         <li><strong>Official website:</strong> {company.officialDomain}</li>
       </ul>
-      <p>Before your first payment, please check our official details on the <a href="/verify-us/">verify page</a>.</p>
+      <p>
+        Before your first payment, please check our official details on the <a href="/verify-us/">verify page</a>. Our
+        <a href="/faq/">clothing manufacturer FAQ</a> covers samples and payment, and our <a href="/nda/">clothing manufacturer NDA</a> page explains how we keep designs private.
+      </p>
     </div>
   </section>
 

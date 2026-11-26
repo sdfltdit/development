@@ -1080,3 +1080,9 @@ caption {
 .tool__notes:empty {
   display: none;
 }
+
+.policy-nav {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-line);
+}

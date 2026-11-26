@@ -53,7 +53,7 @@ faq:
     a: Yes. Beanies are knitted on our machines in acrylic, wool or blends, with cuffed, fisherman or slouch shapes, pom poms if you want them, and knit-in or woven logos.
   - q: Do you make bucket hats?
     a: Yes. Bucket hats come in cotton twill, nylon, corduroy or fleece, with stitched brims, eyelets and embroidered or printed logos. Reversible styles are also possible.
-  - q: What is 3D puff embroidery?
+  - q: How does 3D puff embroidery work on caps?
     a: A foam layer is placed under the stitches so the logo stands up from the cap. It works best on bold, simple shapes on a structured front.
   - q: Can private label caps have our own inside labels?
     a: Yes. Caps can carry your printed sweatband tape, woven inside labels, brim stickers and hang tags. Our name does not appear on them.

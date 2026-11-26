@@ -42,7 +42,7 @@ faq:
     a: Buying direct from a factory usually gives better price, control and communication. A trader or agent can make sense for very mixed ranges or if you cannot manage suppliers yourself.
   - q: Are trading companies bad?
     a: No. Good traders manage many factories and can combine products. The issue is when a trader claims to be a factory, because you lose sight of who makes your goods.
-  - q: Can I visit the factory before ordering?
+  - q: Should I visit a factory before I order?
     a: A real factory will welcome a visit, or share recent photos and videos of its production floor. Ask early in your talks.
 related:
   - /how-to-find-clothing-manufacturer/

@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { pageMeta } from '../data/pages';
+import { company, sampleFeePolicy, terms } from '../data/company';
+import { faqPage, standardPage, type Crumb } from '../lib/schema';
+
+const meta = pageMeta('/faq/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq/' },
+];
+
+const groups = [
+  {
+    id: 'ordering',
+    heading: 'Ordering',
+    items: [
+      { q: 'Who is SDF Clothing?', a: `A garment factory in ${company.address.locality}, Dhaka, founded in ${company.foundingYear}. We cut, sew, print, embroider and pack clothing for brands worldwide, all in our own factory.` },
+      { q: 'What is the smallest order I can place with you?', a: `${terms.moq} ${terms.moqUnit}. Colours and sizes share that total, and the colour split depends on the fabric.` },
+      { q: 'What do you need from me to start?', a: 'A photo or sketch, the fabric you want, quantity per style and a target price. A full tech pack helps but is not required.' },
+      { q: 'How fast do you reply to a quote request?', a: `You get a written quote within ${terms.quoteHours} hours, with the price per piece, colour and size split and lead time.` },
+    ],
+  },
+  {
+    id: 'samples',
+    heading: 'Samples',
+    items: [
+      { q: 'Is there a separate charge for samples?', a: `${sampleFeePolicy}.` },
+      { q: 'How quickly will a sample reach me?', a: `Within ${terms.sampleDays} days, door to door, by ${terms.sampleCourier}.` },
+      { q: 'What if the sample needs changes?', a: `Send written comments with photos and we correct it. Up to ${terms.sampleCorrections} rounds of corrections are free.` },
+    ],
+  },
+  {
+    id: 'payment',
+    heading: 'Payment',
+    items: [
+      { q: 'What is your payment schedule?', a: `Direct payments come in three parts. ${terms.payment.map((p) => `${p.share}% ${p.when}.`).join(' ')}` },
+      { q: 'Which payment methods do you accept?', a: 'Letter of credit, bank transfer, and services such as Wise, WorldRemit and Xoom. Money only ever goes to the company account on our proforma invoice.' },
+      { q: 'How does payment work with a letter of credit?', a: 'The whole order, sampling included, is covered by the LC, so no separate deposit is needed. Our process page lists the LC terms we work to.' },
+    ],
+  },
+  {
+    id: 'production',
+    heading: 'Production and quality',
+    items: [
+      { q: 'How long does bulk production take?', a: `${terms.bulkDays} days after you approve the pre-production sample, depending on the product and season.` },
+      { q: 'Do you subcontract any work?', a: 'No. Cutting, sewing, printing, embroidery and finishing all happen in our own factory.' },
+      { q: 'How do you check quality before shipping?', a: `With checks during production and a final AQL ${terms.aql} inspection on packed goods. You may also send your own inspector.` },
+    ],
+  },
+  {
+    id: 'shipping',
+    heading: 'Shipping and trust',
+    items: [
+      { q: 'Which countries do you ship to?', a: `Worldwide. We ship ${terms.incoterm} ${terms.port}, and your freight forwarder takes the goods from there.` },
+      { q: 'Will you keep my designs confidential?', a: 'Yes. Your files are used only for your orders, and we sign an NDA before you share them if you ask.' },
+      { q: 'How can I be sure I am talking to the real factory?', a: `Use only ${company.officialDomain} and the channels listed on our verify page, and visit the factory if you can.` },
+    ],
+  },
+];
+
+const all = groups.flatMap((g) => g.items);
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  extra: [faqPage(meta.path, all)],
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
+  <PageHeader
+    eyebrow="FAQ"
+    title="Clothing manufacturer FAQ"
+    lead={`This clothing manufacturer FAQ answers the questions buyers ask us most, from minimums and samples to payment, quality and shipping. Every answer uses the same figures as your quote, and each section links to the page with the full detail.`}
+    updated={meta.updated}
+  />
+
+  <nav class="hub-nav container" aria-label="Jump to a topic">
+    <ul class="hub-nav__list">
+      {groups.map((g) => <li><a class="hub-nav__link" href={`#${g.id}`}>{g.heading}</a></li>)}
+    </ul>
+  </nav>
+
+  {
+    groups.map((g, i) => (
+      <section class:list={['section', { 'section--alt': i % 2 === 1 }]} id={g.id}>
+        <div class="container">
+          <FaqList items={g.items} heading={g.heading} id={g.id} />
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section section--alt">
+    <div class="container prose">
+      <h2>Not in this clothing manufacturer FAQ?</h2>
+      <p>
+        For more detail, see our <a href="/work-process/">clothing production process</a>, our <a href="/pricing/">clothing manufacturing prices</a> and our
+        <a href="/sample-service/">clothing sample maker</a> page. To check who you are dealing with, read how to <a href="/verify-us/">verify SDF Clothing</a>.
+      </p>
+      <p>
+        Still have a question? <a href={company.contactPath}>Contact SDF Clothing</a> and a merchandiser replies within {terms.replyHours} working hours, or
+        ask for a <a href="/get-a-quote/">clothing manufacturing quote</a> straight away.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
