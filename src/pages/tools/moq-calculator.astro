@@ -1,0 +1,211 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { terms } from '../../data/company';
+
+const faqs = [
+  {
+    q: 'What is a size ratio?',
+    a: 'A size ratio says how many pieces of each size to make for every set. A ratio of 1, 2, 3, 3, 2, 1 for XS to XXL means most stock sits in M and L.',
+  },
+  {
+    q: 'How do I pick a size curve for a first order?',
+    a: 'Start with a bell shape centred on your best-selling sizes, or on the sizes your customers ask for most. After the first sell-through, adjust it to your own sales.',
+  },
+  {
+    q: 'Why does the split not divide exactly?',
+    a: 'Pieces come in whole numbers. The calculator rounds each cell and moves the leftover pieces to the cells that were closest to rounding up, so the total stays exact.',
+  },
+  {
+    q: 'Does every colour need its own minimum?',
+    a: 'Sometimes. Fabric mills often dye in set lot sizes, so the minimum per colour depends on the fabric. We confirm the colour split for your fabric on the written quote.',
+  },
+  {
+    q: 'Can I give colours different quantities?',
+    a: 'Yes. Run the MOQ calculator once per colour with that colour’s quantity, or split the order evenly here and adjust the result.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/moq-calculator/"
+  heading="MOQ calculator: split an order across colours and sizes"
+  lead={`This free MOQ calculator splits an order quantity across colours and sizes using your own size ratio. Enter the total pieces for one style, list your colours and sizes, and it shows how many to make of each. Our minimum is ${terms.moq} ${terms.moqUnit}, and the split by colour depends on the fabric.`}
+  toolHeading="Split your order"
+  faqs={faqs}
+  related={[
+    { title: 'What does MOQ mean', href: '/insights/moq-meaning-clothing/', summary: 'Why factories set minimums and how they split.' },
+    { title: 'Low MOQ clothing manufacturer', href: '/low-moq-clothing-manufacturers/', summary: 'How our minimum works across colours and sizes.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="moq" data-moq={terms.moq} novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="moq-total">Total pieces for this style</label>
+        <input class="field__input" id="moq-total" type="text" inputmode="numeric" autocomplete="off" aria-describedby="moq-total-error" value={String(terms.moq)} />
+        <p class="field__error" id="moq-total-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="moq-colours">Colours, separated by commas</label>
+        <input class="field__input" id="moq-colours" type="text" autocomplete="off" aria-describedby="moq-colours-error" value="Black, Navy, Grey" />
+        <p class="field__error" id="moq-colours-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="moq-sizes">Sizes, separated by commas</label>
+        <input class="field__input" id="moq-sizes" type="text" autocomplete="off" aria-describedby="moq-sizes-error" value="XS, S, M, L, XL, XXL" />
+        <p class="field__error" id="moq-sizes-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="moq-ratio">Size ratio, in the same order</label>
+        <input class="field__input" id="moq-ratio" type="text" autocomplete="off" aria-describedby="moq-ratio-error" value="1, 2, 3, 3, 2, 1" />
+        <p class="field__error" id="moq-ratio-error" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Split order</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <div class="table-wrap" role="region" aria-label="Quantity by colour and size" tabindex="0">
+        <table>
+          <caption>Pieces by colour and size</caption>
+          <thead data-head></thead>
+          <tbody data-body></tbody>
+        </table>
+      </div>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>How the MOQ calculator splits an order</h2>
+  <ol>
+    <li><strong>By colour.</strong> The total is shared evenly across your colours.</li>
+    <li><strong>By size.</strong> Each colour is split by your size ratio.</li>
+    <li><strong>Rounding.</strong> Cells are rounded to whole pieces, and any leftover goes where it was closest, so totals stay exact.</li>
+  </ol>
+
+  <h2>Choosing a size ratio</h2>
+  <div class="table-wrap" role="region" aria-label="Example size ratios" tabindex="0">
+    <table class="table--stack">
+      <caption>Example size ratios to start from</caption>
+      <thead>
+        <tr><th scope="col">Range</th><th scope="col">Sizes</th><th scope="col">Example ratio</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Range">Unisex tees and hoodies</td><td data-label="Sizes">XS to XXL</td><td data-label="Example ratio">1, 2, 3, 3, 2, 1</td></tr>
+        <tr><td data-label="Range">Womenswear</td><td data-label="Sizes">UK 6 to 16</td><td data-label="Example ratio">1, 2, 3, 3, 2, 1</td></tr>
+        <tr><td data-label="Range">Extended sizes</td><td data-label="Sizes">S to 4XL</td><td data-label="Example ratio">1, 2, 2, 2, 2, 1, 1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These are starting points, not rules. Once you have sales data, build your own size curve from it.</p>
+
+  <h2>Split by colour and the fabric minimum</h2>
+  <p>
+    Sewing lines can switch colours easily, but fabric is dyed in lots. Some mills dye small lots, while others need a few hundred metres per colour. That is
+    why a split by colour depends on the fabric, and why we show it on your quote. Our guide on
+    <a href="/insights/moq-meaning-clothing/">what MOQ means</a> explains this in more depth.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, setError } from '../../scripts/tools/common';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="moq"]');
+
+  const list = (value: string): string[] =>
+    value
+      .split(',')
+      .map((v) => v.trim())
+      .filter(Boolean);
+
+  const share = (total: number, weights: number[]): number[] => {
+    const sum = weights.reduce((a, b) => a + b, 0);
+    const raw = weights.map((w) => (total * w) / sum);
+    const base = raw.map(Math.floor);
+    let left = total - base.reduce((a, b) => a + b, 0);
+    raw
+      .map((v, i) => ({ i, rest: v - Math.floor(v) }))
+      .sort((a, b) => b.rest - a.rest)
+      .forEach(({ i }) => {
+        if (left > 0) {
+          base[i] += 1;
+          left -= 1;
+        }
+      });
+    return base;
+  };
+
+  const cell = (tag: 'th' | 'td', text: string, scope?: string): HTMLElement => {
+    const el = document.createElement(tag);
+    el.textContent = text;
+    if (scope) el.setAttribute('scope', scope);
+    return el;
+  };
+
+  if (form) {
+    const total = byId<HTMLInputElement>(form, 'moq-total');
+    const colours = byId<HTMLInputElement>(form, 'moq-colours');
+    const sizes = byId<HTMLInputElement>(form, 'moq-sizes');
+    const ratio = byId<HTMLInputElement>(form, 'moq-ratio');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const head = form.querySelector<HTMLElement>('[data-head]');
+    const body = form.querySelector<HTMLElement>('[data-body]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const moq = Number(form.dataset.moq);
+
+    const run = (): void => {
+      [total, colours, sizes, ratio].forEach(clearError);
+      const qty = Number(total.value.replace(/,/g, '').trim());
+      const cols = list(colours.value);
+      const sz = list(sizes.value);
+      const weights = list(ratio.value).map(Number);
+      let ok = true;
+      if (!Number.isInteger(qty) || qty < 1) {
+        setError(total, 'Enter the total as a whole number of pieces.');
+        ok = false;
+      }
+      if (!cols.length) {
+        setError(colours, 'Enter at least one colour.');
+        ok = false;
+      }
+      if (!sz.length) {
+        setError(sizes, 'Enter at least one size.');
+        ok = false;
+      }
+      if (weights.length !== sz.length || weights.some((w) => !Number.isFinite(w) || w < 0) || weights.every((w) => w === 0)) {
+        setError(ratio, `Enter ${sz.length || 'one'} ratio numbers, one for each size.`);
+        ok = false;
+      }
+      if (!ok || !result || !head || !body || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const perColour = share(qty, cols.map(() => 1));
+      const headRow = document.createElement('tr');
+      headRow.append(cell('th', 'Colour', 'col'), ...sz.map((s) => cell('th', s, 'col')), cell('th', 'Total', 'col'));
+      head.replaceChildren(headRow);
+      const sizeTotals = sz.map(() => 0);
+      body.replaceChildren(
+        ...cols.map((c, ci) => {
+          const split = share(perColour[ci], weights);
+          split.forEach((v, i) => (sizeTotals[i] += v));
+          const tr = document.createElement('tr');
+          tr.append(cell('th', c, 'row'), ...split.map((v) => cell('td', String(v))), cell('td', String(perColour[ci])));
+          return tr;
+        }),
+        (() => {
+          const tr = document.createElement('tr');
+          tr.append(cell('th', 'Total', 'row'), ...sizeTotals.map((v) => cell('td', String(v))), cell('td', String(qty)));
+          return tr;
+        })(),
+      );
+      note.textContent =
+        qty < moq
+          ? `This is below our minimum of ${moq} pieces for one style. Raise the total or combine colours.`
+          : `Meets our minimum for one style. The split by colour is confirmed for your fabric on the quote.`;
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

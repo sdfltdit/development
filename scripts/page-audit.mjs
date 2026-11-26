@@ -168,6 +168,11 @@ const STRICT = new Set([
   '/tools/gsm-converter/',
   '/tools/lead-time-calculator/',
   '/tools/shrinkage-calculator/',
+  '/tools/moq-calculator/',
+  '/tools/color-converter/',
+  '/tools/delta-e-calculator/',
+  '/tools/wash-care-label-generator/',
+  '/tools/manufacturer-email-generator/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

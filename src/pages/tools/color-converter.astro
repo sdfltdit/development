@@ -1,0 +1,185 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'How do I convert hex to RGB?',
+    a: 'Split the six-digit code into three pairs and read each pair as a number from 0 to 255. #1F3A5F becomes red 31, green 58 and blue 95.',
+  },
+  {
+    q: 'Why does RGB to CMYK change how a colour looks?',
+    a: 'Screens mix light, while printers mix ink, and ink cannot reach every bright screen colour. The CMYK figures here are a simple conversion, so ask your printer for their own profile on final artwork.',
+  },
+  {
+    q: 'What is hex to Lab used for?',
+    a: 'Lab describes colour the way the eye sees it, with lightness and two colour axes. Colour instruments and delta E checks use Lab, so it is the bridge between a screen colour and a lab dip report.',
+  },
+  {
+    q: 'Can this colour converter give me a Pantone code?',
+    a: 'No. Pantone values are owned by Pantone, and screen colours never match a dyed swatch exactly. Pick the nearest TCX code from a physical guide and send that to the factory.',
+  },
+  {
+    q: 'Which code should go in my tech pack?',
+    a: 'Use a Pantone TCX code or a physical swatch as the standard. A hex or RGB value can sit next to it as a reference for screens and artwork.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/color-converter/"
+  heading="Colour converter for hex, RGB, CMYK and Lab"
+  lead="This free colour converter turns a hex code or RGB value into RGB, CMYK, HSL and CIELAB in one step, with a swatch to check it. Use it to match artwork files, brief a printer or read a colour report. For dyed fabric, a physical standard still beats any screen colour."
+  toolHeading="Convert a colour"
+  faqs={faqs}
+  related={[
+    { title: 'Hex code vs Pantone TCX', href: '/insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/', summary: 'Why a hex code is not enough to brief a factory on colour.' },
+    { title: 'Lab dip service', href: '/lab-dip-service/', summary: 'Colour matching to your Pantone or fabric reference.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="colour" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="cc-hex">Hex code</label>
+        <input class="field__input" id="cc-hex" name="hex" type="text" autocomplete="off" spellcheck="false" aria-describedby="cc-hex-error" value="#1F3A5F" />
+        <p class="field__error" id="cc-hex-error" aria-live="polite"></p>
+      </div>
+      <fieldset class="field">
+        <legend class="field__label">Or enter RGB (0 to 255)</legend>
+        <div class="tool__inline">
+          <label class="visually-hidden" for="cc-r">Red</label>
+          <input class="field__input" id="cc-r" type="text" inputmode="numeric" autocomplete="off" aria-describedby="cc-rgb-error" />
+          <label class="visually-hidden" for="cc-g">Green</label>
+          <input class="field__input" id="cc-g" type="text" inputmode="numeric" autocomplete="off" aria-describedby="cc-rgb-error" />
+          <label class="visually-hidden" for="cc-b">Blue</label>
+          <input class="field__input" id="cc-b" type="text" inputmode="numeric" autocomplete="off" aria-describedby="cc-rgb-error" />
+        </div>
+        <p class="field__error" id="cc-rgb-error" aria-live="polite"></p>
+      </fieldset>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Convert</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <div class="tool__swatch" data-swatch role="img" aria-label="Colour swatch"></div>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>Hex</dt><dd data-out="hex"></dd></div>
+        <div class="tool__figure"><dt>RGB</dt><dd data-out="rgb"></dd></div>
+        <div class="tool__figure"><dt>CMYK (%)</dt><dd data-out="cmyk"></dd></div>
+        <div class="tool__figure"><dt>HSL</dt><dd data-out="hsl"></dd></div>
+        <div class="tool__figure"><dt>CIELAB (D65)</dt><dd data-out="lab"></dd></div>
+      </dl>
+    </div>
+  </form>
+
+  <h2>What each colour code means</h2>
+  <div class="table-wrap" role="region" aria-label="Colour codes" tabindex="0">
+    <table class="table--stack">
+      <caption>Colour codes and where they are used</caption>
+      <thead>
+        <tr><th scope="col">Code</th><th scope="col">What it describes</th><th scope="col">Used for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Code">Hex</td><td data-label="Describes">Red, green and blue light, written in base 16</td><td data-label="Used for">Websites, digital artwork</td></tr>
+        <tr><td data-label="Code">RGB</td><td data-label="Describes">The same light as three numbers from 0 to 255</td><td data-label="Used for">Screens, design files</td></tr>
+        <tr><td data-label="Code">CMYK</td><td data-label="Describes">Cyan, magenta, yellow and black ink</td><td data-label="Used for">Printed tags, packaging, labels</td></tr>
+        <tr><td data-label="Code">HSL</td><td data-label="Describes">Hue, saturation and lightness</td><td data-label="Used for">Picking related shades</td></tr>
+        <tr><td data-label="Code">CIELAB</td><td data-label="Describes">Lightness plus green-red and blue-yellow axes</td><td data-label="Used for">Colour instruments, delta E checks</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Hex to RGB and RGB to CMYK</h2>
+  <p>
+    Hex to RGB is exact, because both describe the same screen colour. RGB to CMYK is an estimate. Printers use profiles for their own inks and paper, so
+    treat these CMYK figures as a starting point.
+  </p>
+
+  <h2>Hex to Lab for colour checks</h2>
+  <p>
+    The colour converter works out Lab using the sRGB standard and D65 daylight. That lets you compare a screen colour with a lab dip reading, or feed both
+    into our <a href="/tools/delta-e-calculator/">delta E calculator</a>.
+  </p>
+  <p>
+    Remember that fabric adds texture, shine and fibre type, so a dyed swatch can read differently from the same Lab value on screen. Our guide to
+    <a href="/insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/">hex code vs Pantone TCX</a> explains how to brief colour.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, format, setError } from '../../scripts/tools/common';
+  import { hexToRgb, rgbToCmyk, rgbToHex, rgbToHsl, rgbToLab, type Rgb } from '../../scripts/tools/colour';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="colour"]');
+
+  if (form) {
+    const hex = byId<HTMLInputElement>(form, 'cc-hex');
+    const r = byId<HTMLInputElement>(form, 'cc-r');
+    const g = byId<HTMLInputElement>(form, 'cc-g');
+    const b = byId<HTMLInputElement>(form, 'cc-b');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const swatch = form.querySelector<HTMLElement>('[data-swatch]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const rgbError = byId<HTMLElement>(form, 'cc-rgb-error');
+    let source: 'hex' | 'rgb' = 'hex';
+
+    const readRgb = (): Rgb | null => {
+      const vals = [r, g, b].map((el) => el.value.trim());
+      [r, g, b].forEach((el) => el.removeAttribute('aria-invalid'));
+      rgbError.textContent = '';
+      const nums = vals.map(Number);
+      const bad = vals.findIndex((v, i) => v === '' || !Number.isInteger(nums[i]) || nums[i] < 0 || nums[i] > 255);
+      if (bad >= 0) {
+        [r, g, b][bad].setAttribute('aria-invalid', 'true');
+        rgbError.textContent = 'Each RGB value must be a whole number from 0 to 255.';
+        return null;
+      }
+      return { r: nums[0], g: nums[1], b: nums[2] };
+    };
+
+    const render = (rgb: Rgb): void => {
+      if (!result || !swatch) return;
+      const [c, m, y, k] = rgbToCmyk(rgb);
+      const [h, s, l] = rgbToHsl(rgb);
+      const lab = rgbToLab(rgb);
+      const code = rgbToHex(rgb);
+      swatch.style.backgroundColor = code;
+      swatch.setAttribute('aria-label', `Colour swatch for ${code}`);
+      out('hex')!.textContent = code;
+      out('rgb')!.textContent = `${rgb.r}, ${rgb.g}, ${rgb.b}`;
+      out('cmyk')!.textContent = [c, m, y, k].map((v) => format(v, 0)).join(', ');
+      out('hsl')!.textContent = `${format(h, 0)}°, ${format(s, 0)}%, ${format(l, 0)}%`;
+      out('lab')!.textContent = `L ${format(lab.L, 1)}, a ${format(lab.a, 1)}, b ${format(lab.b, 1)}`;
+      result.hidden = false;
+    };
+
+    const run = (): void => {
+      if (source === 'hex') {
+        clearError(hex);
+        const rgb = hexToRgb(hex.value);
+        if (!rgb) {
+          setError(hex, 'Enter a hex code such as #1F3A5F.');
+          if (result) result.hidden = true;
+          return;
+        }
+        r.value = String(rgb.r);
+        g.value = String(rgb.g);
+        b.value = String(rgb.b);
+        render(rgb);
+      } else {
+        const rgb = readRgb();
+        if (!rgb) {
+          if (result) result.hidden = true;
+          return;
+        }
+        clearError(hex);
+        hex.value = rgbToHex(rgb);
+        render(rgb);
+      }
+    };
+
+    hex.addEventListener('input', () => (source = 'hex'));
+    [r, g, b].forEach((el) => el.addEventListener('input', () => (source = 'rgb')));
+    bindForm(form, run);
+    run();
+  }
+</script>

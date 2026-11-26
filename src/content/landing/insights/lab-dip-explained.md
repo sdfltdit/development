@@ -54,10 +54,10 @@ related:
   - /dyeing-service/
   - /fabric-sourcing/
   - /insights/aql-inspection-explained/
-  - /polyester-clothing-manufacturer/
-  - /how-to-create-a-tech-pack/
   - /insights/shade-variation-explained/
+  - /how-to-create-a-tech-pack/
   - /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
+  - /tools/delta-e-calculator/
 published: 2026-11-26
 updated: 2026-11-26
 ---

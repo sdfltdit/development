@@ -54,7 +54,7 @@ const schema = standardPage({
 });
 
 const otherTools = tools.filter((t) => t.path !== path).map((t) => ({ title: t.name, href: t.path, summary: t.summary }));
-const links = [...related, ...otherTools].slice(0, 8);
+const links = [...related, ...otherTools];
 ---
 
 <BaseLayout title={meta.title} description={meta.description} path={path} schema={schema} crumbs={crumbs}>

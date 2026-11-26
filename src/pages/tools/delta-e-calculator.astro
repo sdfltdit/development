@@ -1,0 +1,206 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'What is a good delta E for a lab dip?',
+    a: 'Many brands accept up to 1.0 by the CMC 2:1 method for solid colours, and judge by eye as well. Core brand colours often get a tighter limit.',
+  },
+  {
+    q: 'What is the difference between CIEDE2000 and CMC 2:1?',
+    a: 'Both weight the difference the way the eye sees it. CMC 2:1 is the method most used for textiles, while CIEDE2000 is the newer general formula. Agree which one you use before bulk.',
+  },
+  {
+    q: 'Which colour is the standard?',
+    a: 'The standard is your approved reference, such as a Pantone TCX swatch or an approved lab dip. The sample is the new dye result. CMC changes slightly if you swap them.',
+  },
+  {
+    q: 'Can I compare two hex codes?',
+    a: 'Yes. Switch the input to hex and the calculator converts each colour to Lab first. That only shows how far apart two screen colours are, not two dyed fabrics.',
+  },
+  {
+    q: 'Where do I get Lab values for fabric?',
+    a: 'From a spectrophotometer reading, usually under D65 light with the 10 degree observer. Your factory or lab prints them on the lab dip report.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/delta-e-calculator/"
+  heading="Delta E calculator for lab dips and colour checks"
+  lead="This free delta E calculator measures the colour difference between a standard and a sample. Enter CIELAB values from a spectrophotometer, or two hex codes, and it returns ΔE*ab (1976), CIEDE2000 and CMC 2:1, the method most used for textiles."
+  toolHeading="Compare two colours"
+  faqs={faqs}
+  related={[
+    { title: 'What is a lab dip', href: '/insights/lab-dip-explained/', summary: 'The lab dip process, delta E tolerance and how to write comments.' },
+    { title: 'Lab dip service', href: '/lab-dip-service/', summary: 'Colour matching to your Pantone or fabric reference.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="delta-e" novalidate>
+    <div class="field">
+      <label class="field__label" for="de-mode">Enter colours as</label>
+      <select class="field__input" id="de-mode" name="mode">
+        <option value="lab" selected>CIELAB values (L, a, b)</option>
+        <option value="hex">Hex codes</option>
+      </select>
+    </div>
+    <div class="tool__grid">
+      <fieldset class="field" data-lab>
+        <legend class="field__label">Standard (L, a, b)</legend>
+        <div class="tool__inline">
+          <label class="visually-hidden" for="de-s-l">Standard L</label>
+          <input class="field__input" id="de-s-l" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-s-error" value="50" />
+          <label class="visually-hidden" for="de-s-a">Standard a</label>
+          <input class="field__input" id="de-s-a" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-s-error" value="20" />
+          <label class="visually-hidden" for="de-s-b">Standard b</label>
+          <input class="field__input" id="de-s-b" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-s-error" value="-30" />
+        </div>
+        <p class="field__error" id="de-s-error" aria-live="polite"></p>
+      </fieldset>
+      <fieldset class="field" data-lab>
+        <legend class="field__label">Sample (L, a, b)</legend>
+        <div class="tool__inline">
+          <label class="visually-hidden" for="de-t-l">Sample L</label>
+          <input class="field__input" id="de-t-l" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-t-error" value="50.6" />
+          <label class="visually-hidden" for="de-t-a">Sample a</label>
+          <input class="field__input" id="de-t-a" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-t-error" value="20.8" />
+          <label class="visually-hidden" for="de-t-b">Sample b</label>
+          <input class="field__input" id="de-t-b" type="text" inputmode="decimal" autocomplete="off" aria-describedby="de-t-error" value="-29.1" />
+        </div>
+        <p class="field__error" id="de-t-error" aria-live="polite"></p>
+      </fieldset>
+      <div class="field" data-hex hidden>
+        <label class="field__label" for="de-s-hex">Standard hex code</label>
+        <input class="field__input" id="de-s-hex" type="text" autocomplete="off" spellcheck="false" aria-describedby="de-s-hex-error" value="#1F3A5F" />
+        <p class="field__error" id="de-s-hex-error" aria-live="polite"></p>
+      </div>
+      <div class="field" data-hex hidden>
+        <label class="field__label" for="de-t-hex">Sample hex code</label>
+        <input class="field__input" id="de-t-hex" type="text" autocomplete="off" spellcheck="false" aria-describedby="de-t-hex-error" value="#223D63" />
+        <p class="field__error" id="de-t-hex-error" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Calculate</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>CMC 2:1</dt><dd data-out="cmc"></dd></div>
+        <div class="tool__figure"><dt>CIEDE2000</dt><dd data-out="de00"></dd></div>
+        <div class="tool__figure"><dt>ΔE*ab (1976)</dt><dd data-out="de76"></dd></div>
+      </dl>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>How the delta E calculator works</h2>
+  <p>
+    Every colour gets three numbers in CIELAB: L for lightness, a for green to red and b for blue to yellow. Delta E is the colour difference between two of those
+    points, so 0 means the colours match exactly.
+  </p>
+  <div class="table-wrap" role="region" aria-label="Delta E methods" tabindex="0">
+    <table class="table--stack">
+      <caption>The three methods in this tool</caption>
+      <thead>
+        <tr><th scope="col">Method</th><th scope="col">How it works</th><th scope="col">Where it is used</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Method">ΔE*ab (1976)</td><td data-label="How it works">Straight distance in Lab</td><td data-label="Where it is used">Quick checks, older reports</td></tr>
+        <tr><td data-label="Method">CMC 2:1</td><td data-label="How it works">Weights lightness half as much as chroma and hue</td><td data-label="Where it is used">Textile shade approval, ISO 105-J03</td></tr>
+        <tr><td data-label="Method">CIEDE2000</td><td data-label="How it works">Corrects for how the eye sees blues and greys</td><td data-label="Where it is used">General industry, paint, print</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>CMC 2:1 tolerance in practice</h2>
+  <p>
+    CMC 2:1 is the usual method for textile shade approval. Many brands accept up to 1.0 for solid colours. That is common practice rather than a rule, so
+    agree the limit in writing.
+  </p>
+  <ul>
+    <li>Read both colours with the same instrument, light source and observer.</li>
+    <li>Keep the approved standard as the reference, not the latest sample.</li>
+    <li>Check by eye in a light box too, because two colours can match in one light and not in another.</li>
+  </ul>
+
+  <h2>CIEDE2000 or CMC for colour difference?</h2>
+  <p>
+    CIEDE2000 is newer and fixes some weak spots in older formulas. CMC 2:1 is still the textile standard in most lab dip reports. This tool shows both, so
+    you can use whichever your buyer or mill asks for. Our guide on <a href="/insights/lab-dip-explained/">what is a lab dip</a> covers the full
+    approval process.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, format, setError } from '../../scripts/tools/common';
+  import { deltaE2000, deltaE76, deltaECMC, hexToRgb, rgbToLab, type Lab } from '../../scripts/tools/colour';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="delta-e"]');
+
+  if (form) {
+    const mode = byId<HTMLSelectElement>(form, 'de-mode');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const input = (id: string): HTMLInputElement => byId<HTMLInputElement>(form, id);
+
+    const readLab = (prefix: string, name: string): Lab | null => {
+      const error = byId<HTMLElement>(form, `${prefix}-error`);
+      error.textContent = '';
+      const parts: [string, number, number][] = [['l', 0, 100], ['a', -200, 200], ['b', -200, 200]];
+      const values: number[] = [];
+      for (const [key, min, max] of parts) {
+        const el = input(`${prefix}-${key}`);
+        el.removeAttribute('aria-invalid');
+        const raw = el.value.trim();
+        const v = Number(raw);
+        if (raw === '' || !Number.isFinite(v) || v < min || v > max) {
+          el.setAttribute('aria-invalid', 'true');
+          error.textContent = `Enter the ${name} ${key.toUpperCase() === 'L' ? 'L' : key} value as a number from ${min} to ${max}.`;
+          return null;
+        }
+        values.push(v);
+      }
+      return { L: values[0], a: values[1], b: values[2] };
+    };
+
+    const readHex = (id: string, name: string): Lab | null => {
+      const el = input(id);
+      clearError(el);
+      const rgb = hexToRgb(el.value);
+      if (!rgb) {
+        setError(el, `Enter the ${name} as a hex code such as #1F3A5F.`);
+        return null;
+      }
+      return rgbToLab(rgb);
+    };
+
+    const syncMode = (): void => {
+      const hex = mode.value === 'hex';
+      form.querySelectorAll<HTMLElement>('[data-lab]').forEach((el) => (el.hidden = hex));
+      form.querySelectorAll<HTMLElement>('[data-hex]').forEach((el) => (el.hidden = !hex));
+    };
+
+    const run = (): void => {
+      syncMode();
+      const hex = mode.value === 'hex';
+      const std = hex ? readHex('de-s-hex', 'standard') : readLab('de-s', 'standard');
+      const smp = hex ? readHex('de-t-hex', 'sample') : readLab('de-t', 'sample');
+      if (!std || !smp || !result || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const cmc = deltaECMC(std, smp);
+      out('cmc')!.textContent = format(cmc, 2);
+      out('de00')!.textContent = format(deltaE2000(std, smp), 2);
+      out('de76')!.textContent = format(deltaE76(std, smp), 2);
+      const dL = smp.L - std.L;
+      const lighter = Math.abs(dL) < 0.05 ? 'the same lightness as' : dL > 0 ? 'lighter than' : 'darker than';
+      note.textContent = `${cmc <= 1 ? 'Within' : 'Outside'} a CMC 2:1 limit of 1.0. The sample is ${lighter} the standard.`;
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

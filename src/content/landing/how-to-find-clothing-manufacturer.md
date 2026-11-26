@@ -53,10 +53,10 @@ related:
   - /low-moq-clothing-manufacturers/
   - /clothing-manufacturer-bangladesh/
   - /verify-us/
-  - /pricing/
-  - /sample-service/
   - /insights/avoiding-clothing-manufacturer-scams/
+  - /sample-service/
   - /direct-factory-vs-trading-company-vs-buying-agent/
+  - /tools/manufacturer-email-generator/
 published: 2026-11-25
 updated: 2026-11-25
 ---

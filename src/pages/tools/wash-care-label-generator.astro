@@ -1,0 +1,228 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'What must a care label say?',
+    a: 'It depends on the market, but most require fibre content in percentages and care instructions. Many also need the country of origin and who made or imported the garment.',
+  },
+  {
+    q: 'How should fibre content be written?',
+    a: 'List each fibre by its full generic name with its percentage, from the largest to the smallest, adding up to 100%. Trade names such as brand fibres go only next to the generic name.',
+  },
+  {
+    q: 'Can I add care symbols to the label?',
+    a: 'Yes, many brands do. In several countries the care symbols are registered trademarks, so check the rules where you sell. The written washing instructions here work with or without symbols.',
+  },
+  {
+    q: 'How do I choose the right washing instructions?',
+    a: 'Base them on a wash test of the finished garment, not only the fabric. Prints, trims and linings can need gentler care than the main fabric.',
+  },
+  {
+    q: 'Does this tool check legal rules for my country?',
+    a: 'No. It builds clear wording from your choices. Check labelling rules for each market you sell in, or ask your importer or a labelling specialist.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/wash-care-label-generator/"
+  heading="Care label generator for clothing brands"
+  lead="This free care label generator writes the text for a garment care label. Enter the fibre content and country of origin, then choose how the garment should be washed, dried and ironed. Copy the result straight into your tech pack or send it to your label supplier."
+  toolHeading="Build your care label"
+  faqs={faqs}
+  related={[
+    { title: 'Custom garment labels', href: '/garment-labels/', summary: 'Woven, printed and care labels made for the garments we produce.' },
+    { title: 'How to create a tech pack', href: '/how-to-create-a-tech-pack/', summary: 'What goes in a tech pack, including labels and packing.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="care" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="cl-fibres">Fibre content</label>
+        <input class="field__input" id="cl-fibres" type="text" autocomplete="off" aria-describedby="cl-fibres-hint cl-fibres-error" value="60% cotton, 40% polyester" />
+        <p class="field__hint" id="cl-fibres-hint">Write each fibre with its percentage, separated by commas.</p>
+        <p class="field__error" id="cl-fibres-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-origin">Country of origin</label>
+        <input class="field__input" id="cl-origin" type="text" autocomplete="off" aria-describedby="cl-origin-error" value="Bangladesh" />
+        <p class="field__error" id="cl-origin-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-wash">Washing</label>
+        <select class="field__input" id="cl-wash">
+          <option value="Machine wash cold, 30°C" selected>Machine wash at 30°C</option>
+          <option value="Machine wash warm, 40°C">Machine wash at 40°C</option>
+          <option value="Machine wash hot, 60°C">Machine wash at 60°C</option>
+          <option value="Hand wash only">Hand wash only</option>
+          <option value="Do not wash">Do not wash</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-bleach">Bleach</label>
+        <select class="field__input" id="cl-bleach">
+          <option value="Do not bleach" selected>Do not bleach</option>
+          <option value="Non-chlorine bleach only">Non-chlorine bleach only</option>
+          <option value="">No bleach instruction</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-dry">Drying</label>
+        <select class="field__input" id="cl-dry">
+          <option value="Tumble dry low" selected>Tumble dry low</option>
+          <option value="Tumble dry normal">Tumble dry normal</option>
+          <option value="Do not tumble dry. Line dry">Line dry, no tumble dryer</option>
+          <option value="Do not tumble dry. Dry flat">Dry flat, no tumble dryer</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-iron">Ironing</label>
+        <select class="field__input" id="cl-iron">
+          <option value="Iron on low heat">Low heat</option>
+          <option value="Iron on medium heat" selected>Medium heat</option>
+          <option value="Iron on high heat">High heat</option>
+          <option value="Do not iron">Do not iron</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cl-clean">Dry cleaning</label>
+        <select class="field__input" id="cl-clean">
+          <option value="Do not dry clean" selected>Do not dry clean</option>
+          <option value="Dry clean">Can be dry cleaned</option>
+          <option value="">No dry cleaning instruction</option>
+        </select>
+      </div>
+      <fieldset class="field field--group">
+        <legend class="field__label">Extra care notes</legend>
+        <div class="field__options">
+          <label class="field__option"><input type="checkbox" id="cl-inside" checked /> Wash inside out</label>
+          <label class="field__option"><input type="checkbox" id="cl-similar" checked /> Wash with similar colours</label>
+          <label class="field__option"><input type="checkbox" id="cl-print" /> Do not iron on print</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Build label text</button>
+      <button class="button button--secondary" type="button" data-copy>Copy text</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <pre class="tool__output" data-out="label"></pre>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>Care label wording: what goes on a label</h2>
+  <div class="table-wrap" role="region" aria-label="Care label contents" tabindex="0">
+    <table class="table--stack">
+      <caption>Common care label contents</caption>
+      <thead>
+        <tr><th scope="col">Part</th><th scope="col">Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Part">Fibre content</td><td data-label="Example">60% Cotton, 40% Polyester</td></tr>
+        <tr><td data-label="Part">Country of origin</td><td data-label="Example">Made in Bangladesh</td></tr>
+        <tr><td data-label="Part">Washing instructions</td><td data-label="Example">Machine wash cold, 30°C. Do not bleach</td></tr>
+        <tr><td data-label="Part">Drying and ironing</td><td data-label="Example">Tumble dry low. Iron on medium heat</td></tr>
+        <tr><td data-label="Part">Brand or importer details</td><td data-label="Example">Brand name, and an ID number where your market asks for one</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Writing fibre content the right way</h2>
+  <ul>
+    <li>Use generic fibre names, such as cotton, polyester, elastane or viscose.</li>
+    <li>List fibres from the largest share to the smallest.</li>
+    <li>Make the percentages add up to 100%.</li>
+    <li>Take the figures from the fabric test report, not from memory.</li>
+  </ul>
+  <p>The tool sorts your fibres by share, warns you if the total is not 100% and puts the care label wording in a fixed order.</p>
+
+  <h2>Choosing washing instructions</h2>
+  <p>
+    Pick the gentlest care any part of the garment needs. A cotton hoodie with a plastisol print or a satin trim may need a cooler wash and no iron on the
+    print. Wash-test a finished sample before you sign off the label.
+  </p>
+  <p>
+    Our <a href="/garment-labels/">custom garment labels</a> service makes woven, printed and care labels for the garments we produce. Rules differ by market,
+    so check the labelling law where you sell.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, setError } from '../../scripts/tools/common';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="care"]');
+
+  const titleCase = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+
+  if (form) {
+    const fibres = byId<HTMLInputElement>(form, 'cl-fibres');
+    const origin = byId<HTMLInputElement>(form, 'cl-origin');
+    const select = (id: string): string => byId<HTMLSelectElement>(form, id).value;
+    const checked = (id: string): boolean => byId<HTMLInputElement>(form, id).checked;
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const output = form.querySelector<HTMLElement>('[data-out="label"]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const copy = form.querySelector<HTMLButtonElement>('[data-copy]');
+
+    const run = (): void => {
+      clearError(fibres);
+      clearError(origin);
+      const parts = fibres.value
+        .split(',')
+        .map((p) => p.trim())
+        .filter(Boolean)
+        .map((p) => {
+          const front = p.match(/^(\d+(?:\.\d+)?)\s*%\s*(.+)$/);
+          if (front) return { pct: Number(front[1]), name: titleCase(front[2].trim()) };
+          const back = p.match(/^(.+?)\s+(\d+(?:\.\d+)?)\s*%$/);
+          if (back) return { pct: Number(back[2]), name: titleCase(back[1].trim()) };
+          return null;
+        });
+      if (!parts.length || parts.some((p) => p === null)) {
+        setError(fibres, 'Write each fibre as a percentage and a name, such as 95% cotton, 5% elastane.');
+        if (result) result.hidden = true;
+        return;
+      }
+      if (!origin.value.trim()) {
+        setError(origin, 'Enter the country where the garment is made.');
+        if (result) result.hidden = true;
+        return;
+      }
+      const list = (parts as { pct: number; name: string }[]).sort((a, b) => b.pct - a.pct);
+      const total = list.reduce((sum, p) => sum + p.pct, 0);
+      const care = [
+        select('cl-wash'),
+        checked('cl-inside') ? 'Wash inside out' : '',
+        checked('cl-similar') ? 'Wash with similar colours' : '',
+        select('cl-bleach'),
+        select('cl-dry'),
+        select('cl-iron'),
+        checked('cl-print') ? 'Do not iron on print' : '',
+        select('cl-clean'),
+      ].filter(Boolean);
+      const lines = [list.map((p) => `${p.pct}% ${p.name}`).join(', '), `Made in ${origin.value.trim()}`, '', ...care.map((c) => `${c}.`)];
+      if (output) output.textContent = lines.join('\n');
+      if (note) {
+        note.textContent =
+          Math.abs(total - 100) < 0.01 ? 'Fibre content adds up to 100%.' : `Fibre content adds up to ${total}%, not 100%. Check the test report.`;
+      }
+      if (result) result.hidden = false;
+    };
+
+    copy?.addEventListener('click', async () => {
+      run();
+      if (!output?.textContent) return;
+      try {
+        await navigator.clipboard.writeText(output.textContent);
+        if (note) note.textContent = 'Label text copied.';
+      } catch {
+        if (note) note.textContent = 'Copy did not work in this browser. Select the text and copy it by hand.';
+      }
+    });
+
+    bindForm(form, run);
+    run();
+  }
+</script>

@@ -210,6 +210,61 @@ const registry: PageMeta[] = [
     llmsLabel: 'Fabric shrinkage calculator',
   },
   {
+    path: '/tools/moq-calculator/',
+    title: 'MOQ Calculator: Split by Colour and Size | SDF Clothing',
+    description:
+      "Free MOQ calculator for clothing orders: split one style's quantity across colours and sizes with your own size ratio, and check it against our minimum.",
+    primaryKeyword: 'MOQ calculator',
+    secondaryKeywords: ['size ratio', 'size curve', 'split by colour'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'MOQ calculator',
+  },
+  {
+    path: '/tools/color-converter/',
+    title: 'Colour Converter: Hex, RGB, CMYK and Lab | SDF Clothing',
+    description:
+      "Free colour converter for clothing brands: turn a hex code or RGB value into CMYK, HSL and CIELAB, with a swatch, and learn which code suits a tech pack.",
+    primaryKeyword: 'colour converter',
+    secondaryKeywords: ['hex to RGB', 'RGB to CMYK', 'hex to Lab'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Colour converter',
+  },
+  {
+    path: '/tools/delta-e-calculator/',
+    title: 'Delta E Calculator: CMC 2:1 and CIEDE2000 | SDF Clothing',
+    description:
+      "Free delta E calculator for lab dips: compare a standard and a sample in CIELAB or hex and get CMC 2:1, CIEDE2000 and ΔE 1976 colour differences at once.",
+    primaryKeyword: 'delta E calculator',
+    secondaryKeywords: ['CMC 2:1', 'CIEDE2000', 'colour difference'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Delta E calculator',
+  },
+  {
+    path: '/tools/wash-care-label-generator/',
+    title: 'Care Label Generator for Clothing Brands | SDF Clothing',
+    description:
+      "Free care label generator: enter fibre content and origin, pick washing, drying and ironing, and copy clear care label wording for your tech pack or labels.",
+    primaryKeyword: 'care label generator',
+    secondaryKeywords: ['care label wording', 'fibre content', 'washing instructions'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Care label generator',
+  },
+  {
+    path: '/tools/manufacturer-email-generator/',
+    title: 'Manufacturer Email Generator for Brands | SDF Clothing',
+    description:
+      "Free manufacturer email generator: write a clear first email to a clothing factory with product, quantity, price and questions, then copy it and send it.",
+    primaryKeyword: 'manufacturer email generator',
+    secondaryKeywords: ['email a clothing manufacturer', 'RFQ email template', 'first email to a factory'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Manufacturer email generator',
+  },
+  {
     path: '/privacy/',
     title: 'Privacy Policy – How We Handle Your Data | SDF Clothing',
     description:

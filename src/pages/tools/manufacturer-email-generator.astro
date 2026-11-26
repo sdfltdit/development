@@ -1,0 +1,227 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'What should a first email to a factory include?',
+    a: 'Say who you are, what you want made, how many pieces per style, your target price and date, and what files you have. Then ask the questions that decide whether the factory fits.',
+  },
+  {
+    q: 'Should I share my target price?',
+    a: 'Usually yes. A realistic target lets the factory suggest fabric or detail changes to meet it, instead of guessing and quoting something you cannot use.',
+  },
+  {
+    q: 'Why do factories ignore some enquiries?',
+    a: 'Vague messages with no quantity, product detail or timeline are hard to quote, so they often get no reply. A specific email shows you are ready to order.',
+  },
+  {
+    q: 'Should I attach my tech pack to the first email?',
+    a: 'Send a summary and a few sketches or reference photos first. Share the full tech pack once you have checked the factory and, if you want, signed a non-disclosure agreement.',
+  },
+  {
+    q: 'Is this an RFQ email template?',
+    a: 'Yes. An RFQ, or request for quotation, asks a supplier to price a defined order. The generator builds one from your details, ready to edit and send from your own email.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/manufacturer-email-generator/"
+  heading="Manufacturer email generator for clothing brands"
+  lead="This free manufacturer email generator writes a clear first email to a clothing factory. Fill in your product, quantity, target price and timeline, tick the questions you want answered, and copy a ready-to-send request for a quote. Nothing you type leaves your browser."
+  toolHeading="Write your email"
+  faqs={faqs}
+  related={[
+    { title: 'How to find a clothing manufacturer', href: '/how-to-find-clothing-manufacturer/', summary: 'Where to look, how to choose and which questions to ask.' },
+    { title: 'How to negotiate with manufacturers', href: '/insights/how-to-negotiate-with-clothing-manufacturers/', summary: 'Levers that lower the price without hurting quality.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="email" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="em-name">Your name</label>
+        <input class="field__input" id="em-name" type="text" autocomplete="name" aria-describedby="em-name-error" value="Alex" />
+        <p class="field__error" id="em-name-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-brand">Brand name</label>
+        <input class="field__input" id="em-brand" type="text" autocomplete="organization" aria-describedby="em-brand-error" value="North Line" />
+        <p class="field__error" id="em-brand-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-product">Product</label>
+        <input class="field__input" id="em-product" type="text" autocomplete="off" aria-describedby="em-product-error" value="heavyweight cotton hoodies" />
+        <p class="field__error" id="em-product-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-details">Fabric and key details</label>
+        <input class="field__input" id="em-details" type="text" autocomplete="off" value="380 GSM brushed fleece, embroidered chest logo, custom neck label" />
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-styles">Number of styles</label>
+        <input class="field__input" id="em-styles" type="text" inputmode="numeric" autocomplete="off" aria-describedby="em-styles-error" value="2" />
+        <p class="field__error" id="em-styles-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-qty">Pieces per style</label>
+        <input class="field__input" id="em-qty" type="text" inputmode="numeric" autocomplete="off" aria-describedby="em-qty-error" value="500" />
+        <p class="field__error" id="em-qty-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-price">Target price per piece <span class="field__req">(optional)</span></label>
+        <input class="field__input" id="em-price" type="text" autocomplete="off" value="USD 12 FOB" />
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-date">Goods needed by <span class="field__req">(optional)</span></label>
+        <input class="field__input" id="em-date" type="text" autocomplete="off" value="end of March" />
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-files">What you can share</label>
+        <select class="field__input" id="em-files">
+          <option value="a full tech pack">A full tech pack</option>
+          <option value="sketches and reference photos" selected>Sketches and reference photos</option>
+          <option value="a sample garment to copy and improve">A sample garment</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="em-market">Where you sell</label>
+        <input class="field__input" id="em-market" type="text" autocomplete="off" value="the UK and Europe" />
+      </div>
+      <fieldset class="field field--group">
+        <legend class="field__label">Questions to ask</legend>
+        <div class="field__options">
+          <label class="field__option"><input type="checkbox" data-q="Your minimum order per style, and how it splits across colours and sizes" checked /> Minimum order and split</label>
+          <label class="field__option"><input type="checkbox" data-q="Your price per piece at my quantity, and at a larger reorder quantity" checked /> Price at two quantities</label>
+          <label class="field__option"><input type="checkbox" data-q="Sample cost and how long a sample takes" checked /> Sample cost and time</label>
+          <label class="field__option"><input type="checkbox" data-q="Bulk production time after sample approval" checked /> Bulk lead time</label>
+          <label class="field__option"><input type="checkbox" data-q="Your payment terms and trade term, such as FOB" checked /> Payment and trade terms</label>
+          <label class="field__option"><input type="checkbox" data-q="How you check quality, and whether I can send my own inspector" /> Quality checks</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Write email</button>
+      <button class="button button--secondary" type="button" data-copy>Copy email</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <pre class="tool__output" data-out="email"></pre>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>What makes a manufacturer email get a reply</h2>
+  <p>
+    Factories answer emails they can quote, so your first email to a factory decides whether you get numbers back. That means a clear product, a real quantity per style, a target price and a date. The manufacturer email
+    generator builds all of that into a short message, so the factory can reply with numbers instead of more questions.
+  </p>
+
+  <h2>How to email a clothing manufacturer</h2>
+  <p>When you email a clothing manufacturer for the first time, follow this order.</p>
+  <ol>
+    <li><strong>Introduce your brand</strong> in one or two lines.</li>
+    <li><strong>Describe the product,</strong> including fabric, weight and decoration.</li>
+    <li><strong>Give quantities</strong> per style, not just a total.</li>
+    <li><strong>Share a target price and date,</strong> even as a range.</li>
+    <li><strong>Ask a short list of questions</strong> that decide fit.</li>
+    <li><strong>Say what you can send next,</strong> such as a tech pack or sample.</li>
+  </ol>
+
+  <h2>An RFQ email template that stays short</h2>
+  <p>
+    A request for quotation should fit on one screen. Long life stories and vague praise slow replies down. Keep detail for the tech pack, and send it once
+    the factory has answered your first questions.
+  </p>
+  <p>
+    Our guide on <a href="/how-to-find-clothing-manufacturer/">how to find a clothing manufacturer</a> lists more questions to ask. You can also send the same
+    details straight to us through our <a href="/get-a-quote/">quote form</a>.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, setError } from '../../scripts/tools/common';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="email"]');
+
+  if (form) {
+    const text = (id: string): string => byId<HTMLInputElement>(form, id).value.trim();
+    const required = (id: string, message: string): string | null => {
+      const el = byId<HTMLInputElement>(form, id);
+      clearError(el);
+      if (!el.value.trim()) {
+        setError(el, message);
+        return null;
+      }
+      return el.value.trim();
+    };
+    const wholeNumber = (id: string, label: string): number | null => {
+      const el = byId<HTMLInputElement>(form, id);
+      clearError(el);
+      const n = Number(el.value.replace(/,/g, '').trim());
+      if (!Number.isInteger(n) || n < 1) {
+        setError(el, `Enter the ${label} as a whole number.`);
+        return null;
+      }
+      return n;
+    };
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const output = form.querySelector<HTMLElement>('[data-out="email"]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const copy = form.querySelector<HTMLButtonElement>('[data-copy]');
+
+    const run = (): void => {
+      const name = required('em-name', 'Enter your name.');
+      const brand = required('em-brand', 'Enter your brand name.');
+      const product = required('em-product', 'Enter the product you want made.');
+      const styles = wholeNumber('em-styles', 'number of styles');
+      const qty = wholeNumber('em-qty', 'pieces per style');
+      if (!name || !brand || !product || !styles || !qty || !output || !result) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const details = text('em-details');
+      const price = text('em-price');
+      const date = text('em-date');
+      const market = text('em-market');
+      const files = byId<HTMLSelectElement>(form, 'em-files').value;
+      const questions = [...form.querySelectorAll<HTMLInputElement>('input[data-q]:checked')].map((q) => q.dataset.q ?? '');
+      const lines = [
+        `Subject: Quote request: ${product}, ${styles} ${styles === 1 ? 'style' : 'styles'} for ${brand}`,
+        '',
+        'Hello,',
+        '',
+        `I run ${brand}${market ? `, a clothing brand selling in ${market}` : ''}. I am looking for a factory to make ${product}.`,
+        '',
+        'The order:',
+        `- ${styles} ${styles === 1 ? 'style' : 'styles'}, ${qty.toLocaleString('en-GB')} pieces per style`,
+        ...(details ? [`- ${details}`] : []),
+        ...(price ? [`- Target price: ${price}`] : []),
+        ...(date ? [`- Goods needed by: ${date}`] : []),
+        `- I can share ${files}`,
+        ...(questions.length ? ['', 'Could you tell me:', ...questions.map((q, i) => `${i + 1}. ${q}`)] : []),
+        '',
+        'If this fits your factory, I can send more detail straight away.',
+        '',
+        'Thank you,',
+        name,
+        brand,
+      ];
+      output.textContent = lines.join('\n');
+      if (note) note.textContent = 'Edit anything you like, then send it from your own email.';
+      result.hidden = false;
+    };
+
+    copy?.addEventListener('click', async () => {
+      run();
+      if (!output?.textContent) return;
+      try {
+        await navigator.clipboard.writeText(output.textContent);
+        if (note) note.textContent = 'Email copied.';
+      } catch {
+        if (note) note.textContent = 'Copy did not work in this browser. Select the text and copy it by hand.';
+      }
+    });
+
+    bindForm(form, run);
+    run();
+  }
+</script>

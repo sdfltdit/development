@@ -60,10 +60,10 @@ related:
   - /private-label-clothing-manufacturer/
   - /tech-pack-service/
   - /quality-inspection-service/
-  - /t-shirt-manufacturer/
-  - /printing-service/
   - /insights/international-size-chart-guide/
+  - /printing-service/
   - /private-label-clothing-guide/
+  - /tools/wash-care-label-generator/
 published: 2026-11-26
 updated: 2026-11-26
 ---

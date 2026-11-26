@@ -243,3 +243,13 @@
 /alibaba-verified-badge-vs-factory-audit-vs-no-verification /insights/avoiding-clothing-manufacturer-scams/ 301
 /insights/shipment-delay-explained/ /guides/clothing-manufacturing-lead-time/ 301
 /insights/shipment-delay-explained /guides/clothing-manufacturing-lead-time/ 301
+
+# Tool merges
+/tools/production-timeline/ /tools/lead-time-calculator/ 301
+/tools/production-timeline /tools/lead-time-calculator/ 301
+/tools/sample-timeline-estimator/ /tools/lead-time-calculator/ 301
+/tools/sample-timeline-estimator /tools/lead-time-calculator/ 301
+/tools/price-calculator/ /tools/garment-cost-calculator/ 301
+/tools/price-calculator /tools/garment-cost-calculator/ 301
+/tools/sample-decision-helper/ /digital-3d-sample-vs-physical-sample/ 301
+/tools/sample-decision-helper /digital-3d-sample-vs-physical-sample/ 301
