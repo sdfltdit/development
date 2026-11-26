@@ -76,6 +76,20 @@ export const terms = {
   ],
   paymentMethods: ['LC (letter of credit)', 'T/T bank transfer', 'Wise', 'WorldRemit', 'Xoom', 'etc.'],
   paymentMethod: 'LC (letter of credit) or T/T bank transfer, as well as Wise, WorldRemit, Xoom, etc. Payment always goes to the company bank account named on our proforma invoice',
+  lc: {
+    summary: 'an irrevocable letter of credit payable at sight, subject to UCP 600',
+    rules: [
+      'Irrevocable documentary credit, subject to UCP 600, the ICC rules for letters of credit',
+      'Payable at sight, so payment is made as soon as the documents match the credit',
+      'Issued by a bank acceptable to us, with SDF Clothing named as beneficiary',
+      'The first payment, to start sampling, is made by T/T. The LC covers the rest of the order value',
+      'Documents: commercial invoice, packing list, bill of lading or air waybill and certificate of origin, plus any inspection certificate you ask for',
+      'Latest shipment date set from the agreed production time, with at least 21 days after shipment to present documents',
+      'Partial shipments and transhipment allowed unless we agree otherwise',
+      'Bank charges in your country are yours, and bank charges in Bangladesh are ours',
+      'Your bank sends us the draft LC wording to check before it is issued',
+    ],
+  },
   replyHours: 24,
 } as const;
 
@@ -155,7 +169,7 @@ export function yearsInBusiness(today: Date = new Date()): number {
 }
 
 export function paymentSummary(): string {
-  return terms.payment.map((p) => `${p.share}% ${p.when}`).join(', ');
+  return terms.payment.map((p) => `${p.share}% ${p.when}`).join(', then ');
 }
 
 export const tokens: Record<string, string> = {
@@ -170,6 +184,7 @@ export const tokens: Record<string, string> = {
   founded: String(company.foundingYear),
   years: String(yearsInBusiness()),
   payment: paymentSummary(),
+  lc: terms.lc.summary,
   sampleFee: terms.sampleFeePolicy,
   replyHours: String(terms.replyHours),
   tshirtGsm: capabilities.tshirtGsm,

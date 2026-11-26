@@ -92,6 +92,7 @@ Markets and terms
 - Target buyers worldwide. Bangladesh is where the factory is, never a target market. Use `shipping.regions` (North America, UK and Europe, Australia and NZ, Middle East, Asia and beyond).
 - The `/clothing-manufacturer-bangladesh/` page is allowed because overseas buyers search for Bangladesh as a sourcing country. It is written for them, not for local buyers.
 - Payment methods come from `terms.paymentMethods`: LC, T/T, Wise, WorldRemit, Xoom, etc.
+- Payment is in three steps, one after the other: 30% to start sampling, then 40% when bulk production starts, then 30% on completion, before shipment (`terms.payment`, `{{payment}}`). Standard LC terms (owner instruction, 26 November 2026) live in `terms.lc`: irrevocable, at sight, UCP 600, the sampling payment by T/T and the LC for the rest, the usual shipping documents, at least 21 days to present, partial shipment and transhipment allowed, bank charges split by country, draft wording checked first. They show on `/work-process/#letter-of-credit`.
 - We work in any fabric (`capabilities.fabrics`), knit and woven. T-shirt weight range is `{{tshirtGsm}}` GSM.
 
 ## 3. Keyword strategy and cannibalization
@@ -385,7 +386,7 @@ Product or service page section order (the T-shirt page is hand-built, the other
 Guide page pattern (`kind: guide`)
 - Guides use the generic template in `src/pages/[...slug].astro`, with the body in Markdown. The template adds an "On this page" list when a guide has 6 or more H2s, a Sources list from the `sources` frontmatter (title, publisher, url), and the "About this page" block. Old `/insights/...` URLs live in `src/content/landing/insights/`. `keyword-check` reads subfolders.
 - Guide numbers about SDF Clothing come from tokens only. Derived totals such as `{{pulloverHoodieMoqTotal}}` (price at MOQ times MOQ) are generated in `company.ts`.
-- Thin legacy insight URLs are merged into the guide that covers them, never built as thin pages. `/insights/acceptable-delta-e-for-lab-dip/` 301s to `/insights/lab-dip-explained/`. Our payment schedule appears only through `{{payment}}`. LC detail terms wait for the owner.
+- Thin legacy insight URLs are merged into the guide that covers them, never built as thin pages. `/insights/acceptable-delta-e-for-lab-dip/` 301s to `/insights/lab-dip-explained/`. Our payment schedule appears only through `{{payment}}`, and LC terms through `{{lc}}` and `terms.lc.rules`.
 1. H1 and a short direct answer.
 2. Byline, table of contents.
 3. Steps, comparison tables and checklists.
@@ -505,7 +506,6 @@ What no script can check, so a person must: facts are true, product nouns match 
 ## 19. Open items waiting for the owner
 
 - Confirm the spelling "SDF Corprt".
-- LC terms for the payment section.
 - Real factory photos and real customer testimonials or case studies (none are used until supplied).
 - T-shirt page claims to confirm: tipping stripes, branded buttons, racer-back and slub fabric, strike-off approval, wash test, reorders skipping the proto sample.
 - Fabric claims: bamboo clothing is labelled "viscose made from bamboo" with no antibacterial or green claims (FTC). Organic or recycled claims rest on the mill's certificate, never on ours.

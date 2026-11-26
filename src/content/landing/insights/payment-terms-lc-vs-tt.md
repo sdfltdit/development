@@ -154,4 +154,4 @@ Terms change cost for both sides. A factory that waits longer to be paid carries
 
 ## Where SDF Clothing fits
 
-Our standard schedule is {{payment}}. We accept letter of credit, T/T bank transfer and services such as Wise, with the method agreed on your quote. Payment only ever goes to the company account on our proforma invoice. You can check us before paying, starting with our [verify page](/verify-us/).
+We are paid in three steps, one after the other: {{payment}}. You can also pay by {{lc}}. Our [standard LC terms](/work-process/#letter-of-credit) list the documents, dates and charges, and the method is agreed on your quote. Payment only ever goes to the company account on our proforma invoice. You can check us before paying, starting with our [verify page](/verify-us/).
