@@ -64,7 +64,7 @@ related:
   - /hoodie-manufacturer/
   - /joggers-manufacturer/
   - /leggings-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /adaptive-clothing-manufacturer/
   - /baby-bib-manufacturer/
   - /school-uniform-manufacturer/
   - /bamboo-clothing-manufacturer/

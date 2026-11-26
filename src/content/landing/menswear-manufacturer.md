@@ -60,7 +60,7 @@ related:
   - /shirt-manufacturer/
   - /pants-trousers-manufacturer/
   - /suit-manufacturer/
-  - /sweater-manufacturer/
+  - /adaptive-clothing-manufacturer/
   - /jacket-manufacturer/
   - /kurta-manufacturer/
   - /thobe-manufacturer/

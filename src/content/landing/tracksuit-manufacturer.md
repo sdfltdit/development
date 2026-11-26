@@ -65,7 +65,7 @@ related:
   - /hoodie-manufacturer/
   - /activewear-manufacturer/
   - /streetwear-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /velour-clothing-manufacturer/
   - /school-uniform-manufacturer/
   - /football-kit-manufacturer/
 published: 2026-11-26

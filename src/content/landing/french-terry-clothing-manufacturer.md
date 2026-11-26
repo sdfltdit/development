@@ -62,6 +62,8 @@ related:
   - /tracksuit-manufacturer/
   - /loungewear-manufacturer/
   - /cotton-clothing-manufacturer/
+  - /velour-clothing-manufacturer/
+  - /tie-dye-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

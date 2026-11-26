@@ -220,3 +220,12 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - French terry: the page compares terry with brushed fleece and jersey, the question buyers ask most. "Sweatshirt manufacturer" stays with the hoodie page.
 - Corduroy: wale sizes (needlecord about 14 to 16 per inch, standard about 10 to 12, wide about 6 to 8) and one-way pile cutting are the key buyer facts.
 - Wool: "wool coats" stays with the coat page and "merino base layers" with the base layer page. The wool page links to both.
+
+## Batch 21 (lyocell, velour, tie-dye, sublimated, adaptive clothing)
+
+- Lyocell: built at `/lyocell-clothing-manufacturer/`. The old `/tencel-clothing-manufacturer/` URL 301s there. TENCEL is a trademark, so the page explains that a branded fibre name needs the mill's licensed fibre and the brand owner's approval, and makes no claim of its own. Fibrillation (white rub marks) is the main production risk.
+- Velour: knit, not velvet. Pile direction and embroidery topping are the key buyer facts. Matching sets sell best.
+- Tie-dye: hand work varies, so the page explains an approved range of samples, lab dips, small dye batches and colour-bleed testing.
+- Sublimated: polyester only, white or light base, print on flat panels to avoid white fold lines. Names and numbers cost nothing extra.
+- Adaptive: features follow the brand's own brief and wear testers. No medical claims. Magnetic plackets, side openings and seated cuts are the core searches.
+- Garment-dyed and vintage-wash product pages were not built, to avoid cannibalising the planned dyeing and washing service pages on old URLs.

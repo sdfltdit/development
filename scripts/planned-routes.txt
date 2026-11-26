@@ -106,7 +106,6 @@
 /sustainability/
 /sustainable-clothing-manufacturer/
 /tech-pack-service/
-/tencel-clothing-manufacturer/
 /tools/
 /tools/aql-calculator/
 /tools/color-converter/

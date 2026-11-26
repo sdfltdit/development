@@ -65,7 +65,7 @@ related:
   - /leggings-manufacturer/
   - /t-shirt-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /sample-service/
+  - /adaptive-clothing-manufacturer/
   - /maternity-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26

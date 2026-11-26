@@ -66,7 +66,7 @@ related:
   - /varsity-jacket-manufacturer/
   - /basketball-uniform-manufacturer/
   - /baseball-uniform-manufacturer/
-  - /rugby-shirt-manufacturer/
+  - /tie-dye-clothing-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

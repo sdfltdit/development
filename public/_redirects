@@ -247,3 +247,5 @@
 /knitwear-factory /sweater-manufacturer/ 301
 /knitting-service/ /sweater-manufacturer/ 301
 /knitting-service /sweater-manufacturer/ 301
+/tencel-clothing-manufacturer/ /lyocell-clothing-manufacturer/ 301
+/tencel-clothing-manufacturer /lyocell-clothing-manufacturer/ 301

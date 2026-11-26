@@ -65,7 +65,7 @@ related:
   - /skirts-manufacturer/
   - /shirt-manufacturer/
   - /loungewear-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /lyocell-clothing-manufacturer/
   - /jumpsuit-romper-manufacturer/
   - /clothing-manufacturers-for-women/
   - /plus-size-clothing-manufacturer/

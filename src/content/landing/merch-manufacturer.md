@@ -62,7 +62,7 @@ related:
   - /hoodie-manufacturer/
   - /streetwear-manufacturer/
   - /joggers-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /tie-dye-clothing-manufacturer/
   - /apron-manufacturer/
   - /hat-manufacturer/
   - /pet-clothing-manufacturer/
