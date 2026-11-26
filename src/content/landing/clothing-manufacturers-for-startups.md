@@ -24,7 +24,7 @@ specs:
     value: "{{moq}} {{moqUnit}}"
   - label: Proto sample
     value: "{{sampleDays}} days"
-  - label: Sample fee
+  - label: Samples
     value: "{{sampleFee}}"
   - label: Bulk production
     value: "{{bulkDays}} days after pre-production sample approval"
@@ -38,13 +38,13 @@ faq:
   - q: Do I need a tech pack to start?
     a: No. A clear reference photo, the fabric you want, quantities and a target price are enough for a first quote. The technical details are built with you during sampling.
   - q: How much money do I need for a first production run?
-    a: It depends on the product and quantity. At our minimum, one basic tee style costs {{basicTshirtMoqTotal}} {{incoterm}}, before the sample fee, freight, duty and launch costs.
+    a: It depends on the product and quantity. At our minimum, one basic tee style costs {{basicTshirtMoqTotal}} {{incoterm}}, before freight, duty and launch costs.
   - q: Are you a clothing manufacturer for new brands with no track record?
     a: Yes. A first factory order is welcome here, with the same brief, checks and payment terms as any other buyer.
   - q: How do I know you are a real factory?
     a: Check our official contacts on our verify page, visit the factory if you can, and only pay the company bank account named on our proforma invoice.
   - q: What happens if the sample is not right?
-    a: Send comments on fit, fabric or finish, with photos, and we make a revised sample. Any revision cost is quoted before we start.
+    a: Send comments on fit, fabric or finish, with photos, and we make a corrected sample. Up to {{sampleCorrections}} rounds of corrections are free.
   - q: Can I visit the factory before ordering?
     a: Yes, by appointment. Book a date through our factory visit form and a merchandiser walks you through the production floor.
 related:

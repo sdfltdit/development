@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { capabilities, company, fill, paymentSummary, priceIndex, terms, yearsInBusiness } from '../data/company';
+import { capabilities, company, fill, paymentSummary, priceIndex, sampleFeePolicy, terms, yearsInBusiness } from '../data/company';
 import { pages } from '../data/pages';
 import { absolute } from '../lib/schema';
 
@@ -19,8 +19,8 @@ export const GET: APIRoute = async () => {
     `- Written quote: within ${terms.quoteHours} hours`,
     `- Final inspection: AQL ${terms.aql}`,
     `- Shipping terms: ${terms.incoterm} ${terms.port}`,
-    `- Payment: ${paymentSummary()}. Methods: ${terms.paymentMethod}`,
-    `- Sample fee: ${terms.sampleFeePolicy}`,
+    `- Payment: ${paymentSummary()}. ${terms.paymentScope}. Methods: ${terms.paymentMethod}`,
+    `- Samples: ${sampleFeePolicy}.`,
     `- In-house: ${capabilities.inHouse.join(', ')}`,
     `- Fabrics: ${capabilities.fabrics}`,
     `- Official website: ${company.officialDomain}; official email domain: @${company.officialDomain}`,

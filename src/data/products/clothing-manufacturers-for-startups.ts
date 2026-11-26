@@ -27,7 +27,7 @@ export const clothingManufacturersForStartups: ProductContent = {
       lead: 'The sketch at the top shows the route. Each stop is a point where you see something and decide.',
       items: [
         { label: 'Photo or sketch', text: 'send what you have, with fabric, quantity and a target price' },
-        { label: 'Written quote', text: 'price, sample fee, colour and size split and lead time, within {{quoteHours}} hours' },
+        { label: 'Written quote', text: 'price, colour and size split, lead time and payment schedule, within {{quoteHours}} hours' },
         { label: 'Proto sample', text: 'your first sample in {{sampleDays}} days, to check fit and construction' },
         { label: 'Pre-production', text: 'the sample in bulk fabric with your real labels, signed off before cutting' },
         { label: 'Bulk run', text: '{{bulkDays}} days of production, finished with a final AQL {{aql}} inspection' },
@@ -43,7 +43,7 @@ export const clothingManufacturersForStartups: ProductContent = {
       caption: 'Costs to plan for a first clothing order',
       columns: ['Cost', 'Where the number comes from', 'When you pay it'],
       rows: [
-        ['Sample fee', 'Your written quote. {{sampleFee}}', 'With the first payment'],
+        ['Samples', '{{sampleFee}}', 'Covered by the deposit'],
         ['Factory price', 'Your written quote, per piece {{incoterm}} {{port}}', 'In three stages: {{payment}}'],
         ['Freight', 'Your forwarder, by sea or air', 'When the goods ship'],
         ['Duty and import tax', 'Your customs broker, for your product code', 'When the goods arrive'],

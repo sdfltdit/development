@@ -68,12 +68,14 @@ export const terms = {
   incoterm: 'FOB',
   port: 'Chittagong',
   currencies: ['USD', 'GBP', 'EUR', 'CAD', 'AUD'],
-  sampleFeePolicy: 'The sample fee is stated on your quote and deducted from your first bulk order.',
+  sampleCorrections: 10,
+  sampleCourier: 'DHL, FedEx, Aramex or another express courier',
   payment: [
-    { share: 30, when: 'to start sampling' },
-    { share: 40, when: 'when bulk production starts' },
-    { share: 30, when: 'on completion, before shipment' },
+    { share: 30, when: 'as a deposit to start sampling' },
+    { share: 40, when: 'after you approve the sample, to start bulk production' },
+    { share: 30, when: 'when bulk is ready, before delivery' },
   ],
+  paymentScope: 'This schedule applies to T/T, Wise, Xoom and other direct payments. Orders paid by letter of credit follow the LC terms instead, bank to bank',
   paymentMethods: ['LC (letter of credit)', 'T/T bank transfer', 'Wise', 'WorldRemit', 'Xoom', 'etc.'],
   paymentMethod: 'LC (letter of credit) or T/T bank transfer, as well as Wise, WorldRemit, Xoom, etc. Payment always goes to the company bank account named on our proforma invoice',
   lc: {
@@ -82,7 +84,7 @@ export const terms = {
       'Irrevocable documentary credit, subject to UCP 600, the ICC rules for letters of credit',
       'Payable at sight, so payment is made as soon as the documents match the credit',
       'Issued by a bank acceptable to us, with SDF Clothing named as beneficiary',
-      'The first payment, to start sampling, is made by T/T. The LC covers the rest of the order value',
+      'The whole order, sampling included, is covered by the LC, so no T/T deposit is needed',
       'Documents: commercial invoice, packing list, bill of lading or air waybill and certificate of origin, plus any inspection certificate you ask for',
       'Latest shipment date set from the agreed production time, with at least 21 days after shipment to present documents',
       'Partial shipments and transhipment allowed unless we agree otherwise',
@@ -92,6 +94,8 @@ export const terms = {
   },
   replyHours: 24,
 } as const;
+
+export const sampleFeePolicy = `There is no separate sample fee. Your ${terms.payment[0].share}% deposit covers the sample, up to ${terms.sampleCorrections} free rounds of corrections and express courier to your door anywhere in the world`;
 
 export const capabilities = {
   inHouse: ['Pattern making and grading', 'Cutting', 'Sewing', 'Screen printing', 'DTF printing', 'Sublimation printing', 'Embroidery', 'Finishing and packing', 'Quality inspection'],
@@ -152,7 +156,8 @@ export const unconfirmed: readonly string[] = [
   'terms.sampleDays',
   'terms.bulkDays',
   'terms.payment',
-  'terms.sampleFeePolicy',
+  'terms.sampleCorrections',
+  'terms.sampleCourier',
   'terms.replyHours',
   'company.hours',
   'capabilities.inHouse',
@@ -185,7 +190,10 @@ export const tokens: Record<string, string> = {
   years: String(yearsInBusiness()),
   payment: paymentSummary(),
   lc: terms.lc.summary,
-  sampleFee: terms.sampleFeePolicy,
+  sampleFee: `${sampleFeePolicy}.`,
+  sampleCorrections: String(terms.sampleCorrections),
+  sampleCourier: terms.sampleCourier,
+  paymentScope: `${terms.paymentScope}.`,
   replyHours: String(terms.replyHours),
   tshirtGsm: capabilities.tshirtGsm,
   fleeceGsm: capabilities.fleeceGsm,

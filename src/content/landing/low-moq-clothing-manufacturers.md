@@ -45,7 +45,7 @@ faq:
   - q: Can I order fewer than {{moq}} pieces?
     a: Not as a production order. Below that, stocked blanks with print on demand, or a nearby sample room, will serve you better for now.
   - q: Do samples count toward the minimum?
-    a: No. Samples are made and charged separately, and the sample fee comes off your first bulk order.
+    a: No. Samples come before bulk and have no separate fee, because the deposit that starts sampling covers them.
 related:
   - /clothing-manufacturers-for-startups/
   - /private-label-clothing-manufacturer/

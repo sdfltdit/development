@@ -92,7 +92,7 @@ Markets and terms
 - Target buyers worldwide. Bangladesh is where the factory is, never a target market. Use `shipping.regions` (North America, UK and Europe, Australia and NZ, Middle East, Asia and beyond).
 - The `/clothing-manufacturer-bangladesh/` page is allowed because overseas buyers search for Bangladesh as a sourcing country. It is written for them, not for local buyers.
 - Payment methods come from `terms.paymentMethods`: LC, T/T, Wise, WorldRemit, Xoom, etc.
-- Payment is in three steps, one after the other: 30% to start sampling, then 40% when bulk production starts, then 30% on completion, before shipment (`terms.payment`, `{{payment}}`). Standard LC terms (owner instruction, 26 November 2026) live in `terms.lc`: irrevocable, at sight, UCP 600, the sampling payment by T/T and the LC for the rest, the usual shipping documents, at least 21 days to present, partial shipment and transhipment allowed, bank charges split by country, draft wording checked first. They show on `/work-process/#letter-of-credit`.
+- Payment is in three steps for T/T, Wise, Xoom and other direct payments: a 30% deposit to start sampling, then 40% after the sample is approved to start bulk, then 30% when bulk is ready, before delivery (`terms.payment`, `{{payment}}`, `{{paymentScope}}`). Owner instruction, 27 November 2026: there is no separate sample fee. The deposit covers the sample, up to 10 free rounds of corrections (`terms.sampleCorrections`) and express courier door to door anywhere in the world within `{{sampleDays}}` days (`terms.sampleCourier`). Use `sampleFeePolicy` or `{{sampleFee}}`, never a hand-written version. LC orders are paid entirely under the LC, sampling included, with no T/T deposit. Guides may still tell buyers that other factories' quotes should show a sample fee. Standard LC terms (owner instruction, 26 November 2026, updated 27 November) live in `terms.lc`: irrevocable, at sight, UCP 600, the whole order including sampling under the LC, the usual shipping documents, at least 21 days to present, partial shipment and transhipment allowed, bank charges split by country, draft wording checked first. They show on `/work-process/#letter-of-credit`.
 - We work in any fabric (`capabilities.fabrics`), knit and woven. T-shirt weight range is `{{tshirtGsm}}` GSM.
 
 ## 3. Keyword strategy and cannibalization
@@ -549,8 +549,7 @@ What no script can check, so a person must: facts are true, product nouns match 
 - Kids' and school uniform pages: we leave lab testing and certificates to the brand or importer. Confirm this is how SDF Clothing works.
 - Decide whether AI training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) may crawl the live site.
 - Safety garments (high-visibility, flame-resistant, protective lab coats): pages say the fabric or tape rating comes from its maker and the buyer arranges certification of the finished garment. Confirm this is how SDF Clothing works.
-- Silk: does SDF Clothing work with pure mulberry silk as well as polyester satin? Pages offer both, with silk weight and grade taken from the mill's report.
-- Towels: does SDF Clothing weave terry fabric, or buy it and cut, sew and embroider? Needed before a towel or bathrobe page.
+- Silk and satin clothing and bathrobes: confirmed by the owner on 27 November 2026. Silk weight and grade still come from the mill's report.
 - Embroidered patches: pages offer embroidered and sublimation-printed patches only. Woven patches are not offered unless the owner confirms label weaving.
 - Decide whether analytics (GA4 or similar) is wanted, which needs a consent banner.
 

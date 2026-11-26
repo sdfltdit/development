@@ -73,9 +73,9 @@ export const sampleService: ProductContent = {
       items: [
         { label: 'Bulk not matching the sample', text: 'bulk is measured against the signed pre-production sample, not the proto' },
         { label: 'Endless sample rounds', text: 'comments are turned into a written spec after each round' },
-        { label: 'Surprise revision costs', text: 'every revision is quoted before we start' },
+        { label: 'Paying for every fix', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
         { label: 'Colour surprises in bulk', text: 'lab dips are approved before bulk fabric is dyed' },
-        { label: 'Lost time in transit', text: 'samples go by courier, with the cost shown on the quote' },
+        { label: 'Lost time in transit', text: 'samples go door to door by express courier, at no extra cost' },
         { label: 'Copied designs', text: 'sample files and patterns are used only for your order' },
       ],
     },
@@ -83,8 +83,8 @@ export const sampleService: ProductContent = {
   noPrice: {
     heading: 'Garment sample cost',
     paragraphs: [
-      'Garment sample cost covers pattern making, the fabric and trims used and the slower one-off sewing a sample needs. Embroidery or a new print screen adds to it.',
-      'Your quote lists the fee and the courier cost separately. When the style goes into bulk with us, the fee comes off that first order.',
+      'There is no separate garment sample cost. Your first payment, the deposit, starts sampling and covers it.',
+      'That deposit pays for the pattern, the sample itself, up to {{sampleCorrections}} rounds of corrections and courier delivery to your door. Orders paid by letter of credit are covered by the LC instead.',
     ],
   },
   processHeading: 'How our sampling works',

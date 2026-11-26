@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import QuoteForm from '../components/QuoteForm.astro';
-import { company, terms, whatsappUrl } from '../data/company';
+import { company, sampleFeePolicy, terms, whatsappUrl } from '../data/company';
 import { pageMeta } from '../data/pages';
 import { standardPage, type Crumb } from '../lib/schema';
 
@@ -26,7 +26,7 @@ const schema = standardPage({
   <PageHeader
     eyebrow="Request a quote"
     title="Get a clothing manufacturing quote"
-    lead={`Tell us what you want to make and you get a clothing manufacturing quote in writing within ${terms.quoteHours} hours: ${terms.incoterm} price per piece, sample fee, colour and size split and lead time, from the factory itself.`}
+    lead={`Tell us what you want to make and you get a clothing manufacturing quote in writing within ${terms.quoteHours} hours: ${terms.incoterm} price per piece, colour and size split and lead time, from the factory itself.`}
   />
 
   <section class="section quote-layout">
@@ -41,7 +41,7 @@ const schema = standardPage({
           <li>A merchandiser reads your request and may ask one or two questions.</li>
           <li>You receive a written quote within {terms.quoteHours} hours.</li>
           <li>If it works for you, we send fabric options and a sample timeline.</li>
-          <li>You approve and pay for the sample. {terms.sampleFeePolicy}</li>
+          <li>You pay the deposit and we start your sample. {sampleFeePolicy}.</li>
         </ol>
         <div class="notice">
           <p>

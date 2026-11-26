@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import PriceTable from '../components/PriceTable.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { company, priceIndex, terms } from '../data/company';
+import { company, priceIndex, sampleFeePolicy, terms } from '../data/company';
 import { pageMeta } from '../data/pages';
 import { absolute, faqPage, ids, standardPage, type Crumb } from '../lib/schema';
 
@@ -124,7 +124,7 @@ const schema = standardPage({
       <h2 id="landed-heading">From factory price to landed cost</h2>
       <p>The factory price is only part of what each piece costs you. To plan your margin, add:</p>
       <ul>
-        <li><strong>Sample fee</strong>: {terms.sampleFeePolicy}</li>
+        <li><strong>Samples</strong>: {sampleFeePolicy}.</li>
         <li><strong>Freight</strong> from {terms.port}, by sea or air</li>
         <li><strong>Import duty and taxes</strong> in your country, based on the product code and fibre content</li>
         <li><strong>Customs brokerage and delivery</strong> to your warehouse</li>

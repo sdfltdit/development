@@ -2,7 +2,7 @@
 kind: service
 hub: services
 navLabel: Sampling
-cardSummary: Proto and pre-production samples in {{sampleDays}} days, with the fee deducted from your first bulk order.
+cardSummary: Proto and pre-production samples delivered to your door in {{sampleDays}} days, with no separate fee and up to {{sampleCorrections}} free correction rounds.
 title: "Clothing Sample Maker – Samples in {{sampleDays}} Days | SDF Clothing"
 description: "Clothing sample maker for proto and pre-production samples in {{sampleDays}} days, with a written measurement report and the fee taken off your first bulk order."
 h1: Clothing sample maker, from proto to pre-production
@@ -22,21 +22,21 @@ specs:
     value: "{{sampleDays}} days after fabric confirmation"
   - label: Pre-production sample
     value: Made from bulk fabric with your labels before production starts
-  - label: Sample fee
+  - label: Sample cost
     value: "{{sampleFee}}"
   - label: What you receive
     value: The sample plus a measurement report against your spec
   - label: Delivery
-    value: Courier to your address. Courier cost shown on the quote
+    value: Door to door by {{sampleCourier}}, at no extra cost
 showPrices: false
 serviceType: Garment sample development
 faq:
   - q: How much does a clothing sample cost?
-    a: The figure changes with the garment, fabric and decoration, so we write it on your quote. Courier cost is listed next to it.
+    a: Nothing on top of your order. The deposit that starts sampling also covers the sample, corrections and courier delivery.
   - q: How long does a sample take?
-    a: "It takes {{sampleDays}} days for a proto sample once fabric is confirmed. Courier delivery adds a few days for most countries."
+    a: "It reaches your home or office in {{sampleDays}} days, anywhere in the world, sent by express courier."
   - q: How many sample rounds will I need?
-    a: "Usually two, a proto and a pre-production sample. Complex fits sometimes need a second proto round, quoted before we start."
+    a: "Usually two, a proto and a pre-production sample. If something needs fixing, up to {{sampleCorrections}} rounds of corrections are free."
   - q: Can you make a sample without a tech pack?
     a: Yes. Send a reference garment or clear photos with target measurements. Your comments on the first sample become the written spec for bulk.
   - q: Is your clothing sample service open to brands not yet ready for bulk?
