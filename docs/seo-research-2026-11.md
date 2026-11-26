@@ -145,3 +145,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Running: race organisers care most about delivery dates and size splits. Runners care about chafing, pockets and reflectives.
 - Compression: sports compression only. Medical compression is regulated with measured pressure, so the page says plainly we do not make or label medical garments.
 - Base layers: merino vs synthetic and weight choice dominate buyer questions. Merino shrinkage and holes are the common complaints.
+
+## Batch 12 (ski wear, chef uniform, apron, lab coat, coverall), 26 November 2026
+
+- Ski wear: buyer pages lead with waterproof ratings in mm (10,000 to 20,000 mm is the common ski range), taped seams, powder skirts and pit zips. Ratings come from the mill's hydrostatic head test, so our page says so. "Waterproof jacket manufacturer" and "seam-taped jackets" stay on the rain jacket page.
+- Chef uniforms: 65/35 poly-cotton twill dominates retail listings, with mesh backs, sleeve thermometer pockets and double-breasted fronts. Oil-repellent finishes are mill claims. "Hospitality uniforms" stays on the uniform page.
+- Aprons: buyers compare bib, cross-back and waist styles and fabrics (twill, canvas, denim). Home brands need retail labels and packing.
+- Lab coats: poly-cotton twill, knee vs hip length, embroidered names. Protective lab coats are PPE, so the page says the buyer arranges garment testing.
+- Coveralls: poly-cotton twill with reflective tape is the common spec. Hi-vis and flame-resistant certification of the finished garment is arranged by the buyer. Asked the owner to confirm (CLAUDE.md section 19).

@@ -60,14 +60,14 @@ faq:
   - q: How much do custom uniforms cost?
     a: Our table shows starting prices for polo shirts, woven shirts and T-shirts at {{moq}} and {{bulkQty}} pieces, FOB {{port}}. Trousers, jackets and tunics are quoted from your spec.
 related:
-  - /jacket-manufacturer/
+  - /lab-coat-manufacturer/
   - /school-uniform-manufacturer/
   - /scrubs-manufacturer/
   - /blazer-manufacturer/
-  - /hat-manufacturer/
+  - /chef-uniform-manufacturer/
   - /rain-jacket-manufacturer/
-  - /softshell-jacket-manufacturer/
-  - /fleece-jacket-manufacturer/
+  - /coverall-manufacturer/
+  - /apron-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

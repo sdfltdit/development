@@ -6,14 +6,13 @@ Not built at the owner's request: leather and faux leather garments (old leather
 
 Kept on parent pages (no separate page): polo shirts, tank tops, long sleeves (T-shirt page), sweatshirts and zip hoodies (hoodie page), sweatpants (joggers), cargo pants and chinos (pants), yoga pants (leggings), pyjamas (loungewear), board shorts and rash guards (swimwear), puffer vests (puffer jacket), cardigans and beanies (sweater and hat pages).
 
-## Built (54)
+## Built (59)
 
-Batches 1–11: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket, varsity jacket, fleece jacket, softshell jacket, coat, football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform, esports jersey, cheerleading uniform, dancewear, martial arts uniform, fightwear, golf apparel, tennis wear, running apparel, compression wear, base layer. The T-shirt page is hand-built.
+Batches 1–12: hoodie, joggers, pants, shorts, shirt, jacket, activewear, leggings, tracksuit, streetwear, dress, skirt, loungewear, kids and baby, uniform, underwear, women's clothing, plus size, modest fashion, merch, school uniform, scrubs, cotton, linen, bamboo, denim, swimwear, sports bra, puffer jacket, blazer, socks, sweater, hat, lingerie, rain jacket, varsity jacket, fleece jacket, softshell jacket, coat, football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform, esports jersey, cheerleading uniform, dancewear, martial arts uniform, fightwear, golf apparel, tennis wear, running apparel, compression wear, base layer, ski wear, chef uniform, apron, lab coat, coverall. The T-shirt page is hand-built.
 
 ## Planned, in rough batch order
 
-Team and sport: ski wear.
-Workwear: chef uniform, apron, lab coat, coverall, hi-vis workwear, security uniform, hotel housekeeping and spa uniforms.
+Workwear: hi-vis workwear, security uniform, hotel housekeeping and spa uniforms.
 Womenswear and occasion: jumpsuit, maternity and nursing wear, shapewear, evening dress, bridal wear, bodysuit and crop top.
 Menswear and tailoring: suit, menswear (hub-style like the women's page), overalls and dungarees.
 Regional and modest: kurta, salwar kameez, hijab, thobe and kandura.

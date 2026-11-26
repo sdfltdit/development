@@ -64,6 +64,8 @@ related:
   - /private-label-clothing-manufacturer/
   - /sample-service/
   - /cut-and-sew-service/
+  - /chef-uniform-manufacturer/
+  - /lab-coat-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

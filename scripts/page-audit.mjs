@@ -66,6 +66,11 @@ const STRICT = new Set([
   '/running-apparel-manufacturer/',
   '/compression-wear-manufacturer/',
   '/base-layer-manufacturer/',
+  '/ski-wear-manufacturer/',
+  '/chef-uniform-manufacturer/',
+  '/apron-manufacturer/',
+  '/lab-coat-manufacturer/',
+  '/coverall-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

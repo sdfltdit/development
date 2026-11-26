@@ -63,7 +63,7 @@ related:
   - /streetwear-manufacturer/
   - /joggers-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
+  - /apron-manufacturer/
   - /hat-manufacturer/
   - /esports-jersey-manufacturer/
 published: 2026-11-26

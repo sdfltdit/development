@@ -62,6 +62,7 @@ related:
   - /sweater-manufacturer/
   - /fleece-jacket-manufacturer/
   - /socks-manufacturer/
+  - /ski-wear-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

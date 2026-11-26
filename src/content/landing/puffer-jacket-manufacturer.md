@@ -59,7 +59,7 @@ faq:
     a: Puffers are folded and packed in bags, then lightly compressed in cartons to save freight. They recover their loft once unpacked.
 related:
   - /jacket-manufacturer/
-  - /streetwear-manufacturer/
+  - /ski-wear-manufacturer/
   - /hoodie-manufacturer/
   - /tracksuit-manufacturer/
   - /private-label-clothing-manufacturer/
