@@ -62,6 +62,7 @@ faq:
   - q: How are shirts packed?
     a: Folded and bagged to your packing spec. Retail packing with a collar band and back card, or a flat fold for e-commerce, is agreed on your quote.
 related:
+  - /uniform-manufacturer/
   - /t-shirt-manufacturer/
   - /pants-trousers-manufacturer/
   - /private-label-clothing-manufacturer/

@@ -24,7 +24,6 @@
 /denim-manufacturer/
 /digital-3d-sample-vs-physical-sample/
 /direct-factory-vs-trading-company-vs-buying-agent/
-/dress-manufacturer/
 /dyeing-service/
 /embroidery-service/
 /eu-epr-explained/
@@ -95,12 +94,10 @@
 /journal/annual-growth-2025/
 /journal/european-mill-partnership-2025/
 /journal/sourcing-summit-2025/
-/kids-baby-clothing-manufacturer/
 /knitting-service/
 /knitwear-factory/
 /lab-dip-service/
 /linen-clothing-manufacturer/
-/loungewear-manufacturer/
 /manufacturing-platform-alternative/
 /modest-fashion-manufacturer/
 /nda/
@@ -119,7 +116,6 @@
 /quality-inspection-service/
 /recycled-clothing-manufacturer/
 /school-uniform-manufacturer/
-/skirts-manufacturer/
 /socks-manufacturer/
 /sports-bra-manufacturer/
 /sustainability/
@@ -148,7 +144,6 @@
 /tools/wash-care-label-generator/
 /trims-sourcing/
 /underwear-manufacturer/
-/uniform-manufacturer/
 /visa-docs/
 /washing-service/
 /workwear-manufacturer/

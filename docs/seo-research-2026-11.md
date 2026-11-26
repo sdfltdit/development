@@ -74,3 +74,14 @@ Findings used:
 - Activewear pages promote bonded seams and certificates. We only list what we do in-house: flatlock and cover-stitch, mesh panels, sublimation, DTF, stretch screen print.
 - Tracksuit buyers worry most about top and pants not matching. We built the page around one fabric lot, one lab dip and stripe alignment.
 - Streetwear lists value washes and fades. We do not do these in-house, so the page says so and focuses on fit, weight and print.
+
+## Batch 3 product pages (dress, skirt, loungewear, kids and baby, uniform)
+
+Searches: dress manufacturer small batch, loungewear and pyjama manufacturer, kids and baby clothing manufacturer and safety, uniform and workwear manufacturer, skirt manufacturer (about 85 results reviewed). Read in full: compliancegate.com (US children's clothing rules), makersrow.com (loungewear manufacturers). Search results also covered UL (children's apparel testing), CPSC-related guidance, Custom Ink and Lands' End (uniform programmes) and jinfengapparel.com (dress pages).
+
+Findings used:
+- Kids' rules from the compliance page: drawstring limits on children's upper outerwear (16 CFR 1120), tracking labels on garment and packaging, third-party testing by a CPSC-accepted lab, a children's product certificate, lead and phthalate limits and separate sleepwear flammability rules. The kids page explains the design limits we follow and states that the brand chooses the lab and issues the certificate.
+- Loungewear lists give no MOQ or prices and skip tech pack needs, fabric minimums and payment terms. Our page covers fabrics, piping and set matching, and treats top and bottom as two styles towards the minimum.
+- Uniform pages from retailers sell branded blanks with no minimum. Our angle is made-to-spec programmes with colour matching and reorders from files kept on record. Certified hi-vis and flame-resistant garments are stated as outside our range.
+- Dress and skirt factory pages are thin and repetitive, with heavy keyword stuffing on dozens of near-identical style pages. We kept one page each and added fit, lining, length and closure detail.
+- Found another copy of our old content: cloth-2ou.pages.dev/skirts-manufacturer. Added to the owner's delete list.

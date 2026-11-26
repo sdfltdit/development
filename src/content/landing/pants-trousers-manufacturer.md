@@ -62,6 +62,7 @@ faq:
   - q: Do you supply the zips and buttons?
     a: Yes. We source zips, buttons and pocketing to your spec, or use branded trims you send us. All trims are shown on the proto for approval.
 related:
+  - /uniform-manufacturer/
   - /joggers-manufacturer/
   - /shorts-manufacturer/
   - /shirt-manufacturer/

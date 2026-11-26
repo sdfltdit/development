@@ -62,6 +62,7 @@ faq:
   - q: Do you make kids' joggers?
     a: Yes. We grade your pattern into kids' sizes and use care labels suited to children's wear in your market.
 related:
+  - /kids-baby-clothing-manufacturer/
   - /hoodie-manufacturer/
   - /shorts-manufacturer/
   - /pants-trousers-manufacturer/

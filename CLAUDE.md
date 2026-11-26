@@ -38,8 +38,8 @@ Contents:
 - `yearly-rebuild.yml` rebuilds on 1 January and 22 August so the footer year and "years in business" update. Never hard-code a year or an age.
 - Talk to the owner in Banglish. Write all site copy in British English.
 - Ask the owner before adding any claim, price or feature that is not already confirmed in `src/data/company.ts` or in this file.
-- Product pages are built in batches of five, each pushed to staging for the owner to check before the next batch starts. Batch 1 (hoodie, joggers, pants, shorts, woven shirts) and batch 2 (jacket, activewear, leggings, tracksuit, streetwear) are done. Then: dress, skirt, loungewear, kids and baby, uniform and workwear. Then: underwear, women's clothing, polo shirt, tank and long sleeve, and one more agreed with the owner.
-- Only cut-and-sew products are added without asking. Socks, sweaters (flat knit), denim washing, swimwear, down or padded jackets, seam-sealed waterproof jackets, bonded seams and garment dyeing or washing need owner confirmation first. Pages say plainly that we do not do these in-house.
+- Product pages are built in batches of five, each pushed to staging for the owner to check before the next batch starts. Batch 1 (hoodie, joggers, pants, shorts, woven shirts) batch 2 (jacket, activewear, leggings, tracksuit, streetwear) and batch 3 (dress, skirt, loungewear, kids and baby, uniform) are done. Then: underwear, women's clothing, polo shirt, tank and long sleeve, and one more agreed with the owner.
+- Only cut-and-sew products are added without asking. Socks, sweaters (flat knit), denim washing, swimwear, down or padded jackets, seam-sealed waterproof jackets, bonded seams, garment dyeing or washing, heat-set pleating, beaded or bridal gowns, children's sleepwear and certified high-visibility or flame-resistant workwear need owner confirmation first. Pages say plainly that we do not do these in-house.
 
 ## 2. Business facts and privacy (hard rules)
 
@@ -122,6 +122,11 @@ Keyword map (keep it in sync with frontmatter and `pages.ts`):
 | `/leggings-manufacturer/` | commercial | leggings manufacturer | custom leggings, yoga pants manufacturer, squat-proof leggings, private label leggings |
 | `/tracksuit-manufacturer/` | commercial | tracksuit manufacturer | custom tracksuits, track jackets, private label tracksuits, fleece tracksuits |
 | `/streetwear-manufacturer/` | commercial | streetwear manufacturer | streetwear clothing manufacturer, custom streetwear, private label streetwear |
+| `/dress-manufacturer/` | commercial | dress manufacturer | custom dresses, private label dresses, maxi dresses, jersey dresses |
+| `/skirts-manufacturer/` | commercial | skirt manufacturer | custom skirts, midi skirts, pleated skirts, private label skirts |
+| `/loungewear-manufacturer/` | commercial | loungewear manufacturer | pyjama manufacturer, sleepwear manufacturer, lounge sets, private label loungewear |
+| `/kids-baby-clothing-manufacturer/` | commercial | kids clothing manufacturer | baby clothing manufacturer, children's clothing manufacturer, custom kids clothing, private label baby clothes |
+| `/uniform-manufacturer/` | commercial | uniform manufacturer | workwear manufacturer, corporate uniforms, hospitality uniforms, custom work shirts |
 | `/private-label-clothing-manufacturer/` | commercial | private label clothing manufacturer | private label clothing manufacturing, private label apparel manufacturer, OEM clothing manufacturer, custom label clothing, white label clothing |
 | `/low-moq-clothing-manufacturers/` | commercial | low MOQ clothing manufacturer | low MOQ clothing manufacturing, small batch clothing manufacturer, low minimum order clothing, minimum order quantity clothing, clothing manufacturer small quantities |
 | `/clothing-manufacturers-for-startups/` | commercial | clothing manufacturer for startups | clothing manufacturer for small brands, start a clothing brand manufacturer, first clothing order, clothing manufacturer for new brands |
@@ -364,7 +369,7 @@ Accessibility (WCAG 2.1 AA)
 | | `page-audit` | FRE ≥ 60, marketing and AI-filler words, British spelling, leftover text and unfilled tokens, dead or generic links, empty FAQ answers, keyword placement and density, supporting keywords, cannibalization across all pages, long sentences, repeated phrases, alt text, inbound links and anchors |
 | CI | Lighthouse CI (`lighthouserc.json`) | Scores, CLS and LCP on key pages, median of 3 runs |
 
-`page-audit` hard-fails pages in its `STRICT` set and prints warnings for the rest. Cannibalization errors fail for every page. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`, `/hoodie-manufacturer/`, `/joggers-manufacturer/`, `/pants-trousers-manufacturer/`, `/shorts-manufacturer/`, `/shirt-manufacturer/`, `/jacket-manufacturer/`, `/activewear-manufacturer/`, `/leggings-manufacturer/`, `/tracksuit-manufacturer/`, `/streetwear-manufacturer/`.
+`page-audit` hard-fails pages in its `STRICT` set and prints warnings for the rest. Cannibalization errors fail for every page. Add a page to `STRICT` once it follows this playbook. Pages in `STRICT` now: `/`, `/t-shirt-manufacturer/`, `/hoodie-manufacturer/`, `/joggers-manufacturer/`, `/pants-trousers-manufacturer/`, `/shorts-manufacturer/`, `/shirt-manufacturer/`, `/jacket-manufacturer/`, `/activewear-manufacturer/`, `/leggings-manufacturer/`, `/tracksuit-manufacturer/`, `/streetwear-manufacturer/`, `/dress-manufacturer/`, `/skirts-manufacturer/`, `/loungewear-manufacturer/`, `/kids-baby-clothing-manufacturer/`, `/uniform-manufacturer/`.
 
 What no script can check, so a person must: facts are true, product nouns match the page, the page answers the buyer better than the top results, and it reads like a person wrote it.
 
@@ -386,6 +391,7 @@ What no script can check, so a person must: facts are true, product nouns match 
 - LC terms for the payment section.
 - Real factory photos and real customer testimonials or case studies (none are used until supplied).
 - T-shirt page claims to confirm: tipping stripes, branded buttons, racer-back and slub fabric, strike-off approval, wash test, reorders skipping the proto sample.
-- Delete old duplicate projects that show our content (`dhaka-bd.pages.dev`, `the-hug.pages.dev`).
+- Delete old duplicate projects that show our content (`dhaka-bd.pages.dev`, `the-hug.pages.dev`, `cloth-2ou.pages.dev`).
+- Kids' pages: we leave lab testing and certificates to the brand or importer. Confirm this is how SDF Clothing works.
 - Decide whether AI training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) may crawl the live site.
 - Decide whether analytics (GA4 or similar) is wanted, which needs a consent banner.
