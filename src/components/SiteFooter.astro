@@ -1,6 +1,6 @@
 ---
-import { company, whatsappUrl } from '../data/company';
-import { footerNav } from '../data/nav';
+import { company, terms, whatsappUrl } from '../data/company';
+import { footerNav, legalNav } from '../data/nav';
 
 const year = new Date().getFullYear();
 ---
@@ -10,6 +10,9 @@ const year = new Date().getFullYear();
     <div class="site-footer__brand">
       <img class="site-footer__logo" src="/logo-badge.svg" alt="SDF Clothing logo" width="96" height="96" loading="lazy" decoding="async" />
       <p class="site-footer__name">{company.legalName}</p>
+      <p class="site-footer__about">
+        Garment factory in Dhaka since {company.foundingYear}, making custom clothing for brands worldwide from {terms.moq} {terms.moqUnit}.
+      </p>
       <address class="site-footer__address">
         {company.address.street}<br />
         {company.address.locality} {company.address.postalCode}, {company.address.countryName}
@@ -17,7 +20,6 @@ const year = new Date().getFullYear();
       <ul class="site-footer__contact">
         <li><a href={company.contactPath}>Send us a message</a></li>
         <li><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></li>
-        <li><a href="/booking/">Book a factory visit</a></li>
       </ul>
       {company.showRegistration && <p class="site-footer__reg">RJSC reg. {company.registration.rjsc}</p>}
       <p class="site-footer__official">
@@ -48,7 +50,17 @@ const year = new Date().getFullYear();
       © {year}
       {company.legalName}. All rights reserved. <span class="site-footer__parent">Part of {company.parentCompany}.</span>
     </p>
-    <p>Made in Dhaka, Bangladesh.</p>
+    <nav aria-label="Legal">
+      <ul class="site-footer__legal">
+        {
+          legalNav.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
   </div>
 </footer>
 
@@ -106,6 +118,10 @@ const year = new Date().getFullYear();
   .site-footer__name {
     color: var(--color-ink);
     font-weight: 600;
+  }
+
+  .site-footer__about {
+    max-width: 34ch;
   }
 
   .site-footer__address {
@@ -179,6 +195,18 @@ const year = new Date().getFullYear();
     padding-bottom: var(--space-3);
   }
 
+  .site-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-4);
+  }
+
+  .site-footer__legal a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+  }
+
   .site-footer__parent {
     font-size: var(--text-xs);
   }
@@ -186,6 +214,7 @@ const year = new Date().getFullYear();
   .site-footer__base {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     gap: var(--space-3);
     margin-top: var(--space-6);
@@ -225,7 +254,9 @@ const year = new Date().getFullYear();
     }
 
     .site-footer__links a {
-      min-height: 2.25rem;
+      min-height: auto;
+      padding-block: var(--space-2);
+      line-height: 1.4;
     }
   }
 
