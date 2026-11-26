@@ -64,6 +64,7 @@ related:
   - /uniform-manufacturer/
   - /activewear-manufacturer/
   - /sample-service/
+  - /cycling-jersey-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

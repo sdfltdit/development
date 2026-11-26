@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { featuredProducts } from '../data/nav';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PriceTable from '../components/PriceTable.astro';
 import FaqList from '../components/FaqList.astro';
@@ -10,7 +11,8 @@ import { pageMeta } from '../data/pages';
 import { entities, faqPage, founder, graph, offerCatalog, organization, service, webPage, website } from '../lib/schema';
 
 const meta = pageMeta('/');
-const products = (await getCollection('landing', (e) => e.data.kind === 'product')).sort((a, b) => a.data.navLabel.localeCompare(b.data.navLabel));
+const allProducts = await getCollection('landing', (e) => e.data.kind === 'product');
+const products = featuredProducts.map((slug) => allProducts.find((e) => e.id === slug)).filter((e) => e !== undefined);
 const years = yearsInBusiness();
 
 const audiences = [
@@ -318,9 +320,9 @@ const schema = graph([
           ))
         }
         <li class="card card--muted">
-          <h3 class="card__title">Making something else?</h3>
-          <p class="card__text">Polos, joggers, sweatshirts, kids' styles and more. Tell us what you have in mind and we'll confirm it on your quote.</p>
-          <a class="card__link" href="/products/">All products</a>
+          <h3 class="card__title">{allProducts.length - products.length} more products</h3>
+          <p class="card__text">Swimwear, knitwear, outerwear, team kits, uniforms, lingerie and more, each with its own specifications page.</p>
+          <a class="card__link" href="/products/">See every product we make</a>
         </li>
       </ul>
     </div>

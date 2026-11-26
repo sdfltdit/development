@@ -66,10 +66,10 @@ related:
   - /pants-trousers-manufacturer/
   - /hoodie-manufacturer/
   - /t-shirt-manufacturer/
-  - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
   - /swimwear-manufacturer/
   - /denim-manufacturer/
+  - /basketball-uniform-manufacturer/
+  - /football-kit-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

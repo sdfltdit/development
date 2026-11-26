@@ -62,12 +62,12 @@ faq:
 related:
   - /leggings-manufacturer/
   - /shorts-manufacturer/
-  - /joggers-manufacturer/
   - /tracksuit-manufacturer/
-  - /underwear-manufacturer/
   - /sports-bra-manufacturer/
   - /swimwear-manufacturer/
-  - /socks-manufacturer/
+  - /football-kit-manufacturer/
+  - /cycling-jersey-manufacturer/
+  - /basketball-uniform-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

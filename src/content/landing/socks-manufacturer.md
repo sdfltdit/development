@@ -64,6 +64,8 @@ related:
   - /merch-manufacturer/
   - /kids-baby-clothing-manufacturer/
   - /private-label-clothing-manufacturer/
+  - /football-kit-manufacturer/
+  - /rugby-shirt-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

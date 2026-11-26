@@ -121,3 +121,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Softshell: 2-layer bonded vs 3-layer with membrane. Softshells are water repellent, not waterproof, and the page points heavy-rain buyers to the rain jacket page.
 - Coat: melton, double-faced wool, gabardine. Fused vs canvassed fronts. The old /coat-manufacturer/ URL now has its own page again.
 - Leather: cowhide, lambskin, goatskin, suede and PU. Hide sorting by shade is the key quality step. Old leather and faux leather clothing URLs now redirect here.
+
+## Batch 9 (football kit, basketball uniform, cycling jersey, rugby shirt, baseball uniform)
+
+- Team kits: competitors sell sublimated kits with names and numbers, often from 10 to 30 pieces per design. Our MOQ is per design, with names, numbers and sizes free to change inside it, so a club can cover several teams in one design. Roster checking is the key quality step.
+- Cycling: race vs club vs gravel fit, chamois pads from specialist pad makers, silicone grippers, three rear pockets. Old /cycling-apparel-manufacturer/ now redirects here.
+- Rugby: heavyweight cotton lifestyle shirts (twill collar, rubber buttons) vs polyester match jerseys.
+- Baseball: full-button jerseys, double-knit pants, tackle twill vs sublimation, softball fits.
+- Site structure: the header menu and home page now show 12 core products only. /products/ lists everything.
