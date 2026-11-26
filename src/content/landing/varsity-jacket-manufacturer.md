@@ -5,7 +5,7 @@ navLabel: Varsity jackets
 linkText: Varsity jacket manufacturer details
 cardSummary: Wool letterman jackets with PU or contrast sleeves, satin and fleece varsity styles, with chenille patches and striped rib trims.
 title: "Varsity Jacket Manufacturer – Letterman | SDF Clothing"
-description: "Varsity jacket manufacturer for brands, schools and teams. Custom letterman jackets in wool, satin or fleece, with chenille patches made in-house, from {{moq}} pieces."
+description: "Varsity jacket manufacturer for brands, schools and teams. Custom letterman jackets in wool, satin or fleece, with chenille patches sewn on, from {{moq}} pieces."
 h1: Varsity jacket manufacturer for brands, schools and teams
 eyebrow: Varsity jacket manufacturing
 primaryKeyword: varsity jacket manufacturer
