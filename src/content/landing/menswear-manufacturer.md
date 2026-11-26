@@ -62,8 +62,8 @@ related:
   - /suit-manufacturer/
   - /sweater-manufacturer/
   - /jacket-manufacturer/
-  - /underwear-manufacturer/
-  - /hoodie-manufacturer/
+  - /kurta-manufacturer/
+  - /thobe-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

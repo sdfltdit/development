@@ -202,3 +202,12 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Suit: construction detail (fused, half, full canvas) lives on the blazer page. The suit page links there and focuses on matching jacket and trousers from one fabric lot.
 - Menswear: hub-style page like the women's page. Style cards link to the spokes that own each product. Shows owner-approved prices for six core pieces.
 - Overalls: "dungarees" is the UK term and "shortalls" the summer variant. Hardware rust and short torsos are the common faults.
+
+## Batch 19 (kurta, salwar kameez, hijab, thobe, polyester clothing)
+
+- Ranking pages for these terms are mostly marketplace and directory listings (Alibaba, IndiaMART, Faire, fibre2fashion) with thin text, no process detail and no buyer risks. A factory page that explains collars, hem finishes, white shade matching, opacity and festival planning has little real competition.
+- Buyers are brands abroad: South Asian ethnic wear labels in the UK, North America, the Middle East and Australia (kurta, salwar kameez), modest fashion labels (hijab) and Gulf and diaspora menswear brands (thobe). Pages say so and never target Bangladesh.
+- Salwar kameez: overseas shoppers buy stitched suits, so we state plainly that we do not sell unstitched suits. "Shalwar" and "salwar" are both used.
+- Thobe: Gulf buyers judge white shade, opacity and collar. Thobes are sized by length (for example 52 to 62). Kandura (Emirati) has a collarless neck with a tassel.
+- Hijab: the main buyer worries are sheerness, slipping and fraying edges. Undercaps dyed to the same lab dip are a selling point.
+- Polyester: built on the old `/polyester-clothing-manufacturer/` URL. Recycled content and moisture-wicking rest on the mill's certificate or test report. The page explains why one shade looks different on polyester and cotton (disperse vs reactive dyes), the topic of an old insight URL.

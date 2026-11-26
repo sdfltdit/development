@@ -62,6 +62,7 @@ related:
   - /cosmetic-pouch-manufacturer/
   - /scarf-manufacturer/
   - /modest-fashion-manufacturer/
+  - /hijab-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

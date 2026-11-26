@@ -67,7 +67,7 @@ related:
   - /pants-trousers-manufacturer/
   - /private-label-clothing-manufacturer/
   - /sample-service/
-  - /low-moq-clothing-manufacturers/
+  - /kurta-manufacturer/
   - /linen-clothing-manufacturer/
   - /cotton-clothing-manufacturer/
 published: 2026-11-26

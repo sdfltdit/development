@@ -62,7 +62,7 @@ faq:
 related:
   - /dress-manufacturer/
   - /skirts-manufacturer/
-  - /leggings-manufacturer/
+  - /salwar-kameez-manufacturer/
   - /plus-size-clothing-manufacturer/
   - /modest-fashion-manufacturer/
   - /evening-dress-manufacturer/

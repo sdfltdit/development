@@ -63,7 +63,7 @@ related:
   - /hoodie-manufacturer/
   - /uniform-manufacturer/
   - /activewear-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /polyester-clothing-manufacturer/
   - /golf-apparel-manufacturer/
   - /base-layer-manufacturer/
 published: 2026-11-26

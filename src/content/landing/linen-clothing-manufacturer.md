@@ -63,7 +63,7 @@ related:
   - /dress-manufacturer/
   - /clothing-manufacturers-for-women/
   - /cotton-clothing-manufacturer/
-  - /sample-service/
+  - /kurta-manufacturer/
   - /jumpsuit-romper-manufacturer/
   - /cushion-cover-manufacturer/
 published: 2026-11-26

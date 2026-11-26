@@ -64,8 +64,8 @@ related:
   - /clothing-manufacturers-for-women/
   - /skirts-manufacturer/
   - /plus-size-clothing-manufacturer/
-  - /private-label-clothing-manufacturer/
-  - /sample-service/
+  - /thobe-manufacturer/
+  - /hijab-manufacturer/
   - /scarf-manufacturer/
   - /wedding-dress-manufacturer/
 published: 2026-11-26

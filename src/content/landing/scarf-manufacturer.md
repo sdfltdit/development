@@ -59,7 +59,7 @@ related:
   - /modest-fashion-manufacturer/
   - /hat-manufacturer/
   - /sweater-manufacturer/
-  - /hotel-uniform-manufacturer/
+  - /hijab-manufacturer/
   - /silk-pillowcase-manufacturer/
   - /merch-manufacturer/
   - /tie-manufacturer/
