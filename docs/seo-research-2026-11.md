@@ -170,3 +170,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Patches: buyers choose type, border (merrow vs heat-cut) and backing (sew-on, iron-on, hook-and-loop). We do not offer woven patches until the owner confirms.
 - Pet clothing: sizing is chest girth, back length and neck girth, with chest the most important. Breed-specific blocks and harness holes are what buyers ask for. Built on the old URL `/pet-clothing-manufacturer/`.
 - Cushion covers: sizes differ by market (cm vs inches), and UK fire rules apply to home cushions, so the page tells buyers to arrange final tests.
+
+## Batch 15 (dust bag, tote bag, cosmetic pouch, drawstring bag, scarf), 26 November 2026
+
+- Dust bags: brands treat them as part of packaging. Buyers choose fabric (calico, flannel, satin, velvet, non-woven), closure and logo method. We size from the product and can pack garments inside.
+- Tote bags: retail listings sell on canvas weight, gusset and handle length. A gusset narrows the flat print area, which buyers often miss, so the page explains it.
+- Cosmetic pouches: wipe-clean lining, zip quality and boxed corners decide whether a pouch is kept. Nesting sets raise the selling price.
+- Drawstring bags: corners tear first, so the page leads with corner reinforcement. Names differ by country (gym sack, cinch bag, PE bag), so the page lists them.
+- Scarves: printed (silk, polyester) and knitted jacquard are different processes. Club and football scarves are knitted jacquard with fringe.

@@ -63,7 +63,7 @@ related:
   - /uniform-manufacturer/
   - /activewear-manufacturer/
   - /sweater-manufacturer/
-  - /private-label-clothing-manufacturer/
+  - /scarf-manufacturer/
   - /baseball-uniform-manufacturer/
   - /embroidered-patch-manufacturer/
 published: 2026-11-26
