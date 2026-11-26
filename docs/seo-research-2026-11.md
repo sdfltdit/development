@@ -85,3 +85,12 @@ Findings used:
 - Uniform pages from retailers sell branded blanks with no minimum. Our angle is made-to-spec programmes with colour matching and reorders from files kept on record. Certified hi-vis and flame-resistant garments are stated as outside our range.
 - Dress and skirt factory pages are thin and repetitive, with heavy keyword stuffing on dozens of near-identical style pages. We kept one page each and added fit, lining, length and closure detail.
 - Found another copy of our old content: cloth-2ou.pages.dev/skirts-manufacturer. Added to the owner's delete list.
+
+## Batch 4 (underwear, women's clothing, plus size, modest fashion, merch)
+
+- Underwear: buyers ask about waistband elastic, pouch shape, modal vs cotton-spandex and multipacks. Jacquard logo elastic comes from an elastic mill with its own minimum, so the page says it is confirmed on the quote. We state that we make soft bralettes only (no wired or moulded bras) and do not knit socks.
+- Women's clothing: ranking pages are mostly directories. Our angle is fit (women's block, fit sample in the middle size, second fit round) and a capsule-first start. Dresses, skirts, plus size and modest have their own pages and are linked, not targeted.
+- Plus size: the key buyer pain is straight grading from a small base size. The page explains a separate plus base size and the fit points (bust, upper arm, armhole, front length). Prices for extended sizes are shown separately on the quote.
+- Modest fashion: abayas, kaftans, tunics, lengths per size and opacity. Machine embroidery only; hand beading and stone work are stated as not done.
+- Merch: competitors are mostly print on demand with no minimum. Our angle is cut and sew bulk merch with your own fit and labels, planned back from a tour or launch date. Merch is a new URL, not in the legacy list. The page asks buyers to own the rights to their artwork.
+- Duplicate copies found earlier: test-5rx.pages.dev (modest page with unconfirmed claims), cloth-2ou.pages.dev. Owner should delete them.

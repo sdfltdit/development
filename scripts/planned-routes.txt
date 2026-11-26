@@ -18,7 +18,6 @@
 /clothing-manufacturer-for-japanese-brands/
 /clothing-manufacturer-for-uk-brands/
 /clothing-manufacturer-for-usa-brands/
-/clothing-manufacturers-for-women/
 /confidentiality/
 /cotton-clothing-manufacturer/
 /denim-manufacturer/
@@ -99,14 +98,12 @@
 /lab-dip-service/
 /linen-clothing-manufacturer/
 /manufacturing-platform-alternative/
-/modest-fashion-manufacturer/
 /nda/
 /oeko-tex-certification-guide/
 /oem-clothing-manufacturer/
 /organic-cotton-clothing-manufacturer/
 /overseas-vs-local-clothing-manufacturer/
 /pattern-making-service/
-/plus-size-clothing-manufacturer/
 /polo-shirt-manufacturer/
 /polyester-clothing-manufacturer/
 /print-on-demand-vs-private-label/
@@ -143,7 +140,6 @@
 /tools/shrinkage-calculator/
 /tools/wash-care-label-generator/
 /trims-sourcing/
-/underwear-manufacturer/
 /visa-docs/
 /washing-service/
 /workwear-manufacturer/

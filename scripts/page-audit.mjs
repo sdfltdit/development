@@ -27,6 +27,11 @@ const STRICT = new Set([
   '/loungewear-manufacturer/',
   '/kids-baby-clothing-manufacturer/',
   '/uniform-manufacturer/',
+  '/underwear-manufacturer/',
+  '/clothing-manufacturers-for-women/',
+  '/plus-size-clothing-manufacturer/',
+  '/modest-fashion-manufacturer/',
+  '/merch-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
@@ -235,6 +240,7 @@ for (const p of pages) {
   }
   const repeats = [...grams].filter(([g, n]) => n > 1 && !targets.some((t) => g.includes(lower(t))));
   if (repeats.length) report(p.route, `repeated phrase: "${repeats[0][0]}"${repeats.length > 1 ? ` and ${repeats.length - 1} more` : ''}`);
+  if (process.env.AUDIT_VERBOSE && repeats.length > 1) for (const r of repeats.slice(1)) console.log(`    also: "${r[0]}"`);
 
   const links = inbound.get(p.route) ?? [];
   const fromPages = new Set(links.map((l) => l.from));

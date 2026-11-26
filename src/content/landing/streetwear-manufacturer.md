@@ -65,6 +65,7 @@ related:
   - /tracksuit-manufacturer/
   - /jacket-manufacturer/
   - /private-label-clothing-manufacturer/
+  - /merch-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---
