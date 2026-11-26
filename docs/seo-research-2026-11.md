@@ -178,3 +178,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Cosmetic pouches: wipe-clean lining, zip quality and boxed corners decide whether a pouch is kept. Nesting sets raise the selling price.
 - Drawstring bags: corners tear first, so the page leads with corner reinforcement. Names differ by country (gym sack, cinch bag, PE bag), so the page lists them.
 - Scarves: printed (silk, polyester) and knitted jacquard are different processes. Club and football scarves are knitted jacquard with fringe.
+
+## Batch 16 (bandana, neck gaiter, hair accessories, tie, baby bib), 26 November 2026
+
+- Bandanas: cotton for classic and workwear looks, polyester for sublimated photo prints. Pet bandanas need sizing by neck and no chewable parts.
+- Neck gaiters: sublimation is standard because gaiters are worn many ways. Cooling claims come from the mill. Not sold as medical masks.
+- Hair accessories: satin and silk scrunchies and bonnets sell together, often as multipacks or with silk pillowcases.
+- Ties: woven jacquard (design in the weave) vs printed. Bias cut, interlining and slip stitch decide how a tie knots and hangs. Clip-on ties for young pupils.
+- Baby bibs and swaddles: US children's products need a tracking label and third-party testing. Our page says we sew the tracking label and the buyer arranges tests, in line with the open item on kids' testing.

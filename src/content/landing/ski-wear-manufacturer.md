@@ -63,6 +63,7 @@ related:
   - /fleece-jacket-manufacturer/
   - /jacket-manufacturer/
   - /hat-manufacturer/
+  - /neck-gaiter-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

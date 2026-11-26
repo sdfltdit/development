@@ -62,6 +62,7 @@ related:
   - /hotel-uniform-manufacturer/
   - /silk-pillowcase-manufacturer/
   - /merch-manufacturer/
+  - /tie-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

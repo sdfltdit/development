@@ -86,6 +86,11 @@ const STRICT = new Set([
   '/cosmetic-pouch-manufacturer/',
   '/drawstring-bag-manufacturer/',
   '/scarf-manufacturer/',
+  '/bandana-manufacturer/',
+  '/neck-gaiter-manufacturer/',
+  '/hair-accessories-manufacturer/',
+  '/tie-manufacturer/',
+  '/baby-bib-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';
