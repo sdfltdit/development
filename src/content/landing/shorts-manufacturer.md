@@ -66,7 +66,7 @@ related:
   - /pants-trousers-manufacturer/
   - /hoodie-manufacturer/
   - /swimwear-manufacturer/
-  - /denim-manufacturer/
+  - /running-apparel-manufacturer/
   - /basketball-uniform-manufacturer/
   - /football-kit-manufacturer/
   - /fightwear-manufacturer/

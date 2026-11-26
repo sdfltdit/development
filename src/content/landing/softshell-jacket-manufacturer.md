@@ -65,6 +65,7 @@ related:
   - /activewear-manufacturer/
   - /sample-service/
   - /cycling-jersey-manufacturer/
+  - /golf-apparel-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

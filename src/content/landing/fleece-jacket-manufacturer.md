@@ -64,6 +64,8 @@ related:
   - /uniform-manufacturer/
   - /activewear-manufacturer/
   - /private-label-clothing-manufacturer/
+  - /golf-apparel-manufacturer/
+  - /base-layer-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

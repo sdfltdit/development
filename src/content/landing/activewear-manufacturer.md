@@ -67,7 +67,7 @@ related:
   - /cycling-jersey-manufacturer/
   - /basketball-uniform-manufacturer/
   - /fightwear-manufacturer/
-  - /martial-arts-uniform-manufacturer/
+  - /running-apparel-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26
 ---

@@ -61,7 +61,7 @@ related:
   - /underwear-manufacturer/
   - /activewear-manufacturer/
   - /t-shirt-manufacturer/
-  - /merch-manufacturer/
+  - /base-layer-manufacturer/
   - /kids-baby-clothing-manufacturer/
   - /private-label-clothing-manufacturer/
   - /football-kit-manufacturer/

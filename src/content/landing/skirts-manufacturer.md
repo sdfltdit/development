@@ -64,7 +64,7 @@ related:
   - /pants-trousers-manufacturer/
   - /shirt-manufacturer/
   - /private-label-clothing-manufacturer/
-  - /low-moq-clothing-manufacturers/
+  - /tennis-wear-manufacturer/
   - /denim-manufacturer/
   - /cheerleading-uniform-manufacturer/
   - /dancewear-manufacturer/

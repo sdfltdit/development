@@ -137,3 +137,11 @@ Owner confirmed on 26 November 2026 that these are made in-house. Research notes
 - Dancewear: nylon-spandex for ballet, cotton-spandex for class, covered leg elastic, front lining. Old /dance-wear-manufacturer/ now redirects here.
 - Martial arts: single, pearl, gold and double weave; federations set colour and fit rules, which the page mentions without naming any body.
 - Fightwear: MMA vs boxing vs Muay Thai shorts, rash guards with silicone grippers.
+
+## Batch 11 (golf, tennis, running, compression, base layers), 26 November 2026
+
+- Golf: ranking factory pages lead with stretch polyester or nylon-spandex polos, embroidery and club/event buyers. UPF claims on competitor pages rest on fabric ratings, so ours say the rating comes from the mill. "Polo shirt manufacturer" stays on the T-shirt page; golf targets "golf polo shirts".
+- Tennis: buyers ask about built-in bras, ball shorts, pleats and opacity of whites. "Pleated skirts" stays on the skirts page.
+- Running: race organisers care most about delivery dates and size splits. Runners care about chafing, pockets and reflectives.
+- Compression: sports compression only. Medical compression is regulated with measured pressure, so the page says plainly we do not make or label medical garments.
+- Base layers: merino vs synthetic and weight choice dominate buyer questions. Merino shrinkage and holes are the common complaints.

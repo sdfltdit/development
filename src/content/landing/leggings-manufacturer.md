@@ -62,7 +62,7 @@ faq:
   - q: Do you make matching sports bras?
     a: Yes. We cut sports bras from the same fabric lot so the set matches. See our activewear page for bras, tops and shorts.
 related:
-  - /kids-baby-clothing-manufacturer/
+  - /compression-wear-manufacturer/
   - /activewear-manufacturer/
   - /shorts-manufacturer/
   - /joggers-manufacturer/

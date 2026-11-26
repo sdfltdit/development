@@ -62,7 +62,7 @@ faq:
 related:
   - /activewear-manufacturer/
   - /loungewear-manufacturer/
-  - /t-shirt-manufacturer/
+  - /base-layer-manufacturer/
   - /private-label-clothing-manufacturer/
   - /bamboo-clothing-manufacturer/
   - /sports-bra-manufacturer/
