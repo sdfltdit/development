@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from './PageHeader.astro';
+import FaqList from './FaqList.astro';
+import RelatedLinks from './RelatedLinks.astro';
+import CtaBand from './CtaBand.astro';
+import { pageMeta } from '../data/pages';
+import { tools } from '../data/tools';
+import { absolute, faqPage, ids, standardPage, type Crumb } from '../lib/schema';
+
+interface Props {
+  path: string;
+  eyebrow?: string;
+  heading: string;
+  lead: string;
+  toolHeading: string;
+  faqs: { q: string; a: string }[];
+  related?: { title: string; href: string; summary: string }[];
+}
+
+const { path, eyebrow = 'Free tool', heading, lead, toolHeading, faqs, related = [] } = Astro.props;
+const meta = pageMeta(path);
+const tool = tools.find((t) => t.path === path);
+if (!tool) throw new Error(`Tool ${path} is missing from src/data/tools.ts`);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Free tools', path: '/tools/' },
+  { name: tool.name, path },
+];
+
+const app = {
+  '@type': 'WebApplication',
+  '@id': `${absolute(path)}#app`,
+  name: tool.name,
+  description: tool.summary,
+  url: absolute(path),
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Any',
+  browserRequirements: 'Requires JavaScript',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  publisher: { '@id': ids.organization },
+  mainEntityOfPage: { '@id': `${absolute(path)}#webpage` },
+};
+
+const schema = standardPage({
+  path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  extra: [app, faqPage(path, faqs)],
+});
+
+const otherTools = tools.filter((t) => t.path !== path).map((t) => ({ title: t.name, href: t.path, summary: t.summary }));
+const links = [...related, ...otherTools].slice(0, 8);
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={path} schema={schema} crumbs={crumbs}>
+  <PageHeader eyebrow={eyebrow} title={heading} lead={lead} updated={meta.updated} />
+
+  <section class="section" aria-labelledby="tool-heading">
+    <div class="container">
+      <h2 id="tool-heading" class="block-heading">{toolHeading}</h2>
+      <slot name="tool" />
+      <p class="tool__note tool__more">This is one of our free <a href="/tools/">clothing manufacturing tools</a>. Results are a planning guide, and your written quote sets the real figures.</p>
+      <noscript>
+        <p class="tool__noscript">This tool needs JavaScript to calculate. The guide below explains how to work it out by hand.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container prose">
+      <slot />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <FaqList items={faqs} heading={`${tool.name} questions`} />
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <RelatedLinks heading="Related tools and guides" links={links} />
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

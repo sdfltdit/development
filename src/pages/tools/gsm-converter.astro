@@ -1,0 +1,165 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { capabilities } from '../../data/company';
+
+const faqs = [
+  {
+    q: 'How do I convert GSM to oz?',
+    a: 'Divide the GSM by 33.906 to get ounces per square yard. A 180 GSM jersey is about 5.3 oz per square yard.',
+  },
+  {
+    q: 'How do I convert oz to GSM?',
+    a: 'Multiply ounces per square yard by 33.906. A 10 oz fleece is about 339 GSM.',
+  },
+  {
+    q: 'What is the difference between oz per square yard and oz per linear yard?',
+    a: 'Ounces per square yard measure a fixed area. Ounces per linear yard measure one yard off the roll at its full width, so the number grows with wider fabric. US denim and canvas are often quoted per linear yard.',
+  },
+  {
+    q: 'Is this fabric weight calculator accurate for any fabric?',
+    a: 'Yes, the maths is the same for knit and woven fabric. The result is only as good as the weight you enter, so use the figure from the mill test report.',
+  },
+  {
+    q: 'What GSM is a typical T-shirt?',
+    a: `Most T-shirts we make sit between ${capabilities.tshirtGsm} GSM, from light summer tees to heavy oversized ones.`,
+  },
+];
+---
+
+<ToolPage
+  path="/tools/gsm-converter/"
+  heading="GSM converter for fabric weight"
+  lead="Use this free GSM converter to change fabric weight between grams per square metre (GSM), ounces per square yard and ounces per linear yard. Enter one weight, add the fabric width if you need the linear figure, and the results update as you type."
+  toolHeading="Convert fabric weight"
+  faqs={faqs}
+  related={[
+    { title: 'Fabric GSM explained', href: '/insights/fabric-gsm-explained/', summary: 'What GSM means, a GSM chart by garment and how to measure it.' },
+    { title: 'Fabric types glossary', href: '/insights/fabric-types-glossary/', summary: 'Knit and woven fabrics, fibres and what each one suits.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="gsm" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="gsm-value">Fabric weight</label>
+        <input class="field__input" id="gsm-value" name="value" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gsm-value-error" value="180" />
+        <p class="field__error" id="gsm-value-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gsm-unit">Unit of that weight</label>
+        <select class="field__input" id="gsm-unit" name="unit">
+          <option value="gsm" selected>GSM (grams per square metre)</option>
+          <option value="ozsq">oz per square yard</option>
+          <option value="ozlin">oz per linear yard</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gsm-width">Fabric width <span class="field__req">(needed for linear figures)</span></label>
+        <input class="field__input" id="gsm-width" name="width" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gsm-width-error" value="150" />
+        <p class="field__error" id="gsm-width-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gsm-width-unit">Width unit</label>
+        <select class="field__input" id="gsm-width-unit" name="widthUnit">
+          <option value="cm" selected>Centimetres</option>
+          <option value="in">Inches</option>
+        </select>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Convert</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>GSM</dt><dd data-out="gsm"></dd></div>
+        <div class="tool__figure"><dt>oz per square yard</dt><dd data-out="ozsq"></dd></div>
+        <div class="tool__figure"><dt>oz per linear yard</dt><dd data-out="ozlin"></dd></div>
+        <div class="tool__figure"><dt>Grams per linear metre</dt><dd data-out="glin"></dd></div>
+      </dl>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>How the GSM converter works</h2>
+  <p>
+    GSM is the weight in grams of one square metre of fabric. Ounces per square yard is the same idea in imperial units. One ounce per square yard
+    equals 33.906 GSM, so the GSM converter multiplies or divides by that number.
+  </p>
+  <p>Linear figures also need the width, because they weigh one full-width yard or metre straight off the roll.</p>
+
+  <h2>GSM to oz and oz to GSM by hand</h2>
+  <div class="table-wrap" role="region" aria-label="Formulas used by the converter" tabindex="0">
+  <table class="table--stack">
+    <caption>Formulas used by the converter</caption>
+    <thead>
+      <tr><th scope="col">From</th><th scope="col">To</th><th scope="col">Formula</th></tr>
+    </thead>
+    <tbody>
+      <tr><td data-label="From">GSM</td><td data-label="To">oz per square yard</td><td data-label="Formula">GSM ÷ 33.906</td></tr>
+      <tr><td data-label="From">oz per square yard</td><td data-label="To">GSM</td><td data-label="Formula">oz × 33.906</td></tr>
+      <tr><td data-label="From">oz per square yard</td><td data-label="To">oz per linear yard</td><td data-label="Formula">oz × width in inches ÷ 36</td></tr>
+      <tr><td data-label="From">GSM</td><td data-label="To">grams per linear metre</td><td data-label="Formula">GSM × width in metres</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    For GSM to oz, a 240 GSM sweatshirt fleece is 240 ÷ 33.906, or about 7.1 oz per square yard. For oz to GSM, a 12 oz denim quoted per square yard is
+    about 407 GSM.
+  </p>
+
+  <h2>Using a fabric weight calculator when you brief a factory</h2>
+  <ul>
+    <li>Quote weight in the unit your factory uses. Most mills in Asia and Europe use GSM.</li>
+    <li>Say whether a weight is before or after washing, because it can change.</li>
+    <li>Ask for the weight on the mill test report, with the agreed tolerance.</li>
+    <li>For denim, say whether ounces are per square yard or per linear yard.</li>
+  </ul>
+  <p>
+    Our guide to <a href="/insights/fabric-gsm-explained/">fabric GSM</a> shows typical weights for tees, hoodies and shirts. When you are ready, send your fabric
+    and weight through our <a href="/get-a-quote/">quote form</a>.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, format, readNumber } from '../../scripts/tools/common';
+
+  const OZ_TO_GSM = 33.906;
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="gsm"]');
+
+  if (form) {
+    const value = byId<HTMLInputElement>(form, 'gsm-value');
+    const unit = byId<HTMLSelectElement>(form, 'gsm-unit');
+    const width = byId<HTMLInputElement>(form, 'gsm-width');
+    const widthUnit = byId<HTMLSelectElement>(form, 'gsm-width-unit');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+
+    const run = (): void => {
+      const needsWidth = unit.value === 'ozlin';
+      const weight = readNumber(value, { label: 'fabric weight', min: 0.01 });
+      const rawWidth = width.value.trim() === '' && !needsWidth ? null : readNumber(width, { label: 'fabric width', min: 1, required: needsWidth });
+      if (width.value.trim() === '' && !needsWidth) clearError(width);
+      if (weight === null || (needsWidth && rawWidth === null) || !result || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const widthIn = rawWidth === null ? null : widthUnit.value === 'cm' ? rawWidth / 2.54 : rawWidth;
+      let ozSq = weight;
+      if (unit.value === 'gsm') ozSq = weight / OZ_TO_GSM;
+      if (unit.value === 'ozlin' && widthIn) ozSq = (weight * 36) / widthIn;
+      const gsm = ozSq * OZ_TO_GSM;
+
+      out('gsm')!.textContent = format(gsm, 0);
+      out('ozsq')!.textContent = format(ozSq, 2);
+      out('ozlin')!.textContent = widthIn ? format((ozSq * widthIn) / 36, 2) : 'Add a width';
+      out('glin')!.textContent = widthIn ? format(gsm * widthIn * 0.0254, 0) : 'Add a width';
+      note.textContent = widthIn
+        ? `Based on a usable width of ${format(widthIn * 2.54, 0)} cm (${format(widthIn, 1)} in).`
+        : 'Add the fabric width to see linear weights.';
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

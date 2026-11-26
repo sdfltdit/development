@@ -49,10 +49,10 @@ related:
   - /sample-service/
   - /how-to-create-a-tech-pack/
   - /insights/incoterms-explained/
-  - /clothing-brand-startup-costs/
+  - /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
   - /guides/how-clothing-manufacturers-work/
   - /digital-3d-sample-vs-physical-sample/
-  - /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
+  - /tools/lead-time-calculator/
 published: 2026-11-26
 updated: 2026-11-26
 ---

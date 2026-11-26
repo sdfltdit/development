@@ -145,6 +145,71 @@ const registry: PageMeta[] = [
     llmsLabel: 'Editorial policy',
   },
   {
+    path: '/tools/',
+    title: 'Free Clothing Manufacturing Tools for Brands | SDF Clothing',
+    description:
+      'Free clothing manufacturing tools for brands: convert fabric GSM, find AQL sample sizes, plan lead times, work out landed cost and measure fabric shrinkage.',
+    primaryKeyword: 'clothing manufacturing tools',
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'Free tools',
+  },
+  {
+    path: '/tools/gsm-converter/',
+    title: 'GSM Converter: GSM to oz and oz to GSM | SDF Clothing',
+    description:
+      'Free GSM converter for clothing fabric: change GSM to oz per square yard, oz to GSM and oz per linear yard by width, with the formulas and worked examples.',
+    primaryKeyword: 'GSM converter',
+    secondaryKeywords: ['GSM to oz', 'oz to GSM', 'fabric weight calculator'],
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'GSM converter',
+  },
+  {
+    path: '/tools/aql-calculator/',
+    title: 'AQL Calculator for Garment Inspections | SDF Clothing',
+    description:
+      'Free AQL calculator for clothing orders: enter the lot size and AQL levels to get the sample size and the accept and reject numbers for a garment inspection.',
+    primaryKeyword: 'AQL calculator',
+    secondaryKeywords: ['AQL sample size', 'accept and reject numbers', 'inspection level II'],
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'AQL calculator',
+  },
+  {
+    path: '/tools/lead-time-calculator/',
+    title: 'Lead Time Calculator for Clothing Orders | SDF Clothing',
+    description:
+      'Free lead time calculator for clothing orders: plan sample, approval, bulk and shipping dates, and find the latest date to order for your launch in store.',
+    primaryKeyword: 'lead time calculator',
+    secondaryKeywords: ['production timeline', 'order by date', 'launch date planning'],
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'Lead time calculator',
+  },
+  {
+    path: '/tools/garment-cost-calculator/',
+    title: 'Garment Cost Calculator for Landed Cost | SDF Clothing',
+    description:
+      'Free garment cost calculator: add factory price, freight, duty and fees to get landed cost per piece, then see your profit margin at a chosen retail price.',
+    primaryKeyword: 'garment cost calculator',
+    secondaryKeywords: ['landed cost calculator', 'cost per piece', 'profit margin on clothing'],
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'Garment cost calculator',
+  },
+  {
+    path: '/tools/shrinkage-calculator/',
+    title: 'Fabric Shrinkage Calculator for Garments | SDF Clothing',
+    description:
+      'Free fabric shrinkage calculator: measure length and width shrinkage after washing and find the size to cut a pattern so the garment finishes on spec.',
+    primaryKeyword: 'fabric shrinkage calculator',
+    secondaryKeywords: ['shrinkage percentage', 'shrinkage allowance', 'wash test'],
+    updated: '2026-11-26',
+    inLlms: true,
+    llmsLabel: 'Fabric shrinkage calculator',
+  },
+  {
     path: '/privacy/',
     title: 'Privacy Policy – How We Handle Your Data | SDF Clothing',
     description:

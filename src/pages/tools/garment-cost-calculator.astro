@@ -1,0 +1,181 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { priceIndex, terms } from '../../data/company';
+
+const faqs = [
+  {
+    q: 'What does this tool include in the cost?',
+    a: 'It adds the factory price, freight, insurance, import duty and fees such as brokerage and delivery, then divides by the number of pieces. The result is the true cost of each garment in your warehouse.',
+  },
+  {
+    q: 'Is duty charged on the factory price or on the price with freight?',
+    a: 'It depends on the country. The United States charges duty on the goods value. The UK, the EU and many others charge it on goods plus freight and insurance. The calculator lets you choose.',
+  },
+  {
+    q: 'Should I include VAT or GST in cost per piece?',
+    a: 'Usually not, if your business is registered and can reclaim import VAT or GST. If you cannot reclaim it, add it to the other fees box.',
+  },
+  {
+    q: 'What is a healthy profit margin on clothing?',
+    a: 'Many brands aim for a retail price of three to four times landed cost, which is a gross margin of roughly 67% to 75%. Your margin must also cover marketing, returns and overheads.',
+  },
+  {
+    q: 'How is this different from a landed cost calculator?',
+    a: 'It does the same landed cost sum and then goes one step further, showing the margin and markup at the retail price you plan to charge.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/garment-cost-calculator/"
+  heading="Garment cost calculator: landed cost and margin"
+  lead={`Use this free garment cost calculator to find what each piece really costs you once it reaches your warehouse. Add the ${terms.incoterm} price per piece, quantity, freight, duty and fees. Then enter a retail price to see your margin.`}
+  toolHeading="Work out your cost per piece"
+  faqs={faqs}
+  related={[
+    { title: 'How to calculate landed cost', href: '/insights/how-to-calculate-landed-cost/', summary: 'The landed cost formula, a worked example and costs people forget.' },
+    { title: 'Clothing manufacturing costs', href: '/insights/manufacturing-costs/', summary: 'What makes up a factory price and how to lower it.' },
+    { title: 'Prices', href: '/pricing/', summary: `Our ${terms.incoterm} prices per piece at our minimum and at volume.` },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="cost" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="gc-price">Factory price per piece ({terms.incoterm})</label>
+        <input class="field__input" id="gc-price" name="price" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-price-error" value={priceIndex.rows[0].fobMoq} />
+        <p class="field__error" id="gc-price-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-qty">Quantity (pieces)</label>
+        <input class="field__input" id="gc-qty" name="qty" type="text" inputmode="numeric" autocomplete="off" aria-describedby="gc-qty-error" value={String(terms.moq)} />
+        <p class="field__error" id="gc-qty-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-freight">Freight for the whole shipment</label>
+        <input class="field__input" id="gc-freight" name="freight" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-freight-error" value="300" />
+        <p class="field__error" id="gc-freight-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-insurance">Insurance for the whole shipment <span class="field__req">(optional)</span></label>
+        <input class="field__input" id="gc-insurance" name="insurance" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-insurance-error" value="0" />
+        <p class="field__error" id="gc-insurance-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-duty">Import duty rate (%)</label>
+        <input class="field__input" id="gc-duty" name="duty" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-duty-error" value="12" />
+        <p class="field__error" id="gc-duty-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-basis">Duty is charged on</label>
+        <select class="field__input" id="gc-basis" name="basis">
+          <option value="cif" selected>Goods, freight and insurance (UK, EU and many others)</option>
+          <option value="fob">Goods value only (United States)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-fees">Other fees for the shipment <span class="field__req">(broker, delivery)</span></label>
+        <input class="field__input" id="gc-fees" name="fees" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-fees-error" value="150" />
+        <p class="field__error" id="gc-fees-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="gc-retail">Retail price per piece, before sales tax <span class="field__req">(optional)</span></label>
+        <input class="field__input" id="gc-retail" name="retail" type="text" inputmode="decimal" autocomplete="off" aria-describedby="gc-retail-error" value="30" />
+        <p class="field__error" id="gc-retail-error" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Calculate</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>Landed cost per piece</dt><dd data-out="unit"></dd></div>
+        <div class="tool__figure"><dt>Landed cost for the order</dt><dd data-out="total"></dd></div>
+        <div class="tool__figure"><dt>Duty for the order</dt><dd data-out="duty"></dd></div>
+        <div class="tool__figure"><dt>Gross margin at retail</dt><dd data-out="margin"></dd></div>
+      </dl>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>What the garment cost calculator adds up</h2>
+  <div class="table-wrap" role="region" aria-label="Cost parts" tabindex="0">
+    <table class="table--stack">
+      <caption>The parts of landed cost</caption>
+      <thead>
+        <tr><th scope="col">Part</th><th scope="col">What to enter</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Part">Factory price</td><td data-label="What to enter">The price per piece on your quote, at {terms.incoterm} {terms.port} for our orders</td></tr>
+        <tr><td data-label="Part">Freight and insurance</td><td data-label="What to enter">The quote from your forwarder for the whole shipment</td></tr>
+        <tr><td data-label="Part">Duty</td><td data-label="What to enter">The rate for your product code from your customs broker</td></tr>
+        <tr><td data-label="Part">Other fees</td><td data-label="What to enter">Brokerage, port fees and delivery to your warehouse</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Use the same currency in every box. The figures that load first are only an example, so replace them with your own.</p>
+
+  <h2>Cost per piece and why it beats the factory price</h2>
+  <p>
+    Two quotes can look far apart until freight and duty are added. Comparing cost per piece in your warehouse is the only fair test, which is why this tool starts as a landed cost calculator. It is also the number
+    your retail price has to cover.
+  </p>
+
+  <h2>Profit margin on clothing</h2>
+  <p>
+    Gross margin is the share of the retail price left after landed cost. A 30.00 retail price on a 7.50 landed cost leaves a 75% margin, or a 4× markup.
+    That margin still has to pay for marketing, returns, packaging and running the business.
+  </p>
+  <p>
+    Our guide on <a href="/insights/how-to-calculate-landed-cost/">how to calculate landed cost</a> walks through a full example. Duty rates change, so always
+    confirm the current rate for your product code with a broker.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, format, readNumber } from '../../scripts/tools/common';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="cost"]');
+
+  if (form) {
+    const field = (id: string): HTMLInputElement => byId<HTMLInputElement>(form, id);
+    const basis = byId<HTMLSelectElement>(form, 'gc-basis');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+
+    const run = (): void => {
+      const price = readNumber(field('gc-price'), { label: 'factory price', min: 0.01 });
+      const qty = readNumber(field('gc-qty'), { label: 'quantity', min: 1 });
+      const freight = readNumber(field('gc-freight'), { label: 'freight cost', min: 0 });
+      const insurance = readNumber(field('gc-insurance'), { label: 'insurance cost', min: 0, required: false }) ?? 0;
+      const dutyRate = readNumber(field('gc-duty'), { label: 'duty rate', min: 0, max: 100 });
+      const fees = readNumber(field('gc-fees'), { label: 'other fees', min: 0, required: false }) ?? 0;
+      const retail = readNumber(field('gc-retail'), { label: 'retail price', min: 0.01, required: false });
+      if (price === null || qty === null || freight === null || dutyRate === null || !result || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const pieces = Math.round(qty);
+      const goods = price * pieces;
+      const dutyBase = basis.value === 'fob' ? goods : goods + freight + insurance;
+      const duty = (dutyBase * dutyRate) / 100;
+      const total = goods + freight + insurance + duty + fees;
+      const unit = total / pieces;
+      out('unit')!.textContent = format(unit, 2);
+      out('total')!.textContent = format(total, 2);
+      out('duty')!.textContent = format(duty, 2);
+      if (retail) {
+        const margin = ((retail - unit) / retail) * 100;
+        out('margin')!.textContent = `${format(margin, 1)}%`;
+        note.textContent = `Retail is ${format(retail / unit, 1)}× your landed cost. Freight, duty and fees add ${format(unit - price, 2)} to each piece.`;
+      } else {
+        out('margin')!.textContent = 'Add a retail price';
+        note.textContent = `Freight, duty and fees add ${format(unit - price, 2)} to each piece.`;
+      }
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

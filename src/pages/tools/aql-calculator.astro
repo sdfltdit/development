@@ -1,0 +1,172 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { terms } from '../../data/company';
+
+const aqlOptions = ['0.65', '1.0', '1.5', '2.5', '4.0', '6.5'];
+
+const faqs = [
+  {
+    q: 'What AQL sample size do I need for 1,000 garments?',
+    a: 'At general inspection level II, a lot of 1,000 pieces falls in code letter J, which means a sample of 80 pieces. At AQL 2.5 the lot passes with up to 5 major defects.',
+  },
+  {
+    q: 'What are accept and reject numbers?',
+    a: 'The accept number is the most defects allowed in the sample for the lot to pass. The reject number is one higher. If the defects found reach it, the lot fails.',
+  },
+  {
+    q: 'Why is inspection level II the default?',
+    a: 'Inspection level II is the general level the standard uses unless a buyer says otherwise. Level I takes a smaller sample and level III a larger one, for lower or higher risk.',
+  },
+  {
+    q: 'Why does the sample size sometimes jump?',
+    a: 'Some table cells hold an arrow instead of a plan. The arrow points to the nearest plan above or below, and that plan has its own sample size.',
+  },
+  {
+    q: 'What AQL do clothing buyers usually choose?',
+    a: `Many clothing buyers use AQL 2.5 for major defects and 4.0 for minor ones, with zero critical defects allowed. Our own final inspection uses AQL ${terms.aql}.`,
+  },
+];
+---
+
+<ToolPage
+  path="/tools/aql-calculator/"
+  heading="AQL calculator for clothing inspections"
+  lead="This free AQL calculator gives the sample size and the accept and reject numbers for a garment inspection. Enter the number of pieces in the lot, pick an inspection level and the AQL for major and minor defects. It follows the single sampling plans for normal inspection in ISO 2859-1."
+  toolHeading="Find your sampling plan"
+  faqs={faqs}
+  related={[
+    { title: 'AQL inspection explained', href: '/insights/aql-inspection-explained/', summary: 'How AQL sampling works, defect classes and how to read a report.' },
+    { title: 'Garment quality inspection', href: '/quality-inspection-service/', summary: 'The checks we run on every order, from fabric to final audit.' },
+  ]}
+>
+  <form slot="tool" class="tool" data-tool="aql" novalidate>
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="aql-lot">Lot size (pieces in the order)</label>
+        <input class="field__input" id="aql-lot" name="lot" type="text" inputmode="numeric" autocomplete="off" aria-describedby="aql-lot-error" value="1000" />
+        <p class="field__error" id="aql-lot-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="aql-level">Inspection level</label>
+        <select class="field__input" id="aql-level" name="level">
+          <option value="I">Level I (smaller sample)</option>
+          <option value="II" selected>Level II (general, most used)</option>
+          <option value="III">Level III (larger sample)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="aql-major">AQL for major defects</label>
+        <select class="field__input" id="aql-major" name="major">
+          {aqlOptions.map((v) => <option value={v} selected={v === '2.5'}>{v}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="aql-minor">AQL for minor defects</label>
+        <select class="field__input" id="aql-minor" name="minor">
+          {aqlOptions.map((v) => <option value={v} selected={v === '4.0'}>{v}</option>)}
+        </select>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Calculate</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <dl class="tool__figures">
+        <div class="tool__figure"><dt>Code letter</dt><dd data-out="letter"></dd></div>
+        <div class="tool__figure"><dt>Major defects: sample, accept, reject</dt><dd data-out="major"></dd></div>
+        <div class="tool__figure"><dt>Minor defects: sample, accept, reject</dt><dd data-out="minor"></dd></div>
+        <div class="tool__figure"><dt>Critical defects allowed</dt><dd>0</dd></div>
+      </dl>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>How the AQL calculator reads the tables</h2>
+  <ol>
+    <li><strong>Lot size to code letter.</strong> The order size and inspection level give a letter from A to R.</li>
+    <li><strong>Code letter to sample size.</strong> Each letter has a fixed number of pieces to pull at random.</li>
+    <li><strong>AQL to limits.</strong> The AQL you choose sets how many defects the sample may hold.</li>
+    <li><strong>Arrows.</strong> Where the table shows an arrow, the AQL calculator follows it to the nearest plan and uses that sample size.</li>
+  </ol>
+
+  <h2>AQL sample size by lot size at level II</h2>
+  <div class="table-wrap" role="region" aria-label="Sample sizes at level II" tabindex="0">
+    <table class="table--stack">
+      <caption>Common lot sizes at level II, AQL 2.5 major and 4.0 minor</caption>
+      <thead>
+        <tr><th scope="col">Lot size</th><th scope="col">Sample</th><th scope="col">Major accept and reject</th><th scope="col">Minor accept and reject</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Lot size">281 to 500</td><td data-label="Sample">50</td><td data-label="Major">3 and 4</td><td data-label="Minor">5 and 6</td></tr>
+        <tr><td data-label="Lot size">501 to 1,200</td><td data-label="Sample">80</td><td data-label="Major">5 and 6</td><td data-label="Minor">7 and 8</td></tr>
+        <tr><td data-label="Lot size">1,201 to 3,200</td><td data-label="Sample">125</td><td data-label="Major">7 and 8</td><td data-label="Minor">10 and 11</td></tr>
+        <tr><td data-label="Lot size">3,201 to 10,000</td><td data-label="Sample">200</td><td data-label="Major">10 and 11</td><td data-label="Minor">14 and 15</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Reading accept and reject numbers</h2>
+  <p>
+    Count the major and minor defects found in the sample separately. If either count reaches its reject number, the lot fails. Any critical defect, such as
+    a broken needle, fails the lot at once.
+  </p>
+  <p>
+    When the major and minor plans need different sample sizes, many inspectors pull the larger sample and judge each class against its own numbers. Agree
+    this with your inspector before the visit.
+  </p>
+
+  <h2>Choosing an inspection level and AQL</h2>
+  <ul>
+    <li>Use inspection level II unless you have a reason to change it.</li>
+    <li>Choose a lower AQL, such as 1.5, for lines where faults cost more.</li>
+    <li>Write the AQL and defect list into your order before production starts.</li>
+  </ul>
+  <p>
+    Our guide to <a href="/insights/aql-inspection-explained/">AQL inspection</a> explains defect classes in detail. The tables follow ISO 2859-1, so for
+    contract terms always check the standard itself.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, readNumber } from '../../scripts/tools/common';
+  import { AQL_LEVELS, samplingPlan } from '../../scripts/tools/aql';
+
+  type Level = 'I' | 'II' | 'III';
+  type Aql = (typeof AQL_LEVELS)[number];
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="aql"]');
+
+  if (form) {
+    const lot = byId<HTMLInputElement>(form, 'aql-lot');
+    const level = byId<HTMLSelectElement>(form, 'aql-level');
+    const major = byId<HTMLSelectElement>(form, 'aql-major');
+    const minor = byId<HTMLSelectElement>(form, 'aql-minor');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    const out = (key: string): HTMLElement | null => form.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const describe = (p: ReturnType<typeof samplingPlan>): string =>
+      `${p.sampleSize.toLocaleString('en-GB')} pcs, accept ${p.accept}, reject ${p.reject}`;
+
+    const run = (): void => {
+      const size = readNumber(lot, { label: 'lot size', min: 2, max: 10000000 });
+      if (size === null || !result || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const whole = Math.round(size);
+      const lvl = level.value as Level;
+      const majorPlan = samplingPlan(whole, lvl, major.value as Aql);
+      const minorPlan = samplingPlan(whole, lvl, minor.value as Aql);
+      out('letter')!.textContent = majorPlan.letter;
+      out('major')!.textContent = describe(majorPlan);
+      out('minor')!.textContent = describe(minorPlan);
+      note.textContent =
+        majorPlan.fullInspection || minorPlan.fullInspection
+          ? 'The sample size equals the lot, so check every piece.'
+          : `Pull ${Math.max(majorPlan.sampleSize, minorPlan.sampleSize).toLocaleString('en-GB')} pieces at random from the finished, packed lot.`;
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

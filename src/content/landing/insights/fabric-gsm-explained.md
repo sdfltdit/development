@@ -57,6 +57,7 @@ related:
   - /french-terry-clothing-manufacturer/
   - /insights/aql-inspection-explained/
   - /insights/fabric-types-glossary/
+  - /tools/gsm-converter/
 published: 2026-11-26
 updated: 2026-11-26
 ---

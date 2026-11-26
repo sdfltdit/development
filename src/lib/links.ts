@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import { pages } from '../data/pages';
 import { fill } from '../data/company';
+import { tools } from '../data/tools';
 
 export interface LinkCard {
   title: string;
@@ -25,6 +26,8 @@ export async function linkCards(hrefs: string[]): Promise<LinkCard[]> {
   return hrefs.map((href) => {
     const entry = entries.find((e) => `/${e.id}/` === href);
     if (entry) return { title: entry.data.navLabel, href, summary: fill(entry.data.cardSummary) };
+    const tool = tools.find((t) => t.path === href);
+    if (tool) return { title: tool.name, href, summary: tool.summary };
     const card = staticCards[href];
     if (card) return { ...card, href };
     const page = pages.find((p) => p.path === href);

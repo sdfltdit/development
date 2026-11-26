@@ -1,0 +1,201 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'How do I work out a shrinkage percentage?',
+    a: 'Take the length before washing, subtract the length after, divide by the length before and multiply by 100. A 50 cm mark that shrinks to 48 cm is 4% shrinkage.',
+  },
+  {
+    q: 'What is a shrinkage allowance?',
+    a: 'It is the extra length and width added to a pattern so that a garment shrinks to the right size. Pattern makers use the shrinkage from the fabric test to set it.',
+  },
+  {
+    q: 'How do I run a simple wash test?',
+    a: 'Mark a large square on a spare piece of fabric. Launder it as your care label will instruct, then measure it again in both directions.',
+  },
+  {
+    q: 'What shrinkage is normal for cotton jersey?',
+    a: 'It depends on how the fabric was finished. Compacted or pre-shrunk jersey shrinks far less than untreated fabric, so always use the mill test report for your fabric.',
+  },
+  {
+    q: 'Why measure length and width separately?',
+    a: 'Fabric rarely shrinks the same amount both ways. Knits often shrink more in length and can even grow in width, so each direction needs its own allowance.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/shrinkage-calculator/"
+  heading="Fabric shrinkage calculator for garments"
+  lead="This free fabric shrinkage calculator turns before and after wash measurements into a shrinkage percentage for length and width. A second calculator then shows the size to cut a pattern piece so the garment finishes at the measurement you want."
+  toolHeading="Measure shrinkage and set the cut size"
+  faqs={faqs}
+  related={[
+    { title: 'Fabric types glossary', href: '/insights/fabric-types-glossary/', summary: 'Knit and woven fabrics, fibres, finishes and what each one suits.' },
+    { title: 'Clothing pattern making service', href: '/pattern-making-service/', summary: 'Patterns, grading and fit corrections made in our factory.' },
+  ]}
+>
+  <div slot="tool" class="tool-pair">
+    <form class="tool" data-tool="shrink-test" novalidate>
+      <h3>1. Shrinkage from a wash test</h3>
+      <div class="tool__grid">
+        <div class="field">
+          <label class="field__label" for="sh-len-before">Length before washing (cm)</label>
+          <input class="field__input" id="sh-len-before" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sh-len-before-error" value="50" />
+          <p class="field__error" id="sh-len-before-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="sh-len-after">Length after washing (cm)</label>
+          <input class="field__input" id="sh-len-after" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sh-len-after-error" value="48" />
+          <p class="field__error" id="sh-len-after-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="sh-wid-before">Width before washing (cm)</label>
+          <input class="field__input" id="sh-wid-before" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sh-wid-before-error" value="50" />
+          <p class="field__error" id="sh-wid-before-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="sh-wid-after">Width after washing (cm)</label>
+          <input class="field__input" id="sh-wid-after" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sh-wid-after-error" value="49" />
+          <p class="field__error" id="sh-wid-after-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="tool__actions">
+        <button class="button button--primary" type="submit">Calculate shrinkage</button>
+      </div>
+      <div class="tool__result" data-result aria-live="polite" hidden>
+        <dl class="tool__figures">
+          <div class="tool__figure"><dt>Length shrinkage</dt><dd data-out="len"></dd></div>
+          <div class="tool__figure"><dt>Width shrinkage</dt><dd data-out="wid"></dd></div>
+        </dl>
+        <p class="tool__note" data-note></p>
+      </div>
+    </form>
+
+    <form class="tool" data-tool="shrink-cut" novalidate>
+      <h3>2. Size to cut for a finished measurement</h3>
+      <div class="tool__grid">
+        <div class="field">
+          <label class="field__label" for="sc-finished">Finished measurement you want (cm)</label>
+          <input class="field__input" id="sc-finished" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sc-finished-error" value="72" />
+          <p class="field__error" id="sc-finished-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="sc-shrink">Expected shrinkage in that direction (%)</label>
+          <input class="field__input" id="sc-shrink" type="text" inputmode="decimal" autocomplete="off" aria-describedby="sc-shrink-error" value="4" />
+          <p class="field__error" id="sc-shrink-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="tool__actions">
+        <button class="button button--primary" type="submit">Calculate cut size</button>
+      </div>
+      <div class="tool__result" data-result aria-live="polite" hidden>
+        <dl class="tool__figures">
+          <div class="tool__figure"><dt>Cut the pattern at</dt><dd data-out="cut"></dd></div>
+          <div class="tool__figure"><dt>Allowance added</dt><dd data-out="add"></dd></div>
+        </dl>
+      </div>
+    </form>
+  </div>
+
+  <h2>How the fabric shrinkage calculator works</h2>
+  <p>
+    Shrinkage percentage is the change in length divided by the length before washing. The tool does this for each direction, because
+    fabric seldom shrinks evenly.
+  </p>
+  <div class="table-wrap" role="region" aria-label="Shrinkage formulas" tabindex="0">
+    <table class="table--stack">
+      <caption>Formulas used</caption>
+      <thead>
+        <tr><th scope="col">Result</th><th scope="col">Formula</th><th scope="col">Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Result">Shrinkage percentage</td><td data-label="Formula">(before − after) ÷ before × 100</td><td data-label="Example">(50 − 48) ÷ 50 × 100 = 4%</td></tr>
+        <tr><td data-label="Result">Cut size</td><td data-label="Formula">finished ÷ (1 − shrinkage ÷ 100)</td><td data-label="Example">72 ÷ 0.96 = 75 cm</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Running a wash test</h2>
+  <ol>
+    <li>Cut a piece of fabric at least 60 by 60 cm and mark a 50 by 50 cm square on it.</li>
+    <li>Wash and dry it the way the care label will tell shoppers to.</li>
+    <li>Lay it flat without stretching and measure the marks again.</li>
+    <li>Enter the numbers above to get the shrinkage percentage for each direction.</li>
+  </ol>
+  <p>For bulk fabric, use the shrinkage on the mill test report and check it on a sample garment.</p>
+
+  <h2>Setting a shrinkage allowance</h2>
+  <p>
+    A shrinkage allowance makes the pattern a little bigger so the garment shrinks to size. Simply adding the percentage on top falls slightly short, which
+    is why the cut size divides by the shrunk share instead.
+  </p>
+  <p>
+    Garment-dyed and washed styles shrink in the factory, so their allowance matters most. Our <a href="/pattern-making-service/">pattern making service</a>
+    builds it into every pattern piece.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, format, readNumber, setError } from '../../scripts/tools/common';
+
+  const test = document.querySelector<HTMLFormElement>('form[data-tool="shrink-test"]');
+  const cut = document.querySelector<HTMLFormElement>('form[data-tool="shrink-cut"]');
+
+  const pct = (before: number, after: number): number => ((before - after) / before) * 100;
+
+  if (test) {
+    const v = (id: string): HTMLInputElement => byId<HTMLInputElement>(test, id);
+    const result = test.querySelector<HTMLElement>('[data-result]');
+    const note = test.querySelector<HTMLElement>('[data-note]');
+    const out = (key: string): HTMLElement | null => test.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const run = (): void => {
+      const lb = readNumber(v('sh-len-before'), { label: 'length before washing', min: 1 });
+      const la = readNumber(v('sh-len-after'), { label: 'length after washing', min: 0.1 });
+      const wb = readNumber(v('sh-wid-before'), { label: 'width before washing', min: 1 });
+      const wa = readNumber(v('sh-wid-after'), { label: 'width after washing', min: 0.1 });
+      if (lb === null || la === null || wb === null || wa === null || !result || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const len = pct(lb, la);
+      const wid = pct(wb, wa);
+      out('len')!.textContent = `${format(len, 1)}%`;
+      out('wid')!.textContent = `${format(wid, 1)}%`;
+      note.textContent =
+        len < 0 || wid < 0
+          ? 'A negative figure means the fabric grew in that direction, which can happen across the width of knits.'
+          : 'Use these figures as the shrinkage allowance for each direction in the pattern.';
+      result.hidden = false;
+    };
+    bindForm(test, run);
+    run();
+  }
+
+  if (cut) {
+    const finished = byId<HTMLInputElement>(cut, 'sc-finished');
+    const shrink = byId<HTMLInputElement>(cut, 'sc-shrink');
+    const result = cut.querySelector<HTMLElement>('[data-result]');
+    const out = (key: string): HTMLElement | null => cut.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const run = (): void => {
+      const f = readNumber(finished, { label: 'finished measurement', min: 0.1 });
+      const s = readNumber(shrink, { label: 'expected shrinkage', min: 0, max: 30 });
+      if (f === null || s === null || !result) {
+        if (result) result.hidden = true;
+        return;
+      }
+      if (s >= 100) {
+        setError(shrink, 'The expected shrinkage must be under 100.');
+        result.hidden = true;
+        return;
+      }
+      const c = f / (1 - s / 100);
+      out('cut')!.textContent = `${format(c, 1)} cm`;
+      out('add')!.textContent = `${format(c - f, 1)} cm`;
+      result.hidden = false;
+    };
+    bindForm(cut, run);
+    run();
+  }
+</script>

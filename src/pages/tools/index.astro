@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { pageMeta } from '../../data/pages';
+import { tools } from '../../data/tools';
+import { itemList, standardPage, type Crumb } from '../../lib/schema';
+
+const meta = pageMeta('/tools/');
+const crumbs: Crumb[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Free tools', path: '/tools/' },
+];
+
+const schema = standardPage({
+  path: meta.path,
+  title: meta.title,
+  description: meta.description,
+  dateModified: meta.updated,
+  crumbs,
+  type: 'CollectionPage',
+  extra: [itemList(meta.path, tools.map((t) => ({ name: t.name, path: t.path })))],
+});
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} schema={schema} crumbs={crumbs}>
+  <PageHeader
+    eyebrow="Free tools"
+    title="Free clothing manufacturing tools for brands"
+    lead="These free clothing manufacturing tools help you plan an order before you talk to a factory. Convert fabric weights, find an inspection sample size, plan your dates, check your cost per piece and set a shrinkage allowance. They run in your browser, need no sign-up and store nothing."
+    updated={meta.updated}
+  />
+
+  <section class="section" aria-labelledby="tools-heading">
+    <div class="container">
+      <h2 id="tools-heading" class="block-heading">All tools</h2>
+      <ul class="tools-grid">
+        {
+          tools.map((t) => (
+            <li class="card">
+              <h3>
+                <a class="card__link" href={t.path}>{t.name}</a>
+              </h3>
+              <p class="card__text">{t.summary}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container prose">
+      <h2>How to use these clothing manufacturing tools</h2>
+      <p>
+        Each tool does one job and shows the formula behind it, so you can check the maths yourself. Most brands use them in this order: pick a fabric weight,
+        plan the timeline, work out the cost per piece, then agree how goods will be checked.
+      </p>
+      <p>
+        The results are a guide for planning. Your written quote from the factory sets the real price and dates. For the reasoning behind each tool, read our
+        guides on <a href="/insights/fabric-gsm-explained/">fabric GSM</a>, <a href="/insights/aql-inspection-explained/">AQL inspection</a> and
+        <a href="/insights/how-to-calculate-landed-cost/">landed cost</a>.
+      </p>
+      <h3>Which tool answers which question</h3>
+      <div class="table-wrap" role="region" aria-label="Which tool to use" tabindex="0">
+        <table class="table--stack">
+          <caption>Pick a tool by the question you have</caption>
+          <thead>
+            <tr><th scope="col">Your question</th><th scope="col">Tool to use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Question">My mill quotes ounces but my tech pack uses GSM. What is the match?</td><td data-label="Tool"><a href="/tools/gsm-converter/">GSM converter</a></td></tr>
+            <tr><td data-label="Question">How many pieces should the inspector check, and how many faults are allowed?</td><td data-label="Tool"><a href="/tools/aql-calculator/">AQL calculator</a></td></tr>
+            <tr><td data-label="Question">When do I need to start so stock lands before my launch?</td><td data-label="Tool"><a href="/tools/lead-time-calculator/">Lead time calculator</a></td></tr>
+            <tr><td data-label="Question">What does each piece cost once freight and duty are paid, and what margin is left?</td><td data-label="Tool"><a href="/tools/garment-cost-calculator/">Garment cost calculator</a></td></tr>
+            <tr><td data-label="Question">My test swatch shrank. How big should the pattern be?</td><td data-label="Tool"><a href="/tools/shrinkage-calculator/">Fabric shrinkage calculator</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Your data stays with you</h3>
+      <p>
+        Every calculation happens on your own device. Nothing you type is sent to us or saved, and there is no account to create. Close the page and the
+        numbers are gone. Open it again and you start with a clean sheet.
+      </p>
+      <h3>When to talk to us instead</h3>
+      <p>
+        If a number looks wrong for your product, or you want figures for a style we have not priced, send a photo or tech pack through the
+        <a href="/get-a-quote/">quote form</a>. You get a written reply with real prices, sample dates and the minimum for your order.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

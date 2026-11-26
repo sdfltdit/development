@@ -162,6 +162,12 @@ const STRICT = new Set([
   '/direct-factory-vs-trading-company-vs-buying-agent/',
   '/in-house-qc-vs-third-party-inspection-vs-no-inspection/',
   '/freight-forwarder-vs-factory-arranged-shipping-vs-diy/',
+  '/tools/',
+  '/tools/aql-calculator/',
+  '/tools/garment-cost-calculator/',
+  '/tools/gsm-converter/',
+  '/tools/lead-time-calculator/',
+  '/tools/shrinkage-calculator/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

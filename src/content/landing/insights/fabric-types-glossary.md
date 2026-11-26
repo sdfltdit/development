@@ -51,6 +51,7 @@ related:
   - /french-terry-clothing-manufacturer/
   - /corduroy-clothing-manufacturer/
   - /insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers/
+  - /tools/shrinkage-calculator/
 published: 2026-11-26
 updated: 2026-11-26
 ---

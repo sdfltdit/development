@@ -1,0 +1,217 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+import { terms } from '../../data/company';
+
+const range = (value: string): [number, number] => {
+  const [min, max] = value.split('–').map(Number);
+  return [min, max ?? min];
+};
+const [sampleMin, sampleMax] = range(terms.sampleDays);
+const [bulkMin, bulkMax] = range(terms.bulkDays);
+const quoteDays = Math.ceil(terms.quoteHours / 24);
+
+const faqs = [
+  {
+    q: 'How do I find my order by date?',
+    a: 'Enter the date you need goods in your warehouse. The calculator works back through shipping, bulk, sampling and quoting, using the slowest end of each range, to give the latest safe start date.',
+  },
+  {
+    q: 'Why does the calculator show a range of dates?',
+    a: 'Sampling and bulk each take a range of days, depending on the style and the season. The early date is the best case and the late date is the one to plan around.',
+  },
+  {
+    q: 'What slows a production timeline down most?',
+    a: 'Slow approvals and extra sample rounds. Each extra round adds a full sample cycle plus your review time, which is why a complete tech pack saves weeks.',
+  },
+  {
+    q: 'How do I get the shipping time?',
+    a: 'Ask your freight forwarder for door-to-door time from the port of export to your warehouse, including customs. Sea freight takes weeks, while air takes days.',
+  },
+  {
+    q: 'Does launch date planning need a buffer?',
+    a: 'Yes. Add a week or two for photos, stock checks and anything that runs late. Peak seasons and public holidays can also add time at ports and factories.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/lead-time-calculator/"
+  heading="Lead time calculator for clothing orders"
+  lead={`This free lead time calculator plans when a clothing order reaches you. Pick a start date, the number of sample rounds, your review time and the shipping time from your forwarder. It uses our own timings: a quote within ${terms.quoteHours} hours, samples in ${terms.sampleDays} days and bulk in ${terms.bulkDays} days.`}
+  toolHeading="Plan your timeline"
+  faqs={faqs}
+  related={[
+    { title: 'Clothing manufacturing lead time', href: '/guides/clothing-manufacturing-lead-time/', summary: 'What each stage involves and how to shorten it.' },
+    { title: 'Clothing production process', href: '/work-process/', summary: 'Our steps from quote to shipment, with the payment at each one.' },
+  ]}
+>
+  <form
+    slot="tool"
+    class="tool"
+    data-tool="lead-time"
+    data-quote={quoteDays}
+    data-sample-min={sampleMin}
+    data-sample-max={sampleMax}
+    data-bulk-min={bulkMin}
+    data-bulk-max={bulkMax}
+    novalidate
+  >
+    <div class="tool__grid">
+      <div class="field">
+        <label class="field__label" for="lt-start">Start date (when you send your brief)</label>
+        <input class="field__input" id="lt-start" name="start" type="date" aria-describedby="lt-start-error" />
+        <p class="field__error" id="lt-start-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="lt-rounds">Sample rounds</label>
+        <select class="field__input" id="lt-rounds" name="rounds">
+          <option value="1">1 round</option>
+          <option value="2" selected>2 rounds</option>
+          <option value="3">3 rounds</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="lt-review">Your review days per sample round</label>
+        <input class="field__input" id="lt-review" name="review" type="text" inputmode="numeric" autocomplete="off" aria-describedby="lt-review-error" value="5" />
+        <p class="field__error" id="lt-review-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="lt-ship">Shipping and customs days <span class="field__req">(ask your forwarder)</span></label>
+        <input class="field__input" id="lt-ship" name="ship" type="text" inputmode="numeric" autocomplete="off" aria-describedby="lt-ship-error" value="30" />
+        <p class="field__error" id="lt-ship-error" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="lt-target">Date you need goods <span class="field__req">(optional)</span></label>
+        <input class="field__input" id="lt-target" name="target" type="date" aria-describedby="lt-target-error" />
+        <p class="field__error" id="lt-target-error" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="tool__actions">
+      <button class="button button--primary" type="submit">Plan dates</button>
+    </div>
+    <div class="tool__result" data-result aria-live="polite" hidden>
+      <div class="table-wrap" role="region" aria-label="Planned dates" tabindex="0">
+        <table class="table--stack">
+          <caption>Planned dates, earliest to latest</caption>
+          <thead>
+            <tr><th scope="col">Stage</th><th scope="col">Finishes between</th></tr>
+          </thead>
+          <tbody data-rows></tbody>
+        </table>
+      </div>
+      <p class="tool__note" data-note></p>
+    </div>
+  </form>
+
+  <h2>How the lead time calculator adds up your dates</h2>
+  <ol>
+    <li><strong>Quote.</strong> Up to {terms.quoteHours} hours after your brief.</li>
+    <li><strong>Sampling.</strong> {terms.sampleDays} days per round, plus your review time for each round.</li>
+    <li><strong>Bulk production.</strong> {terms.bulkDays} days after you approve the final sample.</li>
+    <li><strong>Shipping and customs.</strong> The door-to-door time your forwarder gives you.</li>
+  </ol>
+  <p>Each stage starts when the one before it ends, so the dates build into a full production timeline.</p>
+
+  <h2>Working back to an order by date</h2>
+  <p>
+    Add the date you need goods and the calculator works backwards from it. It uses the slowest end of every range, so the order by date it shows still
+    leaves you on time if each stage runs long.
+  </p>
+
+  <h2>Launch date planning tips</h2>
+  <ul>
+    <li>Send a complete tech pack to cut sample rounds.</li>
+    <li>Reply to samples quickly, because review days add up across rounds.</li>
+    <li>Book freight early in busy seasons.</li>
+    <li>Keep a buffer between arrival and your launch for photos and stock checks.</li>
+  </ul>
+  <p>
+    Our guide to <a href="/guides/clothing-manufacturing-lead-time/">clothing manufacturing lead time</a> explains each stage in depth. These dates are a
+    planning aid. Your written quote sets the timings for your order.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, clearError, readNumber, setError } from '../../scripts/tools/common';
+
+  const form = document.querySelector<HTMLFormElement>('form[data-tool="lead-time"]');
+
+  const toDate = (value: string): Date | null => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+    const d = new Date(`${value}T00:00:00`);
+    return Number.isNaN(d.getTime()) ? null : d;
+  };
+  const addDays = (d: Date, days: number): Date => {
+    const next = new Date(d);
+    next.setDate(next.getDate() + days);
+    return next;
+  };
+  const show = (d: Date): string => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const iso = (d: Date): string => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+  if (form) {
+    const n = (key: string): number => Number(form.dataset[key]);
+    const start = byId<HTMLInputElement>(form, 'lt-start');
+    const rounds = byId<HTMLSelectElement>(form, 'lt-rounds');
+    const review = byId<HTMLInputElement>(form, 'lt-review');
+    const ship = byId<HTMLInputElement>(form, 'lt-ship');
+    const target = byId<HTMLInputElement>(form, 'lt-target');
+    const result = form.querySelector<HTMLElement>('[data-result]');
+    const rows = form.querySelector<HTMLElement>('[data-rows]');
+    const note = form.querySelector<HTMLElement>('[data-note]');
+    if (!start.value) start.value = iso(new Date());
+
+    const run = (): void => {
+      clearError(start);
+      clearError(target);
+      const from = toDate(start.value);
+      if (!from) setError(start, 'Choose a start date.');
+      const reviewDays = readNumber(review, { label: 'review days', min: 0, max: 60 });
+      const shipDays = readNumber(ship, { label: 'shipping days', min: 1, max: 120 });
+      const goal = target.value ? toDate(target.value) : null;
+      if (target.value && !goal) setError(target, 'Choose a valid date.');
+      if (!from || reviewDays === null || shipDays === null || !result || !rows || !note) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const r = Number(rounds.value);
+      const stages: [string, number, number][] = [
+        ['Quote received', n('quote'), n('quote')],
+        [`Final sample approved (${r} ${r === 1 ? 'round' : 'rounds'})`, r * (n('sampleMin') + reviewDays), r * (n('sampleMax') + reviewDays)],
+        ['Bulk production finished', n('bulkMin'), n('bulkMax')],
+        ['Goods in your warehouse', shipDays, shipDays],
+      ];
+      let early = from;
+      let late = from;
+      rows.replaceChildren(
+        ...stages.map(([label, min, max]) => {
+          early = addDays(early, min);
+          late = addDays(late, max);
+          const tr = document.createElement('tr');
+          const stage = document.createElement('td');
+          stage.dataset.label = 'Stage';
+          stage.textContent = label;
+          const td = document.createElement('td');
+          td.dataset.label = 'Finishes between';
+          td.textContent = early.getTime() === late.getTime() ? show(early) : `${show(early)} and ${show(late)}`;
+          tr.append(stage, td);
+          return tr;
+        }),
+      );
+      const total = stages.reduce((sum, [, , max]) => sum + max, 0);
+      if (goal) {
+        const orderBy = addDays(goal, -total);
+        note.textContent =
+          orderBy < from
+            ? `To have goods by ${show(goal)}, you would have needed to start by ${show(orderBy)}. Cut sample rounds or use faster freight.`
+            : `To have goods by ${show(goal)}, send your brief by ${show(orderBy)} at the latest.`;
+      } else {
+        note.textContent = `Plan around the later date. The whole timeline takes up to ${total} days.`;
+      }
+      result.hidden = false;
+    };
+
+    bindForm(form, run);
+    run();
+  }
+</script>

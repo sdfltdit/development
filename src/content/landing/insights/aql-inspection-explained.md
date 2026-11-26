@@ -57,7 +57,7 @@ related:
   - /how-to-find-clothing-manufacturer/
   - /work-process/
   - /insights/stitch-quality-spi-explained/
-  - /in-house-qc-vs-third-party-inspection-vs-no-inspection/
+  - /tools/aql-calculator/
 published: 2026-11-26
 updated: 2026-11-26
 ---
