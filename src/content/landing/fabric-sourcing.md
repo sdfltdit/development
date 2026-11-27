@@ -46,7 +46,7 @@ serviceType: Fabric sourcing
 citations: []
 faq:
   - q: Do you sell fabric on its own?
-    a: No. We source fabric for clothing we produce for you, from {{moq}} {{moqUnit}}. We do not sell fabric by the metre.
+    a: No. Fabric is bought or made only for clothing we produce for you, and is never sold by the metre.
   - q: How does custom fabric development work?
     a: "You share the weight, feel, fibre and colour you want. Below {{customFabricFrom}} pieces per style we find the closest ready fabric. From that size, the fabric can be made to your spec."
   - q: Which fabric mills do you work with?

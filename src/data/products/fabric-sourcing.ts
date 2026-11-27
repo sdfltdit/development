@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const fabricSourcing: ProductContent = {
   slug: 'fabric-sourcing',
@@ -19,6 +20,7 @@ export const fabricSourcing: ProductContent = {
     { title: 'Yarn for knitwear', text: 'Cotton, wool and blends for flat knitting.' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'clothing on sourced fabric', 'Most orders use ready fabric from local mills and stock, or fabric imported from {{fabricImports}}. Fabric knitted or woven to your spec starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'routes',

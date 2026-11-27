@@ -134,7 +134,12 @@ Each fabric has its own production page with minimums, weights and the details w
 - **Textured and warm knits:** [waffle knit clothing manufacturer](/waffle-knit-clothing-manufacturer/) and [fleece clothing manufacturer](/fleece-clothing-manufacturer/).
 - **Double knits:** [ponte clothing manufacturer](/ponte-clothing-manufacturer/) and [scuba fabric clothing manufacturer](/scuba-fabric-clothing-manufacturer/).
 - **Sheer and draping wovens:** [chiffon clothing manufacturer](/chiffon-clothing-manufacturer/), [georgette clothing manufacturer](/georgette-clothing-manufacturer/) and [crepe clothing manufacturer](/crepe-clothing-manufacturer/).
-- **Hard-wearing wovens:** [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/).
+- **Light summer wovens:** [voile clothing manufacturer](/voile-clothing-manufacturer/) and [seersucker clothing manufacturer](/seersucker-clothing-manufacturer/).
+- **Shirting wovens:** [chambray clothing manufacturer](/chambray-clothing-manufacturer/) and [flannel clothing manufacturer](/flannel-clothing-manufacturer/).
+- **Hard-wearing wovens:** [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/) and [gabardine clothing manufacturer](/gabardine-clothing-manufacturer/).
+- **Soft and gauze wovens:** [muslin clothing manufacturer](/muslin-clothing-manufacturer/).
+- **Patterned and wool weaves:** [jacquard clothing manufacturer](/jacquard-clothing-manufacturer/) and [tweed clothing manufacturer](/tweed-clothing-manufacturer/).
+- **Occasion fabrics:** [velvet clothing manufacturer](/velvet-clothing-manufacturer/) and [taffeta clothing manufacturer](/taffeta-clothing-manufacturer/).
 
 ## Choosing fabric for clothing
 

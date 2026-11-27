@@ -34,7 +34,7 @@ export const productParts: CataloguePart[] = [
   { id: 'knit', heading: 'Knit garments', lead: 'Clothing cut from knitted fabric such as jersey, rib, fleece and interlock. It stretches and moves with the body.' },
   { id: 'woven', heading: 'Woven garments', lead: 'Clothing cut from woven fabric such as poplin, twill, denim and canvas. It holds its shape and takes structure well.' },
   { id: 'accessories', heading: 'Accessories and home textiles', lead: 'Small items that complete a range or a merch drop, plus textiles for the home and pets.' },
-  { id: 'more', heading: 'Ways of working, ranges and fabrics', lead: 'Start from how you want to work with us, who the range is for or the fabric you want.' },
+  { id: 'more', heading: 'Ways of working, ranges and fabrics', lead: 'Start from how you want to work with us, who the range is for, or one of our fibre and fabric pages.' },
 ];
 
 export const productGroups: CatalogueGroup[] = [
@@ -130,11 +130,32 @@ export const productGroups: CatalogueGroup[] = [
     slugs: ['clothing-manufacturers-for-women', 'menswear-manufacturer', 'plus-size-clothing-manufacturer', 'maternity-clothing-manufacturer', 'adaptive-clothing-manufacturer', 'modest-fashion-manufacturer'],
   },
   {
-    id: 'fabrics',
+    id: 'fibres',
     part: 'more',
-    heading: 'By fabric and finish',
-    lead: 'Start from the material or the effect you want.',
-    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'viscose-clothing-manufacturer', 'nylon-clothing-manufacturer', 'chiffon-clothing-manufacturer', 'fleece-clothing-manufacturer', 'ripstop-clothing-manufacturer', 'crepe-clothing-manufacturer', 'georgette-clothing-manufacturer', 'acrylic-clothing-manufacturer', 'spandex-clothing-manufacturer', 'mesh-clothing-manufacturer', 'scuba-fabric-clothing-manufacturer', 'ponte-clothing-manufacturer', 'waffle-knit-clothing-manufacturer', 'rib-knit-clothing-manufacturer', 'jersey-knit-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
+    heading: 'By fibre',
+    lead: 'Start from the material your range is made of.',
+    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'hemp-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'viscose-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'nylon-clothing-manufacturer', 'acrylic-clothing-manufacturer', 'spandex-clothing-manufacturer'],
+  },
+  {
+    id: 'knit-fabrics',
+    part: 'more',
+    heading: 'By knit fabric',
+    lead: 'Knits that stretch and move, from jersey to scuba.',
+    slugs: ['jersey-knit-clothing-manufacturer', 'rib-knit-clothing-manufacturer', 'waffle-knit-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'fleece-clothing-manufacturer', 'velour-clothing-manufacturer', 'ponte-clothing-manufacturer', 'scuba-fabric-clothing-manufacturer', 'mesh-clothing-manufacturer'],
+  },
+  {
+    id: 'woven-fabrics',
+    part: 'more',
+    heading: 'By woven fabric',
+    lead: 'Wovens from sheer chiffon to hard-wearing ripstop.',
+    slugs: ['chiffon-clothing-manufacturer', 'georgette-clothing-manufacturer', 'crepe-clothing-manufacturer', 'voile-clothing-manufacturer', 'muslin-clothing-manufacturer', 'seersucker-clothing-manufacturer', 'chambray-clothing-manufacturer', 'flannel-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'gabardine-clothing-manufacturer', 'ripstop-clothing-manufacturer', 'tweed-clothing-manufacturer', 'taffeta-clothing-manufacturer'],
+  },
+  {
+    id: 'finishes',
+    part: 'more',
+    heading: 'Patterns, pile and finishes',
+    lead: 'Fabrics and effects that make a piece stand out.',
+    slugs: ['jacquard-clothing-manufacturer', 'velvet-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
   },
 ];
 
