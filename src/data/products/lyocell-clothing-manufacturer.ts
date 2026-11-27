@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const lyocell: ProductContent = {
   slug: 'lyocell-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const lyocell: ProductContent = {
     { title: 'Lounge sets', text: 'Shirts and shorts for sleep and travel.' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'lyocell clothing', 'Lyocell comes as jersey and as wovens such as twill and denim, each with its own colour minimum. At the minimum we cut from ready lyocell. Lyocell made to your own spec starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

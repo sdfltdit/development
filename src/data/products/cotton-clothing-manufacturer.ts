@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const cotton: ProductContent = {
   slug: 'cotton-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const cotton: ProductContent = {
     { title: 'Cotton kidswear', text: 'Soft jersey and interlock tees, sets and bodysuits.' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'cotton clothing', 'Cotton is knitted into jersey, piqué and fleece, or woven into poplin, twill and canvas, and each has its own colour minimum. At the minimum we cut from ready cotton fabric. Cotton knitted or woven to your own construction starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'yarn',

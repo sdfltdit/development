@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const velour: ProductContent = {
   slug: 'velour-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const velour: ProductContent = {
     { title: 'Kids’ sets', text: 'Soft velour sets for children.', href: '/kids-baby-clothing-manufacturer/', cta: 'Kids clothing manufacturer details' },
   ],
   blocks: [
+    fabricMoqBlock(['knit'], 'velour clothing', 'Velour is a knit, so the knit colour minimum applies. At the minimum we cut from ready velour. Velour knitted to your own weight starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

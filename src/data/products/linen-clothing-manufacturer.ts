@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const linen: ProductContent = {
   slug: 'linen-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const linen: ProductContent = {
     { title: 'Tops and skirts', text: 'Simple tops, camis and midi skirts in light linen.' },
   ],
   blocks: [
+    fabricMoqBlock(['woven'], 'linen clothing', 'Linen is woven, so the woven colour minimum applies. At the minimum we cut from ready linen. Linen woven to your own weight and blend starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

@@ -54,6 +54,21 @@ export const nylon: ProductContent = {
         { label: 'Claims', text: 'UV, chlorine and water-repellent ratings taken from the mill report' },
       ],
     },
+    {
+      kind: 'checklist',
+      id: 'risks',
+      eyebrow: 'Buyer risks',
+      heading: 'Nylon problems buyers meet, and how we prevent them',
+      lead: 'These are the complaints shoppers make most about nylon activewear and outerwear.',
+      items: [
+        { label: 'See-through leggings', text: 'fabric weight and stretch checked for opacity on the sample' },
+        { label: 'Trims in a different shade', text: 'zips, elastics and thread dyed to the same lab dip' },
+        { label: 'Prints crack', text: 'heat transfers chosen for stretch and tested on the sample' },
+        { label: 'Shiny pressing marks', text: 'low-heat pressing with a cloth between iron and fabric' },
+        { label: 'Loose fit after wear', text: 'stretch recovery checked against the mill data' },
+        { label: 'Costly sample rounds', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
+      ],
+    },
   ],
   noPrice: {
     heading: 'How nylon clothing is priced',
@@ -100,7 +115,7 @@ export const nylon: ProductContent = {
     heading: 'Nylon or polyester',
     paragraphs: [
       'If you need sublimation print or a lower price, see our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. For nylon made from recycled material, see our <a href="/recycled-clothing-manufacturer/">recycled clothing manufacturer</a> page.',
-      'Nylon is also the base of many ripstops, covered on our <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> page.',
+      'Nylon is also the base of many ripstops, covered on our <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> page. To check colour against your lab dip, try our free <a href="/tools/delta-e-calculator/">delta E calculator</a>.',
     ],
   },
   faqHeading: 'Nylon clothing questions',

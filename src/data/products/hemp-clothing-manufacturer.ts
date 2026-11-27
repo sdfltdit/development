@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const hemp: ProductContent = {
   slug: 'hemp-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const hemp: ProductContent = {
     { title: 'Bags and caps', text: 'Hemp canvas totes and six-panel caps.', href: '/tote-bag-manufacturer/', cta: 'Tote bag manufacturer details' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'hemp clothing', 'Hemp is knitted into jersey and fleece blends, or woven into canvas and twill, and each has its own colour minimum. At the minimum we cut from ready hemp fabric. Hemp made to your own spec starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

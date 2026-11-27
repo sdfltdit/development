@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const wool: ProductContent = {
   slug: 'wool-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const wool: ProductContent = {
     { title: 'Accessories', text: 'Scarves and beanies in wool yarns.', href: '/scarf-manufacturer/', cta: 'Scarf manufacturer details' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'wool clothing', 'Wool is knitted into jerseys and sweaters, or woven into coatings and suitings, and each has its own colour minimum. At the minimum we use ready wool fabric or yarn. Wool made to your own spec starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

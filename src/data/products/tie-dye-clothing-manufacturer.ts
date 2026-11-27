@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const tieDye: ProductContent = {
   slug: 'tie-dye-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const tieDye: ProductContent = {
     { title: 'Kids’ tie-dye', text: 'Soft tees and sets for children.' },
   ],
   blocks: [
+    fabricMoqBlock(['knit'], 'tie-dye clothing', 'Tie-dye is done on knitted cotton garments, so the knit colour minimum applies. Each colourway counts as one colour. Fabric knitted to your own weight starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'patterns',

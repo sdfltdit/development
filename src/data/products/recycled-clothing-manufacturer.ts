@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const recycledClothingManufacturer: ProductContent = {
   slug: 'recycled-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const recycledClothingManufacturer: ProductContent = {
     { title: 'Bags', text: 'Totes and drawstring bags in recycled canvas or polyester.', href: '/tote-bag-manufacturer/', cta: 'Tote bag manufacturer details' },
   ],
   blocks: [
+    fabricMoqBlock(['knit', 'woven'], 'recycled clothing', 'Recycled fabrics come as knits and wovens, each with its own colour minimum. At the minimum we cut from ready recycled fabric with the mill\'s documents. Recycled fabric made to your own spec starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fibres',
@@ -114,7 +116,7 @@ export const recycledClothingManufacturer: ProductContent = {
   },
   quote: {
     heading: 'What to send for a recycled clothing quote',
-    lead: 'This helps us confirm fabric, trims and documents on the first quote.',
+    lead: 'This helps a recycled clothing manufacturer confirm fabric, trims and documents on the first quote.',
     items: [
       'Sketches, photos or a sample garment',
       'Fabric type, weight and stretch',

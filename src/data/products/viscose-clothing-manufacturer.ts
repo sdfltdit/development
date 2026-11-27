@@ -54,6 +54,21 @@ export const viscose: ProductContent = {
         { label: 'Care label', text: 'wash instructions written to match the test result' },
       ],
     },
+    {
+      kind: 'checklist',
+      id: 'risks',
+      eyebrow: 'Buyer risks',
+      heading: 'Viscose problems buyers meet, and how we prevent them',
+      lead: 'These are the complaints shoppers make most about viscose clothing.',
+      items: [
+        { label: 'Shrinks after washing', text: 'every lot is wash-tested and the pattern adjusted' },
+        { label: 'Prints bleed or fade', text: 'colour fastness checked on the mill report and a test wash' },
+        { label: 'Seams pull open', text: 'seam allowance and stitch length set for a slippery weave' },
+        { label: 'Sizes drift between colours', text: 'each colour lot cut and measured separately' },
+        { label: 'Garment feels stiff', text: 'fabric chosen and finished for the drape you approved' },
+        { label: 'Costly sample rounds', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
+      ],
+    },
   ],
   noPrice: {
     heading: 'How viscose clothing is priced',
@@ -100,7 +115,7 @@ export const viscose: ProductContent = {
     heading: 'Viscose and its relatives',
     paragraphs: [
       'Viscose, modal and lyocell all come from wood pulp but behave differently. See our <a href="/modal-clothing-manufacturer/">modal clothing manufacturer</a> and <a href="/lyocell-clothing-manufacturer/">lyocell clothing manufacturer</a> pages, or our <a href="/bamboo-clothing-manufacturer/">bamboo clothing manufacturer</a> page for viscose made from bamboo.',
-      'Our <a href="/insights/fabric-types-glossary/">fabric types glossary</a> explains each fabric family in plain words.',
+      'Our <a href="/insights/fabric-types-glossary/">fabric types glossary</a> explains each fabric family in plain words. Our free <a href="/tools/shrinkage-calculator/">fabric shrinkage calculator</a> and <a href="/tools/wash-care-label-generator/">care label generator</a> help you plan wash tests and labels.',
     ],
   },
   faqHeading: 'Viscose clothing questions',

@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const modal: ProductContent = {
   slug: 'modal-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const modal: ProductContent = {
     { title: 'Maternity basics', text: 'Stretchy tops and dresses with room to grow.', href: '/maternity-clothing-manufacturer/', cta: 'Maternity clothing manufacturer details' },
   ],
   blocks: [
+    fabricMoqBlock(['knit'], 'modal clothing', 'Modal is mostly used as a knit, so the knit colour minimum applies. At the minimum we cut from ready modal jersey. Modal knitted to your own weight and blend starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabric',

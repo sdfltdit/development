@@ -1,4 +1,5 @@
 import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
 
 export const bamboo: ProductContent = {
   slug: 'bamboo-clothing-manufacturer',
@@ -19,6 +20,7 @@ export const bamboo: ProductContent = {
     { title: 'Leggings', text: 'Soft leggings for lounge and yoga, with a wide waistband.' },
   ],
   blocks: [
+    fabricMoqBlock(['knit'], 'bamboo clothing', 'Our bamboo clothing is cut from knitted viscose made from bamboo, so the knit colour minimum applies. At the minimum we cut from ready fabric. Fabric knitted to your own weight starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'prose',
       id: 'labelling',

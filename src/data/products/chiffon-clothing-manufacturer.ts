@@ -54,6 +54,21 @@ export const chiffon: ProductContent = {
         { label: 'Linings', text: 'slips or linings agreed at sample stage for coverage' },
       ],
     },
+    {
+      kind: 'checklist',
+      id: 'risks',
+      eyebrow: 'Buyer risks',
+      heading: 'Chiffon problems buyers meet, and how we prevent them',
+      lead: 'These are the complaints shoppers make most about chiffon clothing.',
+      items: [
+        { label: 'Too see-through', text: 'lining or slip agreed on the sample before bulk' },
+        { label: 'Wavy hems', text: 'rolled hems sewn on fine needles with even tension' },
+        { label: 'Seams split', text: 'French seams and a slippage check on every lot' },
+        { label: 'Snags and pulls', text: 'fine needles and careful handling at every station' },
+        { label: 'Uneven pleats or gathers', text: 'set by template and checked on the sample' },
+        { label: 'Costly sample rounds', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
+      ],
+    },
   ],
   noPrice: {
     heading: 'How chiffon clothing is priced',
@@ -100,7 +115,7 @@ export const chiffon: ProductContent = {
     heading: 'Related fabrics and products',
     paragraphs: [
       'For a heavier fluid drape, see our <a href="/viscose-clothing-manufacturer/">viscose clothing manufacturer</a> page. For real silk, see our <a href="/silk-clothing-manufacturer/">silk clothing manufacturer</a> page.',
-      'Modest brands often pair chiffon with jersey, as our <a href="/modest-fashion-manufacturer/">modest fashion manufacturer</a> page explains.',
+      'Modest brands often pair chiffon with jersey, as our <a href="/modest-fashion-manufacturer/">modest fashion manufacturer</a> page explains. Our free <a href="/tools/wash-care-label-generator/">care label generator</a> writes the wording for delicate fabrics.',
     ],
   },
   faqHeading: 'Chiffon clothing questions',

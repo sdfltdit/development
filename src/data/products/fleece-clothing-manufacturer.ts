@@ -54,13 +54,27 @@ export const fleece: ProductContent = {
         { label: 'Ribs', text: 'cuffs and waistbands matched in colour and stretch' },
       ],
     },
+    {
+      kind: 'checklist',
+      id: 'risks',
+      eyebrow: 'Buyer risks',
+      heading: 'Fleece problems buyers meet, and how we prevent them',
+      lead: 'These are the complaints shoppers make most about fleece clothing.',
+      items: [
+        { label: 'Pilling after a few washes', text: 'yarn and finish chosen for the use, graded in the mill report' },
+        { label: 'Shrinks after washing', text: 'wash test on every lot and allowance in the pattern' },
+        { label: 'Ribs in a different shade', text: 'cuffs and hems dyed to the same lab dip as the body' },
+        { label: 'Prints crack', text: 'ink and cure set for fleece and tested on the strike-off' },
+        { label: 'Twisted side seams', text: 'fabric relaxed before cutting and checked on the sample' },
+        { label: 'Costly sample rounds', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
+      ],
+    },
   ],
-  noPrice: {
-    heading: 'How fleece clothing is priced',
-    paragraphs: [
-      'Fabric weight and fibre move the price most, followed by zips, prints and embroidery. Our hoodie, sweatshirt and joggers prices are listed on the product pages.',
-      'You get a written quote within {{quoteHours}} hours. See our <a href="/pricing/">clothing manufacturing prices</a> page for prices at {{moq}} and {{bulkQty}} pieces.',
-    ],
+  prices: {
+    heading: 'Fleece clothing prices per piece',
+    lead: 'Starting FOB prices for our core fleece products at the minimum and at a larger run, with a one-colour print or no print.',
+    rows: ['Crewneck sweatshirt', 'Pullover hoodie', 'Zip hoodie', 'Joggers'],
+    caption: 'Starting FOB fleece clothing prices per piece in USD',
   },
   processHeading: 'How a fleece order runs',
   processLead: 'Six steps from your brief to shipped fleece clothing.',
@@ -100,7 +114,7 @@ export const fleece: ProductContent = {
     heading: 'Fleece or French terry',
     paragraphs: [
       'For a lighter sweat with an unbrushed loop back, see our <a href="/french-terry-clothing-manufacturer/">French terry clothing manufacturer</a> page. Our <a href="/insights/fabric-gsm-explained/">fabric GSM guide</a> explains how weight changes the feel.',
-      'For outdoor layers, see our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page.',
+      'For outdoor layers, see our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page. Our free <a href="/tools/gsm-converter/">GSM converter</a> turns ounces into GSM, and the <a href="/tools/shrinkage-calculator/">fabric shrinkage calculator</a> checks a wash test.',
     ],
   },
   faqHeading: 'Fleece clothing questions',

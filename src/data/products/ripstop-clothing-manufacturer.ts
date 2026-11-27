@@ -53,6 +53,21 @@ export const ripstop: ProductContent = {
         { label: 'Finishes', text: 'garment wash or water-repellent finish as agreed' },
       ],
     },
+    {
+      kind: 'checklist',
+      id: 'risks',
+      eyebrow: 'Buyer risks',
+      heading: 'Ripstop problems buyers meet, and how we prevent them',
+      lead: 'These are the complaints shoppers make most about ripstop clothing.',
+      items: [
+        { label: 'Pockets tear away', text: 'bar-tacks at every corner and stress point' },
+        { label: 'Colour fades unevenly', text: 'shade and wash checked on the sample before bulk' },
+        { label: 'Zips or snaps fail', text: 'hardware tested for function before packing' },
+        { label: 'Stiff and noisy fabric', text: 'finish chosen to match the feel you approved' },
+        { label: 'Water soaks through', text: 'repellent finish rated in the mill report, seams taped where needed' },
+        { label: 'Costly sample rounds', text: 'up to {{sampleCorrections}} rounds of corrections are free' },
+      ],
+    },
   ],
   noPrice: {
     heading: 'How ripstop clothing is priced',
@@ -99,7 +114,7 @@ export const ripstop: ProductContent = {
     heading: 'Ripstop and related fabrics',
     paragraphs: [
       'Nylon ripstop is one of many nylon fabrics on our <a href="/nylon-clothing-manufacturer/">nylon clothing manufacturer</a> page. For fully waterproof pieces with taped seams, see our <a href="/rain-jacket-manufacturer/">rain jacket manufacturer</a> page.',
-      'Workwear brands can also see our <a href="/coverall-manufacturer/">coverall manufacturer</a> page.',
+      'Workwear brands can also see our <a href="/coverall-manufacturer/">coverall manufacturer</a> page. Our free <a href="/tools/garment-cost-calculator/">garment cost calculator</a> helps you price a cargo range.',
     ],
   },
   faqHeading: 'Ripstop clothing questions',
