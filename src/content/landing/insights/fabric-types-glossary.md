@@ -128,11 +128,13 @@ The three basic fabric weave types are plain, twill and satin. Most woven fabric
 
 Each fabric has its own production page with minimums, weights and the details we check.
 
-- **Fibres:** [viscose clothing manufacturer](/viscose-clothing-manufacturer/) and [nylon clothing manufacturer](/nylon-clothing-manufacturer/).
+- **Fibres:** [viscose clothing manufacturer](/viscose-clothing-manufacturer/), [nylon clothing manufacturer](/nylon-clothing-manufacturer/) and [acrylic clothing manufacturer](/acrylic-clothing-manufacturer/).
+- **Stretch and sports knits:** [spandex clothing manufacturer](/spandex-clothing-manufacturer/) and [mesh clothing manufacturer](/mesh-clothing-manufacturer/).
 - **Everyday knits:** [jersey knit clothing manufacturer](/jersey-knit-clothing-manufacturer/) and [rib knit clothing manufacturer](/rib-knit-clothing-manufacturer/).
 - **Textured and warm knits:** [waffle knit clothing manufacturer](/waffle-knit-clothing-manufacturer/) and [fleece clothing manufacturer](/fleece-clothing-manufacturer/).
 - **Double knits:** [ponte clothing manufacturer](/ponte-clothing-manufacturer/) and [scuba fabric clothing manufacturer](/scuba-fabric-clothing-manufacturer/).
-- **Wovens:** [chiffon clothing manufacturer](/chiffon-clothing-manufacturer/) and [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/).
+- **Sheer and draping wovens:** [chiffon clothing manufacturer](/chiffon-clothing-manufacturer/), [georgette clothing manufacturer](/georgette-clothing-manufacturer/) and [crepe clothing manufacturer](/crepe-clothing-manufacturer/).
+- **Hard-wearing wovens:** [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/).
 
 ## Choosing fabric for clothing
 

@@ -127,7 +127,7 @@ export const sweater: ProductContent = {
     heading: 'Starting a knitwear range with us',
     paragraphs: [
       'Many brands start with one crew-neck jumper and one cardigan in a single yarn, in two or three colours. Sticking to one yarn keeps the first order simple.',
-      'Making cut-and-sew sweatshirts too? See our <a href="/hoodie-manufacturer/">hoodie manufacturer</a> page for fleece styles.',
+      'Making cut-and-sew sweatshirts too? See our <a href="/hoodie-manufacturer/">hoodie manufacturer</a> page for fleece styles. For easy-care yarn, see our <a href="/acrylic-clothing-manufacturer/">acrylic clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Sweater and knitwear questions',
