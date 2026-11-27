@@ -113,6 +113,7 @@ export const garmentPackingAndExport: ProductContent = {
     paragraphs: [
       'Not sure whether to use your own forwarder? Our guide on <a href="/freight-forwarder-vs-factory-arranged-shipping-vs-diy/">freight forwarder vs factory shipping</a> compares the options, and our <a href="/insights/customs-clearance-guide/">customs clearance guide</a> explains the import side.',
       'Each step before shipment is set out in our <a href="/work-process/">clothing production process</a>, and our <a href="/insights/payment-terms-lc-vs-tt/">payment terms guide</a> explains how LC documents work.',
+      'Want the detail on packing itself? See our pages on <a href="/custom-hang-tags/">custom hang tags</a>, <a href="/garment-polybags/">polybags for clothing</a> and <a href="/garment-export-cartons/">garment export cartons</a>.',
     ],
   },
   faqHeading: 'Packing and export questions',

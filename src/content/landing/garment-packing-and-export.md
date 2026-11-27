@@ -57,10 +57,10 @@ related:
   - /freight-forwarder-vs-factory-arranged-shipping-vs-diy/
   - /insights/incoterms-explained/
   - /insights/customs-clearance-guide/
-  - /insights/payment-terms-lc-vs-tt/
+  - /garment-export-cartons/
   - /garment-labels/
   - /quality-inspection-service/
-  - /insights/how-to-calculate-landed-cost/
+  - /garment-polybags/
 published: 2026-11-27
 updated: 2026-11-27
 ---

@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/custom-hang-tags/', '/garment-polybags/', '/garment-export-cartons/',
   '/eu-epr-explained/', '/insights/cpsia-compliance-guide/', '/insights/digital-product-passport-textile/', '/insights/eu-clothing-regulations-2026/', '/insights/circular-fashion-guide/',
   '/',
   '/t-shirt-manufacturer/',
