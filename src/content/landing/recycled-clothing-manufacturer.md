@@ -58,7 +58,7 @@ related:
   - /activewear-manufacturer/
   - /puffer-jacket-manufacturer/
   - /fleece-jacket-manufacturer/
-  - /tote-bag-manufacturer/
+  - /insights/circular-fashion-guide/
   - /fabric-sourcing/
 published: 2026-11-27
 updated: 2026-11-27

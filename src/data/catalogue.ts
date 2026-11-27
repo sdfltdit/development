@@ -269,4 +269,10 @@ export const guideGroups: CatalogueGroup[] = [
     lead: 'Pricing an order, paying for it and getting it home.',
     slugs: ['insights/manufacturing-costs', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
   },
+  {
+    id: 'rules',
+    heading: 'Rules, compliance and circular fashion',
+    lead: 'The product safety and environmental rules that shape what brands can sell.',
+    slugs: ['insights/eu-clothing-regulations-2026', 'eu-epr-explained', 'insights/digital-product-passport-textile', 'insights/cpsia-compliance-guide', 'insights/circular-fashion-guide'],
+  },
 ];

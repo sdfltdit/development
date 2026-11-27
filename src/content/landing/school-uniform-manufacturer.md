@@ -66,7 +66,7 @@ related:
   - /skirts-manufacturer/
   - /blazer-manufacturer/
   - /sweater-manufacturer/
-  - /varsity-jacket-manufacturer/
+  - /insights/cpsia-compliance-guide/
   - /drawstring-bag-manufacturer/
 published: 2026-11-26
 updated: 2026-11-26

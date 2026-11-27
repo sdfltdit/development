@@ -67,7 +67,7 @@ related:
   - /adaptive-clothing-manufacturer/
   - /baby-bib-manufacturer/
   - /school-uniform-manufacturer/
-  - /bamboo-clothing-manufacturer/
+  - /insights/cpsia-compliance-guide/
 published: 2026-11-26
 updated: 2026-11-26
 ---

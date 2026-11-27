@@ -56,7 +56,7 @@ related:
   - /linen-clothing-manufacturer/
   - /certifications/
   - /low-moq-clothing-manufacturers/
-  - /tools/wash-care-label-generator/
+  - /insights/eu-clothing-regulations-2026/
 published: 2026-11-27
 updated: 2026-11-27
 ---

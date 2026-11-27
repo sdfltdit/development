@@ -3,9 +3,4 @@
 /agreement/
 /careers/
 /case-studies/
-/eu-epr-explained/
-/insights/circular-fashion-guide/
-/insights/cpsia-compliance-guide/
-/insights/digital-product-passport-textile/
-/insights/eu-clothing-regulations-2026/
 /visa-docs/
