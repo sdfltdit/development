@@ -167,6 +167,8 @@ Put the total next to your planned selling price. The gap is your gross margin b
 4. **Check trade preferences.** Some origins pay lower duty in some markets. Ask your broker.
 5. **Get the HS code right** before you order, not at the port.
 
+Once you know landed cost, our guide on [how to price clothing](/how-to-price-clothing/) turns it into wholesale and retail prices.
+
 ## Where SDF Clothing fits
 
 We quote {{incoterm}} {{port}}, so you can add your own freight, duty and fees to get landed cost. Our [price list](/pricing/) shows our prices on that basis, and our guide to [clothing brand startup costs](/clothing-brand-startup-costs/) has a full launch budget worksheet. Orders start at {{moq}} {{moqUnit}}.

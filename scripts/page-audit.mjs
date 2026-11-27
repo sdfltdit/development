@@ -10,6 +10,8 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/insights/how-to-import-clothing-from-bangladesh/', '/insights/garment-testing-guide/', '/how-to-price-clothing/',
+  '/cricket-uniform-manufacturer/', '/netball-dress-manufacturer/', '/volleyball-uniform-manufacturer/', '/hockey-jersey-manufacturer/', '/american-football-jersey-manufacturer/', '/bed-linen-manufacturer/', '/towel-manufacturer/', '/blanket-manufacturer/',
   '/insights/types-of-garment-samples/', '/insights/garment-measurement-tolerance/', '/insights/fabric-consumption-calculation/', '/insights/fabric-inspection-4-point-system/', '/tools/fabric-consumption-calculator/',
   '/custom-zippers/', '/custom-buttons/', '/snap-buttons/', '/custom-rivets/', '/hook-and-loop-tape/', '/garment-buckles/', '/garment-elastic/', '/custom-drawcords/', '/garment-tapes/', '/lace-trims/', '/garment-interlining/', '/sewing-thread/', '/shoulder-pads/', '/bra-components/', '/garment-eyelets/', '/custom-hangers/', '/custom-tissue-paper/', '/custom-clothing-boxes/', '/custom-packaging-stickers/', '/custom-mailer-bags/',
   '/custom-hang-tags/', '/garment-polybags/', '/garment-export-cartons/',

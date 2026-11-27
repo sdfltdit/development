@@ -102,6 +102,8 @@ For a closer look, read our guides to [Bangladesh vs China clothing manufacturin
 5. **Pay the company, not a person.** Only pay the company bank account named on the proforma invoice. Be wary of anyone who asks you to pay a personal account or a new account by email.
 6. **Agree how quality is checked.** Ask which AQL level the factory uses and whether your own inspector can visit before shipment.
 
+Our guide on [how to import clothing from Bangladesh](/insights/how-to-import-clothing-from-bangladesh/) walks through shipping, documents and duty after you choose a factory.
+
 ## About SDF Clothing
 
 Still weighing up a factory nearer home? Read our guide to [overseas vs local clothing manufacturer](/overseas-vs-local-clothing-manufacturer/) options first.

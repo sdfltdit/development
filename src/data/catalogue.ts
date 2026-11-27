@@ -57,7 +57,7 @@ export const productGroups: CatalogueGroup[] = [
     part: 'knit',
     heading: 'Teamwear and combat sports',
     lead: 'Kits for clubs, schools, leagues and gyms.',
-    slugs: ['football-kit-manufacturer', 'basketball-uniform-manufacturer', 'baseball-uniform-manufacturer', 'rugby-shirt-manufacturer', 'cheerleading-uniform-manufacturer', 'esports-jersey-manufacturer', 'fightwear-manufacturer'],
+    slugs: ['football-kit-manufacturer', 'basketball-uniform-manufacturer', 'baseball-uniform-manufacturer', 'rugby-shirt-manufacturer', 'cheerleading-uniform-manufacturer', 'esports-jersey-manufacturer', 'fightwear-manufacturer', 'cricket-uniform-manufacturer', 'netball-dress-manufacturer', 'volleyball-uniform-manufacturer', 'hockey-jersey-manufacturer', 'american-football-jersey-manufacturer'],
   },
   {
     id: 'underwear',
@@ -113,7 +113,7 @@ export const productGroups: CatalogueGroup[] = [
     part: 'accessories',
     heading: 'Home, sleep and pets',
     lead: 'Textiles for the home, travel and four-legged customers.',
-    slugs: ['silk-pillowcase-manufacturer', 'sleep-mask-manufacturer', 'cushion-cover-manufacturer', 'tea-towel-manufacturer', 'table-linen-manufacturer', 'pet-clothing-manufacturer'],
+    slugs: ['silk-pillowcase-manufacturer', 'sleep-mask-manufacturer', 'cushion-cover-manufacturer', 'tea-towel-manufacturer', 'table-linen-manufacturer', 'pet-clothing-manufacturer', 'bed-linen-manufacturer', 'towel-manufacturer', 'blanket-manufacturer'],
   },
   {
     id: 'ways-of-working',
@@ -237,7 +237,7 @@ export const guideGroups: CatalogueGroup[] = [
     id: 'starting',
     heading: 'Starting and growing a brand',
     lead: 'From the first idea to steady reorders.',
-    slugs: ['how-to-start-a-clothing-brand', 'clothing-brand-startup-costs', 'how-to-scale-a-clothing-brand', 'private-label-clothing-guide', 'print-on-demand-vs-private-label', 'insights/moq-meaning-clothing'],
+    slugs: ['how-to-start-a-clothing-brand', 'clothing-brand-startup-costs', 'how-to-price-clothing', 'how-to-scale-a-clothing-brand', 'private-label-clothing-guide', 'print-on-demand-vs-private-label', 'insights/moq-meaning-clothing'],
   },
   {
     id: 'factories',
@@ -261,13 +261,13 @@ export const guideGroups: CatalogueGroup[] = [
     id: 'quality',
     heading: 'Fabric, decoration and quality',
     lead: 'What makes a garment last, and how faults are caught.',
-    slugs: ['insights/fabric-types-glossary', 'insights/fabric-gsm-explained', 'insights/knitting-defects-explained', 'insights/fabric-inspection-4-point-system', 'insights/shade-variation-explained', 'insights/stitch-quality-spi-explained', 'insights/printing-methods-compared', 'insights/embroidery-problems-explained', 'insights/garment-finishing-explained', 'insights/aql-inspection-explained', 'in-house-qc-vs-third-party-inspection-vs-no-inspection'],
+    slugs: ['insights/fabric-types-glossary', 'insights/fabric-gsm-explained', 'insights/knitting-defects-explained', 'insights/fabric-inspection-4-point-system', 'insights/garment-testing-guide', 'insights/shade-variation-explained', 'insights/stitch-quality-spi-explained', 'insights/printing-methods-compared', 'insights/embroidery-problems-explained', 'insights/garment-finishing-explained', 'insights/aql-inspection-explained', 'in-house-qc-vs-third-party-inspection-vs-no-inspection'],
   },
   {
     id: 'costs',
     heading: 'Costs, payment and shipping',
     lead: 'Pricing an order, paying for it and getting it home.',
-    slugs: ['insights/manufacturing-costs', 'insights/fabric-consumption-calculation', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
+    slugs: ['insights/manufacturing-costs', 'insights/fabric-consumption-calculation', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/how-to-import-clothing-from-bangladesh', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
   },
   {
     id: 'rules',

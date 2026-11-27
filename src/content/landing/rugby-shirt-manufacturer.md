@@ -56,7 +56,7 @@ faq:
   - q: Can fashion brands order rugby shirts with their own labels?
     a: Yes. We make lifestyle rugby shirts with your woven labels, embroidered logos and custom stripe colours.
 related:
-  - /t-shirt-manufacturer/
+  - /cricket-uniform-manufacturer/
   - /football-kit-manufacturer/
   - /activewear-manufacturer/
   - /streetwear-manufacturer/

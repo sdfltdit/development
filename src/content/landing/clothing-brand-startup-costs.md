@@ -169,6 +169,8 @@ Copy this launch budget worksheet and fill in your own numbers. Each line should
 4. **Keep decoration simple.** A one-colour print is included in our published prices.
 5. **Ship by sea when you can.** Sea freight costs far less than air for most clothing orders.
 
+When your costs are clear, our guide on [how to price clothing](/how-to-price-clothing/) shows how to set a wholesale price and a retail price.
+
 ## Where SDF Clothing fits
 
 We make clothing for new and growing brands from {{moq}} {{moqUnit}}, with colours and sizes sharing that total. Our [price list](/pricing/) shows real prices at our minimum and at {{bulkQty}} {{moqUnit}}. If your launch is smaller than our minimum, we will say so at the start. See [clothing manufacturer for startups](/clothing-manufacturers-for-startups/) for how a first order works with us.

@@ -119,7 +119,7 @@ Your broker can tell you what your country needs. Apply early, because getting a
 
 Duty depends on the tariff code, the country of origin and any trade deal. A certificate of origin can lower or remove duty where a deal or preference applies. Import tax, such as VAT or GST, is charged on top in many countries.
 
-Our guide on [how to calculate landed cost](/insights/how-to-calculate-landed-cost/) shows how duty and tax add to your cost per piece.
+Our guide on [how to calculate landed cost](/insights/how-to-calculate-landed-cost/) shows how duty and tax add to your cost per piece. For goods made in Bangladesh, see our guide on [import duty from Bangladesh](/insights/how-to-import-clothing-from-bangladesh/) by market.
 
 ## Samples and small parcels
 
