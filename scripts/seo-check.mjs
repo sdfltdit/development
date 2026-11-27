@@ -61,6 +61,11 @@ for (const file of htmlFiles(DIST)) {
     if (title.length < TITLE[0] || title.length > TITLE[1]) fail(`title is ${title.length} chars (want ${TITLE[0]}–${TITLE[1]}): "${title}"`);
     if (desc.length < DESC[0] || desc.length > DESC[1]) fail(`description is ${desc.length} chars (want ${DESC[0]}–${DESC[1]})`);
     if (!sitemapUrls.has(`${SITE}${route}`)) fail('indexable page missing from sitemap.xml');
+    const ogSlug = route.replace(/^\/|\/$/g, '').replaceAll('/', '--') || 'home';
+    const ogPath = `/og/${ogSlug}.png`;
+    if (!html.includes(`<meta property="og:image" content="${SITE}${ogPath}"`) || !existsSync(join(DIST, ogPath))) {
+      fail(`missing its own share image ${ogPath}. Run python3 scripts/generators/og-gen.py after a build, then build again`);
+    }
   } else if (sitemapUrls.has(`${SITE}${route}`)) {
     fail('noindex page is listed in sitemap.xml');
   }

@@ -131,7 +131,7 @@ export const recycledClothingManufacturer: ProductContent = {
     heading: 'Starting with recycled fabrics',
     paragraphs: [
       'Activewear and fleece are the easiest places to start, because recycled polyester and nylon perform much like new fibre there.',
-      'For polyester garments in general, see our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. For the wider picture, see our <a href="/sustainable-clothing-manufacturer/">sustainable clothing manufacturer</a> page.',
+      'For polyester garments in general, see our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. For the wider picture, see our <a href="/sustainable-clothing-manufacturer/">sustainable clothing manufacturer</a> page. Recycled content will need to be recorded in the EU product passport, explained in our <a href="/insights/digital-product-passport-textile/">digital product passport for textiles</a> guide.',
     ],
   },
   faqHeading: 'Recycled clothing questions',

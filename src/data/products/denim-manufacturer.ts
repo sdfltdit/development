@@ -131,7 +131,7 @@ export const denim: ProductContent = {
     heading: 'Starting a denim line with us',
     paragraphs: [
       'With a new denim manufacturer, most brands start with one fit in two washes, such as a rinse and a mid stone wash. Each wash is its own run, so fewer washes keep the size split deep.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Want the denim look in a lighter weight for shirts and dresses? See our <a href="/chambray-clothing-manufacturer/">chambray clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Denim and jeans questions',

@@ -131,7 +131,7 @@ export const sportsBra: ProductContent = {
     heading: 'Starting a sports bra line with us',
     paragraphs: [
       'Many brands start with one medium support bra with removable pads in three colours, cut to match a legging. It suits the widest range of customers while you learn what sells.',
-      'Selling swimwear too? See our <a href="/swimwear-manufacturer/">swimwear manufacturer</a> page, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Selling swimwear too? See our <a href="/swimwear-manufacturer/">swimwear manufacturer</a> page, or start with a <a href="/sample-service/">proto sample</a> only. Hooks, rings, sliders and cups are covered on our <a href="/bra-components/">bra components</a> page.',
     ],
   },
   faqHeading: 'Sports bra questions',

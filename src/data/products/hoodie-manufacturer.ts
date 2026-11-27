@@ -154,7 +154,7 @@ export const hoodie: ProductContent = {
     heading: 'Ordering heavyweight hoodies for the first time',
     paragraphs: [
       'Heavyweight hoodies sell well, but they cost more in fabric and freight. Many brands start with one heavy style and one midweight style, then reorder what sells. A good hoodie manufacturer keeps your pattern and lab dip on file, so the reorder matches the first run.',
-      'Not sure about quantities? Read how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or how a <a href="/sample-service/">proto sample</a> is made. Our <a href="/fleece-clothing-manufacturer/">fleece clothing manufacturer</a> page compares fleece types.',
+      'Not sure about quantities? Read how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or how a <a href="/sample-service/">proto sample</a> is made. Our <a href="/fleece-clothing-manufacturer/">fleece clothing manufacturer</a> page compares fleece types. Neck tape, binding and piping are covered on our <a href="/garment-tapes/">garment tapes</a> page.',
     ],
   },
   faqHeading: 'Hoodie manufacturing questions',

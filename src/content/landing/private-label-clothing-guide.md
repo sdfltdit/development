@@ -145,6 +145,8 @@ Private label may not suit you if:
 
 In those cases, print on demand or white label can be a better first step. Our guide to [print on demand vs private label](/print-on-demand-vs-private-label/) compares them.
 
+Setting your margins starts with our guide on [how to price clothing](/how-to-price-clothing/).
+
 ## Where SDF Clothing fits
 
 We make private label clothing to your specification, with your labels and packaging and never our name. Our [private label clothing manufacturer](/private-label-clothing-manufacturer/) page explains our terms. Orders start at {{moq}} {{moqUnit}}, with colours and sizes sharing that total, and a proto sample in {{sampleDays}} days.

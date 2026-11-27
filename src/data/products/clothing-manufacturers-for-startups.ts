@@ -126,7 +126,7 @@ export const clothingManufacturersForStartups: ProductContent = {
   first: {
     heading: 'Before you place a first order',
     paragraphs: [
-      'Before your first factory order, check that we are who we say we are on our <a href="/verify-us/">verify page</a>, and visit the factory if you can. Any clothing manufacturer for startups should welcome both.',
+      'Before your first factory order, check that we are who we say we are on our <a href="/verify-us/">verify page</a>, and visit the factory if you can. Any clothing manufacturer for startups should welcome both. Your first order is run by one person, as our <a href="/garment-merchandising-service/">garment merchandiser</a> page explains.',
       'Our guide on <a href="/how-to-start-a-clothing-brand/">how to start a clothing brand</a> covers the steps before you talk to a factory. To see what you could make, browse our <a href="/products/">custom clothing products</a>.',
     ],
   },

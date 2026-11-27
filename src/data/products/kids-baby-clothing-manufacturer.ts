@@ -149,7 +149,7 @@ export const kids: ProductContent = {
     heading: 'Starting a custom kids clothing line',
     paragraphs: [
       'Kids’ ranges have many sizes, so a first order can spread thin. Many brands start with two or three core pieces in a short size range. A bodysuit, a tee and a jogger is a common mix.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>. Soft baby fabrics have their own pages: <a href="/jersey-knit-clothing-manufacturer/">jersey knit clothing manufacturer</a> and <a href="/muslin-clothing-manufacturer/">muslin clothing manufacturer</a>.',
     ],
   },
   faqHeading: 'Kids and baby clothing questions',

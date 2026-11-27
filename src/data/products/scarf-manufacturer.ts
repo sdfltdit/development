@@ -128,7 +128,7 @@ export const scarf: ProductContent = {
     heading: 'Starting a scarf range with us',
     paragraphs: [
       'Fashion brands often start with one printed square in two colourways. Clubs usually start with one jacquard scarf in home colours. Both are quick to approve and easy to reorder.',
-      'Adding knitted hats to match? See our <a href="/sweater-manufacturer/">sweater manufacturer</a> page for knitwear.',
+      'Adding knitted hats to match? See our <a href="/sweater-manufacturer/">sweater manufacturer</a> page for knitwear. Knitted scarves are often made from acrylic yarn, as our <a href="/acrylic-clothing-manufacturer/">acrylic clothing manufacturer</a> page explains. Woven-in logos and patterns are covered on our <a href="/jacquard-clothing-manufacturer/">jacquard clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Scarf questions',

@@ -134,7 +134,7 @@ export const scrubs: ProductContent = {
     heading: 'Starting a scrubs brand with us',
     paragraphs: [
       'Many scrub brands start with one top and one jogger trouser in three core colours, such as navy, black and ceil blue. Fewer colours keep the size split deep, so you rarely run out of popular sizes.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>. Lab and clinic wear is covered on our <a href="/lab-coat-manufacturer/">lab coat manufacturer</a> page.',
     ],
   },
   faqHeading: 'Scrubs manufacturing questions',

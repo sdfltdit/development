@@ -128,7 +128,7 @@ export const embroideryService: ProductContent = {
     heading: 'Starting with custom embroidery',
     paragraphs: [
       'Many brands start with one flat left chest logo on a polo or hoodie. It is simple to digitise and looks clean on every size.',
-      'Want printed artwork as well? See our <a href="/printing-service/">clothing printing service</a> page.',
+      'Want printed artwork as well? See our <a href="/printing-service/">clothing printing service</a> page. Puckering, thread breaks and gaps are explained in our <a href="/insights/embroidery-problems-explained/">embroidery problems</a> guide.',
     ],
   },
   faqHeading: 'Embroidery questions',

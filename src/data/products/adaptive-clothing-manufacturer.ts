@@ -126,7 +126,7 @@ export const adaptive: ProductContent = {
     heading: 'Starting an adaptive range with us',
     paragraphs: [
       'Many brands start with one magnetic shirt and one pair of seated trousers in core colours. These two pieces cover daily wear and show which features wearers value most.',
-      'Need extended sizes too? See our <a href="/plus-size-clothing-manufacturer/">plus size clothing manufacturer</a> page.',
+      'Need extended sizes too? See our <a href="/plus-size-clothing-manufacturer/">plus size clothing manufacturer</a> page. Easy closures for adaptive designs are covered on our <a href="/hook-and-loop-tape/">hook and loop tape for clothing</a> page.',
     ],
   },
   faqHeading: 'Adaptive clothing questions',

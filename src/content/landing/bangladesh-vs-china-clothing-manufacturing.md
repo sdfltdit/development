@@ -123,6 +123,8 @@ If you are moving production from China, plan it in stages:
 4. **Sample before you commit.** Compare quality side by side with your current goods.
 5. **Keep complex styles where they are** until the new factory has proven itself.
 
+For other comparisons, see our [Bangladesh vs Pakistan clothing manufacturing](/bangladesh-vs-pakistan-clothing-manufacturing/) guide.
+
 ## Where SDF Clothing fits
 
 We make cotton knitwear, wovens and outerwear in our own factory in Dhaka, for brands worldwide. Orders start at {{moq}} {{moqUnit}}, with a proto sample in {{sampleDays}} days and bulk in {{bulkDays}} days. Our [clothing manufacturer in Bangladesh](/clothing-manufacturer-bangladesh/) page explains how we work.

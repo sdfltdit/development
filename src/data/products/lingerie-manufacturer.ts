@@ -134,7 +134,7 @@ export const lingerie: ProductContent = {
     heading: 'Starting a lingerie brand with us',
     paragraphs: [
       'Many brands start with one bra and a matching brief in two colours, across a tight set of core sizes. Every size needs stock, so a small first range keeps money free for reorders.',
-      'Adding everyday basics? See our <a href="/underwear-manufacturer/">underwear manufacturer</a> page, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Adding everyday basics? See our <a href="/underwear-manufacturer/">underwear manufacturer</a> page, or start with a <a href="/sample-service/">proto sample</a> only. Bra parts and trims have their own pages: <a href="/bra-components/">bra components</a> and <a href="/lace-trims/">lace trim for clothing</a>.',
     ],
   },
   faqHeading: 'Lingerie and bra questions',

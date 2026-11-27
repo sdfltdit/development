@@ -127,7 +127,7 @@ export const chefUniform: ProductContent = {
     heading: 'Starting a chef uniform order with us',
     paragraphs: [
       'Many kitchens start with one jacket in white and one in black, plus matching trousers. Black hides stains for line cooks, and white suits head chefs and open kitchens.',
-      'Need aprons to match? See our <a href="/apron-manufacturer/">apron manufacturer</a> page.',
+      'Need aprons to match? See our <a href="/apron-manufacturer/">apron manufacturer</a> page. White coats for kitchens, labs and clinics are also covered on our <a href="/lab-coat-manufacturer/">lab coat manufacturer</a> page.',
     ],
   },
   faqHeading: 'Chef uniform questions',

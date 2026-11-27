@@ -151,7 +151,7 @@ export const shirt: ProductContent = {
     heading: 'Ordering private label shirts for the first time',
     paragraphs: [
       'Shirts in collar and sleeve sizes use up a minimum quickly. Many brands start with letter sizes in one or two fabrics, then add colours and fits once they see what sells.',
-      'Have your own fabric already? Our <a href="/cut-and-sew-service/">cut and sew service</a> can work with it. Want to start with a fit sample only? See how our <a href="/sample-service/">sample service</a> works.',
+      'Have your own fabric already? Our <a href="/cut-and-sew-service/">cut and sew service</a> can work with it. Want to start with a fit sample only? See how our <a href="/sample-service/">sample service</a> works. Shirt fabrics each have their own page: <a href="/chambray-clothing-manufacturer/">chambray clothing manufacturer</a>, <a href="/seersucker-clothing-manufacturer/">seersucker clothing manufacturer</a>, <a href="/flannel-clothing-manufacturer/">flannel clothing manufacturer</a> and <a href="/voile-clothing-manufacturer/">voile clothing manufacturer</a>. Collars and cuffs rely on the right <a href="/garment-interlining/">garment interlining</a>.',
     ],
   },
   faqHeading: 'Woven shirt questions',

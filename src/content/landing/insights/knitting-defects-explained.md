@@ -113,6 +113,8 @@ Fabric inspection before cutting is the cheapest point to catch a fault. A typic
 
 Faults are marked so the cutter can work around them, or rolls are rejected if they fail the agreed limit. Most factories score the visual check with the 4-point system, as our guide to [4-point fabric inspection](/insights/fabric-inspection-4-point-system/) explains.
 
+Some faults only show in the lab. Our [garment testing](/insights/garment-testing-guide/) explains shrinkage, pilling and colour fastness tests.
+
 ## Where SDF Clothing fits
 
 We check fabric weight, width, shade and faults when it arrives, before any panel is cut, and finish with a final AQL {{aql}} inspection. Bulk takes {{bulkDays}} days after sample approval, and orders start at {{moq}} {{moqUnit}}. See our [garment quality inspection](/quality-inspection-service/) page for every check we run.

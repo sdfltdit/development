@@ -1,4 +1,6 @@
 ---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { company, site } from '../data/company';
 import { absolute } from '../lib/schema';
 
@@ -19,13 +21,19 @@ const {
   path,
   noindex = false,
   ogType = 'website',
-  ogImage = site.defaultOgImage,
-  ogImageAlt = `${company.brandName} – custom clothing manufacturer for brands worldwide`,
+  ogImage,
+  ogImageAlt,
   schema,
 } = Astro.props;
 
+const ogSlug = path.replace(/^\/|\/$/g, '').replaceAll('/', '--') || 'home';
+const pageOgImage = `/og/${ogSlug}.png`;
+const hasPageImage = !ogImage && existsSync(join(process.cwd(), 'public', pageOgImage));
+const imagePath = ogImage ?? (hasPageImage ? pageOgImage : site.defaultOgImage);
+const imageAlt = ogImageAlt ?? (hasPageImage ? title : `${company.brandName} – custom clothing manufacturer for brands worldwide`);
+
 const canonical = absolute(path);
-const image = absolute(ogImage);
+const image = absolute(imagePath);
 const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1';
 ---
 
@@ -42,10 +50,10 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-image-preview:l
 <meta property="og:image" content={image} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={ogImageAlt} />
+<meta property="og:image:alt" content={imageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
-<meta name="twitter:image:alt" content={ogImageAlt} />
+<meta name="twitter:image:alt" content={imageAlt} />
 {schema && <script type="application/ld+json" set:html={schema} />}

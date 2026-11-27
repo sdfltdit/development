@@ -128,6 +128,8 @@ Each physical round you avoid saves a sample fee, courier costs and often a week
 
 3D models are only as good as their fabric data. Stretch knits, heavy fleece and fabrics with special finishes are hard to simulate exactly. Treat a 3D fit as a guide, never as approval for bulk.
 
+Every stage from proto to shipment sample is explained in our guide to [types of garment samples](/insights/types-of-garment-samples/).
+
 ## Where SDF Clothing fits
 
 We make physical samples in our own sampling room, from proto to pre-production, and keep your digital patterns for reorders. If you use 3D design software, share your files and we sew from the same pattern. See our [clothing sample maker](/sample-service/) page for how sampling works. Orders start at {{moq}} {{moqUnit}}, with a proto sample in {{sampleDays}} days.

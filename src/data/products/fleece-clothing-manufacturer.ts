@@ -114,7 +114,7 @@ export const fleece: ProductContent = {
     heading: 'Fleece or French terry',
     paragraphs: [
       'For a lighter sweat with an unbrushed loop back, see our <a href="/french-terry-clothing-manufacturer/">French terry clothing manufacturer</a> page. Our <a href="/insights/fabric-gsm-explained/">fabric GSM guide</a> explains how weight changes the feel.',
-      'For outdoor layers, see our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page. Our free <a href="/tools/gsm-converter/">GSM converter</a> turns ounces into GSM, and the <a href="/tools/shrinkage-calculator/">fabric shrinkage calculator</a> checks a wash test.',
+      'For outdoor layers, see our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page. Our free <a href="/tools/gsm-converter/">GSM converter</a> turns ounces into GSM, and the <a href="/tools/shrinkage-calculator/">fabric shrinkage calculator</a> checks a wash test. Fleece throws are covered on our <a href="/blanket-manufacturer/">blanket manufacturer</a> page, and fleece dog jackets on our <a href="/pet-clothing-manufacturer/">pet clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Fleece clothing questions',

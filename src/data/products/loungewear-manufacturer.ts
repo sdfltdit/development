@@ -156,7 +156,7 @@ export const loungewear: ProductContent = {
     heading: 'Starting a private label loungewear line',
     paragraphs: [
       'Each piece counts towards the minimum on its own, so a set is really two orders. Many brands start with one jersey lounge set or one woven pyjama set in two colours, and sell the pieces separately as well.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Textured lounge fabrics are covered on our <a href="/waffle-knit-clothing-manufacturer/">waffle knit clothing manufacturer</a> and <a href="/rib-knit-clothing-manufacturer/">rib knit clothing manufacturer</a> pages. Brushed cotton pyjamas are on our <a href="/flannel-clothing-manufacturer/">flannel clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Loungewear and pyjama questions',

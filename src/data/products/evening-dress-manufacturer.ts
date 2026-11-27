@@ -128,7 +128,7 @@ export const eveningDress: ProductContent = {
     heading: 'Starting an evening range with us',
     paragraphs: [
       'Many occasionwear brands start with one satin gown and one beaded style, each in three colours. Prom and party seasons are short, so we plan the order back from your launch date.',
-      'Adding shapewear to wear underneath? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page.',
+      'Adding shapewear to wear underneath? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page. Two evening fabrics have their own pages: <a href="/taffeta-clothing-manufacturer/">taffeta clothing manufacturer</a> and <a href="/velvet-clothing-manufacturer/">velvet clothing manufacturer</a>.',
     ],
   },
   faqHeading: 'Evening dress questions',

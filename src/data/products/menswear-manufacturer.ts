@@ -125,7 +125,7 @@ export const menswear: ProductContent = {
     heading: 'Starting a menswear brand with us',
     paragraphs: [
       'Many menswear brands launch with a heavyweight tee, a hoodie and joggers in two colours. All three share a fit language and can ship in one order.',
-      'Adding tailoring later? See our <a href="/suit-manufacturer/">suit manufacturer</a> page.',
+      'Adding tailoring later? See our <a href="/suit-manufacturer/">suit manufacturer</a> page. Golf polos and pullovers for menswear ranges are covered on our <a href="/golf-apparel-manufacturer/">golf apparel manufacturer</a> page.',
     ],
   },
   faqHeading: 'Menswear questions',

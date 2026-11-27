@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/garment-merchandising-service/',
   '/insights/how-to-import-clothing-from-bangladesh/', '/insights/garment-testing-guide/', '/how-to-price-clothing/',
   '/cricket-uniform-manufacturer/', '/netball-dress-manufacturer/', '/volleyball-uniform-manufacturer/', '/hockey-jersey-manufacturer/', '/american-football-jersey-manufacturer/', '/bed-linen-manufacturer/', '/towel-manufacturer/', '/blanket-manufacturer/',
   '/insights/types-of-garment-samples/', '/insights/garment-measurement-tolerance/', '/insights/fabric-consumption-calculation/', '/insights/fabric-inspection-4-point-system/', '/tools/fabric-consumption-calculator/',

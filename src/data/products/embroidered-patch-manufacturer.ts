@@ -127,7 +127,7 @@ export const embroideredPatch: ProductContent = {
     heading: 'Starting a patch order with us',
     paragraphs: [
       'Many brands start with one logo patch in two sizes, one for caps and one for jackets. Ordering both with your garments saves a second shipment.',
-      'Need sleep and beauty products too? See our <a href="/sleep-mask-manufacturer/">sleep mask manufacturer</a> page.',
+      'Need sleep and beauty products too? See our <a href="/sleep-mask-manufacturer/">sleep mask manufacturer</a> page. Patches that fasten and come off again use the backing on our <a href="/hook-and-loop-tape/">hook and loop tape for clothing</a> page. Common stitching faults are covered in our <a href="/insights/embroidery-problems-explained/">embroidery problems</a> guide.',
     ],
   },
   faqHeading: 'Embroidered patch questions',

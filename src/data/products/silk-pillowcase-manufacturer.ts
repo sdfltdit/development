@@ -127,7 +127,7 @@ export const silkPillowcase: ProductContent = {
     heading: 'Starting a silk range with us',
     paragraphs: [
       'Many brands start with a 22 momme envelope pillowcase in three colours, then add an eye mask in the same shades. A matching set sells at a higher price than two single items.',
-      'Building a full sleep range? See our <a href="/loungewear-manufacturer/">loungewear manufacturer</a> page.',
+      'Building a full sleep range? See our <a href="/loungewear-manufacturer/">loungewear manufacturer</a> page. Full bedding sets are covered on our <a href="/bed-linen-manufacturer/">bed linen manufacturer</a> page.',
     ],
   },
   faqHeading: 'Silk pillowcase questions',

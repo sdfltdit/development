@@ -119,6 +119,8 @@ On LCL vs FCL, the choice depends on your volume:
 
 Our [customs clearance guide](/insights/customs-clearance-guide/) covers what happens when goods arrive.
 
+Shipping from Bangladesh in particular? Our guide on [how to import clothing from Bangladesh](/insights/how-to-import-clothing-from-bangladesh/) covers ports, documents and duty.
+
 ## Where SDF Clothing fits
 
 We quote {{incoterm}} {{port}}, so your own forwarder takes over at the port of export with full visibility of cost. Bulk takes {{bulkDays}} days after approval, and orders start at {{moq}} {{moqUnit}}.

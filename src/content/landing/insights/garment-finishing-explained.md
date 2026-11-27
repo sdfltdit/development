@@ -114,6 +114,8 @@ Garment packing is the last thing your warehouse sees. A clear packing list and 
 
 An AQL inspection on the packed goods checks for these faults. Our guide to [AQL inspection](/insights/aql-inspection-explained/) explains how.
 
+Pieces sold hanging leave the factory on hangers, covered on our [custom clothing hangers](/custom-hangers/) page.
+
 ## Where SDF Clothing fits
 
 We trim, press, tag, fold and pack every order in our own factory, to your packing list, then run a final AQL {{aql}} check on the packed goods. Bulk takes {{bulkDays}} days after sample approval, from {{moq}} {{moqUnit}}. See our [cut and sew manufacturer](/cut-and-sew-service/) page for the full production flow.

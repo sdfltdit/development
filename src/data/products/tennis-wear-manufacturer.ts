@@ -126,7 +126,7 @@ export const tennisWear: ProductContent = {
     heading: 'Starting a tennis range with us',
     paragraphs: [
       'Many brands start with one tennis dress and one pleated skirt in white plus two colours. White sells all year in tennis, so it is a safe first colour.',
-      'Selling golf apparel too? See our <a href="/golf-apparel-manufacturer/">golf apparel manufacturer</a> page.',
+      'Selling golf apparel too? See our <a href="/golf-apparel-manufacturer/">golf apparel manufacturer</a> page. Court dresses for team sport are covered on our <a href="/netball-dress-manufacturer/">netball dress manufacturer</a> page. Polo-led golf ranges are on our <a href="/golf-apparel-manufacturer/">golf apparel manufacturer</a> page.',
     ],
   },
   faqHeading: 'Tennis wear questions',

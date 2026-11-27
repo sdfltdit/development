@@ -133,6 +133,8 @@ Our guide on [how to negotiate with clothing manufacturers](/insights/how-to-neg
 
 The factory price is not your full cost. On {{incoterm}} terms, you add freight, insurance, duty, import tax and clearance. Our guide on [how to calculate landed cost](/insights/how-to-calculate-landed-cost/) shows how to add it all up.
 
+Once you know your cost per piece, our guide on [how to price clothing](/how-to-price-clothing/) shows how to set wholesale and retail prices.
+
 ## Where SDF Clothing fits
 
 We publish real prices at our minimum and at volume on our [price list](/pricing/), quoted {{incoterm}} {{port}}. Orders start at {{moq}} {{moqUnit}}, and every quote comes in writing within {{quoteHours}} hours.

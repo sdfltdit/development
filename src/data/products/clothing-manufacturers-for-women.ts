@@ -136,7 +136,7 @@ export const womens: ProductContent = {
     heading: 'Starting a womenswear label with us',
     paragraphs: [
       'Many labels start with a small capsule: a blouse, a trouser and a co-ord set in one or two fabrics. A tight capsule keeps fabric orders simple and lets you test fit before adding styles.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>. Two fabrics come up often in womenswear briefs, and each has its own page: <a href="/crepe-clothing-manufacturer/">crepe clothing manufacturer</a> and <a href="/velvet-clothing-manufacturer/">velvet clothing manufacturer</a>.',
     ],
   },
   faqHeading: "Women's clothing questions",

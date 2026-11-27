@@ -148,6 +148,8 @@ Our guide on [how to create a tech pack](/how-to-create-a-tech-pack/) shows wher
 | Raw edges showing | Fabric edge not caught in the overlock |
 | Loose thread ends | Untrimmed threads at seam ends |
 
+Thread size and type matter as much as stitch count. Our page on [sewing thread for garments](/sewing-thread/) explains tex sizes and core-spun thread.
+
 ## Where SDF Clothing fits
 
 We set stitch type and SPI for each seam on the sample, then check seams inline and at final inspection at AQL {{aql}}. Our [cut and sew manufacturer](/cut-and-sew-service/) page explains how production runs on our own lines. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.

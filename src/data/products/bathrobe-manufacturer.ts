@@ -129,7 +129,7 @@ export const bathrobeManufacturer: ProductContent = {
     heading: 'Starting a bathrobe order',
     paragraphs: [
       'Hotels often start with one shawl collar robe in white or a house colour. Retail brands usually add a waffle robe for summer. Working with one bathrobe manufacturer for both keeps colours consistent.',
-      'For staff clothing to match, see our <a href="/hotel-uniform-manufacturer/">hotel uniform manufacturer</a> page. For logos, see our <a href="/embroidery-service/">clothing embroidery service</a>.',
+      'For staff clothing to match, see our <a href="/hotel-uniform-manufacturer/">hotel uniform manufacturer</a> page. For logos, see our <a href="/embroidery-service/">clothing embroidery service</a>. Matching bath and beach towels are covered on our <a href="/towel-manufacturer/">towel manufacturer</a> page.',
     ],
   },
   faqHeading: 'Bathrobe questions',

@@ -133,6 +133,8 @@ Each reorder is a new dye lot. To keep it close:
 
 In a final AQL inspection, panels that differ inside one garment are usually a major defect. Pieces that fall outside the shade band are also major. Small differences inside the band are not counted. Our guide to [AQL inspection](/insights/aql-inspection-explained/) explains defect classes.
 
+Colour fastness is a separate check from shade matching, as our [garment testing](/insights/garment-testing-guide/) explains.
+
 ## Where SDF Clothing fits
 
 We check every fabric roll against your approved standard, cut each garment from one roll and sort by shade before packing. Our [garment dyeing service](/dyeing-service/) page shows how we set light and dark limits for garment-dyed orders. Orders start at {{moq}} {{moqUnit}}, and every order gets a final AQL {{aql}} inspection.

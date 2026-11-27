@@ -152,7 +152,7 @@ export const shorts: ProductContent = {
     heading: 'Choosing a custom shorts manufacturer for a summer drop',
     paragraphs: [
       'Summer ranges sell in a short window. Count back from your launch date: sampling, bulk and sea freight together take longer than most first-time brands expect. Start the proto early so a second fit round does not push you past the season.',
-      'Ordering for the first time? Read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>, or see how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works.',
+      'Ordering for the first time? Read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>, or see how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works. Summer shorts in a puckered stripe are covered on our <a href="/seersucker-clothing-manufacturer/">seersucker clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Shorts manufacturing questions',

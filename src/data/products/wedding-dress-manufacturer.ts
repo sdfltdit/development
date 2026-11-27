@@ -128,7 +128,7 @@ export const weddingDress: ProductContent = {
     heading: 'Starting a bridal range with us',
     paragraphs: [
       'Many bridal brands start with three gowns in one fabric family, in ivory and one other shade. Boutiques order samples first, so we plan sample gowns before bulk.',
-      'Need shapewear to wear under the gown? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page.',
+      'Need shapewear to wear under the gown? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page. Full skirts often use taffeta, as our <a href="/taffeta-clothing-manufacturer/">taffeta clothing manufacturer</a> page explains. Bridal lace is covered on our <a href="/lace-trims/">lace trim for clothing</a> page.',
     ],
   },
   faqHeading: 'Wedding dress questions',

@@ -152,7 +152,7 @@ export const activewear: ProductContent = {
     heading: 'Starting a custom sportswear line',
     paragraphs: [
       'Many brands start with a core set: a training top, a pair of shorts or leggings and one sports bra, in two or three colours. A tight first range keeps fabric orders simple and lets you test fit before adding styles.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or read our <a href="/clothing-manufacturers-for-startups/">guide for startup brands</a>. Performance fabrics have their own pages: <a href="/mesh-clothing-manufacturer/">mesh clothing manufacturer</a> and <a href="/spandex-clothing-manufacturer/">spandex clothing manufacturer</a>. Race kit is on our <a href="/running-apparel-manufacturer/">running apparel manufacturer</a> page, and our <a href="/bangladesh-vs-vietnam-clothing-manufacturing/">Bangladesh vs Vietnam clothing manufacturing</a> guide compares sportswear sourcing.',
     ],
   },
   faqHeading: 'Activewear manufacturing questions',

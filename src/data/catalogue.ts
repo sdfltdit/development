@@ -182,7 +182,7 @@ export const serviceGroups: CatalogueGroup[] = [
     activities: 'Cutting, sewing and assembly',
     lead: 'Your bulk order, made by our own sewing teams from first cut to final press.',
     about: 'Cutting, sewing and finishing happen on our own lines, never at a subcontractor. Knit and woven garments are made from fabric rolls to your approved pattern and sample.',
-    slugs: ['cut-and-sew-service'],
+    slugs: ['cut-and-sew-service', 'garment-merchandising-service'],
   },
   {
     id: 'decoration',

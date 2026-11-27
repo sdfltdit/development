@@ -152,7 +152,7 @@ export const skirt: ProductContent = {
     heading: 'Starting with private label skirts',
     paragraphs: [
       'Elastic-waist and wrap skirts fit more bodies, so they spread a minimum across fewer sizes. Many brands start with one of these in two colours, then add fitted styles.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or use our <a href="/cut-and-sew-service/">cut and sew service</a> with your own fabric.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or use our <a href="/cut-and-sew-service/">cut and sew service</a> with your own fabric. Structured skirts with a smooth finish are covered on our <a href="/scuba-fabric-clothing-manufacturer/">scuba fabric clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Skirt manufacturing questions',

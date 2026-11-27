@@ -129,7 +129,7 @@ export const varsity: ProductContent = {
     heading: 'Starting a varsity range with us',
     paragraphs: [
       'Many brands start with one wool body and PU sleeve jacket in two colourways, with a chest chenille patch and a back embroidery. It keeps the classic look at a price that sells.',
-      'Want a longer, warmer piece too? See our <a href="/coat-manufacturer/">coat manufacturer</a> page for wool coats.',
+      'Want a longer, warmer piece too? See our <a href="/coat-manufacturer/">coat manufacturer</a> page for wool coats. Striped trims and binding are covered on our <a href="/garment-tapes/">garment tapes</a> page.',
     ],
   },
   faqHeading: 'Varsity jacket questions',

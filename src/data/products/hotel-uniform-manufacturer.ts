@@ -127,7 +127,7 @@ export const hotelUniform: ProductContent = {
     heading: 'Starting a hotel uniform order with us',
     paragraphs: [
       'Many hotels start with front desk and housekeeping, the two biggest teams, then add spa and restaurant staff. One colour story across all roles keeps the hotel looking joined up.',
-      'Dressing the kitchen too? See our <a href="/chef-uniform-manufacturer/">chef uniform manufacturer</a> page.',
+      'Dressing the kitchen too? See our <a href="/chef-uniform-manufacturer/">chef uniform manufacturer</a> page. Hotels often order room textiles too, covered on our <a href="/bed-linen-manufacturer/">bed linen manufacturer</a> and <a href="/towel-manufacturer/">towel manufacturer</a> pages.',
     ],
   },
   faqHeading: 'Hotel uniform questions',

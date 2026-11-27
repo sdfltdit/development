@@ -126,7 +126,7 @@ export const footballKit: ProductContent = {
     heading: 'Ordering your first club kit with us',
     paragraphs: [
       'Many clubs start with a home kit for all age groups and add an away kit the next season. One sublimated design across every team keeps the order simple and the club look consistent.',
-      'Need warm-up gear too? See our <a href="/tracksuit-manufacturer/">tracksuit manufacturer</a> page for matching sets.',
+      'Need warm-up gear too? See our <a href="/tracksuit-manufacturer/">tracksuit manufacturer</a> page for matching sets. Other field sports have their own pages: <a href="/hockey-jersey-manufacturer/">hockey jersey manufacturer</a>, <a href="/american-football-jersey-manufacturer/">American football jersey manufacturer</a> and <a href="/rugby-shirt-manufacturer/">rugby shirt manufacturer</a>.',
     ],
   },
   faqHeading: 'Football kit questions',

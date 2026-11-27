@@ -91,7 +91,7 @@ The merchandiser is your main contact. In most factories, the merchandiser role 
 - keeping the time and action calendar on track
 - sending updates, photos and reports
 
-A good merchandiser saves you weeks. Give them complete information and fast answers, and they can do their best work.
+A good merchandiser saves you weeks. Give them complete information and fast answers, and they can do their best work. Our [garment merchandising service](/garment-merchandising-service/) page shows how this works at SDF Clothing.
 
 ## How an order moves through the factory
 

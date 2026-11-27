@@ -133,6 +133,8 @@ For hand embroidery sourcing, India is the best-known option, with deep traditio
 3. **Compare like-for-like samples.**
 4. **Compare landed cost.** Our guide on [how to calculate landed cost](/insights/how-to-calculate-landed-cost/) shows how.
 
+Sportswear buyers often weigh Vietnam too, as our [Bangladesh vs Vietnam clothing manufacturing](/bangladesh-vs-vietnam-clothing-manufacturing/) guide explains.
+
 ## Where SDF Clothing fits
 
 We make cotton knitwear, wovens, festive and evening wear in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}, with a proto sample in {{sampleDays}} days and bulk in {{bulkDays}} days. See our [clothing manufacturer in Bangladesh](/clothing-manufacturer-bangladesh/) page for how we work.

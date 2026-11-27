@@ -126,7 +126,7 @@ export const suit: ProductContent = {
     heading: 'Starting a suit range with us',
     paragraphs: [
       'Many brands start with one two-piece suit in navy and charcoal, half canvas, in a wool blend. These two colours sell all year and suit both work and weddings.',
-      'Building a full men’s range? See our <a href="/menswear-manufacturer/">menswear manufacturer</a> page.',
+      'Building a full men’s range? See our <a href="/menswear-manufacturer/">menswear manufacturer</a> page. Suit structure relies on <a href="/shoulder-pads/">shoulder pads for clothing</a>, and retail-ready suits ship on <a href="/custom-hangers/">custom clothing hangers</a>. Matching neckwear is on our <a href="/tie-manufacturer/">tie manufacturer</a> page.',
     ],
   },
   faqHeading: 'Suit questions',

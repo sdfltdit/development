@@ -173,6 +173,8 @@ Always write the rule, the named place and the edition, for example "FOB Chittag
 
 Whichever rule you choose, work out the landed cost per garment: factory price plus freight, insurance, duty and clearance, divided by the number of pieces. Our guide to [clothing brand startup costs](/clothing-brand-startup-costs/) has a worksheet for it.
 
+For orders made in Bangladesh, our guide on [how to import clothing from Bangladesh](/insights/how-to-import-clothing-from-bangladesh/) walks through shipping and duty.
+
 ## Where SDF Clothing fits
 
 We quote {{incoterm}} {{port}}. We deliver your goods on board at the port and handle export clearance. You or your freight forwarder arrange sea freight, insurance and import. Our [price list](/pricing/) shows prices on that basis, and we send a written quote within {{quoteHours}} hours. Orders start at {{moq}} {{moqUnit}}.

@@ -127,7 +127,7 @@ export const bodysuit: ProductContent = {
     heading: 'Starting a bodysuit range with us',
     paragraphs: [
       'Many brands start with one rib bodysuit and one matching crop top in four colours. Shared fabric keeps the order within the minimum and gives shoppers a choice.',
-      'Need firmer shaping pieces? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page.',
+      'Need firmer shaping pieces? See our <a href="/shapewear-manufacturer/">shapewear manufacturer</a> page. Most bodysuits use one of two knits, each with its own page: <a href="/jersey-knit-clothing-manufacturer/">jersey knit clothing manufacturer</a> and <a href="/rib-knit-clothing-manufacturer/">rib knit clothing manufacturer</a>.',
     ],
   },
   faqHeading: 'Bodysuit questions',

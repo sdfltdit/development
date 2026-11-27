@@ -128,7 +128,7 @@ export const sustainableClothingManufacturer: ProductContent = {
     heading: 'Starting a sustainable range',
     paragraphs: [
       'A good first step is one core style in certified fabric, such as an organic cotton tee, with a specific claim you can prove.',
-      'Our <a href="/certifications/">compliance and audits</a> page explains how buyer audits and documents work with us.',
+      'Our <a href="/certifications/">compliance and audits</a> page explains how buyer audits and documents work with us. EU rules on textile take-back are explained in our <a href="/eu-epr-explained/">EU textile EPR</a> guide.',
     ],
   },
   faqHeading: 'Sustainable clothing questions',

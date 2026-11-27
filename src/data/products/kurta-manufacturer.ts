@@ -128,7 +128,7 @@ export const kurta: ProductContent = {
     heading: 'Starting a kurta range with us',
     paragraphs: [
       'Many brands start with one cotton men’s kurta in three colours and one festive style. The everyday style sells all year, and the festive one tests demand before Eid or Diwali.',
-      'Selling to Gulf shoppers too? See our <a href="/thobe-manufacturer/">thobe manufacturer</a> page.',
+      'Selling to Gulf shoppers too? See our <a href="/thobe-manufacturer/">thobe manufacturer</a> page. Light summer kurtas are often made in cotton voile, as our <a href="/voile-clothing-manufacturer/">voile clothing manufacturer</a> page explains.',
     ],
   },
   faqHeading: 'Kurta questions',

@@ -130,7 +130,7 @@ export const cutAndSewService: ProductContent = {
     heading: 'Starting cut and sew production',
     paragraphs: [
       'Each style starts at {{moq}} {{moqUnit}}. Styles that share a fabric, such as a hoodie and joggers in the same fleece, keep fabric costs down. Our guide to <a href="/insights/fabric-consumption-calculation/">fabric consumption calculation</a> shows how fabric per garment is worked out.',
-      'Our <a href="/work-process/">clothing production process</a> page shows each step with its payment. For everything else we do, see our <a href="/all-services/">clothing manufacturing services</a>.',
+      'Our <a href="/work-process/">clothing production process</a> page shows each step with its payment. For everything else we do, see our <a href="/all-services/">clothing manufacturing services</a>. Every seam is only as strong as its thread, as our <a href="/sewing-thread/">sewing thread for garments</a> page explains.',
     ],
   },
   faqHeading: 'Cut and sew questions',

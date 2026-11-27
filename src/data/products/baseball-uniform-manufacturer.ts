@@ -126,7 +126,7 @@ export const baseballUniform: ProductContent = {
     heading: 'Ordering your first team uniforms with us',
     paragraphs: [
       'Many teams start with a full-button jersey and matching pants in one colourway, then add an alternate jersey later. Matching caps complete the look.',
-      'Need team caps? See our <a href="/hat-manufacturer/">hat manufacturer</a> page.',
+      'Need team caps? See our <a href="/hat-manufacturer/">hat manufacturer</a> page. For gridiron teams, see our <a href="/american-football-jersey-manufacturer/">American football jersey manufacturer</a> page. Ice and field hockey kit is on our <a href="/hockey-jersey-manufacturer/">hockey jersey manufacturer</a> page.',
     ],
   },
   faqHeading: 'Baseball uniform questions',

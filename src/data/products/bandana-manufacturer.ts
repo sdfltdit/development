@@ -125,7 +125,7 @@ export const bandana: ProductContent = {
     heading: 'Starting a bandana range with us',
     paragraphs: [
       'Many brands start with one classic cotton bandana in three colourways. Bandanas are bought as add-ons at checkout, so several colours sell better than one.',
-      'Selling to cold-weather and outdoor buyers? See our <a href="/neck-gaiter-manufacturer/">neck gaiter manufacturer</a> page.',
+      'Selling to cold-weather and outdoor buyers? See our <a href="/neck-gaiter-manufacturer/">neck gaiter manufacturer</a> page. Dog bandanas often sit in a range with hoodies and jackets, covered on our <a href="/pet-clothing-manufacturer/">pet clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Bandana questions',

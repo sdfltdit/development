@@ -152,7 +152,7 @@ export const uniform: ProductContent = {
     heading: 'Starting a uniform programme with us',
     paragraphs: [
       'Most programmes start with two or three core garments, such as a shirt or polo and a trouser, in one colour. Once the first order is approved, we keep everything on file so you can reorder small top-ups as staff join.',
-      'Making your own designs as a brand? See our <a href="/private-label-clothing-manufacturer/">private label clothing</a> page, or use our <a href="/cut-and-sew-service/">cut and sew service</a> with your own fabric.',
+      'Making your own designs as a brand? See our <a href="/private-label-clothing-manufacturer/">private label clothing</a> page, or use our <a href="/cut-and-sew-service/">cut and sew service</a> with your own fabric. Hard-wearing trousers and jackets are often cut from gabardine, as our <a href="/gabardine-clothing-manufacturer/">gabardine clothing manufacturer</a> page explains. Club and team uniforms include a <a href="/martial-arts-uniform-manufacturer/">martial arts uniform manufacturer</a> range.',
     ],
   },
   faqHeading: 'Uniform and workwear questions',

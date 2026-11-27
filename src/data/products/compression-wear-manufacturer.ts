@@ -126,7 +126,7 @@ export const compressionWear: ProductContent = {
     heading: 'Starting a compression line with us',
     paragraphs: [
       'Many brands start with one long-sleeve compression shirt and one pair of tights in black and one colour. Black sells best in compression and hides sweat.',
-      'Adding thermal pieces? See our <a href="/base-layer-manufacturer/">base layer manufacturer</a> page.',
+      'Adding thermal pieces? See our <a href="/base-layer-manufacturer/">base layer manufacturer</a> page. Shorts, singlets and race shirts are covered on our <a href="/running-apparel-manufacturer/">running apparel manufacturer</a> page.',
     ],
   },
   faqHeading: 'Compression wear questions',

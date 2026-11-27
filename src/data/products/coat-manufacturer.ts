@@ -127,7 +127,7 @@ export const coat: ProductContent = {
     heading: 'Starting a coat range with us',
     paragraphs: [
       'Many brands start with one overcoat or trench coat in two colours. Coats take longer to sample than lighter pieces, so plan the first order well before the season starts.',
-      'Need tailored jackets too? See our <a href="/blazer-manufacturer/">blazer manufacturer</a> page.',
+      'Need tailored jackets too? See our <a href="/blazer-manufacturer/">blazer manufacturer</a> page. Heritage cloth for winter coats is covered on our <a href="/tweed-clothing-manufacturer/">tweed clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Coat manufacturing questions',

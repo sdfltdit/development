@@ -136,7 +136,7 @@ export const modest: ProductContent = {
     heading: 'Starting a modest wear label with us',
     paragraphs: [
       'Lengths multiply your size split, so many brands start with one abaya style in two colours and two lengths, plus a matching scarf. Add embroidered styles once you know what sells.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Flowing abayas and hijabs are often made from georgette, covered on our <a href="/georgette-clothing-manufacturer/">georgette clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Modest fashion questions',

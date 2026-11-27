@@ -139,7 +139,7 @@ export const lowMoqClothingManufacturers: ProductContent = {
     heading: 'Making a small first order go further',
     paragraphs: [
       'Keep colours within each fabric’s dye lot, share fabric across styles and lock the fit on the sample, so reorders run without a new sample round.',
-      'Our guide on <a href="/insights/moq-meaning-clothing/">what MOQ means</a> explains why factories set minimums, and <a href="/clothing-brand-startup-costs/">clothing brand startup costs</a> helps you budget the first run.',
+      'Our guide on <a href="/insights/moq-meaning-clothing/">what MOQ means</a> explains why factories set minimums, and <a href="/clothing-brand-startup-costs/">clothing brand startup costs</a> helps you budget the first run. Weighing a local workshop against an overseas factory? Our guide to <a href="/overseas-vs-local-clothing-manufacturer/">overseas vs local clothing manufacturer</a> compares cost, minimums and lead time.',
     ],
   },
   faqHeading: 'Low MOQ questions',
