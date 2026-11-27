@@ -99,13 +99,12 @@ export const terms = {
  * Owner, 27 November 2026: how fabric is supplied and the minimums that follow.
  * Orders at the minimum use ready fabric from local mills and stock, or ready fabric imported from the countries below.
  * Custom-made fabric (own colour, weight or construction) starts at the sister company threshold, because smaller runs lose money.
- * Per-colour minimums were proposed by us from industry research and still need the owner's confirmation.
+ * Owner, 27 November 2026: at least 150 pieces per colour, for knit and woven alike.
  * We never sell fabric on its own.
  */
 export const fabricSupply = {
   importFrom: ['China', 'Taiwan', 'Hong Kong', 'South Korea'],
-  knitPerColour: 100,
-  wovenPerColour: 150,
+  perColour: 150,
 } as const;
 
 /** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims and garment accessories. Never name it. */
@@ -236,10 +235,8 @@ export const tokens: Record<string, string> = {
   sampleCorrections: String(terms.sampleCorrections),
   sisterFabricAbove: sisterCompany.fabricAbove.toLocaleString('en-GB'),
   customFabricFrom: sisterCompany.fabricAbove.toLocaleString('en-GB'),
-  knitPerColour: String(fabricSupply.knitPerColour),
-  wovenPerColour: String(fabricSupply.wovenPerColour),
-  knitColours: String(Math.floor(terms.moq / fabricSupply.knitPerColour)),
-  wovenColours: String(Math.floor(terms.moq / fabricSupply.wovenPerColour)),
+  perColour: String(fabricSupply.perColour),
+  coloursAtMoq: String(Math.floor(terms.moq / fabricSupply.perColour)),
   fabricImports: `${fabricSupply.importFrom.slice(0, -1).join(', ')} and ${fabricSupply.importFrom[fabricSupply.importFrom.length - 1]}`,
   workforce: capabilities.workforce,
   monthlyCapacity: capabilities.monthlyCapacity.toLocaleString('en-GB'),

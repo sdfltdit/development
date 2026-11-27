@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const organicCottonClothingManufacturer: ProductContent = {
   slug: 'organic-cotton-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const organicCottonClothingManufacturer: ProductContent = {
     { title: 'Tote bags', text: 'Organic canvas totes to match a range.', href: '/tote-bag-manufacturer/', cta: 'Tote bag manufacturer details' },
   ],
   blocks: [
-    fabricMoqBlock(['knit', 'woven'], 'organic cotton clothing', 'Organic cotton comes as knits and wovens, each with its own colour minimum. At the minimum we cut from ready organic fabric that carries the mill\'s certificate. Organic fabric made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit', 'woven'], 'organic cotton clothing', 'Organic cotton comes as knits and wovens, and both follow the same minimums. At the minimum we cut from ready organic fabric that carries the mill\'s certificate. Organic fabric made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('organic cotton clothing', [['Organic cotton jersey', '140–240 GSM', 'T-shirts, tops, babywear'], ['Organic cotton fleece', '280–360 GSM', 'Hoodies, sweatshirts, joggers'], ['Organic cotton poplin', '110–140 GSM', 'Shirts, dresses'], ['Organic cotton twill', '200–280 GSM', 'Trousers, jackets']]),
     {
       kind: 'checklist',
       id: 'trail',

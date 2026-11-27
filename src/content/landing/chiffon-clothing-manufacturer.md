@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Chiffon clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}}, with at least {{wovenPerColour}} pieces per colour"
+    value: "{{moq}} {{moqUnit}}, with at least {{perColour}} pieces per colour"
   - label: Products
     value: Blouses, maxi and midi dresses, kaftans, scarves, overlays, sleeves and evening layers
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Chiffon clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for chiffon clothing?
-    a: "{{moq}} {{moqUnit}}, with at least {{wovenPerColour}} pieces per colour on ready fabric. Chiffon is woven, so the woven minimum applies."
+    a: "{{moq}} {{moqUnit}} on ready chiffon, with {{perColour}} or more in each colour. That allows up to {{coloursAtMoq}} colours at the minimum."
   - q: What is the difference between chiffon vs georgette?
     a: Both are sheer crepe weaves. Chiffon is lighter, smoother and more see-through. Georgette is heavier, grainier and drapes with more weight.
   - q: Polyester chiffon or silk chiffon?

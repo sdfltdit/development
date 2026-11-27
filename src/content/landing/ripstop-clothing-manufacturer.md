@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Ripstop clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}}, with at least {{wovenPerColour}} pieces per colour"
+    value: "{{moq}} {{moqUnit}}, with at least {{perColour}} pieces per colour"
   - label: Products
     value: Cargo pants, cargo shorts, overshirts, field jackets, windbreakers, workwear and bags
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Ripstop clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for ripstop clothing?
-    a: "{{moq}} {{moqUnit}}, with at least {{wovenPerColour}} pieces per colour on ready fabric. Ripstop is woven, so the woven minimum applies."
+    a: "{{moq}} {{moqUnit}} on ready ripstop, with {{perColour}} or more in each colour. That allows up to {{coloursAtMoq}} colours at the minimum."
   - q: What is ripstop fabric?
     a: A woven fabric with thicker yarns woven in at regular intervals to form a grid. If the fabric is cut or torn, the grid stops the tear from spreading.
   - q: Nylon ripstop or cotton ripstop?

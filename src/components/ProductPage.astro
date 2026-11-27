@@ -143,8 +143,9 @@ const schema = graph([
                 <h2 id={headingId}>{fill(block.heading)}</h2>
                 <p class="section__lead">{fill(block.lead)}</p>
               </div>
+              <div class:list={[{ 'table-media': block.image }]}>
               <div class="table-wrap" role="region" aria-labelledby={headingId} tabindex="0">
-                <table class="table--stack">
+                <table class:list={[{ 'table--stack': block.columns.length > 2 }]}>
                   <caption class="visually-hidden">{block.caption}</caption>
                   <thead>
                     <tr>
@@ -164,6 +165,8 @@ const schema = graph([
                     ))}
                   </tbody>
                 </table>
+              </div>
+              {block.image && <Infographic name={block.image} />}
               </div>
               {block.more && <p class="section__more" set:html={fill(block.more)} />}
             </div>

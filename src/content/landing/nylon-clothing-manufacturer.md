@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Nylon clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}}, at least {{knitPerColour}} pieces per colour in knit and {{wovenPerColour}} in woven"
+    value: "{{moq}} {{moqUnit}}, with at least {{perColour}} pieces per colour, knit or woven"
   - label: Products
     value: Leggings, sports bras, swimwear, cycling shorts, windbreakers, shell jackets, board shorts and bags
   - label: Knitted nylon
@@ -43,7 +43,7 @@ citations:
   - https://eur-lex.europa.eu/eli/reg/2011/1007/oj
 faq:
   - q: What is the minimum order for nylon clothing?
-    a: "{{moq}} {{moqUnit}}. Knitted nylon needs at least {{knitPerColour}} pieces per colour, and woven nylon at least {{wovenPerColour}}, on ready fabric."
+    a: "{{moq}} {{moqUnit}} on ready fabric. Knitted or woven, each colour needs {{perColour}} pieces or more, so up to {{coloursAtMoq}} colours fit the minimum."
   - q: What is nylon spandex?
     a: A knitted fabric of nylon with elastane. It feels smooth and cool and recovers its shape, so it suits leggings, sports bras and swimwear.
   - q: Is polyamide fabric the same as nylon?

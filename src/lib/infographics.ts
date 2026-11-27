@@ -3,11 +3,11 @@
  * in the site's black and red palette, and served as /images/infographics/<name>-dark.svg.
  * Changing a fact in company.ts updates the images on the next build.
  */
-import { capabilities, shipping as shippingData, terms } from '../data/company';
+import { capabilities, fabricSupply, shipping as shippingData, sisterCompany, terms } from '../data/company';
 import { garments, type GarmentKey, type GarmentSketch } from './garments';
 
 export type Theme = 'dark';
-type BaseName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse' | 'tshirt' | 'gsm';
+type BaseName = 'hero' | 'process' | 'quality' | 'shipping' | 'inhouse' | 'tshirt' | 'gsm' | 'fabric';
 export type InfographicName = BaseName | `garment-${GarmentKey}`;
 
 interface Palette {
@@ -359,6 +359,43 @@ function gsm(p: Palette): string {
   return frame(690, 390, 'T-shirt fabric weight guide in GSM', GSM_BANDS.map((b) => `${b.name} ${b.range} for ${b.use.join(' ').replace(',', '')}`).join('. '), p, body);
 }
 
+const FABRIC_TIERS = () => [
+  { name: 'Ready fabric', lines: ['From local mills', 'and fabric stock'], qty: String(terms.moq) },
+  { name: 'Imported fabric', lines: fabricSupply.importFrom.length > 2 ? [fabricSupply.importFrom.slice(0, 2).join(', ') + ',', fabricSupply.importFrom.slice(2).join(', ')] : [fabricSupply.importFrom.join(', ')], qty: String(terms.moq) },
+  { name: 'Made to your spec', lines: ['Knitted or woven by', 'our sister company'], qty: sisterCompany.fabricAbove.toLocaleString('en-GB') },
+];
+
+function fabric(p: Palette): string {
+  const tiers = FABRIC_TIERS();
+  const w = 210;
+  const gap = 15;
+  const cards = tiers
+    .map((t, i) => {
+      const x = 30 + i * (w + gap);
+      const last = i === tiers.length - 1;
+      return [
+        `<rect x="${x}" y="104" width="${w}" height="196" rx="16" fill="${p.card}" stroke="${last ? p.accent : p.line}" stroke-width="${last ? 2 : 1}"/>`,
+        text(x + 18, 140, t.name, 20, p.text, 700),
+        ...t.lines.map((line, li) => text(x + 18, 168 + li * 22, line, 15, p.muted, 400)),
+        text(x + 18, 252, t.qty, 38, last ? p.success : p.text, 800),
+        text(x + 18, 280, 'pieces per style', 15, p.muted, 500),
+      ].join('');
+    })
+    .join('');
+  const per = fabricSupply.perColour;
+  const colours = Math.floor(terms.moq / per);
+  const body = [
+    text(30, 48, 'How fabric is supplied for your order', 26, p.text, 700),
+    text(30, 78, 'Knit or woven, the minimums are the same', 17, p.muted, 400),
+    cards,
+    `<rect x="30" y="322" width="660" height="54" rx="27" fill="${p.accentSoft}" stroke="${p.accentDeep}"/>`,
+    text(360, 356, `${per} pieces per colour, so up to ${colours} colours at ${terms.moq} pieces`, 18, p.text, 700, 'middle'),
+    text(360, 408, 'We never sell fabric on its own', 15, p.muted, 500, 'middle'),
+  ].join('');
+  const desc = `${tiers.map((t) => `${t.name}: from ${t.qty} pieces per style`).join('. ')}. ${per} pieces per colour, knit or woven. We never sell fabric on its own.`;
+  return frame(720, 430, 'How fabric is supplied for your order', desc, p, body);
+}
+
 function garment(g: GarmentSketch, p: Palette): string {
   const callouts = g.callouts
     .map((c) =>
@@ -389,6 +426,7 @@ const builders = {
   inhouse,
   tshirt,
   gsm,
+  fabric,
   ...Object.fromEntries(garmentKeys.map((key) => [`garment-${key}`, (p: Palette) => garment(garments[key], p)])),
 } as Record<InfographicName, (p: Palette) => string>;
 
@@ -427,6 +465,12 @@ const baseMeta: Record<BaseName, { width: number; height: number; alt: () => str
     width: 690,
     height: 390,
     alt: () => `Fabric weight scale for T-shirts, from ${GSM_BANDS[0].range} lightweight jersey to ${GSM_BANDS[GSM_BANDS.length - 1].range} heavy cotton`,
+  },
+  fabric: {
+    width: 720,
+    height: 430,
+    alt: () =>
+      `Fabric supply: ready local or imported fabric from ${terms.moq} pieces per style, fabric made to your spec from ${sisterCompany.fabricAbove.toLocaleString('en-GB')}, and ${fabricSupply.perColour} pieces per colour`,
   },
   shipping: {
     width: 720,

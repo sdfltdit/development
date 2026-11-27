@@ -21,7 +21,7 @@ export const ripstop: ProductContent = {
     fabricMoqBlock(
       ['woven'],
       'ripstop clothing',
-      'Ripstop is woven, so the woven colour minimum applies. At the minimum we cut from ready ripstop. Ripstop woven to your own grid, fibre and weight starts at {{customFabricFrom}} pieces per style.',
+      'Ripstop is woven. At the minimum we cut from ready ripstop. Ripstop woven to your own grid, fibre and weight starts at {{customFabricFrom}} pieces per style.',
     ),
     {
       kind: 'table',
@@ -30,12 +30,12 @@ export const ripstop: ProductContent = {
       heading: 'Nylon ripstop, cotton ripstop and blends',
       lead: 'Ripstop fabric comes in several fibres. This is how they compare.',
       caption: 'Ripstop fabrics compared',
-      columns: ['Fabric', 'How it wears', 'Good for'],
+      columns: ['Fabric', 'Typical weight', 'How it wears', 'Good for'],
       rows: [
-        ['Cotton ripstop', 'Soft, breathable, fades with washing', 'Cargo pants, shorts, overshirts'],
-        ['Cotton-nylon ripstop', 'Stronger, still soft', 'Field jackets, workwear'],
-        ['Nylon ripstop', 'Light, strong, smooth', 'Windbreakers, shells, bags'],
-        ['Polyester ripstop', 'Holds colour, dries fast', 'Outdoor layers, uniform pieces'],
+        ['Cotton ripstop', '160–260 GSM', 'Soft, breathable, fades with washing', 'Cargo pants, shorts, overshirts'],
+        ['Cotton-nylon ripstop', '180–260 GSM', 'Stronger, still soft', 'Field jackets, workwear'],
+        ['Nylon ripstop', '40–120 GSM', 'Light, strong, smooth', 'Windbreakers, shells, bags'],
+        ['Polyester ripstop', '60–200 GSM', 'Holds colour, dries fast', 'Outdoor layers, uniform pieces'],
       ],
     },
     {

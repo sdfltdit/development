@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const sublimated: ProductContent = {
   slug: 'sublimated-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const sublimated: ProductContent = {
     { title: 'Fashion pieces', text: 'Printed dresses, shirts and scarves.' },
   ],
   blocks: [
-    fabricMoqBlock(['knit'], 'sublimated clothing', 'Sublimation needs polyester, and our sublimated pieces are cut from polyester knits, so the knit minimum applies. Each print design counts as one colour. Fabric knitted to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit'], 'sublimated clothing', 'Sublimation needs polyester, and our sublimated pieces are cut from polyester knits. Each print design counts as one colour. Fabric knitted to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('sublimated clothing', [['Polyester jersey', '120–180 GSM', 'Team shirts, running tops'], ['Polyester mesh', '100–160 GSM', 'Basketball and football kits'], ['Polyester interlock', '160–220 GSM', 'Cycling and esports jerseys']]),
     {
       kind: 'table',
       id: 'methods',

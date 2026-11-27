@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Viscose clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}}, at least {{wovenPerColour}} pieces per colour in woven and {{knitPerColour}} in knit"
+    value: "{{moq}} {{moqUnit}}, with at least {{perColour}} pieces per colour, woven or knitted"
   - label: Products
     value: Dresses, blouses, shirts, kurtas, skirts, wide-leg trousers, pyjamas and lounge sets
   - label: Woven viscose
@@ -44,7 +44,7 @@ citations:
   - https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-303
 faq:
   - q: What is the minimum order for viscose clothing?
-    a: "{{moq}} {{moqUnit}}. Woven viscose needs at least {{wovenPerColour}} pieces per colour and knitted viscose at least {{knitPerColour}}, on ready fabric."
+    a: "{{moq}} {{moqUnit}} on ready fabric. Woven or knitted, each colour needs {{perColour}} pieces or more, so up to {{coloursAtMoq}} colours fit the minimum."
   - q: Are you also a rayon clothing manufacturer?
     a: Yes. Rayon and viscose are the same fibre family. US labels use the generic name rayon, while UK and EU labels say viscose.
   - q: What is viscose challis?

@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const recycledClothingManufacturer: ProductContent = {
   slug: 'recycled-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const recycledClothingManufacturer: ProductContent = {
     { title: 'Bags', text: 'Totes and drawstring bags in recycled canvas or polyester.', href: '/tote-bag-manufacturer/', cta: 'Tote bag manufacturer details' },
   ],
   blocks: [
-    fabricMoqBlock(['knit', 'woven'], 'recycled clothing', 'Recycled fabrics come as knits and wovens, each with its own colour minimum. At the minimum we cut from ready recycled fabric with the mill\'s documents. Recycled fabric made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit', 'woven'], 'recycled clothing', 'Recycled fabrics come as knits and wovens, and both follow the same minimums. At the minimum we cut from ready recycled fabric with the mill\'s documents. Recycled fabric made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('recycled clothing', [['Recycled polyester jersey', '140–180 GSM', 'Activewear, team tops'], ['Recycled nylon spandex', '180–280 GSM', 'Leggings, swimwear'], ['Recycled cotton blend fleece', '280–340 GSM', 'Hoodies, sweatshirts'], ['Recycled polyester shell', '60–120 GSM', 'Light jackets, linings']]),
     {
       kind: 'table',
       id: 'fibres',

@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Fabric sourcing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}} on ready fabric, with at least {{knitPerColour}} pieces per colour in knit and {{wovenPerColour}} in woven"
+    value: "{{moq}} {{moqUnit}} on ready fabric, with at least {{perColour}} pieces per colour, knit or woven"
   - label: Ready fabric
     value: From local mills and stock, or imported from {{fabricImports}}
   - label: Knits

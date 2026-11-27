@@ -20,7 +20,7 @@ facts: [moq, sample, bulk, quote]
 specsCaption: Fleece clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
   - label: Minimum order
-    value: "{{moq}} {{moqUnit}}, with at least {{knitPerColour}} pieces per colour"
+    value: "{{moq}} {{moqUnit}}, with at least {{perColour}} pieces per colour"
   - label: Products
     value: Hoodies, sweatshirts, joggers, shorts, zip jackets, vests, kidswear and blankets
   - label: Fabric
@@ -42,7 +42,7 @@ serviceType: Fleece clothing manufacturing
 citations: []
 faq:
   - q: What is the minimum order for fleece clothing?
-    a: Fleece is a knit, so the knit minimum applies. That means {{moq}} {{moqUnit}} and {{knitPerColour}} or more in each colour.
+    a: "{{moq}} {{moqUnit}} on ready fleece, with {{perColour}} or more in each colour. That allows up to {{coloursAtMoq}} colours at the minimum."
   - q: What is brushed fleece?
     a: A knit whose back loops are brushed into a soft, warm pile. Sweatshirt fleece is brushed on the back, and polar fleece on both sides.
   - q: Cotton fleece or polar fleece fabric?

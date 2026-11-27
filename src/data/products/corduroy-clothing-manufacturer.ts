@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const corduroy: ProductContent = {
   slug: 'corduroy-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const corduroy: ProductContent = {
     { title: 'Caps', text: 'Six-panel and bucket hats in cord.' },
   ],
   blocks: [
-    fabricMoqBlock(['woven'], 'corduroy clothing', 'Corduroy is woven, so the woven colour minimum applies. At the minimum we cut from ready corduroy. Corduroy woven to your own wale and weight starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['woven'], 'corduroy clothing', 'Corduroy is woven. At the minimum we cut from ready corduroy. Corduroy woven to your own wale and weight starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('corduroy clothing', [['Needlecord (fine wale)', '180–250 GSM', 'Shirts, dresses'], ['Standard wale', '250–330 GSM', 'Trousers, overshirts'], ['Wide wale', '300–400 GSM', 'Jackets, trousers']]),
     {
       kind: 'table',
       id: 'wale',

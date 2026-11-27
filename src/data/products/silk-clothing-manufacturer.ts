@@ -20,7 +20,7 @@ export const silkClothingManufacturer: ProductContent = {
     { title: 'Scarves and accessories', text: 'Silk scarves, scrunchies and pillowcases to match a range.', href: '/scarf-manufacturer/', cta: 'Scarf manufacturer details' },
   ],
   blocks: [
-    fabricMoqBlock(['woven'], 'silk clothing', 'Silk and satin are woven, so the woven colour minimum applies. At the minimum we cut from ready silk or satin. Fabric woven to your own weight starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['woven'], 'silk clothing', 'Silk and satin are woven. At the minimum we cut from ready silk or satin. Fabric woven to your own weight starts at {{customFabricFrom}} pieces per style.'),
     {
       kind: 'table',
       id: 'fabrics',

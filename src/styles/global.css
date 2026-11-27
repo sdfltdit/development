@@ -1086,3 +1086,15 @@ caption {
   padding-top: var(--space-5);
   border-top: 1px solid var(--color-line);
 }
+
+.table-media {
+  display: grid;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .table-media {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}

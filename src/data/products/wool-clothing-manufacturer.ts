@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const wool: ProductContent = {
   slug: 'wool-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const wool: ProductContent = {
     { title: 'Accessories', text: 'Scarves and beanies in wool yarns.', href: '/scarf-manufacturer/', cta: 'Scarf manufacturer details' },
   ],
   blocks: [
-    fabricMoqBlock(['knit', 'woven'], 'wool clothing', 'Wool is knitted into jerseys and sweaters, or woven into coatings and suitings, and each has its own colour minimum. At the minimum we use ready wool fabric or yarn. Wool made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit', 'woven'], 'wool clothing', 'Wool is knitted into jerseys and sweaters, or woven into coatings and suitings, and both follow the same minimums. At the minimum we use ready wool fabric or yarn. Wool made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('wool clothing', [['Merino jersey', '150–250 GSM', 'Base layers, T-shirts'], ['Wool suiting', '230–300 GSM', 'Trousers, blazers'], ['Wool flannel', '280–380 GSM', 'Overshirts, trousers'], ['Wool coating', '400–700 GSM', 'Coats, jackets']]),
     {
       kind: 'table',
       id: 'fabric',

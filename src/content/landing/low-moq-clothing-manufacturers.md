@@ -35,11 +35,11 @@ showPrices: true
 serviceType: Low minimum order clothing manufacturing
 faq:
   - q: What is your minimum order quantity for clothing?
-    a: Our minimum is {{moq}} {{moqUnit}}. Colours and sizes share that total, with at least {{knitPerColour}} pieces per colour in knit and {{wovenPerColour}} in woven.
+    a: Our minimum is {{moq}} {{moqUnit}}. Colours and sizes share that total, with at least {{perColour}} pieces per colour, knit or woven.
   - q: Why do factories set a minimum order?
     a: Each run has fixed costs such as pattern grading, marker making, line set-up, fabric dyeing and inspection. Below a certain quantity, those costs make each piece too expensive.
   - q: Can I split {{moq}} pieces across several colours?
-    a: "Yes. A knit style can take up to {{knitColours}} colours at the minimum, and a woven style up to {{wovenColours}}. Any small-lot surcharge is shown on your quote first."
+    a: "Yes, up to {{coloursAtMoq}} colours at the minimum, with {{perColour}} or more in each. Any small-lot surcharge is shown on your quote first."
   - q: Is the price higher at low quantities?
     a: Yes. Our price table shows the difference between {{moq}} and {{bulkQty}} pieces for each product, so you can see the cost of a smaller run.
   - q: Can I order fewer than {{moq}} pieces?

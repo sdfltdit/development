@@ -21,7 +21,7 @@ export const fleece: ProductContent = {
     fabricMoqBlock(
       ['knit'],
       'fleece clothing',
-      'Fleece is a knit, so the knit colour minimum applies. At the minimum we cut from ready fleece. Fleece knitted to your own weight and yarn starts at {{customFabricFrom}} pieces per style.',
+      'Fleece is a knit. At the minimum we cut from ready fleece. Fleece knitted to your own weight and yarn starts at {{customFabricFrom}} pieces per style.',
     ),
     {
       kind: 'table',
@@ -30,13 +30,13 @@ export const fleece: ProductContent = {
       heading: 'Cotton fleece, polar fleece fabric and more',
       lead: 'Fleece is made from different fibres and finished in different ways. This is how the main types compare.',
       caption: 'Fleece fabrics compared',
-      columns: ['Fabric', 'How it feels', 'Good for'],
+      columns: ['Fabric', 'Typical weight', 'How it feels', 'Good for'],
       rows: [
-        ['Cotton fleece', 'Soft brushed back, breathable', 'Hoodies, sweatshirts, joggers'],
-        ['Cotton-polyester fleece', 'Holds shape, shrinks less', 'Teamwear, merch, kidswear'],
-        ['Polar fleece fabric', 'Brushed both sides, light and warm', 'Jackets, vests, blankets'],
-        ['Microfleece', 'Thin, very soft, packs small', 'Mid-layers, linings'],
-        ['Sherpa', 'Deep pile like wool', 'Jacket linings and collars'],
+        ['Cotton fleece', '{{fleeceGsm}} GSM', 'Soft brushed back, breathable', 'Hoodies, sweatshirts, joggers'],
+        ['Cotton-polyester fleece', '260–360 GSM', 'Holds shape, shrinks less', 'Teamwear, merch, kidswear'],
+        ['Polar fleece fabric', '200–320 GSM', 'Brushed both sides, light and warm', 'Jackets, vests, blankets'],
+        ['Microfleece', '120–200 GSM', 'Thin, very soft, packs small', 'Mid-layers, linings'],
+        ['Sherpa', '250–400 GSM', 'Deep pile like wool', 'Jacket linings and collars'],
       ],
     },
     {

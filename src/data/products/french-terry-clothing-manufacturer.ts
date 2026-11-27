@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const frenchTerry: ProductContent = {
   slug: 'french-terry-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const frenchTerry: ProductContent = {
     { title: 'Kids’ sets', text: 'Soft terry tops and joggers for children.' },
   ],
   blocks: [
-    fabricMoqBlock(['knit'], 'French terry clothing', 'French terry is a knit, so the knit colour minimum applies. At the minimum we cut from ready terry. Terry knitted to your own weight and yarn starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit'], 'French terry clothing', 'French terry is a knit. At the minimum we cut from ready terry. Terry knitted to your own weight and yarn starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('French terry clothing', [['Light French terry', '200–260 GSM', 'Summer sweats, shorts'], ['Midweight French terry', '260–320 GSM', 'Sweatshirts, joggers, hoodies'], ['Heavy French terry', '320–400 GSM', 'Heavy hoodies and sweats']]),
     {
       kind: 'table',
       id: 'fabric',

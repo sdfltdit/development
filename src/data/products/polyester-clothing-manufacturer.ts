@@ -1,5 +1,5 @@
 import type { ProductContent } from './types';
-import { fabricMoqBlock } from './fabric-moq';
+import { fabricMoqBlock, weightBlock } from './fabric-moq';
 
 export const polyester: ProductContent = {
   slug: 'polyester-clothing-manufacturer',
@@ -20,7 +20,8 @@ export const polyester: ProductContent = {
     { title: 'Uniforms', text: 'Poly-cotton shirts, trousers and tunics.', href: '/uniform-manufacturer/', cta: 'Uniform manufacturer details' },
   ],
   blocks: [
-    fabricMoqBlock(['knit', 'woven'], 'polyester clothing', 'Polyester is knitted into jersey and mesh, or woven into twill and shells, and each has its own colour minimum. At the minimum we cut from ready polyester. Polyester made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    fabricMoqBlock(['knit', 'woven'], 'polyester clothing', 'Polyester is knitted into jersey and mesh, or woven into twill and shells, and both follow the same minimums. At the minimum we cut from ready polyester. Polyester made to your own spec starts at {{customFabricFrom}} pieces per style.'),
+    weightBlock('polyester clothing', [['Polyester jersey', '120–180 GSM', 'Team tops, activewear'], ['Polyester mesh', '100–160 GSM', 'Jerseys, panels, linings'], ['Polyester twill', '180–250 GSM', 'Uniforms, trousers'], ['Polyester shell', '60–120 GSM', 'Windbreakers, light jackets']]),
     {
       kind: 'table',
       id: 'fabric',

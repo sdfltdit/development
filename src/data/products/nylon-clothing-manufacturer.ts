@@ -21,7 +21,7 @@ export const nylon: ProductContent = {
     fabricMoqBlock(
       ['knit', 'woven'],
       'nylon clothing',
-      'Nylon is used as a stretch knit and as a light woven, and each has its own colour minimum. At the minimum we cut from ready nylon. Nylon knitted or woven to your own construction starts at {{customFabricFrom}} pieces per style.',
+      'Nylon is used as a stretch knit and as a light woven, and both follow the same minimums. At the minimum we cut from ready nylon. Nylon knitted or woven to your own construction starts at {{customFabricFrom}} pieces per style.',
     ),
     {
       kind: 'table',
@@ -30,13 +30,13 @@ export const nylon: ProductContent = {
       heading: 'Nylon and polyamide fabric types',
       lead: 'Polyamide fabric is made as many knits and wovens. These are the ones we use most.',
       caption: 'Nylon fabrics compared',
-      columns: ['Fabric', 'Build', 'Good for'],
+      columns: ['Fabric', 'Typical weight', 'Build', 'Good for'],
       rows: [
-        ['Nylon spandex jersey', 'Knit, smooth and stretchy', 'Leggings, sports bras, bodysuits'],
-        ['Nylon swim fabric', 'Knit with high stretch', 'Swimsuits and bikinis'],
-        ['Power mesh', 'Open knit with firm stretch', 'Panels, linings, shapewear'],
-        ['Nylon taslan', 'Woven with a cotton-like touch', 'Windbreakers, shorts'],
-        ['Nylon ripstop', 'Woven with a tear-stop grid', 'Shell jackets, cargo pieces'],
+        ['Nylon spandex jersey', '180–280 GSM', 'Knit, smooth and stretchy', 'Leggings, sports bras, bodysuits'],
+        ['Nylon swim fabric', '180–240 GSM', 'Knit with high stretch', 'Swimsuits and bikinis'],
+        ['Power mesh', '150–220 GSM', 'Open knit with firm stretch', 'Panels, linings, shapewear'],
+        ['Nylon taslan', '90–150 GSM', 'Woven with a cotton-like touch', 'Windbreakers, shorts'],
+        ['Nylon ripstop', '40–120 GSM', 'Woven with a tear-stop grid', 'Shell jackets, cargo pieces'],
       ],
     },
     {

@@ -21,7 +21,7 @@ export const chiffon: ProductContent = {
     fabricMoqBlock(
       ['woven'],
       'chiffon clothing',
-      'Chiffon is a woven fabric, so the woven colour minimum applies. At the minimum we cut from ready chiffon, and we can sublimation print your artwork on polyester chiffon. Chiffon woven to your own construction starts at {{customFabricFrom}} pieces per style.',
+      'Chiffon is a woven fabric. At the minimum we cut from ready chiffon, and we can sublimation print your artwork on polyester chiffon. Chiffon woven to your own construction starts at {{customFabricFrom}} pieces per style.',
     ),
     {
       kind: 'table',
@@ -30,13 +30,13 @@ export const chiffon: ProductContent = {
       heading: 'Chiffon vs georgette and other sheer fabrics',
       lead: 'Brands often choose between these sheer fabrics. This is how they differ.',
       caption: 'Sheer fabrics compared',
-      columns: ['Fabric', 'Look and feel', 'Good for'],
+      columns: ['Fabric', 'Typical weight', 'Look and feel', 'Good for'],
       rows: [
-        ['Polyester chiffon', 'Very light, smooth, see-through', 'Blouses, overlays, printed dresses'],
-        ['Silk chiffon', 'Softest, gentle sheen', 'Occasion and bridal layers'],
-        ['Crinkle chiffon', 'Pressed crinkle, needs no ironing', 'Scarves, kaftans, travel pieces'],
-        ['Georgette', 'Heavier, grainy, less sheer', 'Dresses, hijabs, modest wear'],
-        ['Organza', 'Crisp and stiff, holds shape', 'Sleeves, structured overlays'],
+        ['Polyester chiffon', '30–70 GSM', 'Very light, smooth, see-through', 'Blouses, overlays, printed dresses'],
+        ['Silk chiffon', '20–40 GSM', 'Softest, gentle sheen', 'Occasion and bridal layers'],
+        ['Crinkle chiffon', '40–70 GSM', 'Pressed crinkle, needs no ironing', 'Scarves, kaftans, travel pieces'],
+        ['Georgette', '60–100 GSM', 'Heavier, grainy, less sheer', 'Dresses, hijabs, modest wear'],
+        ['Organza', '30–80 GSM', 'Crisp and stiff, holds shape', 'Sleeves, structured overlays'],
       ],
     },
     {

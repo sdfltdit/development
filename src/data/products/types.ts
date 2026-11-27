@@ -5,6 +5,7 @@
  * Copy may use {{tokens}} from company.ts. Strings marked html may contain inline links (<a>), <strong> and <em> only.
  */
 import type { GarmentKey } from '../../lib/garments';
+import type { InfographicName } from '../../lib/infographics';
 
 export interface Card {
   title: string;
@@ -23,6 +24,7 @@ export interface TableBlock {
   columns: string[];
   rows: string[][];
   more?: string;
+  image?: InfographicName;
 }
 
 export interface ChecklistBlock {
