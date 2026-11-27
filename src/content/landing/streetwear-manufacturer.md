@@ -27,7 +27,7 @@ specs:
   - label: Fabric
     value: Heavy cotton jersey, brushed fleece, French terry, nylon and twill, or any fabric you choose
   - label: Weights
-    value: T-shirts {{tshirtGsm}} GSM and fleece {{fleeceGsm}} GSM
+    value: Any GSM, most often T-shirts at {{tshirtGsm}} GSM and fleece at {{fleeceGsm}} GSM
   - label: Details
     value: Thick rib collars, raw or banded hems, side splits, custom drawcords and trims
   - label: Decoration

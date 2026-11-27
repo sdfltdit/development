@@ -28,7 +28,7 @@ specs:
   - label: Yarn types
     value: Combed, ring-spun, carded or open-end cotton, and cotton blends
   - label: Weights
-    value: Jersey from {{tshirtGsm}} GSM and fleece from {{fleeceGsm}} GSM, or any weight you choose
+    value: Any GSM, most often jersey at {{tshirtGsm}} GSM and fleece at {{fleeceGsm}} GSM
   - label: Shrinkage
     value: Tested on the bulk fabric before cutting, with the pattern adjusted if needed
   - label: Decoration

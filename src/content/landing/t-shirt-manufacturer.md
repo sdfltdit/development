@@ -24,7 +24,7 @@ specs:
   - label: Fabric
     value: Any fabric, from combed cotton jersey and piqué to cotton-poly, polyester, organic and recycled blends
   - label: Fabric weight
-    value: "{{tshirtGsm}} GSM for T-shirts, or the weight you specify"
+    value: "Any GSM, most often {{tshirtGsm}} GSM for T-shirts"
   - label: Fits
     value: Regular, slim, boxy, oversized and drop shoulder, made to your size chart
   - label: Minimum order

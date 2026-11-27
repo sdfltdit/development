@@ -30,7 +30,7 @@ export const viscose: ProductContent = {
       heading: 'Which viscose fabric suits which garment',
       lead: 'Viscose fabric is made in several weaves and knits. This is how the main ones compare.',
       caption: 'Viscose fabrics compared',
-      columns: ['Fabric', 'Typical weight', 'Feel and drape', 'Good for'],
+      columns: ['Fabric', 'Common weight', 'Feel and drape', 'Good for'],
       rows: [
         ['Viscose challis', '100–140 GSM', 'Light, soft, very fluid', 'Printed dresses, blouses, kurtas'],
         ['Viscose crepe', '130–180 GSM', 'Grainy, matte, heavier drape', 'Dresses, trousers, modest wear'],

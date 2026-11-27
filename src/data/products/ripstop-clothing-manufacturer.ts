@@ -30,7 +30,7 @@ export const ripstop: ProductContent = {
       heading: 'Nylon ripstop, cotton ripstop and blends',
       lead: 'Ripstop fabric comes in several fibres. This is how they compare.',
       caption: 'Ripstop fabrics compared',
-      columns: ['Fabric', 'Typical weight', 'How it wears', 'Good for'],
+      columns: ['Fabric', 'Common weight', 'How it wears', 'Good for'],
       rows: [
         ['Cotton ripstop', '160–260 GSM', 'Soft, breathable, fades with washing', 'Cargo pants, shorts, overshirts'],
         ['Cotton-nylon ripstop', '180–260 GSM', 'Stronger, still soft', 'Field jackets, workwear'],

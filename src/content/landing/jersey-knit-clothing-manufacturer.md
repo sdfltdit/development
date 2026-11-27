@@ -26,7 +26,7 @@ specs:
   - label: Fabric
     value: "Cotton jersey fabric, slub jersey, cotton-elastane, modal and viscose jersey"
   - label: Fabric weight
-    value: "{{tshirtGsm}} GSM for T-shirts, lighter or heavier on request"
+    value: "Any GSM, most often {{tshirtGsm}} GSM for T-shirts"
   - label: Finishes
     value: "Enzyme wash, silicone softener or garment dye"
   - label: Decoration

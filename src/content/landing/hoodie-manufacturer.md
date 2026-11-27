@@ -16,7 +16,7 @@ secondaryKeywords:
   - zip hoodie manufacturer
   - heavyweight hoodies
 intent: commercial
-answer: SDF Clothing is a hoodie manufacturer that makes custom hoodies and crewneck sweatshirts for brands worldwide. We cut, sew, print and embroider in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}, in fleece or French terry from {{fleeceGsm}} GSM. A proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after you approve it.
+answer: SDF Clothing is a hoodie manufacturer that makes custom hoodies and crewneck sweatshirts for brands worldwide. We cut, sew, print and embroider in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}, in fleece or French terry of any weight. A proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after you approve it.
 facts: [moq, sample, bulk, quote]
 specsCaption: Hoodie and sweatshirt facts. Anything outside these ranges is confirmed on your written quote.
 specs:
@@ -27,7 +27,7 @@ specs:
   - label: Fabric
     value: Brushed-back fleece, loopback French terry or any fabric you choose, in cotton or cotton blends
   - label: Fabric weight
-    value: "{{fleeceGsm}} GSM"
+    value: "Any GSM, most often {{fleeceGsm}} GSM"
   - label: Fit
     value: Regular, relaxed, oversized, boxy or cropped, cut from your size chart
   - label: Hood

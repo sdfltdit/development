@@ -122,6 +122,7 @@ export const sampleFeePolicy = `There is no separate sample fee. Your ${terms.pa
 export const capabilities = {
   inHouse: ['Pattern making and grading', 'Cutting', 'Sewing', 'Screen printing', 'DTF printing', 'Sublimation printing', 'Embroidery', 'Finishing and packing', 'Quality inspection'],
   fabrics: 'All fabric types, knit and woven, from cotton jersey, fleece and French terry to polyester, blends and recycled fabrics',
+  /** Owner, 27 November 2026: we work at any GSM. These two ranges are only the weights we make most often. */
   tshirtGsm: '140–260',
   workforce: '600+',
   monthlyCapacity: 50000,

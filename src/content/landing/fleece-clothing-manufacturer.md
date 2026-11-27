@@ -3,9 +3,9 @@ kind: product
 hub: products
 navLabel: Fleece clothing
 linkText: Fleece clothing manufacturer details
-cardSummary: Hoodies, sweatshirts, joggers, jackets and kidswear in cotton fleece, polyester fleece or anti-pill polar fleece, from {{fleeceGsm}} GSM.
+cardSummary: Hoodies, sweatshirts, joggers, jackets and kidswear in cotton fleece, polyester fleece or anti-pill polar fleece, in any weight.
 title: "Fleece Clothing Manufacturer for Sweats | SDF Clothing"
-description: "Fleece clothing manufacturer for brands worldwide: hoodies, sweatshirts, joggers and jackets in cotton or polar fleece of {{fleeceGsm}} GSM, from {{moq}} pieces."
+description: "Fleece clothing manufacturer for brands worldwide: hoodies, sweatshirts, joggers and jackets in cotton or polar fleece of any weight, from {{moq}} pieces per style."
 h1: Fleece clothing manufacturer for sweats, jackets and kidswear
 eyebrow: Fleece clothing manufacturing
 primaryKeyword: fleece clothing manufacturer
@@ -15,7 +15,7 @@ secondaryKeywords:
   - polar fleece fabric
   - anti-pill fleece
 intent: commercial
-answer: SDF Clothing is a fleece clothing manufacturer making hoodies, sweatshirts, joggers, jackets and kidswear for brands worldwide. We cut cotton, cotton-polyester and polyester fleece of {{fleeceGsm}} GSM in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. A proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
+answer: SDF Clothing is a fleece clothing manufacturer making hoodies, sweatshirts, joggers, jackets and kidswear for brands worldwide. We cut cotton, cotton-polyester and polyester fleece of any weight in our own factory in Dhaka. Orders start at {{moq}} {{moqUnit}}. A proto sample takes {{sampleDays}} days and bulk takes {{bulkDays}} days after approval.
 facts: [moq, sample, bulk, quote]
 specsCaption: Fleece clothing facts. Anything outside these ranges is confirmed on your written quote.
 specs:
@@ -26,7 +26,7 @@ specs:
   - label: Fabric
     value: Cotton fleece, cotton-polyester fleece, polyester polar fleece, microfleece and sherpa
   - label: Fabric weight
-    value: "{{fleeceGsm}} GSM"
+    value: "Any GSM, most often {{fleeceGsm}} GSM"
   - label: Finish
     value: Brushed back, peached face or anti-pill finish from the mill
   - label: Decoration

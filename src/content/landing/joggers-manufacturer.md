@@ -54,7 +54,7 @@ faq:
   - q: Are you also a sweatpants manufacturer?
     a: Yes. Sweatpants and joggers share the same pattern above the knee. The difference is the leg finish. Joggers taper into a cuff, and sweatpants usually have a straight open hem. We make both.
   - q: What fabric weight should I use for fleece joggers?
-    a: About 280–320 GSM suits most fleece joggers. Go heavier, up to 420 GSM, for a structured streetwear look or to match a heavyweight hoodie. French terry from 240 GSM suits warm weather.
+    a: About 280–320 GSM suits most fleece joggers. Go heavier, to 420 GSM or more, for a structured streetwear look or to match a heavyweight hoodie. French terry from 240 GSM suits warm weather.
   - q: Can I order private label joggers with my own labels?
     a: Yes. Private label joggers leave our factory with your woven label, care label, hang tag and polybag. Our name does not appear on them.
   - q: Can I match the joggers to a hoodie?

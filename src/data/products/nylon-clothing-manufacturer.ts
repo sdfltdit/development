@@ -30,7 +30,7 @@ export const nylon: ProductContent = {
       heading: 'Nylon and polyamide fabric types',
       lead: 'Polyamide fabric is made as many knits and wovens. These are the ones we use most.',
       caption: 'Nylon fabrics compared',
-      columns: ['Fabric', 'Typical weight', 'Build', 'Good for'],
+      columns: ['Fabric', 'Common weight', 'Build', 'Good for'],
       rows: [
         ['Nylon spandex jersey', '180–280 GSM', 'Knit, smooth and stretchy', 'Leggings, sports bras, bodysuits'],
         ['Nylon swim fabric', '180–240 GSM', 'Knit with high stretch', 'Swimsuits and bikinis'],

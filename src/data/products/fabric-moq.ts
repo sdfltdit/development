@@ -32,16 +32,16 @@ export function fabricMoqBlock(types: Construction[], noun: string, lead: string
   };
 }
 
-/** Typical fabric weights for a fabric page. Ranges are guidance, and the exact weight is confirmed on the swatch. */
+/** Common fabric weights for a fabric page. Owner, 27 November 2026: we work at any GSM, so these rows are guidance only. */
 export function weightBlock(noun: string, rows: [string, string, string][]): TableBlock {
   return {
     kind: 'table',
     id: 'weights',
     eyebrow: 'Fabric weight',
-    heading: `Typical weights for ${noun}`,
-    lead: 'We work to GSM, grams per square metre. These are the usual ranges for each fabric. Your exact weight is confirmed on the swatch and the mill report.',
-    caption: `Typical fabric weights for ${noun}`,
-    columns: ['Fabric', 'Typical weight', 'Good for'],
+    heading: `Fabric weights for ${noun}`,
+    lead: 'We work at any GSM, grams per square metre. These are the weights brands choose most for each fabric. Your exact weight is confirmed on the swatch and the mill report.',
+    caption: `Common fabric weights for ${noun}`,
+    columns: ['Fabric', 'Common weight', 'Good for'],
     rows,
     more: 'Our free <a href="/tools/gsm-converter/">GSM converter</a> turns ounces per square yard into GSM, and our <a href="/insights/fabric-gsm-explained/">fabric GSM guide</a> explains how weight changes feel and price.',
   };

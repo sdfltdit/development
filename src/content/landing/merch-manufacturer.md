@@ -24,7 +24,7 @@ specs:
   - label: Products
     value: T-shirts, heavyweight tees, long sleeves, hoodies, crewnecks, joggers and shorts
   - label: Fabric
-    value: Cotton jersey from {{tshirtGsm}} GSM and fleece from {{fleeceGsm}} GSM, or any fabric you choose
+    value: Any GSM and any fabric, most often cotton jersey at {{tshirtGsm}} GSM and fleece at {{fleeceGsm}} GSM
   - label: Print areas
     value: Front, back, sleeves, neck label and hem tab
   - label: Decoration

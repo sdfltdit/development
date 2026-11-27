@@ -30,7 +30,7 @@ export const fleece: ProductContent = {
       heading: 'Cotton fleece, polar fleece fabric and more',
       lead: 'Fleece is made from different fibres and finished in different ways. This is how the main types compare.',
       caption: 'Fleece fabrics compared',
-      columns: ['Fabric', 'Typical weight', 'How it feels', 'Good for'],
+      columns: ['Fabric', 'Common weight', 'How it feels', 'Good for'],
       rows: [
         ['Cotton fleece', '{{fleeceGsm}} GSM', 'Soft brushed back, breathable', 'Hoodies, sweatshirts, joggers'],
         ['Cotton-polyester fleece', '260–360 GSM', 'Holds shape, shrinks less', 'Teamwear, merch, kidswear'],

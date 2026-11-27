@@ -30,7 +30,7 @@ export const chiffon: ProductContent = {
       heading: 'Chiffon vs georgette and other sheer fabrics',
       lead: 'Brands often choose between these sheer fabrics. This is how they differ.',
       caption: 'Sheer fabrics compared',
-      columns: ['Fabric', 'Typical weight', 'Look and feel', 'Good for'],
+      columns: ['Fabric', 'Common weight', 'Look and feel', 'Good for'],
       rows: [
         ['Polyester chiffon', '30–70 GSM', 'Very light, smooth, see-through', 'Blouses, overlays, printed dresses'],
         ['Silk chiffon', '20–40 GSM', 'Softest, gentle sheen', 'Occasion and bridal layers'],

@@ -87,7 +87,7 @@ This GSM chart shows typical ranges. Your brand may sit outside them on purpose.
 | Chinos | Twill | 220 to 280 | Firm, holds a crease |
 | Jeans | Denim | 340 to 470 | Heavy and stiff when new |
 
-Our own tees run from {{tshirtGsm}} GSM and our fleece from {{fleeceGsm}} GSM, depending on the style.
+We work at any GSM. Our tees most often run at {{tshirtGsm}} GSM and our fleece at {{fleeceGsm}} GSM, depending on the style.
 
 ## GSM vs oz
 
