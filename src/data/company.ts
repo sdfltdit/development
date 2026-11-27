@@ -226,6 +226,12 @@ export const sampling = {
   counterSampleHolders: ['our factory floor', 'you, the buyer', 'our head office', 'the merchandiser who follows your order from sample to shipment'],
 } as const;
 
+/** Owner, 27 November 2026: buyers get an email update at every stage, kept as the official record of the order. No address is published. */
+export const orderUpdates = {
+  short: 'By email at every stage, kept as an official record',
+  sentence: 'We email you an update at every stage of your order, so you keep an official written record.',
+} as const;
+
 /** Owner, 27 November 2026: fabric comes only from nominated and approved suppliers, and is checked before and during sewing. */
 export const fabricChecks = {
   supplierPortal: 'https://supplier.sdfltd.com/',
@@ -280,6 +286,8 @@ export const tokens: Record<string, string> = {
   mainMarkets: mainMarkets(),
   designFrom: designTeamFrom.toLocaleString('en-GB'),
   baseSize: sampling.baseSize,
+  orderUpdatesShort: orderUpdates.short,
+  orderUpdates: orderUpdates.sentence,
   counterSamples: String(sampling.counterSamples),
   counterSampleHolders: `${sampling.counterSampleHolders.slice(0, -1).join(', ')} and ${sampling.counterSampleHolders[sampling.counterSampleHolders.length - 1]}`,
   sisterCompany: `${sisterCompanyPolicy}.`,

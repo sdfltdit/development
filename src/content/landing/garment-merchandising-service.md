@@ -14,7 +14,7 @@ secondaryKeywords:
   - order follow-up
   - apparel merchandising
 intent: commercial
-answer: "Our garment merchandising service gives every order one dedicated merchandiser at our factory in Dhaka. The same person quotes your style, runs sampling, follows fabric checks and production, and prepares the shipment. You talk to them in English through our contact form and WhatsApp."
+answer: "Our garment merchandising service gives every order one dedicated merchandiser at our factory in Dhaka. The same person quotes your style, runs sampling, follows fabric checks and production, and prepares the shipment. You talk to them in English through our contact form and WhatsApp, and they email you an update at every stage."
 facts: [quote, sample, bulk]
 specsCaption: How merchandising works at SDF Clothing.
 specs:
@@ -24,6 +24,8 @@ specs:
     value: English, through our contact form and WhatsApp
   - label: Quote
     value: "Written quote within {{quoteHours}} hours"
+  - label: Order updates
+    value: "{{orderUpdatesShort}}"
   - label: Counter sample
     value: Your merchandiser keeps one of {{counterSamples}} counter samples of every approved sample
   - label: Fee
@@ -36,7 +38,7 @@ faq:
   - q: Will I have a dedicated merchandiser?
     a: Yes. Every order has one dedicated merchandiser, from the first quote to the day the goods ship.
   - q: How does order follow-up work?
-    a: You message your merchandiser through our contact form or WhatsApp. The same person answers each time, so nothing gets lost between teams.
+    a: "Your merchandiser emails you at every stage, from sample to shipment, so you keep an official written record. For quick questions, use our contact form or WhatsApp."
   - q: Do you charge for merchandising?
     a: No. Merchandising comes with every order, with no separate fee.
   - q: Can my merchandiser show me the factory?

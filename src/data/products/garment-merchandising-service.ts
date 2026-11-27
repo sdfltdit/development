@@ -48,7 +48,7 @@ export const garmentMerchandisingService: ProductContent = {
         { label: 'The sample travels with the order', text: 'your merchandiser keeps a counter sample to check bulk against' },
         { label: 'Clear English', text: 'messages through our contact form and WhatsApp' },
         { label: 'Factory visits', text: 'your merchandiser walks you through the floor by appointment' },
-        { label: 'No hand-offs', text: 'the same person runs your order from quote to shipment' },
+        { label: 'Written updates', text: 'an email at every stage, kept as the official record of your order' },
       ],
     },
     {
@@ -76,7 +76,7 @@ export const garmentMerchandisingService: ProductContent = {
     { title: 'Quote', text: 'Your merchandiser sends a written quote within {{quoteHours}} hours.' },
     { title: 'Sample', text: 'A proto sample reaches you in {{sampleDays}} days after fabric is confirmed.' },
     { title: 'Sign-off', text: 'Your comments become the bulk spec, and you sign the pre-production sample.' },
-    { title: 'Production', text: '{{bulkDays}} days of bulk production after sign-off.' },
+    { title: 'Production', text: '{{bulkDays}} days of bulk production after sign-off, with an email update at each stage.' },
     { title: 'Shipment', text: 'Packing and export papers ready for your forwarder.' },
   ],
   quality: {
