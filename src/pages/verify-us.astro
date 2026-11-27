@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { company, terms, whatsappUrl } from '../data/company';
+import { company, customerId, terms, whatsappUrl } from '../data/company';
 import { pageMeta } from '../data/pages';
 import { faqPage, standardPage, type Crumb } from '../lib/schema';
 
@@ -114,8 +114,8 @@ const schema = standardPage({
         <h2 id="pay-heading">How we ask to be paid</h2>
         <p class="section__lead">{terms.paymentMethod}.</p>
         <p>
-          Payments follow the schedule on our <a href="/work-process/">process page</a>. Bank details never change by email. If they appear to, call us
-          before you pay.
+          Payments follow the schedule on our <a href="/work-process/">process page</a>. Bank details never change by email. If they appear to, message us
+          through our contact form or WhatsApp before you pay.
         </p>
       </div>
       <div>
@@ -129,12 +129,13 @@ const schema = standardPage({
 
   <section class="section" aria-labelledby="checks-heading">
     <div class="container prose">
-      <h2 id="checks-heading">Four checks to verify SDF Clothing before your first payment</h2>
+      <h2 id="checks-heading">Five checks to verify SDF Clothing before your first payment</h2>
       <ol>
         <li><strong>Check the domain.</strong> Make sure the website address is exactly {company.officialDomain}.</li>
         <li><strong>Use the channels on this page.</strong> Confirm your merchandiser's name and the quote reference through our contact form or WhatsApp link.</li>
         <li><strong>See the factory.</strong> <a href="/booking/">Book a garment factory visit</a>, or start with a sample.</li>
         <li><strong>Match the bank details.</strong> The account must be in the name of {company.legalName} and match your proforma invoice.</li>
+        <li><strong>Look for your customer ID.</strong> We email it {customerId.issued}. Our {customerId.teams} only reply to messages that quote it, so a stranger cannot take over your order.</li>
       </ol>
       <p>
         If something does not look right, <a href={company.contactPath}>contact SDF Clothing through this website</a> before you pay. You can also read how we handle

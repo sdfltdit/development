@@ -28,7 +28,7 @@ export const garmentMerchandisingService: ProductContent = {
       caption: 'Merchandiser and buyer roles at each stage',
       columns: ['Stage', 'Your merchandiser', 'You'],
       rows: [
-        ['Quote', 'Reads your brief and sends a written quote', 'Send a tech pack, sketch or reference garment'],
+        ['Quote', 'Prices your brief, sent to you by our customer care team', 'Send a tech pack, sketch or reference garment'],
         ['Sampling', 'Briefs the sample room and sends the sample', 'Review, measure and send written comments'],
         ['Approval', 'Turns your comments into the bulk spec', 'Sign off the pre-production sample'],
         ['Fabric', 'Follows fabric from the mill through our checks', 'Approve lab dips if colours are custom'],
@@ -46,9 +46,19 @@ export const garmentMerchandisingService: ProductContent = {
         { label: 'One person answers', text: 'you never explain your order twice' },
         { label: 'Comments stay together', text: 'every change is written into one spec' },
         { label: 'The sample travels with the order', text: 'your merchandiser keeps a counter sample to check bulk against' },
-        { label: 'Clear English', text: 'messages through our contact form and WhatsApp' },
+        { label: 'Your customer ID', text: 'emailed once payment or your LC is confirmed, and quoted in every message' },
         { label: 'Factory visits', text: 'your merchandiser walks you through the floor by appointment' },
         { label: 'Written updates', text: 'an email at every stage, kept as the official record of your order' },
+      ],
+    },
+    {
+      kind: 'prose',
+      id: 'customer-id',
+      eyebrow: 'Customer ID',
+      heading: 'Your customer ID and who replies',
+      paragraphs: [
+        '{{customerIdPolicy}} Before that, our customer care team answers your messages and passes them on to your merchandiser.',
+        'Quoting the ID keeps every message on the right order. It also means nobody else can pose as you to change your order. Our <a href="/verify-us/">verify SDF Clothing</a> page lists our other safeguards.',
       ],
     },
     {

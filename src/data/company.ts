@@ -232,6 +232,15 @@ export const orderUpdates = {
   sentence: 'We email you an update at every stage of your order, so you keep an official written record.',
 } as const;
 
+/** Owner, 27 November 2026: a customer ID is emailed (through the contact form worker) once payment or the LC is confirmed. Department teams reply only to messages that quote it. Customer care answers everyone. */
+export const customerId = {
+  issued: 'once your payment is confirmed or your letter of credit reaches us',
+  sentTo: 'the email address you used on our contact form',
+  teams: 'merchandising, design, production and quality teams',
+  policy:
+    'Once your payment is confirmed or your letter of credit reaches us, we email your customer ID to the address you used on our contact form. Our merchandising, design, production and quality teams reply only to messages that quote it.',
+} as const;
+
 /** Owner, 27 November 2026: fabric comes only from nominated and approved suppliers, and is checked before and during sewing. */
 export const fabricChecks = {
   supplierPortal: 'https://supplier.sdfltd.com/',
@@ -287,6 +296,8 @@ export const tokens: Record<string, string> = {
   designFrom: designTeamFrom.toLocaleString('en-GB'),
   baseSize: sampling.baseSize,
   orderUpdatesShort: orderUpdates.short,
+  customerIdPolicy: customerId.policy,
+  customerIdIssued: customerId.issued,
   orderUpdates: orderUpdates.sentence,
   counterSamples: String(sampling.counterSamples),
   counterSampleHolders: `${sampling.counterSampleHolders.slice(0, -1).join(', ')} and ${sampling.counterSampleHolders[sampling.counterSampleHolders.length - 1]}`,

@@ -26,6 +26,8 @@ specs:
     value: "Written quote within {{quoteHours}} hours"
   - label: Order updates
     value: "{{orderUpdatesShort}}"
+  - label: Customer ID
+    value: "Emailed {{customerIdIssued}}"
   - label: Counter sample
     value: Your merchandiser keeps one of {{counterSamples}} counter samples of every approved sample
   - label: Fee
@@ -36,7 +38,7 @@ faq:
   - q: What does a garment merchandiser do?
     a: A garment merchandiser runs your order inside the factory. They quote, plan sampling, pass your comments to each team and follow the order to shipment.
   - q: Will I have a dedicated merchandiser?
-    a: Yes. Every order has one dedicated merchandiser, from the first quote to the day the goods ship.
+    a: "Yes. Every order has one dedicated merchandiser, from the first quote to the day the goods ship. Before you pay, our customer care team passes your messages to them."
   - q: How does order follow-up work?
     a: "Your merchandiser emails you at every stage, from sample to shipment, so you keep an official written record. For quick questions, use our contact form or WhatsApp."
   - q: Do you charge for merchandising?

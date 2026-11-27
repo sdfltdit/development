@@ -31,7 +31,7 @@ specs:
   - label: Payment
     value: "{{payment}}"
   - label: Who you talk to
-    value: One merchandiser at the factory, in English, through our contact form and WhatsApp
+    value: Customer care through our contact form and WhatsApp, then one merchandiser for your order
 showPrices: true
 serviceType: Clothing manufacturing for startup brands
 faq:

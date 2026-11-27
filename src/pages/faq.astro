@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { pageMeta } from '../data/pages';
-import { company, fabricSupply, mainMarkets, sampleFeePolicy, terms } from '../data/company';
+import { company, customerId, fabricSupply, mainMarkets, sampleFeePolicy, terms } from '../data/company';
 import { faqPage, standardPage, type Crumb } from '../lib/schema';
 
 const meta = pageMeta('/faq/');
@@ -57,6 +57,7 @@ const groups = [
     items: [
       { q: 'Which countries do you ship to?', a: `Worldwide. Our main markets are ${mainMarkets()}, and we ship ${terms.incoterm} ${terms.port} or on the terms you choose.` },
       { q: 'Will you keep my designs confidential?', a: 'Yes. Your files are used only for your orders, and we sign an NDA before you share them if you ask.' },
+      { q: 'What is a customer ID and when do I get one?', a: `A reference for your order account. ${customerId.policy} Our customer care team answers everyone, with or without one.` },
       { q: 'How can I be sure I am talking to the real factory?', a: `Use only ${company.officialDomain} and the channels listed on our verify page, and visit the factory if you can.` },
     ],
   },
@@ -105,7 +106,7 @@ const schema = standardPage({
         <a href="/sample-service/">clothing sample maker</a> page. To check who you are dealing with, read how to <a href="/verify-us/">verify SDF Clothing</a>.
       </p>
       <p>
-        Still have a question? <a href={company.contactPath}>Contact SDF Clothing</a> and a merchandiser replies within {terms.replyHours} working hours, or
+        Still have a question? <a href={company.contactPath}>Contact SDF Clothing</a> and our customer care team replies within {terms.replyHours} working hours, or
         ask for a <a href="/get-a-quote/">clothing manufacturing quote</a> straight away.
       </p>
     </div>

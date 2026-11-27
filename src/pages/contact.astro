@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import ContactForm from '../components/ContactForm.astro';
-import { company, terms, whatsappUrl } from '../data/company';
+import { company, customerId, terms, whatsappUrl } from '../data/company';
 import { pageMeta } from '../data/pages';
 import { standardPage, type Crumb } from '../lib/schema';
 
@@ -27,7 +27,7 @@ const schema = standardPage({
   <PageHeader
     eyebrow="Contact"
     title="Contact SDF Clothing"
-    lead={`Contact SDF Clothing through the form below or on WhatsApp, and a merchandiser will reply within ${terms.replyHours} working hours. For a price, the quote form is fastest: you get a written quote within ${terms.quoteHours} hours.`}
+    lead={`Contact SDF Clothing through the form below or on WhatsApp, and our customer care team will reply within ${terms.replyHours} working hours. For a price, the quote form is fastest: you get a written quote within ${terms.quoteHours} hours.`}
     updated={meta.updated}
   />
 
@@ -57,6 +57,19 @@ const schema = standardPage({
           </li>
         </ul>
       </aside>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="customer-id-heading">
+    <div class="container prose">
+      <h2 id="customer-id-heading">Your customer ID</h2>
+      <p>
+        Our customer care team answers every message sent through this page, with or without a customer ID. New enquiries, quotes and questions before you
+        order all start here.
+      </p>
+      <p>
+        {customerId.policy} Quote it in every message about your order. It keeps your records together and stops anyone else posing as you, or as us.
+      </p>
     </div>
   </section>
 
