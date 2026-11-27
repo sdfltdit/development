@@ -107,7 +107,7 @@ export const fabricSupply = {
   perColour: 150,
 } as const;
 
-/** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims and garment accessories. Never name it. */
+/** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims, garment accessories and packaging (hang tags, polybags, cartons and branded packaging). Trims and packaging are supplied only with our garment orders. Never name it. */
 /** Owner, 27 November 2026: the in-house design team works on orders of this many pieces per style or more. */
 export const designTeamFrom = 5000;
 
@@ -115,7 +115,7 @@ export const sisterCompany = {
   fabricAbove: 5000, // pieces per style
 } as const;
 
-export const sisterCompanyPolicy = `For orders from ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the knit or woven fabric for you. It also makes trims and garment accessories for the clothing we produce`;
+export const sisterCompanyPolicy = `For orders from ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the knit or woven fabric for you. It also makes trims, garment accessories and packaging for the clothing we produce`;
 
 export const sampleFeePolicy = `There is no separate sample fee. Your ${terms.payment[0].share}% deposit covers the sample, up to ${terms.sampleCorrections} free rounds of corrections and express courier to your door anywhere in the world`;
 

@@ -18,6 +18,16 @@ export const garmentPackingAndExport: ProductContent = {
   ],
   blocks: [
     {
+      kind: 'prose',
+      id: 'packaging',
+      eyebrow: 'Packaging pages',
+      heading: 'Branded packaging on its own pages',
+      paragraphs: [
+        'Our sister company makes the packaging for the clothing we produce. Standard packing is covered by our pages on <a href="/custom-hang-tags/">custom hang tags</a>, <a href="/garment-polybags/">polybags for clothing</a> and <a href="/garment-export-cartons/">garment export cartons</a>.',
+        'For retail and online orders, see <a href="/custom-hangers/">custom clothing hangers</a>, <a href="/custom-tissue-paper/">custom tissue paper</a>, <a href="/custom-clothing-boxes/">custom clothing boxes</a>, <a href="/custom-packaging-stickers/">custom packaging stickers</a> and <a href="/custom-mailer-bags/">custom mailer bags</a>.',
+      ],
+    },
+    {
       kind: 'table',
       id: 'documents',
       eyebrow: 'Export documents',
@@ -113,7 +123,6 @@ export const garmentPackingAndExport: ProductContent = {
     paragraphs: [
       'Not sure whether to use your own forwarder? Our guide on <a href="/freight-forwarder-vs-factory-arranged-shipping-vs-diy/">freight forwarder vs factory shipping</a> compares the options, and our <a href="/insights/customs-clearance-guide/">customs clearance guide</a> explains the import side.',
       'Each step before shipment is set out in our <a href="/work-process/">clothing production process</a>, and our <a href="/insights/payment-terms-lc-vs-tt/">payment terms guide</a> explains how LC documents work.',
-      'Want the detail on packing itself? See our pages on <a href="/custom-hang-tags/">custom hang tags</a>, <a href="/garment-polybags/">polybags for clothing</a> and <a href="/garment-export-cartons/">garment export cartons</a>.',
     ],
   },
   faqHeading: 'Packing and export questions',

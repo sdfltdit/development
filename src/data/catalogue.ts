@@ -174,7 +174,7 @@ export const serviceGroups: CatalogueGroup[] = [
     activities: 'Fabric, trims and accessories',
     lead: 'Fabric, trims and branding for the garments we make, with large orders supplied by our sister company.',
     about: `We buy the fabric, trims and labels for your order and check them before cutting. For orders from ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the fabric itself.`,
-    slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels', 'custom-hang-tags'],
+    slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels', 'custom-hang-tags', 'custom-zippers', 'custom-buttons', 'snap-buttons', 'custom-rivets', 'hook-and-loop-tape', 'garment-buckles', 'garment-elastic', 'custom-drawcords', 'garment-tapes', 'lace-trims', 'garment-interlining', 'sewing-thread', 'shoulder-pads', 'bra-components', 'garment-eyelets'],
   },
   {
     id: 'manufacturing',
@@ -214,7 +214,7 @@ export const serviceGroups: CatalogueGroup[] = [
     activities: 'Merchandising, packaging and export',
     lead: 'One merchandiser from quote to shipment, packing to your instructions and export to any country.',
     about: 'One merchandiser follows your order from quote to shipment. We pack to your instructions, prepare the export documents and hand the goods to your forwarder.',
-    slugs: ['garment-packing-and-export', 'garment-polybags', 'garment-export-cartons'],
+    slugs: ['garment-packing-and-export', 'garment-polybags', 'garment-export-cartons', 'custom-hangers', 'custom-tissue-paper', 'custom-clothing-boxes', 'custom-packaging-stickers', 'custom-mailer-bags'],
     extras: [
       {
         href: '/work-process/',

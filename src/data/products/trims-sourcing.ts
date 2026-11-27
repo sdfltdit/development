@@ -20,6 +20,18 @@ export const trimsSourcing: ProductContent = {
   ],
   blocks: [
     {
+      kind: 'prose',
+      id: 'pages',
+      eyebrow: 'Each trim',
+      heading: 'A page for every trim we supply',
+      paragraphs: [
+        'Our sister company makes the trims and accessories for the clothing we produce. Each trim has its own page with sizes, options and checks.',
+        'Closures: <a href="/custom-zippers/">custom zippers for clothing</a>, <a href="/custom-buttons/">custom buttons for clothing</a> and <a href="/snap-buttons/">snap buttons for clothing</a>. Also <a href="/custom-rivets/">custom rivets for clothing</a>, <a href="/hook-and-loop-tape/">hook and loop tape for clothing</a> and <a href="/garment-buckles/">buckles for clothing</a>.',
+        'Cords, tapes and edges: <a href="/garment-elastic/">elastic for clothing</a>, <a href="/custom-drawcords/">custom drawcords</a>, <a href="/garment-tapes/">garment tapes</a> and <a href="/lace-trims/">lace trim for clothing</a>.',
+        'Inside parts: <a href="/garment-interlining/">garment interlining</a>, <a href="/sewing-thread/">sewing thread for garments</a>, <a href="/shoulder-pads/">shoulder pads for clothing</a>, <a href="/bra-components/">bra components</a> and <a href="/garment-eyelets/">eyelets and grommets for clothing</a>.',
+      ],
+    },
+    {
       kind: 'table',
       id: 'types',
       eyebrow: 'Types',
