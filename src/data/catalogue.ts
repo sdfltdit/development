@@ -134,7 +134,7 @@ export const productGroups: CatalogueGroup[] = [
     part: 'more',
     heading: 'By fabric and finish',
     lead: 'Start from the material or the effect you want.',
-    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'viscose-clothing-manufacturer', 'nylon-clothing-manufacturer', 'chiffon-clothing-manufacturer', 'fleece-clothing-manufacturer', 'ripstop-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
+    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'viscose-clothing-manufacturer', 'nylon-clothing-manufacturer', 'chiffon-clothing-manufacturer', 'fleece-clothing-manufacturer', 'ripstop-clothing-manufacturer', 'scuba-fabric-clothing-manufacturer', 'ponte-clothing-manufacturer', 'waffle-knit-clothing-manufacturer', 'rib-knit-clothing-manufacturer', 'jersey-knit-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
   },
 ];
 

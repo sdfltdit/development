@@ -124,7 +124,15 @@ The three basic fabric weave types are plain, twill and satin. Most woven fabric
 - **Enzyme washed.** A wash that softens fabric and reduces fuzz.
 - **Shrinkage.** How much a fabric shrinks after washing, set out in the mill's test report.
 
-For production detail on single fabrics, see our [viscose clothing manufacturer](/viscose-clothing-manufacturer/), [nylon clothing manufacturer](/nylon-clothing-manufacturer/), [chiffon clothing manufacturer](/chiffon-clothing-manufacturer/), [fleece clothing manufacturer](/fleece-clothing-manufacturer/) and [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/) pages.
+## Production pages for each fabric
+
+Each fabric has its own production page with minimums, weights and the details we check.
+
+- **Fibres:** [viscose clothing manufacturer](/viscose-clothing-manufacturer/) and [nylon clothing manufacturer](/nylon-clothing-manufacturer/).
+- **Everyday knits:** [jersey knit clothing manufacturer](/jersey-knit-clothing-manufacturer/) and [rib knit clothing manufacturer](/rib-knit-clothing-manufacturer/).
+- **Textured and warm knits:** [waffle knit clothing manufacturer](/waffle-knit-clothing-manufacturer/) and [fleece clothing manufacturer](/fleece-clothing-manufacturer/).
+- **Double knits:** [ponte clothing manufacturer](/ponte-clothing-manufacturer/) and [scuba fabric clothing manufacturer](/scuba-fabric-clothing-manufacturer/).
+- **Wovens:** [chiffon clothing manufacturer](/chiffon-clothing-manufacturer/) and [ripstop clothing manufacturer](/ripstop-clothing-manufacturer/).
 
 ## Choosing fabric for clothing
 
