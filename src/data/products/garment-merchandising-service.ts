@@ -82,7 +82,7 @@ export const garmentMerchandisingService: ProductContent = {
   processHeading: 'How apparel merchandising runs on your order',
   processLead: 'Six steps, one contact, from your first message to shipment.',
   steps: [
-    { title: 'First message', text: 'Send your brief through our contact form or WhatsApp.' },
+    { title: 'First message', text: 'Send your brief through our contact form.' },
     { title: 'Quote', text: 'Your merchandiser sends a written quote within {{quoteHours}} hours.' },
     { title: 'Sample', text: 'A proto sample reaches you in {{sampleDays}} days after fabric is confirmed.' },
     { title: 'Sign-off', text: 'Your comments become the bulk spec, and you sign the pre-production sample.' },

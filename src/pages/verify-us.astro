@@ -18,7 +18,7 @@ const official = [
   { label: 'Website', value: company.officialDomain, href: `https://${company.officialDomain}/` },
   { label: 'Email', value: `We only email from addresses ending in @${company.officialDomain}` },
   { label: 'Contact form', value: `${company.officialDomain}/contact/`, href: company.contactPath },
-  { label: 'WhatsApp', value: `Only through the WhatsApp link on ${company.officialDomain}`, href: whatsappUrl },
+  { label: 'WhatsApp', value: `An automated assistant, reached only through the WhatsApp link on ${company.officialDomain}`, href: whatsappUrl },
   { label: 'Office', value: `${company.address.street}, ${company.address.locality} ${company.address.postalCode}, ${company.address.countryName}` },
 ];
 
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: 'Our bank details were changed by email. What should I do?',
-    a: `Do not pay. Contact your merchandiser through the contact form or the WhatsApp link on ${company.officialDomain} and confirm the details first. We do not change bank details by email.`,
+    a: `Do not pay. Message the right department through the contact form on ${company.officialDomain} and confirm the details first. We do not change bank details by email.`,
   },
   {
     q: 'Can I see the factory before I pay?',
@@ -114,8 +114,8 @@ const schema = standardPage({
         <h2 id="pay-heading">How we ask to be paid</h2>
         <p class="section__lead">{terms.paymentMethod}.</p>
         <p>
-          Payments follow the schedule on our <a href="/work-process/">process page</a>. Bank details never change by email. If they appear to, message us
-          through our contact form or WhatsApp before you pay.
+          Payments follow the schedule on our <a href="/work-process/">process page</a>. Bank details never change by email. If they appear to, message the right
+          department through our contact form before you pay.
         </p>
       </div>
       <div>
@@ -132,7 +132,7 @@ const schema = standardPage({
       <h2 id="checks-heading">Five checks to verify SDF Clothing before your first payment</h2>
       <ol>
         <li><strong>Check the domain.</strong> Make sure the website address is exactly {company.officialDomain}.</li>
-        <li><strong>Use the channels on this page.</strong> Confirm your merchandiser's name and the quote reference through our contact form or WhatsApp link.</li>
+        <li><strong>Use the channels on this page.</strong> Confirm your merchandiser's name and the quote reference through our contact form.</li>
         <li><strong>See the factory.</strong> <a href="/booking/">Book a garment factory visit</a>, or start with a sample.</li>
         <li><strong>Match the bank details.</strong> The account must be in the name of {company.legalName} and match your proforma invoice.</li>
         <li><strong>Look for your customer ID.</strong> We email it {customerId.issued}. Our {customerId.teams} only reply to messages that quote it, so a stranger cannot take over your order.</li>

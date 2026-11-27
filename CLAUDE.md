@@ -59,6 +59,7 @@ Names and identity
 Never publish
 - Email addresses or phone numbers, in visible text, links or schema. Contact is the `/contact/` form and WhatsApp only.
 - WhatsApp link is exactly `https://wa.me/8801819172080`, with no text parameter. Use `whatsappUrl` from `company.ts`.
+- The WhatsApp line is an AI assistant, not run by people (owner, 27 November 2026). Always call it "our WhatsApp assistant" or "automated assistant" (EU AI Act Article 50 disclosure, in force since 2 August 2026). Never write that a merchandiser or customer care answers WhatsApp. Payments, bank details, order changes and anything needing a customer ID go to "the right department through our contact form". Never name the accounts department.
 - Certificates or certification names, company registration (RJSC), TIN, trade association names or member numbers. The `/certifications/` page explains our compliance approach without naming any.
 - Live video call offers.
 - Partners or subcontractors. All cutting, sewing, printing (screen, DTF, sublimation) and embroidery is in-house.

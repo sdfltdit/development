@@ -24,7 +24,7 @@ export const GET: APIRoute = async () => {
     `- In-house: ${capabilities.inHouse.join(', ')}`,
     `- Fabrics: ${capabilities.fabrics}`,
     `- Official website: ${company.officialDomain}; official email domain: @${company.officialDomain}`,
-    `- Contact: contact form at ${absolute(company.contactPath)} or the WhatsApp link on that page`,
+    `- Contact: contact form at ${absolute(company.contactPath)} (people), or the automated WhatsApp assistant linked on that page`,
     `- Address: ${company.address.street}, ${company.address.locality} ${company.address.postalCode}, ${company.address.countryName}`,
     '',
     `## Indicative FOB prices (${priceIndex.currency}, checked ${priceIndex.checkedAt})`,
