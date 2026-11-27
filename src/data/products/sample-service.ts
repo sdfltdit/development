@@ -124,7 +124,7 @@ export const sampleService: ProductContent = {
   first: {
     heading: 'Choosing between 3D and physical samples',
     paragraphs: [
-      'A physical sample is the only way to judge fabric feel, stretch and drape. Our guide to <a href="/digital-3d-sample-vs-physical-sample/">3D sample vs physical sample</a> explains when a 3D sample helps.',
+      'A physical sample is the only way to judge fabric feel, stretch and drape. Our guide to <a href="/digital-3d-sample-vs-physical-sample/">3D sample vs physical sample</a> explains when a 3D sample helps. We make the first sample in size {{baseSize}} and keep {{counterSamples}} counter samples of every approved sample. Our guide to <a href="/insights/types-of-garment-samples/">types of garment samples</a> explains each stage, from proto to shipment.',
       'Once you approve a sample, see our <a href="/cut-and-sew-service/">cut and sew manufacturer</a> page for how bulk runs, or browse all our <a href="/all-services/">clothing manufacturing services</a>.',
     ],
   },

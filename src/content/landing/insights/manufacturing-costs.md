@@ -85,7 +85,7 @@ Fabric cost per garment is usually the biggest single line. It depends on three 
 2. **Consumption,** which is how much fabric one garment uses. Bigger sizes and oversized fits use more.
 3. **Waste allowance** for cutting, shrinkage and testing.
 
-Heavier fabric, special fibres and custom colours all raise the fabric line. Our [fabric types glossary](/insights/fabric-types-glossary/) explains the common options.
+Our guide to [fabric consumption calculation](/insights/fabric-consumption-calculation/) shows how consumption is worked out, and the free [fabric consumption calculator](/tools/fabric-consumption-calculator/) runs the numbers. Heavier fabric, special fibres and custom colours all raise the fabric line. Our [fabric types glossary](/insights/fabric-types-glossary/) explains the common options.
 
 ## CM cost
 

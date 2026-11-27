@@ -128,7 +128,7 @@ export const fabricSourcing: ProductContent = {
     heading: 'Starting with fabric sourcing',
     paragraphs: [
       'Many brands start with a ready fabric dyed to their colours. It keeps the first order fast and the minimum low. Fabric knitted or woven to your own spec can follow from {{customFabricFrom}} pieces per style. See our <a href="/viscose-clothing-manufacturer/">viscose clothing manufacturer</a>, <a href="/nylon-clothing-manufacturer/">nylon clothing manufacturer</a>, <a href="/chiffon-clothing-manufacturer/">chiffon clothing manufacturer</a>, <a href="/fleece-clothing-manufacturer/">fleece clothing manufacturer</a> and <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> pages for fabric details.',
-      'Need zips, buttons and cords too? See our <a href="/trims-sourcing/">trims sourcing service</a> page.',
+      'Need zips, buttons and cords too? See our <a href="/trims-sourcing/">trims sourcing service</a> page. Every roll is checked on arrival, as our guide to <a href="/insights/fabric-inspection-4-point-system/">4-point fabric inspection</a> explains. Mills that want to supply us can <a href="https://supplier.sdfltd.com/" target="_blank" rel="noopener noreferrer">register as a supplier (opens in a new tab)</a>.',
     ],
   },
   faqHeading: 'Fabric sourcing questions',

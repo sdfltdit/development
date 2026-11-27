@@ -111,7 +111,7 @@ Fabric inspection before cutting is the cheapest point to catch a fault. A typic
 | Shrinkage | A wash test for length and width |
 | Twist | Spirality after the wash test |
 
-Faults are marked so the cutter can work around them, or rolls are rejected if they fail the agreed limit.
+Faults are marked so the cutter can work around them, or rolls are rejected if they fail the agreed limit. Most factories score the visual check with the 4-point system, as our guide to [4-point fabric inspection](/insights/fabric-inspection-4-point-system/) explains.
 
 ## Where SDF Clothing fits
 

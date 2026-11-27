@@ -1,0 +1,215 @@
+---
+import ToolPage from '../../components/ToolPage.astro';
+
+const faqs = [
+  {
+    q: 'How accurate is a knit fabric consumption estimate?',
+    a: 'It is close enough for a quote, usually within a few per cent. The real figure for bulk comes from the cutting marker, which uses your actual fabric width and size ratio.',
+  },
+  {
+    q: 'How do I work out woven fabric consumption?',
+    a: 'Divide the marker length by the number of garments in the marker, then add wastage. A 6.4 metre marker holding 4 shirts gives 1.6 metres per shirt before wastage.',
+  },
+  {
+    q: 'What is consumption per dozen?',
+    a: 'The fabric needed for 12 garments. Knit mills and merchandisers often quote consumption per dozen in kilograms, because it gives easier numbers than one piece.',
+  },
+  {
+    q: 'What allowances should I add to the measurements?',
+    a: 'Add seam and hem allowances to each length and width, usually 2 to 4 cm. Add more for fabric that shrinks or for deep hems.',
+  },
+  {
+    q: 'Does the calculator include rib for necks and cuffs?',
+    a: 'No. Work out rib, collars and other trims separately with the same method, then add them to the body figure.',
+  },
+];
+---
+
+<ToolPage
+  path="/tools/fabric-consumption-calculator/"
+  heading="Fabric consumption calculator for knit and woven garments"
+  lead="This free fabric consumption calculator gives two quick answers. For knit fabric it turns garment measurements and GSM into kilograms per piece and per dozen. For woven fabric it turns a marker length into metres per piece. Both add the wastage you choose."
+  toolHeading="Work out fabric per garment"
+  faqs={faqs}
+  related={[
+    { title: 'Fabric consumption calculation guide', href: '/insights/fabric-consumption-calculation/', summary: 'The formulas, marker efficiency and what raises fabric wastage.' },
+    { title: 'Fabric shrinkage calculator', href: '/tools/shrinkage-calculator/', summary: 'Measure shrinkage and set the size to cut before you work out consumption.' },
+    { title: 'GSM converter', href: '/tools/gsm-converter/', summary: 'Convert fabric weight between GSM and ounces.' },
+  ]}
+>
+  <div slot="tool" class="tool-pair">
+    <form class="tool" data-tool="knit" novalidate>
+      <h3>1. Knit fabric consumption by weight</h3>
+      <div class="tool__grid">
+        <div class="field">
+          <label class="field__label" for="kc-length">Body length plus allowances (cm)</label>
+          <input class="field__input" id="kc-length" type="text" inputmode="decimal" autocomplete="off" aria-describedby="kc-length-error" value="76" />
+          <p class="field__error" id="kc-length-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="kc-sleeve">Sleeve length plus allowances (cm)</label>
+          <input class="field__input" id="kc-sleeve" type="text" inputmode="decimal" autocomplete="off" aria-describedby="kc-sleeve-error" value="23" />
+          <p class="field__error" id="kc-sleeve-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="kc-chest">Half chest plus allowance (cm)</label>
+          <input class="field__input" id="kc-chest" type="text" inputmode="decimal" autocomplete="off" aria-describedby="kc-chest-error" value="54" />
+          <p class="field__error" id="kc-chest-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="kc-gsm">Fabric weight (GSM)</label>
+          <input class="field__input" id="kc-gsm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="kc-gsm-error" value="180" />
+          <p class="field__error" id="kc-gsm-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="kc-waste">Wastage to add (%)</label>
+          <input class="field__input" id="kc-waste" type="text" inputmode="decimal" autocomplete="off" aria-describedby="kc-waste-error" value="8" />
+          <p class="field__error" id="kc-waste-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="tool__actions">
+        <button class="button button--primary" type="submit">Calculate knit consumption</button>
+      </div>
+      <div class="tool__result" data-result aria-live="polite" hidden>
+        <dl class="tool__figures">
+          <div class="tool__figure"><dt>Per piece, before wastage</dt><dd data-out="net"></dd></div>
+          <div class="tool__figure"><dt>Per piece, with wastage</dt><dd data-out="gross"></dd></div>
+          <div class="tool__figure"><dt>Per dozen, with wastage</dt><dd data-out="dozen"></dd></div>
+        </dl>
+      </div>
+    </form>
+
+    <form class="tool" data-tool="woven" novalidate>
+      <h3>2. Woven fabric consumption from a marker</h3>
+      <div class="tool__grid">
+        <div class="field">
+          <label class="field__label" for="wc-marker">Marker length (metres)</label>
+          <input class="field__input" id="wc-marker" type="text" inputmode="decimal" autocomplete="off" aria-describedby="wc-marker-error" value="6.4" />
+          <p class="field__error" id="wc-marker-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="wc-pieces">Garments in the marker</label>
+          <input class="field__input" id="wc-pieces" type="text" inputmode="numeric" autocomplete="off" aria-describedby="wc-pieces-error" value="4" />
+          <p class="field__error" id="wc-pieces-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="wc-waste">Wastage to add (%)</label>
+          <input class="field__input" id="wc-waste" type="text" inputmode="decimal" autocomplete="off" aria-describedby="wc-waste-error" value="4" />
+          <p class="field__error" id="wc-waste-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="wc-qty">Order quantity (pieces)</label>
+          <input class="field__input" id="wc-qty" type="text" inputmode="numeric" autocomplete="off" aria-describedby="wc-qty-error" value="500" />
+          <p class="field__error" id="wc-qty-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="tool__actions">
+        <button class="button button--primary" type="submit">Calculate woven consumption</button>
+      </div>
+      <div class="tool__result" data-result aria-live="polite" hidden>
+        <dl class="tool__figures">
+          <div class="tool__figure"><dt>Per piece, with wastage</dt><dd data-out="piece"></dd></div>
+          <div class="tool__figure"><dt>Per piece in yards</dt><dd data-out="yards"></dd></div>
+          <div class="tool__figure"><dt>Fabric for the order</dt><dd data-out="total"></dd></div>
+        </dl>
+      </div>
+    </form>
+  </div>
+
+  <noscript>
+    <p>The calculator needs JavaScript. The formulas below let you work out the same figures by hand.</p>
+  </noscript>
+
+  <h2>How the fabric consumption calculator works</h2>
+  <p>
+    Knit fabric is bought by weight, so the first calculator finds the fabric area of the body and sleeves, then multiplies it by the GSM. Woven fabric
+    is bought by length, so the second calculator divides the marker length by the garments it holds.
+  </p>
+  <div class="table-wrap" role="region" aria-label="Fabric consumption formulas" tabindex="0">
+    <table class="table--stack">
+      <caption>Formulas used</caption>
+      <thead>
+        <tr><th scope="col">Result</th><th scope="col">Formula</th><th scope="col">Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Result">Knit kilograms per piece</td><td data-label="Formula">(length + sleeve) × half chest × 2 × GSM ÷ 10,000,000</td><td data-label="Example">(76 + 23) × 54 × 2 × 180 ÷ 10,000,000 = 0.192 kg</td></tr>
+        <tr><td data-label="Result">With wastage</td><td data-label="Formula">net × (1 + wastage ÷ 100)</td><td data-label="Example">0.192 × 1.08 = 0.208 kg</td></tr>
+        <tr><td data-label="Result">Woven metres per piece</td><td data-label="Formula">marker length ÷ garments × (1 + wastage ÷ 100)</td><td data-label="Example">6.4 ÷ 4 × 1.04 = 1.66 m</td></tr>
+        <tr><td data-label="Result">Metres to yards</td><td data-label="Formula">metres ÷ 0.9144</td><td data-label="Example">1.66 ÷ 0.9144 = 1.82 yd</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The example values in the fields are examples only. Replace them with your own garment and fabric.</p>
+
+  <h2>Knit fabric consumption tips</h2>
+  <ul>
+    <li>Measure the base size, then adjust for your size ratio. Larger sizes use more fabric.</li>
+    <li>Use the fabric weight after finishing, from the mill report, not the weight before washing.</li>
+    <li>Work out rib, collars and pocket bags separately and add them.</li>
+  </ul>
+
+  <h2>Woven fabric consumption tips</h2>
+  <ul>
+    <li>Plan the marker on the cuttable width, not the full fabric width.</li>
+    <li>Add more wastage for stripes, checks and one-way prints.</li>
+    <li>Mixed-size markers usually save fabric compared with one size per marker.</li>
+  </ul>
+  <p>
+    Our guide to <a href="/insights/fabric-consumption-calculation/">fabric consumption calculation</a> explains marker efficiency and wastage in more depth.
+  </p>
+</ToolPage>
+
+<script>
+  import { bindForm, byId, format, readNumber } from '../../scripts/tools/common';
+
+  const knit = document.querySelector<HTMLFormElement>('form[data-tool="knit"]');
+  const woven = document.querySelector<HTMLFormElement>('form[data-tool="woven"]');
+
+  if (knit) {
+    const v = (id: string): HTMLInputElement => byId<HTMLInputElement>(knit, id);
+    const result = knit.querySelector<HTMLElement>('[data-result]');
+    const out = (key: string): HTMLElement | null => knit.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const run = (): void => {
+      const length = readNumber(v('kc-length'), { label: 'body length', min: 1, max: 300 });
+      const sleeve = readNumber(v('kc-sleeve'), { label: 'sleeve length', min: 0, max: 200 });
+      const chest = readNumber(v('kc-chest'), { label: 'half chest', min: 1, max: 200 });
+      const gsm = readNumber(v('kc-gsm'), { label: 'fabric weight', min: 20, max: 1000 });
+      const waste = readNumber(v('kc-waste'), { label: 'wastage', min: 0, max: 50 });
+      if (length === null || sleeve === null || chest === null || gsm === null || waste === null || !result) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const net = ((length + sleeve) * chest * 2 * gsm) / 10_000_000;
+      const gross = net * (1 + waste / 100);
+      out('net')!.textContent = `${format(net, 3)} kg`;
+      out('gross')!.textContent = `${format(gross, 3)} kg`;
+      out('dozen')!.textContent = `${format(gross * 12, 2)} kg`;
+      result.hidden = false;
+    };
+    bindForm(knit, run);
+    run();
+  }
+
+  if (woven) {
+    const v = (id: string): HTMLInputElement => byId<HTMLInputElement>(woven, id);
+    const result = woven.querySelector<HTMLElement>('[data-result]');
+    const out = (key: string): HTMLElement | null => woven.querySelector<HTMLElement>(`[data-out="${key}"]`);
+    const run = (): void => {
+      const marker = readNumber(v('wc-marker'), { label: 'marker length', min: 0.1, max: 100 });
+      const pieces = readNumber(v('wc-pieces'), { label: 'number of garments in the marker', min: 1, max: 100 });
+      const waste = readNumber(v('wc-waste'), { label: 'wastage', min: 0, max: 50 });
+      const qty = readNumber(v('wc-qty'), { label: 'order quantity', min: 1, max: 1_000_000 });
+      if (marker === null || pieces === null || waste === null || qty === null || !result) {
+        if (result) result.hidden = true;
+        return;
+      }
+      const piece = (marker / pieces) * (1 + waste / 100);
+      out('piece')!.textContent = `${format(piece, 2)} m`;
+      out('yards')!.textContent = `${format(piece / 0.9144, 2)} yd`;
+      out('total')!.textContent = `${format(piece * qty, 0)} m`;
+      result.hidden = false;
+    };
+    bindForm(woven, run);
+    run();
+  }
+</script>

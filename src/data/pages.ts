@@ -210,6 +210,17 @@ const registry: PageMeta[] = [
     llmsLabel: 'Fabric shrinkage calculator',
   },
   {
+    path: '/tools/fabric-consumption-calculator/',
+    title: 'Fabric Consumption Calculator: Knit and Woven | SDF Clothing',
+    description:
+      'Free fabric consumption calculator: turn garment measurements and GSM into knit kilograms per piece and dozen, or a marker length into woven metres per piece.',
+    primaryKeyword: 'fabric consumption calculator',
+    secondaryKeywords: ['knit fabric consumption', 'woven fabric consumption', 'consumption per dozen'],
+    updated: '2026-11-27',
+    inLlms: true,
+    llmsLabel: 'Fabric consumption calculator',
+  },
+  {
     path: '/tools/moq-calculator/',
     title: 'MOQ Calculator: Split by Colour and Size | SDF Clothing',
     description:

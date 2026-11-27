@@ -133,6 +133,25 @@ Your size label should match your chart exactly. If you sell in several markets,
 
 Children's clothing is usually sized by age or by height in centimetres. Height is more reliable, because children of the same age vary widely. Many brands show both, such as "7 to 8 years, 122 to 128 cm".
 
+| Size | Typical height | Common age |
+|---|---|---|
+| Baby 0 to 3 months | Up to 62 cm | Newborn to 3 months |
+| Baby 6 to 12 months | 68 to 80 cm | 6 to 12 months |
+| Toddler 2T to 3T | 86 to 98 cm | 2 to 3 years |
+| Kids 4 to 6 | 104 to 116 cm | 4 to 6 years |
+| Kids 7 to 10 | 122 to 140 cm | 7 to 10 years |
+| Kids 11 to 14 | 146 to 164 cm | 11 to 14 years |
+
+Height ranges differ a little between brands and countries, so treat these as a starting point. Children grow in steps of about 6 cm a size, which is why most kidswear charts move in 6 cm height bands.
+
+## Unisex sizing
+
+Unisex clothing is usually built on a men's block, with a straighter body and longer length. Women often size down one size. Show chest, length and sleeve in centimetres on your chart, so every shopper can compare against a garment they already own. A short note such as "women's fit: size down" cuts returns.
+
+## Tall and petite ranges
+
+Tall and petite ranges keep the width of a regular size but change the lengths. A tall range typically adds about 5 to 8 cm to body, sleeve and leg length. A petite range takes about the same off and raises the waist and armhole slightly. Each range needs its own grade rules, as our guide to [garment grading](/insights/garment-grading-explained/) explains.
+
 ## Where SDF Clothing fits
 
 We grade your base size to your own size chart and print size labels to match it. Our [clothing pattern making service](/pattern-making-service/) explains how we build and grade size sets. Orders start at {{moq}} {{moqUnit}}, with the proto sample in {{sampleDays}} days.

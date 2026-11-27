@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/insights/types-of-garment-samples/', '/insights/garment-measurement-tolerance/', '/insights/fabric-consumption-calculation/', '/insights/fabric-inspection-4-point-system/', '/tools/fabric-consumption-calculator/',
   '/custom-zippers/', '/custom-buttons/', '/snap-buttons/', '/custom-rivets/', '/hook-and-loop-tape/', '/garment-buckles/', '/garment-elastic/', '/custom-drawcords/', '/garment-tapes/', '/lace-trims/', '/garment-interlining/', '/sewing-thread/', '/shoulder-pads/', '/bra-components/', '/garment-eyelets/', '/custom-hangers/', '/custom-tissue-paper/', '/custom-clothing-boxes/', '/custom-packaging-stickers/', '/custom-mailer-bags/',
   '/custom-hang-tags/', '/garment-polybags/', '/garment-export-cartons/',
   '/eu-epr-explained/', '/insights/cpsia-compliance-guide/', '/insights/digital-product-passport-textile/', '/insights/eu-clothing-regulations-2026/', '/insights/circular-fashion-guide/',

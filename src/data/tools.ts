@@ -36,6 +36,11 @@ export const tools: ToolEntry[] = [
     summary: 'Measure shrinkage after washing and find the size to cut so garments finish on spec.',
   },
   {
+    path: '/tools/fabric-consumption-calculator/',
+    name: 'Fabric consumption calculator',
+    summary: 'Work out knit kilograms or woven metres of fabric per garment, with wastage.',
+  },
+  {
     path: '/tools/moq-calculator/',
     name: 'MOQ calculator',
     summary: 'Split an order across colours and sizes with your own size ratio.',

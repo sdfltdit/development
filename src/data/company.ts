@@ -219,6 +219,42 @@ export function paymentSummary(): string {
   return terms.payment.map((p) => `${p.share}% ${p.when}`).join(', then ');
 }
 
+/** Owner, 27 November 2026: how samples are made and kept. */
+export const sampling = {
+  baseSize: 'M',
+  counterSamples: 4,
+  counterSampleHolders: ['our factory floor', 'you, the buyer', 'our head office', 'the merchandiser who follows your order from sample to shipment'],
+} as const;
+
+/** Owner, 27 November 2026: fabric comes only from nominated and approved suppliers, and is checked before and during sewing. */
+export const fabricChecks = {
+  supplierPortal: 'https://supplier.sdfltd.com/',
+  steps: [
+    { label: 'Nominated suppliers', text: 'fabric comes only from our nominated and approved mills and factories' },
+    { label: 'Certificates', text: 'mill certificates and test reports checked against the order' },
+    { label: 'Roll check', text: 'rolls checked for width, weight and shade on arrival' },
+    { label: 'Yarn count', text: 'yarn count checked against the fabric specification' },
+    { label: '4-point inspection', text: 'rolls graded for defects with the 4-point system before cutting' },
+    { label: 'During sewing', text: 'panels and garments checked at every step of the sewing line' },
+  ],
+} as const;
+
+/**
+ * Default measurement tolerances (owner asked us to use industry best practice, 27 November 2026).
+ * Half measurements taken flat, in centimetres. A tolerance in the buyer's tech pack always wins.
+ */
+export const measurementTolerances = [
+  { point: 'Half chest or bust', knit: '±1', woven: '±1' },
+  { point: 'Body length', knit: '±1.5', woven: '±1' },
+  { point: 'Sleeve length', knit: '±1', woven: '±1' },
+  { point: 'Shoulder width', knit: '±1', woven: '±0.5' },
+  { point: 'Half waist, relaxed', knit: '±1', woven: '±0.5' },
+  { point: 'Half hip', knit: '±1', woven: '±1' },
+  { point: 'Inseam', knit: '±1', woven: '±1' },
+  { point: 'Neck width and cuff or leg opening', knit: '±0.5', woven: '±0.5' },
+  { point: 'Small details such as pocket placement', knit: '±0.3', woven: '±0.3' },
+] as const;
+
 export const tokens: Record<string, string> = {
   moq: String(terms.moq),
   moqUnit: terms.moqUnit,
@@ -243,6 +279,9 @@ export const tokens: Record<string, string> = {
   monthlyCapacity: capabilities.monthlyCapacity.toLocaleString('en-GB'),
   mainMarkets: mainMarkets(),
   designFrom: designTeamFrom.toLocaleString('en-GB'),
+  baseSize: sampling.baseSize,
+  counterSamples: String(sampling.counterSamples),
+  counterSampleHolders: `${sampling.counterSampleHolders.slice(0, -1).join(', ')} and ${sampling.counterSampleHolders[sampling.counterSampleHolders.length - 1]}`,
   sisterCompany: `${sisterCompanyPolicy}.`,
   sampleCourier: terms.sampleCourier,
   paymentScope: `${terms.paymentScope}.`,
@@ -263,6 +302,12 @@ const priceKey = (product: string): string =>
     .filter(Boolean)
     .map((word, i) => (i === 0 ? word : word[0].toUpperCase() + word.slice(1)))
     .join('');
+
+measurementTolerances.forEach((row, i) => {
+  tokens[`tol${i + 1}Point`] = row.point;
+  tokens[`tol${i + 1}Knit`] = `${row.knit} cm`;
+  tokens[`tol${i + 1}Woven`] = `${row.woven} cm`;
+});
 
 for (const row of priceIndex.rows) {
   tokens[`${priceKey(row.product)}From`] = `$${row.fobMoq}`;

@@ -150,6 +150,10 @@ Air freight is far faster but costs much more. Our guide to [Incoterms explained
 4. **Keep trims simple** on a first order.
 5. **Order the same style again.** Reorders skip most sampling.
 
+## The pre-production meeting
+
+Before bulk starts, many factories hold a pre-production meeting. The merchandiser, pattern maker, cutting, sewing and quality teams sit down with the approved sample. They agree the critical points, the measurement tolerances and how each operation is sewn. A short meeting here prevents most of the faults that would otherwise surface on the line. Our guide to [garment measurement tolerance](/insights/garment-measurement-tolerance/) explains the numbers they agree.
+
 ## Where SDF Clothing fits
 
 Our proto samples take {{sampleDays}} days, and bulk follows in {{bulkDays}} days once you sign off the sample. Every order gets a written quote within {{quoteHours}} hours. Our [production process](/work-process/) page shows each stage and the payment due at each step.

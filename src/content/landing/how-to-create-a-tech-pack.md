@@ -105,7 +105,7 @@ Measure flat, half the circumference, unless you say otherwise. State it on the 
 
 ### Size chart
 
-The size chart lists every point of measure for every size. Start with one base size, usually a medium, and fill in the rest. Add a tolerance to each line, such as plus or minus one centimetre for chest, so the factory knows how close is close enough.
+The size chart lists every point of measure for every size. Start with one base size, usually a medium, and fill in the rest. Add a tolerance to each line, such as plus or minus one centimetre for chest, so the factory knows how close is close enough. Our guide to [garment measurement tolerance](/insights/garment-measurement-tolerance/) gives typical figures.
 
 If you are not sure how sizes should step up, give the base size and let the pattern maker suggest the grading. Our [pattern making service](/pattern-making-service/) explains how grading works.
 

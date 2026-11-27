@@ -255,19 +255,19 @@ export const guideGroups: CatalogueGroup[] = [
     id: 'development',
     heading: 'Design, fit and colour',
     lead: 'Tech packs, samples, sizing and colour approval.',
-    slugs: ['how-to-create-a-tech-pack', 'digital-3d-sample-vs-physical-sample', 'insights/garment-grading-explained', 'insights/international-size-chart-guide', 'insights/pattern-fit-problems-explained', 'insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers', 'insights/lab-dip-explained'],
+    slugs: ['how-to-create-a-tech-pack', 'digital-3d-sample-vs-physical-sample', 'insights/garment-grading-explained', 'insights/international-size-chart-guide', 'insights/pattern-fit-problems-explained', 'insights/hex-code-vs-pantone-tcx-for-clothing-manufacturers', 'insights/lab-dip-explained', 'insights/types-of-garment-samples', 'insights/garment-measurement-tolerance'],
   },
   {
     id: 'quality',
     heading: 'Fabric, decoration and quality',
     lead: 'What makes a garment last, and how faults are caught.',
-    slugs: ['insights/fabric-types-glossary', 'insights/fabric-gsm-explained', 'insights/knitting-defects-explained', 'insights/shade-variation-explained', 'insights/stitch-quality-spi-explained', 'insights/printing-methods-compared', 'insights/embroidery-problems-explained', 'insights/garment-finishing-explained', 'insights/aql-inspection-explained', 'in-house-qc-vs-third-party-inspection-vs-no-inspection'],
+    slugs: ['insights/fabric-types-glossary', 'insights/fabric-gsm-explained', 'insights/knitting-defects-explained', 'insights/fabric-inspection-4-point-system', 'insights/shade-variation-explained', 'insights/stitch-quality-spi-explained', 'insights/printing-methods-compared', 'insights/embroidery-problems-explained', 'insights/garment-finishing-explained', 'insights/aql-inspection-explained', 'in-house-qc-vs-third-party-inspection-vs-no-inspection'],
   },
   {
     id: 'costs',
     heading: 'Costs, payment and shipping',
     lead: 'Pricing an order, paying for it and getting it home.',
-    slugs: ['insights/manufacturing-costs', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
+    slugs: ['insights/manufacturing-costs', 'insights/fabric-consumption-calculation', 'insights/how-to-calculate-landed-cost', 'insights/payment-terms-lc-vs-tt', 'insights/incoterms-explained', 'insights/customs-clearance-guide', 'freight-forwarder-vs-factory-arranged-shipping-vs-diy', 'guides/clothing-manufacturing-lead-time'],
   },
   {
     id: 'rules',
