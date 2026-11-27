@@ -153,7 +153,7 @@ export const leggings: ProductContent = {
     heading: 'Launching your first custom leggings',
     paragraphs: [
       'Many brands start with one high-rise style in two or three core colours, plus a matching bra. Black is usually the best seller, and the hardest test of opacity, so it is a good colour for your first proto.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Our <a href="/nylon-clothing-manufacturer/">nylon clothing manufacturer</a> page explains nylon spandex in detail. Stretch and recovery come from elastane, as our <a href="/spandex-clothing-manufacturer/">spandex clothing manufacturer</a> page explains.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Our <a href="/nylon-clothing-manufacturer/">nylon clothing manufacturer</a> page explains nylon spandex in detail. Stretch and recovery come from elastane, as our <a href="/spandex-clothing-manufacturer/">spandex clothing manufacturer</a> page explains. Riding tights with silicone grip are covered on our <a href="/equestrian-clothing-manufacturer/">equestrian clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Leggings manufacturing questions',

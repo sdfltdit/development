@@ -126,7 +126,7 @@ export const runningApparel: ProductContent = {
     heading: 'Starting a running range with us',
     paragraphs: [
       'Many running brands start with a singlet, a tee and a split short in two colourways. The three pieces make a complete race outfit and share one fabric family.',
-      'Adding compression pieces? See our <a href="/compression-wear-manufacturer/">compression wear manufacturer</a> page.',
+      'Adding compression pieces? See our <a href="/compression-wear-manufacturer/">compression wear manufacturer</a> page. Swim, bike and run suits are covered on our <a href="/triathlon-suit-manufacturer/">triathlon suit manufacturer</a> page.',
     ],
   },
   faqHeading: 'Running apparel questions',

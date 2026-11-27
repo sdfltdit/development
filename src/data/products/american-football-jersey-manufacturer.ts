@@ -86,7 +86,7 @@ export const americanFootballJersey: ProductContent = {
   ],
   quality: {
     heading: 'Football jersey quality checks',
-    lead: 'As a American football jersey manufacturer, we run these checks on every order.',
+    lead: 'As an American football jersey manufacturer, we run these checks on every order.',
     items: [
       { label: 'Fit', text: 'shoulder and body checked for pad room' },
       { label: 'Numbers', text: 'size, stroke and contrast checked' },

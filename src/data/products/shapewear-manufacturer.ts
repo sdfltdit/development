@@ -125,7 +125,7 @@ export const shapewear: ProductContent = {
     heading: 'Starting a shapewear range with us',
     paragraphs: [
       'Many brands start with medium-control shaping shorts in three nude shades. Shorts suit the most outfits and body types, and sell all year.',
-      'Selling occasionwear too? See our <a href="/evening-dress-manufacturer/">evening dress manufacturer</a> page.',
+      'Selling occasionwear too? See our <a href="/evening-dress-manufacturer/">evening dress manufacturer</a> page. Intimates brands adding absorbent briefs can see our <a href="/period-underwear-manufacturer/">period underwear manufacturer</a> page.',
     ],
   },
   faqHeading: 'Shapewear questions',

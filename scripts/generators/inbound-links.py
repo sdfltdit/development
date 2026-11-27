@@ -87,6 +87,24 @@ TS = {
     'cut-and-sew-service': 'Every seam is only as strong as its thread, as our [[sewing-thread]] page explains.',
 }
 
+EXTRA = [
+    ('kids-baby-clothing-manufacturer', 'Wearable blankets for nursery ranges are covered on our [[baby-sleep-sack-manufacturer]] page.'),
+    ('baby-bib-manufacturer', 'Sleep sacks in matching prints are covered on our [[baby-sleep-sack-manufacturer]] page.'),
+    ('leggings-manufacturer', 'Riding tights with silicone grip are covered on our [[equestrian-clothing-manufacturer]] page.'),
+    ('base-layer-manufacturer', 'Base layers for riders are covered on our [[equestrian-clothing-manufacturer]] page.'),
+    ('activewear-manufacturer', 'Riding brands can see our [[equestrian-clothing-manufacturer]] page, and court brands our [[pickleball-apparel-manufacturer]] page.'),
+    ('school-uniform-manufacturer', 'Leavers’ and prize-day gowns are covered on our [[graduation-gown-manufacturer]] page. Lacrosse kit is on our [[lacrosse-uniform-manufacturer]] page.'),
+    ('blazer-manufacturer', 'Academic dress for ceremonies is covered on our [[graduation-gown-manufacturer]] page.'),
+    ('basketball-uniform-manufacturer', 'Reversible pinnies for field teams are covered on our [[lacrosse-uniform-manufacturer]] page.'),
+    ('cycling-jersey-manufacturer', 'Off-road riders are covered on our [[motocross-jersey-manufacturer]] page, and multisport clubs on our [[triathlon-suit-manufacturer]] page.'),
+    ('sublimated-clothing-manufacturer', 'Sublimated race kit for off-road teams is on our [[motocross-jersey-manufacturer]] page.'),
+    ('underwear-manufacturer', 'Absorbent styles are covered on our [[period-underwear-manufacturer]] page.'),
+    ('lingerie-manufacturer', 'Leak-proof briefs to pair with bras are covered on our [[period-underwear-manufacturer]] page.'),
+    ('shapewear-manufacturer', 'Intimates brands adding absorbent briefs can see our [[period-underwear-manufacturer]] page.'),
+    ('running-apparel-manufacturer', 'Swim, bike and run suits are covered on our [[triathlon-suit-manufacturer]] page.'),
+    ('compression-wear-manufacturer', 'Race suits with compression legs are covered on our [[triathlon-suit-manufacturer]] page.'),
+]
+
 MD = {
     'insights/stitch-quality-spi-explained': 'Thread size and type matter as much as stitch count. Our page on [[sewing-thread]] explains tex sizes and core-spun thread.',
     'insights/garment-finishing-explained': 'Pieces sold hanging leave the factory on hangers, covered on our [[custom-hangers]] page.',
@@ -121,6 +139,19 @@ def targets(sentence):
 
 added = 0
 for source, sentence in TS.items():
+    path = os.path.join(DATA, f'{source}.ts')
+    text = open(path, encoding='utf-8').read()
+    if all(f'href="/{t}/"' in text for t in targets(sentence)):
+        continue
+    rendered = re.sub(r'\[\[([^\]]+)\]\]', lambda m: link_html(m.group(1)), sentence).replace("'", "\\'")
+    start = text.index('  first: {')
+    end = text.index('    ],\n  },', start)
+    tail = text.rindex("',", start, end)
+    text = text[:tail] + ' ' + rendered + text[tail:]
+    open(path, 'w', encoding='utf-8').write(text)
+    added += 1
+
+for source, sentence in EXTRA:
     path = os.path.join(DATA, f'{source}.ts')
     text = open(path, encoding='utf-8').read()
     if all(f'href="/{t}/"' in text for t in targets(sentence)):

@@ -1,12 +1,29 @@
-"""Generate trim and packaging pages. Usage: python3 gen.py [--check]"""
-import importlib.util, json, sys, re
-ROOT = '/home/claude/sdfltd'
-s = importlib.util.spec_from_file_location('specs', '/home/claude/sdfltd/scripts/generators/products-specs.py'); m = importlib.util.module_from_spec(s); s.loader.exec_module(m)
+"""Generate product pages from scripts/generators/products-specs*.py. Usage: python3 products-gen.py [--check]
+
+Each spec may set kind ('product' or 'service', default product), hub (default products)
+and after: a slug already in the catalogue group the page belongs to.
+"""
+import glob, importlib.util, json, os, sys, re
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+class Specs:
+    P = []
+
+
+m = Specs()
+for path in sorted(glob.glob(f'{ROOT}/scripts/generators/products-specs*.py')):
+    spec = importlib.util.spec_from_file_location(os.path.basename(path)[:-3].replace('-', '_'), path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    m.P.extend(mod.P)
+GROUP_ANCHOR = {'sports': 'fightwear-manufacturer', 'home': 'pet-clothing-manufacturer'}
 CHECK = '--check' in sys.argv
 
 def ts(v): return "'" + v.replace('\\', '\\\\').replace("'", "\\'") + "'"
 def yq(v): return '"' + v.replace('\\', '\\\\').replace('"', '\\"') + '"'
 def cap(x): return x[0].upper() + x[1:]
+def art(x): return 'an' if x[0].lower() in 'aeio' else 'a'
 
 def precheck(p):
     sub = lambda x: x.replace('{{moq}}', '300')
@@ -19,7 +36,7 @@ def precheck(p):
     for f in ('desc', 'answer', 'h1', 'title'):
         if p['primary'].lower() not in p[f].lower(): w.append(f'primary missing in {f}')
     heads = ' '.join([q for q, a in p['faqs']] + [t[0] for t in p['styles']] + [p['b1']['heading'], p['b2']['heading']]).lower()
-    blob = json.dumps(p).lower()
+    blob = json.dumps(p, ensure_ascii=False).lower()
     for k in p['sec']:
         if k.lower() not in heads: w.append(f'sec "{k}" not in heading')
         if blob.count(k.lower()) < 2: w.append(f'sec "{k}" <2')
@@ -64,7 +81,7 @@ def gen(p):
             return f"    {{ title: {ts(t[0])}, text: {ts(t[1])}, href: {ts(t[2])}, cta: {ts(t[3])} }}"
         return f"    {{ title: {ts(t[0])}, text: {ts(t[1])} }}"
     styles = ',\n'.join(style(t) for t in p['styles'])
-    steps = [('Send your design', 'Your design, colours, logos and sizes. A quote follows within {{quoteHours}} hours.'), p['step2'], ('Proto sample', f"A {n} in your design, ready in {{{{sampleDays}}}} days."), p['step4'], ('Pre-production sample', 'Made in bulk fabric with your labels, for sign-off.'), ('Bulk and inspection', '{{bulkDays}} days of production, then a final AQL {{aql}} inspection.'), ('Packing and shipment', p['packText'])]
+    steps = [('Send your design', 'Your design, colours, logos and sizes. A quote follows within {{quoteHours}} hours.'), p['step2'], ('Proto sample', f"{cap(art(n))} {n} in your design, ready in {{{{sampleDays}}}} days."), p['step4'], ('Pre-production sample', 'Made in bulk fabric with your labels, for sign-off.'), ('Bulk and inspection', '{{bulkDays}} days of production, then a final AQL {{aql}} inspection.'), ('Packing and shipment', p['packText'])]
     stepsT = ',\n'.join(f"    {{ title: {ts(t)}, text: {ts(x)} }}" for t, x in steps)
     qual = p['quality5'] + [('Final check', 'AQL {{aql}} inspection on the packed goods')]
     qualT = ',\n'.join(f"      {{ label: {ts(l)}, text: {ts(t)} }}" for l, t in qual)
@@ -77,7 +94,7 @@ def gen(p):
 export const {p['var']}: ProductContent = {{
   slug: {ts(p['slug'])},
   garment: {ts(p['key'])},
-  quoteCta: {ts(f'Get a {n} quote')},
+  quoteCta: {ts(f'Get {art(n)} {n} quote')},
   priceCta: {ts(f'How {pl} are priced')},
   audience: {ts(p['audience'])},
   glanceHeading: {ts(cap(p['primary']) + ' at a glance')},
@@ -106,13 +123,13 @@ export const {p['var']}: ProductContent = {{
   ],
   quality: {{
     heading: {ts(N + ' quality checks')},
-    lead: {ts(f"As a {p['primary']}, we run these checks on every order.")},
+    lead: {ts(f"As {art(p['primary'])} {p['primary']}, we run these checks on every order.")},
     items: [
 {qualT},
     ],
   }},
   quote: {{
-    heading: {ts(f'What to send for a {n} quote')},
+    heading: {ts(f'What to send for {art(n)} {n} quote')},
     lead: {ts('The more of this you send, the closer the first quote is to the final price.')},
     items: [
 {quoteT},
@@ -134,8 +151,8 @@ export const {p['var']}: ProductContent = {{
     secY = '\n'.join(f"  - {k}" for k in p['sec'])
     relY = '\n'.join(f"  - {r}" for r in p['related'])
     md = f"""---
-kind: product
-hub: products
+kind: {p.get('kind', 'product')}
+hub: {p.get('hub', 'products')}
 navLabel: {p['nav']}
 linkText: {yq(cap(p['primary']) + ' details')}
 cardSummary: {yq(p['card'])}
@@ -218,9 +235,14 @@ if addS: pa = pa.replace('const STRICT = new Set([', 'const STRICT = new Set([\n
 open(f'{ROOT}/scripts/page-audit.mjs', 'w').write(pa)
 
 cat = open(f'{ROOT}/src/data/catalogue.ts').read()
-sp = [p['slug'] for p in m.P if p['group'] == 'sports' and f"'{p['slug']}'" not in cat]
-hm = [p['slug'] for p in m.P if p['group'] == 'home' and f"'{p['slug']}'" not in cat]
-if sp: cat = cat.replace("'esports-jersey-manufacturer', 'fightwear-manufacturer'],", "'esports-jersey-manufacturer', 'fightwear-manufacturer', " + ', '.join(f"'{x}'" for x in sp) + '],', 1)
-if hm: cat = cat.replace("'table-linen-manufacturer', 'pet-clothing-manufacturer'],", "'table-linen-manufacturer', 'pet-clothing-manufacturer', " + ', '.join(f"'{x}'" for x in hm) + '],', 1)
+for p in m.P:
+    if f"'{p['slug']}'" in cat:
+        continue
+    anchor = p.get('after') or GROUP_ANCHOR[p['group']]
+    match = re.search(r"slugs: \[[^\]]*'" + re.escape(anchor) + r"'[^\]]*\]", cat)
+    if not match:
+        sys.exit(f"catalogue group with '{anchor}' not found for {p['slug']}")
+    block_text = match.group(0)
+    cat = cat.replace(block_text, block_text[:-1] + f", '{p['slug']}']", 1)
 open(f'{ROOT}/src/data/catalogue.ts', 'w').write(cat)
 print('generated', len(m.P))

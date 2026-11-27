@@ -126,7 +126,7 @@ export const baseLayer: ProductContent = {
     heading: 'Starting a base layer range with us',
     paragraphs: [
       'Many brands start with a midweight crew top and matching leggings in black and one colour. A matching set sells better than single pieces.',
-      'Adding mid layers? See our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page. Textured thermal fabric is covered on our <a href="/waffle-knit-clothing-manufacturer/">waffle knit clothing manufacturer</a> page.',
+      'Adding mid layers? See our <a href="/fleece-jacket-manufacturer/">fleece jacket manufacturer</a> page. Textured thermal fabric is covered on our <a href="/waffle-knit-clothing-manufacturer/">waffle knit clothing manufacturer</a> page. Base layers for riders are covered on our <a href="/equestrian-clothing-manufacturer/">equestrian clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Base layer questions',

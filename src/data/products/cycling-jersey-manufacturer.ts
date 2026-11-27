@@ -126,7 +126,7 @@ export const cyclingJersey: ProductContent = {
     heading: 'Ordering your first club kit with us',
     paragraphs: [
       'Many clubs start with one club-fit jersey and one bib short with an endurance pad. Club fit suits most riders, and a later race-fit order can serve the faster group.',
-      'Adding winter layers later? See our <a href="/softshell-jacket-manufacturer/">softshell jacket manufacturer</a> page.',
+      'Adding winter layers later? See our <a href="/softshell-jacket-manufacturer/">softshell jacket manufacturer</a> page. Off-road riders are covered on our <a href="/motocross-jersey-manufacturer/">motocross jersey manufacturer</a> page, and multisport clubs on our <a href="/triathlon-suit-manufacturer/">triathlon suit manufacturer</a> page.',
     ],
   },
   faqHeading: 'Cycling kit questions',

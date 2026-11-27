@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/rash-guard-manufacturer/', '/patient-gown-manufacturer/', '/graduation-gown-manufacturer/', '/resort-wear-manufacturer/', '/fishing-shirt-manufacturer/', '/outdoor-clothing-manufacturer/', '/pickleball-apparel-manufacturer/', '/motocross-jersey-manufacturer/', '/baby-sleep-sack-manufacturer/', '/modest-swimwear-manufacturer/', '/triathlon-suit-manufacturer/', '/lacrosse-uniform-manufacturer/', '/costume-manufacturer/', '/salon-uniform-manufacturer/', '/airline-uniform-manufacturer/', '/quilt-manufacturer/', '/pet-bed-manufacturer/', '/dog-harness-manufacturer/', '/pet-toy-manufacturer/', '/period-underwear-manufacturer/', '/equestrian-clothing-manufacturer/', '/garment-embellishment-service/',
   '/garment-merchandising-service/',
   '/insights/how-to-import-clothing-from-bangladesh/', '/insights/garment-testing-guide/', '/how-to-price-clothing/',
   '/cricket-uniform-manufacturer/', '/netball-dress-manufacturer/', '/volleyball-uniform-manufacturer/', '/hockey-jersey-manufacturer/', '/american-football-jersey-manufacturer/', '/bed-linen-manufacturer/', '/towel-manufacturer/', '/blanket-manufacturer/',

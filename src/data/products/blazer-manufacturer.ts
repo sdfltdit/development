@@ -127,7 +127,7 @@ export const blazer: ProductContent = {
     heading: 'Starting a blazer order with us',
     paragraphs: [
       'For schools and companies, send your current blazer so we can match the fit and colour closely. For fashion labels, start with one style in one or two fabrics and add more once the fit is right.',
-      'Ordering a full school range? See our <a href="/school-uniform-manufacturer/">school uniform manufacturer</a> page for polos, sweatshirts and PE kits. For cloth, see our <a href="/tweed-clothing-manufacturer/">tweed clothing manufacturer</a> and <a href="/gabardine-clothing-manufacturer/">gabardine clothing manufacturer</a> pages. Structure comes from <a href="/shoulder-pads/">shoulder pads for clothing</a> and <a href="/garment-interlining/">garment interlining</a>, each explained on its own page.',
+      'Ordering a full school range? See our <a href="/school-uniform-manufacturer/">school uniform manufacturer</a> page for polos, sweatshirts and PE kits. For cloth, see our <a href="/tweed-clothing-manufacturer/">tweed clothing manufacturer</a> and <a href="/gabardine-clothing-manufacturer/">gabardine clothing manufacturer</a> pages. Structure comes from <a href="/shoulder-pads/">shoulder pads for clothing</a> and <a href="/garment-interlining/">garment interlining</a>, each explained on its own page. Academic dress for ceremonies is covered on our <a href="/graduation-gown-manufacturer/">graduation gown manufacturer</a> page.',
     ],
   },
   faqHeading: 'Blazer questions',

@@ -134,7 +134,7 @@ export const schoolUniform: ProductContent = {
     heading: 'Moving a school uniform range to a new factory',
     paragraphs: [
       'Start with the item that sells most, usually the polo shirt or sweatshirt. Send last year’s garment so we can match the colour and fit closely, and keep the rest of the range with your current supplier until the first order lands.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. School sports kit has its own pages, such as our <a href="/cricket-uniform-manufacturer/">cricket uniform manufacturer</a>, <a href="/netball-dress-manufacturer/">netball dress manufacturer</a> and <a href="/rugby-shirt-manufacturer/">rugby shirt manufacturer</a> pages. School ties are on our <a href="/tie-manufacturer/">tie manufacturer</a> page.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. School sports kit has its own pages, such as our <a href="/cricket-uniform-manufacturer/">cricket uniform manufacturer</a>, <a href="/netball-dress-manufacturer/">netball dress manufacturer</a> and <a href="/rugby-shirt-manufacturer/">rugby shirt manufacturer</a> pages. School ties are on our <a href="/tie-manufacturer/">tie manufacturer</a> page. Leavers’ and prize-day gowns are covered on our <a href="/graduation-gown-manufacturer/">graduation gown manufacturer</a> page. Lacrosse kit is on our <a href="/lacrosse-uniform-manufacturer/">lacrosse uniform manufacturer</a> page.',
     ],
   },
   faqHeading: 'School uniform questions',

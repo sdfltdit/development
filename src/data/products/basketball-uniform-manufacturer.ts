@@ -125,7 +125,7 @@ export const basketballUniform: ProductContent = {
     heading: 'Ordering your first team uniforms with us',
     paragraphs: [
       'Many teams start with a reversible jersey and matching shorts, which covers home, away and practice in one set. It is the most useful first order for a new team or league.',
-      'Running a football section too? See our <a href="/football-kit-manufacturer/">football kit manufacturer</a> page. Breathable side panels use athletic mesh, as our <a href="/mesh-clothing-manufacturer/">mesh clothing manufacturer</a> page explains. Court and team kits also include a <a href="/volleyball-uniform-manufacturer/">volleyball uniform manufacturer</a> range and a <a href="/baseball-uniform-manufacturer/">baseball uniform manufacturer</a> range.',
+      'Running a football section too? See our <a href="/football-kit-manufacturer/">football kit manufacturer</a> page. Breathable side panels use athletic mesh, as our <a href="/mesh-clothing-manufacturer/">mesh clothing manufacturer</a> page explains. Court and team kits also include a <a href="/volleyball-uniform-manufacturer/">volleyball uniform manufacturer</a> range and a <a href="/baseball-uniform-manufacturer/">baseball uniform manufacturer</a> range. Reversible pinnies for field teams are covered on our <a href="/lacrosse-uniform-manufacturer/">lacrosse uniform manufacturer</a> page.',
     ],
   },
   faqHeading: 'Basketball uniform questions',

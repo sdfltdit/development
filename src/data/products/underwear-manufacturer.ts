@@ -136,7 +136,7 @@ export const underwear: ProductContent = {
     heading: 'Starting a private label underwear line',
     paragraphs: [
       'Many brands start with one boxer brief style in three core colours, sold in a three-pack. A printed waistband keeps the first order simple, and a jacquard waistband can follow once sales are proven.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. Absorbent styles are covered on our <a href="/period-underwear-manufacturer/">period underwear manufacturer</a> page.',
     ],
   },
   faqHeading: 'Underwear manufacturing questions',

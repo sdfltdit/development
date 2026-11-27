@@ -129,7 +129,7 @@ export const sublimated: ProductContent = {
     heading: 'Starting with sublimated clothing',
     paragraphs: [
       'Many brands start with custom sublimated clothing as one training top in two designs. Sublimation lets each design change without new screens, so testing is cheap.',
-      'Want the fabric detail? See our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. Many team kits are sublimated, including those on our <a href="/cricket-uniform-manufacturer/">cricket uniform manufacturer</a>, <a href="/volleyball-uniform-manufacturer/">volleyball uniform manufacturer</a> and <a href="/hockey-jersey-manufacturer/">hockey jersey manufacturer</a> pages.',
+      'Want the fabric detail? See our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. Many team kits are sublimated, including those on our <a href="/cricket-uniform-manufacturer/">cricket uniform manufacturer</a>, <a href="/volleyball-uniform-manufacturer/">volleyball uniform manufacturer</a> and <a href="/hockey-jersey-manufacturer/">hockey jersey manufacturer</a> pages. Sublimated race kit for off-road teams is on our <a href="/motocross-jersey-manufacturer/">motocross jersey manufacturer</a> page.',
     ],
   },
   faqHeading: 'Sublimated clothing questions',
