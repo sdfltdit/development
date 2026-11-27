@@ -155,7 +155,7 @@ export const dress: ProductContent = {
     heading: 'Ordering custom dresses for the first time',
     paragraphs: [
       'Fitted dresses need a full size run, which spreads a minimum thin. Many brands start with a relaxed or wrap style in one fabric and two colours, then add fitted styles once they know their customer’s size mix.',
-      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only.',
+      'Unsure about quantities? See how our <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works, or start with a <a href="/sample-service/">proto sample</a> only. For fabric detail, see our <a href="/viscose-clothing-manufacturer/">viscose clothing manufacturer</a> and <a href="/chiffon-clothing-manufacturer/">chiffon clothing manufacturer</a> pages.',
     ],
   },
   faqHeading: 'Dress manufacturing questions',

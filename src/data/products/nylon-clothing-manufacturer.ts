@@ -1,0 +1,107 @@
+import type { ProductContent } from './types';
+import { fabricMoqBlock } from './fabric-moq';
+
+export const nylon: ProductContent = {
+  slug: 'nylon-clothing-manufacturer',
+  garment: 'nylon',
+  quoteCta: 'Get a nylon clothing quote',
+  audience: 'Activewear, swimwear, outdoor and streetwear brands that need strong, smooth fabric',
+  glanceHeading: 'Nylon clothing manufacturing at a glance',
+  glanceLead: 'Nylon is strong and smooth, but it dyes and prints differently from polyester. These are the points to confirm first.',
+  stylesHeading: 'What we make as a nylon clothing manufacturer',
+  stylesLead: 'Nylon works in both stretch knits and light wovens. These are the pieces brands order most.',
+  styles: [
+    { title: 'Leggings and bike shorts', text: 'High-waist leggings and shorts in nylon spandex.', href: '/leggings-manufacturer/', cta: 'Leggings manufacturer details' },
+    { title: 'Sports bras and tops', text: 'Moulded and pull-on bras, crop tops and fitted tees.', href: '/sports-bra-manufacturer/', cta: 'Sports bra manufacturer details' },
+    { title: 'Swimwear', text: 'Swimsuits, bikinis and rash guards in nylon swim fabric.', href: '/swimwear-manufacturer/', cta: 'Swimwear manufacturer details' },
+    { title: 'Nylon jackets and windbreakers', text: 'Light shells and coach jackets in nylon taslan or ripstop.', href: '/jacket-manufacturer/', cta: 'Jacket manufacturer details' },
+    { title: 'Shorts and track pants', text: 'Woven nylon shorts, board shorts and track pants.' },
+  ],
+  blocks: [
+    fabricMoqBlock(
+      ['knit', 'woven'],
+      'nylon clothing',
+      'Nylon is used as a stretch knit and as a light woven, and each has its own colour minimum. At the minimum we cut from ready nylon. Nylon knitted or woven to your own construction starts at {{customFabricFrom}} pieces per style.',
+    ),
+    {
+      kind: 'table',
+      id: 'fabrics',
+      eyebrow: 'Polyamide fabric',
+      heading: 'Nylon and polyamide fabric types',
+      lead: 'Polyamide fabric is made as many knits and wovens. These are the ones we use most.',
+      caption: 'Nylon fabrics compared',
+      columns: ['Fabric', 'Build', 'Good for'],
+      rows: [
+        ['Nylon spandex jersey', 'Knit, smooth and stretchy', 'Leggings, sports bras, bodysuits'],
+        ['Nylon swim fabric', 'Knit with high stretch', 'Swimsuits and bikinis'],
+        ['Power mesh', 'Open knit with firm stretch', 'Panels, linings, shapewear'],
+        ['Nylon taslan', 'Woven with a cotton-like touch', 'Windbreakers, shorts'],
+        ['Nylon ripstop', 'Woven with a tear-stop grid', 'Shell jackets, cargo pieces'],
+      ],
+    },
+    {
+      kind: 'checklist',
+      id: 'production',
+      eyebrow: 'Production',
+      heading: 'How we make custom nylon clothing',
+      lead: 'Nylon behaves differently from cotton and polyester on the line. These are the details we set.',
+      items: [
+        { label: 'Colour', text: 'nylon is acid-dyed, so lab dips are approved on the actual fabric' },
+        { label: 'Printing', text: 'heat transfers or silicone prints, because nylon cannot take sublimation' },
+        { label: 'Stitching', text: 'flatlock and cover stitch with stretch thread on knits' },
+        { label: 'Heat', text: 'low pressing heat so the fabric does not glaze or melt' },
+        { label: 'Stretch', text: 'recovery checked on the sample against the mill data' },
+        { label: 'Claims', text: 'UV, chlorine and water-repellent ratings taken from the mill report' },
+      ],
+    },
+  ],
+  noPrice: {
+    heading: 'How nylon clothing is priced',
+    paragraphs: [
+      'Nylon fabric usually costs more than polyester, and the garment style and trims move the price most. Swimwear and moulded bras cost more to make than leggings.',
+      'You get a written quote within {{quoteHours}} hours. Our <a href="/pricing/">clothing manufacturing prices</a> page shows how core products are priced at {{moq}} and {{bulkQty}} pieces.',
+    ],
+  },
+  processHeading: 'How a nylon order runs',
+  processLead: 'Six steps from your brief to shipped nylon clothing.',
+  steps: [
+    { title: 'Brief', text: 'Send the style, fabric, colours and quantity. A written quote follows within {{quoteHours}} hours.' },
+    { title: 'Fabric', text: 'We send ready nylon swatches, or plan a colour dyed for you.' },
+    { title: 'Proto sample', text: 'Pattern made and sample sewn in {{sampleDays}} days.' },
+    { title: 'Fit and stretch', text: 'You wear-test the sample and we adjust fit and tension.' },
+    { title: 'Bulk', text: '{{bulkDays}} days of production after sign-off.' },
+    { title: 'Inspection', text: 'AQL {{aql}} final inspection, then packing and shipment.' },
+  ],
+  quality: {
+    heading: 'Nylon quality checks',
+    lead: 'As a nylon clothing manufacturer, we run these checks on every order before it ships.',
+    items: [
+      { label: 'Fabric', text: 'weight, stretch and shade checked on arrival' },
+      { label: 'Colour', text: 'matched to the approved lab dip' },
+      { label: 'Seams', text: 'stretch tested without cracking' },
+      { label: 'Surface', text: 'no shine, snags or pressing marks' },
+      { label: 'Measurements', text: 'every point of measure on the sample' },
+      { label: 'Final audit', text: 'AQL {{aql}} on packed goods' },
+    ],
+  },
+  quote: {
+    heading: 'What to send for a nylon clothing quote',
+    lead: 'This is enough for a nylon clothing manufacturer to quote and plan your first sample.',
+    items: [
+      'A photo, sketch or tech pack',
+      'The nylon fabric or stretch level you want',
+      'Colours and logo artwork',
+      'Size range and quantity per style',
+      'Any performance claims you plan to make',
+      'Target price and delivery date',
+    ],
+  },
+  first: {
+    heading: 'Nylon or polyester',
+    paragraphs: [
+      'If you need sublimation print or a lower price, see our <a href="/polyester-clothing-manufacturer/">polyester clothing manufacturer</a> page. For nylon made from recycled material, see our <a href="/recycled-clothing-manufacturer/">recycled clothing manufacturer</a> page.',
+      'Nylon is also the base of many ripstops, covered on our <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> page.',
+    ],
+  },
+  faqHeading: 'Nylon clothing questions',
+};

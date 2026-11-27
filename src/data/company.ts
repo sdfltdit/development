@@ -95,6 +95,19 @@ export const terms = {
   replyHours: 24,
 } as const;
 
+/**
+ * Owner, 27 November 2026: how fabric is supplied and the minimums that follow.
+ * Orders at the minimum use ready fabric from local mills and stock, or ready fabric imported from the countries below.
+ * Custom-made fabric (own colour, weight or construction) starts at the sister company threshold, because smaller runs lose money.
+ * Per-colour minimums were proposed by us from industry research and still need the owner's confirmation.
+ * We never sell fabric on its own.
+ */
+export const fabricSupply = {
+  importFrom: ['China', 'Taiwan', 'Hong Kong', 'South Korea'],
+  knitPerColour: 100,
+  wovenPerColour: 150,
+} as const;
+
 /** Owner, 27 November 2026: our sister company makes knit and woven fabric for large orders, plus trims and garment accessories. Never name it. */
 /** Owner, 27 November 2026: the in-house design team works on orders of this many pieces per style or more. */
 export const designTeamFrom = 5000;
@@ -103,7 +116,7 @@ export const sisterCompany = {
   fabricAbove: 5000, // pieces per style
 } as const;
 
-export const sisterCompanyPolicy = `For orders above ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the knit or woven fabric for you. It also makes trims and garment accessories for the clothing we produce`;
+export const sisterCompanyPolicy = `For orders from ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the knit or woven fabric for you. It also makes trims and garment accessories for the clothing we produce`;
 
 export const sampleFeePolicy = `There is no separate sample fee. Your ${terms.payment[0].share}% deposit covers the sample, up to ${terms.sampleCorrections} free rounds of corrections and express courier to your door anywhere in the world`;
 
@@ -222,6 +235,12 @@ export const tokens: Record<string, string> = {
   sampleFee: `${sampleFeePolicy}.`,
   sampleCorrections: String(terms.sampleCorrections),
   sisterFabricAbove: sisterCompany.fabricAbove.toLocaleString('en-GB'),
+  customFabricFrom: sisterCompany.fabricAbove.toLocaleString('en-GB'),
+  knitPerColour: String(fabricSupply.knitPerColour),
+  wovenPerColour: String(fabricSupply.wovenPerColour),
+  knitColours: String(Math.floor(terms.moq / fabricSupply.knitPerColour)),
+  wovenColours: String(Math.floor(terms.moq / fabricSupply.wovenPerColour)),
+  fabricImports: `${fabricSupply.importFrom.slice(0, -1).join(', ')} and ${fabricSupply.importFrom[fabricSupply.importFrom.length - 1]}`,
   workforce: capabilities.workforce,
   monthlyCapacity: capabilities.monthlyCapacity.toLocaleString('en-GB'),
   mainMarkets: mainMarkets(),

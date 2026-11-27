@@ -125,7 +125,7 @@ export const fabricSourcing: ProductContent = {
   first: {
     heading: 'Starting with fabric sourcing',
     paragraphs: [
-      'Many brands start with a mill-stock fabric dyed to their colours. It keeps the first order fast and the minimum low, and custom fabric can follow later.',
+      'Many brands start with a ready fabric dyed to their colours. It keeps the first order fast and the minimum low. Fabric knitted or woven to your own spec can follow from {{customFabricFrom}} pieces per style. See our <a href="/viscose-clothing-manufacturer/">viscose clothing manufacturer</a>, <a href="/nylon-clothing-manufacturer/">nylon clothing manufacturer</a>, <a href="/chiffon-clothing-manufacturer/">chiffon clothing manufacturer</a>, <a href="/fleece-clothing-manufacturer/">fleece clothing manufacturer</a> and <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> pages for fabric details.',
       'Need zips, buttons and cords too? See our <a href="/trims-sourcing/">trims sourcing service</a> page.',
     ],
   },

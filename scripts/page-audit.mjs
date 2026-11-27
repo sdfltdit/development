@@ -211,6 +211,11 @@ const STRICT = new Set([
   '/nda/',
   '/garment-development-service/',
   '/garment-packing-and-export/',
+  '/viscose-clothing-manufacturer/',
+  '/nylon-clothing-manufacturer/',
+  '/chiffon-clothing-manufacturer/',
+  '/fleece-clothing-manufacturer/',
+  '/ripstop-clothing-manufacturer/',
 ]);
 const HUB = '/';
 const DIST = 'dist';

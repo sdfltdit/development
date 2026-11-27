@@ -134,7 +134,7 @@ export const productGroups: CatalogueGroup[] = [
     part: 'more',
     heading: 'By fabric and finish',
     lead: 'Start from the material or the effect you want.',
-    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
+    slugs: ['cotton-clothing-manufacturer', 'organic-cotton-clothing-manufacturer', 'recycled-clothing-manufacturer', 'linen-clothing-manufacturer', 'bamboo-clothing-manufacturer', 'hemp-clothing-manufacturer', 'modal-clothing-manufacturer', 'lyocell-clothing-manufacturer', 'wool-clothing-manufacturer', 'silk-clothing-manufacturer', 'polyester-clothing-manufacturer', 'viscose-clothing-manufacturer', 'nylon-clothing-manufacturer', 'chiffon-clothing-manufacturer', 'fleece-clothing-manufacturer', 'ripstop-clothing-manufacturer', 'french-terry-clothing-manufacturer', 'corduroy-clothing-manufacturer', 'velour-clothing-manufacturer', 'tie-dye-clothing-manufacturer', 'sublimated-clothing-manufacturer'],
   },
 ];
 
@@ -152,7 +152,7 @@ export const serviceGroups: CatalogueGroup[] = [
     heading: 'Material sourcing',
     activities: 'Fabric, trims and accessories',
     lead: 'Fabric, trims and branding for the garments we make, with large orders supplied by our sister company.',
-    about: `We buy the fabric, trims and labels for your order and check them before cutting. For orders above ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the fabric itself.`,
+    about: `We buy the fabric, trims and labels for your order and check them before cutting. For orders from ${sisterCompany.fabricAbove.toLocaleString('en-GB')} pieces per style, our sister company can make the fabric itself.`,
     slugs: ['fabric-sourcing', 'trims-sourcing', 'garment-labels'],
   },
   {

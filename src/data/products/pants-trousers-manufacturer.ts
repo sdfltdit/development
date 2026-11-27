@@ -153,7 +153,7 @@ export const trousers: ProductContent = {
     heading: 'Ordering custom pants for the first time',
     paragraphs: [
       'Waist and inseam sizing uses up a minimum quickly, which is the first thing to discuss with any pants manufacturer. Many brands start with letter sizes or a short size run in one or two colours, then add sizes once they know what sells.',
-      'If you have the fabric already, our <a href="/cut-and-sew-service/">cut and sew service</a> can work with it. If not, we source it for you.',
+      'If you have the fabric already, our <a href="/cut-and-sew-service/">cut and sew service</a> can work with it. If not, we source it for you. For cargo styles, see our <a href="/ripstop-clothing-manufacturer/">ripstop clothing manufacturer</a> page.',
     ],
   },
   faqHeading: 'Pants and trousers questions',
