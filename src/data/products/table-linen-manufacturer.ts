@@ -128,7 +128,7 @@ export const tableLinen: ProductContent = {
     heading: 'Starting a table linen order with us',
     paragraphs: [
       'Many restaurants start with one napkin in two colours and a matching runner. Napkins are replaced most often, so a reorder-friendly colour pays off.',
-      'Need kitchen towels to match? See our <a href="/tea-towel-manufacturer/">tea towel manufacturer</a> page.',
+      'Need kitchen towels to match? See our <a href="/tea-towel-manufacturer/">tea towel manufacturer</a> page. Seasonal ranges can add pieces from our <a href="/christmas-stocking-manufacturer/">christmas stocking manufacturer</a> page.',
     ],
   },
   faqHeading: 'Table linen questions',

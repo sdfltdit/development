@@ -55,6 +55,8 @@ faq:
     a: Yes. Sponsor logos can be sublimated into the shirt or heat-pressed on, front, back or sleeve. Send vector files for the sharpest result.
   - q: Do you make kits for teamwear brands to resell?
     a: Yes. Teamwear brands can order kits under their own label, with their logo where a kit maker's logo usually sits.
+  - q: "Do you make captain armbands?"
+    a: "Yes. We print or embroider a C, crest or message on each band, in your club colours."
 related:
   - /activewear-manufacturer/
   - /shorts-manufacturer/

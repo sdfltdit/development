@@ -80,6 +80,16 @@ export const gloves: ProductContent = {
         { label: 'Odd pairs in a pack', text: 'we pair and tag gloves before packing' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'mittens',
+      eyebrow: "Mittens",
+      heading: "Mittens for adults and children",
+      paragraphs: [
+        "Mittens keep fingers together, so they stay warmer than gloves in the cold. We make knitted, fleece and lined mittens.",
+        "Children\u2019s mittens can have a cuff or a string loop for coats. Flip-top mittens open to free the fingers.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How gloves are priced',

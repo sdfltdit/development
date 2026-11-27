@@ -127,7 +127,7 @@ export const cushionCover: ProductContent = {
     heading: 'Starting a cushion range with us',
     paragraphs: [
       'Many home brands start with one 45 x 45 cm cover in three colours of one fabric, plus one printed design. Shoppers often buy covers in pairs, so plan stock in even numbers.',
-      'Adding silk bedding? See our <a href="/silk-pillowcase-manufacturer/">silk pillowcase manufacturer</a> page. Matching home textiles are covered on our <a href="/blanket-manufacturer/">blanket manufacturer</a> and <a href="/bed-linen-manufacturer/">bed linen manufacturer</a> pages.',
+      'Adding silk bedding? See our <a href="/silk-pillowcase-manufacturer/">silk pillowcase manufacturer</a> page. Matching home textiles are covered on our <a href="/blanket-manufacturer/">blanket manufacturer</a> and <a href="/bed-linen-manufacturer/">bed linen manufacturer</a> pages. Stockings and tree skirts for the season are on our <a href="/christmas-stocking-manufacturer/">christmas stocking manufacturer</a> page.',
     ],
   },
   faqHeading: 'Cushion cover questions',

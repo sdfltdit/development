@@ -80,6 +80,16 @@ export const dancewear: ProductContent = {
         { label: 'Colour mismatch across a studio order', text: 'we cut from one fabric lot' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'leg-warmers',
+      eyebrow: "Leg warmers",
+      heading: "Leg warmers and knitted warm-ups",
+      paragraphs: [
+        "Dancers wear leg warmers, wrap tops and knitted shorts to stay warm before class. We make them in rib knit, acrylic and wool blends.",
+        "Leg warmers can be ankle to knee or full length, with stirrups on request.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How dancewear is priced',

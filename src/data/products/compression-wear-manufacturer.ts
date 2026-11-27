@@ -79,6 +79,16 @@ export const compressionWear: ProductContent = {
         { label: 'Sizes too tight or loose', text: 'we check fit on a fitter across sizes' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'arm-sleeves',
+      eyebrow: "Arm sleeves",
+      heading: "Arm sleeves and leg sleeves",
+      paragraphs: [
+        "Arm and leg sleeves are short tubes of compression knit worn by runners, cyclists, basketball players and golfers.",
+        "They can be plain or sublimated, with silicone grip at the top band. Sun ratings come from the mill\u2019s report on the fabric.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How compression wear is priced',

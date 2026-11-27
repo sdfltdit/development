@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const STRICT = new Set([
+  '/fanny-pack-manufacturer/', '/baby-accessories-manufacturer/', '/scrub-cap-manufacturer/', '/balaclava-manufacturer/', '/reusable-makeup-pad-manufacturer/', '/christmas-stocking-manufacturer/', '/backpack-manufacturer/', '/lanyard-manufacturer/', '/sports-towel-manufacturer/', '/sweatband-manufacturer/',
   '/rash-guard-manufacturer/', '/patient-gown-manufacturer/', '/graduation-gown-manufacturer/', '/resort-wear-manufacturer/', '/fishing-shirt-manufacturer/', '/outdoor-clothing-manufacturer/', '/pickleball-apparel-manufacturer/', '/motocross-jersey-manufacturer/', '/baby-sleep-sack-manufacturer/', '/modest-swimwear-manufacturer/', '/triathlon-suit-manufacturer/', '/lacrosse-uniform-manufacturer/', '/costume-manufacturer/', '/salon-uniform-manufacturer/', '/airline-uniform-manufacturer/', '/quilt-manufacturer/', '/pet-bed-manufacturer/', '/dog-harness-manufacturer/', '/pet-toy-manufacturer/', '/period-underwear-manufacturer/', '/equestrian-clothing-manufacturer/', '/garment-embellishment-service/',
   '/garment-merchandising-service/',
   '/insights/how-to-import-clothing-from-bangladesh/', '/insights/garment-testing-guide/', '/how-to-price-clothing/',

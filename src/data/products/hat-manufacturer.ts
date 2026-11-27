@@ -80,6 +80,16 @@ export const hat: ProductContent = {
         { label: 'Crushed hats in transit', text: 'we pack caps nested in rigid cartons' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'ear-warmers',
+      eyebrow: "Ear warmers",
+      heading: "Ear warmers and headbands for winter ranges",
+      paragraphs: [
+        "We make knitted and fleece ear warmers to sit alongside beanies. They come as wide headbands or with a back band for ponytails.",
+        "Logos can be knitted in, embroidered or added as a woven label, in the same yarn and colours as your hats.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How custom hats are priced',

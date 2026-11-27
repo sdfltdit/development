@@ -127,7 +127,7 @@ export const labCoat: ProductContent = {
     heading: 'Starting a lab coat order with us',
     paragraphs: [
       'Many clinics start with one knee-length coat in white with a chest logo, then add names for each staff member. One style keeps reorders simple when new staff join.',
-      'Need scrubs to wear under the coat? See our <a href="/scrubs-manufacturer/">scrubs manufacturer</a> page.',
+      'Need scrubs to wear under the coat? See our <a href="/scrubs-manufacturer/">scrubs manufacturer</a> page. Caps for clinic and lab teams are covered on our <a href="/scrub-cap-manufacturer/">scrub cap manufacturer</a> page.',
     ],
   },
   faqHeading: 'Lab coat questions',

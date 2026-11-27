@@ -127,7 +127,7 @@ export const golfApparel: ProductContent = {
     heading: 'Starting a golf range with us',
     paragraphs: [
       'Many golf brands start with one polo in four or five colours and a matching quarter-zip. Polos sell in more colours than most pieces, so a deep colour range pays off.',
-      'Adding racquet sports? See our <a href="/tennis-wear-manufacturer/">tennis wear manufacturer</a> page.',
+      'Adding racquet sports? See our <a href="/tennis-wear-manufacturer/">tennis wear manufacturer</a> page. Golf towels with hooks are covered on our <a href="/sports-towel-manufacturer/">sports towel manufacturer</a> page.',
     ],
   },
   faqHeading: 'Golf apparel questions',

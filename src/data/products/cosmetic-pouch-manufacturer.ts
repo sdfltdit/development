@@ -127,7 +127,7 @@ export const cosmeticPouch: ProductContent = {
     heading: 'Starting a pouch order with us',
     paragraphs: [
       'Many beauty brands start with one boxed makeup bag in two colours, sized to hold their best-selling kit. A pouch sized to a real product set sells better than a generic one.',
-      'Packing shoes or bags as well? See our <a href="/dust-bag-manufacturer/">dust bag manufacturer</a> page.',
+      'Packing shoes or bags as well? See our <a href="/dust-bag-manufacturer/">dust bag manufacturer</a> page. Beauty brands can add our <a href="/reusable-makeup-pad-manufacturer/">reusable makeup pad manufacturer</a> range, and belt bags from our <a href="/fanny-pack-manufacturer/">fanny pack manufacturer</a> page.',
     ],
   },
   faqHeading: 'Cosmetic pouch questions',

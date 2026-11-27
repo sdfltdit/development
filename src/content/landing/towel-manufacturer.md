@@ -43,6 +43,8 @@ citations: []
 faq:
   - q: "What is the minimum order for towels?"
     a: "Towels start at {{moq}} {{moqUnit}}, with each design counted as a style. Colours and sizes share the total, from {{perColour}} pieces per colour."
+  - q: "Do you make bath mats to match towels?"
+    a: "Yes. Bath mats are woven in heavy terry, often 700 GSM or more, in the same colours as your towels."
   - q: "What towel GSM is best for bath towels?"
     a: "Most bath towels sit between 400 and 600 GSM. Spas often choose 600 GSM or more."
   - q: "Do you make custom towels with logos?"

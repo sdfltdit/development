@@ -55,6 +55,8 @@ faq:
     a: Nylon-spandex with a high spandex share gives strong, lasting compression and a smooth feel. Polyester-spandex costs less and takes sublimation prints well.
   - q: Can compression wear be printed?
     a: Yes. Sublimation suits polyester-based compression fabric. On nylon fabric we use heat-transfer logos that stretch with the garment.
+  - q: "Do you make arm sleeves for sport?"
+    a: "Yes. Arm and leg sleeves come in compression knit, plain or sublimated, with grip at the top band."
 related:
   - /activewear-manufacturer/
   - /leggings-manufacturer/

@@ -55,6 +55,8 @@ faq:
     a: Yes. We make ladies' scarves in the same colours and pattern, so the whole team matches.
   - q: How do you stop ties twisting?
     a: We cut tie fabric on the bias, use the right interlining and add a slip stitch so the tie keeps its shape.
+  - q: "What size are pocket squares?"
+    a: "Usually 25 to 33 cm square, with rolled edges. We cut them from your tie fabric so the set matches."
 related:
   - /school-uniform-manufacturer/
   - /blazer-manufacturer/

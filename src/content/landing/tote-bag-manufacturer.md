@@ -55,6 +55,8 @@ faq:
     a: Yes. Private label tote bags leave our factory with your woven label, hang tag and retail packing.
   - q: How do you stop handles tearing off?
     a: We stitch each handle with an X-box pattern and sew it through a facing inside the bag, then pull-test samples from every batch.
+  - q: "Do you make insulated lunch bags?"
+    a: "Yes. Lunch bags and cooler totes have a lined, insulated inside and an outer printed with your design."
 related:
   - /merch-manufacturer/
   - /drawstring-bag-manufacturer/

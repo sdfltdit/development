@@ -80,6 +80,16 @@ export const drawstringBag: ProductContent = {
         { label: 'Colours running when wet', text: 'we check colour fastness on swim bags' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'laundry-bags',
+      eyebrow: "Laundry bags",
+      heading: "Laundry bags with drawstrings",
+      paragraphs: [
+        "Laundry bags use the same drawstring build in larger sizes. Hotels, gyms, boarding schools and travel brands order them most.",
+        "We make them in cotton canvas, polyester or mesh, with printed names, room numbers or logos.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How drawstring bags are priced',
@@ -127,7 +137,7 @@ export const drawstringBag: ProductContent = {
     heading: 'Starting a drawstring bag order with us',
     paragraphs: [
       'Many clubs and schools start with one polyester drawstring backpack in their main colour with a one-colour logo. It is low cost per bag and gets used every week.',
-      'Need shopping or brand bags too? See our <a href="/tote-bag-manufacturer/">tote bag manufacturer</a> page.',
+      'Need shopping or brand bags too? See our <a href="/tote-bag-manufacturer/">tote bag manufacturer</a> page. Padded daily bags are covered on our <a href="/backpack-manufacturer/">backpack manufacturer</a> page.',
     ],
   },
   faqHeading: 'Drawstring bag questions',

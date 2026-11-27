@@ -57,6 +57,8 @@ faq:
     a: A foam layer is placed under the stitches so the logo stands up from the cap. It works best on bold, simple shapes on a structured front.
   - q: Can private label caps have our own inside labels?
     a: Yes. Caps can carry your printed sweatband tape, woven inside labels, brim stickers and hang tags. Our name does not appear on them.
+  - q: "Do you make ear warmers?"
+    a: "Yes. Knitted and fleece ear warmers can match your beanies in yarn, colour and logo."
 related:
   - /merch-manufacturer/
   - /streetwear-manufacturer/

@@ -127,7 +127,7 @@ export const neckGaiter: ProductContent = {
     heading: 'Starting a neck gaiter range with us',
     paragraphs: [
       'Many outdoor brands start with three sublimated designs in one fabric. Gaiters sell well in sets, and one fabric keeps the order within the minimum.',
-      'Adding a classic square? See our <a href="/bandana-manufacturer/">bandana manufacturer</a> page.',
+      'Adding a classic square? See our <a href="/bandana-manufacturer/">bandana manufacturer</a> page. Full face cover for cold days is on our <a href="/balaclava-manufacturer/">balaclava manufacturer</a> page.',
     ],
   },
   faqHeading: 'Neck gaiter questions',

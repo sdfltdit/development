@@ -79,6 +79,16 @@ export const footballKit: ProductContent = {
         { label: 'Kit not ready for the season', text: 'we agree the ship date on the quote and plan back from it' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'armbands',
+      eyebrow: "Captain armbands",
+      heading: "Captain armbands and team accessories",
+      paragraphs: [
+        "Teams often add captain armbands, sock tapes and training bibs to a kit order. Armbands come in stretch fabric with hook and loop closure.",
+        "They can be printed or embroidered with a C, a club crest or a message, in your kit colours.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How football kits are priced',

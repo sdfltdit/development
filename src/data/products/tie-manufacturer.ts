@@ -81,6 +81,16 @@ export const tie: ProductContent = {
         { label: 'Wrong lengths', text: 'we measure every length against your spec' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'pocket-squares',
+      eyebrow: "Pocket squares",
+      heading: "Do you make pocket squares to match ties?",
+      paragraphs: [
+        "Yes. Pocket squares are cut from the same silk, polyester or cotton as your ties, so colours match exactly.",
+        "Edges are hand rolled or machine rolled, and most squares are about 25 to 33 cm. Many brands sell them as a boxed set with the tie.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How ties are priced',

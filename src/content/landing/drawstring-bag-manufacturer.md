@@ -55,6 +55,8 @@ faq:
     a: Yes. School PE bags come in school colours with a name panel and the school badge.
   - q: Can drawstring bags be packed with team kits?
     a: Yes. If we make your team kits, we can pack each kit inside its bag before cartoning.
+  - q: "Do you make laundry bags?"
+    a: "Yes. Laundry bags come in canvas, polyester or mesh with a drawstring top and your logo."
 related:
   - /tote-bag-manufacturer/
   - /dust-bag-manufacturer/

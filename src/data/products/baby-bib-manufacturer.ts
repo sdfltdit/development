@@ -127,7 +127,7 @@ export const babyBib: ProductContent = {
     heading: 'Starting a baby range with us',
     paragraphs: [
       'Many baby brands start with a gift set of two muslin swaddles, two bandana bibs and a burp cloth in one print. Sets sell well as baby shower gifts.',
-      'Adding printed bandanas for older children? See our <a href="/bandana-manufacturer/">bandana manufacturer</a> page. Double gauze for swaddles and bibs is covered on our <a href="/muslin-clothing-manufacturer/">muslin clothing manufacturer</a> page. Sleep sacks in matching prints are covered on our <a href="/baby-sleep-sack-manufacturer/">baby sleep sack manufacturer</a> page.',
+      'Adding printed bandanas for older children? See our <a href="/bandana-manufacturer/">bandana manufacturer</a> page. Double gauze for swaddles and bibs is covered on our <a href="/muslin-clothing-manufacturer/">muslin clothing manufacturer</a> page. Sleep sacks in matching prints are covered on our <a href="/baby-sleep-sack-manufacturer/">baby sleep sack manufacturer</a> page. Matching hats and booties are on our <a href="/baby-accessories-manufacturer/">baby accessories manufacturer</a> page.',
     ],
   },
   faqHeading: 'Baby bib questions',

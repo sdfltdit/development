@@ -55,6 +55,8 @@ faq:
     a: Yes. Children's leotards and skirts are cut from your size chart, with softer elastics and simpler closures.
   - q: Can studios add their logo?
     a: Yes. Studio logos can be printed, embroidered or added with rhinestones. Each studio can have its own colours inside one style.
+  - q: "Do you make leg warmers for dancers?"
+    a: "Yes. Leg warmers come in rib or cable knit, from ankle to knee or full length."
 related:
   - /cheerleading-uniform-manufacturer/
   - /leggings-manufacturer/

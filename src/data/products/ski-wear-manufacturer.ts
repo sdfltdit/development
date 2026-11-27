@@ -127,7 +127,7 @@ export const skiWear: ProductContent = {
     heading: 'Starting a ski range with us',
     paragraphs: [
       'Many brands start with one insulated jacket and matching pants in two colourways. Snow wear sells in a short season, so we plan your order back from the date stock must land.',
-      'Adding warm layers underneath? See our <a href="/base-layer-manufacturer/">base layer manufacturer</a> page.',
+      'Adding warm layers underneath? See our <a href="/base-layer-manufacturer/">base layer manufacturer</a> page. Ski masks and helmet liners are covered on our <a href="/balaclava-manufacturer/">balaclava manufacturer</a> page.',
     ],
   },
   faqHeading: 'Ski wear questions',

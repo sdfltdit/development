@@ -55,6 +55,8 @@ faq:
     a: Yes. We knit gloves, beanies and scarves in the same yarn and colours, so winter sets match.
   - q: Do you make kids' gloves?
     a: Yes. Kids' gloves and mittens come in small sizes, often with a string to join the pair.
+  - q: "Do you make mittens as well as gloves?"
+    a: "Yes. We make knitted, fleece and lined mittens, including children\u2019s sizes and flip-top styles."
 related:
   - /hat-manufacturer/
   - /scarf-manufacturer/

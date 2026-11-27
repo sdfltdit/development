@@ -129,7 +129,7 @@ export const merch: ProductContent = {
     heading: 'Moving your merch from print on demand to bulk',
     paragraphs: [
       'Ask your merch manufacturer to start with your best-selling one or two designs. Your sales history tells you the size split, which keeps the first bulk order lean.',
-      'Selling streetwear as well as merch? See our <a href="/streetwear-manufacturer/">streetwear manufacturer</a> page, or how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works.',
+      'Selling streetwear as well as merch? See our <a href="/streetwear-manufacturer/">streetwear manufacturer</a> page, or how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works. Event merch can add printed tape from our <a href="/lanyard-manufacturer/">lanyard manufacturer</a> page.',
     ],
   },
   faqHeading: 'Merch manufacturing questions',

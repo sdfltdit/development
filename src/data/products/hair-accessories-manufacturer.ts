@@ -128,7 +128,7 @@ export const hairAccessories: ProductContent = {
     heading: 'Starting a hair accessories range with us',
     paragraphs: [
       'Many brands start with a satin scrunchie in a three-pack and a matching bonnet. The two products share fabric and sell well together online.',
-      'Building a sleep range? See our <a href="/silk-pillowcase-manufacturer/">silk pillowcase manufacturer</a> page.',
+      'Building a sleep range? See our <a href="/silk-pillowcase-manufacturer/">silk pillowcase manufacturer</a> page. Terry bands for sport are covered on our <a href="/sweatband-manufacturer/">sweatband manufacturer</a> page.',
     ],
   },
   faqHeading: 'Hair accessories questions',

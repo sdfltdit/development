@@ -82,6 +82,16 @@ export const toteBag: ProductContent = {
         { label: 'Bags too small for real use', text: 'we check size against what buyers will carry' },
       ],
     },
+    {
+      kind: 'prose',
+      id: 'lunch-bags',
+      eyebrow: "Lunch bags",
+      heading: "Insulated lunch bags and cooler totes",
+      paragraphs: [
+        "Lunch bags and cooler totes add a foam and foil lining inside a tote or zip bag. Schools, offices and promotional buyers order them often.",
+        "The outer can be canvas, polyester or recycled polyester, printed or embroidered. Food contact claims for the lining come from its supplier.",
+      ],
+    },
   ],
   noPrice: {
     heading: 'How tote bags are priced',
@@ -129,7 +139,7 @@ export const toteBag: ProductContent = {
     heading: 'Starting a tote bag order with us',
     paragraphs: [
       'Many brands start with one mid-weight canvas tote with long handles and a one-colour print. It is the style people reuse most, so your logo gets seen the most.',
-      'Need bags for gym kit and events? See our <a href="/drawstring-bag-manufacturer/">drawstring bag manufacturer</a> page.',
+      'Need bags for gym kit and events? See our <a href="/drawstring-bag-manufacturer/">drawstring bag manufacturer</a> page. Hands-free bags are covered on our <a href="/fanny-pack-manufacturer/">fanny pack manufacturer</a> page.',
     ],
   },
   faqHeading: 'Tote bag questions',

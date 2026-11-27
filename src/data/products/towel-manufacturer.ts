@@ -14,8 +14,8 @@ export const towelMaker: ProductContent = {
     { title: 'Bath towels', text: 'Soft terry in sets with hand and face towels.' },
     { title: 'Hotel towels', text: 'White terry built for heavy laundering.' },
     { title: 'Beach towels', text: 'Printed velour on the front, terry on the back.' },
-    { title: 'Gym and sports towels', text: 'Light, fast-drying towels with logos.' },
-    { title: 'Kids hooded towels', text: 'Soft towels with a hood.' },
+    { title: 'Gym and sports towels', text: 'Golf, gym and cooling towels with logos.', href: '/sports-towel-manufacturer/', cta: 'Sports towel manufacturer details' },
+    { title: 'Bath mats', text: 'Thick terry mats to match your bath towels.' },
     { title: 'Bathrobes', text: 'Terry and waffle robes to match.', href: '/bathrobe-manufacturer/', cta: 'Bathrobe manufacturer details' },
   ],
   blocks: [

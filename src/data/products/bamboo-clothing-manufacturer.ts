@@ -127,7 +127,7 @@ export const bamboo: ProductContent = {
     heading: 'Starting a bamboo clothing line with us',
     paragraphs: [
       'Many brands start with one tee or one lounge set in two or three colours. Bamboo viscose blends with spandex give the softest feel, so ask for swatches of two blends and compare them.',
-      'Working in other fabrics too? See our <a href="/cotton-clothing-manufacturer/">cotton clothing manufacturer</a> page, or how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works.',
+      'Working in other fabrics too? See our <a href="/cotton-clothing-manufacturer/">cotton clothing manufacturer</a> page, or how <a href="/low-moq-clothing-manufacturers/">low MOQ clothing manufacturing</a> works. Bamboo velour pads are covered on our <a href="/reusable-makeup-pad-manufacturer/">reusable makeup pad manufacturer</a> page.',
     ],
   },
   faqHeading: 'Bamboo clothing questions',
